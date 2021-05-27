@@ -1,0 +1,320 @@
+Eula:
+    rarity: 5
+    element: Cryo
+    weapon: Claymore
+    sub: CRIT DMG%
+    ascension: Crystalline Bloom
+    local: dandelion_seed
+    common: mask
+    weekly: Dragon Lord's Crown
+    book: resistance
+Yanfei:
+    rarity: 4
+    element: Pyro
+    weapon: Catalyst
+    sub: Pyro DMG Bonus
+    weekly: Bloodjade Branch
+    ascension: Juvenile Jade
+    local: Noctilucous Jade
+    book: gold
+    common: treasure_hoarder_insignia
+Rosaria:
+    rarity: 4
+    element: Cryo
+    weapon: Polearm
+    sub: ATK
+    weekly: Shadow of the Warrior
+    ascension: Hoarfrost Core
+    local: Valberry
+    book: ballad
+    common: fatui_insignia
+Hu Tao:
+    rarity: 5
+    element: Pyro
+    weapon: Polearm
+    sub: CRIT DMG
+    weekly: Shard of a Foul Legacy
+    ascension: Juvenile Jade
+    local: Silk Flower
+    book: diligence
+    common: nectar
+Xiao:
+    rarity: 5
+    element: Anemo
+    weapon: Polearm
+    sub: CRIT Rate
+    weekly: Shadow of the Warrior
+    ascension: Juvenile Jade
+    local: Qingxin
+    book: prosperity
+    common: slime
+Ganyu:
+    rarity: 5
+    element: Cryo
+    weapon: Bow
+    sub: CRIT DMG
+    weekly: Shadow of the Warrior
+    ascension: Hoarfrost Core
+    local: Qingxin
+    book: diligence
+    common: nectar
+Albedo:
+    rarity: 5
+    element: Geo
+    weapon: Sword
+    sub: Geo DMG Bonus
+    weekly: Tusk of Monoceros Caeli
+    ascension: Basalt Pillar
+    local: Cecilia
+    book: ballad
+    common: scroll
+Zhongli:
+    rarity: 5
+    element: Geo
+    weapon: Polearm
+    sub: Geo DMG Bonus
+    weekly: Tusk of Monoceros Caeli
+    ascension: Basalt Pillar
+    local: Cor Lapis
+    book: gold
+    common: slime
+Xinyan:
+    rarity: 4
+    element: Pyro
+    weapon: Claymore
+    sub: ATK
+    weekly: "Tusk of Monoceros Caeli "
+    ascension: Everflame Seed
+    local: Violetgrass
+    book: gold
+    common: treasure_hoarder_insignia
+Tartaglia:
+    rarity: 5
+    element: Hydro
+    weapon: Bow
+    sub: Hydro DMG Bonus
+    weekly: "Shard of a Foul Legacy "
+    ascension: Cleansing Heart
+    local: Starconch
+    book: freedom
+    common: fatui_insignia
+Diona:
+    rarity: 4
+    element: Cryo
+    weapon: Bow
+    sub: Cryo DMG Bonus
+    weekly: Shard of a Foul Legacy
+    ascension: Hoarfrost Core
+    local: Calla Lily
+    book: freedom
+    common: arrowhead
+Klee:
+    rarity: 5
+    element: Pyro
+    weapon: Catalyst
+    sub: Pyro DMG Bonus
+    weekly: Ring of Boreas
+    ascension: Everflame Seed
+    local: Philanemo Mushroom
+    book: freedom
+    common: scroll
+Venti:
+    rarity: 5
+    element: Anemo
+    weapon: Bow
+    sub: Energy Recharge
+    weekly: Tail of Boreas
+    ascension: Hurricane Seed
+    local: Cecilia
+    book: ballad
+    common: slime
+Keqing:
+    rarity: 5
+    element: Electro
+    weapon: Sword
+    sub: CRIT DMG
+    weekly: Ring of Boreas
+    ascension: Lightning Prism
+    local: Cor Lapis
+    book: prosperity
+    common: nectar
+Mona:
+    rarity: 5
+    element: Hydro
+    weapon: Catalyst
+    sub: Energy Recharge
+    weekly: Ring of Boreas
+    ascension: Cleansing Heart
+    local: Philanemo Mushroom
+    book: resistance
+    common: nectar
+Qiqi:
+    rarity: 5
+    element: Cryo
+    weapon: Sword
+    sub: Healing Bonus
+    weekly: Tail of Boreas
+    ascension: Hoarfrost Core
+    local: Violetgrass
+    book: prosperity
+    common: scroll
+Diluc:
+    rarity: 5
+    element: Pyro
+    weapon: Claymore
+    sub: CRIT Rate
+    weekly: Dvalin's Plume
+    ascension: Everflame Seed
+    local: Small Lamp Grass
+    book: resistance
+    common: fatui_insignia
+Jean:
+    rarity: 5
+    element: Anemo
+    weapon: Sword
+    sub: Healing Bonus
+    weekly: Dvalin's Plume
+    ascension: Hurricane Seed
+    local: Dandelion Seed
+    book: resistance
+    common: mask
+Sucrose:
+    rarity: 4
+    element: Anemo
+    weapon: Catalyst
+    sub: Anemo DMG Bonus
+    weekly: Spirit Locket of Boreas
+    ascension: Hurricane Seed
+    local: Windwheel Aster
+    book: freedom
+    common: nectar
+Chongyun:
+    rarity: 4
+    element: Cryo
+    weapon: Claymore
+    sub: ATK
+    weekly: Dvalin's Sigh
+    ascension: Hoarfrost Core
+    local: Cor Lapis
+    book: diligence
+    common: mask
+Noelle:
+    rarity: 4
+    element: Geo
+    weapon: Claymore
+    sub: DEF
+    weekly: Dvalin's Claw
+    ascension: Basalt Pillar
+    local: Valberry
+    book: resistance
+    common: mask
+Bennett:
+    rarity: 4
+    element: Pyro
+    weapon: Sword
+    sub: Energy Recharge
+    weekly: Dvalin's Plume
+    ascension: Everflame Seed
+    local: Windwheel Aster
+    book: resistance
+    common: treasure_hoarder_insignia
+Fischl:
+    rarity: 4
+    element: Electro
+    weapon: Bow
+    sub: ATK
+    weekly: Spirit Locket of Boreas
+    ascension: Lightning Prism
+    local: Small Lamp Grass
+    book: ballad
+    common: arrowhead
+Ningguang:
+    rarity: 4
+    element: Geo
+    weapon: Catalyst
+    sub: Geo DMG Bonus
+    weekly: Spirit Locket of Boreas
+    ascension: Basalt Pillar
+    local: Glaze Lily
+    book: prosperity
+    common: fatui_insignia
+Xingqiu:
+    rarity: 4
+    element: Hydro
+    weapon: Sword
+    sub: ATK
+    weekly: Tail of Boreas
+    ascension: Cleansing Heart
+    local: Silk Flower
+    book: gold
+    common: mask
+Beidou:
+    rarity: 4
+    element: Electro
+    weapon: Claymore
+    sub: Electro DMG Bonus
+    weekly: Dvalin's Sigh
+    ascension: Lightning Prism
+    local: Noctilucous Jade
+    book: gold
+    common: treasure_hoarder_insignia
+Xiangling:
+    rarity: 4
+    element: Pyro
+    weapon: Polearm
+    sub: Elemental Mastery
+    weekly: Dvalin's Claw
+    ascension: Everflame Seed
+    local: Jueyun Chili
+    book: diligence
+    common: slime
+Razor:
+    rarity: 4
+    element: Electro
+    weapon: Claymore
+    sub: Physical DMG Bonus
+    weekly: Dvalin's Claw
+    ascension: Lightning Prism
+    local: Wolfhook
+    book: resistance
+    common: mask
+Barbara:
+    rarity: 4
+    element: Hydro
+    weapon: Catalyst
+    sub: HP
+    weekly: Ring of Boreas
+    ascension: Cleansing Heart
+    local: Philanemo Mushroom
+    book: freedom
+    common: scroll
+Lisa:
+    rarity: 4
+    element: Electro
+    weapon: Catalyst
+    sub: Elemental Mastery
+    weekly: Dvalin's Claw
+    ascension: Lightning Prism
+    local: Valberry
+    book: ballad
+    common: slime
+Kaeya:
+    rarity: 4
+    element: Cryo
+    weapon: Sword
+    sub: Energy Recharge
+    weekly: Spirit Locket of Boreas
+    ascension: Hoarfrost Core
+    local: Calla Lily
+    book: ballad
+    common: treasure_hoarder_insignia
+Amber:
+    rarity: 4
+    element: Pyro
+    weapon: Bow
+    sub: ATK
+    weekly: Dvalin's Sigh
+    ascension: Everflame Seed
+    local: Small Lamp Grass
+    book: freedom
+    common: arrowhead

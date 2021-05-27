@@ -1,0 +1,4392 @@
+[
+  {
+    "hash": "f9abbe35fce015709392e9cadba5230bb2b27bb8",
+    "val": [
+      {
+        "level": 1,
+        "refined": false,
+        "subValue": 0
+      },
+      {
+        "level": 5,
+        "refined": false,
+        "subValue": 0
+      },
+      {
+        "level": 10,
+        "refined": false,
+        "subValue": 0
+      },
+      {
+        "level": 15,
+        "refined": false,
+        "subValue": 0
+      },
+      {
+        "level": 20,
+        "refined": false,
+        "subValue": 0
+      },
+      {
+        "level": 20,
+        "refined": true,
+        "subValue": 0
+      },
+      {
+        "level": 25,
+        "refined": false,
+        "subValue": 0
+      },
+      {
+        "level": 30,
+        "refined": false,
+        "subValue": 0
+      },
+      {
+        "level": 35,
+        "refined": false,
+        "subValue": 0
+      },
+      {
+        "level": 40,
+        "refined": false,
+        "subValue": 0
+      },
+      {
+        "level": 40,
+        "refined": true,
+        "subValue": 0
+      },
+      {
+        "level": 45,
+        "refined": false,
+        "subValue": 0
+      },
+      {
+        "level": 50,
+        "refined": false,
+        "subValue": 0
+      },
+      {
+        "level": 50,
+        "refined": true,
+        "subValue": 0
+      },
+      {
+        "level": 55,
+        "refined": false,
+        "subValue": 0
+      },
+      {
+        "level": 60,
+        "refined": false,
+        "subValue": 0
+      },
+      {
+        "level": 60,
+        "refined": true,
+        "subValue": 0
+      },
+      {
+        "level": 65,
+        "refined": false,
+        "subValue": 0
+      },
+      {
+        "level": 70,
+        "refined": false,
+        "subValue": 0
+      }
+    ]
+  },
+  {
+    "hash": "66b70870baff7b949ab67f1eb71315d8d7a8a600",
+    "val": [
+      {
+        "level": 1,
+        "refined": false,
+        "subValue": 7.7
+      },
+      {
+        "level": 5,
+        "refined": false,
+        "subValue": 8.9
+      },
+      {
+        "level": 10,
+        "refined": false,
+        "subValue": 10.4
+      },
+      {
+        "level": 15,
+        "refined": false,
+        "subValue": 12
+      },
+      {
+        "level": 20,
+        "refined": false,
+        "subValue": 13.5
+      },
+      {
+        "level": 20,
+        "refined": true,
+        "subValue": 13.5
+      },
+      {
+        "level": 25,
+        "refined": false,
+        "subValue": 15.1
+      },
+      {
+        "level": 30,
+        "refined": false,
+        "subValue": 16.6
+      },
+      {
+        "level": 35,
+        "refined": false,
+        "subValue": 18.2
+      },
+      {
+        "level": 40,
+        "refined": false,
+        "subValue": 19.7
+      },
+      {
+        "level": 40,
+        "refined": true,
+        "subValue": 19.7
+      },
+      {
+        "level": 45,
+        "refined": false,
+        "subValue": 21.3
+      },
+      {
+        "level": 50,
+        "refined": false,
+        "subValue": 22.8
+      },
+      {
+        "level": 50,
+        "refined": true,
+        "subValue": 22.8
+      },
+      {
+        "level": 55,
+        "refined": false,
+        "subValue": 24.4
+      },
+      {
+        "level": 60,
+        "refined": false,
+        "subValue": 25.9
+      },
+      {
+        "level": 60,
+        "refined": true,
+        "subValue": 25.9
+      },
+      {
+        "level": 65,
+        "refined": false,
+        "subValue": 27.5
+      },
+      {
+        "level": 70,
+        "refined": false,
+        "subValue": 29
+      },
+      {
+        "level": 70,
+        "refined": true,
+        "subValue": 29
+      },
+      {
+        "level": 75,
+        "refined": false,
+        "subValue": 30.5
+      },
+      {
+        "level": 80,
+        "refined": false,
+        "subValue": 32.1
+      },
+      {
+        "level": 80,
+        "refined": true,
+        "subValue": 32.1
+      },
+      {
+        "level": 85,
+        "refined": false,
+        "subValue": 33.6
+      },
+      {
+        "level": 90,
+        "refined": false,
+        "subValue": 35.2
+      }
+    ]
+  },
+  {
+    "hash": "0ad30bba2f574f06cc1c106f73937f9c4f304414",
+    "val": [
+      {
+        "level": 1,
+        "refined": false,
+        "subValue": 31
+      },
+      {
+        "level": 5,
+        "refined": false,
+        "subValue": 36
+      },
+      {
+        "level": 10,
+        "refined": false,
+        "subValue": 42
+      },
+      {
+        "level": 15,
+        "refined": false,
+        "subValue": 48
+      },
+      {
+        "level": 20,
+        "refined": false,
+        "subValue": 54
+      },
+      {
+        "level": 20,
+        "refined": true,
+        "subValue": 54
+      },
+      {
+        "level": 25,
+        "refined": false,
+        "subValue": 60
+      },
+      {
+        "level": 30,
+        "refined": false,
+        "subValue": 66
+      },
+      {
+        "level": 35,
+        "refined": false,
+        "subValue": 73
+      },
+      {
+        "level": 40,
+        "refined": false,
+        "subValue": 79
+      },
+      {
+        "level": 40,
+        "refined": true,
+        "subValue": 79
+      },
+      {
+        "level": 45,
+        "refined": false,
+        "subValue": 85
+      },
+      {
+        "level": 50,
+        "refined": false,
+        "subValue": 91
+      },
+      {
+        "level": 50,
+        "refined": true,
+        "subValue": 91
+      },
+      {
+        "level": 55,
+        "refined": false,
+        "subValue": 97
+      },
+      {
+        "level": 60,
+        "refined": false,
+        "subValue": 104
+      },
+      {
+        "level": 60,
+        "refined": true,
+        "subValue": 104
+      },
+      {
+        "level": 65,
+        "refined": false,
+        "subValue": 110
+      },
+      {
+        "level": 70,
+        "refined": false,
+        "subValue": 116
+      },
+      {
+        "level": 70,
+        "refined": true,
+        "subValue": 116
+      },
+      {
+        "level": 75,
+        "refined": false,
+        "subValue": 122
+      },
+      {
+        "level": 80,
+        "refined": false,
+        "subValue": 128
+      },
+      {
+        "level": 80,
+        "refined": true,
+        "subValue": 128
+      },
+      {
+        "level": 85,
+        "refined": false,
+        "subValue": 134
+      },
+      {
+        "level": 90,
+        "refined": false,
+        "subValue": 141
+      }
+    ]
+  },
+  {
+    "hash": "aa55a8cb99cfc428f56cd7e41d9850b09b9733f8",
+    "val": [
+      {
+        "level": 1,
+        "refined": false,
+        "subValue": 11.3
+      },
+      {
+        "level": 5,
+        "refined": false,
+        "subValue": 13.2
+      },
+      {
+        "level": 10,
+        "refined": false,
+        "subValue": 15.4
+      },
+      {
+        "level": 15,
+        "refined": false,
+        "subValue": 17.7
+      },
+      {
+        "level": 20,
+        "refined": false,
+        "subValue": 20
+      },
+      {
+        "level": 20,
+        "refined": true,
+        "subValue": 20
+      },
+      {
+        "level": 25,
+        "refined": false,
+        "subValue": 22.3
+      },
+      {
+        "level": 30,
+        "refined": false,
+        "subValue": 24.6
+      },
+      {
+        "level": 35,
+        "refined": false,
+        "subValue": 26.9
+      },
+      {
+        "level": 40,
+        "refined": false,
+        "subValue": 29.2
+      },
+      {
+        "level": 40,
+        "refined": true,
+        "subValue": 29.2
+      },
+      {
+        "level": 45,
+        "refined": false,
+        "subValue": 31.5
+      },
+      {
+        "level": 50,
+        "refined": false,
+        "subValue": 33.8
+      },
+      {
+        "level": 50,
+        "refined": true,
+        "subValue": 33.8
+      },
+      {
+        "level": 55,
+        "refined": false,
+        "subValue": 36.1
+      },
+      {
+        "level": 60,
+        "refined": false,
+        "subValue": 38.3
+      },
+      {
+        "level": 60,
+        "refined": true,
+        "subValue": 38.3
+      },
+      {
+        "level": 65,
+        "refined": false,
+        "subValue": 40.6
+      },
+      {
+        "level": 70,
+        "refined": false,
+        "subValue": 42.9
+      },
+      {
+        "level": 70,
+        "refined": true,
+        "subValue": 42.9
+      },
+      {
+        "level": 75,
+        "refined": false,
+        "subValue": 45.2
+      },
+      {
+        "level": 80,
+        "refined": false,
+        "subValue": 47.5
+      },
+      {
+        "level": 80,
+        "refined": true,
+        "subValue": 47.5
+      },
+      {
+        "level": 85,
+        "refined": false,
+        "subValue": 49.8
+      },
+      {
+        "level": 90,
+        "refined": false,
+        "subValue": 52.1
+      }
+    ]
+  },
+  {
+    "hash": "10655969ecda1e16d5a282bf56392ca98d27547f",
+    "val": [
+      {
+        "level": 1,
+        "refined": false,
+        "subValue": 6.4
+      },
+      {
+        "level": 5,
+        "refined": false,
+        "subValue": 7.4
+      },
+      {
+        "level": 10,
+        "refined": false,
+        "subValue": 8.7
+      },
+      {
+        "level": 15,
+        "refined": false,
+        "subValue": 10
+      },
+      {
+        "level": 20,
+        "refined": false,
+        "subValue": 11.3
+      },
+      {
+        "level": 20,
+        "refined": true,
+        "subValue": 11.3
+      },
+      {
+        "level": 25,
+        "refined": false,
+        "subValue": 12.5
+      },
+      {
+        "level": 30,
+        "refined": false,
+        "subValue": 13.8
+      },
+      {
+        "level": 35,
+        "refined": false,
+        "subValue": 15.1
+      },
+      {
+        "level": 40,
+        "refined": false,
+        "subValue": 16.4
+      },
+      {
+        "level": 40,
+        "refined": true,
+        "subValue": 16.4
+      },
+      {
+        "level": 45,
+        "refined": false,
+        "subValue": 17.7
+      },
+      {
+        "level": 50,
+        "refined": false,
+        "subValue": 19
+      },
+      {
+        "level": 50,
+        "refined": true,
+        "subValue": 19
+      },
+      {
+        "level": 55,
+        "refined": false,
+        "subValue": 20.3
+      },
+      {
+        "level": 60,
+        "refined": false,
+        "subValue": 21.6
+      },
+      {
+        "level": 60,
+        "refined": true,
+        "subValue": 21.6
+      },
+      {
+        "level": 65,
+        "refined": false,
+        "subValue": 22.8
+      },
+      {
+        "level": 70,
+        "refined": false,
+        "subValue": 24.1
+      },
+      {
+        "level": 70,
+        "refined": true,
+        "subValue": 24.1
+      },
+      {
+        "level": 75,
+        "refined": false,
+        "subValue": 25.4
+      },
+      {
+        "level": 80,
+        "refined": false,
+        "subValue": 26.7
+      },
+      {
+        "level": 80,
+        "refined": true,
+        "subValue": 26.7
+      },
+      {
+        "level": 85,
+        "refined": false,
+        "subValue": 28
+      },
+      {
+        "level": 90,
+        "refined": false,
+        "subValue": 29.3
+      }
+    ]
+  },
+  {
+    "hash": "cd1aac3c309898dabe65b9625e92ceda1f54cfbd",
+    "val": [
+      {
+        "level": 1,
+        "refined": false,
+        "subValue": 13.3
+      },
+      {
+        "level": 5,
+        "refined": false,
+        "subValue": 15.5
+      },
+      {
+        "level": 10,
+        "refined": false,
+        "subValue": 18.2
+      },
+      {
+        "level": 15,
+        "refined": false,
+        "subValue": 20.9
+      },
+      {
+        "level": 20,
+        "refined": false,
+        "subValue": 23.6
+      },
+      {
+        "level": 20,
+        "refined": true,
+        "subValue": 23.6
+      },
+      {
+        "level": 25,
+        "refined": false,
+        "subValue": 26.3
+      },
+      {
+        "level": 30,
+        "refined": false,
+        "subValue": 28.9
+      },
+      {
+        "level": 35,
+        "refined": false,
+        "subValue": 31.6
+      },
+      {
+        "level": 40,
+        "refined": false,
+        "subValue": 34.3
+      },
+      {
+        "level": 40,
+        "refined": true,
+        "subValue": 34.3
+      },
+      {
+        "level": 45,
+        "refined": false,
+        "subValue": 37
+      },
+      {
+        "level": 50,
+        "refined": false,
+        "subValue": 39.7
+      },
+      {
+        "level": 50,
+        "refined": true,
+        "subValue": 39.7
+      },
+      {
+        "level": 55,
+        "refined": false,
+        "subValue": 42.4
+      },
+      {
+        "level": 60,
+        "refined": false,
+        "subValue": 45.1
+      },
+      {
+        "level": 60,
+        "refined": true,
+        "subValue": 45.1
+      },
+      {
+        "level": 65,
+        "refined": false,
+        "subValue": 47.8
+      },
+      {
+        "level": 70,
+        "refined": false,
+        "subValue": 50.5
+      },
+      {
+        "level": 70,
+        "refined": true,
+        "subValue": 50.5
+      },
+      {
+        "level": 75,
+        "refined": false,
+        "subValue": 53.2
+      },
+      {
+        "level": 80,
+        "refined": false,
+        "subValue": 55.9
+      },
+      {
+        "level": 80,
+        "refined": true,
+        "subValue": 55.9
+      },
+      {
+        "level": 85,
+        "refined": false,
+        "subValue": 58.6
+      },
+      {
+        "level": 90,
+        "refined": false,
+        "subValue": 61.3
+      }
+    ]
+  },
+  {
+    "hash": "dc27e67a8fd50bd5ae10da6f55a4d466faf14921",
+    "val": [
+      {
+        "level": 1,
+        "refined": false,
+        "subValue": 36
+      },
+      {
+        "level": 5,
+        "refined": false,
+        "subValue": 42
+      },
+      {
+        "level": 10,
+        "refined": false,
+        "subValue": 49
+      },
+      {
+        "level": 15,
+        "refined": false,
+        "subValue": 56
+      },
+      {
+        "level": 20,
+        "refined": false,
+        "subValue": 64
+      },
+      {
+        "level": 20,
+        "refined": true,
+        "subValue": 64
+      },
+      {
+        "level": 25,
+        "refined": false,
+        "subValue": 71
+      },
+      {
+        "level": 30,
+        "refined": false,
+        "subValue": 78
+      },
+      {
+        "level": 35,
+        "refined": false,
+        "subValue": 85
+      },
+      {
+        "level": 40,
+        "refined": false,
+        "subValue": 93
+      },
+      {
+        "level": 40,
+        "refined": true,
+        "subValue": 93
+      },
+      {
+        "level": 45,
+        "refined": false,
+        "subValue": 100
+      },
+      {
+        "level": 50,
+        "refined": false,
+        "subValue": 107
+      },
+      {
+        "level": 50,
+        "refined": true,
+        "subValue": 107
+      },
+      {
+        "level": 55,
+        "refined": false,
+        "subValue": 115
+      },
+      {
+        "level": 60,
+        "refined": false,
+        "subValue": 122
+      },
+      {
+        "level": 60,
+        "refined": true,
+        "subValue": 122
+      },
+      {
+        "level": 65,
+        "refined": false,
+        "subValue": 129
+      },
+      {
+        "level": 70,
+        "refined": false,
+        "subValue": 136
+      },
+      {
+        "level": 70,
+        "refined": true,
+        "subValue": 136
+      },
+      {
+        "level": 75,
+        "refined": false,
+        "subValue": 144
+      },
+      {
+        "level": 80,
+        "refined": false,
+        "subValue": 151
+      },
+      {
+        "level": 80,
+        "refined": true,
+        "subValue": 151
+      },
+      {
+        "level": 85,
+        "refined": false,
+        "subValue": 158
+      },
+      {
+        "level": 90,
+        "refined": false,
+        "subValue": 165
+      }
+    ]
+  },
+  {
+    "hash": "1fb15795b2ed541caf03ab5bb9cea4efc9a5e702",
+    "val": [
+      {
+        "level": 1,
+        "refined": false,
+        "subValue": 9
+      },
+      {
+        "level": 5,
+        "refined": false,
+        "subValue": 10.5
+      },
+      {
+        "level": 10,
+        "refined": false,
+        "subValue": 12.3
+      },
+      {
+        "level": 15,
+        "refined": false,
+        "subValue": 14.1
+      },
+      {
+        "level": 20,
+        "refined": false,
+        "subValue": 15.9
+      },
+      {
+        "level": 20,
+        "refined": true,
+        "subValue": 15.9
+      },
+      {
+        "level": 25,
+        "refined": false,
+        "subValue": 17.7
+      },
+      {
+        "level": 30,
+        "refined": false,
+        "subValue": 19.5
+      },
+      {
+        "level": 35,
+        "refined": false,
+        "subValue": 21.4
+      },
+      {
+        "level": 40,
+        "refined": false,
+        "subValue": 23.2
+      },
+      {
+        "level": 40,
+        "refined": true,
+        "subValue": 23.2
+      },
+      {
+        "level": 45,
+        "refined": false,
+        "subValue": 25
+      },
+      {
+        "level": 50,
+        "refined": false,
+        "subValue": 26.8
+      },
+      {
+        "level": 50,
+        "refined": true,
+        "subValue": 26.8
+      },
+      {
+        "level": 55,
+        "refined": false,
+        "subValue": 28.6
+      },
+      {
+        "level": 60,
+        "refined": false,
+        "subValue": 30.4
+      },
+      {
+        "level": 60,
+        "refined": true,
+        "subValue": 30.4
+      },
+      {
+        "level": 65,
+        "refined": false,
+        "subValue": 32.3
+      },
+      {
+        "level": 70,
+        "refined": false,
+        "subValue": 34.1
+      },
+      {
+        "level": 70,
+        "refined": true,
+        "subValue": 34.1
+      },
+      {
+        "level": 75,
+        "refined": false,
+        "subValue": 35.9
+      },
+      {
+        "level": 80,
+        "refined": false,
+        "subValue": 37.7
+      },
+      {
+        "level": 80,
+        "refined": true,
+        "subValue": 37.7
+      },
+      {
+        "level": 85,
+        "refined": false,
+        "subValue": 39.5
+      },
+      {
+        "level": 90,
+        "refined": false,
+        "subValue": 41.3
+      }
+    ]
+  },
+  {
+    "hash": "d50557183e5cb4a999dbd8c03e67c50385a4dea2",
+    "val": [
+      {
+        "level": 1,
+        "refined": false,
+        "subValue": 7.5
+      },
+      {
+        "level": 5,
+        "refined": false,
+        "subValue": 8.7
+      },
+      {
+        "level": 10,
+        "refined": false,
+        "subValue": 10.2
+      },
+      {
+        "level": 15,
+        "refined": false,
+        "subValue": 11.7
+      },
+      {
+        "level": 20,
+        "refined": false,
+        "subValue": 13.3
+      },
+      {
+        "level": 20,
+        "refined": true,
+        "subValue": 13.3
+      },
+      {
+        "level": 25,
+        "refined": false,
+        "subValue": 14.8
+      },
+      {
+        "level": 30,
+        "refined": false,
+        "subValue": 16.3
+      },
+      {
+        "level": 35,
+        "refined": false,
+        "subValue": 17.8
+      },
+      {
+        "level": 40,
+        "refined": false,
+        "subValue": 19.3
+      },
+      {
+        "level": 40,
+        "refined": true,
+        "subValue": 19.3
+      },
+      {
+        "level": 45,
+        "refined": false,
+        "subValue": 20.8
+      },
+      {
+        "level": 50,
+        "refined": false,
+        "subValue": 22.4
+      },
+      {
+        "level": 50,
+        "refined": true,
+        "subValue": 22.4
+      },
+      {
+        "level": 55,
+        "refined": false,
+        "subValue": 23.9
+      },
+      {
+        "level": 60,
+        "refined": false,
+        "subValue": 25.4
+      },
+      {
+        "level": 60,
+        "refined": true,
+        "subValue": 25.4
+      },
+      {
+        "level": 65,
+        "refined": false,
+        "subValue": 26.9
+      },
+      {
+        "level": 70,
+        "refined": false,
+        "subValue": 28.4
+      },
+      {
+        "level": 70,
+        "refined": true,
+        "subValue": 28.4
+      },
+      {
+        "level": 75,
+        "refined": false,
+        "subValue": 29.9
+      },
+      {
+        "level": 80,
+        "refined": false,
+        "subValue": 31.5
+      },
+      {
+        "level": 80,
+        "refined": true,
+        "subValue": 31.5
+      },
+      {
+        "level": 85,
+        "refined": false,
+        "subValue": 33
+      },
+      {
+        "level": 90,
+        "refined": false,
+        "subValue": 34.5
+      }
+    ]
+  },
+  {
+    "hash": "342e768acc45aa0292894faed421f6e5daf10979",
+    "val": [
+      {
+        "level": 1,
+        "refined": false,
+        "subValue": 12
+      },
+      {
+        "level": 5,
+        "refined": false,
+        "subValue": 14
+      },
+      {
+        "level": 10,
+        "refined": false,
+        "subValue": 16
+      },
+      {
+        "level": 15,
+        "refined": false,
+        "subValue": 19
+      },
+      {
+        "level": 20,
+        "refined": false,
+        "subValue": 21
+      },
+      {
+        "level": 20,
+        "refined": true,
+        "subValue": 21
+      },
+      {
+        "level": 25,
+        "refined": false,
+        "subValue": 24
+      },
+      {
+        "level": 30,
+        "refined": false,
+        "subValue": 26
+      },
+      {
+        "level": 35,
+        "refined": false,
+        "subValue": 28
+      },
+      {
+        "level": 40,
+        "refined": false,
+        "subValue": 31
+      },
+      {
+        "level": 40,
+        "refined": true,
+        "subValue": 31
+      },
+      {
+        "level": 45,
+        "refined": false,
+        "subValue": 33
+      },
+      {
+        "level": 50,
+        "refined": false,
+        "subValue": 36
+      },
+      {
+        "level": 50,
+        "refined": true,
+        "subValue": 36
+      },
+      {
+        "level": 55,
+        "refined": false,
+        "subValue": 38
+      },
+      {
+        "level": 60,
+        "refined": false,
+        "subValue": 41
+      },
+      {
+        "level": 60,
+        "refined": true,
+        "subValue": 41
+      },
+      {
+        "level": 65,
+        "refined": false,
+        "subValue": 43
+      },
+      {
+        "level": 70,
+        "refined": false,
+        "subValue": 45
+      },
+      {
+        "level": 70,
+        "refined": true,
+        "subValue": 45
+      },
+      {
+        "level": 75,
+        "refined": false,
+        "subValue": 48
+      },
+      {
+        "level": 80,
+        "refined": false,
+        "subValue": 50
+      },
+      {
+        "level": 80,
+        "refined": true,
+        "subValue": 50
+      },
+      {
+        "level": 85,
+        "refined": false,
+        "subValue": 53
+      },
+      {
+        "level": 90,
+        "refined": false,
+        "subValue": 55
+      }
+    ]
+  },
+  {
+    "hash": "24fa5b96f71f6e5986a580473f7c9ba9bd9c291b",
+    "val": [
+      {
+        "level": 1,
+        "refined": false,
+        "subValue": 6
+      },
+      {
+        "level": 5,
+        "refined": false,
+        "subValue": 7
+      },
+      {
+        "level": 10,
+        "refined": false,
+        "subValue": 8.2
+      },
+      {
+        "level": 15,
+        "refined": false,
+        "subValue": 9.4
+      },
+      {
+        "level": 20,
+        "refined": false,
+        "subValue": 10.6
+      },
+      {
+        "level": 20,
+        "refined": true,
+        "subValue": 10.6
+      },
+      {
+        "level": 25,
+        "refined": false,
+        "subValue": 11.8
+      },
+      {
+        "level": 30,
+        "refined": false,
+        "subValue": 13
+      },
+      {
+        "level": 35,
+        "refined": false,
+        "subValue": 14.2
+      },
+      {
+        "level": 40,
+        "refined": false,
+        "subValue": 15.5
+      },
+      {
+        "level": 40,
+        "refined": true,
+        "subValue": 15.5
+      },
+      {
+        "level": 45,
+        "refined": false,
+        "subValue": 16.7
+      },
+      {
+        "level": 50,
+        "refined": false,
+        "subValue": 17.9
+      },
+      {
+        "level": 50,
+        "refined": true,
+        "subValue": 17.9
+      },
+      {
+        "level": 55,
+        "refined": false,
+        "subValue": 19.1
+      },
+      {
+        "level": 60,
+        "refined": false,
+        "subValue": 20.3
+      },
+      {
+        "level": 60,
+        "refined": true,
+        "subValue": 20.3
+      },
+      {
+        "level": 65,
+        "refined": false,
+        "subValue": 21.5
+      },
+      {
+        "level": 70,
+        "refined": false,
+        "subValue": 22.7
+      },
+      {
+        "level": 70,
+        "refined": true,
+        "subValue": 22.7
+      },
+      {
+        "level": 75,
+        "refined": false,
+        "subValue": 23.9
+      },
+      {
+        "level": 80,
+        "refined": false,
+        "subValue": 25.1
+      },
+      {
+        "level": 80,
+        "refined": true,
+        "subValue": 25.1
+      },
+      {
+        "level": 85,
+        "refined": false,
+        "subValue": 26.4
+      },
+      {
+        "level": 90,
+        "refined": false,
+        "subValue": 27.6
+      }
+    ]
+  },
+  {
+    "hash": "38af9b089bbdd9c52f6f818a1cee7628aa087629",
+    "val": [
+      {
+        "level": 1,
+        "refined": false,
+        "subValue": 10
+      },
+      {
+        "level": 5,
+        "refined": false,
+        "subValue": 11.6
+      },
+      {
+        "level": 10,
+        "refined": false,
+        "subValue": 13.6
+      },
+      {
+        "level": 15,
+        "refined": false,
+        "subValue": 15.7
+      },
+      {
+        "level": 20,
+        "refined": false,
+        "subValue": 17.7
+      },
+      {
+        "level": 20,
+        "refined": true,
+        "subValue": 17.7
+      },
+      {
+        "level": 25,
+        "refined": false,
+        "subValue": 19.7
+      },
+      {
+        "level": 30,
+        "refined": false,
+        "subValue": 21.7
+      },
+      {
+        "level": 35,
+        "refined": false,
+        "subValue": 23.7
+      },
+      {
+        "level": 40,
+        "refined": false,
+        "subValue": 25.8
+      },
+      {
+        "level": 40,
+        "refined": true,
+        "subValue": 25.8
+      },
+      {
+        "level": 45,
+        "refined": false,
+        "subValue": 27.8
+      },
+      {
+        "level": 50,
+        "refined": false,
+        "subValue": 29.8
+      },
+      {
+        "level": 50,
+        "refined": true,
+        "subValue": 29.8
+      },
+      {
+        "level": 55,
+        "refined": false,
+        "subValue": 31.8
+      },
+      {
+        "level": 60,
+        "refined": false,
+        "subValue": 33.8
+      },
+      {
+        "level": 60,
+        "refined": true,
+        "subValue": 33.8
+      },
+      {
+        "level": 65,
+        "refined": false,
+        "subValue": 35.9
+      },
+      {
+        "level": 70,
+        "refined": false,
+        "subValue": 37.9
+      },
+      {
+        "level": 70,
+        "refined": true,
+        "subValue": 37.9
+      },
+      {
+        "level": 75,
+        "refined": false,
+        "subValue": 39.9
+      },
+      {
+        "level": 80,
+        "refined": false,
+        "subValue": 41.9
+      },
+      {
+        "level": 80,
+        "refined": true,
+        "subValue": 41.9
+      },
+      {
+        "level": 85,
+        "refined": false,
+        "subValue": 43.9
+      },
+      {
+        "level": 90,
+        "refined": false,
+        "subValue": 45.9
+      }
+    ]
+  },
+  {
+    "hash": "e1e5cd112c969223f9a9a7e5494413e116de9780",
+    "val": [
+      {
+        "level": 1,
+        "refined": false,
+        "subValue": 12
+      },
+      {
+        "level": 5,
+        "refined": false,
+        "subValue": 13.9
+      },
+      {
+        "level": 10,
+        "refined": false,
+        "subValue": 16.4
+      },
+      {
+        "level": 15,
+        "refined": false,
+        "subValue": 18.8
+      },
+      {
+        "level": 20,
+        "refined": false,
+        "subValue": 21.2
+      },
+      {
+        "level": 20,
+        "refined": true,
+        "subValue": 21.2
+      },
+      {
+        "level": 25,
+        "refined": false,
+        "subValue": 23.6
+      },
+      {
+        "level": 30,
+        "refined": false,
+        "subValue": 26.1
+      },
+      {
+        "level": 35,
+        "refined": false,
+        "subValue": 28.5
+      },
+      {
+        "level": 40,
+        "refined": false,
+        "subValue": 30.9
+      },
+      {
+        "level": 40,
+        "refined": true,
+        "subValue": 30.9
+      },
+      {
+        "level": 45,
+        "refined": false,
+        "subValue": 33.3
+      },
+      {
+        "level": 50,
+        "refined": false,
+        "subValue": 35.7
+      },
+      {
+        "level": 50,
+        "refined": true,
+        "subValue": 35.7
+      },
+      {
+        "level": 55,
+        "refined": false,
+        "subValue": 38.2
+      },
+      {
+        "level": 60,
+        "refined": false,
+        "subValue": 40.6
+      },
+      {
+        "level": 60,
+        "refined": true,
+        "subValue": 40.6
+      },
+      {
+        "level": 65,
+        "refined": false,
+        "subValue": 43
+      },
+      {
+        "level": 70,
+        "refined": false,
+        "subValue": 45.4
+      },
+      {
+        "level": 70,
+        "refined": true,
+        "subValue": 45.4
+      },
+      {
+        "level": 75,
+        "refined": false,
+        "subValue": 47.9
+      },
+      {
+        "level": 80,
+        "refined": false,
+        "subValue": 50.3
+      },
+      {
+        "level": 80,
+        "refined": true,
+        "subValue": 50.3
+      },
+      {
+        "level": 85,
+        "refined": false,
+        "subValue": 52.7
+      },
+      {
+        "level": 90,
+        "refined": false,
+        "subValue": 55.1
+      }
+    ]
+  },
+  {
+    "hash": "e38b02fdd9b99122a0440e34d9c7a322c93bf262",
+    "val": [
+      {
+        "level": 1,
+        "refined": false,
+        "subValue": 10.8
+      },
+      {
+        "level": 5,
+        "refined": false,
+        "subValue": 12.5
+      },
+      {
+        "level": 10,
+        "refined": false,
+        "subValue": 14.7
+      },
+      {
+        "level": 15,
+        "refined": false,
+        "subValue": 16.9
+      },
+      {
+        "level": 20,
+        "refined": false,
+        "subValue": 19.1
+      },
+      {
+        "level": 20,
+        "refined": true,
+        "subValue": 19.1
+      },
+      {
+        "level": 25,
+        "refined": false,
+        "subValue": 21.3
+      },
+      {
+        "level": 30,
+        "refined": false,
+        "subValue": 23.4
+      },
+      {
+        "level": 35,
+        "refined": false,
+        "subValue": 25.6
+      },
+      {
+        "level": 40,
+        "refined": false,
+        "subValue": 27.8
+      },
+      {
+        "level": 40,
+        "refined": true,
+        "subValue": 27.8
+      },
+      {
+        "level": 45,
+        "refined": false,
+        "subValue": 30
+      },
+      {
+        "level": 50,
+        "refined": false,
+        "subValue": 32.2
+      },
+      {
+        "level": 50,
+        "refined": true,
+        "subValue": 32.2
+      },
+      {
+        "level": 55,
+        "refined": false,
+        "subValue": 34.4
+      },
+      {
+        "level": 60,
+        "refined": false,
+        "subValue": 36.5
+      },
+      {
+        "level": 60,
+        "refined": true,
+        "subValue": 36.5
+      },
+      {
+        "level": 65,
+        "refined": false,
+        "subValue": 38.7
+      },
+      {
+        "level": 70,
+        "refined": false,
+        "subValue": 40.9
+      },
+      {
+        "level": 70,
+        "refined": true,
+        "subValue": 40.9
+      },
+      {
+        "level": 75,
+        "refined": false,
+        "subValue": 43.1
+      },
+      {
+        "level": 80,
+        "refined": false,
+        "subValue": 45.3
+      },
+      {
+        "level": 80,
+        "refined": true,
+        "subValue": 45.3
+      },
+      {
+        "level": 85,
+        "refined": false,
+        "subValue": 47.4
+      },
+      {
+        "level": 90,
+        "refined": false,
+        "subValue": 49.6
+      }
+    ]
+  },
+  {
+    "hash": "2c40c409094630f11c60143e87be70b750142758",
+    "val": [
+      {
+        "level": 1,
+        "refined": false,
+        "subValue": 9.6
+      },
+      {
+        "level": 5,
+        "refined": false,
+        "subValue": 11.2
+      },
+      {
+        "level": 10,
+        "refined": false,
+        "subValue": 13.1
+      },
+      {
+        "level": 15,
+        "refined": false,
+        "subValue": 15
+      },
+      {
+        "level": 20,
+        "refined": false,
+        "subValue": 17
+      },
+      {
+        "level": 20,
+        "refined": true,
+        "subValue": 17
+      },
+      {
+        "level": 25,
+        "refined": false,
+        "subValue": 18.9
+      },
+      {
+        "level": 30,
+        "refined": false,
+        "subValue": 20.8
+      },
+      {
+        "level": 35,
+        "refined": false,
+        "subValue": 22.8
+      },
+      {
+        "level": 40,
+        "refined": false,
+        "subValue": 24.7
+      },
+      {
+        "level": 40,
+        "refined": true,
+        "subValue": 24.7
+      },
+      {
+        "level": 45,
+        "refined": false,
+        "subValue": 26.7
+      },
+      {
+        "level": 50,
+        "refined": false,
+        "subValue": 28.6
+      },
+      {
+        "level": 50,
+        "refined": true,
+        "subValue": 28.6
+      },
+      {
+        "level": 55,
+        "refined": false,
+        "subValue": 30.5
+      },
+      {
+        "level": 60,
+        "refined": false,
+        "subValue": 32.5
+      },
+      {
+        "level": 60,
+        "refined": true,
+        "subValue": 32.5
+      },
+      {
+        "level": 65,
+        "refined": false,
+        "subValue": 34.4
+      },
+      {
+        "level": 70,
+        "refined": false,
+        "subValue": 36.3
+      },
+      {
+        "level": 70,
+        "refined": true,
+        "subValue": 36.3
+      },
+      {
+        "level": 75,
+        "refined": false,
+        "subValue": 38.3
+      },
+      {
+        "level": 80,
+        "refined": false,
+        "subValue": 40.2
+      },
+      {
+        "level": 80,
+        "refined": true,
+        "subValue": 40.2
+      },
+      {
+        "level": 85,
+        "refined": false,
+        "subValue": 42.2
+      },
+      {
+        "level": 90,
+        "refined": false,
+        "subValue": 44.1
+      }
+    ]
+  },
+  {
+    "hash": "5585cd03acafd6f4f055530aaf09f2572ca7b057",
+    "val": [
+      {
+        "level": 1,
+        "refined": false,
+        "subValue": 41
+      },
+      {
+        "level": 5,
+        "refined": false,
+        "subValue": 47
+      },
+      {
+        "level": 10,
+        "refined": false,
+        "subValue": 56
+      },
+      {
+        "level": 15,
+        "refined": false,
+        "subValue": 64
+      },
+      {
+        "level": 20,
+        "refined": false,
+        "subValue": 72
+      },
+      {
+        "level": 20,
+        "refined": true,
+        "subValue": 72
+      },
+      {
+        "level": 25,
+        "refined": false,
+        "subValue": 80
+      },
+      {
+        "level": 30,
+        "refined": false,
+        "subValue": 89
+      },
+      {
+        "level": 35,
+        "refined": false,
+        "subValue": 97
+      },
+      {
+        "level": 40,
+        "refined": false,
+        "subValue": 105
+      },
+      {
+        "level": 40,
+        "refined": true,
+        "subValue": 105
+      },
+      {
+        "level": 45,
+        "refined": false,
+        "subValue": 113
+      },
+      {
+        "level": 50,
+        "refined": false,
+        "subValue": 122
+      },
+      {
+        "level": 50,
+        "refined": true,
+        "subValue": 122
+      },
+      {
+        "level": 55,
+        "refined": false,
+        "subValue": 130
+      },
+      {
+        "level": 60,
+        "refined": false,
+        "subValue": 138
+      },
+      {
+        "level": 60,
+        "refined": true,
+        "subValue": 138
+      },
+      {
+        "level": 65,
+        "refined": false,
+        "subValue": 146
+      },
+      {
+        "level": 70,
+        "refined": false,
+        "subValue": 154
+      },
+      {
+        "level": 70,
+        "refined": true,
+        "subValue": 154
+      },
+      {
+        "level": 75,
+        "refined": false,
+        "subValue": 163
+      },
+      {
+        "level": 80,
+        "refined": false,
+        "subValue": 171
+      },
+      {
+        "level": 80,
+        "refined": true,
+        "subValue": 171
+      },
+      {
+        "level": 85,
+        "refined": false,
+        "subValue": 179
+      },
+      {
+        "level": 90,
+        "refined": false,
+        "subValue": 187
+      }
+    ]
+  },
+  {
+    "hash": "41ebf9a8b44d9441b53b08a622cf87e58144062e",
+    "val": [
+      {
+        "level": 1,
+        "refined": false,
+        "subValue": 9.6
+      },
+      {
+        "level": 5,
+        "refined": false,
+        "subValue": 11.1
+      },
+      {
+        "level": 10,
+        "refined": false,
+        "subValue": 13
+      },
+      {
+        "level": 15,
+        "refined": false,
+        "subValue": 15
+      },
+      {
+        "level": 20,
+        "refined": false,
+        "subValue": 16.9
+      },
+      {
+        "level": 20,
+        "refined": true,
+        "subValue": 16.9
+      },
+      {
+        "level": 25,
+        "refined": false,
+        "subValue": 18.8
+      },
+      {
+        "level": 30,
+        "refined": false,
+        "subValue": 20.8
+      },
+      {
+        "level": 35,
+        "refined": false,
+        "subValue": 22.7
+      },
+      {
+        "level": 40,
+        "refined": false,
+        "subValue": 24.6
+      },
+      {
+        "level": 40,
+        "refined": true,
+        "subValue": 24.6
+      },
+      {
+        "level": 45,
+        "refined": false,
+        "subValue": 26.5
+      },
+      {
+        "level": 50,
+        "refined": false,
+        "subValue": 28.5
+      },
+      {
+        "level": 50,
+        "refined": true,
+        "subValue": 28.5
+      },
+      {
+        "level": 55,
+        "refined": false,
+        "subValue": 30.4
+      },
+      {
+        "level": 60,
+        "refined": false,
+        "subValue": 32.3
+      },
+      {
+        "level": 60,
+        "refined": true,
+        "subValue": 32.3
+      },
+      {
+        "level": 65,
+        "refined": false,
+        "subValue": 34.3
+      },
+      {
+        "level": 70,
+        "refined": false,
+        "subValue": 36.2
+      },
+      {
+        "level": 70,
+        "refined": true,
+        "subValue": 36.2
+      },
+      {
+        "level": 75,
+        "refined": false,
+        "subValue": 38.1
+      },
+      {
+        "level": 80,
+        "refined": false,
+        "subValue": 40.1
+      },
+      {
+        "level": 80,
+        "refined": true,
+        "subValue": 40.1
+      },
+      {
+        "level": 85,
+        "refined": false,
+        "subValue": 42
+      },
+      {
+        "level": 90,
+        "refined": false,
+        "subValue": 43.9
+      }
+    ]
+  },
+  {
+    "hash": "16d217e595857cdf22345d2f4ef338f1a9bda62e",
+    "val": [
+      {
+        "level": 1,
+        "refined": false,
+        "subValue": 11.3
+      },
+      {
+        "level": 5,
+        "refined": false,
+        "subValue": 13.1
+      },
+      {
+        "level": 10,
+        "refined": false,
+        "subValue": 15.3
+      },
+      {
+        "level": 15,
+        "refined": false,
+        "subValue": 17.6
+      },
+      {
+        "level": 20,
+        "refined": false,
+        "subValue": 19.9
+      },
+      {
+        "level": 20,
+        "refined": true,
+        "subValue": 19.9
+      },
+      {
+        "level": 25,
+        "refined": false,
+        "subValue": 22.2
+      },
+      {
+        "level": 30,
+        "refined": false,
+        "subValue": 24.4
+      },
+      {
+        "level": 35,
+        "refined": false,
+        "subValue": 26.7
+      },
+      {
+        "level": 40,
+        "refined": false,
+        "subValue": 29
+      },
+      {
+        "level": 40,
+        "refined": true,
+        "subValue": 29
+      },
+      {
+        "level": 45,
+        "refined": false,
+        "subValue": 31.3
+      },
+      {
+        "level": 50,
+        "refined": false,
+        "subValue": 33.5
+      },
+      {
+        "level": 50,
+        "refined": true,
+        "subValue": 33.5
+      },
+      {
+        "level": 55,
+        "refined": false,
+        "subValue": 35.8
+      },
+      {
+        "level": 60,
+        "refined": false,
+        "subValue": 38.1
+      },
+      {
+        "level": 60,
+        "refined": true,
+        "subValue": 38.1
+      },
+      {
+        "level": 65,
+        "refined": false,
+        "subValue": 40.4
+      },
+      {
+        "level": 70,
+        "refined": false,
+        "subValue": 42.6
+      },
+      {
+        "level": 70,
+        "refined": true,
+        "subValue": 42.6
+      },
+      {
+        "level": 75,
+        "refined": false,
+        "subValue": 44.9
+      },
+      {
+        "level": 80,
+        "refined": false,
+        "subValue": 47.2
+      },
+      {
+        "level": 80,
+        "refined": true,
+        "subValue": 47.2
+      },
+      {
+        "level": 85,
+        "refined": false,
+        "subValue": 49.5
+      },
+      {
+        "level": 90,
+        "refined": false,
+        "subValue": 51.7
+      }
+    ]
+  },
+  {
+    "hash": "442b9061467199f0e176ef5871a2bed5d7644f3e",
+    "val": [
+      {
+        "level": 1,
+        "refined": false,
+        "subValue": 6.7
+      },
+      {
+        "level": 5,
+        "refined": false,
+        "subValue": 7.7
+      },
+      {
+        "level": 10,
+        "refined": false,
+        "subValue": 9.1
+      },
+      {
+        "level": 15,
+        "refined": false,
+        "subValue": 10.4
+      },
+      {
+        "level": 20,
+        "refined": false,
+        "subValue": 11.8
+      },
+      {
+        "level": 20,
+        "refined": true,
+        "subValue": 11.8
+      },
+      {
+        "level": 25,
+        "refined": false,
+        "subValue": 13.1
+      },
+      {
+        "level": 30,
+        "refined": false,
+        "subValue": 14.5
+      },
+      {
+        "level": 35,
+        "refined": false,
+        "subValue": 15.8
+      },
+      {
+        "level": 40,
+        "refined": false,
+        "subValue": 17.2
+      },
+      {
+        "level": 40,
+        "refined": true,
+        "subValue": 17.2
+      },
+      {
+        "level": 45,
+        "refined": false,
+        "subValue": 18.5
+      },
+      {
+        "level": 50,
+        "refined": false,
+        "subValue": 19.9
+      },
+      {
+        "level": 50,
+        "refined": true,
+        "subValue": 19.9
+      },
+      {
+        "level": 55,
+        "refined": false,
+        "subValue": 21.2
+      },
+      {
+        "level": 60,
+        "refined": false,
+        "subValue": 22.6
+      },
+      {
+        "level": 60,
+        "refined": true,
+        "subValue": 22.6
+      },
+      {
+        "level": 65,
+        "refined": false,
+        "subValue": 23.9
+      },
+      {
+        "level": 70,
+        "refined": false,
+        "subValue": 25.2
+      },
+      {
+        "level": 70,
+        "refined": true,
+        "subValue": 25.2
+      },
+      {
+        "level": 75,
+        "refined": false,
+        "subValue": 26.6
+      },
+      {
+        "level": 80,
+        "refined": false,
+        "subValue": 27.9
+      },
+      {
+        "level": 80,
+        "refined": true,
+        "subValue": 27.9
+      },
+      {
+        "level": 85,
+        "refined": false,
+        "subValue": 29.3
+      },
+      {
+        "level": 90,
+        "refined": false,
+        "subValue": 30.6
+      }
+    ]
+  },
+  {
+    "hash": "072375d93c3b125e17544ca7c5b4a40b3d9155a0",
+    "val": [
+      {
+        "level": 1,
+        "refined": false,
+        "subValue": 8
+      },
+      {
+        "level": 5,
+        "refined": false,
+        "subValue": 9.3
+      },
+      {
+        "level": 10,
+        "refined": false,
+        "subValue": 10.9
+      },
+      {
+        "level": 15,
+        "refined": false,
+        "subValue": 12.5
+      },
+      {
+        "level": 20,
+        "refined": false,
+        "subValue": 14.1
+      },
+      {
+        "level": 20,
+        "refined": true,
+        "subValue": 14.1
+      },
+      {
+        "level": 25,
+        "refined": false,
+        "subValue": 15.8
+      },
+      {
+        "level": 30,
+        "refined": false,
+        "subValue": 17.4
+      },
+      {
+        "level": 35,
+        "refined": false,
+        "subValue": 19
+      },
+      {
+        "level": 40,
+        "refined": false,
+        "subValue": 20.6
+      },
+      {
+        "level": 40,
+        "refined": true,
+        "subValue": 20.6
+      },
+      {
+        "level": 45,
+        "refined": false,
+        "subValue": 22.2
+      },
+      {
+        "level": 50,
+        "refined": false,
+        "subValue": 23.8
+      },
+      {
+        "level": 50,
+        "refined": true,
+        "subValue": 23.8
+      },
+      {
+        "level": 55,
+        "refined": false,
+        "subValue": 25.4
+      },
+      {
+        "level": 60,
+        "refined": false,
+        "subValue": 27.1
+      },
+      {
+        "level": 60,
+        "refined": true,
+        "subValue": 27.1
+      },
+      {
+        "level": 65,
+        "refined": false,
+        "subValue": 28.7
+      },
+      {
+        "level": 70,
+        "refined": false,
+        "subValue": 30.3
+      },
+      {
+        "level": 70,
+        "refined": true,
+        "subValue": 30.3
+      },
+      {
+        "level": 75,
+        "refined": false,
+        "subValue": 31.9
+      },
+      {
+        "level": 80,
+        "refined": false,
+        "subValue": 33.5
+      },
+      {
+        "level": 80,
+        "refined": true,
+        "subValue": 33.5
+      },
+      {
+        "level": 85,
+        "refined": false,
+        "subValue": 35.1
+      },
+      {
+        "level": 90,
+        "refined": false,
+        "subValue": 36.8
+      }
+    ]
+  },
+  {
+    "hash": "cfbb7a93fd2c8c6cf135c739914850a2df73acbd",
+    "val": [
+      {
+        "level": 1,
+        "refined": false,
+        "subValue": 10.2
+      },
+      {
+        "level": 5,
+        "refined": false,
+        "subValue": 11.9
+      },
+      {
+        "level": 10,
+        "refined": false,
+        "subValue": 13.9
+      },
+      {
+        "level": 15,
+        "refined": false,
+        "subValue": 16
+      },
+      {
+        "level": 20,
+        "refined": false,
+        "subValue": 18
+      },
+      {
+        "level": 20,
+        "refined": true,
+        "subValue": 18
+      },
+      {
+        "level": 25,
+        "refined": false,
+        "subValue": 20.1
+      },
+      {
+        "level": 30,
+        "refined": false,
+        "subValue": 22.2
+      },
+      {
+        "level": 35,
+        "refined": false,
+        "subValue": 24.2
+      },
+      {
+        "level": 40,
+        "refined": false,
+        "subValue": 26.3
+      },
+      {
+        "level": 40,
+        "refined": true,
+        "subValue": 26.3
+      },
+      {
+        "level": 45,
+        "refined": false,
+        "subValue": 28.4
+      },
+      {
+        "level": 50,
+        "refined": false,
+        "subValue": 30.4
+      },
+      {
+        "level": 50,
+        "refined": true,
+        "subValue": 30.4
+      },
+      {
+        "level": 55,
+        "refined": false,
+        "subValue": 32.5
+      },
+      {
+        "level": 60,
+        "refined": false,
+        "subValue": 34.6
+      },
+      {
+        "level": 60,
+        "refined": true,
+        "subValue": 34.6
+      },
+      {
+        "level": 65,
+        "refined": false,
+        "subValue": 36.6
+      },
+      {
+        "level": 70,
+        "refined": false,
+        "subValue": 38.7
+      },
+      {
+        "level": 70,
+        "refined": true,
+        "subValue": 38.7
+      },
+      {
+        "level": 75,
+        "refined": false,
+        "subValue": 40.7
+      },
+      {
+        "level": 80,
+        "refined": false,
+        "subValue": 42.8
+      },
+      {
+        "level": 80,
+        "refined": true,
+        "subValue": 42.8
+      },
+      {
+        "level": 85,
+        "refined": false,
+        "subValue": 44.9
+      },
+      {
+        "level": 90,
+        "refined": false,
+        "subValue": 46.9
+      }
+    ]
+  },
+  {
+    "hash": "193b8db9dd0e0d09e4bde0938fef5978a5b9da8e",
+    "val": [
+      {
+        "level": 1,
+        "refined": false,
+        "subValue": 5.1
+      },
+      {
+        "level": 5,
+        "refined": false,
+        "subValue": 5.9
+      },
+      {
+        "level": 10,
+        "refined": false,
+        "subValue": 7
+      },
+      {
+        "level": 15,
+        "refined": false,
+        "subValue": 8
+      },
+      {
+        "level": 20,
+        "refined": false,
+        "subValue": 9
+      },
+      {
+        "level": 20,
+        "refined": true,
+        "subValue": 9
+      },
+      {
+        "level": 25,
+        "refined": false,
+        "subValue": 10.1
+      },
+      {
+        "level": 30,
+        "refined": false,
+        "subValue": 11.1
+      },
+      {
+        "level": 35,
+        "refined": false,
+        "subValue": 12.1
+      },
+      {
+        "level": 40,
+        "refined": false,
+        "subValue": 13.1
+      },
+      {
+        "level": 40,
+        "refined": true,
+        "subValue": 13.1
+      },
+      {
+        "level": 45,
+        "refined": false,
+        "subValue": 14.2
+      },
+      {
+        "level": 50,
+        "refined": false,
+        "subValue": 15.2
+      },
+      {
+        "level": 50,
+        "refined": true,
+        "subValue": 15.2
+      },
+      {
+        "level": 55,
+        "refined": false,
+        "subValue": 16.2
+      },
+      {
+        "level": 60,
+        "refined": false,
+        "subValue": 17.3
+      },
+      {
+        "level": 60,
+        "refined": true,
+        "subValue": 17.3
+      },
+      {
+        "level": 65,
+        "refined": false,
+        "subValue": 18.3
+      },
+      {
+        "level": 70,
+        "refined": false,
+        "subValue": 19.3
+      },
+      {
+        "level": 70,
+        "refined": true,
+        "subValue": 19.3
+      },
+      {
+        "level": 75,
+        "refined": false,
+        "subValue": 20.4
+      },
+      {
+        "level": 80,
+        "refined": false,
+        "subValue": 21.4
+      },
+      {
+        "level": 80,
+        "refined": true,
+        "subValue": 21.4
+      },
+      {
+        "level": 85,
+        "refined": false,
+        "subValue": 22.4
+      },
+      {
+        "level": 90,
+        "refined": false,
+        "subValue": 23.5
+      }
+    ]
+  },
+  {
+    "hash": "eaac141e77c54a22ab0c1434ef82cff1475b7aef",
+    "val": [
+      {
+        "level": 1,
+        "refined": false,
+        "subValue": 5.1
+      },
+      {
+        "level": 5,
+        "refined": false,
+        "subValue": 5.9
+      },
+      {
+        "level": 10,
+        "refined": false,
+        "subValue": 7
+      },
+      {
+        "level": 15,
+        "refined": false,
+        "subValue": 8
+      },
+      {
+        "level": 20,
+        "refined": false,
+        "subValue": 9
+      },
+      {
+        "level": 20,
+        "refined": true,
+        "subValue": 9
+      },
+      {
+        "level": 25,
+        "refined": false,
+        "subValue": 10
+      },
+      {
+        "level": 30,
+        "refined": false,
+        "subValue": 11.1
+      },
+      {
+        "level": 35,
+        "refined": false,
+        "subValue": 12.1
+      },
+      {
+        "level": 40,
+        "refined": false,
+        "subValue": 13.1
+      },
+      {
+        "level": 40,
+        "refined": true,
+        "subValue": 13.1
+      },
+      {
+        "level": 45,
+        "refined": false,
+        "subValue": 14.2
+      },
+      {
+        "level": 50,
+        "refined": false,
+        "subValue": 15.2
+      },
+      {
+        "level": 50,
+        "refined": true,
+        "subValue": 15.2
+      },
+      {
+        "level": 55,
+        "refined": false,
+        "subValue": 16.2
+      },
+      {
+        "level": 60,
+        "refined": false,
+        "subValue": 17.3
+      },
+      {
+        "level": 60,
+        "refined": true,
+        "subValue": 17.3
+      },
+      {
+        "level": 65,
+        "refined": false,
+        "subValue": 18.3
+      },
+      {
+        "level": 70,
+        "refined": false,
+        "subValue": 19.3
+      },
+      {
+        "level": 70,
+        "refined": true,
+        "subValue": 19.3
+      },
+      {
+        "level": 75,
+        "refined": false,
+        "subValue": 20.3
+      },
+      {
+        "level": 80,
+        "refined": false,
+        "subValue": 21.4
+      },
+      {
+        "level": 80,
+        "refined": true,
+        "subValue": 21.4
+      },
+      {
+        "level": 85,
+        "refined": false,
+        "subValue": 22.4
+      },
+      {
+        "level": 90,
+        "refined": false,
+        "subValue": 23.4
+      }
+    ]
+  },
+  {
+    "hash": "da755fefa82f22d61f894384cb7f8b3780aefd5a",
+    "val": [
+      {
+        "level": 1,
+        "refined": false,
+        "subValue": 48
+      },
+      {
+        "level": 5,
+        "refined": false,
+        "subValue": 56
+      },
+      {
+        "level": 10,
+        "refined": false,
+        "subValue": 65
+      },
+      {
+        "level": 15,
+        "refined": false,
+        "subValue": 75
+      },
+      {
+        "level": 20,
+        "refined": false,
+        "subValue": 85
+      },
+      {
+        "level": 20,
+        "refined": true,
+        "subValue": 85
+      },
+      {
+        "level": 25,
+        "refined": false,
+        "subValue": 95
+      },
+      {
+        "level": 30,
+        "refined": false,
+        "subValue": 104
+      },
+      {
+        "level": 35,
+        "refined": false,
+        "subValue": 114
+      },
+      {
+        "level": 40,
+        "refined": false,
+        "subValue": 124
+      },
+      {
+        "level": 40,
+        "refined": true,
+        "subValue": 124
+      },
+      {
+        "level": 45,
+        "refined": false,
+        "subValue": 133
+      },
+      {
+        "level": 50,
+        "refined": false,
+        "subValue": 143
+      },
+      {
+        "level": 50,
+        "refined": true,
+        "subValue": 143
+      },
+      {
+        "level": 55,
+        "refined": false,
+        "subValue": 153
+      },
+      {
+        "level": 60,
+        "refined": false,
+        "subValue": 162
+      },
+      {
+        "level": 60,
+        "refined": true,
+        "subValue": 162
+      },
+      {
+        "level": 65,
+        "refined": false,
+        "subValue": 172
+      },
+      {
+        "level": 70,
+        "refined": false,
+        "subValue": 182
+      },
+      {
+        "level": 70,
+        "refined": true,
+        "subValue": 182
+      },
+      {
+        "level": 75,
+        "refined": false,
+        "subValue": 191
+      },
+      {
+        "level": 80,
+        "refined": false,
+        "subValue": 201
+      },
+      {
+        "level": 80,
+        "refined": true,
+        "subValue": 201
+      },
+      {
+        "level": 85,
+        "refined": false,
+        "subValue": 211
+      },
+      {
+        "level": 90,
+        "refined": false,
+        "subValue": 221
+      }
+    ]
+  },
+  {
+    "hash": "9199fd9d8a6e7cb679bfb0f2994f8bf5a0c22379",
+    "val": [
+      {
+        "level": 1,
+        "refined": false,
+        "subValue": 15
+      },
+      {
+        "level": 5,
+        "refined": false,
+        "subValue": 17.4
+      },
+      {
+        "level": 10,
+        "refined": false,
+        "subValue": 20.5
+      },
+      {
+        "level": 15,
+        "refined": false,
+        "subValue": 23.5
+      },
+      {
+        "level": 20,
+        "refined": false,
+        "subValue": 26.5
+      },
+      {
+        "level": 20,
+        "refined": true,
+        "subValue": 26.5
+      },
+      {
+        "level": 25,
+        "refined": false,
+        "subValue": 29.6
+      },
+      {
+        "level": 30,
+        "refined": false,
+        "subValue": 32.6
+      },
+      {
+        "level": 35,
+        "refined": false,
+        "subValue": 35.6
+      },
+      {
+        "level": 40,
+        "refined": false,
+        "subValue": 38.7
+      },
+      {
+        "level": 40,
+        "refined": true,
+        "subValue": 38.7
+      },
+      {
+        "level": 45,
+        "refined": false,
+        "subValue": 41.7
+      },
+      {
+        "level": 50,
+        "refined": false,
+        "subValue": 44.7
+      },
+      {
+        "level": 50,
+        "refined": true,
+        "subValue": 44.7
+      },
+      {
+        "level": 55,
+        "refined": false,
+        "subValue": 47.8
+      },
+      {
+        "level": 60,
+        "refined": false,
+        "subValue": 50.8
+      },
+      {
+        "level": 60,
+        "refined": true,
+        "subValue": 50.8
+      },
+      {
+        "level": 65,
+        "refined": false,
+        "subValue": 53.8
+      },
+      {
+        "level": 70,
+        "refined": false,
+        "subValue": 56.8
+      },
+      {
+        "level": 70,
+        "refined": true,
+        "subValue": 56.8
+      },
+      {
+        "level": 75,
+        "refined": false,
+        "subValue": 59.9
+      },
+      {
+        "level": 80,
+        "refined": false,
+        "subValue": 62.9
+      },
+      {
+        "level": 80,
+        "refined": true,
+        "subValue": 62.9
+      },
+      {
+        "level": 85,
+        "refined": false,
+        "subValue": 65.9
+      },
+      {
+        "level": 90,
+        "refined": false,
+        "subValue": 69
+      }
+    ]
+  },
+  {
+    "hash": "fcc50fa5e56d9756916d5cc2b79b43980845c58c",
+    "val": [
+      {
+        "level": 1,
+        "refined": false,
+        "subValue": 4.8
+      },
+      {
+        "level": 5,
+        "refined": false,
+        "subValue": 5.6
+      },
+      {
+        "level": 10,
+        "refined": false,
+        "subValue": 6.5
+      },
+      {
+        "level": 15,
+        "refined": false,
+        "subValue": 7.5
+      },
+      {
+        "level": 20,
+        "refined": false,
+        "subValue": 8.5
+      },
+      {
+        "level": 20,
+        "refined": true,
+        "subValue": 8.5
+      },
+      {
+        "level": 25,
+        "refined": false,
+        "subValue": 9.5
+      },
+      {
+        "level": 30,
+        "refined": false,
+        "subValue": 10.4
+      },
+      {
+        "level": 35,
+        "refined": false,
+        "subValue": 11.4
+      },
+      {
+        "level": 40,
+        "refined": false,
+        "subValue": 12.4
+      },
+      {
+        "level": 40,
+        "refined": true,
+        "subValue": 12.4
+      },
+      {
+        "level": 45,
+        "refined": false,
+        "subValue": 13.3
+      },
+      {
+        "level": 50,
+        "refined": false,
+        "subValue": 14.3
+      },
+      {
+        "level": 50,
+        "refined": true,
+        "subValue": 14.3
+      },
+      {
+        "level": 55,
+        "refined": false,
+        "subValue": 15.3
+      },
+      {
+        "level": 60,
+        "refined": false,
+        "subValue": 16.2
+      },
+      {
+        "level": 60,
+        "refined": true,
+        "subValue": 16.2
+      },
+      {
+        "level": 65,
+        "refined": false,
+        "subValue": 17.2
+      },
+      {
+        "level": 70,
+        "refined": false,
+        "subValue": 18.2
+      },
+      {
+        "level": 70,
+        "refined": true,
+        "subValue": 18.2
+      },
+      {
+        "level": 75,
+        "refined": false,
+        "subValue": 19.1
+      },
+      {
+        "level": 80,
+        "refined": false,
+        "subValue": 20.1
+      },
+      {
+        "level": 80,
+        "refined": true,
+        "subValue": 20.1
+      },
+      {
+        "level": 85,
+        "refined": false,
+        "subValue": 21.1
+      },
+      {
+        "level": 90,
+        "refined": false,
+        "subValue": 22.1
+      }
+    ]
+  },
+  {
+    "hash": "0cd3139ef85c5dfbeda02e1dc72ece66badf7e30",
+    "val": [
+      {
+        "level": 1,
+        "refined": false,
+        "subValue": 14.4
+      },
+      {
+        "level": 5,
+        "refined": false,
+        "subValue": 16.7
+      },
+      {
+        "level": 10,
+        "refined": false,
+        "subValue": 19.6
+      },
+      {
+        "level": 15,
+        "refined": false,
+        "subValue": 22.5
+      },
+      {
+        "level": 20,
+        "refined": false,
+        "subValue": 25.4
+      },
+      {
+        "level": 20,
+        "refined": true,
+        "subValue": 25.4
+      },
+      {
+        "level": 25,
+        "refined": false,
+        "subValue": 28.4
+      },
+      {
+        "level": 30,
+        "refined": false,
+        "subValue": 31.3
+      },
+      {
+        "level": 35,
+        "refined": false,
+        "subValue": 34.2
+      },
+      {
+        "level": 40,
+        "refined": false,
+        "subValue": 37.1
+      },
+      {
+        "level": 40,
+        "refined": true,
+        "subValue": 37.1
+      },
+      {
+        "level": 45,
+        "refined": false,
+        "subValue": 40
+      },
+      {
+        "level": 50,
+        "refined": false,
+        "subValue": 42.9
+      },
+      {
+        "level": 50,
+        "refined": true,
+        "subValue": 42.9
+      },
+      {
+        "level": 55,
+        "refined": false,
+        "subValue": 45.8
+      },
+      {
+        "level": 60,
+        "refined": false,
+        "subValue": 48.7
+      },
+      {
+        "level": 60,
+        "refined": true,
+        "subValue": 48.7
+      },
+      {
+        "level": 65,
+        "refined": false,
+        "subValue": 51.6
+      },
+      {
+        "level": 70,
+        "refined": false,
+        "subValue": 54.5
+      },
+      {
+        "level": 70,
+        "refined": true,
+        "subValue": 54.5
+      },
+      {
+        "level": 75,
+        "refined": false,
+        "subValue": 57.4
+      },
+      {
+        "level": 80,
+        "refined": false,
+        "subValue": 60.3
+      },
+      {
+        "level": 80,
+        "refined": true,
+        "subValue": 60.3
+      },
+      {
+        "level": 85,
+        "refined": false,
+        "subValue": 63.2
+      },
+      {
+        "level": 90,
+        "refined": false,
+        "subValue": 66.2
+      }
+    ]
+  },
+  {
+    "hash": "541df488fca7ed393fa1bcebced280dbd97a0082",
+    "val": [
+      {
+        "level": 1,
+        "refined": false,
+        "subValue": 6.8
+      },
+      {
+        "level": 5,
+        "refined": false,
+        "subValue": 7.9
+      },
+      {
+        "level": 10,
+        "refined": false,
+        "subValue": 9.3
+      },
+      {
+        "level": 15,
+        "refined": false,
+        "subValue": 10.6
+      },
+      {
+        "level": 20,
+        "refined": false,
+        "subValue": 12
+      },
+      {
+        "level": 20,
+        "refined": true,
+        "subValue": 12
+      },
+      {
+        "level": 25,
+        "refined": false,
+        "subValue": 13.4
+      },
+      {
+        "level": 30,
+        "refined": false,
+        "subValue": 14.8
+      },
+      {
+        "level": 35,
+        "refined": false,
+        "subValue": 16.1
+      },
+      {
+        "level": 40,
+        "refined": false,
+        "subValue": 17.5
+      },
+      {
+        "level": 40,
+        "refined": true,
+        "subValue": 17.5
+      },
+      {
+        "level": 45,
+        "refined": false,
+        "subValue": 18.9
+      },
+      {
+        "level": 50,
+        "refined": false,
+        "subValue": 20.3
+      },
+      {
+        "level": 50,
+        "refined": true,
+        "subValue": 20.3
+      },
+      {
+        "level": 55,
+        "refined": false,
+        "subValue": 21.6
+      },
+      {
+        "level": 60,
+        "refined": false,
+        "subValue": 23
+      },
+      {
+        "level": 60,
+        "refined": true,
+        "subValue": 23
+      },
+      {
+        "level": 65,
+        "refined": false,
+        "subValue": 24.4
+      },
+      {
+        "level": 70,
+        "refined": false,
+        "subValue": 25.7
+      },
+      {
+        "level": 70,
+        "refined": true,
+        "subValue": 25.7
+      },
+      {
+        "level": 75,
+        "refined": false,
+        "subValue": 27.1
+      },
+      {
+        "level": 80,
+        "refined": false,
+        "subValue": 28.5
+      },
+      {
+        "level": 80,
+        "refined": true,
+        "subValue": 28.5
+      },
+      {
+        "level": 85,
+        "refined": false,
+        "subValue": 29.9
+      },
+      {
+        "level": 90,
+        "refined": false,
+        "subValue": 31.2
+      }
+    ]
+  },
+  {
+    "hash": "bfc2922fcc12f5088a370c53f8a0c0d8689f0538",
+    "val": [
+      {
+        "level": 1,
+        "refined": false,
+        "subValue": 20
+      },
+      {
+        "level": 5,
+        "refined": false,
+        "subValue": 24
+      },
+      {
+        "level": 10,
+        "refined": false,
+        "subValue": 28
+      },
+      {
+        "level": 15,
+        "refined": false,
+        "subValue": 32
+      },
+      {
+        "level": 20,
+        "refined": false,
+        "subValue": 36
+      },
+      {
+        "level": 20,
+        "refined": true,
+        "subValue": 36
+      },
+      {
+        "level": 25,
+        "refined": false,
+        "subValue": 40
+      },
+      {
+        "level": 30,
+        "refined": false,
+        "subValue": 44
+      },
+      {
+        "level": 35,
+        "refined": false,
+        "subValue": 48
+      },
+      {
+        "level": 40,
+        "refined": false,
+        "subValue": 53
+      },
+      {
+        "level": 40,
+        "refined": true,
+        "subValue": 53
+      },
+      {
+        "level": 45,
+        "refined": false,
+        "subValue": 57
+      },
+      {
+        "level": 50,
+        "refined": false,
+        "subValue": 61
+      },
+      {
+        "level": 50,
+        "refined": true,
+        "subValue": 61
+      },
+      {
+        "level": 55,
+        "refined": false,
+        "subValue": 65
+      },
+      {
+        "level": 60,
+        "refined": false,
+        "subValue": 69
+      },
+      {
+        "level": 60,
+        "refined": true,
+        "subValue": 69
+      },
+      {
+        "level": 65,
+        "refined": false,
+        "subValue": 73
+      },
+      {
+        "level": 70,
+        "refined": false,
+        "subValue": 77
+      },
+      {
+        "level": 70,
+        "refined": true,
+        "subValue": 77
+      },
+      {
+        "level": 75,
+        "refined": false,
+        "subValue": 81
+      },
+      {
+        "level": 80,
+        "refined": false,
+        "subValue": 85
+      },
+      {
+        "level": 80,
+        "refined": true,
+        "subValue": 85
+      },
+      {
+        "level": 85,
+        "refined": false,
+        "subValue": 90
+      },
+      {
+        "level": 90,
+        "refined": false,
+        "subValue": 94
+      }
+    ]
+  },
+  {
+    "hash": "02c5dc62259e3de5f7f1d02ac7d96dff900f89a7",
+    "val": [
+      {
+        "level": 1,
+        "refined": false,
+        "subValue": 10.2
+      },
+      {
+        "level": 5,
+        "refined": false,
+        "subValue": 11.9
+      },
+      {
+        "level": 10,
+        "refined": false,
+        "subValue": 13.9
+      },
+      {
+        "level": 15,
+        "refined": false,
+        "subValue": 16
+      },
+      {
+        "level": 20,
+        "refined": false,
+        "subValue": 18
+      },
+      {
+        "level": 20,
+        "refined": true,
+        "subValue": 18
+      },
+      {
+        "level": 25,
+        "refined": false,
+        "subValue": 20.1
+      },
+      {
+        "level": 30,
+        "refined": false,
+        "subValue": 22.1
+      },
+      {
+        "level": 35,
+        "refined": false,
+        "subValue": 24.2
+      },
+      {
+        "level": 40,
+        "refined": false,
+        "subValue": 26.3
+      },
+      {
+        "level": 40,
+        "refined": true,
+        "subValue": 26.3
+      },
+      {
+        "level": 45,
+        "refined": false,
+        "subValue": 28.3
+      },
+      {
+        "level": 50,
+        "refined": false,
+        "subValue": 30.4
+      },
+      {
+        "level": 50,
+        "refined": true,
+        "subValue": 30.4
+      },
+      {
+        "level": 55,
+        "refined": false,
+        "subValue": 32.4
+      },
+      {
+        "level": 60,
+        "refined": false,
+        "subValue": 34.5
+      },
+      {
+        "level": 60,
+        "refined": true,
+        "subValue": 34.5
+      },
+      {
+        "level": 65,
+        "refined": false,
+        "subValue": 36.6
+      },
+      {
+        "level": 70,
+        "refined": false,
+        "subValue": 38.6
+      },
+      {
+        "level": 70,
+        "refined": true,
+        "subValue": 38.6
+      },
+      {
+        "level": 75,
+        "refined": false,
+        "subValue": 40.7
+      },
+      {
+        "level": 80,
+        "refined": false,
+        "subValue": 42.7
+      },
+      {
+        "level": 80,
+        "refined": true,
+        "subValue": 42.7
+      },
+      {
+        "level": 85,
+        "refined": false,
+        "subValue": 44.8
+      },
+      {
+        "level": 90,
+        "refined": false,
+        "subValue": 46.9
+      }
+    ]
+  },
+  {
+    "hash": "5c6b67f1207b94c5041fa48268c5e6a73a084556",
+    "val": [
+      {
+        "level": 1,
+        "refined": false,
+        "subValue": 8.5
+      },
+      {
+        "level": 5,
+        "refined": false,
+        "subValue": 9.9
+      },
+      {
+        "level": 10,
+        "refined": false,
+        "subValue": 11.6
+      },
+      {
+        "level": 15,
+        "refined": false,
+        "subValue": 13.3
+      },
+      {
+        "level": 20,
+        "refined": false,
+        "subValue": 15
+      },
+      {
+        "level": 20,
+        "refined": true,
+        "subValue": 15
+      },
+      {
+        "level": 25,
+        "refined": false,
+        "subValue": 16.7
+      },
+      {
+        "level": 30,
+        "refined": false,
+        "subValue": 18.5
+      },
+      {
+        "level": 35,
+        "refined": false,
+        "subValue": 20.2
+      },
+      {
+        "level": 40,
+        "refined": false,
+        "subValue": 21.9
+      },
+      {
+        "level": 40,
+        "refined": true,
+        "subValue": 21.9
+      },
+      {
+        "level": 45,
+        "refined": false,
+        "subValue": 23.6
+      },
+      {
+        "level": 50,
+        "refined": false,
+        "subValue": 25.3
+      },
+      {
+        "level": 50,
+        "refined": true,
+        "subValue": 25.3
+      },
+      {
+        "level": 55,
+        "refined": false,
+        "subValue": 27
+      },
+      {
+        "level": 60,
+        "refined": false,
+        "subValue": 28.8
+      },
+      {
+        "level": 60,
+        "refined": true,
+        "subValue": 28.8
+      },
+      {
+        "level": 65,
+        "refined": false,
+        "subValue": 30.5
+      },
+      {
+        "level": 70,
+        "refined": false,
+        "subValue": 32.2
+      },
+      {
+        "level": 70,
+        "refined": true,
+        "subValue": 32.2
+      },
+      {
+        "level": 75,
+        "refined": false,
+        "subValue": 33.9
+      },
+      {
+        "level": 80,
+        "refined": false,
+        "subValue": 35.6
+      },
+      {
+        "level": 80,
+        "refined": true,
+        "subValue": 35.6
+      },
+      {
+        "level": 85,
+        "refined": false,
+        "subValue": 37.3
+      },
+      {
+        "level": 90,
+        "refined": false,
+        "subValue": 39
+      }
+    ]
+  },
+  {
+    "hash": "932b3139c442df2591a0b43971c8b21a18a2e7df",
+    "val": [
+      {
+        "level": 1,
+        "refined": false,
+        "subValue": 3.4
+      },
+      {
+        "level": 5,
+        "refined": false,
+        "subValue": 4
+      },
+      {
+        "level": 10,
+        "refined": false,
+        "subValue": 4.6
+      },
+      {
+        "level": 15,
+        "refined": false,
+        "subValue": 5.3
+      },
+      {
+        "level": 20,
+        "refined": false,
+        "subValue": 6
+      },
+      {
+        "level": 20,
+        "refined": true,
+        "subValue": 6
+      },
+      {
+        "level": 25,
+        "refined": false,
+        "subValue": 6.7
+      },
+      {
+        "level": 30,
+        "refined": false,
+        "subValue": 7.4
+      },
+      {
+        "level": 35,
+        "refined": false,
+        "subValue": 8.1
+      },
+      {
+        "level": 40,
+        "refined": false,
+        "subValue": 8.8
+      },
+      {
+        "level": 40,
+        "refined": true,
+        "subValue": 8.8
+      },
+      {
+        "level": 45,
+        "refined": false,
+        "subValue": 9.4
+      },
+      {
+        "level": 50,
+        "refined": false,
+        "subValue": 10.1
+      },
+      {
+        "level": 50,
+        "refined": true,
+        "subValue": 10.1
+      },
+      {
+        "level": 55,
+        "refined": false,
+        "subValue": 10.8
+      },
+      {
+        "level": 60,
+        "refined": false,
+        "subValue": 11.5
+      },
+      {
+        "level": 60,
+        "refined": true,
+        "subValue": 11.5
+      },
+      {
+        "level": 65,
+        "refined": false,
+        "subValue": 12.2
+      },
+      {
+        "level": 70,
+        "refined": false,
+        "subValue": 12.9
+      },
+      {
+        "level": 70,
+        "refined": true,
+        "subValue": 12.9
+      },
+      {
+        "level": 75,
+        "refined": false,
+        "subValue": 13.6
+      },
+      {
+        "level": 80,
+        "refined": false,
+        "subValue": 14.2
+      },
+      {
+        "level": 80,
+        "refined": true,
+        "subValue": 14.2
+      },
+      {
+        "level": 85,
+        "refined": false,
+        "subValue": 14.9
+      },
+      {
+        "level": 90,
+        "refined": false,
+        "subValue": 15.6
+      }
+    ]
+  },
+  {
+    "hash": "0fea218574c687614ff8f66790bebc8d6cb828ea",
+    "val": [
+      {
+        "level": 1,
+        "refined": false,
+        "subValue": 24
+      },
+      {
+        "level": 5,
+        "refined": false,
+        "subValue": 28
+      },
+      {
+        "level": 10,
+        "refined": false,
+        "subValue": 33
+      },
+      {
+        "level": 15,
+        "refined": false,
+        "subValue": 38
+      },
+      {
+        "level": 20,
+        "refined": false,
+        "subValue": 42
+      },
+      {
+        "level": 20,
+        "refined": true,
+        "subValue": 42
+      },
+      {
+        "level": 25,
+        "refined": false,
+        "subValue": 47
+      },
+      {
+        "level": 30,
+        "refined": false,
+        "subValue": 52
+      },
+      {
+        "level": 35,
+        "refined": false,
+        "subValue": 57
+      },
+      {
+        "level": 40,
+        "refined": false,
+        "subValue": 62
+      },
+      {
+        "level": 40,
+        "refined": true,
+        "subValue": 62
+      },
+      {
+        "level": 45,
+        "refined": false,
+        "subValue": 67
+      },
+      {
+        "level": 50,
+        "refined": false,
+        "subValue": 71
+      },
+      {
+        "level": 50,
+        "refined": true,
+        "subValue": 71
+      },
+      {
+        "level": 55,
+        "refined": false,
+        "subValue": 76
+      },
+      {
+        "level": 60,
+        "refined": false,
+        "subValue": 81
+      },
+      {
+        "level": 60,
+        "refined": true,
+        "subValue": 81
+      },
+      {
+        "level": 65,
+        "refined": false,
+        "subValue": 86
+      },
+      {
+        "level": 70,
+        "refined": false,
+        "subValue": 91
+      },
+      {
+        "level": 70,
+        "refined": true,
+        "subValue": 91
+      },
+      {
+        "level": 75,
+        "refined": false,
+        "subValue": 96
+      },
+      {
+        "level": 80,
+        "refined": false,
+        "subValue": 101
+      },
+      {
+        "level": 80,
+        "refined": true,
+        "subValue": 101
+      },
+      {
+        "level": 85,
+        "refined": false,
+        "subValue": 105
+      },
+      {
+        "level": 90,
+        "refined": false,
+        "subValue": 110
+      }
+    ]
+  },
+  {
+    "hash": "7f58347a4aa9824a8e19fd41b83c835be575fe4e",
+    "val": [
+      {
+        "level": 1,
+        "refined": false,
+        "subValue": 7.2
+      },
+      {
+        "level": 5,
+        "refined": false,
+        "subValue": 8.4
+      },
+      {
+        "level": 10,
+        "refined": false,
+        "subValue": 9.8
+      },
+      {
+        "level": 15,
+        "refined": false,
+        "subValue": 11.3
+      },
+      {
+        "level": 20,
+        "refined": false,
+        "subValue": 12.7
+      },
+      {
+        "level": 20,
+        "refined": true,
+        "subValue": 12.7
+      },
+      {
+        "level": 25,
+        "refined": false,
+        "subValue": 14.2
+      },
+      {
+        "level": 30,
+        "refined": false,
+        "subValue": 15.6
+      },
+      {
+        "level": 35,
+        "refined": false,
+        "subValue": 17.1
+      },
+      {
+        "level": 40,
+        "refined": false,
+        "subValue": 18.5
+      },
+      {
+        "level": 40,
+        "refined": true,
+        "subValue": 18.5
+      },
+      {
+        "level": 45,
+        "refined": false,
+        "subValue": 20
+      },
+      {
+        "level": 50,
+        "refined": false,
+        "subValue": 21.4
+      },
+      {
+        "level": 50,
+        "refined": true,
+        "subValue": 21.4
+      },
+      {
+        "level": 55,
+        "refined": false,
+        "subValue": 22.9
+      },
+      {
+        "level": 60,
+        "refined": false,
+        "subValue": 24.4
+      },
+      {
+        "level": 60,
+        "refined": true,
+        "subValue": 24.4
+      },
+      {
+        "level": 65,
+        "refined": false,
+        "subValue": 25.8
+      },
+      {
+        "level": 70,
+        "refined": false,
+        "subValue": 27.3
+      },
+      {
+        "level": 70,
+        "refined": true,
+        "subValue": 27.3
+      },
+      {
+        "level": 75,
+        "refined": false,
+        "subValue": 28.7
+      },
+      {
+        "level": 80,
+        "refined": false,
+        "subValue": 30.2
+      },
+      {
+        "level": 80,
+        "refined": true,
+        "subValue": 30.2
+      },
+      {
+        "level": 85,
+        "refined": false,
+        "subValue": 31.6
+      },
+      {
+        "level": 90,
+        "refined": false,
+        "subValue": 33.1
+      }
+    ]
+  }
+]

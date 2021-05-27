@@ -1,0 +1,575 @@
+[
+  {
+    "name": "Cull the Weak",
+    "description": "Defeating an opponent restores {$0} HP.",
+    "refinements": [["8%"], ["10%"], ["12%"], ["14%"], ["16%"]]
+  },
+  {
+    "name": "Press the Advantage",
+    "description": "After defeating an opponent, ATK is increased by {$0} for 30s. This effect has a maximum of 3 stacks, and the duration of each stack is independent of the others.",
+    "refinements": [["12%"], ["15%"], ["18%"], ["21%"], ["24%"]]
+  },
+  {
+    "name": "Lithic Axiom: Unity",
+    "description": "For every character in the party who hails from Liyue, the character who equips this weapon gains a {$0} ATK increase and a {$1} CRIT Rate increase. This effect stacks up to 4 times.",
+    "refinements": [
+      ["7%", "3%"],
+      ["8%", "4%"],
+      ["9%", "5%"],
+      ["10%", "6%"],
+      ["11%", "7%"]
+    ]
+  },
+  {
+    "name": "Windfall",
+    "description": "CRIT Hits have a {$0} chance to generate a small amount of Elemental Particles, which will regenerate 6 Energy for the character. Can only occur once every {$1}s.",
+    "refinements": [
+      ["60%", "12"],
+      ["70%", "10.5"],
+      ["80%", "9"],
+      ["90%", "7.5"],
+      ["100%", "6"]
+    ]
+  },
+  {
+    "name": "Sky-Piercing Fang",
+    "description": "CRIT Rate increased by {$0}. Gains Skypiercing Might upon using an Elemental Burst: Increases Movement SPD by {$1}, increases ATK SPD by {$2}, and Normal and Charged hits deal additional DMG equal to {$3} of ATK. Skypiercing Might lasts for 12s.",
+    "refinements": [
+      ["4%", "10%", "10%", "20%"],
+      ["5%", "10%", "10%", "25%"],
+      ["6%", "10%", "10%", "30%"],
+      ["7%", "10%", "10%", "35%"],
+      ["8%", "10%", "10%", "40%"]
+    ]
+  },
+  {
+    "name": "Verdant Wind",
+    "description": "Upon hit, Normal and Aimed Shot Attacks have a 50% chance to generate a Cyclone, which will continuously attract surrounding opponents, dealing {$0} of ATK as DMG to these opponents every 0.5s for 4s. This effect can only occur once every {$1}s.",
+    "refinements": [
+      ["40%", "14"],
+      ["50%", "13"],
+      ["60%", "12"],
+      ["70%", "11"],
+      ["80%", "10"]
+    ]
+  },
+  {
+    "name": "Undying Admiration",
+    "description": "Increases Elemental Skill DMG by {$0} and Elemental Skill CRIT Rate by {$1}.",
+    "refinements": [
+      ["16%", "6%"],
+      ["20%", "7.5%"],
+      ["24%", "9%"],
+      ["28%", "10.5%"],
+      ["32%", "12%"]
+    ]
+  },
+  {
+    "name": "Frost Burial",
+    "description": "Hitting an opponent with Normal and Charged Attacks has a {$0} chance of forming and dropping an Everfrost Icicle above them, dealing AoE DMG equal to {$1} of ATK. Opponents affected by Cryo are instead dealt DMG equal to {$2} of ATK. Can only occur once every 10s.",
+    "refinements": [
+      ["60%", "80%", "200%"],
+      ["70%", "95%", "240%"],
+      ["80%", "110%", "280%"],
+      ["90%", "125%", "320%"],
+      ["100%", "140%", "360%"]
+    ]
+  },
+  {
+    "name": "Focus",
+    "description": "Upon damaging an opponent, increases CRIT Rate by {$0}. Max 5 stacks. A CRIT Hit removes all stacks.",
+    "refinements": [["8%"], ["10%"], ["12%"], ["14%"], ["16%"]]
+  },
+  {
+    "name": "Rapid Firing",
+    "description": "Increases Normal Attack DMG by {$0} but decreases Charged Attack DMG by 10%.",
+    "refinements": [["40%"], ["50%"], ["60%"], ["70%"], ["80%"]]
+  },
+  {
+    "name": "Windblume Wish",
+    "description": "After using an Elemental Skill, receive a boon from the ancient wish of the Windblume, increasing ATK by {$0} for 6s.",
+    "refinements": [["16%"], ["20%"], ["24%"], ["28%"], ["32%"]]
+  },
+  {
+    "name": "Determination",
+    "description": "Using an Elemental Burst grants a {$0} increase in ATK and Movement SPD for 15s.",
+    "refinements": [["12%"], ["15%"], ["18%"], ["21%"], ["24%"]]
+  },
+  {
+    "name": "Overloaded",
+    "description": "Upon causing an Overloaded, Superconduct, Electro-Charged, or an Electro-infused Swirl reaction, ATK is increased by {$0} for 12s.",
+    "refinements": [["20%"], ["25%"], ["30%"], ["35%"], ["40%"]]
+  },
+  {
+    "name": "Oppidan Ambush",
+    "description": "While the character equipped with this weapon is in the party but not on the field, their DMG increases by {$0} every second up to a max of {$1}. When the character is on the field for more than 4s, the aforementioned DMG buff decreases by {$2} per second until it reaches 0%.",
+    "refinements": [
+      ["2%", "20%", "4%"],
+      ["2.5%", "25%", "5%"],
+      ["3%", "30%", "6%"],
+      ["3.5%", "35%", "7%"],
+      ["4%", "40%", "8%"]
+    ]
+  },
+  {
+    "name": "Wolfish Tracker",
+    "description": "Increases ATK by {$0}. On hit, attacks against opponents with less than 30% HP increase all party members' ATK by {$1} for 12s. Can only occur once every 30s.",
+    "refinements": [
+      ["20%", "40%"],
+      ["25%", "50%"],
+      ["30%", "60%"],
+      ["35%", "70%"],
+      ["40%", "80%"]
+    ]
+  },
+  {
+    "name": "Infusion Blade",
+    "description": "On hit, Normal or Charged Attacks increase ATK and DEF by {$0} for 6s. Max 4 stacks. This effect can only occur once every 0.5s.",
+    "refinements": [["6%"], ["7.5%"], ["9%"], ["10.5%"], ["12%"]]
+  },
+  {
+    "name": "Golden Majesty",
+    "description": "Increases Shield Strength by {$0}. Scoring hits on opponents increases ATK by {$1} for 8s. Max 5 stacks. Can only occur once every 0.3s. While protected by a shield, this ATK increase effect is increased by 100%.",
+    "refinements": [
+      ["20%", "4%"],
+      ["25%", "5%"],
+      ["30%", "6%"],
+      ["35%", "7%"],
+      ["40%", "8%"]
+    ]
+  },
+  {
+    "name": "Decimate",
+    "description": "Increases DMG against mechanoid Ruin opponents by {$0}.",
+    "refinements": [["40%"], ["50%"], ["60%"], ["70%"], ["80%"]]
+  },
+  {
+    "name": "Itinerant Hero",
+    "description": "Increases DMG dealt by the character equipping this weapon by {$0}. Taking DMG disables this effect for 5s.",
+    "refinements": [["12%"], ["15%"], ["18%"], ["21%"], ["24%"]]
+  },
+  {
+    "name": "Bane of Fire and Thunder",
+    "description": "Increases DMG against opponents affected by Pyro or Electro by {$0}.",
+    "refinements": [["12%"], ["15%"], ["18%"], ["21%"], ["24%"]]
+  },
+  {
+    "name": "Solar Shine",
+    "description": "Normal Attack hits increase Elemental Skill and Elemental Burst DMG by {$0} for 6s. Likewise, Elemental Skill or Elemental Burst hits increase Normal Attack DMG by {$1} for 6s.",
+    "refinements": [
+      ["20%", "20%"],
+      ["25%", "25%"],
+      ["30%", "30%"],
+      ["35%", "35%"],
+      ["40%", "40%"]
+    ]
+  },
+  {
+    "name": "Heritage",
+    "description": "When switching characters, the new character taking the field has their ATK increased by {$0} for 10s. This effect can only occur once every 20s.",
+    "refinements": [["24%"], ["30%"], ["36%"], ["42%"], ["48%"]]
+  },
+  {
+    "name": "Bane of Storm and Tide",
+    "description": "Increases DMG against opponents affected by Hydro or Electro by {$0}.",
+    "refinements": [["12%"], ["15%"], ["18%"], ["21%"], ["24%"]]
+  },
+  {
+    "name": "Elemental Mastery",
+    "description": "Normal Attack hits increase all Elemental DMG by {$0} for 6s. Max 2 stacks.",
+    "refinements": [["6%"], ["7.5%"], ["9%"], ["10.5%"], ["12%"]]
+  },
+  {
+    "name": "Rebel's Banner-Hymn",
+    "description": "A part of the \"Millennial Movement\" that wanders amidst the winds. Increases ATK by {$0}, and when Normal or Charged Attacks hit opponents, the character gains a Sigil of Whispers. This effect can be triggered once every 0.3s. When you possess 4 Sigils of Whispers, all of them will be consumed and all nearby party members will obtain the \"Millennial Movement: Banner-Hymn\" effect for 12s. \"Millennial Movement: Banner-Hymn\" increases Normal ATK SPD by {$1} and increases ATK by {$2}. Once this effect is triggered, you will not gain Sigils of Whispers for 20s. Of the many effects of the \"Millennial Movement,\" buffs of the same type will not stack.",
+    "refinements": [
+      ["16%", "12%", "20%"],
+      ["20%", "15%", "25%"],
+      ["24%", "18%", "30%"],
+      ["28%", "21%", "35%"],
+      ["32%", "24%", "40%"]
+    ]
+  },
+  {
+    "name": "Arrowless Song",
+    "description": "Increases Elemental Skill and Elemental Burst DMG by {$0}.",
+    "refinements": [["24%"], ["30%"], ["36%"], ["42%"], ["48%"]]
+  },
+  {
+    "name": "TBD",
+    "description": "Defeating an opponent restores {$0} HP.",
+    "refinements": [["8%"], ["10%"], ["12%"], ["14%"], ["16%"]]
+  },
+  {
+    "name": "Infusion Arrow",
+    "description": "Normal Attack and Charged Attack hits increase ATK by {$0} and Normal ATK SPD by {$1} for 6s. Max 4 stacks. Can only occur once every 0.3s.",
+    "refinements": [
+      ["4%", "1.2%"],
+      ["5%", "1.5%"],
+      ["6%", "1.8%"],
+      ["7%", "2.1%"],
+      ["8%", "2.4%"]
+    ]
+  },
+  {
+    "name": "Protector's Virtue",
+    "description": "HP increased by {$0}. Additionally, provides an ATK Bonus based on {$1} of the wielder's Max HP.",
+    "refinements": [
+      ["20%", "1.2%"],
+      ["25%", "1.5%"],
+      ["30%", "1.8%"],
+      ["35%", "2.1%"],
+      ["40%", "2.4%"]
+    ]
+  },
+  {
+    "name": "Bane of Water and Ice",
+    "description": "Increases DMG against opponents affected by Hydro or Cryo by {$0}.",
+    "refinements": [["12%"], ["15%"], ["18%"], ["21%"], ["24%"]]
+  },
+  {
+    "name": "Infusion Stinger",
+    "description": "Dealing Elemental DMG increases all DMG by {$0} for 6s. Max 2 stacks. Can occur once every 1s.",
+    "refinements": [["6%"], ["7.5%"], ["9%"], ["10.5%"], ["12%"]]
+  },
+  {
+    "name": "Chord",
+    "description": "Normal or Charged Attacks grant a Harmonic on hits. Gaining 5 Harmonics triggers the power of music and deals {$0} ATK DMG to surrounding opponents. Harmonics last up to 30s, and a maximum of 1 can be gained every 0.5s.",
+    "refinements": [["100%"], ["125%"], ["150%"], ["175%"], ["200%"]]
+  },
+  {
+    "name": "Ever-Changing",
+    "description": "Hitting an opponent with a Normal Attack decreases the Stamina consumption of Sprint or Alternate Sprint by {$0} for 5s. Additionally, using a Sprint or Alternate Sprint ability increases ATK by {$1} for 5s.",
+    "refinements": [
+      ["14%", "20%"],
+      ["16%", "25%"],
+      ["18%", "30%"],
+      ["20%", "35%"],
+      ["22%", "40%"]
+    ]
+  },
+  {
+    "name": "Wandering Clouds",
+    "description": "Increases Elemental DMG Bonus by {$0}. Normal Attack hits have a 50% chance to earn the favor of the clouds, which actively seek out nearby opponents to attack for 15s, dealing {$1} ATK DMG. Can only occur once every 30s.",
+    "refinements": [
+      ["12%", "160%"],
+      ["15%", "200%"],
+      ["18%", "240%"],
+      ["21%", "280%"],
+      ["24%", "320%"]
+    ]
+  },
+  {
+    "name": "Composed",
+    "description": "After damaging an opponent with an Elemental Skill, the skill has a {$0} chance to end its own CD. Can only occur once every {$1}.",
+    "refinements": [
+      ["40%", "30"],
+      ["50%", "26"],
+      ["60%", "22s"],
+      ["70%", "19"],
+      ["80%", "16s"]
+    ]
+  },
+  {
+    "name": "Strong-Willed",
+    "description": "Increases Normal and Charged Attack DMG by {$0}. After a Normal or Charged Attack is fired, DMG dealt increases by a further {$1} every 0.1s the arrow is in the air for up to 5 times.",
+    "refinements": [
+      ["12%", "8%"],
+      ["15%", "10%"],
+      ["18%", "12%"],
+      ["21%", "14%"],
+      ["24%", "16%"]
+    ]
+  },
+  {
+    "name": "Vigorous",
+    "description": "When HP is above 90%, increases CRIT Rate by {$0}.",
+    "refinements": [["14%"], ["17.5%"], ["21%"], ["24.5%"], ["28%"]]
+  },
+  {
+    "name": "Heavy",
+    "description": "Normal Attacks deal an additional {$0} ATK as DMG. This effect can only occur once every 10s.",
+    "refinements": [["160%"], ["200%"], ["240%"], ["280%"], ["320%"]]
+  },
+  {
+    "name": "Justice",
+    "description": "Increases DMG dealt by Normal and Charged Attacks by {$0}. Additionally, regenerates {$1} of ATK as HP when Normal and Charged Attacks score a CRIT Hit. This effect can occur once every 5s.",
+    "refinements": [
+      ["20%", "60%"],
+      ["25%", "70%"],
+      ["30%", "80%"],
+      ["35%", "90%"],
+      ["40%", "100%"]
+    ]
+  },
+  {
+    "name": "Magic Affinity",
+    "description": "After using an Elemental Skill, increases Normal and Charged Attack DMG by {$0} for 12s. Max 2 stacks.",
+    "refinements": [["8%"], ["10%"], ["12%"], ["14%"], ["16%"]]
+  },
+  {
+    "name": "Journey",
+    "description": "Each Elemental Orb or Particle collected restores {$0} HP.",
+    "refinements": [["1%"], ["1.25%"], ["1.5%"], ["1.75%"], ["2%"]]
+  },
+  {
+    "name": "Infusion Scroll",
+    "description": "Triggering an Elemental reaction grants a {$0} Elemental DMG Bonus for 10s. Max 2 stacks.",
+    "refinements": [["8%"], ["10%"], ["12%"], ["14%"], ["16%"]]
+  },
+  {
+    "name": "Rapids",
+    "description": "Upon causing a Vaporize, Electro-Charged, Frozen, or a Hydro-infused Swirl reaction, increases ATK by {$0} for 12s.",
+    "refinements": [["20%"], ["25%"], ["30%"], ["35%"], ["40%"]]
+  },
+  {
+    "name": "Gilding",
+    "description": "Using an Elemental Burst regenerates {$0} Energy every 2s for 6s. All party members will regenerate {$1} HP every 2s for this duration.",
+    "refinements": [
+      ["4", "4%"],
+      ["4.5", "4.5%"],
+      ["5", "5%"],
+      ["5.5", "5.5%"],
+      ["6", "6%"]
+    ]
+  },
+  {
+    "name": "The Parting Refrain",
+    "description": "A part of the \"Millennial Movement\" that wanders amidst the winds. Increases Elemental Mastery by {$0}. When the Elemental Skills or Elemental Bursts of the character wielding this weapon hit opponents, that character gains a Sigil of Remembrance. This effect can be triggered once every 0.2s and can be triggered even if said character is not on the field. When you possess 4 Sigils of Remembrance, all of them will be consumed and all nearby party members will obtain the \"Millennial Movement: Farewell Song\" effect for 12s. \"Millennial Movement: Farewell Song\" increases Elemental Mastery by {$1} and increases ATK by {$2}. Once this effect is triggered, you will not gain Sigils of Remembrance for 20s. Of the many effects of the \"Millennial Movement,\" buffs of the same type will not stack.",
+    "refinements": [
+      ["60", "100", "20%"],
+      ["75", "125", "25%"],
+      ["90", "150", "30%"],
+      ["105", "175", "35%"],
+      ["120", "200", "40%"]
+    ]
+  },
+  {
+    "name": "Crush",
+    "description": "On hit, Normal or Charged Attacks have a 50% chance to deal an additional {$0} ATK DMG to opponents within a small AoE. Can only occur once every 15s.",
+    "refinements": [["240%"], ["300%"], ["360%"], ["420%"], ["480%"]]
+  },
+  {
+    "name": "Unbending",
+    "description": "When HP falls below {$0}, increases Charged Attack DMG by {$1} and Charged Attacks become harder to interrupt.",
+    "refinements": [
+      ["70%", "30%"],
+      ["75%", "35%"],
+      ["80%", "40%"],
+      ["85%", "45%"],
+      ["90%", "50%"]
+    ]
+  },
+  {
+    "name": "Rebellious Guardian",
+    "description": "Taking DMG generates a shield which absorbs DMG up to {$0} of Max HP. This shield lasts for 10s or until broken, and can only be triggered once every {$1}s. While protected by the shield, the character gains {$2} increased DMG.",
+    "refinements": [
+      ["20%", "45", "12%"],
+      ["23%", "45", "15%"],
+      ["26%", "45", "18%"],
+      ["29%", "45", "21%"],
+      ["32%", "45", "24%"]
+    ]
+  },
+  {
+    "name": "Debut",
+    "description": "When the character takes the field, they will gain a random theme song for 10s. This can only occur once every 30s. Recitative: ATK is increased by {$0}. Aria: Increases all Elemental DMG by {$1}. Interlude: Elemental Mastery is increased by {$2}.",
+    "refinements": [
+      ["60%", "48%", "240"],
+      ["75%", "60%", "300"],
+      ["90%", "72%", "360"],
+      ["105%", "84%", "420"],
+      ["120%", "96%", "480"]
+    ]
+  },
+  {
+    "name": "Unreturning",
+    "description": "Charged Attack hits on weak points increase Movement SPD by 10% and ATK by {$0} for 10s.",
+    "refinements": [["36%"], ["45%"], ["54%"], ["63%"], ["72%"]]
+  },
+  {
+    "name": "Gladiator",
+    "description": "If there are at least 2 opponents nearby, ATK is increased by {$0} and DEF is increased by {$1}. If there are fewer than 2 opponents nearby, ATK is increased by {$2}.",
+    "refinements": [
+      ["16%", "16%", "24%"],
+      ["20%", "20%", "30%"],
+      ["24%", "24%", "36%"],
+      ["28%", "28%", "42%"],
+      ["32%", "32%", "48%"]
+    ]
+  },
+  {
+    "name": "Bane of Flame and Water",
+    "description": "Increases DMG against opponents affected by Hydro or Pyro by {$0}.",
+    "refinements": [["20%"], ["24%"], ["28%"], ["32%"], ["36%"]]
+  },
+  {
+    "name": "Wavesplitter",
+    "description": "Every 4s a character is on the field, they will deal {$0} more DMG and take {$1} more DMG. This effect has a maximum of 5 stacks and will not be reset if the character leaves the field, but will be reduced by 1 stack when the character takes DMG.",
+    "refinements": [
+      ["6%", "3%"],
+      ["7%", "2.7%"],
+      ["8%", "2.4%"],
+      ["9%", "2.2%"],
+      ["10%", "2%"]
+    ]
+  },
+  {
+    "name": "Sky-ripping Dragon Spine",
+    "description": "Increases all DMG by {$0}. After using an Elemental Burst, Normal or Charged Attack, on hit, creates a vacuum blade that does {$1} of ATK as DMG to opponents along its path. Lasts for 20s or 8 vacuum blades.",
+    "refinements": [
+      ["8%", "80%"],
+      ["10%", "100%"],
+      ["12%", "120%"],
+      ["14%", "140%"],
+      ["16%", "160%"]
+    ]
+  },
+  {
+    "name": "Descension",
+    "description": "Hitting opponents with Normal and Charged Attacks grants a {$0} chance to deal {$1} ATK as DMG in a small AoE. This effect can only occur once every 10s. Additionally, if the Traveler equips the Sword of Descension, their ATK is increased by {$2}.",
+    "refinements": [["50%", "200%", "66"], [], [], [], []]
+  },
+  {
+    "name": "Guerilla Tactics",
+    "description": "Defeating an opponent increases Movement SPD and ATK by {$0} for 15s.",
+    "refinements": [["12%"], ["14%"], ["16%"], ["18%"], ["20%"]]
+  },
+  {
+    "name": "Reckless Cinnabar",
+    "description": "HP increased by {$0}. Additionally, provides an ATK Bonus based on {$1} of the wielder's Max HP. When the wielder's HP is less than 50%, this ATK Bonus is increased by an additional {$2} of Max HP.",
+    "refinements": [
+      ["20%", "0.8%", "1%"],
+      ["25%", "1%", "1.2%"],
+      ["30%", "1.2%", "1.4%"],
+      ["35%", "1.4%", "1.6%"],
+      ["40%", "1.6%", "1.8%"]
+    ]
+  },
+  {
+    "name": "Echoing Ballad",
+    "description": "Increases CRIT DMG by {$0}. Hits have a {$1} chance to inflict a small AoE attack, dealing 125% Physical ATK DMG. Can only occur once every {$2}s.",
+    "refinements": [
+      ["20%", "60%", "4"],
+      ["25%", "70%", "3.5"],
+      ["30%", "80%", "3"],
+      ["35%", "90%", "2.5"],
+      ["40%", "100%", "2"]
+    ]
+  },
+  {
+    "name": "Black Wing",
+    "description": "Increases CRIT Rate by {$0} and increases Normal ATK SPD by {$1}. Additionally, Normal and Charged Attacks hits on opponents have a {$2} chance to trigger a vacuum blade that deals {$3} of ATK as DMG in a small AoE. This effect can occur no more than once every 2s.",
+    "refinements": [
+      ["8%", "12%", "50%", "40%"],
+      ["10%", "12%", "50%", "55%"],
+      ["12%", "12%", "50%", "70%"],
+      ["14%", "12%", "50%", "85%"],
+      ["16%", "12%", "50%", "100%"]
+    ]
+  },
+  {
+    "name": "Blunt Conclusion",
+    "description": "After using an Elemental Skill, on hit, Normal and Charged Attacks deal additional DMG equal to {$0} of ATK in a small AoE. Effect lasts 15s. DMG can only occur once every 3s.",
+    "refinements": [["60%"], ["75%"], ["90%"], ["105%"], ["120%"]]
+  },
+  {
+    "name": "Sharp",
+    "description": "Increases Normal Attack DMG by {$0}.",
+    "refinements": [["24%"], ["30%"], ["36%"], ["42%"], ["48%"]]
+  },
+  {
+    "name": "Infusion Needle",
+    "description": "After picking up an Elemental Orb/Particle, Normal and Charged Attacks deal additional DMG equal to {$0} of ATK for 5s.",
+    "refinements": [["20%"], ["25%"], ["30%"], ["35%"], ["40%"]]
+  },
+  {
+    "name": "Boundless Blessing",
+    "description": "Increases Movement SPD by 10%. When in battle, gain a {$0} Elemental DMG Bonus every 4s. Max 4 stacks. Lasts until the character falls or leaves combat.",
+    "refinements": [["8%"], ["10%"], ["12%"], ["14%"], ["16%"]]
+  },
+  {
+    "name": "Archer's Message",
+    "description": "Charged Attack hits on weak points deal an additional {$0} ATK DMG as CRIT DMG. Can only occur once every 10s.",
+    "refinements": [["100%"], ["125%"], ["150%"], ["175%"], ["200%"]]
+  },
+  {
+    "name": "Falcon's Defiance",
+    "description": "ATK is increased by {$0}. Triggers on taking DMG: the soul of the Falcon of the West awakens, holding the banner of resistance aloft, regenerating HP equal to {$1} of ATK and dealing {$2} of ATK as DMG to surrounding opponents. This effect can only occur once every 15s.",
+    "refinements": [
+      ["20%", "100%", "200%"],
+      ["25%", "115%", "230%"],
+      ["30%", "130%", "260%"],
+      ["35%", "145%", "290%"],
+      ["40%", "160%", "320%"]
+    ]
+  },
+  {
+    "name": "Gash",
+    "description": "On hit, has a 50% chance to deal {$0} ATK DMG to a single target. Can only occur once every {$1}s.",
+    "refinements": [
+      ["240%", "15"],
+      ["280%", "14"],
+      ["320%", "13"],
+      ["360%", "12"],
+      ["400%", "11"]
+    ]
+  },
+  {
+    "name": "Precise",
+    "description": "Increases DMG against weak spots by {$0}.",
+    "refinements": [["24%"], ["30%"], ["36%"], ["42%"], ["48%"]]
+  },
+  {
+    "name": "Smashed Stone",
+    "description": "On hit, Normal or Charged Attacks increase ATK and DEF by {$0} for 6s. Max 4 stacks. This effect can only occur once every 0.3s.",
+    "refinements": [["4%"], ["5%"], ["6%"], ["7%"], ["8%"]]
+  },
+  {
+    "name": "Residual Heat",
+    "description": "Upon causing an Overloaded, Melt, Burning, Vaporize, or a Pyro-infused Swirl reaction, ATK is increased by {$0} for 12s.",
+    "refinements": [["20%"], ["25%"], ["30%"], ["35%"], ["40%"]]
+  },
+  {
+    "name": "Slingshot",
+    "description": "If a Normal or Charged Attack hits a target within 0.3s of being fired, increases DMG by {$0}. Otherwise, decreases DMG by 10%.",
+    "refinements": [["36%"], ["42%"], ["48%"], ["54%"], ["60%"]]
+  },
+  {
+    "name": "Echo",
+    "description": "Normal and Charged Attacks have a 50% chance to fire a Bolt of Perception, dealing {$0} ATK as DMG. This bolt can bounce between opponents a maximum of 4 times. This effect can occur once every {$1}s.",
+    "refinements": [
+      ["240%", "12"],
+      ["270%", "11"],
+      ["300%", "10"],
+      ["330%", "9"],
+      ["360%", "8"]
+    ]
+  },
+  {
+    "name": "Bane of the Soft",
+    "description": "Increases DMG against slimes by {$0}.",
+    "refinements": [["40%"], ["50%"], ["60%"], ["70%"], ["80%"]]
+  },
+  {
+    "name": "Energy Shower",
+    "description": "Each Elemental Orb or Particle collected restores {$0} HP.",
+    "refinements": [["1%"], ["1.25"], ["1.5%"], ["1.75%"], ["2%"]]
+  },
+  {
+    "name": "Courage",
+    "description": "On hit, Normal or Charged Attacks increase ATK by {$0} for 6s. Max 4 stacks. Can occur once every 0.5s.",
+    "refinements": [["6%"], ["7%"], ["8%"], ["9%"], ["10%"]]
+  },
+  {
+    "name": "Eagle Spear of Justice",
+    "description": "On hit, increases ATK by {$0} for 6s. Max 7 stacks. This effect can only occur once every 0.3s. While in possession of the maximum possible stacks, DMG dealt is increased by {$1}.",
+    "refinements": [
+      ["3.2%", "12%"],
+      ["3.9%", "15%"],
+      ["4.6%", "18%"],
+      ["5.3%", "21%"],
+      ["6%", "24%"]
+    ]
+  }
+]
