@@ -22,9 +22,6 @@ module.exports = {
                             primary: "#F4F4F4",
                         },
                     },
-                    blue: {
-                        base: "#79C4EF",
-                    },
                 },
 
                 genshin: {

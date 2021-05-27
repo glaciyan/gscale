@@ -2,7 +2,9 @@ Eula:
     rarity: 5
     element: Cryo
     weapon: Claymore
-    sub: CRIT DMG%
+    sub: CRIT DMG
+    constellation: Aphros Delos
+    description:
     ascension: Crystalline Bloom
     local: dandelion_seed
     common: mask
