@@ -1,0 +1,14 @@
+prevent jit to delete those colors since they are used in a dynamic way
+
+text-genshin-rarity-1
+text-genshin-rarity-2
+text-genshin-rarity-3
+text-genshin-rarity-4
+text-genshin-rarity-5
+
+text-genshin-element-anemo
+text-genshin-element-pyro
+text-genshin-element-electro
+text-genshin-element-geo
+text-genshin-element-cryo
+text-genshin-element-hydro

@@ -1,41 +1,46 @@
-import React, { ReactNode } from 'react'
-import Link from 'next/link'
-import Head from 'next/head'
+import React, { ReactNode } from "react";
+import Head from "next/head";
 
 type Props = {
-  children?: ReactNode
-  title?: string
-}
+    children?: ReactNode;
+    title?: string;
+};
 
-const Layout = ({ children, title = 'This is the default title' }: Props) => (
-  <div>
-    <Head>
-      <title>{title}</title>
-      <meta charSet="utf-8" />
-      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-    </Head>
-    <header>
-      <nav>
-        <Link href="/">
-          <a>Home</a>
-        </Link>{' '}
-        |{' '}
-        <Link href="/about">
-          <a>About</a>
-        </Link>{' '}
-        |{' '}
-        <Link href="/users">
-          <a>Users List</a>
-        </Link>{' '}
-        | <a href="/api/users">Users API</a>
-      </nav>
-    </header>
-    {children}
-    <footer>
-      <hr />
-      <span>I'm here to stay (Footer)</span>
-    </footer>
-  </div>
-)
+const Layout = ({
+    children,
+    title = "GScale - Genshin Impact Planner",
+}: Props) => (
+    <div>
+        <Head>
+            <title>{title}</title>
+            <link rel="icon" href="/favicon.ico" sizes="32x32" />
+            <link rel="icon" href="/images/svg/logo.svg" type="image/svg+xml" />
+            <meta
+                name="description"
+                content="Get quick and easy info on characters, weapons and artifacts."
+            />
+            <meta property="og:title" content="GScale - Nightly" />
+            <meta property="og:type" content="website" />
+            <meta property="og:url" content="https://nightly.gscale.cc" />
+            <meta property="og:image" content="/images/og.png" />
+            <meta
+                property="og:description"
+                content="Get quick and easy info on characters, weapons and artifacts."
+            />
+            <meta name="twitter:card" content="summary_large_image"></meta>
+        </Head>
+        <header>
+            <nav>
+                <p>make a header</p>
+                <hr />
+            </nav>
+        </header>
+        {children}
+        <footer>
+            <hr />
+            <span>Add a footer here</span>
+        </footer>
+    </div>
+);
 
-export default Layout
+export default Layout;

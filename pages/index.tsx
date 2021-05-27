@@ -1,15 +1,27 @@
-import Link from 'next/link'
-import Layout from '../components/Layout'
+import { GetStaticProps } from "next";
+import Layout from "../components/Layout";
+import CharacterCard from "../components/CharacterCard";
+import { Characters } from "../interfaces";
+import fs from "fs";
+import yaml from "js-yaml";
 
-const IndexPage = () => (
-  <Layout title="Home | Next.js + TypeScript Example">
-    <h1>Hello Next.js 👋</h1>
-    <p>
-      <Link href="/about">
-        <a>About</a>
-      </Link>
-    </p>
-  </Layout>
-)
+export const getStaticProps: GetStaticProps = async () => {
+    const CharacterApi = yaml.load(
+        fs.readFileSync("./data/characters.yaml").toString()
+    ) as Characters;
+    return {
+        props: {
+            characters: CharacterApi,
+        },
+    };
+};
 
-export default IndexPage
+const IndexPage = ({ characters }: { characters: Characters }) => (
+    <Layout title="Home | Next.js + TypeScript Example">
+        {Object.entries(characters).map(([name, props]) => {
+            return <CharacterCard characterName={name} character={props} />;
+        })}
+    </Layout>
+);
+
+export default IndexPage;
