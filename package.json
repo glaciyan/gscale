@@ -15,7 +15,8 @@
     "next": "latest",
     "next-native-image": "^1.1.2",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-dom": "^17.0.1",
+    "react-responsive": "^8.2.0"
   },
   "devDependencies": {
     "@types/node": "^12.12.21",

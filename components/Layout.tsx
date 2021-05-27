@@ -3,31 +3,31 @@ import Head from "next/head";
 
 type Props = {
     children?: ReactNode;
-    title?: string;
+    title: string;
 };
 
-const Layout = ({
-    children,
-    title = "GScale - Genshin Impact Planner",
-}: Props) => (
+const Layout = ({ children, title }: Props) => (
     <div>
         <Head>
-            <title>{title}</title>
+            <title>{title + " - GScale"}</title>
             <link rel="icon" href="/favicon.ico" sizes="32x32" />
             <link rel="icon" href="/images/svg/logo.svg" type="image/svg+xml" />
             <meta
                 name="description"
-                content="Get quick and easy info on characters, weapons and artifacts."
+                content="Calculate how much you need for your characters."
             />
-            <meta property="og:title" content="GScale - Nightly" />
+            <meta
+                property="og:title"
+                content="GScale - Genshin Impact Character Building Calculator"
+            />
             <meta property="og:type" content="website" />
-            <meta property="og:url" content="https://nightly.gscale.cc" />
+            <meta property="og:url" content="https://www.gscale.cc" />
             <meta property="og:image" content="/images/og.png" />
             <meta
                 property="og:description"
-                content="Get quick and easy info on characters, weapons and artifacts."
+                content="Calculate how much you need for your characters."
             />
-            <meta name="twitter:card" content="summary_large_image"></meta>
+            <meta name="twitter:card" content="summary"></meta>
         </Head>
         <header>
             <nav>

@@ -17,10 +17,18 @@ export const getStaticProps: GetStaticProps = async () => {
 };
 
 const IndexPage = ({ characters }: { characters: Characters }) => (
-    <Layout title="Home | Next.js + TypeScript Example">
-        {Object.entries(characters).map(([name, props]) => {
-            return <CharacterCard characterName={name} character={props} />;
-        })}
+    <Layout title="Home">
+        <div className="max-w-screen-xl grid-cols-2 gap-5 mx-5 space-y-5 md:mx-12 sm:space-y-0 sm:grid xl:mx-auto sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+            {Object.entries(characters).map(([name, props]) => {
+                return (
+                    <CharacterCard
+                        characterName={name}
+                        character={props}
+                        key={name}
+                    />
+                );
+            })}
+        </div>
     </Layout>
 );
 
