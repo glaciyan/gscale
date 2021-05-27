@@ -57,4 +57,17 @@ const sorted = order.map((ord) => {
     return filtered.find((char) => char.name.toLowerCase() === ord);
 });
 
-fs.writeFileSync("out.json", JSON.stringify(sorted, null, 2));
+const named = {};
+
+sorted.forEach((item) => {
+    if (item) {
+        const name = item.name;
+        delete item.name;
+        named[name] = item;
+    }
+});
+
+const YAML = require("json-to-pretty-yaml");
+const data = YAML.stringify(named);
+
+fs.writeFileSync("out.yaml", data);

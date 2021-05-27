@@ -1,5 +1,7 @@
 export interface CharacterProperties {
     rarity: number;
+    constellation: string;
+    description: string;
     element: string;
     weapon: string;
     sub: string;
