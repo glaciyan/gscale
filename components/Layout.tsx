@@ -45,18 +45,18 @@ const Layout = ({ children, title, current }: Props) => {
                 />
                 <meta name="twitter:card" content="summary"></meta>
             </Head>
-            <header className="max-w-screen-xl mx-6 my-6 xl:mx-auto">
+            <header className="max-w-screen-xl mx-6 mt-6 xl:mx-auto">
                 <nav className="flex flex-wrap items-center">
                     <Link href="/">
                         <a href="">
                             <img
-                                className="mb-3 mr-6 xl:ml-3 xl:mr-14"
+                                className="mb-6 mr-6 xl:ml-3 xl:mr-14"
                                 src="/images/svg/logo_label_small.svg"
                                 alt="logo"
                             />
                         </a>
                     </Link>
-                    <div className="flex mb-3">
+                    <div className="flex mb-6">
                         {nav.map((navi, index, array) => {
                             return (
                                 <span key={navi.href} className="flex">
