@@ -1,7 +1,6 @@
 import React, { ReactNode, useEffect } from "react";
 import Head from "next/head";
 import Link from "next/link";
-import cn from "classnames";
 
 type Props = {
     children?: ReactNode;
