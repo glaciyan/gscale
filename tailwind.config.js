@@ -1,8 +1,9 @@
 module.exports = {
+    mode: "jit",
     purge: [
         "./pages/**/*.{js,ts,jsx,tsx}",
         "./components/**/*.{js,ts,jsx,tsx}",
-        "twSafeList.txt",
+        "./twSafeList.txt",
     ],
     darkMode: "class", // or 'media' or 'class'
     theme: {
@@ -31,6 +32,17 @@ module.exports = {
                         geo: "#FFE667",
                         cryo: "#99FFFF",
                         hydro: "#80C0FF",
+                    },
+
+                    dark: {
+                        element: {
+                            anemo: "#2FD09A",
+                            pyro: "#FF5C5C",
+                            electro: "#E368E3",
+                            geo: "#edad54",
+                            cryo: "#57cbcb",
+                            hydro: "#3D9EFF",
+                        },
                     },
 
                     rarity: {
