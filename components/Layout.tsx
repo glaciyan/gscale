@@ -45,19 +45,24 @@ const Layout = ({ children, title, current }: Props) => {
                 />
                 <meta name="twitter:card" content="summary"></meta>
             </Head>
-            <header>
-                <nav className="flex flex-wrap items-center max-w-screen-xl mx-6 my-6 xl:mx-auto ">
-                    <img
-                        className="mb-3 mr-6 xl:ml-3 xl:mr-14"
-                        src="/images/svg/logo_label_small.svg"
-                        alt="logo"
-                    />
+            <header className="max-w-screen-xl mx-6 my-6 xl:mx-auto">
+                <nav className="flex flex-wrap items-center">
+                    <Link href="/">
+                        <a href="">
+                            <img
+                                className="mb-3 mr-6 xl:ml-3 xl:mr-14"
+                                src="/images/svg/logo_label_small.svg"
+                                alt="logo"
+                            />
+                        </a>
+                    </Link>
                     <div className="flex mb-3">
                         {nav.map((navi, index, array) => {
                             return (
-                                <>
+                                <span key={navi.href} className="flex">
                                     <Link href={navi.href}>
                                         <a
+                                            href=""
                                             className={
                                                 current === navi.name
                                                     ? "text-gscale-dark-text-secondary hover:text-gscale-dark-text-primary"
@@ -70,7 +75,7 @@ const Layout = ({ children, title, current }: Props) => {
                                     {index < array.length - 1 ? (
                                         <div className="w-px h-5 mx-2 bg-gscale-dark-background-primary" />
                                     ) : null}
-                                </>
+                                </span>
                             );
                         })}
                     </div>
