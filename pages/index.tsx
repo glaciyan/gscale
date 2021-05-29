@@ -17,7 +17,7 @@ export const getStaticProps: GetStaticProps = async () => {
 };
 
 const IndexPage = ({ characters }: { characters: Characters }) => (
-    <Layout title="Home">
+    <Layout title="Home" current="Characters">
         <div className="grid max-w-screen-xl grid-cols-2 gap-5 mx-5 xl:mx-auto sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
             {Object.entries(characters).map(([name, props]) => {
                 return (

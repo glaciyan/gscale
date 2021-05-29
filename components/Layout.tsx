@@ -1,12 +1,20 @@
 import React, { ReactNode, useEffect } from "react";
 import Head from "next/head";
+import Link from "next/link";
+import cn from "classnames";
 
 type Props = {
     children?: ReactNode;
     title: string;
+    current?: string;
 };
 
-const Layout = ({ children, title }: Props) => {
+const nav = [
+    { name: "Characters", href: "/" },
+    { name: "Your Builds", href: "builds" },
+];
+
+const Layout = ({ children, title, current }: Props) => {
     useEffect(() => {
         document.body.className = "bg-gscale-dark-background-ternary";
     });
@@ -39,9 +47,34 @@ const Layout = ({ children, title }: Props) => {
                 <meta name="twitter:card" content="summary"></meta>
             </Head>
             <header>
-                <nav>
-                    <img src="/images/svg/logo_label_small.svg" alt="logo" />
-                    <hr />
+                <nav className="flex flex-wrap items-center max-w-screen-xl mx-6 my-6 xl:mx-auto ">
+                    <img
+                        className="mb-3 mr-6 xl:ml-3 xl:mr-14"
+                        src="/images/svg/logo_label_small.svg"
+                        alt="logo"
+                    />
+                    <div className="flex mb-3">
+                        {nav.map((navi, index, array) => {
+                            return (
+                                <>
+                                    <Link href={navi.href}>
+                                        <a
+                                            className={
+                                                current === navi.name
+                                                    ? "text-gscale-dark-text-secondary hover:text-gscale-dark-text-primary"
+                                                    : "text-gscale-dark-text-ternary hover:text-gscale-dark-text-secondary"
+                                            }
+                                        >
+                                            {navi.name}
+                                        </a>
+                                    </Link>
+                                    {index < array.length - 1 ? (
+                                        <div className="w-px h-5 mx-2 bg-gscale-dark-background-primary" />
+                                    ) : null}
+                                </>
+                            );
+                        })}
+                    </div>
                 </nav>
             </header>
             {children}
