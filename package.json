@@ -1,34 +1,35 @@
 {
-  "name": "with-typescript",
-  "version": "1.0.0",
-  "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "start": "next start",
-    "type-check": "tsc"
-  },
-  "dependencies": {
-    "@tailwindcss/aspect-ratio": "^0.2.1",
-    "@types/js-yaml": "^4.0.1",
-    "@types/react-responsive": "^8.0.2",
-    "classnames": "^2.3.1",
-    "dexie": "3.1.0-beta.11",
-    "dexie-react-hooks": "^1.0.6",
-    "js-yaml": "^4.1.0",
-    "next": "latest",
-    "next-native-image": "^1.1.2",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-responsive": "^8.2.0"
-  },
-  "devDependencies": {
-    "@types/node": "^12.12.21",
-    "@types/react": "^17.0.2",
-    "@types/react-dom": "^17.0.1",
-    "autoprefixer": "^10.2.6",
-    "postcss": "^8.3.0",
-    "tailwindcss": "^2.1.2",
-    "typescript": "4.0"
-  },
-  "license": "MIT"
+    "name": "with-typescript",
+    "version": "1.0.0",
+    "scripts": {
+        "prod": "next build && next start",
+        "dev": "next",
+        "build": "next build",
+        "start": "next start",
+        "type-check": "tsc"
+    },
+    "dependencies": {
+        "@tailwindcss/aspect-ratio": "^0.2.1",
+        "@types/js-yaml": "^4.0.1",
+        "@types/react-responsive": "^8.0.2",
+        "classnames": "^2.3.1",
+        "dexie": "3.1.0-beta.11",
+        "dexie-react-hooks": "^1.0.6",
+        "js-yaml": "^4.1.0",
+        "next": "latest",
+        "next-native-image": "^1.1.2",
+        "react": "^17.0.1",
+        "react-dom": "^17.0.1",
+        "react-responsive": "^8.2.0"
+    },
+    "devDependencies": {
+        "@types/node": "^12.12.21",
+        "@types/react": "^17.0.2",
+        "@types/react-dom": "^17.0.1",
+        "autoprefixer": "^10.2.6",
+        "postcss": "^8.3.0",
+        "tailwindcss": "^2.1.2",
+        "typescript": "4.0"
+    },
+    "license": "MIT"
 }
