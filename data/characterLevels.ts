@@ -14,6 +14,17 @@ export default {
     90: { level: 90, ascended: false },
 };
 
+export function getAscensionLevel(level: Levels) {
+    if (level <= 20) return -1;
+    else if (level >= 21 && level <= 40) return 0;
+    else if (level >= 41 && level <= 50) return 1;
+    else if (level >= 51 && level <= 60) return 2;
+    else if (level >= 61 && level <= 70) return 3;
+    else if (level >= 71 && level <= 80) return 4;
+    else if (level >= 81) return 5;
+    else return -1;
+}
+
 export type Levels =
     | 20
     | 21
