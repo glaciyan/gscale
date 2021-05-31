@@ -1,5 +1,5 @@
-import { getCharacterMaterials } from "../data/characterMaterials";
-import { totalXpAndMora } from "../data/characterXpMora";
+import { getCharacterMaterials } from "../lib/characterMaterials";
+import { totalXpAndMora } from "../lib";
 import buildsDB from "../lib/builds";
 
 export default function CharacterBuild({

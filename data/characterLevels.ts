@@ -14,16 +14,16 @@ export default {
     90: { level: 90, ascended: false },
 };
 
-export function getAscensionLevel(level: Levels) {
-    if (level <= 20) return -1;
-    else if (level >= 21 && level <= 40) return 0;
-    else if (level >= 41 && level <= 50) return 1;
-    else if (level >= 51 && level <= 60) return 2;
-    else if (level >= 61 && level <= 70) return 3;
-    else if (level >= 71 && level <= 80) return 4;
-    else if (level >= 81) return 5;
-    else return -1;
-}
+// data from https://genshin-impact.fandom.com/wiki/Character_EXP
+export const costs = [
+    { level: 20, xp: 120175, mora: 24200 },
+    { level: 40, xp: 578325, mora: 115800 },
+    { level: 50, xp: 579100, mora: 116000 },
+    { level: 60, xp: 854125, mora: 171000 },
+    { level: 70, xp: 1195925, mora: 239200 },
+    { level: 80, xp: 1611875, mora: 322400 },
+    { level: 90, xp: 3423125, mora: 684800 },
+];
 
 export type Levels =
     | 20

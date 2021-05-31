@@ -1,7 +1,7 @@
-import { additionOrCreate } from "../lib";
-import { getAscensionLevel } from "./characterLevels";
-import { Levels } from "./characterLevels";
-import { characters } from "./characters";
+import { additionOrCreate } from ".";
+import { getAscensionLevel } from "./index";
+import { Levels } from "../data/characterLevels";
+import { characters } from "../data/characters";
 
 export function getCharacterMaterials(character, level: Levels) {
     const characterData = characters[character.characterId];
@@ -22,7 +22,6 @@ export function getCharacterMaterials(character, level: Levels) {
             const id = item.id;
             if (amount === null) return;
 
-            // addition or create
             additionOrCreate(totalMaterials, id, amount);
         });
     }
