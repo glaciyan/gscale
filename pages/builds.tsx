@@ -10,8 +10,8 @@ export default function Builds() {
         <Layout title="Builds" current="Your Builds">
             <div className="max-w-screen-xl mx-auto">
                 {!allBuilds ? (
-                    <p>No Builds</p>
-                ) : (
+                    <p>Loading</p>
+                ) : allBuilds.length > 0 ? (
                     allBuilds.map((build, index) => {
                         return (
                             <CharacterBuild
@@ -25,6 +25,8 @@ export default function Builds() {
                             />
                         );
                     })
+                ) : (
+                    <p>No builds</p>
                 )}
             </div>
         </Layout>
