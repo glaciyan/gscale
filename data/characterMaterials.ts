@@ -1,13 +1,14 @@
+import { additionOrCreate } from "../lib";
 import { getAscensionLevel } from "./characterLevels";
 import { Levels } from "./characterLevels";
 import { characters } from "./characters";
 
-export function getCharacterMaterials(characterId, level: Levels) {
-    const character = characters[characterId];
-    if (!character) return null;
+export function getCharacterMaterials(character, level: Levels) {
+    const characterData = characters[character.characterId];
+    if (!characterData) return null;
     const ascension = getAscensionLevel(level);
 
-    const materialList = character.ascension as {
+    const materialList = characterData.ascension as {
         mora: number;
         items: any[];
     }[];
@@ -21,18 +22,8 @@ export function getCharacterMaterials(characterId, level: Levels) {
             const id = item.id;
             if (amount === null) return;
 
-            const sameIdEntry = totalMaterials.find((entry) => entry.id === id);
-
-            console.log(
-                `%c${id} ${amount}`,
-                "color: lightblue;font-size: x-large"
-            );
-
-            if (sameIdEntry !== undefined) {
-                sameIdEntry.amount += amount;
-            } else {
-                totalMaterials.push({ id: id, amount: amount });
-            }
+            // addition or create
+            additionOrCreate(totalMaterials, id, amount);
         });
     }
 

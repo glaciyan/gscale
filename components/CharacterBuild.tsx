@@ -11,10 +11,14 @@ export default function CharacterBuild({
 }) {
     const { xp: sxp } = totalXpAndMora(80);
     const { xp } = totalXpAndMora(character.level.goal);
+    const mats = getCharacterMaterials(character, character.level.goal);
 
     return (
         <div className={className}>
-            <span>{character.characterId}</span>
+            <span>
+                {character.characterId} ({character.level.start} to{" "}
+                {character.level.goal})
+            </span>
             {" - "}
             <a
                 href="#"
@@ -30,12 +34,7 @@ export default function CharacterBuild({
                 href="#"
                 className="text-green-400 hover:underline"
                 onClick={() => {
-                    console.log(
-                        getCharacterMaterials(
-                            character.characterId,
-                            character.level.goal
-                        )
-                    );
+                    console.log(mats);
                 }}
             >
                 log asc mats
@@ -44,8 +43,8 @@ export default function CharacterBuild({
             <a
                 href="#"
                 className="float-right text-red-400 hover:underline"
-                onClick={() => {
-                    buildsDB.builds.delete(character.id);
+                onClick={async () => {
+                    await buildsDB.builds.delete(character.id);
                 }}
             >
                 delete
