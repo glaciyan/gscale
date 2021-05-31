@@ -4,7 +4,7 @@ import RarityStars from "./RarityStars";
 import cn from "classnames";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import buildDB from "../lib/builds";
+import buildDB from "../lib/buildsDatabase";
 
 export default function CharacterCard({
     character,

@@ -1,6 +1,6 @@
 import { getCharacterMaterials } from "../lib/characterMaterials";
 import { totalXpAndMora } from "../lib";
-import buildsDB from "../lib/builds";
+import buildsDB from "../lib/buildsDatabase";
 
 export default function CharacterBuild({
     build: character,

@@ -1,4 +1,4 @@
-import buildsDB from "../lib/builds";
+import buildsDB from "../lib/buildsDatabase";
 import Layout from "../components/Layout";
 import CharacterBuild from "../components/CharacterBuild";
 import { useLiveQuery } from "dexie-react-hooks";
