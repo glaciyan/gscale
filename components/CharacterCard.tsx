@@ -3,6 +3,8 @@ import { useMediaQuery } from "react-responsive";
 import RarityStars from "./RarityStars";
 import cn from "classnames";
 import Link from "next/link";
+import { useRouter } from "next/router";
+import buildDB from "../lib/builds";
 
 export default function CharacterCard({
     character,
@@ -14,6 +16,21 @@ export default function CharacterCard({
     compact?: boolean;
 }) {
     const isProbablyTouch = useMediaQuery({ maxDeviceWidth: 1023 });
+    const route = useRouter();
+
+    function maxChar() {
+        buildDB.builds
+            .add({
+                characterId: character.id,
+                level: { start: 1, end: 90 },
+                normal: { start: 1, end: 10 },
+                elemental: { start: 1, end: 10 },
+                burst: { start: 1, end: 10 },
+            })
+            .then(() => {
+                route.push("/builds");
+            });
+    }
 
     const cardHoverDialog = (
         <div className="absolute top-0 left-0 w-0 h-0 group-hover:w-full group-hover:h-full">
@@ -25,15 +42,12 @@ export default function CharacterCard({
                         Build {character.name}
                     </a>
                 </Link>
-                <Link
-                    href={{ pathname: `/builds`, query: { max: character.id } }}
+                <button
+                    onClick={maxChar}
+                    className={`btn mt-3 focus:outline-none shadow hover:ring-opacity-90 ring-2 hover:bg-opacity-30 hover:bg-gscale-dark-background-ternary ring-inset ring-genshin-dark-element-${character.element.id} text-genshin-dark-element-${character.element.id} opacity-0 font-medium group-hover:opacity-100`}
                 >
-                    <a
-                        className={`btn mt-3 focus:outline-none shadow hover:ring-opacity-90 ring-2 hover:bg-opacity-30 hover:bg-gscale-dark-background-ternary ring-inset ring-genshin-dark-element-${character.element.id} text-genshin-dark-element-${character.element.id} opacity-0 font-medium group-hover:opacity-100`}
-                    >
-                        Lvl 1 to Max
-                    </a>
-                </Link>
+                    Lvl 1 to Max
+                </button>
             </div>
         </div>
     );

@@ -12,6 +12,7 @@
     "@types/js-yaml": "^4.0.1",
     "@types/react-responsive": "^8.0.2",
     "classnames": "^2.3.1",
+    "dexie": "^3.0.3",
     "js-yaml": "^4.1.0",
     "next": "latest",
     "next-native-image": "^1.1.2",

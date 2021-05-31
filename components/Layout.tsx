@@ -19,7 +19,7 @@ const Layout = ({ children, title, current }: Props) => {
     });
 
     return (
-        <div>
+        <div className="text-gscale-dark-text-secondary">
             <Head>
                 <title>{title + " - GScale"}</title>
                 <link rel="icon" href="/favicon.ico" sizes="32x32" />
@@ -82,7 +82,7 @@ const Layout = ({ children, title, current }: Props) => {
                 </nav>
             </header>
             {children}
-            <footer>
+            <footer className="mt-8">
                 <hr />
                 <span>Add a footer here</span>
             </footer>
