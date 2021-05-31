@@ -81,7 +81,7 @@ const Layout = ({ children, title, current }: Props) => {
                     </div>
                 </nav>
             </header>
-            {children}
+            <main className="min-h-screen">{children}</main>
             <footer className="mt-8">
                 <hr />
                 <span>Add a footer here</span>
