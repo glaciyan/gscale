@@ -50,7 +50,7 @@ export default function CharacterCard({
                         quality="85"
                         alt={`Genshin Impact Character ${character.name}`}
                     />
-                    {!isProbablyTouch ? cardHoverDialog : null}
+                    {isProbablyTouch ? null : cardHoverDialog}
                 </div>
             )}
             <div className="px-4 py-3">
@@ -76,18 +76,7 @@ export default function CharacterCard({
         </>
     );
 
-    if (!isProbablyTouch) {
-        return (
-            <div
-                className={cn(
-                    `relative group bg-gscale-dark-background-primary rounded-lg overflow-hidden shadow-md hover:shadow-lg ring-genshin-element-${character.element.id} hover:ring`,
-                    className
-                )}
-            >
-                {card}
-            </div>
-        );
-    } else {
+    if (isProbablyTouch) {
         return (
             <Link href={`build/${character.id}`}>
                 <a
@@ -99,6 +88,17 @@ export default function CharacterCard({
                     {card}
                 </a>
             </Link>
+        );
+    } else {
+        return (
+            <div
+                className={cn(
+                    `relative group bg-gscale-dark-background-primary rounded-lg overflow-hidden shadow-md hover:shadow-lg ring-genshin-element-${character.element.id} hover:ring`,
+                    className
+                )}
+            >
+                {card}
+            </div>
         );
     }
 }
