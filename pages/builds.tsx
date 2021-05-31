@@ -1,6 +1,7 @@
 import buildsDB from "../lib/builds";
 import Layout from "../components/Layout";
 import { useEffect, useState } from "react";
+import { totalXpAndMora } from "../data/characterXp";
 
 export default function Builds() {
     const [builds, setBuilds] = useState([]);
@@ -32,12 +33,21 @@ export default function Builds() {
                                 <span>{build.characterId}</span>{" "}
                                 <a
                                     href="#"
-                                    className="text-blue-400 hover:underline"
+                                    className="text-red-400 hover:underline"
                                     onClick={() => {
                                         buildsDB.builds.delete(build.id);
                                     }}
                                 >
                                     delete
+                                </a>{" "}
+                                <a
+                                    href="#"
+                                    className="text-blue-400 hover:underline"
+                                    onClick={() => {
+                                        console.log(totalXpAndMora(70));
+                                    }}
+                                >
+                                    log xp
                                 </a>
                             </div>
                         );

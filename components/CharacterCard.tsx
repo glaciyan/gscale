@@ -22,10 +22,10 @@ export default function CharacterCard({
         buildDB.builds
             .add({
                 characterId: character.id,
-                level: { start: 1, end: 90 },
-                normal: { start: 1, end: 10 },
-                elemental: { start: 1, end: 10 },
-                burst: { start: 1, end: 10 },
+                level: { start: 1, goal: 90 },
+                normal: { start: 1, goal: 10 },
+                elemental: { start: 1, goal: 10 },
+                burst: { start: 1, goal: 10 },
             })
             .then(() => {
                 route.push("/builds");
