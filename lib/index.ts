@@ -6,16 +6,18 @@ export function toId(name: string) {
 }
 
 export function additionOrCreate(
-    array: { id: string; amount: number }[],
-    id: string,
-    amount: number
+    array: any[],
+    order: number,
+    id: any,
+    amount: number | null
 ) {
+    if (amount === null) return;
     const sameIdEntry = array.find((entry) => entry.id === id);
 
     if (sameIdEntry !== undefined) {
         sameIdEntry.amount += amount;
     } else {
-        array.push({ id: id, amount: amount });
+        array.push({ id: id, order: order, amount: amount });
     }
 }
 
