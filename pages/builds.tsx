@@ -12,7 +12,7 @@ export default function Builds() {
                 {!allBuilds ? (
                     <p>Loading</p>
                 ) : allBuilds.length > 0 ? (
-                    allBuilds.map((build, index) => {
+                    allBuilds.map((build: any, index: any) => {
                         return (
                             <CharacterBuild
                                 build={build}

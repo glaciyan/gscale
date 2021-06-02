@@ -1,4 +1,5 @@
 export default {
+    1: { level: 1, ascended: false },
     20: { level: 20, ascended: false },
     21: { level: 20, ascended: true },
     40: { level: 40, ascended: false },
@@ -15,7 +16,7 @@ export default {
 };
 
 // data from https://genshin-impact.fandom.com/wiki/Character_EXP
-export const costs = [
+export const costsTo = [
     { level: 20, xp: 120175, mora: 24200 },
     { level: 40, xp: 578325, mora: 115800 },
     { level: 50, xp: 579100, mora: 116000 },

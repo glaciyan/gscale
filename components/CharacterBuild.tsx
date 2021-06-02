@@ -1,9 +1,6 @@
-import {
-    getCharacterMaterials,
-    getTalentMaterials,
-} from "../lib/characterMaterials";
-import { totalXpAndMora } from "../lib";
+import { getCharacterMaterials } from "../lib/characterMaterials";
 import buildsDB from "../lib/buildsDatabase";
+import { characters } from "../data/characters";
 
 export default function CharacterBuild({
     build: character,
@@ -12,13 +9,11 @@ export default function CharacterBuild({
     build: any;
     className?: string;
 }) {
-    const { xp: sxp } = totalXpAndMora(80);
-    const { xp, mora } = totalXpAndMora(character.level.goal);
     const ascensionMats = getCharacterMaterials(
-        character,
+        characters[character.characterId],
+        1,
         character.level.goal
     );
-    // const talentMats = getTalentMaterials(character, 2);
 
     return (
         <div className={className}>
@@ -30,9 +25,7 @@ export default function CharacterBuild({
             <a
                 href="#"
                 className="text-blue-400 hover:underline"
-                onClick={() => {
-                    console.log(xp - sxp);
-                }}
+                onClick={() => {}}
             >
                 log xp
             </a>
@@ -50,9 +43,7 @@ export default function CharacterBuild({
             <a
                 href="#"
                 className="text-purple-400 hover:underline"
-                onClick={() => {
-                    console.log(getTalentMaterials(character, 1, 10));
-                }}
+                onClick={() => {}}
             >
                 log talent mats
             </a>
