@@ -4,8 +4,8 @@ eula:
     rarity: 5
     constellation: Aphros Delos
     description: "The Spindrift Knight, a scion of the old aristocracy, and the Captain of the Knights of Favonius Reconnaissance Company. The reason for which a descendant of the ancient nobles might join the Knights remains a great mystery in Mondstadt to this very day."
-    element: Cryo
-    weapon: Claymore
+    element: cryo
+    weapon: claymore
     sub: CRIT DMG
     ascension: Crystalline Bloom
     local: dandelion_seed
@@ -18,8 +18,8 @@ yanfei:
     rarity: 4
     constellation: "Bestia Iustitia"
     description: "A well-known legal adviser active in Liyue Harbor. A brilliant young lady in whose veins runs the blood of an illuminated beast."
-    element: Pyro
-    weapon: "Catalyst"
+    element: pyro
+    weapon: "catalyst"
     sub: "Pyro DMG Bonus"
     ascension: "Juvenile Jade"
     local: "Noctilucous Jade"
@@ -32,8 +32,8 @@ rosaria:
     rarity: 4
     constellation: "Spinea Corona"
     description: "A sister of the church, though you wouldn't know it if it weren't for her attire. Known for her sharp, cold words and manner, she often works alone."
-    element: Cryo
-    weapon: "Polearm"
+    element: cryo
+    weapon: "polearm"
     sub: "ATK"
     ascension: "Hoarfrost Core"
     local: "Valberry"
@@ -46,8 +46,8 @@ hu_tao:
     rarity: 5
     constellation: "Papilio Charontis"
     description: "The 77th Director of the Wangsheng Funeral Parlor. She took over the business at a rather young age."
-    element: Pyro
-    weapon: "Polearm"
+    element: pyro
+    weapon: "polearm"
     sub: "CRIT DMG"
     ascension: "Juvenile Jade"
     local: "Silk Flower"
@@ -60,8 +60,8 @@ xiao:
     rarity: 5
     constellation: "Alatus Nemeseos"
     description: 'A yaksha adeptus who defends Liyue. Also heralded as the "Conqueror of Demons" and "Vigilant Yaksha."'
-    element: Anemo
-    weapon: "Polearm"
+    element: anemo
+    weapon: "polearm"
     sub: "CRIT Rate"
     ascension: "Juvenile Jade"
     local: "Qingxin"
@@ -74,8 +74,8 @@ ganyu:
     rarity: 5
     constellation: "Sinae Unicornis"
     description: "The secretary at Yuehai Pavilion. The blood of the qilin, an illuminated beast, flows within her veins."
-    element: Cryo
-    weapon: "Bow"
+    element: cryo
+    weapon: "bow"
     sub: "CRIT DMG"
     ascension: "Hoarfrost Core"
     local: "Qingxin"
@@ -88,8 +88,8 @@ albedo:
     rarity: 5
     constellation: "Princeps Cretaceus"
     description: "A genius known as the Kreideprinz, he is the Chief Alchemist and Captain of the Investigation Team of the Knights of Favonius."
-    element: Geo
-    weapon: "Sword"
+    element: geo
+    weapon: "sword"
     sub: "Geo DMG Bonus"
     ascension: "Basalt Pillar"
     local: "Cecilia"
@@ -102,8 +102,8 @@ zhongli:
     rarity: 5
     constellation: "Lapis Dei"
     description: "A mysterious expert contracted by the Wangsheng Funeral Parlor. Extremely knowledgeable in all things."
-    element: Geo
-    weapon: "Polearm"
+    element: geo
+    weapon: "polearm"
     sub: "Geo DMG Bonus"
     ascension: "Basalt Pillar"
     local: "Cor Lapis"
@@ -116,8 +116,8 @@ xinyan:
     rarity: 4
     constellation: "Fila Ignium"
     description: "Liyue's sole rock 'n' roll musician. She rebels against ossified prejudices using her music and passionate singing."
-    element: Pyro
-    weapon: "Claymore"
+    element: pyro
+    weapon: "claymore"
     sub: "ATK"
     ascension: "Everflame Seed"
     local: "Violetgrass"
@@ -130,8 +130,8 @@ tartaglia:
     rarity: 5
     constellation: "Monoceros Caeli"
     description: 'No. 11 of The Harbingers, also known as "Childe." His name is highly feared on the battlefield.'
-    element: Hydro
-    weapon: "Bow"
+    element: hydro
+    weapon: "bow"
     sub: "Hydro DMG Bonus"
     ascension: "Cleansing Heart"
     local: "Starconch"
@@ -144,8 +144,8 @@ diona:
     rarity: 4
     constellation: "Feles"
     description: "A young lady who has inherited trace amounts of non-human blood. She is the incredibly popular bartender of the Cat's Tail tavern."
-    element: Cryo
-    weapon: "Bow"
+    element: cryo
+    weapon: "bow"
     sub: "Cryo DMG Bonus"
     ascension: "Hoarfrost Core"
     local: "Calla Lily"
@@ -158,8 +158,8 @@ klee:
     rarity: 5
     constellation: "Trifolium"
     description: "An explosives expert and a regular at the Knights of Favonius's confinement room. Also known as Fleeing Sunlight."
-    element: Pyro
-    weapon: "Catalyst"
+    element: pyro
+    weapon: "catalyst"
     sub: "Pyro DMG Bonus"
     ascension: "Everflame Seed"
     local: "Philanemo Mushroom"
@@ -172,8 +172,8 @@ venti:
     rarity: 5
     constellation: "Carmen Dei"
     description: "One of the many bards of Mondstadt, who freely wanders the city's streets and alleys."
-    element: Anemo
-    weapon: "Bow"
+    element: anemo
+    weapon: "bow"
     sub: "Energy Recharge"
     ascension: "Hurricane Seed"
     local: "Cecilia"
@@ -186,8 +186,8 @@ keqing:
     rarity: 5
     constellation: "Trulla Cementarii"
     description: "The Yuheng of the Liyue Qixing. Keqing has much to say about Rex Lapis's unilateral approach to policymaking in Liyue — but in truth, gods admire skeptics such as her quite a lot."
-    element: Electro
-    weapon: "Sword"
+    element: electro
+    weapon: "sword"
     sub: "CRIT DMG"
     ascension: "Lightning Prism"
     local: "Cor Lapis"
@@ -200,8 +200,8 @@ mona:
     rarity: 5
     constellation: "Astrolabos"
     description: 'A mysterious young astrologer who proclaims herself to be "Astrologist Mona Megistus," and who possesses abilities to match the title. Erudite, but prideful.'
-    element: Hydro
-    weapon: "Catalyst"
+    element: hydro
+    weapon: "catalyst"
     sub: "Energy Recharge"
     ascension: "Cleansing Heart"
     local: "Philanemo Mushroom"
@@ -214,8 +214,8 @@ qiqi:
     rarity: 5
     constellation: "Pristina Nola"
     description: "An apprentice and herb gatherer at Bubu Pharmacy. An undead with a bone-white complexion, she seldom has much in the way of words or emotion."
-    element: Cryo
-    weapon: "Sword"
+    element: cryo
+    weapon: "sword"
     sub: "Healing Bonus"
     ascension: "Hoarfrost Core"
     local: "Violetgrass"
@@ -228,8 +228,8 @@ diluc:
     rarity: 5
     constellation: "Noctua"
     description: "The tycoon of a winery empire in Mondstadt, unmatched in every possible way."
-    element: Pyro
-    weapon: "Claymore"
+    element: pyro
+    weapon: "claymore"
     sub: "CRIT Rate"
     ascension: "Everflame Seed"
     local: "Small Lamp Grass"
@@ -242,8 +242,8 @@ jean:
     rarity: 5
     constellation: "Leo Minor"
     description: "The righteous and rigorous Dandelion Knight, and Acting Grand Master of Mondstadt's Knights of Favonius."
-    element: Anemo
-    weapon: "Sword"
+    element: anemo
+    weapon: "sword"
     sub: "Healing Bonus"
     ascension: "Hurricane Seed"
     local: "Dandelion Seed"
@@ -256,8 +256,8 @@ sucrose:
     rarity: 4
     constellation: "Ampulla"
     description: "An alchemist filled with curiosity about all things. She researches bio-alchemy."
-    element: Anemo
-    weapon: "Catalyst"
+    element: anemo
+    weapon: "catalyst"
     sub: "Anemo DMG Bonus"
     ascension: "Hurricane Seed"
     local: "Windwheel Aster"
@@ -270,8 +270,8 @@ chongyun:
     rarity: 4
     constellation: "Nubis Caesor"
     description: "A young exorcist from a family of exorcists. He does everything he can to suppress his abundance of yang energy."
-    element: Cryo
-    weapon: "Claymore"
+    element: cryo
+    weapon: "claymore"
     sub: "ATK"
     ascension: "Hoarfrost Core"
     local: "Cor Lapis"
@@ -284,8 +284,8 @@ noelle:
     rarity: 4
     constellation: "Parma Cordis"
     description: "A maid who faithfully serves the Knights of Favonius. She dreams of joining their ranks someday."
-    element: Geo
-    weapon: "Claymore"
+    element: geo
+    weapon: "claymore"
     sub: "DEF"
     ascension: "Basalt Pillar"
     local: "Valberry"
@@ -298,8 +298,8 @@ bennett:
     rarity: 4
     constellation: "Rota Calamitas"
     description: "A good-natured adventurer from Mondstadt who's unfortunately extremely unlucky."
-    element: Pyro
-    weapon: "Sword"
+    element: pyro
+    weapon: "sword"
     sub: "Energy Recharge"
     ascension: "Everflame Seed"
     local: "Windwheel Aster"
@@ -312,8 +312,8 @@ fischl:
     rarity: 4
     llation: "Corvus"
     description: 'A mysterious girl who calls herself "Prinzessin der Verurteilung" and travels with a night raven named Oz.'
-    element: Electro
-    weapon: "Bow"
+    element: electro
+    weapon: "bow"
     sub: "ATK"
     ascension: "Lightning Prism"
     local: "Small Lamp Grass"
@@ -326,8 +326,8 @@ ningguang:
     rarity: 4
     constellation: "Opus Aequilibrium"
     description: "The Tianquan of the Liyue Qixing. Her wealth is unsurpassed in all of Teyvat."
-    element: Geo
-    weapon: "Catalyst"
+    element: geo
+    weapon: "catalyst"
     sub: "Geo DMG Bonus"
     ascension: "Basalt Pillar"
     local: "Glaze Lily"
@@ -340,8 +340,8 @@ xingqiu:
     rarity: 4
     constellation: "Fabulae Textile"
     description: "A young man carrying a longsword who is frequently seen at book booths. He has a chivalrous heart and yearns for justice and fairness for all."
-    element: Hydro
-    weapon: "Sword"
+    element: hydro
+    weapon: "sword"
     sub: "ATK"
     ascension: "Cleansing Heart"
     local: "Silk Flower"
@@ -354,8 +354,8 @@ beidou:
     rarity: 4
     constellation: "Victor Mare"
     description: "Captain of her crew, The Crux. She's quite an unbound and forthright woman."
-    element: Electro
-    weapon: "Claymore"
+    element: electro
+    weapon: "claymore"
     sub: "Electro DMG Bonus"
     ascension: "Lightning Prism"
     local: "Noctilucous Jade"
@@ -368,8 +368,8 @@ xiangling:
     rarity: 4
     constellation: "Trulla"
     description: "A renowned chef from Liyue. She's extremely passionate about cooking and excels at making her signature hot and spicy dishes."
-    element: Pyro
-    weapon: "Polearm"
+    element: pyro
+    weapon: "polearm"
     sub: "Elemental Mastery"
     ascension: "Everflame Seed"
     local: "Jueyun Chili"
@@ -382,8 +382,8 @@ razor:
     rarity: 4
     constellation: "Lupus Minor"
     description: "A boy who lives among the wolves in Wolvendom of Mondstadt, away from human civilization. As agile as lightning."
-    element: Electro
-    weapon: "Claymore"
+    element: electro
+    weapon: "claymore"
     sub: "Physical DMG Bonus"
     ascension: "Lightning Prism"
     local: "Wolfhook"
@@ -396,8 +396,8 @@ barbara:
     rarity: 4
     constellation: "Crater"
     description: 'Every citizen of Mondstadt adores Barbara. She learned the word "idol" from a magazine.'
-    element: Hydro
-    weapon: "Catalyst"
+    element: hydro
+    weapon: "catalyst"
     sub: "HP"
     ascension: "Cleansing Heart"
     local: "Philanemo Mushroom"
@@ -410,8 +410,8 @@ lisa:
     rarity: 4
     constellation: "Tempus Fugit"
     description: "The languid but knowledgeable Librarian of the Knights of Favonius, deemed by Sumeru Academia to be their most distinguished graduate in the past two centuries."
-    element: Electro
-    weapon: "Catalyst"
+    element: electro
+    weapon: "catalyst"
     sub: "Elemental Mastery"
     ascension: "Lightning Prism"
     local: "Valberry"
@@ -424,8 +424,8 @@ kaeya:
     rarity: 4
     constellation: "Pavo Ocellus"
     description: "An accomplished swordsman and a strategic thinker in the Knights of Favonius, rumored to hail from beyond Mondstadt."
-    element: Cryo
-    weapon: "Sword"
+    element: cryo
+    weapon: "sword"
     sub: "Energy Recharge"
     ascension: "Hoarfrost Core"
     local: "Calla Lily"
@@ -438,8 +438,8 @@ amber:
     rarity: 4
     constellation: "Lepus"
     description: "Always energetic and full of life, Amber's the best — albeit only — Outrider of the Knights of Favonius."
-    element: Pyro
-    weapon: "Bow"
+    element: pyro
+    weapon: "bow"
     sub: "ATK"
     ascension: "Everflame Seed"
     local: "Small Lamp Grass"

@@ -1,9 +1,13 @@
 import { GetStaticProps } from "next";
 import Layout from "../components/Layout";
 import CharacterCard from "../components/CharacterCard";
-import { characters } from "../data/characters";
+import yaml from "js-yaml";
+import fs from "fs";
 
 export const getStaticProps: GetStaticProps = async () => {
+    const characters = yaml.load(
+        fs.readFileSync("./data/characters.yaml").toString()
+    );
     return {
         props: {
             characters: characters,

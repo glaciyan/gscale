@@ -1,8 +1,6 @@
 import { additionOrCreate } from ".";
 import { getAscensionLevel } from "./index";
 import { Levels } from "../data/characterLevels";
-import { characters } from "../data/characters";
-import { itemList } from "../data/itemList";
 import talentAmounts from "../data/talentAmounts";
 
 // TODO make type sortable
