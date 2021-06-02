@@ -11,8 +11,8 @@ export default function CharacterBuild({
 }) {
     const ascensionMats = getCharacterMaterials(
         characters[character.characterId],
-        40,
-        80
+        character.level.start,
+        character.level.goal
     );
 
     return (
