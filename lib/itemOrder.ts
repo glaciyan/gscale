@@ -1,6 +1,7 @@
 export default {
     mora: 100,
-    xp: 150,
+    xpLazy: 150,
+    xpAccurate: 175,
     gem: 200,
     boss: 250,
     local: 400,

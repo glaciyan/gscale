@@ -11,8 +11,8 @@ export default function CharacterBuild({
 }) {
     const ascensionMats = getCharacterMaterials(
         characters[character.characterId],
-        1,
-        character.level.goal
+        40,
+        80
     );
 
     return (
@@ -22,17 +22,10 @@ export default function CharacterBuild({
                 {character.level.goal})
             </span>
             {" - "}
+
             <a
                 href="#"
                 className="text-blue-400 hover:underline"
-                onClick={() => {}}
-            >
-                log xp
-            </a>
-            {" | "}
-            <a
-                href="#"
-                className="text-green-400 hover:underline"
                 onClick={() => {
                     console.log(ascensionMats);
                 }}
@@ -42,7 +35,7 @@ export default function CharacterBuild({
             {" | "}
             <a
                 href="#"
-                className="text-purple-400 hover:underline"
+                className="text-green-400 hover:underline"
                 onClick={() => {}}
             >
                 log talent mats

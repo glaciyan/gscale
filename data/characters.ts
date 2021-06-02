@@ -34,7 +34,7 @@ export const characters: Characters = {
         weapon: "claymore",
         sub: "CRIT DMG",
         ascension: "Crystalline Bloom",
-        local: "dandelion_seed",
+        local: "Dandelion Seed",
         common: "mask",
         weekly: "Dragon Lord's Crown",
         book: "resistance",

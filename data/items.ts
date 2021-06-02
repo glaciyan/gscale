@@ -5,6 +5,7 @@ export interface Item {
     rarity: number | null;
     group?: string;
     alias?: string;
+    xp?: number;
 }
 
 export type Items = { [id: string]: Item };
@@ -56,14 +57,17 @@ export const items = {
     wanderers_advice: {
         name: "Wanderer's Advice",
         rarity: 2,
+        xp: 1000,
     },
     adventurers_experience: {
         name: "Adventurer's Experience",
         rarity: 3,
+        xp: 5000,
     },
     heros_wit: {
         name: "Hero's Wit",
         rarity: 4,
+        xp: 20000,
     },
     agnidus_agate_sliver: {
         name: "Agnidus Agate Sliver",
