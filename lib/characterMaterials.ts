@@ -15,7 +15,6 @@ const commonOrder = 300;
 const talentBoosOrder = 400;
 const crownOrder = 500;
 
-// this doesnt return ascension mora cost
 export function getCharacterMaterials(character, level: Levels) {
     if (level < 2 || level > 90) return null;
 
