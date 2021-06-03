@@ -3,7 +3,7 @@ import { ascensionCosts as fullAscensionCostOf } from "../data/ascensionCost";
 import { Character } from "../data/characters";
 import { costsTo } from "../data/characterLevels";
 import _ from "lodash";
-import { items } from "../data/items";
+import { BuildItem, items } from "../data/items";
 import itemOrder from "./itemOrder";
 import { talentCost } from "../data/talentCost";
 
@@ -43,7 +43,7 @@ export function getCharacterMaterials(
     const { mora: normalMora, items: normalMaterials } = talent(normal);
     const { mora: elementalMora, items: elementalMaterials } = talent(elemental);
     const { mora: burstMora, items: burstMaterials } = talent(burst);
-    const talents = sumObjectArray(
+    const talents: BuildItem[] = sumObjectArray(
         normalMaterials.concat(elementalMaterials).concat(burstMaterials),
         "order",
         "amount"
@@ -65,7 +65,7 @@ export function getCharacterMaterials(
         elemental: elementalMaterials,
         burst: burstMaterials,
         talents,
-        materials: sumObjectArray(talents.concat(ascensionMaterials), "order", "amount"),
+        materials: sumObjectArray(talents.concat(ascensionMaterials), "order", "amount") as BuildItem[],
     };
 }
 
