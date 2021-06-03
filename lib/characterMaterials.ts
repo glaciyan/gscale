@@ -1,24 +1,63 @@
-import { getAscensionLevel, mora, sumObjectArray, xp } from ".";
-import ascensionCost from "../data/ascensionCost";
+import { getAscensionLevel, sumObjectArray, xp } from ".";
+import { ascensionCosts as fullAscensionCostOf } from "../data/ascensionCost";
 import { Character } from "../data/characters";
 import { costsTo } from "../data/characterLevels";
 import _ from "lodash";
 import { items } from "../data/items";
 import itemOrder from "./itemOrder";
 
-export function getCharacterMaterials(
-    character: Character,
-    start: number,
-    goal: number
-) {
+export function getCharacterMaterials(character: Character, start: number, goal: number) {
     if (start < 1 || start > 81) return null;
     if (goal < 20 || goal > 90) return null;
     if (start > goal) return null;
     const startAsc = getAscensionLevel(start);
     const goalAsc = getAscensionLevel(goal);
-    console.log({ startAsc, goalAsc, start, goal });
 
-    const leveling = costsTo
+    // leveling
+    const levelingCost = getLevelingCost(start, goal);
+
+    const accurateLevelMaterials = {
+        heros_wit: xp(4, levelingCost.accurate[0]),
+        adventurers_experience: xp(3, levelingCost.accurate[1]),
+        wanderers_advice: xp(2, levelingCost.accurate[2]),
+    };
+
+    const lazyLevelMaterial = xp(4, Math.ceil(levelingCost.xp / items.heros_wit.xp));
+    lazyLevelMaterial.order = itemOrder.xpLazy;
+
+    // ascension
+    const requiredAcensions = fullAscensionCostOf(character).slice(startAsc, goalAsc);
+
+    const ascensionCost = requiredAcensions.reduce((prev, current) => {
+        return {
+            mora: prev.mora + current.mora,
+            items: [...prev.items, ...current.items],
+        };
+    });
+
+    ascensionCost.items = sumObjectArray(ascensionCost.items, "order", "amount");
+
+    // talents
+
+    // combining everything
+    const mora: number[] = [];
+    mora.push(levelingCost.mora);
+    mora.push(ascensionCost.mora);
+
+    return {
+        xp: levelingCost.xp,
+        xpLazy: lazyLevelMaterial,
+        xpAccurate: accurateLevelMaterials,
+        mora: mora.reduce((prev, current) => prev + current),
+        ascension: ascensionCost.items,
+        normal: null,
+        elemental: null,
+        burst: null,
+    };
+}
+
+function getLevelingCost(start: number, goal: number) {
+    return costsTo
         .filter(({ level }) => level > start && level <= goal)
         .reduce(
             (prev, curr) => {
@@ -30,27 +69,7 @@ export function getCharacterMaterials(
             },
             { mora: 0, xp: 0, accurate: [0, 0, 0] }
         );
-
-    const cost = _.flatten(ascensionCost(character).slice(startAsc, goalAsc));
-
-    cost.push(mora(leveling.mora));
-    cost.push(xp(4, leveling.accurate[0]));
-    cost.push(xp(3, leveling.accurate[1]));
-    cost.push(xp(2, leveling.accurate[2]));
-    cost.push({
-        name: items.heros_wit.name,
-        rarity: items.heros_wit.rarity,
-        amount: Math.ceil(leveling.xp / items.heros_wit.xp),
-        order: itemOrder.xpLazy,
-    });
-
-    const summed = sumObjectArray(cost, "order", "amount").sort(
-        (a, b) => a.order - b.order
-    );
-
-    return summed;
 }
-
 // export function getTalentMaterials(
 //     character: Character,
 //     start: number,

@@ -1,47 +1,39 @@
-import { mora, toId } from "../lib";
-import itemOrder from "../lib/itemOrder";
 import { Character } from "./characters";
-import { getGem, getItem, itemsTyped, BuildItem } from "./items";
+import { ItemGen } from "../lib/ItemGen";
 
-export default function ascensionCosts(character: Character) {
-    function gem(rarity: 2 | 3 | 4 | 5, amount: number): BuildItem {
-        return {
-            ...getGem(character.element, rarity),
-            amount: amount,
-            order: itemOrder.gem + rarity,
-        };
-    }
-
-    function local(amount: number): BuildItem {
-        return {
-            ...itemsTyped[toId(character.local)],
-            amount: amount,
-            order: itemOrder.local,
-        };
-    }
-
-    function common(rarity: 1 | 2 | 3, amount: number): BuildItem {
-        return {
-            ...getItem(character.common, rarity),
-            amount: amount,
-            order: itemOrder.common + rarity,
-        };
-    }
-
-    function boss(amount: number): BuildItem {
-        return {
-            ...itemsTyped[toId(character.ascension)],
-            amount: amount,
-            order: itemOrder.boss,
-        };
-    }
+export function ascensionCosts(character: Character) {
+    const c = new ItemGen(character);
 
     return [
-        [mora(20000), gem(2, 1), boss(0), local(3), common(1, 3)], // 1 20+
-        [mora(40000), gem(3, 3), boss(2), local(10), common(1, 15)], // 2 40+
-        [mora(60000), gem(3, 6), boss(4), local(20), common(2, 12)], // 3 50+
-        [mora(80000), gem(4, 3), boss(8), local(30), common(2, 18)], // 4 60+
-        [mora(100000), gem(4, 6), boss(12), local(45), common(3, 12)], // 5 70+
-        [mora(120000), gem(5, 6), boss(20), local(60), common(3, 24)], // 6 80+
+        {
+            // 1 20+
+            mora: 20000,
+            items: [c.gem(2, 1), c.boss(0), c.local(3), c.common(1, 3)],
+        },
+        {
+            // 2 40+
+            mora: 40000,
+            items: [c.gem(3, 3), c.boss(2), c.local(10), c.common(1, 15)],
+        },
+        {
+            // 3 50+
+            mora: 60000,
+            items: [c.gem(3, 6), c.boss(4), c.local(20), c.common(2, 12)],
+        },
+        {
+            // 4 60+
+            mora: 80000,
+            items: [c.gem(4, 3), c.boss(8), c.local(30), c.common(2, 18)],
+        },
+        {
+            // 5 70+
+            mora: 100000,
+            items: [c.gem(4, 6), c.boss(12), c.local(45), c.common(3, 12)],
+        },
+        {
+            // 6 80+
+            mora: 120000,
+            items: [c.gem(5, 6), c.boss(20), c.local(60), c.common(3, 24)],
+        },
     ];
 }
