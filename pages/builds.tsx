@@ -17,11 +17,7 @@ export default function Builds() {
                             <CharacterBuild
                                 build={build}
                                 key={build.characterId + build.id}
-                                className={
-                                    (index % 2 === 0
-                                        ? "bg-gray-800"
-                                        : "bg-gray-700") + " py-1 px-2"
-                                }
+                                className={(index % 2 === 0 ? "bg-gray-800" : "bg-gray-700") + " p-4"}
                             />
                         );
                     })

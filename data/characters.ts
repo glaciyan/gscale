@@ -164,7 +164,7 @@ export const characters: Characters = {
         ascension: "Everflame Seed",
         local: "Violetgrass",
         common: "treasure_hoarder_insignia",
-        weekly: "Tusk of Monoceros Caeli ",
+        weekly: "Tusk of Monoceros Caeli",
         book: "gold",
     },
     tartaglia: {
@@ -172,15 +172,14 @@ export const characters: Characters = {
         name: "Tartaglia",
         rarity: 5,
         constellation: "Monoceros Caeli",
-        description:
-            'No. 11 of The Harbingers, also known as "Childe." His name is highly feared on the battlefield.',
+        description: 'No. 11 of The Harbingers, also known as "Childe." His name is highly feared on the battlefield.',
         element: "hydro",
         weapon: "bow",
         sub: "Hydro DMG Bonus",
         ascension: "Cleansing Heart",
         local: "Starconch",
         common: "fatui_insignia",
-        weekly: "Shard of a Foul Legacy ",
+        weekly: "Shard of a Foul Legacy",
         book: "freedom",
     },
     diona: {
@@ -220,8 +219,7 @@ export const characters: Characters = {
         name: "Venti",
         rarity: 5,
         constellation: "Carmen Dei",
-        description:
-            "One of the many bards of Mondstadt, who freely wanders the city's streets and alleys.",
+        description: "One of the many bards of Mondstadt, who freely wanders the city's streets and alleys.",
         element: "anemo",
         weapon: "bow",
         sub: "Energy Recharge",
@@ -284,8 +282,7 @@ export const characters: Characters = {
         name: "Diluc",
         rarity: 5,
         constellation: "Noctua",
-        description:
-            "The tycoon of a winery empire in Mondstadt, unmatched in every possible way.",
+        description: "The tycoon of a winery empire in Mondstadt, unmatched in every possible way.",
         element: "pyro",
         weapon: "claymore",
         sub: "CRIT Rate",
@@ -316,8 +313,7 @@ export const characters: Characters = {
         name: "Sucrose",
         rarity: 4,
         constellation: "Ampulla",
-        description:
-            "An alchemist filled with curiosity about all things. She researches bio-alchemy.",
+        description: "An alchemist filled with curiosity about all things. She researches bio-alchemy.",
         element: "anemo",
         weapon: "catalyst",
         sub: "Anemo DMG Bonus",
@@ -348,8 +344,7 @@ export const characters: Characters = {
         name: "Noelle",
         rarity: 4,
         constellation: "Parma Cordis",
-        description:
-            "A maid who faithfully serves the Knights of Favonius. She dreams of joining their ranks someday.",
+        description: "A maid who faithfully serves the Knights of Favonius. She dreams of joining their ranks someday.",
         element: "geo",
         weapon: "claymore",
         sub: "DEF",
@@ -364,8 +359,7 @@ export const characters: Characters = {
         name: "Bennett",
         rarity: 4,
         constellation: "Rota Calamitas",
-        description:
-            "A good-natured adventurer from Mondstadt who's unfortunately extremely unlucky.",
+        description: "A good-natured adventurer from Mondstadt who's unfortunately extremely unlucky.",
         element: "pyro",
         weapon: "sword",
         sub: "Energy Recharge",
@@ -396,8 +390,7 @@ export const characters: Characters = {
         name: "Ningguang",
         rarity: 4,
         constellation: "Opus Aequilibrium",
-        description:
-            "The Tianquan of the Liyue Qixing. Her wealth is unsurpassed in all of Teyvat.",
+        description: "The Tianquan of the Liyue Qixing. Her wealth is unsurpassed in all of Teyvat.",
         element: "geo",
         weapon: "catalyst",
         sub: "Geo DMG Bonus",
@@ -428,8 +421,7 @@ export const characters: Characters = {
         name: "Beidou",
         rarity: 4,
         constellation: "Victor Mare",
-        description:
-            "Captain of her crew, The Crux. She's quite an unbound and forthright woman.",
+        description: "Captain of her crew, The Crux. She's quite an unbound and forthright woman.",
         element: "electro",
         weapon: "claymore",
         sub: "Electro DMG Bonus",
@@ -476,8 +468,7 @@ export const characters: Characters = {
         name: "Barbara",
         rarity: 4,
         constellation: "Crater",
-        description:
-            'Every citizen of Mondstadt adores Barbara. She learned the word "idol" from a magazine.',
+        description: 'Every citizen of Mondstadt adores Barbara. She learned the word "idol" from a magazine.',
         element: "hydro",
         weapon: "catalyst",
         sub: "HP",

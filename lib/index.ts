@@ -2,7 +2,8 @@ import { BuildItem, items } from "../data/items";
 import itemOrder from "./itemOrder";
 
 export function toId(name: string) {
-    return name.replace(/'/g, "").replace(/[ -]/g, "_").toLowerCase();
+    if (!name) return null;
+    return name.trim().replace(/'/g, "").replace(/[ -]/g, "_").toLowerCase();
 }
 
 export function mora(amount: number): BuildItem {

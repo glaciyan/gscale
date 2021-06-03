@@ -2,41 +2,47 @@ import { getCharacterMaterials } from "../lib/characterMaterials";
 import buildsDB from "../lib/buildsDatabase";
 import { characters } from "../data/characters";
 import ItemGrid from "./ItemGrid";
+import MiniItemCard from "./MiniItemCard";
+import millify from "millify";
 
-export default function CharacterBuild({ build: character, className }: { build: any; className?: string }) {
-    const materials = getCharacterMaterials(
-        characters[character.characterId],
-        character.level,
-        character.normal,
-        character.elemental,
-        character.burst
-    );
+export default function CharacterBuild({ build, className }: { build: any; className?: string }) {
+    const character = characters[build.characterId];
+    const materials = getCharacterMaterials(character, build.level, build.normal, build.elemental, build.burst);
 
     return (
         <div className={className}>
-            <div>
-                <h1 className="mb-2 font-bold">{character.characterId}</h1>
+            <div className="relative">
+                <h1 className="text-lg font-bold">{character.name}</h1>
                 <div>
-                    Lvl: {character.level.start} to {character.level.goal}
+                    Level: {build.level.start} to {build.level.goal}
                 </div>
                 <div>
-                    Normal: {character.normal.start} to {character.normal.goal}
+                    Normal: {build.normal.start} to {build.normal.goal}
                 </div>
                 <div>
-                    Elemental: {character.elemental.start} to {character.elemental.goal}
+                    Elemental: {build.elemental.start} to {build.elemental.goal}
                 </div>
                 <div>
-                    Burst: {character.burst.start} to {character.burst.goal}
+                    Burst: {build.burst.start} to {build.burst.goal}
                 </div>
                 <a
                     href="#"
-                    className="float-right text-red-400 hover:underline"
+                    className="absolute top-0 right-0 !py-1.5 bg-red-500 text-gscale-dark-text-primary font-medium hover:bg-opacity-90 btn hover:underline"
                     onClick={async () => {
-                        await buildsDB.builds.delete(character.id);
+                        await buildsDB.builds.delete(build.id);
                     }}
                 >
-                    delete
+                    Delete
                 </a>
+            </div>
+            <h2 className="mt-3 font-bold">Materials needed:</h2>
+            <div className="flex -mb-3">
+                <MiniItemCard imageUrl="/images/materials/mora.png" imageName="Mora" label={millify(materials.mora)} />
+                <MiniItemCard
+                    imageUrl="/images/materials/heros_wit.png"
+                    imageName="Hero's Wit"
+                    label={materials.xpLazy.amount}
+                />
             </div>
             <ItemGrid items={materials.materials} />
         </div>
