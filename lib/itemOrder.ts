@@ -4,10 +4,10 @@ export default {
     xpAccurate: 175,
     local: 200,
     common: 300,
-    gem: 400,
-    boss: 500,
+    boss: 400,
+    gem: 500,
 
     book: 600,
-    talentBoss: 300,
+    talentBoss: 650,
     crown: 700,
 };
