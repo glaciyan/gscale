@@ -15,21 +15,19 @@ export default function CharacterBuild({ build: character, className }: { build:
     return (
         <div className={className}>
             <div>
-                <span>
-                    {character.characterId} ({character.level.start} to {character.level.goal})
-                </span>
-                {" - "}
-
-                <a
-                    href="#"
-                    className="text-blue-400 hover:underline"
-                    onClick={() => {
-                        console.log(materials);
-                    }}
-                >
-                    log materials
-                </a>
-
+                <h1 className="mb-2 font-bold">{character.characterId}</h1>
+                <div>
+                    Lvl: {character.level.start} to {character.level.goal}
+                </div>
+                <div>
+                    Normal: {character.normal.start} to {character.normal.goal}
+                </div>
+                <div>
+                    Elemental: {character.elemental.start} to {character.elemental.goal}
+                </div>
+                <div>
+                    Burst: {character.burst.start} to {character.burst.goal}
+                </div>
                 <a
                     href="#"
                     className="float-right text-red-400 hover:underline"
