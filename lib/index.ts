@@ -2,7 +2,6 @@ import { BuildItem, items } from "../data/items";
 import itemOrder from "./itemOrder";
 
 export function toId(name: string) {
-    if (!name) return null;
     return name.trim().replace(/'/g, "").replace(/[ -]/g, "_").toLowerCase();
 }
 
