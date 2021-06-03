@@ -69,9 +69,7 @@ export function getCharacterMaterials(
     };
 }
 
-function getCombinedCost(
-    requiredAcensions: { mora: number; items: import("/home/slimetsp/dev/gscale/data/items").BuildItem[] }[]
-) {
+function getCombinedCost(requiredAcensions: { mora: number; items: BuildItem[] }[]) {
     const ascensionCost = requiredAcensions.reduce((prev, current) => {
         return {
             mora: prev.mora + current.mora,
