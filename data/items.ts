@@ -17,9 +17,7 @@ export function getGem(element: Vision, rarity: 2 | 3 | 4 | 5) {
 }
 
 export function getItem(group: string, rarity: number): Item {
-    const found = Object.values(items).find(
-        (item: Item) => item.group === group && item.rarity === rarity
-    );
+    const found = Object.values(items).find((item: Item) => item.group === group && item.rarity === rarity);
 
     if (!found) return items.nothing;
     return found;
@@ -30,8 +28,8 @@ export const items = {
         name: "nothing",
         rarity: 0,
     },
-    crown: {
-        name: "Crown",
+    crown_of_insight: {
+        name: "Crown of Insight",
         rarity: 5,
     },
     gilded_scale: {

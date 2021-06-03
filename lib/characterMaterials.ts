@@ -5,16 +5,23 @@ import { costsTo } from "../data/characterLevels";
 import _ from "lodash";
 import { items } from "../data/items";
 import itemOrder from "./itemOrder";
+import { talentCost } from "../data/talentCost";
 
-export function getCharacterMaterials(character: Character, start: number, goal: number) {
-    if (start < 1 || start > 81) return null;
-    if (goal < 20 || goal > 90) return null;
-    if (start > goal) return null;
-    const startAsc = getAscensionLevel(start);
-    const goalAsc = getAscensionLevel(goal);
+type Progression = { start: number; goal: number };
+
+export function getCharacterMaterials(
+    character: Character,
+    level: Progression,
+    normal: Progression,
+    elemental: Progression,
+    burst: Progression
+) {
+    const totalMora: number[] = [];
+    const startAsc = getAscensionLevel(level.start);
+    const goalAsc = getAscensionLevel(level.goal);
 
     // leveling
-    const levelingCost = getLevelingCost(start, goal);
+    const levelingCost = getLevelingCost(level.start, level.goal);
 
     const accurateLevelMaterials = {
         heros_wit: xp(4, levelingCost.accurate[0]),
@@ -26,8 +33,45 @@ export function getCharacterMaterials(character: Character, start: number, goal:
     lazyLevelMaterial.order = itemOrder.xpLazy;
 
     // ascension
-    const requiredAcensions = fullAscensionCostOf(character).slice(startAsc, goalAsc);
+    const { mora: ascensionMora, items: ascensionMaterials } = getCombinedCost(
+        fullAscensionCostOf(character).slice(startAsc, goalAsc)
+    );
 
+    function talent(i: Progression) {
+        return getCombinedCost(talentCost(character).slice(i.start - 1, i.goal - 1));
+    }
+    const { mora: normalMora, items: normalMaterials } = talent(normal);
+    const { mora: elementalMora, items: elementalMaterials } = talent(elemental);
+    const { mora: burstMora, items: burstMaterials } = talent(burst);
+    const talents = sumObjectArray(
+        normalMaterials.concat(elementalMaterials).concat(burstMaterials),
+        "order",
+        "amount"
+    );
+
+    totalMora.push(levelingCost.mora);
+    totalMora.push(ascensionMora);
+    totalMora.push(normalMora);
+    totalMora.push(elementalMora);
+    totalMora.push(burstMora);
+
+    return {
+        xp: levelingCost.xp,
+        xpLazy: lazyLevelMaterial,
+        xpAccurate: accurateLevelMaterials,
+        mora: totalMora.reduce((prev, current) => prev + current),
+        ascension: ascensionMaterials,
+        normal: normalMaterials,
+        elemental: elementalMaterials,
+        burst: burstMaterials,
+        talents,
+        materials: sumObjectArray(talents.concat(ascensionMaterials), "order", "amount"),
+    };
+}
+
+function getCombinedCost(
+    requiredAcensions: { mora: number; items: import("/home/slimetsp/dev/gscale/data/items").BuildItem[] }[]
+) {
     const ascensionCost = requiredAcensions.reduce((prev, current) => {
         return {
             mora: prev.mora + current.mora,
@@ -36,24 +80,7 @@ export function getCharacterMaterials(character: Character, start: number, goal:
     });
 
     ascensionCost.items = sumObjectArray(ascensionCost.items, "order", "amount");
-
-    // talents
-
-    // combining everything
-    const mora: number[] = [];
-    mora.push(levelingCost.mora);
-    mora.push(ascensionCost.mora);
-
-    return {
-        xp: levelingCost.xp,
-        xpLazy: lazyLevelMaterial,
-        xpAccurate: accurateLevelMaterials,
-        mora: mora.reduce((prev, current) => prev + current),
-        ascension: ascensionCost.items,
-        normal: null,
-        elemental: null,
-        burst: null,
-    };
+    return ascensionCost;
 }
 
 function getLevelingCost(start: number, goal: number) {

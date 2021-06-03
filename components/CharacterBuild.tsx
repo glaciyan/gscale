@@ -2,24 +2,19 @@ import { getCharacterMaterials } from "../lib/characterMaterials";
 import buildsDB from "../lib/buildsDatabase";
 import { characters } from "../data/characters";
 
-export default function CharacterBuild({
-    build: character,
-    className,
-}: {
-    build: any;
-    className?: string;
-}) {
+export default function CharacterBuild({ build: character, className }: { build: any; className?: string }) {
     const ascensionMats = getCharacterMaterials(
         characters[character.characterId],
-        character.level.start,
-        character.level.goal
+        character.level,
+        { start: 1, goal: 10 },
+        character.elemental,
+        character.burst
     );
 
     return (
         <div className={className}>
             <span>
-                {character.characterId} ({character.level.start} to{" "}
-                {character.level.goal})
+                {character.characterId} ({character.level.start} to {character.level.goal})
             </span>
             {" - "}
 
@@ -30,15 +25,7 @@ export default function CharacterBuild({
                     console.log(ascensionMats);
                 }}
             >
-                log asc mats
-            </a>
-            {" | "}
-            <a
-                href="#"
-                className="text-green-400 hover:underline"
-                onClick={() => {}}
-            >
-                log talent mats
+                log materials
             </a>
 
             <a

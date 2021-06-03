@@ -14,6 +14,15 @@ export function mora(amount: number): BuildItem {
     };
 }
 
+export function crown(amount: number): BuildItem {
+    return {
+        name: "Crown of Insight",
+        rarity: 5,
+        amount: amount,
+        order: itemOrder.crown,
+    };
+}
+
 export function xp(rarity: 2 | 3 | 4, amount: number): BuildItem {
     let xpItem;
     switch (rarity) {
@@ -37,16 +46,10 @@ export function xp(rarity: 2 | 3 | 4, amount: number): BuildItem {
 }
 
 // combines objects inside of an array based of a given field(distinction) and sums up the specified numberField
-export function sumObjectArray(
-    array: any[],
-    distinction: string,
-    numberField: string
-) {
+export function sumObjectArray(array: any[], distinction: string, numberField: string) {
     const out: any[] = [];
     array.forEach((arrayItem) => {
-        const match = out.find(
-            (value) => value[distinction] === arrayItem[distinction]
-        );
+        const match = out.find((value) => value[distinction] === arrayItem[distinction]);
 
         if (match) {
             match[numberField] += arrayItem[numberField];

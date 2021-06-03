@@ -41,4 +41,20 @@ export class ItemGen {
             order: itemOrder.boss,
         };
     }
+
+    weekly(amount: number): BuildItem {
+        return {
+            ...itemsTyped[toId(this.character.weekly)],
+            amount: amount,
+            order: itemOrder.talentBoss,
+        };
+    }
+
+    book(rarity: 2 | 3 | 4, amount: number): BuildItem {
+        return {
+            ...getItem(this.character.book, rarity),
+            amount: amount,
+            order: itemOrder.book + rarity,
+        };
+    }
 }
