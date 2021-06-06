@@ -10,7 +10,7 @@ type Props = {
 
 const nav = [
     { name: "Characters", href: "/" },
-    { name: "Your Builds", href: "builds" },
+    { name: "Your Builds", href: "/builds" },
 ];
 
 const Layout = ({ children, title, current }: Props) => {
