@@ -70,12 +70,15 @@ export function getCharacterMaterials(
 }
 
 function getCombinedCost(requiredAcensions: { mora: number; items: BuildItem[] }[]) {
-    const ascensionCost = requiredAcensions.reduce((prev, current) => {
-        return {
-            mora: prev.mora + current.mora,
-            items: [...prev.items, ...current.items],
-        };
-    });
+    const ascensionCost = requiredAcensions.reduce(
+        (prev, current) => {
+            return {
+                mora: prev.mora + current.mora,
+                items: [...prev.items, ...current.items],
+            };
+        },
+        { mora: 0, items: [] }
+    );
 
     ascensionCost.items = sumObjectArray(ascensionCost.items, "order", "amount");
     return ascensionCost;

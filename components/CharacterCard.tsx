@@ -23,6 +23,7 @@ export default function CharacterCard({
     function maxChar() {
         buildDB.builds
             .add({
+                type: "character",
                 characterId: character.id,
                 level: { start: 1, goal: 90 },
                 normal: { start: 1, goal: 10 },
@@ -71,21 +72,14 @@ export default function CharacterCard({
             )}
             <div className="px-4 py-3">
                 <div className="flex flex-wrap items-center">
-                    <span className={`text-genshin-element-${elementId} mr-1`}>
-                        {_.upperFirst(character.element)}
-                    </span>
+                    <span className={`text-genshin-element-${elementId} mr-1`}>{_.upperFirst(character.element)}</span>
                     <span className="text-gscale-dark-text-secondary mr-0.5 opacity-80">
                         {_.upperFirst(character.weapon)}
                     </span>
-                    <RarityStars
-                        rarity={character.rarity}
-                        className="inline w-auto h-5"
-                    />
+                    <RarityStars rarity={character.rarity} className="inline w-auto h-5" />
                 </div>
 
-                <h3 className="mt-1 text-lg font-medium text-gscale-dark-text-primary">
-                    {character.name}
-                </h3>
+                <h3 className="mt-1 text-lg font-medium text-gscale-dark-text-primary">{character.name}</h3>
             </div>
         </>
     );

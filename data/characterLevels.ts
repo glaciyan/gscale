@@ -1,4 +1,4 @@
-export default {
+export const characterLevels = {
     1: { level: 1, ascended: false },
     20: { level: 20, ascended: false },
     21: { level: 20, ascended: true },
@@ -26,17 +26,4 @@ export const costsTo = [
     { level: 90, xp: 3423125, mora: 684800, accurate: [171, 0, 4] },
 ];
 
-export type Levels =
-    | 20
-    | 21
-    | 40
-    | 41
-    | 50
-    | 51
-    | 60
-    | 61
-    | 70
-    | 71
-    | 80
-    | 81
-    | 90;
+export type Levels = 20 | 21 | 40 | 41 | 50 | 51 | 60 | 61 | 70 | 71 | 80 | 81 | 90;
