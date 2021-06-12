@@ -1,11 +1,30 @@
 import Image from "next/image";
-import { useMediaQuery } from "react-responsive";
 import RarityStars from "./RarityStars";
 import cn from "classnames";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import buildDB from "../lib/buildsDatabase";
 import _ from "lodash";
+import { useEffect, useState } from "react";
+
+function useIsTouch() {
+    const [isTouch, setisTouch] = useState(false);
+
+    useEffect(() => {
+        setisTouch(
+            (() => {
+                try {
+                    document.createEvent("TouchEvent");
+                    return true;
+                } catch {
+                    return false;
+                }
+            })()
+        );
+    });
+
+    return isTouch;
+}
 
 export default function CharacterCard({
     character,
@@ -16,7 +35,7 @@ export default function CharacterCard({
     className?: string;
     compact?: boolean;
 }) {
-    const isProbablyTouch = useMediaQuery({ maxDeviceWidth: 1023 });
+    const isProbablyTouch = useIsTouch();
     const route = useRouter();
     const elementId = character.element;
 
@@ -72,14 +91,21 @@ export default function CharacterCard({
             )}
             <div className="px-4 py-3">
                 <div className="flex flex-wrap items-center">
-                    <span className={`text-genshin-element-${elementId} mr-1`}>{_.upperFirst(character.element)}</span>
+                    <span className={`text-genshin-element-${elementId} mr-1`}>
+                        {_.upperFirst(character.element)}
+                    </span>
                     <span className="text-gscale-dark-text-secondary mr-0.5 opacity-80">
                         {_.upperFirst(character.weapon)}
                     </span>
-                    <RarityStars rarity={character.rarity} className="inline w-auto h-5" />
+                    <RarityStars
+                        rarity={character.rarity}
+                        className="inline w-auto h-5"
+                    />
                 </div>
 
-                <h3 className="mt-1 text-lg font-medium text-gscale-dark-text-primary">{character.name}</h3>
+                <h3 className="mt-1 text-lg font-medium text-gscale-dark-text-primary">
+                    {character.name}
+                </h3>
             </div>
         </>
     );

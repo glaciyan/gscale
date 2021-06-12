@@ -24,8 +24,14 @@ const Layout = ({ children, title, current }: Props) => {
                 <title>{title + " - GScale"}</title>
                 <link rel="icon" href="/favicon.ico" sizes="32x32" />
                 <link rel="icon" href="/images/svg/logo.svg" type="image/svg+xml" />
-                <meta name="description" content="Calculate how much you need for your characters." />
-                <meta property="og:title" content="GScale - Genshin Impact Character Building Calculator" />
+                <meta
+                    name="description"
+                    content="Calculate how much you need for your characters."
+                />
+                <meta
+                    property="og:title"
+                    content="GScale - Genshin Impact Character Building Calculator"
+                />
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content="https://www.gscale.cc" />
                 <meta property="og:image" content="/images/og.png" />
@@ -35,17 +41,21 @@ const Layout = ({ children, title, current }: Props) => {
                 />
                 <meta name="twitter:card" content="summary"></meta>
             </Head>
-            <header className="max-w-screen-xl mx-6 mt-6 xl:mx-auto">
+            <header className="max-w-screen-xl m-6 xl:mx-auto">
                 <nav className="flex flex-wrap items-center">
                     <Link href="/">
                         <a href="">
-                            <img className="mb-6" src="/images/svg/logo_label_small.svg" alt="logo" />
+                            <img
+                                className=""
+                                src="/images/svg/logo_label_small.svg"
+                                alt="logo"
+                            />
                         </a>
                     </Link>
-                    <span className="px-2 py-1 !pt-0.5 mb-6 mr-6 font-semibold tracking-wide text-white uppercase rounded-full xl:ml-3 xl:mr-14 bg-genshin-dark-element-pyro">
+                    <div className="px-2 pb-0.5 ml-3 text-white font-semibold uppercase bg-genshin-dark-element-pyro rounded-full">
                         alpha
-                    </span>
-                    <div className="flex mb-6">
+                    </div>
+                    <div className="flex py-4 ml-3 sm:ml-12">
                         {nav.map((navi, index, array) => {
                             return (
                                 <span key={navi.href} className="flex">
