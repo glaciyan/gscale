@@ -7,6 +7,9 @@ module.exports = {
         extend: {
             colors: {
                 gray: colors.trueGray,
+				indigo: colors.indigo,
+				amber: colors.amber,
+				orange: colors.orange,
                 gscale: {
                     dark: {
                         background: {
