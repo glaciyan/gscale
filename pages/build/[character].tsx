@@ -1,6 +1,6 @@
-import { ArrowRightIcon, TrendingUpIcon } from "@heroicons/react/outline";
+import { TrendingUpIcon } from "@heroicons/react/outline";
 import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Layout from "../../components/Layout";
 import { LevelSelector as LevelSelector } from "../../components/LevelItemList";
 import { characters } from "../../data/characters";
@@ -38,16 +38,16 @@ export default function BuildCharacter() {
 
     const [startLevel, setstartLevel, goalLevel, setgoalLevel] = useCorrectingState(1, 1);
 
-    const [startNormal, setstartNormal, goalNormal, setgoalNormal] = useCorrectingState(
-        1,
-        1
-    );
+    // const [startNormal, setstartNormal, goalNormal, setgoalNormal] = useCorrectingState(
+    //     1,
+    //     1
+    // );
 
-    const [startElemental, setstartElemental] = useState(1);
-    const [goalElemental, setgoalElemental] = useState(1);
+    // const [startElemental, setstartElemental] = useState(1);
+    // const [goalElemental, setgoalElemental] = useState(1);
 
-    const [startBurst, setstartBurst] = useState(1);
-    const [goalBurst, setgoalBurst] = useState(1);
+    // const [startBurst, setstartBurst] = useState(1);
+    // const [goalBurst, setgoalBurst] = useState(1);
 
     if (foundCharacter) {
         return (
