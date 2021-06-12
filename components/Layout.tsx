@@ -42,9 +42,9 @@ const Layout = ({ children, title, current }: Props) => {
                 <meta name="twitter:card" content="summary"></meta>
             </Head>
             <header className="max-w-screen-xl m-6 xl:mx-auto">
-                <nav className="flex flex-wrap items-center">
+                <div className="flex flex-wrap items-center">
                     <Link href="/">
-                        <a href="">
+                        <a href="" className="focus-visible:ring">
                             <img
                                 className=""
                                 src="/images/svg/logo_label_small.svg"
@@ -55,18 +55,19 @@ const Layout = ({ children, title, current }: Props) => {
                     <div className="px-2 pb-0.5 ml-3 text-white font-semibold uppercase bg-genshin-dark-element-pyro rounded-full">
                         alpha
                     </div>
-                    <div className="flex py-4 ml-3 sm:ml-12">
+                    <nav className="flex py-4 ml-3 sm:ml-12">
                         {nav.map((navi, index, array) => {
                             return (
                                 <span key={navi.href} className="flex">
                                     <Link href={navi.href}>
                                         <a
                                             href=""
-                                            className={
-                                                current === navi.name
-                                                    ? "text-gscale-dark-text-secondary hover:text-gscale-dark-text-primary"
-                                                    : "text-gscale-dark-text-ternary hover:text-gscale-dark-text-secondary"
-                                            }
+                                            className={`
+                                                ${
+                                                    current === navi.name
+                                                        ? "text-gscale-dark-text-secondary hover:text-gscale-dark-text-primary"
+                                                        : "text-gscale-dark-text-ternary hover:text-gscale-dark-text-secondary"
+                                                } focus-visible:underline`}
                                         >
                                             {navi.name}
                                         </a>
@@ -77,8 +78,8 @@ const Layout = ({ children, title, current }: Props) => {
                                 </span>
                             );
                         })}
-                    </div>
-                </nav>
+                    </nav>
+                </div>
             </header>
             <main className="min-h-screen">{children}</main>
             <footer className="mt-8">

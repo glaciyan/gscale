@@ -1,4 +1,3 @@
-import { characterLevels, Level } from "../data/characterLevels";
 import { BuildItem, items } from "../data/items";
 import itemOrder from "./itemOrder";
 

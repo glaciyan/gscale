@@ -1,22 +1,30 @@
+import { ArrowRightIcon, TrendingUpIcon } from "@heroicons/react/outline";
 import { useRouter } from "next/router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Layout from "../../components/Layout";
-import { LevelItemList } from "../../components/LevelItemList";
-import { characerLevelsArray, characterLevels } from "../../data/characterLevels";
+import { LevelSelector as LevelSelector } from "../../components/LevelItemList";
 import { characters } from "../../data/characters";
 
-const people = [
-    { name: "Wade Cooper" },
-    { name: "Arlene Mccoy" },
-    { name: "Devon Webb" },
-    { name: "Tom Cook" },
-    { name: "Tanya Fox" },
-    { name: "Hellen Schmidt" },
-    { name: "Hellen Schmidt" },
-    { name: "Hellen Schmidt" },
-    { name: "Hellen Schmidt" },
-    { name: "Hellen Schmidt" },
-];
+function useCorrectingState(
+    minStart: number,
+    minGoal: number
+): [number, (value: number) => void, number, (value: number) => void] {
+    const [first, setFirst] = useState(minStart);
+    const [second, setSecond] = useState(minGoal);
+
+    return [
+        first,
+        (value: number) => {
+            if (value > second) setSecond(value);
+            setFirst(value);
+        },
+        second,
+        (value: number) => {
+            if (value < first) setFirst(value);
+            setSecond(value);
+        },
+    ];
+}
 
 export default function BuildCharacter() {
     const router = useRouter();
@@ -28,11 +36,12 @@ export default function BuildCharacter() {
         foundCharacter = characters[character];
     }
 
-    const [startLevel, setstartLevel] = useState(1);
-    const [goalLevel, setgoalLevel] = useState(20);
+    const [startLevel, setstartLevel, goalLevel, setgoalLevel] = useCorrectingState(1, 1);
 
-    const [startNormal, setstartNormal] = useState(1);
-    const [goalNormal, setgoalNormal] = useState(1);
+    const [startNormal, setstartNormal, goalNormal, setgoalNormal] = useCorrectingState(
+        1,
+        1
+    );
 
     const [startElemental, setstartElemental] = useState(1);
     const [goalElemental, setgoalElemental] = useState(1);
@@ -45,8 +54,38 @@ export default function BuildCharacter() {
             <Layout title={`Building ${foundCharacter.name}`}>
                 <div className="max-w-screen-xl mx-auto">
                     <div className="w-max text-gscale-dark-text-secondary">
-                        <LevelItemList value={startLevel} onChange={setstartLevel} />
-                        <div>Level: {startLevel}</div>
+                        <div className="relative flex">
+                            <LevelSelector
+                                first
+                                value={startLevel}
+                                onChange={setstartLevel}
+                            />
+                            {/* bg-gradient-to-r from-genshin-dark-element-hydro to-genshin-dark-element-cryo */}
+                            <div className="flex items-center px-2 bg-blue-400 border-l-2 border-r-2 bg-opacity-40 border-gscale-dark-background-ternary">
+                                <TrendingUpIcon className="w-5 h-5 text-white" />
+                            </div>
+                            <LevelSelector
+                                last
+                                value={goalLevel}
+                                onChange={setgoalLevel}
+                            />
+                        </div>
+                        <div className="relative flex">
+                            <LevelSelector
+                                first
+                                value={startLevel}
+                                onChange={setstartLevel}
+                            />
+                            {/* bg-gradient-to-r from-genshin-dark-element-hydro to-genshin-dark-element-cryo */}
+                            <div className="flex items-center px-2 bg-blue-400 border-l-2 border-r-2 bg-opacity-40 border-gscale-dark-background-ternary">
+                                <TrendingUpIcon className="w-5 h-5 text-white" />
+                            </div>
+                            <LevelSelector
+                                last
+                                value={goalLevel}
+                                onChange={setgoalLevel}
+                            />
+                        </div>
                     </div>
                 </div>
             </Layout>

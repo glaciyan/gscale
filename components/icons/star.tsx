@@ -3,7 +3,9 @@ export function Star({ color }: { color?: string }) {
         <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox={`0 0 24 24`}
-            className={`w-6 h-6 ${color ?? "text-gscale-dark-text-secondary"}`}
+            className={`w-6 h-6 flex-shrink-0 ${
+                color ?? "text-gscale-dark-text-secondary"
+            }`}
             aria-hidden="true"
         >
             <path

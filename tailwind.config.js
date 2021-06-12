@@ -15,6 +15,7 @@ module.exports = {
                         background: {
                             ternary: "#18191B",
                             secondary: "#252527",
+							500: "#2d2d2f",
                             primary: "#2F3033",
                         },
                         text: {
