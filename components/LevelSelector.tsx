@@ -16,7 +16,7 @@ export function LevelSelector({ value, onChange, first, last }: LevelItemListPro
     return (
         <div className="flex">
             <Listbox value={value} onChange={onChange}>
-                <div className="relative">
+                <div className="relative w-20">
                     <Listbox.Button
                         style={
                             first
@@ -26,7 +26,7 @@ export function LevelSelector({ value, onChange, first, last }: LevelItemListPro
                                   }
                                 : {}
                         }
-                        className="relative h-10 py-2 pl-3 pr-10 text-left shadow-md cursor-default bg-gscale-dark-background-primary focus:outline-none focus-visible:ring"
+                        className="relative w-full h-10 py-2 pl-3 pr-10 text-left shadow-md cursor-default bg-gscale-dark-background-primary focus:outline-none focus-visible:ring"
                     >
                         <span className="block truncate">
                             {getCharacterLevel(value).level}
@@ -44,7 +44,7 @@ export function LevelSelector({ value, onChange, first, last }: LevelItemListPro
                         leaveFrom="opacity-100"
                         leaveTo="opacity-0"
                     >
-                        <Listbox.Options className="absolute w-auto py-1 mt-1 overflow-auto rounded-md shadow-lg text-gscale-dark-text-secondary bg-gscale-dark-background-primary max-h-96 sm:max-h-screen ring-opacity-5 focus:outline-none focus-visible:ring-inset focus-visible:ring">
+                        <Listbox.Options className="listbox">
                             {Object.values(characterLevels).map((level) => (
                                 <Listbox.Option
                                     key={level.level + (level.ascended ? 1 : 0)}
@@ -89,8 +89,6 @@ export function LevelSelector({ value, onChange, first, last }: LevelItemListPro
             <button
                 className="flex items-center justify-center w-10 h-10 shadow-md bg-gscale-dark-background-secondary hover:bg-opacity-70 focus:outline-none focus-visible:ring"
                 onClick={() => {
-                    console.log(value);
-
                     if (getCharacterLevel(value).ascended) {
                         onChange(value - 1);
                     } else {
