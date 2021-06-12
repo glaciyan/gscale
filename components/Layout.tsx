@@ -52,10 +52,10 @@ const Layout = ({ children, title, current }: Props) => {
                             />
                         </a>
                     </Link>
-                    <div className="px-2 pb-0.5 ml-3 text-white font-semibold uppercase bg-genshin-dark-element-hydro rounded-full">
+                    <div className="px-2 pb-0.5 mx-3 text-white font-semibold uppercase bg-genshin-dark-element-hydro rounded-full">
                         dev
                     </div>
-                    <nav className="flex py-4 ml-3 sm:ml-12">
+                    <nav className="flex py-4 sm:ml-12">
                         {nav.map((navi, index, array) => {
                             return (
                                 <span key={navi.href} className="flex">
