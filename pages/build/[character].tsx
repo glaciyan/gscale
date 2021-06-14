@@ -1,6 +1,9 @@
+// never ever do absolute positioning deep inside a container with overflow set to hidden
+// i had to manually set all corners -slimetsp 14/06/2021
+
 import { SparklesIcon, TrendingUpIcon, FireIcon } from "@heroicons/react/outline";
 import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Layout from "../../components/Layout";
 import { CharacterLevelListBox } from "../../components/CharacterLevelListBox";
 import { Character, characters } from "../../data/characters";
@@ -57,7 +60,7 @@ export default function BuildCharacter() {
                     <div className="w-full lg:flex">
                         <div className="block sm:flex">
                             <CharacterDetails character={foundCharacter} />
-                            {/* Level Selectors */}
+
                             <div className="flex-grow space-y-6 border-gray-700 buildpagepadding sm:rounded-tr-md lg:rounded-none lg:border-r-2 lg:flex-grow-0 text-gscale-dark-text-secondary bg-gscale-dark-background-secondary">
                                 <div>
                                     <h3 className="buildlevellabel">Level</h3>
@@ -103,6 +106,7 @@ export default function BuildCharacter() {
                                 />
                             </div>
                         </div>
+
                         <div className="flex-grow border-t-2 border-gray-700 buildpagepadding lg:border-0 bg-gscale-dark-background-secondary rounded-b-md lg:rounded-r-md">
                             <h3>Material Preview</h3>
                         </div>
