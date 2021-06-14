@@ -1,21 +1,26 @@
 const colors = require("tailwindcss/colors");
 module.exports = {
     mode: "jit",
-    purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}", "./twSafeList.txt"],
+    purge: [
+        "./pages/**/*.{js,ts,jsx,tsx}",
+        "./components/**/*.{js,ts,jsx,tsx}",
+        "./twSafeList.txt",
+    ],
     darkMode: "class", // or 'media' or 'class'
     theme: {
         extend: {
             colors: {
                 gray: colors.trueGray,
-				indigo: colors.indigo,
-				amber: colors.amber,
-				orange: colors.orange,
+                indigo: colors.indigo,
+                amber: colors.amber,
+                orange: colors.orange,
                 gscale: {
                     dark: {
                         background: {
                             ternary: "#18191B",
+                            ternary500: "#1d1e20",
                             secondary: "#252527",
-							500: "#373739",
+                            500: "#373739",
                             primary: "#2F3033",
                         },
                         text: {
