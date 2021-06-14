@@ -1,9 +1,6 @@
 import { Listbox, Transition } from "@headlessui/react";
 import { SelectorIcon, CheckIcon } from "@heroicons/react/outline";
 import React, { Fragment } from "react";
-import { characterLevels } from "../data/characterLevels";
-import { getCharacterLevel } from "../lib/getCharacterLevel";
-import { Star } from "./icons/star";
 
 interface LevelItemListProps {
     value: number;
@@ -12,7 +9,9 @@ interface LevelItemListProps {
     last?: any;
 }
 
-export function LevelSelector({ value, onChange, first, last }: LevelItemListProps) {
+const borderRadius = "0.375rem";
+
+export function TalentLevelListBox({ value, onChange, first, last }: LevelItemListProps) {
     return (
         <div className="flex">
             <Listbox value={value} onChange={onChange}>
@@ -21,16 +20,19 @@ export function LevelSelector({ value, onChange, first, last }: LevelItemListPro
                         style={
                             first
                                 ? {
-                                      borderBottomLeftRadius: "0.375rem",
-                                      borderTopLeftRadius: "0.375rem",
+                                      borderBottomLeftRadius: borderRadius,
+                                      borderTopLeftRadius: borderRadius,
+                                  }
+                                : last
+                                ? {
+                                      borderTopRightRadius: borderRadius,
+                                      borderBottomRightRadius: borderRadius,
                                   }
                                 : {}
                         }
-                        className="relative w-full h-10 py-2 pl-3 pr-10 text-left shadow-md cursor-default bg-gscale-dark-background-primary focus:outline-none focus-visible:ring"
+                        className="listbutton"
                     >
-                        <span className="block truncate">
-                            {getCharacterLevel(value).level}
-                        </span>
+                        <span className="block truncate">{value}</span>
                         <span className="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
                             <SelectorIcon
                                 className="w-5 h-5 text-gscale-dark-text-primary"
@@ -45,9 +47,9 @@ export function LevelSelector({ value, onChange, first, last }: LevelItemListPro
                         leaveTo="opacity-0"
                     >
                         <Listbox.Options className="listbox">
-                            {Object.values(characterLevels).map((level) => (
+                            {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((level) => (
                                 <Listbox.Option
-                                    key={level.level + (level.ascended ? 1 : 0)}
+                                    key={level}
                                     className={({ active }) =>
                                         `${
                                             active
@@ -56,15 +58,12 @@ export function LevelSelector({ value, onChange, first, last }: LevelItemListPro
                                         }
                           cursor-default select-none relative py-2 pl-10`
                                     }
-                                    value={level.level + (level.ascended ? 1 : 0)}
+                                    value={level}
                                 >
                                     {({ selected }) => (
                                         <>
                                             <span className="flex">
-                                                <div className={"mr-1"}>
-                                                    {level.level}
-                                                </div>
-                                                {level.ascended ? <Star /> : null}
+                                                <div className={"mr-1"}>{level}</div>
                                                 <div className="mr-6"></div>
                                             </span>
                                             {selected ? (
@@ -85,33 +84,6 @@ export function LevelSelector({ value, onChange, first, last }: LevelItemListPro
                     </Transition>
                 </div>
             </Listbox>
-            <div className="w-px bg-gscale-dark-background-primary"></div>
-            <button
-                className="flex items-center justify-center w-10 h-10 shadow-md bg-gscale-dark-background-secondary hover:bg-opacity-70 focus:outline-none focus-visible:ring"
-                onClick={() => {
-                    if (getCharacterLevel(value).ascended) {
-                        onChange(value - 1);
-                    } else {
-                        if (value >= 20 && value < 90) onChange(value + 1);
-                    }
-                }}
-                style={
-                    last
-                        ? {
-                              borderTopRightRadius: "0.375rem",
-                              borderBottomRightRadius: "0.375rem",
-                          }
-                        : {}
-                }
-            >
-                <Star
-                    color={
-                        getCharacterLevel(value).ascended
-                            ? "text-genshin-rarity-5"
-                            : "text-gscale-dark-text-ternary"
-                    }
-                />
-            </button>
         </div>
     );
 }

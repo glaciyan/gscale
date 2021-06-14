@@ -2,10 +2,11 @@ import { SparklesIcon, TrendingUpIcon, FireIcon } from "@heroicons/react/outline
 import { useRouter } from "next/router";
 import { useState } from "react";
 import Layout from "../../components/Layout";
-import { LevelSelector } from "../../components/LevelSelector";
+import { CharacterLevelListBox } from "../../components/CharacterLevelListBox";
 import { characters } from "../../data/characters";
-import { TelentLevelSelector } from "../../components/TalentLevelSelector";
+import { TalentLevelListBox } from "../../components/TalentLevelListBox";
 import { SwordIcon } from "../../components/icons/sword";
+import { TalentLevelSelector } from "../../components/TalentLevelSelector";
 
 function useCorrectingState(
     minStart: number = 1,
@@ -47,93 +48,56 @@ export default function BuildCharacter() {
 
     const [startBurst, setstartBurst, goalBurst, setgoalBurst] = useCorrectingState();
 
-    // use icons
-    // elemental: sparkles
-    // burst: fire
-
     if (foundCharacter) {
         return (
             <Layout title={`Building ${foundCharacter.name}`}>
                 <div className="max-w-screen-xl mx-4 sm:mx-auto">
-                    <div className="space-y-6 w-max text-gscale-dark-text-secondary">
-                        <div>
-                            <h3 className="buildlevellabel">Level</h3>
-                            <div className="relative flex">
-                                <LevelSelector
-                                    first
-                                    value={startLevel}
-                                    onChange={setstartLevel}
-                                />
-                                {/* bg-gradient-to-r from-genshin-dark-element-hydro to-genshin-dark-element-cryo */}
-                                <div className="flex items-center px-2 bg-blue-400 border-l-2 border-r-2 bg-opacity-40 border-gscale-dark-background-ternary">
-                                    <TrendingUpIcon className="w-5 h-5 text-white" />
+                    <div className="flex flex-col">
+                        <div className=""></div>
+                        {/* Level Selectors */}
+                        <div className="p-6 space-y-6 w-max text-gscale-dark-text-secondary bg-gscale-dark-background-secondary">
+                            <div>
+                                <h3 className="buildlevellabel">Level</h3>
+                                <div className="relative flex">
+                                    <CharacterLevelListBox
+                                        first
+                                        value={startLevel}
+                                        onChange={setstartLevel}
+                                    />
+                                    <div className="flex items-center px-2 bg-blue-400 border-l-2 border-r-2 bg-opacity-40 border-gscale-dark-background-ternary">
+                                        <TrendingUpIcon className="white24" />
+                                    </div>
+                                    <CharacterLevelListBox
+                                        last
+                                        value={goalLevel}
+                                        onChange={setgoalLevel}
+                                    />
                                 </div>
-                                <LevelSelector
-                                    last
-                                    value={goalLevel}
-                                    onChange={setgoalLevel}
-                                />
                             </div>
-                        </div>
-
-                        <div>
-                            <h3 className="buildlevellabel">Normal Attack</h3>
-                            <div className="relative flex">
-                                <TelentLevelSelector
-                                    first
-                                    value={startNormal}
-                                    onChange={setstartNormal}
-                                />
-                                {/* bg-gradient-to-r from-genshin-dark-element-hydro to-genshin-dark-element-cryo */}
-                                <div className="flex items-center px-2 bg-blue-400 border-l-2 border-r-2 bg-opacity-40 border-gscale-dark-background-ternary">
-                                    <SwordIcon className="w-5 h-5 text-white" />
-                                </div>
-                                <TelentLevelSelector
-                                    last
-                                    value={goalNormal}
-                                    onChange={setgoalNormal}
-                                />
-                            </div>
-                        </div>
-
-                        <div>
-                            <h3 className="buildlevellabel">Elemental Attack</h3>
-                            <div className="relative flex">
-                                <TelentLevelSelector
-                                    first
-                                    value={startElemental}
-                                    onChange={setstartElemental}
-                                />
-                                {/* bg-gradient-to-r from-genshin-dark-element-hydro to-genshin-dark-element-cryo */}
-                                <div className="flex items-center px-2 bg-blue-400 border-l-2 border-r-2 bg-opacity-40 border-gscale-dark-background-ternary">
-                                    <SparklesIcon className="w-5 h-5 text-white" />
-                                </div>
-                                <TelentLevelSelector
-                                    last
-                                    value={goalElemental}
-                                    onChange={setgoalElemental}
-                                />
-                            </div>
-                        </div>
-
-                        <div>
-                            <h3 className="buildlevellabel">Burst</h3>
-                            <div className="relative flex">
-                                <TelentLevelSelector
-                                    first
-                                    value={startBurst}
-                                    onChange={setstartBurst}
-                                />
-                                {/* bg-gradient-to-r from-genshin-dark-element-hydro to-genshin-dark-element-cryo */}
-                                <div className="flex items-center px-2 bg-blue-400 border-l-2 border-r-2 bg-opacity-40 border-gscale-dark-background-ternary">
-                                    <FireIcon className="w-5 h-5 text-white" />
-                                </div>
-                                <TelentLevelSelector
-                                    last
-                                    value={goalBurst}
-                                    onChange={setgoalBurst}
-                                />
-                            </div>
+                            <TalentLevelSelector
+                                label="Normal Attack"
+                                start={startNormal}
+                                setStart={setstartNormal}
+                                goal={goalNormal}
+                                setGoal={setgoalNormal}
+                                icon={<SwordIcon className="white24" />}
+                            />
+                            <TalentLevelSelector
+                                label="Elemental Attack"
+                                start={startElemental}
+                                setStart={setstartElemental}
+                                goal={goalElemental}
+                                setGoal={setgoalElemental}
+                                icon={<SparklesIcon className="white24" />}
+                            />
+                            <TalentLevelSelector
+                                label="Burst"
+                                start={startBurst}
+                                setStart={setstartBurst}
+                                goal={goalBurst}
+                                setGoal={setgoalBurst}
+                                icon={<FireIcon className="white24" />}
+                            />
                         </div>
                     </div>
                 </div>
