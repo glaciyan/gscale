@@ -7,7 +7,7 @@ export default function MiniItemCard({
 }: {
     imageUrl: string;
     imageName: string;
-    label: any;
+    label?: any;
 }) {
     return (
         <div className="flex flex-col items-center justify-center w-12 m-1 overflow-hidden rounded shadow">
@@ -19,9 +19,14 @@ export default function MiniItemCard({
                     alt={imageName}
                     className="object-contain w-full h-full"
                     title={imageName}
+                    draggable={false}
                 />
             </div>
-            <div className="w-full text-center bg-gscale-dark-background-primary">{label}</div>
+            {label ? (
+                <div className="w-full text-center bg-gscale-dark-background-primary">
+                    {label}
+                </div>
+            ) : null}
         </div>
     );
 }

@@ -34,12 +34,12 @@ function useCorrectingState(
 
 export default function BuildCharacter() {
     const router = useRouter();
-    const { character } = router.query;
+    const { character: characterQuery } = router.query;
 
-    let foundCharacter: Character | undefined = undefined;
+    let character: Character | undefined = undefined;
 
-    if (typeof character === "string") {
-        foundCharacter = characters[character];
+    if (typeof characterQuery === "string") {
+        character = characters[characterQuery];
     }
 
     //#region states
@@ -53,15 +53,15 @@ export default function BuildCharacter() {
     const [startBurst, setstartBurst, goalBurst, setgoalBurst] = useCorrectingState();
     //#endregion
 
-    if (foundCharacter) {
+    if (character) {
         return (
-            <Layout title={`Building ${foundCharacter.name}`}>
+            <Layout title={`Building ${character.name}`}>
                 <div className="max-w-screen-xl mx-3 sm:mx-4 xl:mx-auto">
                     <div className="w-full lg:flex">
                         <div className="block sm:flex">
-                            <CharacterDetails character={foundCharacter} />
+                            <CharacterDetails character={character} />
 
-                            <div className="flex-grow space-y-6 border-gray-700 buildpagepadding sm:rounded-tr-md lg:rounded-none lg:border-r-2 lg:flex-grow-0 text-gscale-dark-text-secondary bg-gscale-dark-background-secondary">
+                            <div className="flex flex-col flex-grow space-y-6 border-gray-700 buildpagepadding sm:rounded-tr-md lg:rounded-none lg:border-r-2 lg:flex-grow-0 text-gscale-dark-text-secondary bg-gscale-dark-background-secondary">
                                 <div>
                                     <h3 className="buildlevellabel">Level</h3>
                                     <div className="relative flex flex-wrap">
@@ -70,7 +70,9 @@ export default function BuildCharacter() {
                                             value={startLevel}
                                             onChange={setstartLevel}
                                         />
-                                        <div className="flex items-center px-2 bg-blue-400 border-l-2 border-r-2 bg-opacity-40 border-gscale-dark-background-ternary">
+                                        <div
+                                            className={`flex items-center px-2 bg-genshin-dark-element-${character.element} border-l-2 border-r-2 bg-opacity-40 border-gscale-dark-background-ternary`}
+                                        >
                                             <TrendingUpIcon className="white24" />
                                         </div>
                                         <CharacterLevelListBox
@@ -87,6 +89,7 @@ export default function BuildCharacter() {
                                     goal={goalNormal}
                                     setGoal={setgoalNormal}
                                     icon={<SwordIcon className="white24" />}
+                                    character={character}
                                 />
                                 <TalentLevelSelector
                                     label="Elemental Attack"
@@ -95,6 +98,7 @@ export default function BuildCharacter() {
                                     goal={goalElemental}
                                     setGoal={setgoalElemental}
                                     icon={<SparklesIcon className="white24" />}
+                                    character={character}
                                 />
                                 <TalentLevelSelector
                                     label="Burst"
@@ -103,7 +107,14 @@ export default function BuildCharacter() {
                                     goal={goalBurst}
                                     setGoal={setgoalBurst}
                                     icon={<FireIcon className="white24" />}
+                                    character={character}
                                 />
+                                <div className="flex-1"></div>
+                                <button
+                                    className={`py-1.5 rounded mt-auto bg-genshin-dark-element-${character.element} text-gscale-dark-text-primary`}
+                                >
+                                    Build Character
+                                </button>
                             </div>
                         </div>
 

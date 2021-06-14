@@ -1,3 +1,4 @@
+import { Character } from "../data/characters";
 import { TalentLevelListBox } from "./TalentLevelListBox";
 
 export function TalentLevelSelector(props: {
@@ -7,6 +8,7 @@ export function TalentLevelSelector(props: {
     goal: any;
     setGoal: (value: number) => void;
     icon: JSX.Element;
+    character: Character;
 }) {
     return (
         <div>
@@ -14,7 +16,9 @@ export function TalentLevelSelector(props: {
             <div className="relative flex">
                 <TalentLevelListBox first value={props.start} onChange={props.setStart} />
                 {/* bg-gradient-to-r from-genshin-dark-element-hydro to-genshin-dark-element-cryo */}
-                <div className="flex items-center px-2 bg-blue-400 border-l-2 border-r-2 bg-opacity-40 border-gscale-dark-background-ternary">
+                <div
+                    className={`flex items-center px-2 bg-genshin-dark-element-${props.character.element} border-l-2 border-r-2 bg-opacity-40 border-gscale-dark-background-ternary`}
+                >
                     {props.icon}
                 </div>
                 <TalentLevelListBox last value={props.goal} onChange={props.setGoal} />
