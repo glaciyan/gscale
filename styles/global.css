@@ -20,7 +20,7 @@
     }
 
     .white24 {
-        @apply w-5 h-5 text-white;
+        @apply w-5 h-5 text-gscale-dark-text-primary;
     }
 
     .buildpagepadding {

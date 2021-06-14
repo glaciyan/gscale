@@ -109,9 +109,14 @@ export default function BuildCharacter() {
                                     icon={<FireIcon className="white24" />}
                                     character={character}
                                 />
+                                <button
+                                    className={`py-1.5 w-1/2 rounded mt-auto text-genshin-dark-element-${character.element} ring-1 ring-genshin-dark-element-${character.element} bg-opacity-70`}
+                                >
+                                    Maximize
+                                </button>
                                 <div className="flex-1"></div>
                                 <button
-                                    className={`py-1.5 rounded mt-auto bg-genshin-dark-element-${character.element} text-gscale-dark-text-primary`}
+                                    className={`py-1.5 rounded mt-auto bg-genshin-dark-element-${character.element} bg-opacity-70 text-gscale-dark-text-primary`}
                                 >
                                     Build Character
                                 </button>
