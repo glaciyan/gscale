@@ -46,7 +46,7 @@ export function TalentLevelListBox({ value, onChange, first, last }: LevelItemLi
                         leaveFrom="opacity-100"
                         leaveTo="opacity-0"
                     >
-                        <Listbox.Options className="listbox">
+                        <Listbox.Options className="listbox !max-h-60">
                             {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((level) => (
                                 <Listbox.Option
                                     key={level}

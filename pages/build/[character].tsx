@@ -1,12 +1,12 @@
 import { SparklesIcon, TrendingUpIcon, FireIcon } from "@heroicons/react/outline";
 import { useRouter } from "next/router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Layout from "../../components/Layout";
 import { CharacterLevelListBox } from "../../components/CharacterLevelListBox";
-import { characters } from "../../data/characters";
-import { TalentLevelListBox } from "../../components/TalentLevelListBox";
+import { Character, characters } from "../../data/characters";
 import { SwordIcon } from "../../components/icons/sword";
 import { TalentLevelSelector } from "../../components/TalentLevelSelector";
+import { CharacterDetails } from "../../components/CharacterDetails";
 
 function useCorrectingState(
     minStart: number = 1,
@@ -33,12 +33,13 @@ export default function BuildCharacter() {
     const router = useRouter();
     const { character } = router.query;
 
-    let foundCharacter;
+    let foundCharacter: Character | undefined = undefined;
 
     if (typeof character === "string") {
         foundCharacter = characters[character];
     }
 
+    //#region states
     const [startLevel, setstartLevel, goalLevel, setgoalLevel] = useCorrectingState();
 
     const [startNormal, setstartNormal, goalNormal, setgoalNormal] = useCorrectingState();
@@ -47,57 +48,63 @@ export default function BuildCharacter() {
         useCorrectingState();
 
     const [startBurst, setstartBurst, goalBurst, setgoalBurst] = useCorrectingState();
+    //#endregion
 
     if (foundCharacter) {
         return (
             <Layout title={`Building ${foundCharacter.name}`}>
-                <div className="max-w-screen-xl mx-4 sm:mx-auto">
-                    <div className="flex flex-col">
-                        <div className=""></div>
-                        {/* Level Selectors */}
-                        <div className="p-6 space-y-6 w-max text-gscale-dark-text-secondary bg-gscale-dark-background-secondary">
-                            <div>
-                                <h3 className="buildlevellabel">Level</h3>
-                                <div className="relative flex">
-                                    <CharacterLevelListBox
-                                        first
-                                        value={startLevel}
-                                        onChange={setstartLevel}
-                                    />
-                                    <div className="flex items-center px-2 bg-blue-400 border-l-2 border-r-2 bg-opacity-40 border-gscale-dark-background-ternary">
-                                        <TrendingUpIcon className="white24" />
+                <div className="max-w-screen-xl mx-3 sm:mx-4 xl:mx-auto">
+                    <div className="w-full lg:flex">
+                        <div className="block sm:flex">
+                            <CharacterDetails character={foundCharacter} />
+                            {/* Level Selectors */}
+                            <div className="flex-grow space-y-6 border-gray-700 buildpagepadding sm:rounded-tr-md lg:rounded-none lg:border-r-2 lg:flex-grow-0 text-gscale-dark-text-secondary bg-gscale-dark-background-secondary">
+                                <div>
+                                    <h3 className="buildlevellabel">Level</h3>
+                                    <div className="relative flex flex-wrap">
+                                        <CharacterLevelListBox
+                                            first
+                                            value={startLevel}
+                                            onChange={setstartLevel}
+                                        />
+                                        <div className="flex items-center px-2 bg-blue-400 border-l-2 border-r-2 bg-opacity-40 border-gscale-dark-background-ternary">
+                                            <TrendingUpIcon className="white24" />
+                                        </div>
+                                        <CharacterLevelListBox
+                                            last
+                                            value={goalLevel}
+                                            onChange={setgoalLevel}
+                                        />
                                     </div>
-                                    <CharacterLevelListBox
-                                        last
-                                        value={goalLevel}
-                                        onChange={setgoalLevel}
-                                    />
                                 </div>
+                                <TalentLevelSelector
+                                    label="Normal Attack"
+                                    start={startNormal}
+                                    setStart={setstartNormal}
+                                    goal={goalNormal}
+                                    setGoal={setgoalNormal}
+                                    icon={<SwordIcon className="white24" />}
+                                />
+                                <TalentLevelSelector
+                                    label="Elemental Attack"
+                                    start={startElemental}
+                                    setStart={setstartElemental}
+                                    goal={goalElemental}
+                                    setGoal={setgoalElemental}
+                                    icon={<SparklesIcon className="white24" />}
+                                />
+                                <TalentLevelSelector
+                                    label="Burst"
+                                    start={startBurst}
+                                    setStart={setstartBurst}
+                                    goal={goalBurst}
+                                    setGoal={setgoalBurst}
+                                    icon={<FireIcon className="white24" />}
+                                />
                             </div>
-                            <TalentLevelSelector
-                                label="Normal Attack"
-                                start={startNormal}
-                                setStart={setstartNormal}
-                                goal={goalNormal}
-                                setGoal={setgoalNormal}
-                                icon={<SwordIcon className="white24" />}
-                            />
-                            <TalentLevelSelector
-                                label="Elemental Attack"
-                                start={startElemental}
-                                setStart={setstartElemental}
-                                goal={goalElemental}
-                                setGoal={setgoalElemental}
-                                icon={<SparklesIcon className="white24" />}
-                            />
-                            <TalentLevelSelector
-                                label="Burst"
-                                start={startBurst}
-                                setStart={setstartBurst}
-                                goal={goalBurst}
-                                setGoal={setgoalBurst}
-                                icon={<FireIcon className="white24" />}
-                            />
+                        </div>
+                        <div className="flex-grow border-t-2 border-gray-700 buildpagepadding lg:border-0 bg-gscale-dark-background-secondary rounded-b-md lg:rounded-r-md">
+                            <h3>Material Preview</h3>
                         </div>
                     </div>
                 </div>

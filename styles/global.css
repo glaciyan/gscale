@@ -11,7 +11,19 @@
         @apply absolute z-10 w-auto py-1 mt-1 overflow-auto rounded-md drop-shadow-md text-gscale-dark-text-secondary bg-gscale-dark-background-500 max-h-96 sm:max-h-screen ring-opacity-5 focus:outline-none focus-visible:ring-inset focus-visible:ring;
     }
 
+    .listbutton {
+        @apply relative w-full h-10 py-2 pl-3 pr-10 text-left shadow-md cursor-default bg-gscale-dark-background-primary hover:bg-opacity-70 focus:outline-none focus-visible:ring;
+    }
+
     .buildlevellabel {
-        @apply mb-2 font-semibold text-gscale-dark-text-primary;
+        @apply mb-2 font-semibold text-gscale-dark-text-secondary;
+    }
+
+    .white24 {
+        @apply w-5 h-5 text-white;
+    }
+
+    .buildpagepadding {
+        @apply p-4 sm:p-6;
     }
 }

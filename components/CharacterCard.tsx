@@ -84,7 +84,7 @@ export default function CharacterCard({
                         height="300"
                         width="480"
                         quality="85"
-                        alt={`Genshin Impact Character ${character.name}`}
+                        alt={`${character.name}`}
                     />
                     {isProbablyTouch ? null : cardHoverDialog}
                 </div>

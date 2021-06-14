@@ -44,7 +44,7 @@ const Layout = ({ children, title, current }: Props) => {
             <header className="max-w-screen-xl m-6 xl:mx-auto">
                 <div className="flex flex-wrap items-center">
                     <Link href="/">
-                        <a href="" className="focus-visible:ring">
+                        <a className="focus-visible:ring">
                             <img
                                 className=""
                                 src="/images/svg/logo_label_small.svg"
@@ -61,7 +61,6 @@ const Layout = ({ children, title, current }: Props) => {
                                 <span key={navi.href} className="flex">
                                     <Link href={navi.href}>
                                         <a
-                                            href=""
                                             className={`
                                                 ${
                                                     current === navi.name
