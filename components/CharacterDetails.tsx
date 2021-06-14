@@ -14,12 +14,13 @@ interface CharacterDetailsProps {
 
 export const CharacterDetails: React.FC<CharacterDetailsProps> = ({ character }) => {
     return (
-        <div className="flex-grow rounded-t-md sm:rounded-tl-md lg:rounded-l-md bg-gscale-dark-background-ternary500 lg:flex-grow-0">
+        <div className="flex-grow maxsm:rounded-t-md sm:rounded-tl-md lg:rounded-l-md bg-gscale-dark-background-ternary500 lg:flex-grow-0">
             <div className="buildpagepadding">
                 <div className="mb-6 overflow-hidden rounded-md sm:-mt-2 w-max">
                     <Img
                         className="bg-gscale-dark-background-secondary"
                         src={require(`../public/images/characters/mugshot/${character.id}.png?width=100?height=100`)}
+                        alt={character.name}
                     />
                     <div className="flex items-center justify-center bg-gscale-dark-background-primary py-0.5">
                         <RarityStars rarity={character.rarity} className="h-5" />

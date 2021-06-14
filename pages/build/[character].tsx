@@ -123,7 +123,7 @@ export default function BuildCharacter() {
                             </div>
                         </div>
 
-                        <div className="flex-grow border-t-2 border-gray-700 buildpagepadding lg:border-0 bg-gscale-dark-background-secondary rounded-b-md lg:rounded-r-md">
+                        <div className="flex-grow border-t-2 border-gray-700 buildpagepadding lg:border-0 bg-gscale-dark-background-secondary maxlg:rounded-b-md lg:rounded-r-md">
                             <h3>Material Preview</h3>
                         </div>
                     </div>

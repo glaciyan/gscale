@@ -92,6 +92,7 @@ export function CharacterLevelListBox({
             </Listbox>
             <div className="w-px bg-gscale-dark-background-primary"></div>
             <button
+                title="Ascended"
                 className="flex items-center justify-center w-10 h-10 shadow-md bg-gscale-dark-background-500 hover:bg-opacity-70 active:bg-opacity-30 focus:outline-none focus-visible:ring"
                 onClick={() => {
                     if (getCharacterLevel(value).ascended) {

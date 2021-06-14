@@ -9,6 +9,10 @@ module.exports = {
     darkMode: "class", // or 'media' or 'class'
     theme: {
         extend: {
+            screens: {
+                maxsm: { max: "639px" },
+                maxlg: { max: "1023px" },
+            },
             colors: {
                 gray: colors.trueGray,
                 indigo: colors.indigo,
