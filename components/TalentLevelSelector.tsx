@@ -11,7 +11,7 @@ export function TalentLevelSelector(props: {
     character: Character;
 }) {
     return (
-        <>
+        <div>
             <h3 className="buildlevellabel">{props.label}</h3>
             <div className="relative flex">
                 <TalentLevelListBox first value={props.start} onChange={props.setStart} />
@@ -23,6 +23,6 @@ export function TalentLevelSelector(props: {
                 </div>
                 <TalentLevelListBox last value={props.goal} onChange={props.setGoal} />
             </div>
-        </>
+        </div>
     );
 }

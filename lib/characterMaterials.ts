@@ -40,11 +40,13 @@ export function getCharacterMaterials(
     function talent(i: Progression) {
         return getCombinedCost(talentCost(character).slice(i.start - 1, i.goal - 1));
     }
+
     const { mora: normalMora, items: normalMaterials } = talent(normal);
     const { mora: elementalMora, items: elementalMaterials } = talent(elemental);
     const { mora: burstMora, items: burstMaterials } = talent(burst);
+
     const talents: BuildItem[] = sumObjectArray(
-        normalMaterials.concat(elementalMaterials).concat(burstMaterials),
+        [...normalMaterials, ...elementalMaterials, ...burstMaterials],
         "order",
         "amount"
     );
@@ -61,7 +63,8 @@ export function getCharacterMaterials(
         xpAccurate: accurateLevelMaterials,
         mora: totalMora.reduce((prev, current) => prev + current),
         ascension: ascensionMaterials,
-        normal: normalMaterials,
+        // for some unknown reason normalMaterials is the sum so thats why im recalculating here
+        normal: talent(normal).items,
         elemental: elementalMaterials,
         burst: burstMaterials,
         talents,

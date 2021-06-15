@@ -1,17 +1,29 @@
 // never ever do absolute positioning deep inside a container with overflow set to hidden
 // i had to manually set all corners -slimetsp 14/06/2021
 
-import { SparklesIcon, TrendingUpIcon, FireIcon } from "@heroicons/react/outline";
+import {
+    SparklesIcon,
+    TrendingUpIcon,
+    FireIcon,
+    XIcon,
+    ChevronRightIcon,
+} from "@heroicons/react/outline";
 import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Layout from "../../components/Layout";
 import { CharacterLevelListBox } from "../../components/CharacterLevelListBox";
-import { Character, characters } from "../../data/characters";
+import { Character, characters, dummyCharacter } from "../../data/characters";
 import { SwordIcon } from "../../components/icons/sword";
 import { TalentLevelSelector } from "../../components/TalentLevelSelector";
 import { CharacterDetails } from "../../components/CharacterDetails";
 import { Button } from "../../components/Button";
 import { getCharacterMaterials } from "../../lib/characterMaterials";
+import ItemCard from "../../components/MiniItemCard";
+import { toId } from "../../lib";
+import millify from "millify";
+import { items } from "../../data/items";
+import ItemGrid from "../../components/ItemGrid";
+import { ShowcaseCategory } from "../../components/ShowcaseCategory";
 
 function useCorrectingState(
     minStart: number = 1,
@@ -65,15 +77,15 @@ export default function BuildCharacter() {
     );
 
     useEffect(() => {
-            setMaterials(
-                getCharacterMaterials(
+        setMaterials(
+            getCharacterMaterials(
                 character ?? dummyCharacter,
-                    { start: startLevel, goal: goalLevel },
-                    { start: startNormal, goal: goalNormal },
-                    { start: startElemental, goal: goalElemental },
-                    { start: startBurst, goal: goalBurst }
-                )
-            );
+                { start: startLevel, goal: goalLevel },
+                { start: startNormal, goal: goalNormal },
+                { start: startElemental, goal: goalElemental },
+                { start: startBurst, goal: goalBurst }
+            )
+        );
     }, [
         startLevel,
         goalLevel,
@@ -86,10 +98,16 @@ export default function BuildCharacter() {
     ]);
     //#endregion
 
+    if (!character) {
+        return <Layout title="Build a Character"></Layout>;
+    }
+
+    console.log(materials);
+
     return (
         <Layout title={`Building ${character.name}`}>
             <div className="max-w-screen-xl mx-3 sm:mx-4 xl:mx-auto">
-                <div className="w-full lg:flex">
+                <div className="w-full lg:flex lg:min-h-[48rem]">
                     <div className="block sm:flex">
                         <CharacterDetails character={character} />
 
@@ -199,9 +217,82 @@ export default function BuildCharacter() {
                         </div>
                     </div>
 
-                    <div className="flex-grow border-t-2 border-gray-700 buildpagepadding lg:border-0 bg-gscale-dark-background-secondary maxlg:rounded-b-md lg:rounded-r-md">
-                        <h3>Material Preview</h3>
-                        <p className="w-full">{JSON.stringify(materials, null, 2)}</p>
+                    <div className="relative flex-1 max-w-full overflow-auto border-t-2 border-gray-700 buildpagepadding lg:border-0 bg-gscale-dark-background-secondary maxlg:rounded-b-md lg:rounded-r-md">
+                        <div className="lg:absolute">
+                            <h2 className="mb-2 font-semibold text-gscale-dark-text-secondary">
+                                Material Preview
+                            </h2>
+                            {/* When there are no materials */}
+                            {materials.materials.length === 0 && materials.mora === 0 ? (
+                                <div className="flex items-center">
+                                    <div className="flex items-center justify-center w-12 h-12 rounded bg-gscale-dark-background-primary">
+                                        <XIcon className="w-6 h-6 text-gscale-dark-text-ternary" />
+                                    </div>
+                                    <div className="mx-3">No Materials</div>
+                                </div>
+                            ) : null}
+                            <div className="flex">
+                                {materials.mora !== 0 ? (
+                                    <ItemCard
+                                        imageUrl="/images/materials/mora.png"
+                                        imageName={items.mora.name}
+                                        label={millify(materials.mora)}
+                                    />
+                                ) : null}
+                                {materials.xpLazy.amount !== 0 ? (
+                                    <>
+                                        <ItemCard
+                                            imageUrl="/images/materials/heros_wit.png"
+                                            imageName={items.heros_wit.name}
+                                            label={String(materials.xpLazy.amount)}
+                                        />
+                                        <div className="flex items-center m-0.5 bg-gscale-dark-background-ternary bg-opacity-70 rounded">
+                                            <ChevronRightIcon className="w-6 h-6 ml-1" />
+                                            <ItemCard
+                                                imageUrl="/images/materials/adventurers_experience.png"
+                                                imageName={
+                                                    items.adventurers_experience.name
+                                                }
+                                                label={String(
+                                                    materials.xpAccurate
+                                                        .adventurers_experience.amount
+                                                )}
+                                            />
+                                            <ItemCard
+                                                imageUrl="/images/materials/wanderers_advice.png"
+                                                imageName={items.wanderers_advice.name}
+                                                label={String(
+                                                    materials.xpAccurate.wanderers_advice
+                                                        .amount
+                                                )}
+                                            />
+                                            <ItemCard
+                                                imageUrl="/images/materials/heros_wit.png"
+                                                imageName={items.heros_wit.name}
+                                                label={String(
+                                                    materials.xpAccurate.heros_wit.amount
+                                                )}
+                                            />
+                                        </div>
+                                    </>
+                                ) : null}
+                            </div>
+                            <ShowcaseCategory items={materials.materials} label="Total" />
+                            <ShowcaseCategory
+                                items={materials.ascension}
+                                label="Ascension"
+                            />
+                            <ShowcaseCategory
+                                items={materials.normal}
+                                label="Normal Attack"
+                            />
+                            <ShowcaseCategory
+                                items={materials.elemental}
+                                label="Elemental Attack"
+                            />
+                            <ShowcaseCategory items={materials.burst} label="Burst" />
+                            <div className="h-6"></div>
+                        </div>
                     </div>
                 </div>
             </div>

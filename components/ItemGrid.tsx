@@ -4,7 +4,7 @@ import MiniItemCard from "./MiniItemCard";
 
 export default function ItemGrid({ items }: { items: BuildItem[] }) {
     return (
-        <div className="flex flex-wrap my-3">
+        <div className="flex flex-wrap">
             {items
                 .sort((a, b) => a.order - b.order)
                 .map((item) => {
@@ -12,7 +12,7 @@ export default function ItemGrid({ items }: { items: BuildItem[] }) {
                         <MiniItemCard
                             imageUrl={`/images/materials/${toId(item.name)}.png`}
                             imageName={item.name}
-                            label={item.amount}
+                            label={String(item.amount)}
                             key={toId(item.name)}
                         />
                     );
