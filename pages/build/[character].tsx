@@ -19,10 +19,8 @@ import { CharacterDetails } from "../../components/CharacterDetails";
 import { Button } from "../../components/Button";
 import { getCharacterMaterials } from "../../lib/characterMaterials";
 import ItemCard from "../../components/MiniItemCard";
-import { toId } from "../../lib";
 import millify from "millify";
 import { items } from "../../data/items";
-import ItemGrid from "../../components/ItemGrid";
 import { ShowcaseCategory } from "../../components/ShowcaseCategory";
 
 function useCorrectingState(
