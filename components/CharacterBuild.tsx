@@ -5,9 +5,21 @@ import ItemGrid from "./ItemGrid";
 import MiniItemCard from "./MiniItemCard";
 import millify from "millify";
 
-export default function CharacterBuild({ build, className }: { build: any; className?: string }) {
+export default function CharacterBuild({
+    build,
+    className,
+}: {
+    build: any;
+    className?: string;
+}) {
     const character = characters[build.characterId];
-    const materials = getCharacterMaterials(character, build.level, build.normal, build.elemental, build.burst);
+    const materials = getCharacterMaterials(
+        character,
+        build.level,
+        build.normal,
+        build.elemental,
+        build.burst
+    );
 
     return (
         <div className={className}>
@@ -37,11 +49,15 @@ export default function CharacterBuild({ build, className }: { build: any; class
             </div>
             <h2 className="mt-3 font-bold">Materials needed:</h2>
             <div className="flex -mb-3">
-                <MiniItemCard imageUrl="/images/materials/mora.png" imageName="Mora" label={millify(materials.mora)} />
+                <MiniItemCard
+                    imageUrl="/images/materials/mora.png"
+                    imageName="Mora"
+                    label={millify(materials.mora)}
+                />
                 <MiniItemCard
                     imageUrl="/images/materials/heros_wit.png"
                     imageName="Hero's Wit"
-                    label={materials.xpLazy.amount}
+                    label={String(materials.xpLazy.amount)}
                 />
             </div>
             <ItemGrid items={materials.materials} />

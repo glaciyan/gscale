@@ -7,7 +7,7 @@ export default function MiniItemCard({
 }: {
     imageUrl: string;
     imageName: string;
-    label?: any;
+    label?: string;
 }) {
     return (
         <div className="flex flex-col items-center justify-center w-12 m-1 overflow-hidden rounded shadow">
