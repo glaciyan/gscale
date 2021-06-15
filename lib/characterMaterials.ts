@@ -65,7 +65,11 @@ export function getCharacterMaterials(
         elemental: elementalMaterials,
         burst: burstMaterials,
         talents,
-        materials: sumObjectArray(talents.concat(ascensionMaterials), "order", "amount") as BuildItem[],
+        materials: sumObjectArray(
+            talents.concat(ascensionMaterials),
+            "order",
+            "amount"
+        ) as BuildItem[],
     };
 }
 
