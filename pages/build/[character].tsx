@@ -44,10 +44,6 @@ export default function BuildCharacter() {
         character = characters[characterQuery];
     }
 
-    if (!character) {
-        return <Layout title="Build a Character"></Layout>;
-    }
-
     //#region states
     const [startLevel, setstartLevel, goalLevel, setgoalLevel] = useCorrectingState();
 
@@ -60,7 +56,7 @@ export default function BuildCharacter() {
 
     const [materials, setMaterials] = useState(
         getCharacterMaterials(
-            character,
+            character ?? dummyCharacter,
             { start: startLevel, goal: goalLevel },
             { start: startNormal, goal: goalNormal },
             { start: startElemental, goal: goalElemental },
@@ -69,19 +65,15 @@ export default function BuildCharacter() {
     );
 
     useEffect(() => {
-        if (character) {
-            console.log(goalLevel);
-
             setMaterials(
                 getCharacterMaterials(
-                    character,
+                character ?? dummyCharacter,
                     { start: startLevel, goal: goalLevel },
                     { start: startNormal, goal: goalNormal },
                     { start: startElemental, goal: goalElemental },
                     { start: startBurst, goal: goalBurst }
                 )
             );
-        }
     }, [
         startLevel,
         goalLevel,
