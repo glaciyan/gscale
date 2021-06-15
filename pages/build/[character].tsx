@@ -10,6 +10,7 @@ import { Character, characters } from "../../data/characters";
 import { SwordIcon } from "../../components/icons/sword";
 import { TalentLevelSelector } from "../../components/TalentLevelSelector";
 import { CharacterDetails } from "../../components/CharacterDetails";
+import { Button } from "../../components/Button";
 
 function useCorrectingState(
     minStart: number = 1,
@@ -109,17 +110,58 @@ export default function BuildCharacter() {
                                     icon={<FireIcon className="white24" />}
                                     character={character}
                                 />
-                                <button
-                                    className={`py-1.5 w-1/2 rounded mt-auto text-genshin-dark-element-${character.element} ring-1 ring-genshin-dark-element-${character.element} bg-opacity-70`}
-                                >
-                                    Maximize
-                                </button>
-                                <div className="flex-1"></div>
-                                <button
-                                    className={`py-1.5 rounded mt-auto bg-genshin-dark-element-${character.element} bg-opacity-70 text-gscale-dark-text-primary`}
-                                >
-                                    Build Character
-                                </button>
+                                <div className="">
+                                    <h3 className="buildlevellabel">Templates</h3>
+                                    <div className="flex flex-wrap mb-3 max-w-max">
+                                        <Button
+                                            secondary
+                                            text="Max"
+                                            color={`genshin-dark-element-${character.element}`}
+                                            className="mr-2"
+                                            onClick={() => {
+                                                setgoalLevel(90);
+                                                setgoalNormal(10);
+                                                setgoalElemental(10);
+                                                setgoalBurst(10);
+                                            }}
+                                        />
+                                    </div>
+                                    <div className="flex flex-wrap space-x-3">
+                                        <Button
+                                            secondary
+                                            text="8-6-6"
+                                            color={`genshin-dark-element-${character.element}`}
+                                            className=""
+                                            onClick={() => {
+                                                setgoalNormal(8);
+                                                setgoalElemental(6);
+                                                setgoalBurst(6);
+                                            }}
+                                        />
+                                        <Button
+                                            secondary
+                                            text="8-8-8"
+                                            color={`genshin-dark-element-${character.element}`}
+                                            className=""
+                                            onClick={() => {
+                                                setgoalNormal(8);
+                                                setgoalElemental(8);
+                                                setgoalBurst(8);
+                                            }}
+                                        />
+                                    </div>
+                                </div>
+
+                                <div className="flex-1" />
+                                <Button
+                                    fullw
+                                    text="Build Character"
+                                    color={`genshin-dark-element-${character.element}`}
+                                    onClick={() => {
+                                        // TODO send build to indexdb
+                                        console.log("submit");
+                                    }}
+                                />
                             </div>
                         </div>
 

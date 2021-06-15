@@ -6,6 +6,7 @@ import MiniItemCard from "./MiniItemCard";
 
 interface CharacterItemShowcaseProps {
     character: Character;
+    className: string;
 }
 
 function ShowcaseRow({ children }: any) {
@@ -14,6 +15,7 @@ function ShowcaseRow({ children }: any) {
 
 export const CharacterItemShowcase: React.FC<CharacterItemShowcaseProps> = ({
     character,
+    className,
 }) => {
     const ci = new ItemGen(character);
 
@@ -25,7 +27,9 @@ export const CharacterItemShowcase: React.FC<CharacterItemShowcaseProps> = ({
     const weekly = ci.weekly(1).name;
 
     return (
-        <div className="hidden py-6 border-t-2 border-gscale-dark-background-primary sm:block">
+        <div
+            className={`hidden py-6 border-t-2 border-gscale-dark-background-primary sm:block ${className}`}
+        >
             <ShowcaseRow>
                 <MiniItemCard
                     imageUrl={`/images/materials/${toId(local)}.png`}

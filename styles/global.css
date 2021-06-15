@@ -26,4 +26,8 @@
     .buildpagepadding {
         @apply p-4 sm:p-6;
     }
+
+    .buttoncommon {
+        @apply py-1.5 px-6 rounded text-center;
+    }
 }
