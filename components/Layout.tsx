@@ -26,7 +26,7 @@ const Layout = ({ children, title, current }: Props) => {
                 <link rel="icon" href="/images/svg/logo.svg" type="image/svg+xml" />
                 <meta
                     name="description"
-                    content="Calculate how much you need for your characters."
+                    content="GScale for Genshin Impact. Genshin Impact Character Building Calculator. Calculate how much you need for your characters."
                 />
                 <meta
                     property="og:title"
