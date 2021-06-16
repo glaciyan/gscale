@@ -117,6 +117,7 @@ export default function BuildCharacter({ character }: { character: Character }) 
                         <CharacterDetails character={character} />
 
                         <div className="flex flex-col flex-grow space-y-6 border-gray-700 buildpagepadding sm:rounded-tr-md lg:rounded-none lg:border-r-2 lg:flex-grow-0 text-gscale-dark-text-secondary bg-gscale-dark-background-secondary">
+                            {/* try to use formik here one day */}
                             <div>
                                 <h3 className="buildlevellabel">Level</h3>
                                 <div className="relative flex flex-wrap">
