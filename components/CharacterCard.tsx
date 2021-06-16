@@ -6,6 +6,7 @@ import { useRouter } from "next/router";
 import buildDB from "../lib/buildsDatabase";
 import _ from "lodash";
 import { useEffect, useState } from "react";
+import { Button } from "./Button";
 
 function useIsTouch() {
     const [isTouch, setisTouch] = useState(false);
@@ -39,7 +40,9 @@ export default function CharacterCard({
     const route = useRouter();
     const elementId = character.element;
 
+    const [loadingmax, setLoadingmax] = useState(false);
     function maxChar() {
+        setLoadingmax(true);
         buildDB.builds
             .add({
                 type: "character",
@@ -59,17 +62,19 @@ export default function CharacterCard({
             <div className="flex flex-col items-center justify-center w-full h-full bg-opacity-0 group-hover:bg-opacity-80 bg-gscale-dark-background-ternary backdrop-filter backdrop-blur-sm">
                 <Link href={`/build/${character.id}`}>
                     <a
-                        className={`btn focus:outline-none shadow hover:bg-opacity-90 opacity-0 font-medium group-hover:opacity-100 bg-genshin-dark-element-${elementId} text-gscale-dark-text-primary`}
+                        className={`buttoncommon focus:outline-none shadow hover:bg-opacity-90 opacity-0 font-medium group-hover:opacity-100 bg-genshin-dark-element-${elementId} text-gscale-dark-text-primary mb-3`}
                     >
                         Build {character.name}
                     </a>
                 </Link>
-                <button
+                <Button
+                    secondary
+                    isLoading={loadingmax ? 1 : undefined}
+                    color={`genshin-dark-element-${elementId}`}
                     onClick={maxChar}
-                    className={`btn mt-3 focus:outline-none shadow hover:ring-opacity-90 ring-2 hover:bg-opacity-30 hover:bg-gscale-dark-background-ternary ring-inset ring-genshin-dark-element-${elementId} text-genshin-dark-element-${elementId} opacity-0 font-medium group-hover:opacity-100`}
-                >
-                    Lvl 1 to Max
-                </button>
+                    text="0 to Max"
+                    className="!ring-2 opacity-0 group-hover:opacity-100"
+                />
             </div>
         </div>
     );
