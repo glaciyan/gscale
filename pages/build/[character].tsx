@@ -92,7 +92,12 @@ export default function BuildCharacter({ character }: { character: Character }) 
     ]);
 
     const [submitting, setSubmitting] = useState(false);
+    const [submitError, setSubmitError] = useState("");
     function handleSubmit() {
+        if (materials.materials.length === 0 && materials.mora === 0) {
+            setSubmitError("Nothing is being leveled up.");
+            return;
+        }
         setSubmitting(true);
         buildsDB.builds
             .add({
@@ -212,13 +217,16 @@ export default function BuildCharacter({ character }: { character: Character }) 
                             </div>
 
                             <div className="flex-1" />
-                            <Button
-                                isLoading={submitting ? 1 : undefined}
-                                fullw
-                                text="Build Character"
-                                color={`genshin-dark-element-${character.element}`}
-                                onClick={handleSubmit}
-                            />
+                            <div>
+                                <div className="h-8 mb-2 text-red-400">{submitError}</div>
+                                <Button
+                                    isLoading={submitting ? 1 : undefined}
+                                    fullw
+                                    text="Build Character"
+                                    color={`genshin-dark-element-${character.element}`}
+                                    onClick={handleSubmit}
+                                />
+                            </div>
                         </div>
                     </div>
 
