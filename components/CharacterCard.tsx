@@ -58,11 +58,11 @@ export default function CharacterCard({
     }
 
     const cardHoverDialog = (
-        <div className="absolute top-0 left-0 w-0 h-0 group-hover:w-full group-hover:h-full">
-            <div className="flex flex-col items-center justify-center w-full h-full bg-opacity-0 group-hover:bg-opacity-80 bg-gscale-dark-background-ternary backdrop-filter backdrop-blur-sm">
+        <div className="absolute top-0 left-0 w-full h-full">
+            <div className="flex flex-col items-center justify-center w-full h-full transition-all bg-opacity-0 group-hover:bg-opacity-80 bg-gscale-dark-background-ternary backdrop-filter group-hover:backdrop-blur-sm">
                 <Link href={`/build/${character.id}`}>
                     <a
-                        className={`buttoncommon focus:outline-none shadow hover:bg-opacity-90 opacity-0 font-medium group-hover:opacity-100 bg-genshin-dark-element-${elementId} text-gscale-dark-text-primary mb-3`}
+                        className={`buttoncommon focus:outline-none transition-opacity shadow hover:bg-opacity-90 opacity-0 font-medium group-hover:opacity-100 bg-genshin-dark-element-${elementId} text-gscale-dark-text-primary mb-3`}
                     >
                         Build {character.name}
                     </a>
@@ -73,7 +73,7 @@ export default function CharacterCard({
                     color={`genshin-dark-element-${elementId}`}
                     onClick={maxChar}
                     text="0 to Max"
-                    className="!ring-2 opacity-0 group-hover:opacity-100"
+                    className="!ring-2 transition-opacity opacity-0 group-hover:opacity-100"
                 />
             </div>
         </div>
@@ -122,7 +122,7 @@ export default function CharacterCard({
             <Link href={`build/${character.id}`}>
                 <a
                     className={cn(
-                        `relative group bg-gscale-dark-background-primary rounded-lg overflow-hidden shadow-md hover:shadow-lg ring-genshin-element-${elementId} hover:ring`,
+                        `relative group bg-gscale-dark-background-primary rounded-lg overflow-hidden shadow-md hover:shadow-lg ring-genshin-element-${elementId} transition-all hover:ring`,
                         className
                     )}
                 >
@@ -134,7 +134,7 @@ export default function CharacterCard({
         return (
             <div
                 className={cn(
-                    `relative group bg-gscale-dark-background-primary rounded-lg overflow-hidden shadow-md hover:shadow-lg ring-genshin-element-${elementId} hover:ring`,
+                    `relative group bg-gscale-dark-background-primary rounded-lg overflow-hidden shadow-md hover:shadow-lg ring-genshin-element-${elementId} transition-all hover:ring`,
                     className
                 )}
             >
