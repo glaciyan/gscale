@@ -46,10 +46,11 @@ export const Button: React.FC<ButtonProps> = ({
         <div
             role="button"
             tabIndex={0}
-            className={cn + " flex justify-center"}
+            className={cn + " flex justify-center relative"}
             onClick={() => execIf(onClick, !isLoading)}
         >
-            {!isLoading ? text : <SemiCircle className="w-6 h-6 animate-spin" />}
+            <div className={isLoading ? "invisible" : ""}>{text}</div>
+            {isLoading ? <SemiCircle className="absolute w-6 h-6 animate-spin" /> : null}
         </div>
     );
 };
