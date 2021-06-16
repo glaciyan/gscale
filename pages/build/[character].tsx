@@ -171,7 +171,7 @@ export default function BuildCharacter({ character }: { character: Character }) 
                                 character={character}
                             />
 
-                            <div className="">
+                            <div className="flex-1">
                                 <div className="flex items-baseline">
                                     <h3 className="flex-grow buildlevellabel">
                                         Templates
@@ -216,7 +216,6 @@ export default function BuildCharacter({ character }: { character: Character }) 
                                 </div>
                             </div>
 
-                            <div className="flex-1" />
                             <div>
                                 <div className="h-8 mb-2 text-red-400">{submitError}</div>
                                 <Button
