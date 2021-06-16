@@ -23,6 +23,8 @@ import { items } from "../../data/items";
 import { ShowcaseCategory } from "../../components/ShowcaseCategory";
 import { useCorrectingState } from "../../lib/useCorrectingState";
 import { GetStaticPaths, GetStaticProps } from "next";
+import { useRouter } from "next/router";
+import buildsDB from "../../lib/buildsDatabase";
 
 export const getStaticPaths: GetStaticPaths = async () => {
     const paths = Object.values(characters).map((character) => {
@@ -46,7 +48,9 @@ export const getStaticProps: GetStaticProps = async (context) => {
 };
 
 export default function BuildCharacter({ character }: { character: Character }) {
-    //#region states
+    //#region hooks
+    const router = useRouter();
+
     const [startLevel, setstartLevel, goalLevel, setgoalLevel] = useCorrectingState();
 
     const [startNormal, setstartNormal, goalNormal, setgoalNormal] = useCorrectingState();
@@ -86,6 +90,23 @@ export default function BuildCharacter({ character }: { character: Character }) 
         startBurst,
         goalBurst,
     ]);
+
+    const [submitting, setSubmitting] = useState(false);
+    function handleSubmit() {
+        setSubmitting(true);
+        buildsDB.builds
+            .add({
+                type: "character",
+                characterId: character.id,
+                level: { start: startLevel, goal: goalLevel },
+                normal: { start: startNormal, goal: goalNormal },
+                elemental: { start: startElemental, goal: goalElemental },
+                burst: { start: startBurst, goal: goalBurst },
+            })
+            .then(() => {
+                router.push("/builds");
+            });
+    }
     //#endregion
 
     return (
@@ -191,13 +212,11 @@ export default function BuildCharacter({ character }: { character: Character }) 
 
                             <div className="flex-1" />
                             <Button
+                                isLoading={submitting ? 1 : undefined}
                                 fullw
                                 text="Build Character"
                                 color={`genshin-dark-element-${character.element}`}
-                                onClick={() => {
-                                    // TODO send build to indexdb
-                                    console.error("TODO submit");
-                                }}
+                                onClick={handleSubmit}
                             />
                         </div>
                     </div>
