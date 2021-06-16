@@ -2,7 +2,7 @@ import React from "react";
 import { Character } from "../data/characters";
 import { toId } from "../lib";
 import { ItemGen } from "../lib/ItemGen";
-import MiniItemCard from "./MiniItemCard";
+import MiniItemCard from "./ItemCard";
 
 interface CharacterItemShowcaseProps {
     character: Character;

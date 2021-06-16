@@ -1,6 +1,6 @@
 import { BuildItem } from "../data/items";
 import { toId } from "../lib";
-import MiniItemCard from "./MiniItemCard";
+import MiniItemCard from "./ItemCard";
 
 export default function ItemGrid({ items }: { items: BuildItem[] }) {
     return (
@@ -10,8 +10,7 @@ export default function ItemGrid({ items }: { items: BuildItem[] }) {
                 .map((item) => {
                     return (
                         <MiniItemCard
-                            imageUrl={`/images/materials/${toId(item.name)}.png`}
-                            imageName={item.name}
+                            item={item}
                             label={String(item.amount)}
                             key={toId(item.name)}
                         />

@@ -2,7 +2,7 @@ import { getCharacterMaterials } from "../lib/characterMaterials";
 import buildsDB from "../lib/buildsDatabase";
 import { characters } from "../data/characters";
 import ItemGrid from "./ItemGrid";
-import MiniItemCard from "./MiniItemCard";
+import MiniItemCard from "./ItemCard";
 import millify from "millify";
 
 export default function CharacterBuild({
