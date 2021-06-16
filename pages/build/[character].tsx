@@ -255,7 +255,11 @@ export default function BuildCharacter({ character }: { character: Character }) 
                                     </>
                                 ) : null}
                             </div>
-                            <ShowcaseCategory items={materials.materials} label="Total" />
+                            <ShowcaseCategory
+                                emphasis
+                                items={materials.materials}
+                                label="Total"
+                            />
                             <ShowcaseCategory
                                 items={materials.ascension}
                                 label="Ascension"

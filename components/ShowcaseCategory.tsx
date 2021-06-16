@@ -5,13 +5,20 @@ import ItemGrid from "./ItemGrid";
 interface ShowcaseCategoryProps {
     items: BuildItem[];
     label: string;
+    emphasis?: any;
 }
 
-export const ShowcaseCategory: React.FC<ShowcaseCategoryProps> = ({ items, label }) => {
+export const ShowcaseCategory: React.FC<ShowcaseCategoryProps> = ({
+    items,
+    label,
+    emphasis,
+}) => {
     if (items.length > 0) {
         return (
             <>
-                <h3 className="mt-2 mb-1">{label}</h3>
+                <h3 className={`mt-2 mb-1 ${emphasis ? "font-semibold" : ""}`}>
+                    {label}
+                </h3>
                 <ItemGrid items={items} />
             </>
         );
