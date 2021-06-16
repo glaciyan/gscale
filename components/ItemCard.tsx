@@ -13,7 +13,7 @@ export default function ItemCard({ item, label }: { item: Item; label?: string }
                 <ItemImage item={item} />
             </div>
             {label ? (
-                <div className="w-full px-1 text-center align-bottom bg-gscale-dark-background-500">
+                <div className="w-full px-1 text-center bg-gscale-dark-background-500">
                     {label}
                 </div>
             ) : null}
