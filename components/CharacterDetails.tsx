@@ -6,6 +6,7 @@ import _ from "lodash";
 import { ElementIcon } from "./icons/element";
 import { IconWithText } from "./IconWithText";
 import { CharacterItemShowcase } from "./CharacterItemShowcase";
+import Image from "next-native-image";
 
 interface CharacterDetailsProps {
     character: Character;
@@ -14,8 +15,17 @@ interface CharacterDetailsProps {
 export const CharacterDetails: React.FC<CharacterDetailsProps> = ({ character }) => {
     return (
         <div className="maxsm:rounded-t-md sm:rounded-tl-md lg:rounded-l-md bg-gscale-dark-background-ternary500 lg:flex-grow-0">
-            <div className="flex flex-col h-full">
-                <div className="flex-1 h-full buildpagepadding">
+            <div className="relative flex flex-col h-full">
+                <div className="absolute inset-x-0 top-0 z-10 w-full h-32 overflow-hidden">
+                    <Image
+                        src={`/images/characters/card/${character.id}.png`}
+                        layout="native"
+                        width="480"
+                        quality="85"
+                        className="object-cover w-full h-full opacity-50"
+                    />
+                </div>
+                <div className="z-20 flex-1 h-full buildpagepadding">
                     <div className="mb-6 overflow-hidden rounded-md sm:-mt-2 w-max">
                         <Img
                             className="bg-gscale-dark-background-secondary"
@@ -26,6 +36,7 @@ export const CharacterDetails: React.FC<CharacterDetailsProps> = ({ character })
                             <RarityStars rarity={character.rarity} className="h-5" />
                         </div>
                     </div>
+
                     <div>
                         <div className="font-bold text-gscale-dark-text-primary">
                             {character.name}
