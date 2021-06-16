@@ -18,42 +18,36 @@ import { TalentLevelSelector } from "../../components/TalentLevelSelector";
 import { CharacterDetails } from "../../components/CharacterDetails";
 import { Button } from "../../components/Button";
 import { getCharacterMaterials } from "../../lib/characterMaterials";
-import ItemCard from "../../components/MiniItemCard";
+import ItemCard from "../../components/ItemCard";
 import millify from "millify";
 import { items } from "../../data/items";
 import { ShowcaseCategory } from "../../components/ShowcaseCategory";
+import { useCorrectingState } from "../../lib/useCorrectingState";
+import { GetStaticPaths, GetStaticProps } from "next";
+import { ItemImage } from "../../components/ItemImage";
 
-function useCorrectingState(
-    minStart: number = 1,
-    minGoal: number = 1
-): [number, (value: number) => void, number, (value: number) => void] {
-    const [first, setFirst] = useState(minStart);
-    const [second, setSecond] = useState(minGoal);
+export const getStaticPaths: GetStaticPaths = async () => {
+    const paths = Object.values(characters).map((character) => {
+        return {
+            params: { character: character.id },
+        };
+    });
 
-    return [
-        first,
-        (value: number) => {
-            if (value > second) setSecond(value);
-            setFirst(value);
-        },
-        second,
-        (value: number) => {
-            if (value < first) setFirst(value);
-            setSecond(value);
-        },
-    ];
-}
+    return {
+        paths,
+        fallback: false,
+    };
+};
 
-export default function BuildCharacter() {
-    const router = useRouter();
-    const { character: characterQuery } = router.query;
-
-    let character: Character | undefined = undefined;
-
-    if (typeof characterQuery === "string") {
-        character = characters[characterQuery];
+export const getStaticProps: GetStaticProps = async (context) => {
+    if (typeof context.params?.character === "string") {
+        return { props: { character: characters[context.params.character] } };
     }
 
+    throw "Error generating page: Character not found";
+};
+
+export default function BuildCharacter({ character }: { character: Character }) {
     //#region states
     const [startLevel, setstartLevel, goalLevel, setgoalLevel] = useCorrectingState();
 
@@ -66,7 +60,7 @@ export default function BuildCharacter() {
 
     const [materials, setMaterials] = useState(
         getCharacterMaterials(
-            character ?? dummyCharacter,
+            character,
             { start: startLevel, goal: goalLevel },
             { start: startNormal, goal: goalNormal },
             { start: startElemental, goal: goalElemental },
@@ -77,7 +71,7 @@ export default function BuildCharacter() {
     useEffect(() => {
         setMaterials(
             getCharacterMaterials(
-                character ?? dummyCharacter,
+                character,
                 { start: startLevel, goal: goalLevel },
                 { start: startNormal, goal: goalNormal },
                 { start: startElemental, goal: goalElemental },
@@ -95,12 +89,6 @@ export default function BuildCharacter() {
         goalBurst,
     ]);
     //#endregion
-
-    if (!character) {
-        return <Layout title="Build a Character"></Layout>;
-    }
-
-    console.log(materials);
 
     return (
         <Layout title={`Building ${character.name}`}>
@@ -157,6 +145,7 @@ export default function BuildCharacter() {
                                 icon={<FireIcon className="white24" />}
                                 character={character}
                             />
+
                             <div className="">
                                 <div className="flex items-baseline">
                                     <h3 className="flex-grow buildlevellabel">
@@ -232,41 +221,34 @@ export default function BuildCharacter() {
                             <div className="flex">
                                 {materials.mora !== 0 ? (
                                     <ItemCard
-                                        imageUrl="/images/materials/mora.png"
-                                        imageName={items.mora.name}
+                                        item={items.mora}
                                         label={millify(materials.mora)}
                                     />
                                 ) : null}
                                 {materials.xpLazy.amount !== 0 ? (
                                     <>
                                         <ItemCard
-                                            imageUrl="/images/materials/heros_wit.png"
-                                            imageName={items.heros_wit.name}
+                                            item={items.heros_wit}
                                             label={String(materials.xpLazy.amount)}
                                         />
                                         <div className="flex items-center m-0.5 bg-gscale-dark-background-ternary bg-opacity-70 rounded">
                                             <ChevronRightIcon className="w-6 h-6 ml-1" />
                                             <ItemCard
-                                                imageUrl="/images/materials/adventurers_experience.png"
-                                                imageName={
-                                                    items.adventurers_experience.name
-                                                }
+                                                item={items.adventurers_experience}
                                                 label={String(
                                                     materials.xpAccurate
                                                         .adventurers_experience.amount
                                                 )}
                                             />
                                             <ItemCard
-                                                imageUrl="/images/materials/wanderers_advice.png"
-                                                imageName={items.wanderers_advice.name}
+                                                item={items.wanderers_advice}
                                                 label={String(
                                                     materials.xpAccurate.wanderers_advice
                                                         .amount
                                                 )}
                                             />
                                             <ItemCard
-                                                imageUrl="/images/materials/heros_wit.png"
-                                                imageName={items.heros_wit.name}
+                                                item={items.heros_wit}
                                                 label={String(
                                                     materials.xpAccurate.heros_wit.amount
                                                 )}
