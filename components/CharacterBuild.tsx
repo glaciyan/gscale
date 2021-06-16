@@ -4,6 +4,7 @@ import { characters } from "../data/characters";
 import ItemGrid from "./ItemGrid";
 import MiniItemCard from "./ItemCard";
 import millify from "millify";
+import { items } from "../data/items";
 
 export default function CharacterBuild({
     build,
@@ -49,14 +50,9 @@ export default function CharacterBuild({
             </div>
             <h2 className="mt-3 font-bold">Materials needed:</h2>
             <div className="flex -mb-3">
+                <MiniItemCard item={items.mora} label={millify(materials.mora)} />
                 <MiniItemCard
-                    imageUrl="/images/materials/mora.png"
-                    imageName="Mora"
-                    label={millify(materials.mora)}
-                />
-                <MiniItemCard
-                    imageUrl="/images/materials/heros_wit.png"
-                    imageName="Hero's Wit"
+                    item={items.heros_wit}
                     label={String(materials.xpLazy.amount)}
                 />
             </div>

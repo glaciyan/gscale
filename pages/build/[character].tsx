@@ -8,11 +8,10 @@ import {
     XIcon,
     ChevronRightIcon,
 } from "@heroicons/react/outline";
-import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import Layout from "../../components/Layout";
 import { CharacterLevelListBox } from "../../components/CharacterLevelListBox";
-import { Character, characters, dummyCharacter } from "../../data/characters";
+import { Character, characters } from "../../data/characters";
 import { SwordIcon } from "../../components/icons/sword";
 import { TalentLevelSelector } from "../../components/TalentLevelSelector";
 import { CharacterDetails } from "../../components/CharacterDetails";
@@ -24,7 +23,6 @@ import { items } from "../../data/items";
 import { ShowcaseCategory } from "../../components/ShowcaseCategory";
 import { useCorrectingState } from "../../lib/useCorrectingState";
 import { GetStaticPaths, GetStaticProps } from "next";
-import { ItemImage } from "../../components/ItemImage";
 
 export const getStaticPaths: GetStaticPaths = async () => {
     const paths = Object.values(characters).map((character) => {
