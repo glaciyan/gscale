@@ -96,6 +96,7 @@ export default function BuildCharacter({ character }: { character: Character }) 
 
     const [build, setbuild]: [any, (val: any) => void] = useState(null);
     const query = useQuery();
+    const [editId, setEditId] = useState(0);
 
     // set build from query
     useEffect(() => {
@@ -107,6 +108,7 @@ export default function BuildCharacter({ character }: { character: Character }) 
             if (!!parsedId) {
                 buildsDB.builds.get(parsedId).then((build: any) => {
                     setbuild(build);
+                    setEditId(parsedId);
                 });
             }
         }
@@ -131,27 +133,56 @@ export default function BuildCharacter({ character }: { character: Character }) 
 
     //#endregion
 
-    function handleSubmit() {
+    function dbAction(func: () => void) {
         if (materials.materials.length === 0 && materials.mora === 0) {
             setSubmitError("Nothing is being leveled up.");
             return;
         }
         setSubmitting(true);
-        buildsDB.builds
-            .add({
-                type: "character",
-                characterId: character.id,
-                level: { start: startLevel, goal: goalLevel },
-                normal: { start: startNormal, goal: goalNormal },
-                elemental: { start: startElemental, goal: goalElemental },
-                burst: { start: startBurst, goal: goalBurst },
-            })
-            .then(() => {
-                router.push("/builds");
-            });
+        func();
     }
 
-    function updateBuild() {}
+    function handleSubmit() {
+        dbAction(() => {
+            buildsDB.builds
+                .add({
+                    type: "character",
+                    characterId: character.id,
+                    level: { start: startLevel, goal: goalLevel },
+                    normal: { start: startNormal, goal: goalNormal },
+                    elemental: { start: startElemental, goal: goalElemental },
+                    burst: { start: startBurst, goal: goalBurst },
+                })
+                .then(() => {
+                    router.push("/builds");
+                });
+        });
+    }
+
+    function updateBuild() {
+        console.log(build);
+        console.log(editId);
+
+        if (build && editId) {
+            dbAction(() => {
+                buildsDB.builds
+                    .update(editId, {
+                        level: { start: startLevel, goal: goalLevel },
+                        normal: { start: startNormal, goal: goalNormal },
+                        elemental: { start: startElemental, goal: goalElemental },
+                        burst: { start: startBurst, goal: goalBurst },
+                    })
+                    .then(function (updated: any) {
+                        if (updated) router.push("/builds");
+                        else {
+                            // this case never comes up because we are giving it a new object
+                            setSubmitError("No Values are being updated.");
+                            setSubmitting(false);
+                        }
+                    });
+            });
+        }
+    }
 
     return (
         <Layout title={`Building ${character.name}`}>
