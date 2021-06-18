@@ -7,6 +7,7 @@ import _ from "lodash";
 import { BuildItem, items } from "../data/items";
 import itemOrder from "./itemOrder";
 import { talentCost } from "../data/talentCost";
+import { mora as moraGen } from "./ItemGen";
 
 type Progression = { start: number; goal: number };
 
@@ -58,22 +59,27 @@ export function getCharacterMaterials(
     totalMora.push(elementalMora);
     totalMora.push(burstMora);
 
+    const materials = sumObjectArray(
+        talents.concat(ascensionMaterials),
+        "order",
+        "amount"
+    ) as BuildItem[];
+
+    const mora = totalMora.reduce((prev, current) => prev + current);
+
     return {
         xp: levelingCost.xp,
         xpLazy: lazyLevelMaterial,
         xpAccurate: accurateLevelMaterials,
-        mora: totalMora.reduce((prev, current) => prev + current),
+        mora,
         ascension: ascensionMaterials,
         // for some unknown reason normalMaterials is the sum so thats why im recalculating here
         normal: talent(normal).items,
         elemental: elementalMaterials,
         burst: burstMaterials,
         talents,
-        materials: sumObjectArray(
-            talents.concat(ascensionMaterials),
-            "order",
-            "amount"
-        ) as BuildItem[],
+        materials,
+        everything: [moraGen(mora), lazyLevelMaterial, ...materials],
     };
 }
 
