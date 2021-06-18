@@ -1,7 +1,9 @@
 import { toId } from ".";
 import itemOrder from "./itemOrder";
 import { Character } from "../data/characters";
-import { getGem, getItem, itemsTyped, BuildItem } from "../data/items";
+import { itemsTyped, BuildItem } from "../data/items";
+import { getItem } from "./getItem";
+import { getGem } from "./getItem";
 
 export class ItemGen {
     character: Character;

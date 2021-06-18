@@ -1,5 +1,3 @@
-import { Vision } from "./characters";
-
 export interface Item {
     name: string;
     rarity: number | null;
@@ -11,19 +9,6 @@ export interface Item {
 export type Items = { [id: string]: Item };
 
 export type BuildItem = Item & { order: number; amount: number };
-
-export function getGem(element: Vision, rarity: 2 | 3 | 4 | 5) {
-    return getItem(`${element}_gem`, rarity);
-}
-
-export function getItem(group: string, rarity: number): Item {
-    const found = Object.values(items).find(
-        (item: Item) => item.group === group && item.rarity === rarity
-    );
-
-    if (!found) return items.nothing;
-    return found;
-}
 
 export const items = {
     nothing: {
