@@ -6,7 +6,7 @@ export default function RarityStars({
     className,
 }: {
     rarity: number | string;
-    className: string;
+    className?: string;
 }) {
     let color = `text-genshin-rarity-${rarity}`;
     const baseWidth = 24;
@@ -19,9 +19,7 @@ export default function RarityStars({
             <span className="sr-only">{rarity} Stars</span>
             <svg
                 xmlns="http://www.w3.org/2000/svg"
-                viewBox={`0 0 ${
-                    baseWidth + (rarity - 1) * additionalStarWidth
-                } 24`}
+                viewBox={`0 0 ${baseWidth + (rarity - 1) * additionalStarWidth} 24`}
                 className={cn(className, color)}
                 aria-hidden="true"
             >

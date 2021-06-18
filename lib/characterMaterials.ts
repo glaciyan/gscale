@@ -1,4 +1,5 @@
-import { getAscensionLevel, sumObjectArray, xp } from ".";
+import { getAscensionLevel, sumObjectArray } from ".";
+import { xp } from "./ItemGen";
 import { ascensionCosts as fullAscensionCostOf } from "../data/ascensionCost";
 import { Character } from "../data/characters";
 import { costsTo } from "../data/characterLevels";
@@ -6,6 +7,7 @@ import _ from "lodash";
 import { BuildItem, items } from "../data/items";
 import itemOrder from "./itemOrder";
 import { talentCost } from "../data/talentCost";
+import { mora as moraGen } from "./ItemGen";
 
 type Progression = { start: number; goal: number };
 
@@ -40,11 +42,13 @@ export function getCharacterMaterials(
     function talent(i: Progression) {
         return getCombinedCost(talentCost(character).slice(i.start - 1, i.goal - 1));
     }
+
     const { mora: normalMora, items: normalMaterials } = talent(normal);
     const { mora: elementalMora, items: elementalMaterials } = talent(elemental);
     const { mora: burstMora, items: burstMaterials } = talent(burst);
+
     const talents: BuildItem[] = sumObjectArray(
-        normalMaterials.concat(elementalMaterials).concat(burstMaterials),
+        [...normalMaterials, ...elementalMaterials, ...burstMaterials],
         "order",
         "amount"
     );
@@ -55,17 +59,27 @@ export function getCharacterMaterials(
     totalMora.push(elementalMora);
     totalMora.push(burstMora);
 
+    const materials = sumObjectArray(
+        talents.concat(ascensionMaterials),
+        "order",
+        "amount"
+    ) as BuildItem[];
+
+    const mora = totalMora.reduce((prev, current) => prev + current);
+
     return {
         xp: levelingCost.xp,
         xpLazy: lazyLevelMaterial,
         xpAccurate: accurateLevelMaterials,
-        mora: totalMora.reduce((prev, current) => prev + current),
+        mora,
         ascension: ascensionMaterials,
-        normal: normalMaterials,
+        // for some unknown reason normalMaterials is the sum so thats why im recalculating here
+        normal: talent(normal).items,
         elemental: elementalMaterials,
         burst: burstMaterials,
         talents,
-        materials: sumObjectArray(talents.concat(ascensionMaterials), "order", "amount") as BuildItem[],
+        materials,
+        everything: [moraGen(mora), lazyLevelMaterial, ...materials],
     };
 }
 

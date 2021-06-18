@@ -1,7 +1,49 @@
 import { toId } from ".";
 import itemOrder from "./itemOrder";
 import { Character } from "../data/characters";
-import { getGem, getItem, itemsTyped, BuildItem } from "../data/items";
+import { itemsTyped, BuildItem, items } from "../data/items";
+import { getItem } from "./getItem";
+import { getGem } from "./getItem";
+
+export function mora(amount: number): BuildItem {
+    return {
+        name: "Mora",
+        rarity: 1,
+        amount: amount,
+        order: itemOrder.mora,
+    };
+}
+
+export function crown(amount: number): BuildItem {
+    return {
+        name: "Crown of Insight",
+        rarity: 5,
+        amount: amount,
+        order: itemOrder.crown,
+    };
+}
+
+export function xp(rarity: 2 | 3 | 4, amount: number): BuildItem {
+    let xpItem;
+    switch (rarity) {
+        case 2:
+            xpItem = items.wanderers_advice;
+            break;
+        case 3:
+            xpItem = items.adventurers_experience;
+            break;
+        case 4:
+            xpItem = items.heros_wit;
+            break;
+    }
+
+    return {
+        name: xpItem.name,
+        rarity: xpItem.rarity,
+        amount: amount,
+        order: itemOrder.xpAccurate - xpItem.rarity,
+    };
+}
 
 export class ItemGen {
     character: Character;
