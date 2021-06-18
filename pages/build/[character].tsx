@@ -164,7 +164,7 @@ export default function BuildCharacter({ character }: { character: Character }) 
                         />
                     ) : null
                 ) : null}
-                <div className="w-full lg:flex lg:min-h-[50rem]">
+                <div className="w-full lg:flex lg:min-h-[51.5rem]">
                     <div className="block sm:flex">
                         <CharacterDetails character={character} />
 
