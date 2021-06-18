@@ -1,4 +1,5 @@
-import { getAscensionLevel, sumObjectArray, xp } from ".";
+import { getAscensionLevel, sumObjectArray } from ".";
+import { xp } from "./ItemGen";
 import { ascensionCosts as fullAscensionCostOf } from "../data/ascensionCost";
 import { Character } from "../data/characters";
 import { costsTo } from "../data/characterLevels";

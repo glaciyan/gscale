@@ -1,6 +1,6 @@
 import { ItemGen } from "../lib/ItemGen";
 import { Character } from "./characters";
-import { crown } from "../lib";
+import { crown } from "../lib/ItemGen";
 
 export function talentCost(character: Character) {
     const item = new ItemGen(character);
