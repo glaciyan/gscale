@@ -30,11 +30,9 @@ function useIsTouch() {
 export default function CharacterCard({
     character,
     className,
-    compact = false,
 }: {
     character: any;
     className?: string;
-    compact?: boolean;
 }) {
     const isProbablyTouch = useIsTouch();
     const route = useRouter();
@@ -81,19 +79,17 @@ export default function CharacterCard({
 
     const card = (
         <>
-            {compact ? null : (
-                <div className="relative flex items-center justify-center overflow-hidden bg-gscale-dark-background-secondary">
-                    <Image
-                        src={`/images/characters/card/${character.id}.png`}
-                        layout="intrinsic"
-                        height="300"
-                        width="480"
-                        quality="85"
-                        alt={`${character.name}`}
-                    />
-                    {isProbablyTouch ? null : cardHoverDialog}
-                </div>
-            )}
+            <div className="relative flex items-center justify-center overflow-hidden bg-gscale-dark-background-secondary">
+                <Image
+                    src={`/images/characters/card/${character.id}.png`}
+                    layout="intrinsic"
+                    height="300"
+                    width="480"
+                    quality="85"
+                    alt={`${character.name}`}
+                />
+                {isProbablyTouch ? null : cardHoverDialog}
+            </div>
             <div className="px-4 py-3">
                 <div className="flex flex-wrap items-center">
                     <span className={`text-genshin-element-${elementId} mr-1`}>
