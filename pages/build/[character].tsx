@@ -1,6 +1,3 @@
-// never ever do absolute positioning deep inside a container with overflow set to hidden
-// i had to manually set all corners -slimetsp 14/06/2021
-
 import {
     SparklesIcon,
     TrendingUpIcon,
@@ -25,6 +22,8 @@ import { useCorrectingState } from "../../lib/useCorrectingState";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { useRouter } from "next/router";
 import buildsDB from "../../lib/buildsDatabase";
+import { useQuery } from "../../lib/useQuery";
+import { PageDialouge } from "../../components/PageDialouge";
 
 export const getStaticPaths: GetStaticPaths = async () => {
     const paths = Object.values(characters).map((character) => {
@@ -70,6 +69,7 @@ export default function BuildCharacter({ character }: { character: Character }) 
         )
     );
 
+    // update preview
     useEffect(() => {
         setMaterials(
             getCharacterMaterials(
@@ -93,6 +93,44 @@ export default function BuildCharacter({ character }: { character: Character }) 
 
     const [submitting, setSubmitting] = useState(false);
     const [submitError, setSubmitError] = useState("");
+
+    const [build, setbuild]: [any, (val: any) => void] = useState(null);
+    const query = useQuery();
+
+    // set build from query
+    useEffect(() => {
+        if (!query) return;
+        const { edit } = query;
+
+        if (edit && typeof edit === "string") {
+            const parsedId = Number.parseInt(edit);
+            if (!!parsedId) {
+                buildsDB.builds.get(parsedId).then((build: any) => {
+                    setbuild(build);
+                });
+            }
+        }
+    }, [query]);
+
+    useEffect(() => {
+        if (!build) return;
+        else {
+            setstartLevel(build.level.start);
+            setgoalLevel(build.level.goal);
+
+            setstartNormal(build.normal.start);
+            setgoalNormal(build.normal.goal);
+
+            setstartElemental(build.elemental.start);
+            setgoalElemental(build.elemental.goal);
+
+            setstartBurst(build.burst.start);
+            setgoalBurst(build.burst.goal);
+        }
+    }, [build]);
+
+    //#endregion
+
     function handleSubmit() {
         if (materials.materials.length === 0 && materials.mora === 0) {
             setSubmitError("Nothing is being leveled up.");
@@ -112,12 +150,21 @@ export default function BuildCharacter({ character }: { character: Character }) 
                 router.push("/builds");
             });
     }
-    //#endregion
+
+    function updateBuild() {}
 
     return (
         <Layout title={`Building ${character.name}`}>
             <div className="max-w-screen-xl mx-3 sm:mx-4 xl:mx-auto">
-                <div className="w-full lg:flex lg:min-h-[48rem]">
+                {build?.characterId ? (
+                    build.characterId !== character.id ? (
+                        <PageDialouge
+                            warning
+                            text='The id which are editing does not match up with your current character. Make sure you use the "Your Builds" page to edit your character.'
+                        />
+                    ) : null
+                ) : null}
+                <div className="w-full lg:flex lg:min-h-[50rem]">
                     <div className="block sm:flex">
                         <CharacterDetails character={character} />
 
@@ -221,9 +268,9 @@ export default function BuildCharacter({ character }: { character: Character }) 
                                 <Button
                                     isLoading={submitting ? 1 : undefined}
                                     fullw
-                                    text="Build Character"
+                                    text={build ? "Update Build" : "Build Character"}
                                     color={`genshin-dark-element-${character.element}`}
-                                    onClick={handleSubmit}
+                                    onClick={build ? updateBuild : handleSubmit}
                                 />
                             </div>
                         </div>
