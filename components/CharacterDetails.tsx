@@ -16,7 +16,7 @@ export const CharacterDetails: React.FC<CharacterDetailsProps> = ({ character })
     return (
         <div className="maxsm:rounded-t-md sm:rounded-tl-md lg:rounded-l-md bg-gscale-dark-background-ternary500 lg:flex-grow-0">
             <div className="relative flex flex-col h-full">
-                <div className="absolute inset-x-0 top-0 z-10 w-full h-32 overflow-hidden rounded-tl-md">
+                <div className="absolute inset-x-0 top-0 z-10 w-full h-32 overflow-hidden rounded-tl-md maxsm:rounded-tr-md">
                     <Image
                         src={`/images/characters/card/${character.id}.png`}
                         alt={character.name}
