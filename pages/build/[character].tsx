@@ -201,7 +201,7 @@ export default function BuildCharacter({ character }: { character: Character }) 
                     build.characterId !== character.id ? (
                         <PageDialouge
                             warning
-                            text='The id which are editing does not match up with your current character. Make sure you use the "Your Builds" page to edit your character.'
+                            text='The id which you are editing does not match up with the current character. Make sure you use the "Your Builds" page to edit your characters.'
                         />
                     ) : null
                 ) : null}
