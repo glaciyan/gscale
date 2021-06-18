@@ -160,17 +160,27 @@ export default function BuildCharacter({ character }: { character: Character }) 
     }
 
     function updateBuild() {
-        console.log(build);
-        console.log(editId);
-
         if (build && editId) {
             dbAction(() => {
+                let completed = build.completed;
+
+                if (build.completed) {
+                    completed = [] as any[];
+
+                    for (const item of build.completed) {
+                        if (materials.everything.find((i) => i.name === item.name)) {
+                            completed.push(item);
+                        }
+                    }
+                }
+
                 buildsDB.builds
                     .update(editId, {
                         level: { start: startLevel, goal: goalLevel },
                         normal: { start: startNormal, goal: goalNormal },
                         elemental: { start: startElemental, goal: goalElemental },
                         burst: { start: startBurst, goal: goalBurst },
+                        completed,
                     })
                     .then(function (updated: any) {
                         if (updated) router.push("/builds");
