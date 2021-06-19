@@ -24,6 +24,7 @@ import { useRouter } from "next/router";
 import buildsDB from "../../lib/buildsDatabase";
 import { useQuery } from "../../lib/useQuery";
 import { PageDialouge } from "../../components/PageDialouge";
+import { If } from "../../components/If";
 
 export const getStaticPaths: GetStaticPaths = async () => {
     const paths = Object.values(characters).map((character) => {
@@ -197,14 +198,12 @@ export default function BuildCharacter({ character }: { character: Character }) 
     return (
         <Layout title={`Building ${character.name}`}>
             <div className="max-w-screen-xl mx-3 sm:mx-4 xl:mx-auto">
-                {build?.characterId ? (
-                    build.characterId !== character.id ? (
-                        <PageDialouge
-                            warning
-                            text='The id which you are editing does not match up with the current character. Make sure you use the "Your Builds" page to edit your characters.'
-                        />
-                    ) : null
-                ) : null}
+                <If cif={build?.characterId && build.characterId !== character.id}>
+                    <PageDialouge
+                        warning
+                        text='The id which you are editing does not match up with the current character. Make sure you use the "Your Builds" page to edit your characters.'
+                    />
+                </If>
                 <div className="w-full lg:flex lg:min-h-[51.5rem]">
                     <div className="block sm:flex">
                         <CharacterDetails character={character} />
@@ -322,23 +321,30 @@ export default function BuildCharacter({ character }: { character: Character }) 
                             <h2 className="mb-2 font-semibold text-gscale-dark-text-secondary">
                                 Material Preview
                             </h2>
+
                             {/* When there are no materials */}
-                            {materials.materials.length === 0 && materials.mora === 0 ? (
+                            <If
+                                cif={
+                                    materials.materials.length === 0 &&
+                                    materials.mora === 0
+                                }
+                            >
                                 <div className="flex items-center">
                                     <div className="flex items-center justify-center w-12 h-12 rounded bg-gscale-dark-background-primary">
                                         <XIcon className="w-6 h-6 text-gscale-dark-text-ternary" />
                                     </div>
                                     <div className="mx-3">No Materials</div>
                                 </div>
-                            ) : null}
+                            </If>
+
                             <div className="flex">
-                                {materials.mora !== 0 ? (
+                                <If cif={materials.mora !== 0}>
                                     <ItemCard
                                         item={items.mora}
                                         label={millify(materials.mora)}
                                     />
-                                ) : null}
-                                {materials.xpLazy.amount !== 0 ? (
+                                </If>
+                                <If cif={materials.xpLazy.amount !== 0}>
                                     <>
                                         <ItemCard
                                             item={items.heros_wit}
@@ -368,7 +374,7 @@ export default function BuildCharacter({ character }: { character: Character }) 
                                             />
                                         </div>
                                     </>
-                                ) : null}
+                                </If>
                             </div>
                             <ShowcaseCategory
                                 emphasis

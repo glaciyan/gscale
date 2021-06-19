@@ -1,14 +1,15 @@
-import React from "react";
+import React, { ReactElement } from "react";
 
 interface IfProps {
     cif: boolean;
-    children: JSX.Element;
+    children: ReactElement;
+    celse?: ReactElement;
 }
 
-export const If: React.FC<IfProps> = ({ cif, children }) => {
+export const If: React.FC<IfProps> = ({ cif, children, celse = null }) => {
     if (cif) {
         return children;
     }
 
-    return null;
+    return celse;
 };
