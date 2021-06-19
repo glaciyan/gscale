@@ -1,12 +1,11 @@
 import React from "react";
-import Img from "react-optimized-image";
 import { Character } from "../data/characters";
-import RarityStars from "./RarityStars";
 import _ from "lodash";
 import { ElementIcon } from "./icons/element";
 import { IconWithText } from "./IconWithText";
 import { CharacterItemShowcase } from "./CharacterItemShowcase";
 import Image from "next-native-image";
+import { ItemCharacterCard } from "./ItemCharacterCard";
 
 interface CharacterDetailsProps {
     character: Character;
@@ -27,17 +26,7 @@ export const CharacterDetails: React.FC<CharacterDetailsProps> = ({ character })
                     />
                 </div>
                 <div className="z-20 flex-1 h-full buildpagepadding">
-                    <div className="mb-6 overflow-hidden rounded-md sm:-mt-2 w-max">
-                        <Img
-                            className="bg-gscale-dark-background-secondary"
-                            src={require(`../public/images/characters/mugshot/${character.id}.png?width=100?height=100`)}
-                            alt={character.name}
-                        />
-                        <div className="flex items-center justify-center bg-gscale-dark-background-primary py-0.5">
-                            <RarityStars rarity={character.rarity} className="h-5" />
-                        </div>
-                    </div>
-
+                    <ItemCharacterCard character={character} className="mb-6 sm:-mt-2" />
                     <div>
                         <div className="font-bold text-gscale-dark-text-primary">
                             {character.name}
