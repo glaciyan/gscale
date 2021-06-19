@@ -3,15 +3,15 @@ import buildsDB from "../lib/buildsDatabase";
 import { characters } from "../data/characters";
 import CompletionItemGrid from "./CompletionItemGrid";
 import Link from "next/link";
+import { ItemCharacterCard } from "./ItemCharacterCard";
+import { LevelShowcase } from "./LevelShowcase";
+import { TrendingUpIcon } from "@heroicons/react/outline";
 
-export default function CharacterBuild({
-    build,
-    className,
-}: {
-    build: any;
-    className?: string;
-}) {
+export default function CharacterBuild({ build }: { build: any }) {
     const character = characters[build.characterId];
+
+    if (!character) return null;
+
     const materials = getCharacterMaterials(
         character,
         build.level,
@@ -21,12 +21,17 @@ export default function CharacterBuild({
     );
 
     return (
-        <div className={className}>
+        <div className="bg-gscale-dark-background-secondary">
             <div className="relative">
+                <ItemCharacterCard character={character} />
                 <h1 className="text-lg font-bold">{character.name}</h1>
-                <div>
-                    Level: {build.level.start} to {build.level.goal}
-                </div>
+                <LevelShowcase
+                    left={build.level.start}
+                    right={build.level.goal}
+                    icon={<TrendingUpIcon className="w-6 h-6" />}
+                    label={"Level"}
+                    element={character.element}
+                ></LevelShowcase>
                 <div>
                     Normal: {build.normal.start} to {build.normal.goal}
                 </div>
