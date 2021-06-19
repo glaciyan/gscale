@@ -3,6 +3,7 @@ import Layout from "../components/Layout";
 import CharacterBuild from "../components/CharacterBuild";
 import { useLiveQuery } from "dexie-react-hooks";
 import { PageDialouge } from "../components/PageDialouge";
+import { If } from "../components/If";
 
 export default function Builds() {
     const allBuilds = useLiveQuery(() => buildsDB.builds.toArray(), []);
@@ -11,24 +12,23 @@ export default function Builds() {
         <Layout title="Builds" current="Your Builds">
             <div className="max-w-screen-xl mx-auto">
                 <PageDialouge text="This page is still unfinished" />
-                {!allBuilds ? (
-                    <p>Loading</p>
-                ) : allBuilds.length > 0 ? (
-                    allBuilds.map((build: any, index: any) => {
-                        return (
-                            <CharacterBuild
-                                build={build}
-                                key={build.characterId + build.id}
-                                className={
-                                    (index % 2 === 0 ? "bg-gray-800" : "bg-gray-700") +
-                                    " p-4"
-                                }
-                            />
-                        );
-                    })
-                ) : (
-                    <p>No builds</p>
-                )}
+
+                <div className="grid grid-cols-3 gap-5">
+                    {!allBuilds ? (
+                        <p>Loading</p>
+                    ) : (
+                        <If cif={allBuilds.length > 0} celse={<p>No builds</p>}>
+                            {allBuilds.map((build: any) => {
+                                return (
+                                    <CharacterBuild
+                                        build={build}
+                                        key={build.characterId + build.id}
+                                    />
+                                );
+                            })}
+                        </If>
+                    )}
+                </div>
             </div>
         </Layout>
     );
