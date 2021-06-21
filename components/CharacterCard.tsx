@@ -7,6 +7,7 @@ import buildDB from "../lib/buildsDatabase";
 import _ from "lodash";
 import { useEffect, useState } from "react";
 import { Button } from "./Button";
+import { If } from "./If";
 
 function useIsTouch() {
     const [isTouch, setisTouch] = useState(false);
@@ -104,11 +105,20 @@ export default function CharacterCard({
                     />
                 </div>
 
-                <Link href={`/build/${character.id}`}>
-                    <a className="mt-1 text-lg font-medium text-gscale-dark-text-primary hover:underline">
+                <If
+                    cif={isProbablyTouch}
+                    celse={
+                        <Link href={`/build/${character.id}`}>
+                            <a className="mt-1 text-lg font-medium text-gscale-dark-text-primary hover:underline">
+                                {character.name}
+                            </a>
+                        </Link>
+                    }
+                >
+                    <h3 className="mt-1 text-lg font-medium text-gscale-dark-text-primary">
                         {character.name}
-                    </a>
-                </Link>
+                    </h3>
+                </If>
             </div>
         </>
     );
