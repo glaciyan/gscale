@@ -1,8 +1,6 @@
 import { getCharacterMaterials } from "../lib/characterMaterials";
-import buildsDB from "../lib/buildsDatabase";
 import { characters } from "../data/characters";
 import CompletionItemGrid from "./CompletionItemGrid";
-import Link from "next/link";
 import { ItemCharacterCard } from "./ItemCharacterCard";
 import { LevelShowcase } from "./LevelShowcase";
 import { SparklesIcon, TrendingUpIcon, FireIcon } from "@heroicons/react/outline";

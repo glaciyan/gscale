@@ -1,12 +1,6 @@
-import { CheckIcon } from "@heroicons/react/outline";
 import millify from "millify";
 import { BuildItem, Item } from "../data/items";
-import { toId } from "../lib";
-import buildsDB from "../lib/buildsDatabase";
 import CheckListItemCard from "./CheckListItemCard";
-import { Transition } from "@headlessui/react";
-import { If } from "./If";
-import { useState } from "react";
 
 export default function CompletionItemGrid({
     items,
