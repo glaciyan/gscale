@@ -7,7 +7,6 @@ import { SwordIcon } from "./icons/sword";
 import { Button } from "./Button";
 import React, { Dispatch, SetStateAction } from "react";
 import Link from "next/link";
-import { ItemCharacterCard } from "./ItemCharacterCard";
 
 export default function CharacterBuild({
     build,
