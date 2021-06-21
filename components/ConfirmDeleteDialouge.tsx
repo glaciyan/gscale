@@ -21,7 +21,7 @@ export const ConfirmDeleteDialouge: React.FC<ConfirmDeleteDialougeProps> = ({
             className="fixed inset-0 z-10 overflow-y-auto text-gscale-dark-text-primary"
         >
             <div className="flex items-center justify-center min-h-screen">
-                <Dialog.Overlay className="fixed inset-0 bg-black opacity-30" />
+                <Dialog.Overlay className="fixed inset-0 bg-black opacity-60" />
 
                 <div className="z-20 max-w-sm p-6 mx-auto rounded-md bg-gscale-dark-background-secondary">
                     <Dialog.Title className="mb-3 font-bold">Delete Build</Dialog.Title>
