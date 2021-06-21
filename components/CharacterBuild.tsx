@@ -7,7 +7,7 @@ import { SwordIcon } from "./icons/sword";
 import { Button } from "./Button";
 import React, { Dispatch, SetStateAction } from "react";
 import Link from "next/link";
-// import { ItemCharacterCard } from "./ItemCharacterCard";
+import { ItemCharacterCard } from "./ItemCharacterCard";
 
 export default function CharacterBuild({
     build,
@@ -32,9 +32,9 @@ export default function CharacterBuild({
         <div className="flex flex-col rounded-md shadow-md bg-gscale-dark-background-secondary">
             <div className="sm:flex">
                 <div className="flex p-4">
-                    {/* <div className="flex items-center">
+                    <div className="flex justify-center flex-1 sm:hidden">
                         <ItemCharacterCard className="mx-2" character={character} />
-                    </div> */}
+                    </div>
                     <div className="mx-3 mb-2">
                         <h1 className="mb-2 text-lg font-bold">{character.name}</h1>
                         <LevelShowcase
