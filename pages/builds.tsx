@@ -6,7 +6,7 @@ import { If } from "../components/If";
 import { ConfirmDeleteDialouge } from "../components/ConfirmDeleteDialouge";
 import { useState } from "react";
 import Link from "next/link";
-import { PlusIcon, XIcon } from "@heroicons/react/outline";
+import { PlusIcon } from "@heroicons/react/outline";
 import { NothingInfo } from "../components/NothingInfo";
 import { Button } from "../components/Button";
 
