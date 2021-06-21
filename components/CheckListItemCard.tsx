@@ -63,7 +63,7 @@ export default function CheckListItemCard({
                 style={{ height: "max-content" }}
             >
                 <div
-                    className={`flex items-center bg-black justify-center absolute w-full h-full transition-all rounded-md ring-inset hover:ring ring-green-400 bg-opacity-0 hover:bg-opacity-30 ${
+                    className={`flex items-center bg-black justify-center absolute w-full h-full transition-all rounded-md ring-inset hover:ring ring-green-400 bg-opacity-0 hover:bg-opacity-30 active:bg-opacity-80 ${
                         done
                             ? "ring-2 backdrop-filter backdrop-saturate-0 !bg-opacity-60"
                             : ""
