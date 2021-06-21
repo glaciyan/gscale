@@ -15,7 +15,7 @@ export function TalentLevelListBox({ value, onChange, first, last }: LevelItemLi
     return (
         <div className="flex">
             <Listbox value={value} onChange={onChange}>
-                <div className="relative w-20">
+                <div className="relative w-18">
                     <Listbox.Button
                         style={
                             first
