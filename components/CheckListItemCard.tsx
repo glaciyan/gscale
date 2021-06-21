@@ -59,7 +59,7 @@ export default function CheckListItemCard({
             }}
         >
             <div
-                className={`flex flex-col items-center overflow-hidden rounded shadow bg-gscale-dark-background-primary`}
+                className={`flex flex-col items-center overflow-hidden rounded shadow bg-gscale-dark-background-secondary`}
                 style={{ height: "max-content" }}
             >
                 <div
