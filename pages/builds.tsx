@@ -15,8 +15,8 @@ export default function Builds() {
         <>
             <ConfirmDeleteDialouge build={deletingBuild} setBuild={setDeletingBuild} />
             <Layout title="Builds" current="Your Builds">
-                <div className="max-w-screen-xl mx-auto">
-                    <div className="grid grid-cols-3 gap-5">
+                <div className="mx-3 md:mx-6 2xl:mx-auto max-w-screen-2xl">
+                    <div className="grid grid-cols-1 gap-4 xl:grid-cols-2">
                         {!allBuilds ? (
                             <p>Loading</p>
                         ) : (
