@@ -2,7 +2,7 @@ import { useState } from "react";
 import { BuildItem, Item } from "../data/items";
 import { toId } from "../lib";
 import buildsDB from "../lib/buildsDatabase";
-import { SemiCircle } from "./icons/semicircle";
+import { CheckIcon } from "@heroicons/react/outline";
 import { If } from "./If";
 import { ItemImage } from "./ItemImage";
 
@@ -19,15 +19,11 @@ export default function CheckListItemCard({
 }) {
     if (label && label === "0") return null;
 
-    const [isLoading, setisLoading] = useState(false);
-
     return (
         <button
             className="relative m-1 rounded focus:outline-none focus-visible:ring"
             key={toId(item.name)}
             onClick={async () => {
-                setisLoading(true);
-
                 if (build.completed) {
                     const find = build.completed.findIndex(
                         (element: Item) => element.name === item.name
@@ -41,7 +37,6 @@ export default function CheckListItemCard({
                             completed: completed,
                         });
 
-                        setisLoading(false);
                         return;
                     }
                 }
@@ -62,8 +57,6 @@ export default function CheckListItemCard({
                               },
                           ],
                 });
-
-                setisLoading(false);
             }}
         >
             <div
@@ -77,8 +70,8 @@ export default function CheckListItemCard({
                             : ""
                     }`}
                 >
-                    <If cif={isLoading}>
-                        <SemiCircle className="w-6 h-6 text-green-400 animate-spin" />
+                    <If cif={done}>
+                        <CheckIcon className="w-6 h-6 text-green-400" />
                     </If>
                 </div>
                 <div className="w-12 h-12 p-1">
