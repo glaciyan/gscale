@@ -16,7 +16,6 @@ export default function RarityStars({
 
     return (
         <>
-            <span className="sr-only">{rarity} Stars</span>
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox={`0 0 ${baseWidth + (rarity - 1) * additionalStarWidth} 24`}

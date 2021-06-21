@@ -3,7 +3,7 @@ import { SemiCircle } from "./icons/semicircle";
 
 interface ButtonProps {
     text: string;
-    color: string;
+    color?: string;
     onClick?: () => void;
     className?: string;
     secondary?: any;
@@ -31,11 +31,11 @@ export const Button: React.FC<ButtonProps> = ({
     let cn: string = `buttoncommon shadow-md w-max text-gscale-dark-text-primary bg-opacity-70 bg-${color} ${className} transition-colors hover:bg-opacity-50 active:bg-opacity-30 hover:shadow-lg select-none focus-visible:ring focus:outline-none`;
 
     if (secondary) {
-        cn = `buttoncommon ring-1 ring-opacity-80 text-${color} ring-${color} ${className} bg-black transition-colors bg-opacity-0 hover:bg-opacity-20 active:bg-opacity-50 select-none focus-visible:bg-opacity-20`;
+        cn = `buttoncommon ring-1 ring-opacity-80 text-${color} ring-${color} ${className} bg-black transition-colors bg-opacity-0 hover:bg-opacity-20 active:bg-opacity-50 focus:outline-none select-none focus-visible:bg-opacity-20`;
     } else if (ternary) {
         cn = `buttoncommon w-max text-${color} bg-black transition-colors bg-opacity-0 hover:bg-opacity-20 active:bg-opacity-50 select-none focus-visible:ring focus:outline-none ${className}`;
     } else if (link) {
-        cn = `w-max text-${color} hover:underline select-none ${className}`;
+        cn = `w-max text-${color} hover:underline select-none focus:outline-none focus-visible:underline ${className}`;
     }
 
     if (fullw) {

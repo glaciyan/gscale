@@ -13,13 +13,13 @@ export const ItemCharacterCard: React.FC<ItemCharacterCardProps> = ({
     className = "",
 }) => {
     return (
-        <div className={`overflow-hidden rounded-md w-max ${className}`}>
+        <div className={`w-max ${className}`}>
             <Img
-                className="bg-gscale-dark-background-secondary"
+                className="bg-gscale-dark-background-secondary rounded-t-md"
                 src={require(`../public/images/characters/mugshot/${character.id}.png?width=100?height=100`)}
                 alt={character.name}
             />
-            <div className="flex items-center justify-center bg-gscale-dark-background-primary py-0.5">
+            <div className="flex items-center justify-center bg-gscale-dark-background-primary py-0.5 rounded-b-md">
                 <RarityStars rarity={character.rarity} className="h-5" />
             </div>
         </div>
