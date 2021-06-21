@@ -23,13 +23,17 @@ export const ConfirmDeleteDialouge: React.FC<ConfirmDeleteDialougeProps> = ({
             <div className="flex items-center justify-center min-h-screen">
                 <Dialog.Overlay className="fixed inset-0 bg-black opacity-60" />
 
-                <div className="z-20 max-w-sm p-6 mx-auto rounded-md bg-gscale-dark-background-secondary">
-                    <Dialog.Title className="mb-3 font-bold">Delete Build</Dialog.Title>
-                    <Dialog.Description className="text-gscale-dark-text-secondary">
-                        This will delete your build including your checklist.
-                    </Dialog.Description>
+                <div className="z-20 max-w-sm mx-auto rounded-md bg-gscale-dark-background-secondary">
+                    <div className="p-6">
+                        <Dialog.Title className="mb-3 font-bold">
+                            Delete Build
+                        </Dialog.Title>
+                        <Dialog.Description className="text-gscale-dark-text-secondary">
+                            This will delete the build including your checklist.
+                        </Dialog.Description>
+                    </div>
 
-                    <div className="flex items-center justify-end mt-6">
+                    <div className="flex items-center justify-end !px-6 p-3 bg-gscale-dark-background-ternary rounded-b-md">
                         <p className="flex-grow text-gscale-dark-text-ternary justify-self-start">
                             Are you sure?
                         </p>
