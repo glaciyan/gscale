@@ -32,43 +32,45 @@ export default function CharacterBuild({
         <div className="flex flex-col rounded-md shadow-md bg-gscale-dark-background-secondary">
             <div className="sm:flex">
                 <div className="flex p-4">
-                    <div className="flex justify-center flex-1 sm:hidden">
+                    {/* <div className="flex justify-center flex-1 sm:hidden">
                         <ItemCharacterCard className="mx-2" character={character} />
-                    </div>
+                    </div> */}
                     <div className="mx-3 mb-2">
                         <h1 className="mb-2 text-lg font-bold">{character.name}</h1>
-                        <LevelShowcase
-                            className=""
-                            left={build.level.start}
-                            right={build.level.goal}
-                            icon={<TrendingUpIcon className="iconsm" />}
-                            label={"Level"}
-                            element={character.element}
-                        ></LevelShowcase>
-                        <LevelShowcase
-                            className="mt-2"
-                            left={build.normal.start}
-                            right={build.normal.goal}
-                            icon={<SwordIcon className="iconsm" />}
-                            label={"Normal"}
-                            element={character.element}
-                        ></LevelShowcase>
-                        <LevelShowcase
-                            className="mt-2"
-                            left={build.elemental.start}
-                            right={build.elemental.goal}
-                            icon={<SparklesIcon className="iconsm" />}
-                            label={"Elemental"}
-                            element={character.element}
-                        ></LevelShowcase>
-                        <LevelShowcase
-                            className="mt-2"
-                            left={build.burst.start}
-                            right={build.burst.goal}
-                            icon={<FireIcon className="iconsm" />}
-                            label={"Burst"}
-                            element={character.element}
-                        ></LevelShowcase>
+                        <div className="grid grid-cols-2 gap-5 sm:block">
+                            <LevelShowcase
+                                className=""
+                                left={build.level.start}
+                                right={build.level.goal}
+                                icon={<TrendingUpIcon className="iconsm" />}
+                                label={"Level"}
+                                element={character.element}
+                            ></LevelShowcase>
+                            <LevelShowcase
+                                className="sm:mt-2"
+                                left={build.normal.start}
+                                right={build.normal.goal}
+                                icon={<SwordIcon className="iconsm" />}
+                                label={"Normal"}
+                                element={character.element}
+                            ></LevelShowcase>
+                            <LevelShowcase
+                                className="sm:mt-2"
+                                left={build.elemental.start}
+                                right={build.elemental.goal}
+                                icon={<SparklesIcon className="iconsm" />}
+                                label={"Elemental"}
+                                element={character.element}
+                            ></LevelShowcase>
+                            <LevelShowcase
+                                className="sm:mt-2"
+                                left={build.burst.start}
+                                right={build.burst.goal}
+                                icon={<FireIcon className="iconsm" />}
+                                label={"Burst"}
+                                element={character.element}
+                            ></LevelShowcase>
+                        </div>
                     </div>
                 </div>
                 <div className="p-5 rounded-md bg-gscale-dark-background-primary bg-opacity-60">
