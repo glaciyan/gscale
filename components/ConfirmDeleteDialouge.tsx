@@ -1,4 +1,4 @@
-import React, { Dispatch, SetStateAction, useEffect, useState } from "react";
+import React, { Dispatch, SetStateAction, useState } from "react";
 import { Dialog } from "@headlessui/react";
 import buildsDB from "../lib/buildsDatabase";
 import { Button } from "./Button";
