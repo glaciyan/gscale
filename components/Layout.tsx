@@ -14,10 +14,6 @@ const nav = [
 ];
 
 const Layout = ({ children, title, current }: Props) => {
-    useEffect(() => {
-        document.body.className = "bg-gscale-dark-background-ternary";
-    });
-
     return (
         <div className="text-gscale-dark-text-secondary">
             <Head>
