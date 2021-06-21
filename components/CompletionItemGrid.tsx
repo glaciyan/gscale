@@ -10,7 +10,7 @@ export default function CompletionItemGrid({
     build: any;
 }) {
     return (
-        <div className="flex flex-wrap mx-4 mb-4">
+        <div className="flex flex-wrap -m-1">
             {items
                 .sort((a, b) => a.order - b.order)
                 .map((item) => {
