@@ -1,17 +1,24 @@
 import { getCharacterMaterials } from "../lib/characterMaterials";
-import buildsDB from "../lib/buildsDatabase";
 import { characters } from "../data/characters";
 import CompletionItemGrid from "./CompletionItemGrid";
+import { LevelShowcase } from "./LevelShowcase";
+import { SparklesIcon, TrendingUpIcon, FireIcon } from "@heroicons/react/outline";
+import { SwordIcon } from "./icons/sword";
+import { Button } from "./Button";
+import React, { Dispatch, SetStateAction } from "react";
 import Link from "next/link";
 
 export default function CharacterBuild({
     build,
-    className,
+    setDeletingBuild,
 }: {
     build: any;
-    className?: string;
+    setDeletingBuild: Dispatch<SetStateAction<(() => void) | undefined>>;
 }) {
     const character = characters[build.characterId];
+
+    if (!character) return null;
+
     const materials = getCharacterMaterials(
         character,
         build.level,
@@ -21,38 +28,73 @@ export default function CharacterBuild({
     );
 
     return (
-        <div className={className}>
-            <div className="relative">
-                <h1 className="text-lg font-bold">{character.name}</h1>
-                <div>
-                    Level: {build.level.start} to {build.level.goal}
+        <div className="flex flex-col rounded-md shadow-md bg-gscale-dark-background-secondary">
+            <div className="sm:flex">
+                <div className="flex p-4">
+                    {/* <div className="flex justify-center flex-1 sm:hidden">
+                        <ItemCharacterCard className="mx-2" character={character} />
+                    </div> */}
+                    <div className="mx-3 mb-2">
+                        <h1 className="mb-2 text-lg font-bold">{character.name}</h1>
+                        <div className="grid grid-cols-2 gap-5 sm:block">
+                            <LevelShowcase
+                                className=""
+                                left={build.level.start}
+                                right={build.level.goal}
+                                icon={<TrendingUpIcon className="iconsm" />}
+                                label={"Level"}
+                                element={character.element}
+                            ></LevelShowcase>
+                            <LevelShowcase
+                                className="sm:mt-2"
+                                left={build.normal.start}
+                                right={build.normal.goal}
+                                icon={<SwordIcon className="iconsm" />}
+                                label={"Normal"}
+                                element={character.element}
+                            ></LevelShowcase>
+                            <LevelShowcase
+                                className="sm:mt-2"
+                                left={build.elemental.start}
+                                right={build.elemental.goal}
+                                icon={<SparklesIcon className="iconsm" />}
+                                label={"Elemental"}
+                                element={character.element}
+                            ></LevelShowcase>
+                            <LevelShowcase
+                                className="sm:mt-2"
+                                left={build.burst.start}
+                                right={build.burst.goal}
+                                icon={<FireIcon className="iconsm" />}
+                                label={"Burst"}
+                                element={character.element}
+                            ></LevelShowcase>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    Normal: {build.normal.start} to {build.normal.goal}
+                <div className="p-5 rounded-md bg-gscale-dark-background-primary bg-opacity-60">
+                    <h2 className="mb-3 ">Materials</h2>
+                    <CompletionItemGrid build={build} items={materials.everything} />
                 </div>
-                <div>
-                    Elemental: {build.elemental.start} to {build.elemental.goal}
-                </div>
-                <div>
-                    Burst: {build.burst.start} to {build.burst.goal}
-                </div>
-                <button
-                    className="absolute top-0 right-0 !py-1.5 bg-red-500 text-gscale-dark-text-primary font-medium hover:bg-opacity-90 btn hover:underline"
-                    onClick={async () => {
-                        await buildsDB.builds.delete(build.id);
-                    }}
-                >
-                    Delete
-                </button>
-
+            </div>
+            <div className="flex items-center justify-end px-4 py-3 border-t-2 border-gscale-dark-background-500">
+                <Button
+                    link
+                    color={"gscale-dark-text-ternary"}
+                    text="Delete"
+                    onClick={() => setDeletingBuild(build)}
+                    className="mr-4"
+                />
                 <Link href={`/build/${character.id}?edit=${build.id}`}>
-                    <a className="absolute top-0 right-40 !py-1.5 bg-blue-500 text-gscale-dark-text-primary font-medium hover:bg-opacity-90 btn hover:underline">
-                        edit
+                    <a>
+                        <Button
+                            secondary
+                            color={`genshin-element-${character.element}`}
+                            text="Edit"
+                        />
                     </a>
                 </Link>
             </div>
-            <h2 className="mt-3 font-bold">Materials needed:</h2>
-            <CompletionItemGrid build={build} items={materials.everything} />
         </div>
     );
 }

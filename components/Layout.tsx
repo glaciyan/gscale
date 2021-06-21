@@ -1,4 +1,4 @@
-import React, { ReactNode, useEffect } from "react";
+import React, { ReactNode } from "react";
 import Head from "next/head";
 import Link from "next/link";
 
@@ -14,10 +14,6 @@ const nav = [
 ];
 
 const Layout = ({ children, title, current }: Props) => {
-    useEffect(() => {
-        document.body.className = "bg-gscale-dark-background-ternary";
-    });
-
     return (
         <div className="text-gscale-dark-text-secondary">
             <Head>
@@ -52,9 +48,6 @@ const Layout = ({ children, title, current }: Props) => {
                             />
                         </a>
                     </Link>
-                    <div className="px-2 pb-0.5 mx-3 text-white font-semibold uppercase bg-genshin-dark-element-hydro rounded-full">
-                        dev
-                    </div>
                     <nav className="flex py-4 sm:ml-12">
                         {nav.map((navi, index, array) => {
                             return (

@@ -30,4 +30,12 @@
     .buttoncommon {
         @apply py-1.5 px-6 rounded text-center;
     }
+
+    .icon {
+        @apply w-6 h-6;
+    }
+
+    .iconsm {
+        @apply w-5 h-5;
+    }
 }

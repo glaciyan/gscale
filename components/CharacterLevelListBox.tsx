@@ -1,5 +1,5 @@
 import { Listbox, Transition } from "@headlessui/react";
-import { SelectorIcon, CheckIcon } from "@heroicons/react/outline";
+import { CheckIcon, ChevronDownIcon } from "@heroicons/react/outline";
 import React, { Fragment } from "react";
 import { characterLevels } from "../data/characterLevels";
 import { getCharacterLevel } from "../lib/getCharacterLevel";
@@ -21,7 +21,7 @@ export function CharacterLevelListBox({
     return (
         <div className="flex">
             <Listbox value={value} onChange={onChange}>
-                <div className="relative w-20">
+                <div className="relative w-18">
                     <Listbox.Button
                         style={
                             first
@@ -37,8 +37,8 @@ export function CharacterLevelListBox({
                             {getCharacterLevel(value).level}
                         </span>
                         <span className="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
-                            <SelectorIcon
-                                className="w-5 h-5 text-gscale-dark-text-primary"
+                            <ChevronDownIcon
+                                className="w-5 h-5 text-gscale-dark-text-ternary"
                                 aria-hidden="true"
                             />
                         </span>
