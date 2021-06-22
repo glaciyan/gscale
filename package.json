@@ -21,6 +21,7 @@
         "classnames": "^2.3.1",
         "dexie": "3.1.0-beta.11",
         "dexie-react-hooks": "^1.0.6",
+        "fuse.js": "^6.4.6",
         "js-yaml": "^4.1.0",
         "lodash": "^4.17.21",
         "millify": "^4.0.0",
