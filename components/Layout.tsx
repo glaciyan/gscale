@@ -15,6 +15,8 @@ const nav = [
     { name: "Your Builds", href: "/builds" },
 ];
 
+const version = "0.9";
+
 const Layout = ({ children, title, current }: Props) => {
     return (
         <div className="text-gscale-dark-text-secondary">
@@ -133,10 +135,11 @@ const Layout = ({ children, title, current }: Props) => {
                     </div>
                     <div className="flex items-center mt-24">
                         <img
-                            className="mr-4"
+                            className="mr-2"
                             src="/images/svg/logo_label_small.svg"
                             alt="logo"
                         />
+                        <div className="mr-2"> v{version} </div>
                         by slimetsp
                     </div>
                     <p className="mt-6 text-gscale-dark-text-ternary">
