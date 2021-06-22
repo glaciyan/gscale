@@ -64,7 +64,7 @@ export const ExternalLink: React.FC<ExternalLinkProps & ClassName> = ({
                 </div>
             </Dialog>
             <a
-                className={`block text-blue-400 hover:underline cursor-pointer ${className}`}
+                className={`block text-blue-400 hover:underline cursor-pointer w-max ${className}`}
                 onClick={() => setIsOpen(true)}
             >
                 {children}

@@ -106,11 +106,11 @@ const Layout = ({ children, title, current }: Props) => {
                                 Genshin Impact Fandom Wiki
                             </ExternalLink>
                         </FooterEntry>
-                        <FooterEntry header="About">
+                        <FooterEntry header="Other">
                             <>
                                 <span>Discord:</span>{" "}
                                 <span
-                                    className="relative transition-colors duration-150 cursor-pointer text-gscale-dark-text-ternary active:text-green-400"
+                                    className="relative transition-colors duration-150 cursor-pointer select-none text-gscale-dark-text-ternary active:text-green-400"
                                     onClick={() => {
                                         navigator.clipboard.writeText("slimetsp#5278");
                                     }}
@@ -120,7 +120,7 @@ const Layout = ({ children, title, current }: Props) => {
                                 </span>
                                 <a
                                     href="https://github.com/slimetsp/gscale"
-                                    className="block text-blue-400 hover:underline"
+                                    className="block text-blue-400 hover:underline w-max"
                                 >
                                     Github
                                 </a>
