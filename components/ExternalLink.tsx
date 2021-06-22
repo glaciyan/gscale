@@ -59,6 +59,8 @@ export const ExternalLink: React.FC<ExternalLinkProps & ClassName> = ({
                             >
                                 Yes
                             </a>
+
+                            <a href="#" aria-hidden={true} className=""></a>
                         </div>
                     </div>
                 </div>

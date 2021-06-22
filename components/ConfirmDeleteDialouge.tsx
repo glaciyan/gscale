@@ -5,19 +5,21 @@ import { Button } from "./Button";
 
 interface ConfirmDeleteDialougeProps {
     build: any;
-    setBuild: Dispatch<SetStateAction<(() => void) | undefined>>;
+    isVisible: boolean;
+    setVisible: Dispatch<SetStateAction<boolean>>;
 }
 
 export const ConfirmDeleteDialouge: React.FC<ConfirmDeleteDialougeProps> = ({
     build,
-    setBuild,
+    isVisible,
+    setVisible,
 }) => {
     const [isLoading, setisLoading] = useState(false);
 
     return (
         <Dialog
-            open={build !== undefined}
-            onClose={() => setBuild(undefined)}
+            open={isVisible}
+            onClose={() => setVisible(false)}
             className="fixed inset-0 z-10 overflow-y-auto text-gscale-dark-text-primary"
         >
             <div className="flex items-center justify-center min-h-screen">
@@ -41,7 +43,7 @@ export const ConfirmDeleteDialouge: React.FC<ConfirmDeleteDialougeProps> = ({
                             ternary
                             text="Cancel"
                             onClick={() => {
-                                setBuild(undefined);
+                                setVisible(false);
                             }}
                         />
                         <Button
@@ -50,11 +52,14 @@ export const ConfirmDeleteDialouge: React.FC<ConfirmDeleteDialougeProps> = ({
                             text="Delete"
                             onClick={async () => {
                                 setisLoading(true);
+
                                 await buildsDB.builds.delete(build.id);
-                                setBuild(undefined);
+                                setVisible(false);
+
                                 setisLoading(false);
                             }}
                         />
+                        <a href="#" aria-hidden={true} className=""></a>
                     </div>
                 </div>
             </div>
