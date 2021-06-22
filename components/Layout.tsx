@@ -108,22 +108,26 @@ const Layout = ({ children, title, current }: Props) => {
                         </FooterEntry>
                         <FooterEntry header="Other">
                             <>
-                                <span>Discord:</span>{" "}
-                                <span
-                                    className="relative transition-colors duration-150 cursor-pointer select-none text-gscale-dark-text-ternary active:text-green-400"
-                                    onClick={() => {
-                                        navigator.clipboard.writeText("slimetsp#5278");
-                                    }}
-                                    title="Click to copy"
-                                >
-                                    slimetsp#5278
-                                </span>
                                 <a
                                     href="https://github.com/slimetsp/gscale"
                                     className="block text-blue-400 hover:underline w-max"
                                 >
                                     Github
                                 </a>
+                                <div>
+                                    <span>Discord:</span>{" "}
+                                    <span
+                                        className="relative transition-colors duration-150 cursor-pointer select-none text-gscale-dark-text-ternary active:text-green-400"
+                                        onClick={() => {
+                                            navigator.clipboard.writeText(
+                                                "slimetsp#5278"
+                                            );
+                                        }}
+                                        title="Click to copy"
+                                    >
+                                        slimetsp#5278
+                                    </span>
+                                </div>
                             </>
                         </FooterEntry>
                     </div>
