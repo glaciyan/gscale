@@ -2,6 +2,7 @@ import React, { ReactNode } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { FooterEntry } from "./FooterEntry";
+import { ExternalLink } from "./ExternalLink";
 
 type Props = {
     children?: ReactNode;
@@ -76,8 +77,8 @@ const Layout = ({ children, title, current }: Props) => {
             </header>
             <main className="min-h-screen">{children}</main>
             <footer className="mt-8 bg-gscale-dark-background-secondary">
-                <div className="max-w-screen-xl py-12 mx-3 md:mx-6 xl:mx-auto">
-                    <div className="flex flex-wrap space-x-16 ">
+                <div className="max-w-screen-xl py-12 mx-6 xl:mx-auto">
+                    <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 xl:grid-cols-4">
                         <FooterEntry header="Navigation">
                             {nav.map((nav) => {
                                 return (
@@ -90,26 +91,20 @@ const Layout = ({ children, title, current }: Props) => {
                             })}
                         </FooterEntry>
                         <FooterEntry header="Data Sources">
-                            <a
-                                href="http://genshin.honeyhunterworld.com/"
-                                className="block text-blue-400 hover:underline"
-                            >
+                            <ExternalLink href="http://genshin.honeyhunterworld.com/">
                                 Honey Hunter World
-                            </a>
-                            <a
-                                href="https://genshin-impact.fandom.com/wiki/Genshin_Impact_Wiki"
-                                className="block text-blue-400 hover:underline"
-                            >
+                            </ExternalLink>
+                            <ExternalLink href="https://genshin-impact.fandom.com/wiki/Genshin_Impact_Wiki">
                                 Genshin Impact Fandom Wiki
-                            </a>
+                            </ExternalLink>
+                            <ExternalLink href="https://paimon.moe/">
+                                paimon.moe
+                            </ExternalLink>
                         </FooterEntry>
                         <FooterEntry header="Images">
-                            <a
-                                href="https://genshin-impact.fandom.com/wiki/Genshin_Impact_Wiki"
-                                className="block text-blue-400 hover:underline"
-                            >
+                            <ExternalLink href="https://genshin-impact.fandom.com/wiki/Genshin_Impact_Wiki">
                                 Genshin Impact Fandom Wiki
-                            </a>
+                            </ExternalLink>
                         </FooterEntry>
                         <FooterEntry header="About">
                             <>
