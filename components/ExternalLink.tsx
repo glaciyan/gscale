@@ -1,7 +1,7 @@
-import { Dialog } from "@headlessui/react";
 import React, { useState } from "react";
 import { ClassName } from "../lib/ClassName";
 import { Button } from "./Button";
+import ReactModal from "react-modal";
 
 interface ExternalLinkProps {
     href: string;
@@ -14,22 +14,31 @@ export const ExternalLink: React.FC<ExternalLinkProps & ClassName> = ({
 }) => {
     const [isOpen, setIsOpen] = useState(false);
 
+    ReactModal.setAppElement("#__next");
+
     return (
         <>
-            <Dialog
-                open={isOpen}
-                onClose={() => setIsOpen(false)}
+            <ReactModal
+                style={{
+                    overlay: {
+                        backgroundColor: "rgba(0, 0, 0, 0.75)",
+                    },
+                }}
+                //@ts-ignore
+                parentSelector={() => document.querySelector("#__next")}
+                isOpen={isOpen}
+                shouldCloseOnOverlayClick={true}
+                onRequestClose={() => {
+                    console.log("requesting close");
+                    setIsOpen(false);
+                }}
                 className="fixed inset-0 z-10 overflow-y-auto text-gscale-dark-text-primary"
             >
-                <div className="flex items-center justify-center min-h-screen">
-                    <Dialog.Overlay className="fixed inset-0 bg-black opacity-60" />
-
+                <div className="flex items-center justify-center min-h-screen ">
                     <div className="z-20 mx-auto rounded-md bg-gscale-dark-background-secondary">
                         <div className="p-6">
-                            <Dialog.Title className="mb-3 font-bold">
-                                Visiting External Site
-                            </Dialog.Title>
-                            <Dialog.Description className="block leading-loose text-gscale-dark-text-secondary">
+                            <div className="mb-3 font-bold">Visiting External Site</div>
+                            <div className="block leading-loose text-gscale-dark-text-secondary">
                                 <>
                                     <span>
                                         You are about to leave gscale.cc and go to
@@ -39,7 +48,7 @@ export const ExternalLink: React.FC<ExternalLinkProps & ClassName> = ({
                                         {href}
                                     </span>
                                 </>
-                            </Dialog.Description>
+                            </div>
                         </div>
 
                         <div className="flex items-center justify-end !px-6 p-3 bg-gscale-dark-background-ternary rounded-b-md">
@@ -59,12 +68,10 @@ export const ExternalLink: React.FC<ExternalLinkProps & ClassName> = ({
                             >
                                 Yes
                             </a>
-
-                            <a href="#" aria-hidden={true} className=""></a>
                         </div>
                     </div>
                 </div>
-            </Dialog>
+            </ReactModal>
             <a
                 className={`block text-blue-400 hover:underline cursor-pointer w-max ${className}`}
                 onClick={() => setIsOpen(true)}

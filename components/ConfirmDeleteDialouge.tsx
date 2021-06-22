@@ -1,7 +1,7 @@
 import React, { Dispatch, SetStateAction, useState } from "react";
-import { Dialog } from "@headlessui/react";
 import buildsDB from "../lib/buildsDatabase";
 import { Button } from "./Button";
+import ReactModal from "react-modal";
 
 interface ConfirmDeleteDialougeProps {
     build: any;
@@ -16,23 +16,30 @@ export const ConfirmDeleteDialouge: React.FC<ConfirmDeleteDialougeProps> = ({
 }) => {
     const [isLoading, setisLoading] = useState(false);
 
+    ReactModal.setAppElement("#__next");
+
     return (
-        <Dialog
-            open={isVisible}
-            onClose={() => setVisible(false)}
+        <ReactModal
+            style={{
+                overlay: {
+                    backgroundColor: "rgba(0, 0, 0, 0.75)",
+                },
+            }}
+            //@ts-ignore
+            parentSelector={() => document.querySelector("#__next")}
+            isOpen={isVisible}
+            preventScroll={true}
+            onRequestClose={() => setVisible(false)}
+            shouldCloseOnOverlayClick={true}
             className="fixed inset-0 z-10 overflow-y-auto text-gscale-dark-text-primary"
         >
             <div className="flex items-center justify-center min-h-screen">
-                <Dialog.Overlay className="fixed inset-0 bg-black opacity-60" />
-
                 <div className="z-20 max-w-sm mx-auto rounded-md bg-gscale-dark-background-secondary">
                     <div className="p-6">
-                        <Dialog.Title className="mb-3 font-bold">
-                            Delete Build
-                        </Dialog.Title>
-                        <Dialog.Description className="text-gscale-dark-text-secondary">
+                        <div className="mb-3 font-bold">Delete Build</div>
+                        <div className="text-gscale-dark-text-secondary">
                             This will delete the build including your checklist.
-                        </Dialog.Description>
+                        </div>
                     </div>
 
                     <div className="flex items-center justify-end !px-6 p-3 bg-gscale-dark-background-ternary rounded-b-md">
@@ -63,6 +70,6 @@ export const ConfirmDeleteDialouge: React.FC<ConfirmDeleteDialougeProps> = ({
                     </div>
                 </div>
             </div>
-        </Dialog>
+        </ReactModal>
     );
 };
