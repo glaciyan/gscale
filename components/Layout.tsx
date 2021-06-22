@@ -1,6 +1,7 @@
 import React, { ReactNode } from "react";
 import Head from "next/head";
 import Link from "next/link";
+import { FooterEntry } from "./FooterEntry";
 
 type Props = {
     children?: ReactNode;
@@ -74,9 +75,78 @@ const Layout = ({ children, title, current }: Props) => {
                 </div>
             </header>
             <main className="min-h-screen">{children}</main>
-            <footer className="mt-8">
-                <hr />
-                <span>Add a footer here</span>
+            <footer className="mt-8 bg-gscale-dark-background-secondary">
+                <div className="max-w-screen-xl py-12 mx-3 md:mx-6 xl:mx-auto">
+                    <div className="flex flex-wrap space-x-16 ">
+                        <FooterEntry header="Navigation">
+                            {nav.map((nav) => {
+                                return (
+                                    <Link href={nav.href} key={nav.name}>
+                                        <a className="block text-gscale-dark-text-secondary hover:underline">
+                                            {nav.name}
+                                        </a>
+                                    </Link>
+                                );
+                            })}
+                        </FooterEntry>
+                        <FooterEntry header="Data Sources">
+                            <a
+                                href="http://genshin.honeyhunterworld.com/"
+                                className="block text-blue-400 hover:underline"
+                            >
+                                Honey Hunter World
+                            </a>
+                            <a
+                                href="https://genshin-impact.fandom.com/wiki/Genshin_Impact_Wiki"
+                                className="block text-blue-400 hover:underline"
+                            >
+                                Genshin Impact Fandom Wiki
+                            </a>
+                        </FooterEntry>
+                        <FooterEntry header="Images">
+                            <a
+                                href="https://genshin-impact.fandom.com/wiki/Genshin_Impact_Wiki"
+                                className="block text-blue-400 hover:underline"
+                            >
+                                Genshin Impact Fandom Wiki
+                            </a>
+                        </FooterEntry>
+                        <FooterEntry header="About">
+                            <>
+                                <span>Discord:</span>{" "}
+                                <span
+                                    className="relative transition-colors duration-150 cursor-pointer text-gscale-dark-text-ternary active:text-green-400"
+                                    onClick={() => {
+                                        navigator.clipboard.writeText("slimetsp#5278");
+                                    }}
+                                    title="Click to copy"
+                                >
+                                    slimetsp#5278
+                                </span>
+                                <a
+                                    href="https://github.com/slimetsp/gscale"
+                                    className="block text-blue-400 hover:underline"
+                                >
+                                    Github
+                                </a>
+                            </>
+                        </FooterEntry>
+                    </div>
+                    <div className="flex items-center mt-24">
+                        <img
+                            className="mr-4"
+                            src="/images/svg/logo_label_small.svg"
+                            alt="logo"
+                        />
+                        by slimetsp
+                    </div>
+                    <p className="mt-4 text-gscale-dark-text-ternary">
+                        gscale.cc is not affiliated with miHoYo.
+                        <br />
+                        Genshin Impact, game content and materials are trademarks and
+                        copyrights of miHoYo.
+                    </p>
+                </div>
             </footer>
         </div>
     );
