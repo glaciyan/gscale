@@ -7,6 +7,8 @@ import { SwordIcon } from "./icons/sword";
 import { Button } from "./Button";
 import React, { Dispatch, SetStateAction } from "react";
 import Link from "next/link";
+import { getCharacterLevel } from "../lib/getCharacterLevel";
+import { CharacterLevel } from "./CharacterLevel";
 
 export default function CharacterBuild({
     build,
@@ -27,6 +29,9 @@ export default function CharacterBuild({
         build.burst
     );
 
+    const levelStart = getCharacterLevel(build.level.start);
+    const levelGoal = getCharacterLevel(build.level.goal);
+
     return (
         <div className="flex flex-col rounded-md shadow-md bg-gscale-dark-background-secondary">
             <div className="sm:flex">
@@ -39,8 +44,8 @@ export default function CharacterBuild({
                         <div className="grid grid-cols-2 gap-5 sm:block">
                             <LevelShowcase
                                 className=""
-                                left={build.level.start}
-                                right={build.level.goal}
+                                left={<CharacterLevel level={levelStart} />}
+                                right={<CharacterLevel level={levelGoal} />}
                                 icon={<TrendingUpIcon className="iconsm" />}
                                 label={"Level"}
                                 element={character.element}

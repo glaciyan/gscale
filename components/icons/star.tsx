@@ -1,9 +1,9 @@
-export function Star({ color }: { color?: string }) {
+export function Star({ color, small }: { color?: string; small?: any }) {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox={`0 0 24 24`}
-            className={`w-6 h-6 flex-shrink-0 ${
+            className={`${small ? "iconsm" : "icon"} flex-shrink-0 ${
                 color ?? "text-gscale-dark-text-secondary"
             }`}
             aria-hidden="true"
