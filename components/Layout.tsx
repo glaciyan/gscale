@@ -1,6 +1,8 @@
 import React, { ReactNode } from "react";
 import Head from "next/head";
 import Link from "next/link";
+import { FooterEntry } from "./FooterEntry";
+import { ExternalLink } from "./ExternalLink";
 
 type Props = {
     children?: ReactNode;
@@ -12,6 +14,8 @@ const nav = [
     { name: "Characters", href: "/" },
     { name: "Your Builds", href: "/builds" },
 ];
+
+const version = "0.9";
 
 const Layout = ({ children, title, current }: Props) => {
     return (
@@ -40,7 +44,7 @@ const Layout = ({ children, title, current }: Props) => {
             <header className="max-w-screen-xl m-6 xl:mx-auto">
                 <div className="flex flex-wrap items-center">
                     <Link href="/">
-                        <a className="focus-visible:ring">
+                        <a className="mr-16 focus-visible:ring">
                             <img
                                 className=""
                                 src="/images/svg/logo_label_small.svg"
@@ -48,7 +52,7 @@ const Layout = ({ children, title, current }: Props) => {
                             />
                         </a>
                     </Link>
-                    <nav className="flex py-4 sm:ml-12">
+                    <nav className="flex py-4">
                         {nav.map((navi, index, array) => {
                             return (
                                 <span key={navi.href} className="flex">
@@ -74,9 +78,77 @@ const Layout = ({ children, title, current }: Props) => {
                 </div>
             </header>
             <main className="min-h-screen">{children}</main>
-            <footer className="mt-8">
-                <hr />
-                <span>Add a footer here</span>
+            <footer className="mt-8 bg-gscale-dark-background-secondary">
+                <div className="max-w-screen-xl py-12 mx-6 xl:mx-auto">
+                    <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 xl:grid-cols-4">
+                        <FooterEntry header="Navigation">
+                            {nav.map((nav) => {
+                                return (
+                                    <Link href={nav.href} key={nav.name}>
+                                        <a className="block text-gscale-dark-text-secondary hover:underline">
+                                            {nav.name}
+                                        </a>
+                                    </Link>
+                                );
+                            })}
+                        </FooterEntry>
+                        <FooterEntry header="Data Sources">
+                            <ExternalLink href="http://genshin.honeyhunterworld.com/">
+                                Honey Hunter World
+                            </ExternalLink>
+                            <ExternalLink href="https://genshin-impact.fandom.com/wiki/Genshin_Impact_Wiki">
+                                Genshin Impact Fandom Wiki
+                            </ExternalLink>
+                            <ExternalLink href="https://paimon.moe/">
+                                paimon.moe
+                            </ExternalLink>
+                        </FooterEntry>
+                        <FooterEntry header="Images">
+                            <ExternalLink href="https://genshin-impact.fandom.com/wiki/Genshin_Impact_Wiki">
+                                Genshin Impact Fandom Wiki
+                            </ExternalLink>
+                        </FooterEntry>
+                        <FooterEntry header="Other">
+                            <>
+                                <a
+                                    href="https://github.com/slimetsp/gscale"
+                                    className="block text-blue-400 hover:underline w-max"
+                                >
+                                    Github
+                                </a>
+                                <div>
+                                    <span>Discord:</span>{" "}
+                                    <span
+                                        className="relative transition-colors duration-150 cursor-pointer select-none text-gscale-dark-text-ternary active:text-green-400"
+                                        onClick={() => {
+                                            navigator.clipboard.writeText(
+                                                "slimetsp#5278"
+                                            );
+                                        }}
+                                        title="Click to copy"
+                                    >
+                                        slimetsp#5278
+                                    </span>
+                                </div>
+                            </>
+                        </FooterEntry>
+                    </div>
+                    <div className="flex items-center mt-24">
+                        <img
+                            className="mr-2"
+                            src="/images/svg/logo_label_small.svg"
+                            alt="logo"
+                        />
+                        <div className="mr-2"> v{version} </div>
+                        by slimetsp
+                    </div>
+                    <p className="mt-6 text-gscale-dark-text-ternary">
+                        gscale.cc is not affiliated with miHoYo.
+                        <br />
+                        Genshin Impact, game content and materials are trademarks and
+                        copyrights of miHoYo.
+                    </p>
+                </div>
             </footer>
         </div>
     );

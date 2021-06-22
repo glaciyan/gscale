@@ -80,7 +80,10 @@ export default function CharacterCard({
 
     const card = (
         <>
-            <div className="relative flex items-center justify-center overflow-hidden bg-gscale-dark-background-secondary">
+            <div
+                className="relative flex items-center justify-center overflow-hidden bg-gscale-dark-background-secondary"
+                id={character.id}
+            >
                 <Image
                     src={`/images/characters/card/${character.id}.png`}
                     layout="intrinsic"
