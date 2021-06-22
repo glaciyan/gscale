@@ -40,7 +40,7 @@ const Layout = ({ children, title, current }: Props) => {
             <header className="max-w-screen-xl m-6 xl:mx-auto">
                 <div className="flex flex-wrap items-center">
                     <Link href="/">
-                        <a className="focus-visible:ring">
+                        <a className="mr-16 focus-visible:ring">
                             <img
                                 className=""
                                 src="/images/svg/logo_label_small.svg"
@@ -48,7 +48,7 @@ const Layout = ({ children, title, current }: Props) => {
                             />
                         </a>
                     </Link>
-                    <nav className="flex py-4 sm:ml-12">
+                    <nav className="flex py-4">
                         {nav.map((navi, index, array) => {
                             return (
                                 <span key={navi.href} className="flex">
