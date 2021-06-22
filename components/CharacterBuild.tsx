@@ -86,7 +86,7 @@ export default function CharacterBuild({
                     className="mr-4"
                 />
                 <Link href={`/build/${character.id}?edit=${build.id}`}>
-                    <a>
+                    <a className="mr-2">
                         <Button
                             secondary
                             color={`genshin-element-${character.element}`}
