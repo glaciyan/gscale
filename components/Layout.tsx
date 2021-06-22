@@ -135,7 +135,7 @@ const Layout = ({ children, title, current }: Props) => {
                         />
                         by slimetsp
                     </div>
-                    <p className="mt-4 text-gscale-dark-text-ternary">
+                    <p className="mt-6 text-gscale-dark-text-ternary">
                         gscale.cc is not affiliated with miHoYo.
                         <br />
                         Genshin Impact, game content and materials are trademarks and
