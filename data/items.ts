@@ -10,7 +10,7 @@ export type Items = { [id: string]: Item };
 
 export type BuildItem = Item & { order: number; amount: number };
 
-export const items: Items = {
+export const items = {
     nothing: {
         name: "nothing",
         rarity: 0,
