@@ -39,6 +39,22 @@ export const dummyCharacter: Character = {
 };
 
 export const characters: Characters = {
+    kazuha: {
+        id: "kazuha",
+        name: "Kazuha",
+        rarity: 5,
+        constellation: "Acer Palmatum",
+        description:
+            "A wandering samurai from Inazuma who is currently with Liyue's Crux Fleet. A gentle and carefree soul whose heart hides a great many burdens from the past. It's hard to say if weathering life's storms has eroded any sharp edges he once had or his reserved nature keeps them hidden from view. The first time most people meet Kaedehara Kazuha, they presume he is just another traineee crew member aboard The Crux.",
+        element: "anemo",
+        weapon: "sword",
+        sub: "Elemental Mastery",
+        ascension: "Marionette Core",
+        local: "Sea Ganoderma",
+        common: "treasure_hoarder_insignia",
+        weekly: "Gilded Scale",
+        book: "diligence",
+    },
     eula: {
         id: "eula",
         name: "Eula",

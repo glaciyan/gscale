@@ -15,6 +15,14 @@ export const items = {
         name: "nothing",
         rarity: 0,
     },
+    sea_ganoderma: {
+        name: "Sea Ganoderma",
+        rarity: 1,
+    },
+    marionette_core: {
+        name: "Marionette Core",
+        rarity: 4,
+    },
     crown_of_insight: {
         name: "Crown of Insight",
         rarity: 5,
