@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Character } from "../data/characters";
 import _ from "lodash";
 import { ElementIcon } from "./icons/element";
@@ -12,6 +12,8 @@ interface CharacterDetailsProps {
 }
 
 export const CharacterDetails: React.FC<CharacterDetailsProps> = ({ character }) => {
+    const [extendedDescription, setextendedDescription] = useState(false);
+
     return (
         <div className="maxsm:rounded-t-md sm:rounded-tl-md lg:rounded-l-md bg-gscale-dark-background-ternary500 lg:flex-grow-0">
             <div className="relative flex flex-col h-full">
@@ -35,8 +37,10 @@ export const CharacterDetails: React.FC<CharacterDetailsProps> = ({ character })
                             {character.constellation}
                         </div>
                         <div
-                            className="block mt-1 text-sm leading-4 sm:w-64 text-gscale-dark-text-ternary line-clamp-4"
-                            title={character.description}
+                            onClick={() => setextendedDescription(!extendedDescription)}
+                            className={`block mt-1 text-sm leading-4 sm:w-64 text-gscale-dark-text-ternary ${
+                                extendedDescription ? "" : "line-clamp-4"
+                            }`}
                         >
                             {character.description}
                         </div>

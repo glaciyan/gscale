@@ -72,12 +72,12 @@ export const ExternalLink: React.FC<ExternalLinkProps & ClassName> = ({
                     </div>
                 </div>
             </ReactModal>
-            <a
+            <button
                 className={`block text-blue-400 hover:underline cursor-pointer w-max ${className}`}
                 onClick={() => setIsOpen(true)}
             >
                 {children}
-            </a>
+            </button>
         </>
     );
 };

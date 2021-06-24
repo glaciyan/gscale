@@ -85,7 +85,7 @@ const Layout = ({ children, title, current }: Props) => {
                             {nav.map((nav) => {
                                 return (
                                     <Link href={nav.href} key={nav.name}>
-                                        <a className="block text-gscale-dark-text-secondary hover:underline">
+                                        <a className="block text-gscale-dark-text-secondary hover:underline w-max">
                                             {nav.name}
                                         </a>
                                     </Link>

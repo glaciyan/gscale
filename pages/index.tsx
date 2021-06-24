@@ -4,7 +4,6 @@ import CharacterCard from "../components/CharacterCard";
 import { Character, Characters, characters as charactersList } from "../data/characters";
 import { Search } from "../components/Search";
 import { useEffect, useState } from "react";
-import { If } from "../components/If";
 import Fuse from "fuse.js";
 import router from "next/router";
 
@@ -19,12 +18,31 @@ export const getStaticProps: GetStaticProps = async () => {
 const IndexPage = ({ characters }: { characters: Characters }) => {
     const [search, setSearch] = useState("");
 
-    const options = {
-        threshold: 0.4,
-        keys: ["id", "name", "element", "weapon", "rarity"],
-    } as any;
+    const [fuse, setfuse] = useState(null);
 
-    const fuse = new Fuse(Object.values(characters), options);
+    useEffect(() => {
+        setfuse(
+            //@ts-ignore
+            new Fuse(Object.values(characters), {
+                threshold: 0.3,
+                useExtendedSearch: true,
+                keys: [
+                    { name: "name", weight: 3 },
+                    { name: "element", weight: 2 },
+                    { name: "weapon", weight: 2 },
+                    "rarity",
+                    "common",
+                    "book",
+                    "weekly",
+                    "ascension",
+                    "local",
+                ],
+            })
+        );
+    }, []);
+
+    //@ts-ignore
+    const searchResult = fuse ? fuse.search(search) : [];
 
     return (
         <Layout title="Home" current="Characters">
@@ -33,7 +51,7 @@ const IndexPage = ({ characters }: { characters: Characters }) => {
                     content={search}
                     setContent={setSearch}
                     onConfirm={() => {
-                        const tsearch = fuse.search(search);
+                        const tsearch = searchResult;
                         if (tsearch.length > 0) {
                             router.push(`/build/${tsearch[0].item.id}`);
                         }
@@ -43,16 +61,14 @@ const IndexPage = ({ characters }: { characters: Characters }) => {
                 />
                 <div className="grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
                     {search !== ""
-                        ? fuse
-                              .search(search)
-                              .map(({ item: character }: { item: Character }) => {
-                                  return (
-                                      <CharacterCard
-                                          character={character}
-                                          key={character.id}
-                                      />
-                                  );
-                              })
+                        ? searchResult.map(({ item: character }: { item: Character }) => {
+                              return (
+                                  <CharacterCard
+                                      character={character}
+                                      key={character.id}
+                                  />
+                              );
+                          })
                         : Object.entries(characters).map(([_, character]) => {
                               return (
                                   <CharacterCard
