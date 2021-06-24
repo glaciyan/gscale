@@ -1,8 +1,7 @@
 import { Item, items } from "../data/items";
 import { Vision } from "../data/characters";
 
-export function getItem(group: string | null, rarity: number): Item {
-    if (group === null) return items.null;
+export function getItem(group: string, rarity: number): Item {
     const found = Object.values(items).find(
         (item: Item) => item.group === group && item.rarity === rarity
     );
