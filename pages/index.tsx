@@ -32,6 +32,11 @@ const IndexPage = ({ characters }: { characters: Characters }) => {
                     { name: "element", weight: 2 },
                     { name: "weapon", weight: 2 },
                     "rarity",
+                    "common",
+                    "book",
+                    "weekly",
+                    "ascension",
+                    "local",
                 ],
             })
         );
