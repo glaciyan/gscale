@@ -746,6 +746,10 @@ export const items = {
         rarity: 5,
         group: "wolf_tooth",
     },
+    null: {
+        name: "null",
+        rarity: 1,
+    },
 };
 
 export const itemsTyped = items as Items;
