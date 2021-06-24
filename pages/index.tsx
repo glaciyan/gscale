@@ -4,7 +4,6 @@ import CharacterCard from "../components/CharacterCard";
 import { Character, Characters, characters as charactersList } from "../data/characters";
 import { Search } from "../components/Search";
 import { useEffect, useState } from "react";
-import { If } from "../components/If";
 import Fuse from "fuse.js";
 import router from "next/router";
 
