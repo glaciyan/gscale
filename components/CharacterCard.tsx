@@ -58,7 +58,7 @@ export default function CharacterCard({
 
     const cardHoverDialog = (
         <div className="absolute top-0 left-0 w-full h-full">
-            <div className="flex flex-col items-center justify-center w-full h-full transition-all bg-opacity-0 group-hover:bg-opacity-60 bg-gscale-dark-background-ternary backdrop-filter group-hover:backdrop-blur-sm">
+            <div className="flex flex-col items-center justify-center w-full h-full transition-all bg-opacity-0 group-hover:bg-opacity-60 bg-gscale-dark-background-ternary">
                 <Link href={`/build/${character.id}`}>
                     <a
                         className={`buttoncommon focus:outline-none transition-opacity shadow hover:bg-opacity-90 opacity-0 font-medium group-hover:opacity-100 bg-genshin-dark-element-${elementId} text-gscale-dark-text-primary mb-3`}
