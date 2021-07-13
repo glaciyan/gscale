@@ -22,6 +22,7 @@ export default function CheckListItemCard({
         <button
             className="relative m-1 rounded focus:outline-none focus-visible:ring"
             key={toId(item.name)}
+            title={item.name}
             onClick={async () => {
                 if (build.completed) {
                     const find = build.completed.findIndex(
