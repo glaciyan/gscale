@@ -1,3 +1,5 @@
+import { Item } from "./items";
+
 export interface Character {
     id: string;
     name: string;
@@ -7,11 +9,7 @@ export interface Character {
     element: Vision;
     weapon: Weapon;
     sub: string;
-    ascension: string;
-    local: string;
-    common: string;
-    weekly: string;
-    book: string;
+    materials: () => Item[];
 }
 
 export type Vision = "cryo" | "pyro" | "geo" | "electro" | "anemo" | "hydro";

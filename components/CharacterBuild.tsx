@@ -17,13 +17,12 @@ export default function CharacterBuild({ build }: { build: any }) {
 
     if (!character) return null;
 
-    const materials = getCharacterMaterials(
-        character,
-        build.level,
-        build.normal,
-        build.elemental,
-        build.burst
-    );
+    const materials = getCharacterMaterials(character, {
+        level: build.level,
+        normal: build.normal,
+        elemental: build.elemental,
+        burst: build.burst,
+    });
 
     const levelStart = getCharacterLevel(build.level.start);
     const levelGoal = getCharacterLevel(build.level.goal);
