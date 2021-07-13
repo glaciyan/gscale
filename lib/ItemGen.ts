@@ -1,7 +1,7 @@
 import { toId } from ".";
 import itemOrder from "./itemOrder";
 import { itemsTyped, items } from "../data/items";
-import { getItem } from "./getItem";
+import { getItemFromGroup } from "./getItem";
 import { getGem } from "./getItem";
 import { BuildItem, Character } from "./MyTypes";
 
@@ -70,7 +70,7 @@ export class ItemGen {
 
     common(rarity: 1 | 2 | 3, amount: number): BuildItem {
         return {
-            ...getItem(this.character.common, rarity),
+            ...getItemFromGroup(this.character.common, rarity),
             amount: amount,
             order: itemOrder.common + rarity,
         };
@@ -94,7 +94,7 @@ export class ItemGen {
 
     book(rarity: 2 | 3 | 4, amount: number): BuildItem {
         return {
-            ...getItem(this.character.book, rarity),
+            ...getItemFromGroup(this.character.book, rarity),
             amount: amount,
             order: itemOrder.book + rarity,
         };
