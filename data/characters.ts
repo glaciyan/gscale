@@ -20,6 +20,7 @@ export const characters: Characters = {
                 weekly: items.gilded_scale.name,
                 common: ItemGroup.treasure_hoarder_insignia,
                 book: ItemGroup.diligence,
+                gem: ItemGroup.anemo_gem,
             }),
     },
     eula: {
@@ -39,6 +40,7 @@ export const characters: Characters = {
                 common: ItemGroup.mask,
                 weekly: "Dragon Lord's Crown",
                 book: ItemGroup.resistance,
+                gem: ItemGroup.cryo_gem,
             }),
     },
     yanfei: {
@@ -58,6 +60,7 @@ export const characters: Characters = {
                 common: ItemGroup.treasure_hoarder_insignia,
                 weekly: "Bloodjade Branch",
                 book: ItemGroup.gold,
+                gem: ItemGroup.pyro_gem,
             }),
     },
     rosaria: {
@@ -77,6 +80,7 @@ export const characters: Characters = {
                 common: ItemGroup.fatui_insignia,
                 weekly: "Shadow of the Warrior",
                 book: ItemGroup.ballad,
+                gem: ItemGroup.cryo_gem,
             }),
     },
     hu_tao: {
@@ -96,6 +100,7 @@ export const characters: Characters = {
                 common: ItemGroup.nectar,
                 weekly: "Shard of a Foul Legacy",
                 book: ItemGroup.diligence,
+                gem: ItemGroup.pyro_gem,
             }),
     },
     xiao: {
@@ -115,6 +120,7 @@ export const characters: Characters = {
                 common: ItemGroup.slime,
                 weekly: "Shadow of the Warrior",
                 book: ItemGroup.prosperity,
+                gem: ItemGroup.anemo_gem,
             }),
     },
     ganyu: {
@@ -134,6 +140,7 @@ export const characters: Characters = {
                 common: ItemGroup.nectar,
                 weekly: "Shadow of the Warrior",
                 book: ItemGroup.diligence,
+                gem: ItemGroup.cryo_gem,
             }),
     },
     albedo: {
@@ -153,6 +160,7 @@ export const characters: Characters = {
                 common: ItemGroup.scroll,
                 weekly: "Tusk of Monoceros Caeli",
                 book: ItemGroup.ballad,
+                gem: ItemGroup.geo_gem,
             }),
     },
     zhongli: {
@@ -172,6 +180,7 @@ export const characters: Characters = {
                 common: ItemGroup.slime,
                 weekly: "Tusk of Monoceros Caeli",
                 book: ItemGroup.gold,
+                gem: ItemGroup.geo_gem,
             }),
     },
     xinyan: {
@@ -191,6 +200,7 @@ export const characters: Characters = {
                 common: ItemGroup.treasure_hoarder_insignia,
                 weekly: "Tusk of Monoceros Caeli",
                 book: ItemGroup.gold,
+                gem: ItemGroup.pyro_gem,
             }),
     },
     tartaglia: {
@@ -210,6 +220,7 @@ export const characters: Characters = {
                 common: ItemGroup.fatui_insignia,
                 weekly: "Shard of a Foul Legacy",
                 book: ItemGroup.freedom,
+                gem: ItemGroup.hydro_gem,
             }),
     },
     diona: {
@@ -229,6 +240,7 @@ export const characters: Characters = {
                 common: ItemGroup.arrowhead,
                 weekly: "Shard of a Foul Legacy",
                 book: ItemGroup.freedom,
+                gem: ItemGroup.cryo_gem,
             }),
     },
     klee: {
@@ -248,6 +260,7 @@ export const characters: Characters = {
                 common: ItemGroup.scroll,
                 weekly: "Ring of Boreas",
                 book: ItemGroup.freedom,
+                gem: ItemGroup.pyro_gem,
             }),
     },
     venti: {
@@ -267,6 +280,7 @@ export const characters: Characters = {
                 common: ItemGroup.slime,
                 weekly: "Tail of Boreas",
                 book: ItemGroup.ballad,
+                gem: ItemGroup.anemo_gem,
             }),
     },
     keqing: {
@@ -286,6 +300,7 @@ export const characters: Characters = {
                 common: ItemGroup.nectar,
                 weekly: "Ring of Boreas",
                 book: ItemGroup.prosperity,
+                gem: ItemGroup.electro_gem,
             }),
     },
     mona: {
@@ -305,6 +320,7 @@ export const characters: Characters = {
                 common: ItemGroup.nectar,
                 weekly: "Ring of Boreas",
                 book: ItemGroup.resistance,
+                gem: ItemGroup.hydro_gem,
             }),
     },
     qiqi: {
@@ -324,6 +340,7 @@ export const characters: Characters = {
                 common: ItemGroup.scroll,
                 weekly: "Tail of Boreas",
                 book: ItemGroup.prosperity,
+                gem: ItemGroup.cryo_gem,
             }),
     },
     diluc: {
@@ -343,6 +360,7 @@ export const characters: Characters = {
                 common: ItemGroup.fatui_insignia,
                 weekly: "Dvalin's Plume",
                 book: ItemGroup.resistance,
+                gem: ItemGroup.pyro_gem,
             }),
     },
     jean: {
@@ -362,6 +380,7 @@ export const characters: Characters = {
                 common: ItemGroup.mask,
                 weekly: "Dvalin's Plume",
                 book: ItemGroup.resistance,
+                gem: ItemGroup.anemo_gem,
             }),
     },
     sucrose: {
@@ -381,6 +400,7 @@ export const characters: Characters = {
                 common: ItemGroup.nectar,
                 weekly: "Spirit Locket of Boreas",
                 book: ItemGroup.freedom,
+                gem: ItemGroup.anemo_gem,
             }),
     },
     chongyun: {
@@ -400,6 +420,7 @@ export const characters: Characters = {
                 common: ItemGroup.mask,
                 weekly: "Dvalin's Sigh",
                 book: ItemGroup.diligence,
+                gem: ItemGroup.cryo_gem,
             }),
     },
     noelle: {
@@ -419,6 +440,7 @@ export const characters: Characters = {
                 common: ItemGroup.mask,
                 weekly: "Dvalin's Claw",
                 book: ItemGroup.resistance,
+                gem: ItemGroup.geo_gem,
             }),
     },
     bennett: {
@@ -438,6 +460,7 @@ export const characters: Characters = {
                 common: ItemGroup.treasure_hoarder_insignia,
                 weekly: "Dvalin's Plume",
                 book: ItemGroup.resistance,
+                gem: ItemGroup.pyro_gem,
             }),
     },
     fischl: {
@@ -457,6 +480,7 @@ export const characters: Characters = {
                 common: ItemGroup.arrowhead,
                 weekly: "Spirit Locket of Boreas",
                 book: ItemGroup.ballad,
+                gem: ItemGroup.electro_gem,
             }),
     },
     ningguang: {
@@ -476,6 +500,7 @@ export const characters: Characters = {
                 common: ItemGroup.fatui_insignia,
                 weekly: "Spirit Locket of Boreas",
                 book: ItemGroup.prosperity,
+                gem: ItemGroup.geo_gem,
             }),
     },
     xingqiu: {
@@ -495,6 +520,7 @@ export const characters: Characters = {
                 common: ItemGroup.mask,
                 weekly: "Tail of Boreas",
                 book: ItemGroup.gold,
+                gem: ItemGroup.hydro_gem,
             }),
     },
     beidou: {
@@ -514,6 +540,7 @@ export const characters: Characters = {
                 common: ItemGroup.treasure_hoarder_insignia,
                 weekly: "Dvalin's Sigh",
                 book: ItemGroup.gold,
+                gem: ItemGroup.electro_gem,
             }),
     },
     xiangling: {
@@ -533,6 +560,7 @@ export const characters: Characters = {
                 common: ItemGroup.slime,
                 weekly: "Dvalin's Claw",
                 book: ItemGroup.diligence,
+                gem: ItemGroup.pyro_gem,
             }),
     },
     razor: {
@@ -552,6 +580,7 @@ export const characters: Characters = {
                 common: ItemGroup.mask,
                 weekly: "Dvalin's Claw",
                 book: ItemGroup.resistance,
+                gem: ItemGroup.electro_gem,
             }),
     },
     barbara: {
@@ -571,6 +600,7 @@ export const characters: Characters = {
                 common: ItemGroup.scroll,
                 weekly: "Ring of Boreas",
                 book: ItemGroup.freedom,
+                gem: ItemGroup.hydro_gem,
             }),
     },
     lisa: {
@@ -590,6 +620,7 @@ export const characters: Characters = {
                 common: ItemGroup.slime,
                 weekly: "Dvalin's Claw",
                 book: ItemGroup.ballad,
+                gem: ItemGroup.electro_gem,
             }),
     },
     kaeya: {
@@ -609,6 +640,7 @@ export const characters: Characters = {
                 common: ItemGroup.treasure_hoarder_insignia,
                 weekly: "Spirit Locket of Boreas",
                 book: ItemGroup.ballad,
+                gem: ItemGroup.cryo_gem,
             }),
     },
     amber: {
@@ -628,6 +660,7 @@ export const characters: Characters = {
                 common: ItemGroup.arrowhead,
                 weekly: "Dvalin's Sigh",
                 book: ItemGroup.freedom,
+                gem: ItemGroup.pyro_gem,
             }),
     },
 };
