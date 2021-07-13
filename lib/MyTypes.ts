@@ -19,6 +19,7 @@ export interface Characters {
 }
 
 export const enum ItemGroup {
+    unknown = -1,
     pyro_gem,
     geo_gem,
     cryo_gem,
