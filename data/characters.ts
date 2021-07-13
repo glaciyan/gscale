@@ -12,6 +12,7 @@ export const characters: Characters = {
         element: "anemo",
         weapon: "sword",
         sub: "asdf",
+        // TODO execute this function
         materials: () =>
             standard({
                 local: items.sea_ganoderma.name,
