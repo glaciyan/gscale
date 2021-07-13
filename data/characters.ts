@@ -22,22 +22,6 @@ export interface Characters {
     [id: string]: Character;
 }
 
-export const dummyCharacter: Character = {
-    id: "dummy",
-    name: "Dummy",
-    rarity: 5,
-    constellation: "",
-    description: "",
-    element: "cryo",
-    weapon: "claymore",
-    sub: "",
-    ascension: "Crystalline Bloom",
-    local: "Dandelion Seed",
-    common: "mask",
-    weekly: "Dragon Lord's Crown",
-    book: "resistance",
-};
-
 export const characters: Characters = {
     kazuha: {
         id: "kazuha",
