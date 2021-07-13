@@ -1,3 +1,5 @@
+import { characterLevels, Level } from "../data/characterLevels";
+
 export function toId(name: string) {
     return name.trim().replace(/'/g, "").replace(/[ -]/g, "_").toLowerCase();
 }
@@ -26,4 +28,16 @@ export function getAscensionLevel(level: number): number {
     else if (level >= 71 && level <= 80) return 5;
     else if (level >= 81) return 6;
     else return 0;
+}
+
+export function toLevel(level: number): Level {
+    let highest: [string, Level] = ["1", { level: 1, ascended: false }];
+
+    Object.entries(characterLevels).forEach((lvl) => {
+        if (level >= lvl[1].level + (lvl[1].ascended ? 1 : 0)) {
+            highest = lvl;
+        }
+    });
+
+    return highest[1];
 }

@@ -1,5 +1,5 @@
 import _ from "lodash";
-import { Character, Item, ItemGroup, LevelConfig } from "./MyTypes";
+import { BuildItem, Character, Item, ItemGroup, LevelConfig } from "./MyTypes";
 
 export interface MaterialList {
     mora: number;
@@ -28,16 +28,22 @@ export function getCharacterMaterials(character: Character, _lvlCfg: LevelConfig
     const materialTable = character.materials();
 }
 
-export interface CharacterMaterials {
+export interface CharacterMaterialsArgs {
     ascension: string;
     local: string;
     weekly: string;
     common: ItemGroup;
     book: ItemGroup;
+	gem: ItemGroup;
 }
 
-export function standard(list: CharacterMaterials): Item[] {
-    console.log(list);
+export interface CharacterMaterials {
+    ascension: BuildItem[];
+    normal: BuildItem[];
+    elemental: BuildItem[];
+    burst: BuildItem[];
+}
 
-    return [];
+export function standard(list: CharacterMaterialsArgs): CharacterMaterials {
+	const ascension = 
 }
