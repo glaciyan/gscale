@@ -1,16 +1,13 @@
-import { getAscensionLevel, sumObjectArray } from ".";
-import { xp } from "./ItemGen";
-import { ascensionCosts as fullAscensionCostOf } from "../data/ascensionCost";
-import { Character } from "../data/characters";
-import { costsTo } from "../data/characterLevels";
 import _ from "lodash";
-import { BuildItem, Item, items } from "../data/items";
-import itemOrder from "./itemOrder";
-import { talentCost } from "../data/talentCost";
-import { mora as moraGen } from "./ItemGen";
-import { LevelConfig, Progression } from "./MyTypes";
+import { Character, Item, ItemGroup, LevelConfig } from "./MyTypes";
 
-export function getCharacterMaterials(character: Character, lvlCfg: LevelConfig) {
+export interface MaterialList {
+    mora: number;
+    xp: number;
+    // level:
+}
+
+export function getCharacterMaterials(character: Character, _lvlCfg: LevelConfig) {
     // sanitize lvlCfg
     // get all leveling materials
     // get all ascension materials
@@ -31,10 +28,16 @@ export function getCharacterMaterials(character: Character, lvlCfg: LevelConfig)
     const materialTable = character.materials();
 }
 
-export function standard(
-    ascension: string,
-    local: string,
-    common: string,
-    weekly: string,
-    book: string
-): Item[] {}
+export interface CharacterMaterials {
+    ascension: string;
+    local: string;
+    weekly: string;
+    common: ItemGroup;
+    book: ItemGroup;
+}
+
+export function standard(list: CharacterMaterials): Item[] {
+    console.log(list);
+
+    return [];
+}

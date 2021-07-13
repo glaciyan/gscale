@@ -1,5 +1,5 @@
 import millify from "millify";
-import { BuildItem, Item } from "../data/items";
+import { BuildItem, Item } from "../lib/MyTypes";
 import CheckListItemCard from "./CheckListItemCard";
 
 export default function CompletionItemGrid({

@@ -1,5 +1,5 @@
-import { Character } from "./characters";
 import { ItemGen } from "../lib/ItemGen";
+import { Character } from "../lib/MyTypes";
 
 export function ascensionCosts(character: Character) {
     const item = new ItemGen(character);

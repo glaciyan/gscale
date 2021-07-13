@@ -1,7 +1,7 @@
 import React from "react";
 import Img from "react-optimized-image";
-import { Item } from "../data/items";
 import { toId } from "../lib";
+import { Item } from "../lib/MyTypes";
 
 interface ItemImageProps {
     item: Item;

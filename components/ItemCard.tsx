@@ -1,4 +1,4 @@
-import { Item } from "../data/items";
+import { Item } from "../lib/MyTypes";
 import { ItemImage } from "./ItemImage";
 
 export default function ItemCard({ item, label }: { item: Item; label?: string }) {

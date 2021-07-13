@@ -1,9 +1,9 @@
 import { toId } from ".";
 import itemOrder from "./itemOrder";
-import { Character } from "../data/characters";
-import { itemsTyped, BuildItem, items } from "../data/items";
+import { itemsTyped, items } from "../data/items";
 import { getItem } from "./getItem";
 import { getGem } from "./getItem";
+import { BuildItem, Character } from "./MyTypes";
 
 export function mora(amount: number): BuildItem {
     return {

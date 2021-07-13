@@ -1,24 +1,6 @@
-import { Item } from "./items";
-
-export interface Character {
-    id: string;
-    name: string;
-    rarity: 4 | 5;
-    constellation: string;
-    description: string;
-    element: Vision;
-    weapon: Weapon;
-    sub: string;
-    materials: () => Item[];
-}
-
-export type Vision = "cryo" | "pyro" | "geo" | "electro" | "anemo" | "hydro";
-
-export type Weapon = "bow" | "catalyst" | "claymore" | "polearm" | "sword";
-
-export interface Characters {
-    [id: string]: Character;
-}
+import { standard } from "../lib/characterMaterials";
+import { Characters, ItemGroup } from "../lib/MyTypes";
+import { items } from "./items";
 
 export const characters: Characters = {
     kazuha: {
@@ -31,11 +13,14 @@ export const characters: Characters = {
         element: "anemo",
         weapon: "sword",
         sub: "Elemental Mastery",
-        ascension: "Marionette Core",
-        local: "Sea Ganoderma",
-        common: "treasure_hoarder_insignia",
-        weekly: "Gilded Scale",
-        book: "diligence",
+        materials: () =>
+            standard({
+                ascension: items.marionette_core.name,
+                local: items.sea_ganoderma.name,
+                weekly: items.gilded_scale.name,
+                common: ItemGroup.treasure_hoarder_insignia,
+                book: ItemGroup.diligence,
+            }),
     },
     eula: {
         id: "eula",
@@ -47,11 +32,14 @@ export const characters: Characters = {
         element: "cryo",
         weapon: "claymore",
         sub: "CRIT DMG",
-        ascension: "Crystalline Bloom",
-        local: "Dandelion Seed",
-        common: "mask",
-        weekly: "Dragon Lord's Crown",
-        book: "resistance",
+        materials: () =>
+            standard({
+                ascension: "Crystalline Bloom",
+                local: "Dandelion Seed",
+                common: ItemGroup.mask,
+                weekly: "Dragon Lord's Crown",
+                book: ItemGroup.resistance,
+            }),
     },
     yanfei: {
         id: "yanfei",
@@ -63,11 +51,14 @@ export const characters: Characters = {
         element: "pyro",
         weapon: "catalyst",
         sub: "Pyro DMG Bonus",
-        ascension: "Juvenile Jade",
-        local: "Noctilucous Jade",
-        common: "treasure_hoarder_insignia",
-        weekly: "Bloodjade Branch",
-        book: "gold",
+        materials: () =>
+            standard({
+                ascension: "Juvenile Jade",
+                local: "Noctilucous Jade",
+                common: ItemGroup.treasure_hoarder_insignia,
+                weekly: "Bloodjade Branch",
+                book: ItemGroup.gold,
+            }),
     },
     rosaria: {
         id: "rosaria",
@@ -79,11 +70,14 @@ export const characters: Characters = {
         element: "cryo",
         weapon: "polearm",
         sub: "ATK",
-        ascension: "Hoarfrost Core",
-        local: "Valberry",
-        common: "fatui_insignia",
-        weekly: "Shadow of the Warrior",
-        book: "ballad",
+        materials: () =>
+            standard({
+                ascension: "Hoarfrost Core",
+                local: "Valberry",
+                common: ItemGroup.fatui_insignia,
+                weekly: "Shadow of the Warrior",
+                book: ItemGroup.ballad,
+            }),
     },
     hu_tao: {
         id: "hu_tao",
@@ -95,11 +89,14 @@ export const characters: Characters = {
         element: "pyro",
         weapon: "polearm",
         sub: "CRIT DMG",
-        ascension: "Juvenile Jade",
-        local: "Silk Flower",
-        common: "nectar",
-        weekly: "Shard of a Foul Legacy",
-        book: "diligence",
+        materials: () =>
+            standard({
+                ascension: "Juvenile Jade",
+                local: "Silk Flower",
+                common: ItemGroup.nectar,
+                weekly: "Shard of a Foul Legacy",
+                book: ItemGroup.diligence,
+            }),
     },
     xiao: {
         id: "xiao",
@@ -111,11 +108,14 @@ export const characters: Characters = {
         element: "anemo",
         weapon: "polearm",
         sub: "CRIT Rate",
-        ascension: "Juvenile Jade",
-        local: "Qingxin",
-        common: "slime",
-        weekly: "Shadow of the Warrior",
-        book: "prosperity",
+        materials: () =>
+            standard({
+                ascension: "Juvenile Jade",
+                local: "Qingxin",
+                common: ItemGroup.slime,
+                weekly: "Shadow of the Warrior",
+                book: ItemGroup.prosperity,
+            }),
     },
     ganyu: {
         id: "ganyu",
@@ -127,11 +127,14 @@ export const characters: Characters = {
         element: "cryo",
         weapon: "bow",
         sub: "CRIT DMG",
-        ascension: "Hoarfrost Core",
-        local: "Qingxin",
-        common: "nectar",
-        weekly: "Shadow of the Warrior",
-        book: "diligence",
+        materials: () =>
+            standard({
+                ascension: "Hoarfrost Core",
+                local: "Qingxin",
+                common: ItemGroup.nectar,
+                weekly: "Shadow of the Warrior",
+                book: ItemGroup.diligence,
+            }),
     },
     albedo: {
         id: "albedo",
@@ -143,11 +146,14 @@ export const characters: Characters = {
         element: "geo",
         weapon: "sword",
         sub: "Geo DMG Bonus",
-        ascension: "Basalt Pillar",
-        local: "Cecilia",
-        common: "scroll",
-        weekly: "Tusk of Monoceros Caeli",
-        book: "ballad",
+        materials: () =>
+            standard({
+                ascension: "Basalt Pillar",
+                local: "Cecilia",
+                common: ItemGroup.scroll,
+                weekly: "Tusk of Monoceros Caeli",
+                book: ItemGroup.ballad,
+            }),
     },
     zhongli: {
         id: "zhongli",
@@ -159,11 +165,14 @@ export const characters: Characters = {
         element: "geo",
         weapon: "polearm",
         sub: "Geo DMG Bonus",
-        ascension: "Basalt Pillar",
-        local: "Cor Lapis",
-        common: "slime",
-        weekly: "Tusk of Monoceros Caeli",
-        book: "gold",
+        materials: () =>
+            standard({
+                ascension: "Basalt Pillar",
+                local: "Cor Lapis",
+                common: ItemGroup.slime,
+                weekly: "Tusk of Monoceros Caeli",
+                book: ItemGroup.gold,
+            }),
     },
     xinyan: {
         id: "xinyan",
@@ -175,11 +184,14 @@ export const characters: Characters = {
         element: "pyro",
         weapon: "claymore",
         sub: "ATK",
-        ascension: "Everflame Seed",
-        local: "Violetgrass",
-        common: "treasure_hoarder_insignia",
-        weekly: "Tusk of Monoceros Caeli",
-        book: "gold",
+        materials: () =>
+            standard({
+                ascension: "Everflame Seed",
+                local: "Violetgrass",
+                common: ItemGroup.treasure_hoarder_insignia,
+                weekly: "Tusk of Monoceros Caeli",
+                book: ItemGroup.gold,
+            }),
     },
     tartaglia: {
         id: "tartaglia",
@@ -191,11 +203,14 @@ export const characters: Characters = {
         element: "hydro",
         weapon: "bow",
         sub: "Hydro DMG Bonus",
-        ascension: "Cleansing Heart",
-        local: "Starconch",
-        common: "fatui_insignia",
-        weekly: "Shard of a Foul Legacy",
-        book: "freedom",
+        materials: () =>
+            standard({
+                ascension: "Cleansing Heart",
+                local: "Starconch",
+                common: ItemGroup.fatui_insignia,
+                weekly: "Shard of a Foul Legacy",
+                book: ItemGroup.freedom,
+            }),
     },
     diona: {
         id: "diona",
@@ -207,11 +222,14 @@ export const characters: Characters = {
         element: "cryo",
         weapon: "bow",
         sub: "Cryo DMG Bonus",
-        ascension: "Hoarfrost Core",
-        local: "Calla Lily",
-        common: "arrowhead",
-        weekly: "Shard of a Foul Legacy",
-        book: "freedom",
+        materials: () =>
+            standard({
+                ascension: "Hoarfrost Core",
+                local: "Calla Lily",
+                common: ItemGroup.arrowhead,
+                weekly: "Shard of a Foul Legacy",
+                book: ItemGroup.freedom,
+            }),
     },
     klee: {
         id: "klee",
@@ -223,11 +241,14 @@ export const characters: Characters = {
         element: "pyro",
         weapon: "catalyst",
         sub: "Pyro DMG Bonus",
-        ascension: "Everflame Seed",
-        local: "Philanemo Mushroom",
-        common: "scroll",
-        weekly: "Ring of Boreas",
-        book: "freedom",
+        materials: () =>
+            standard({
+                ascension: "Everflame Seed",
+                local: "Philanemo Mushroom",
+                common: ItemGroup.scroll,
+                weekly: "Ring of Boreas",
+                book: ItemGroup.freedom,
+            }),
     },
     venti: {
         id: "venti",
@@ -239,11 +260,14 @@ export const characters: Characters = {
         element: "anemo",
         weapon: "bow",
         sub: "Energy Recharge",
-        ascension: "Hurricane Seed",
-        local: "Cecilia",
-        common: "slime",
-        weekly: "Tail of Boreas",
-        book: "ballad",
+        materials: () =>
+            standard({
+                ascension: "Hurricane Seed",
+                local: "Cecilia",
+                common: ItemGroup.slime,
+                weekly: "Tail of Boreas",
+                book: ItemGroup.ballad,
+            }),
     },
     keqing: {
         id: "keqing",
@@ -255,11 +279,14 @@ export const characters: Characters = {
         element: "electro",
         weapon: "sword",
         sub: "CRIT DMG",
-        ascension: "Lightning Prism",
-        local: "Cor Lapis",
-        common: "nectar",
-        weekly: "Ring of Boreas",
-        book: "prosperity",
+        materials: () =>
+            standard({
+                ascension: "Lightning Prism",
+                local: "Cor Lapis",
+                common: ItemGroup.nectar,
+                weekly: "Ring of Boreas",
+                book: ItemGroup.prosperity,
+            }),
     },
     mona: {
         id: "mona",
@@ -271,11 +298,14 @@ export const characters: Characters = {
         element: "hydro",
         weapon: "catalyst",
         sub: "Energy Recharge",
-        ascension: "Cleansing Heart",
-        local: "Philanemo Mushroom",
-        common: "nectar",
-        weekly: "Ring of Boreas",
-        book: "resistance",
+        materials: () =>
+            standard({
+                ascension: "Cleansing Heart",
+                local: "Philanemo Mushroom",
+                common: ItemGroup.nectar,
+                weekly: "Ring of Boreas",
+                book: ItemGroup.resistance,
+            }),
     },
     qiqi: {
         id: "qiqi",
@@ -287,11 +317,14 @@ export const characters: Characters = {
         element: "cryo",
         weapon: "sword",
         sub: "Healing Bonus",
-        ascension: "Hoarfrost Core",
-        local: "Violetgrass",
-        common: "scroll",
-        weekly: "Tail of Boreas",
-        book: "prosperity",
+        materials: () =>
+            standard({
+                ascension: "Hoarfrost Core",
+                local: "Violetgrass",
+                common: ItemGroup.scroll,
+                weekly: "Tail of Boreas",
+                book: ItemGroup.prosperity,
+            }),
     },
     diluc: {
         id: "diluc",
@@ -303,11 +336,14 @@ export const characters: Characters = {
         element: "pyro",
         weapon: "claymore",
         sub: "CRIT Rate",
-        ascension: "Everflame Seed",
-        local: "Small Lamp Grass",
-        common: "fatui_insignia",
-        weekly: "Dvalin's Plume",
-        book: "resistance",
+        materials: () =>
+            standard({
+                ascension: "Everflame Seed",
+                local: "Small Lamp Grass",
+                common: ItemGroup.fatui_insignia,
+                weekly: "Dvalin's Plume",
+                book: ItemGroup.resistance,
+            }),
     },
     jean: {
         id: "jean",
@@ -319,11 +355,14 @@ export const characters: Characters = {
         element: "anemo",
         weapon: "sword",
         sub: "Healing Bonus",
-        ascension: "Hurricane Seed",
-        local: "Dandelion Seed",
-        common: "mask",
-        weekly: "Dvalin's Plume",
-        book: "resistance",
+        materials: () =>
+            standard({
+                ascension: "Hurricane Seed",
+                local: "Dandelion Seed",
+                common: ItemGroup.mask,
+                weekly: "Dvalin's Plume",
+                book: ItemGroup.resistance,
+            }),
     },
     sucrose: {
         id: "sucrose",
@@ -335,11 +374,14 @@ export const characters: Characters = {
         element: "anemo",
         weapon: "catalyst",
         sub: "Anemo DMG Bonus",
-        ascension: "Hurricane Seed",
-        local: "Windwheel Aster",
-        common: "nectar",
-        weekly: "Spirit Locket of Boreas",
-        book: "freedom",
+        materials: () =>
+            standard({
+                ascension: "Hurricane Seed",
+                local: "Windwheel Aster",
+                common: ItemGroup.nectar,
+                weekly: "Spirit Locket of Boreas",
+                book: ItemGroup.freedom,
+            }),
     },
     chongyun: {
         id: "chongyun",
@@ -351,11 +393,14 @@ export const characters: Characters = {
         element: "cryo",
         weapon: "claymore",
         sub: "ATK",
-        ascension: "Hoarfrost Core",
-        local: "Cor Lapis",
-        common: "mask",
-        weekly: "Dvalin's Sigh",
-        book: "diligence",
+        materials: () =>
+            standard({
+                ascension: "Hoarfrost Core",
+                local: "Cor Lapis",
+                common: ItemGroup.mask,
+                weekly: "Dvalin's Sigh",
+                book: ItemGroup.diligence,
+            }),
     },
     noelle: {
         id: "noelle",
@@ -367,11 +412,14 @@ export const characters: Characters = {
         element: "geo",
         weapon: "claymore",
         sub: "DEF",
-        ascension: "Basalt Pillar",
-        local: "Valberry",
-        common: "mask",
-        weekly: "Dvalin's Claw",
-        book: "resistance",
+        materials: () =>
+            standard({
+                ascension: "Basalt Pillar",
+                local: "Valberry",
+                common: ItemGroup.mask,
+                weekly: "Dvalin's Claw",
+                book: ItemGroup.resistance,
+            }),
     },
     bennett: {
         id: "bennett",
@@ -383,11 +431,14 @@ export const characters: Characters = {
         element: "pyro",
         weapon: "sword",
         sub: "Energy Recharge",
-        ascension: "Everflame Seed",
-        local: "Windwheel Aster",
-        common: "treasure_hoarder_insignia",
-        weekly: "Dvalin's Plume",
-        book: "resistance",
+        materials: () =>
+            standard({
+                ascension: "Everflame Seed",
+                local: "Windwheel Aster",
+                common: ItemGroup.treasure_hoarder_insignia,
+                weekly: "Dvalin's Plume",
+                book: ItemGroup.resistance,
+            }),
     },
     fischl: {
         id: "fischl",
@@ -399,11 +450,14 @@ export const characters: Characters = {
         element: "electro",
         weapon: "bow",
         sub: "ATK",
-        ascension: "Lightning Prism",
-        local: "Small Lamp Grass",
-        common: "arrowhead",
-        weekly: "Spirit Locket of Boreas",
-        book: "ballad",
+        materials: () =>
+            standard({
+                ascension: "Lightning Prism",
+                local: "Small Lamp Grass",
+                common: ItemGroup.arrowhead,
+                weekly: "Spirit Locket of Boreas",
+                book: ItemGroup.ballad,
+            }),
     },
     ningguang: {
         id: "ningguang",
@@ -415,11 +469,14 @@ export const characters: Characters = {
         element: "geo",
         weapon: "catalyst",
         sub: "Geo DMG Bonus",
-        ascension: "Basalt Pillar",
-        local: "Glaze Lily",
-        common: "fatui_insignia",
-        weekly: "Spirit Locket of Boreas",
-        book: "prosperity",
+        materials: () =>
+            standard({
+                ascension: "Basalt Pillar",
+                local: "Glaze Lily",
+                common: ItemGroup.fatui_insignia,
+                weekly: "Spirit Locket of Boreas",
+                book: ItemGroup.prosperity,
+            }),
     },
     xingqiu: {
         id: "xingqiu",
@@ -431,11 +488,14 @@ export const characters: Characters = {
         element: "hydro",
         weapon: "sword",
         sub: "ATK",
-        ascension: "Cleansing Heart",
-        local: "Silk Flower",
-        common: "mask",
-        weekly: "Tail of Boreas",
-        book: "gold",
+        materials: () =>
+            standard({
+                ascension: "Cleansing Heart",
+                local: "Silk Flower",
+                common: ItemGroup.mask,
+                weekly: "Tail of Boreas",
+                book: ItemGroup.gold,
+            }),
     },
     beidou: {
         id: "beidou",
@@ -447,11 +507,14 @@ export const characters: Characters = {
         element: "electro",
         weapon: "claymore",
         sub: "Electro DMG Bonus",
-        ascension: "Lightning Prism",
-        local: "Noctilucous Jade",
-        common: "treasure_hoarder_insignia",
-        weekly: "Dvalin's Sigh",
-        book: "gold",
+        materials: () =>
+            standard({
+                ascension: "Lightning Prism",
+                local: "Noctilucous Jade",
+                common: ItemGroup.treasure_hoarder_insignia,
+                weekly: "Dvalin's Sigh",
+                book: ItemGroup.gold,
+            }),
     },
     xiangling: {
         id: "xiangling",
@@ -463,11 +526,14 @@ export const characters: Characters = {
         element: "pyro",
         weapon: "polearm",
         sub: "Elemental Mastery",
-        ascension: "Everflame Seed",
-        local: "Jueyun Chili",
-        common: "slime",
-        weekly: "Dvalin's Claw",
-        book: "diligence",
+        materials: () =>
+            standard({
+                ascension: "Everflame Seed",
+                local: "Jueyun Chili",
+                common: ItemGroup.slime,
+                weekly: "Dvalin's Claw",
+                book: ItemGroup.diligence,
+            }),
     },
     razor: {
         id: "razor",
@@ -479,11 +545,14 @@ export const characters: Characters = {
         element: "electro",
         weapon: "claymore",
         sub: "Physical DMG Bonus",
-        ascension: "Lightning Prism",
-        local: "Wolfhook",
-        common: "mask",
-        weekly: "Dvalin's Claw",
-        book: "resistance",
+        materials: () =>
+            standard({
+                ascension: "Lightning Prism",
+                local: "Wolfhook",
+                common: ItemGroup.mask,
+                weekly: "Dvalin's Claw",
+                book: ItemGroup.resistance,
+            }),
     },
     barbara: {
         id: "barbara",
@@ -495,11 +564,14 @@ export const characters: Characters = {
         element: "hydro",
         weapon: "catalyst",
         sub: "HP",
-        ascension: "Cleansing Heart",
-        local: "Philanemo Mushroom",
-        common: "scroll",
-        weekly: "Ring of Boreas",
-        book: "freedom",
+        materials: () =>
+            standard({
+                ascension: "Cleansing Heart",
+                local: "Philanemo Mushroom",
+                common: ItemGroup.scroll,
+                weekly: "Ring of Boreas",
+                book: ItemGroup.freedom,
+            }),
     },
     lisa: {
         id: "lisa",
@@ -511,11 +583,14 @@ export const characters: Characters = {
         element: "electro",
         weapon: "catalyst",
         sub: "Elemental Mastery",
-        ascension: "Lightning Prism",
-        local: "Valberry",
-        common: "slime",
-        weekly: "Dvalin's Claw",
-        book: "ballad",
+        materials: () =>
+            standard({
+                ascension: "Lightning Prism",
+                local: "Valberry",
+                common: ItemGroup.slime,
+                weekly: "Dvalin's Claw",
+                book: ItemGroup.ballad,
+            }),
     },
     kaeya: {
         id: "kaeya",
@@ -527,11 +602,14 @@ export const characters: Characters = {
         element: "cryo",
         weapon: "sword",
         sub: "Energy Recharge",
-        ascension: "Hoarfrost Core",
-        local: "Calla Lily",
-        common: "treasure_hoarder_insignia",
-        weekly: "Spirit Locket of Boreas",
-        book: "ballad",
+        materials: () =>
+            standard({
+                ascension: "Hoarfrost Core",
+                local: "Calla Lily",
+                common: ItemGroup.treasure_hoarder_insignia,
+                weekly: "Spirit Locket of Boreas",
+                book: ItemGroup.ballad,
+            }),
     },
     amber: {
         id: "amber",
@@ -543,10 +621,13 @@ export const characters: Characters = {
         element: "pyro",
         weapon: "bow",
         sub: "ATK",
-        ascension: "Everflame Seed",
-        local: "Small Lamp Grass",
-        common: "arrowhead",
-        weekly: "Dvalin's Sigh",
-        book: "freedom",
+        materials: () =>
+            standard({
+                ascension: "Everflame Seed",
+                local: "Small Lamp Grass",
+                common: ItemGroup.arrowhead,
+                weekly: "Dvalin's Sigh",
+                book: ItemGroup.freedom,
+            }),
     },
 };

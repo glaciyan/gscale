@@ -1,5 +1,5 @@
-import { Item, items } from "../data/items";
-import { Vision } from "../data/characters";
+import { items } from "../data/items";
+import { Item, Vision } from "./MyTypes";
 
 export function getItem(group: string, rarity: number): Item {
     const found = Object.values(items).find(

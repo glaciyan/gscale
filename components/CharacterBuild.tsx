@@ -5,7 +5,7 @@ import { LevelShowcase } from "./LevelShowcase";
 import { SparklesIcon, TrendingUpIcon, FireIcon } from "@heroicons/react/outline";
 import { SwordIcon } from "./icons/sword";
 import { Button } from "./Button";
-import React, { Dispatch, SetStateAction, useState } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { toLevel } from "../lib/getCharacterLevel";
 import { CharacterLevel } from "./CharacterLevel";
