@@ -1,6 +1,6 @@
 import { Level, characterLevels } from "../data/characterLevels";
 
-export function getCharacterLevel(level: number): Level {
+export function toLevel(level: number): Level {
     let highest: [string, Level] = ["1", { level: 1, ascended: false }];
 
     Object.entries(characterLevels).forEach((lvl) => {

@@ -2,7 +2,7 @@ import { Listbox, Transition } from "@headlessui/react";
 import { CheckIcon, ChevronDownIcon } from "@heroicons/react/outline";
 import React, { Fragment } from "react";
 import { characterLevels } from "../data/characterLevels";
-import { getCharacterLevel } from "../lib/getCharacterLevel";
+import { toLevel } from "../lib/getCharacterLevel";
 import { Star } from "./icons/star";
 
 interface LevelItemListProps {
@@ -33,9 +33,7 @@ export function CharacterLevelListBox({
                         }
                         className="listbutton"
                     >
-                        <span className="block truncate">
-                            {getCharacterLevel(value).level}
-                        </span>
+                        <span className="block truncate">{toLevel(value).level}</span>
                         <span className="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
                             <ChevronDownIcon
                                 className="w-5 h-5 text-gscale-dark-text-ternary"
@@ -95,7 +93,7 @@ export function CharacterLevelListBox({
                 title="Ascended"
                 className="flex items-center justify-center w-10 h-10 shadow-md bg-gscale-dark-background-500 hover:bg-opacity-70 active:bg-opacity-30 focus:outline-none focus-visible:ring"
                 onClick={() => {
-                    if (getCharacterLevel(value).ascended) {
+                    if (toLevel(value).ascended) {
                         onChange(value - 1);
                     } else {
                         if (value >= 20 && value < 90) onChange(value + 1);
@@ -112,7 +110,7 @@ export function CharacterLevelListBox({
             >
                 <Star
                     color={
-                        getCharacterLevel(value).ascended
+                        toLevel(value).ascended
                             ? "text-genshin-rarity-5"
                             : "text-gscale-dark-text-ternary"
                     }

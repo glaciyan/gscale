@@ -7,7 +7,7 @@ import { SwordIcon } from "./icons/sword";
 import { Button } from "./Button";
 import React, { Dispatch, SetStateAction, useState } from "react";
 import Link from "next/link";
-import { getCharacterLevel } from "../lib/getCharacterLevel";
+import { toLevel } from "../lib/getCharacterLevel";
 import { CharacterLevel } from "./CharacterLevel";
 import { ConfirmDeleteDialouge } from "./ConfirmDeleteDialouge";
 
@@ -24,8 +24,8 @@ export default function CharacterBuild({ build }: { build: any }) {
         burst: build.burst,
     });
 
-    const levelStart = getCharacterLevel(build.level.start);
-    const levelGoal = getCharacterLevel(build.level.goal);
+    const levelStart = toLevel(build.level.start);
+    const levelGoal = toLevel(build.level.goal);
 
     return (
         <>
