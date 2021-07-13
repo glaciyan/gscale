@@ -1,8 +1,9 @@
-import { items } from "../data/items";
+import { toId } from ".";
+import { items, itemsArray } from "../data/items";
 import itemOrder from "./itemOrder";
 import { BuildItem, Item, ItemGroup, Vision } from "./MyTypes";
 
-export function getItemFromGroup(group: ItemGroup, rarity: number): Item {
+export function getItemFromGroup(group: ItemGroup | undefined, rarity: number): Item {
     if (group === ItemGroup.unknown) items.unknown;
 
     const found = Object.values(items).find(
@@ -11,29 +12,6 @@ export function getItemFromGroup(group: ItemGroup, rarity: number): Item {
 
     if (!found) return items.unknown;
     return found;
-}
-
-function getGemGroup(element: Vision) {
-    switch (element) {
-        case "cryo":
-            return ItemGroup.cryo_gem;
-        case "pyro":
-            return ItemGroup.pyro_gem;
-        case "anemo":
-            return ItemGroup.anemo_gem;
-        case "electro":
-            return ItemGroup.electro_gem;
-        case "geo":
-            return ItemGroup.geo_gem;
-        case "hydro":
-            return ItemGroup.hydro_gem;
-        default:
-            return -1;
-    }
-}
-
-export function getGem(element: Vision, rarity: 2 | 3 | 4 | 5) {
-    return getItemFromGroup(getGemGroup(element), rarity);
 }
 
 export function mora(amount: number): BuildItem {
@@ -77,7 +55,7 @@ export function xp(rarity: 2 | 3 | 4, amount: number): BuildItem {
 }
 
 interface ItemGenArgs {
-    ascension?: string;
+    boss?: string;
     local?: string;
     weekly?: string;
     common?: ItemGroup;
@@ -85,8 +63,12 @@ interface ItemGenArgs {
     gem?: ItemGroup;
 }
 
+function getFromItemsArray(name?: string) {
+    return !name ? items.unknown : itemsArray[toId(name)];
+}
+
 export class ItemGen {
-    ascension?: string;
+    Boss?: string;
     Local?: string;
     Weekly?: string;
     Common?: ItemGroup;
@@ -94,7 +76,7 @@ export class ItemGen {
     Gem?: ItemGroup;
 
     constructor(args: ItemGenArgs) {
-        this.ascension = args.ascension;
+        this.Boss = args.boss;
         this.Local = args.local;
         this.Weekly = args.weekly;
         this.Common = args.common;
@@ -104,7 +86,7 @@ export class ItemGen {
 
     gem(rarity: 2 | 3 | 4 | 5, amount: number): BuildItem {
         return {
-            ...getGem(this.character.element, rarity),
+            ...getItemFromGroup(this.Gem, rarity),
             amount: amount,
             order: itemOrder.gem + rarity,
         };
@@ -112,7 +94,7 @@ export class ItemGen {
 
     local(amount: number): BuildItem {
         return {
-            ...itemsTyped[toId(this.character.local)],
+            ...getFromItemsArray(this.Local),
             amount: amount,
             order: itemOrder.local,
         };
@@ -120,7 +102,7 @@ export class ItemGen {
 
     common(rarity: 1 | 2 | 3, amount: number): BuildItem {
         return {
-            ...getItemFromGroup(this.character.common, rarity),
+            ...getItemFromGroup(this.Common, rarity),
             amount: amount,
             order: itemOrder.common + rarity,
         };
@@ -128,7 +110,7 @@ export class ItemGen {
 
     boss(amount: number): BuildItem {
         return {
-            ...itemsTyped[toId(this.character.ascension)],
+            ...getFromItemsArray(this.Boss),
             amount: amount,
             order: itemOrder.boss,
         };
@@ -136,7 +118,7 @@ export class ItemGen {
 
     weekly(amount: number): BuildItem {
         return {
-            ...itemsTyped[toId(this.character.weekly)],
+            ...getFromItemsArray(this.Weekly),
             amount: amount,
             order: itemOrder.talentBoss,
         };
@@ -144,7 +126,7 @@ export class ItemGen {
 
     book(rarity: 2 | 3 | 4, amount: number): BuildItem {
         return {
-            ...getItemFromGroup(this.character.book, rarity),
+            ...getItemFromGroup(this.Book, rarity),
             amount: amount,
             order: itemOrder.book + rarity,
         };

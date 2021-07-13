@@ -3,6 +3,24 @@ import { Characters, ItemGroup } from "../lib/MyTypes";
 import { items } from "./items";
 
 export const characters: Characters = {
+    traveler: {
+        id: "traveler",
+        name: "Traveler",
+        rarity: 5,
+        constellation: "asdf",
+        description: "adf",
+        element: "anemo",
+        weapon: "sword",
+        sub: "asdf",
+        materials: () =>
+            standard({
+                local: items.sea_ganoderma.name,
+                weekly: items.gilded_scale.name,
+                common: ItemGroup.treasure_hoarder_insignia,
+                book: ItemGroup.diligence,
+                gem: ItemGroup.anemo_gem,
+            }),
+    },
     kazuha: {
         id: "kazuha",
         name: "Kazuha",
@@ -15,7 +33,7 @@ export const characters: Characters = {
         sub: "Elemental Mastery",
         materials: () =>
             standard({
-                ascension: items.marionette_core.name,
+                boss: items.marionette_core.name,
                 local: items.sea_ganoderma.name,
                 weekly: items.gilded_scale.name,
                 common: ItemGroup.treasure_hoarder_insignia,
@@ -35,7 +53,7 @@ export const characters: Characters = {
         sub: "CRIT DMG",
         materials: () =>
             standard({
-                ascension: "Crystalline Bloom",
+                boss: "Crystalline Bloom",
                 local: "Dandelion Seed",
                 common: ItemGroup.mask,
                 weekly: "Dragon Lord's Crown",
@@ -55,7 +73,7 @@ export const characters: Characters = {
         sub: "Pyro DMG Bonus",
         materials: () =>
             standard({
-                ascension: "Juvenile Jade",
+                boss: "Juvenile Jade",
                 local: "Noctilucous Jade",
                 common: ItemGroup.treasure_hoarder_insignia,
                 weekly: "Bloodjade Branch",
@@ -75,7 +93,7 @@ export const characters: Characters = {
         sub: "ATK",
         materials: () =>
             standard({
-                ascension: "Hoarfrost Core",
+                boss: "Hoarfrost Core",
                 local: "Valberry",
                 common: ItemGroup.fatui_insignia,
                 weekly: "Shadow of the Warrior",
@@ -95,7 +113,7 @@ export const characters: Characters = {
         sub: "CRIT DMG",
         materials: () =>
             standard({
-                ascension: "Juvenile Jade",
+                boss: "Juvenile Jade",
                 local: "Silk Flower",
                 common: ItemGroup.nectar,
                 weekly: "Shard of a Foul Legacy",
@@ -115,7 +133,7 @@ export const characters: Characters = {
         sub: "CRIT Rate",
         materials: () =>
             standard({
-                ascension: "Juvenile Jade",
+                boss: "Juvenile Jade",
                 local: "Qingxin",
                 common: ItemGroup.slime,
                 weekly: "Shadow of the Warrior",
@@ -135,7 +153,7 @@ export const characters: Characters = {
         sub: "CRIT DMG",
         materials: () =>
             standard({
-                ascension: "Hoarfrost Core",
+                boss: "Hoarfrost Core",
                 local: "Qingxin",
                 common: ItemGroup.nectar,
                 weekly: "Shadow of the Warrior",
@@ -155,7 +173,7 @@ export const characters: Characters = {
         sub: "Geo DMG Bonus",
         materials: () =>
             standard({
-                ascension: "Basalt Pillar",
+                boss: "Basalt Pillar",
                 local: "Cecilia",
                 common: ItemGroup.scroll,
                 weekly: "Tusk of Monoceros Caeli",
@@ -175,7 +193,7 @@ export const characters: Characters = {
         sub: "Geo DMG Bonus",
         materials: () =>
             standard({
-                ascension: "Basalt Pillar",
+                boss: "Basalt Pillar",
                 local: "Cor Lapis",
                 common: ItemGroup.slime,
                 weekly: "Tusk of Monoceros Caeli",
@@ -195,7 +213,7 @@ export const characters: Characters = {
         sub: "ATK",
         materials: () =>
             standard({
-                ascension: "Everflame Seed",
+                boss: "Everflame Seed",
                 local: "Violetgrass",
                 common: ItemGroup.treasure_hoarder_insignia,
                 weekly: "Tusk of Monoceros Caeli",
@@ -215,7 +233,7 @@ export const characters: Characters = {
         sub: "Hydro DMG Bonus",
         materials: () =>
             standard({
-                ascension: "Cleansing Heart",
+                boss: "Cleansing Heart",
                 local: "Starconch",
                 common: ItemGroup.fatui_insignia,
                 weekly: "Shard of a Foul Legacy",
@@ -235,7 +253,7 @@ export const characters: Characters = {
         sub: "Cryo DMG Bonus",
         materials: () =>
             standard({
-                ascension: "Hoarfrost Core",
+                boss: "Hoarfrost Core",
                 local: "Calla Lily",
                 common: ItemGroup.arrowhead,
                 weekly: "Shard of a Foul Legacy",
@@ -255,7 +273,7 @@ export const characters: Characters = {
         sub: "Pyro DMG Bonus",
         materials: () =>
             standard({
-                ascension: "Everflame Seed",
+                boss: "Everflame Seed",
                 local: "Philanemo Mushroom",
                 common: ItemGroup.scroll,
                 weekly: "Ring of Boreas",
@@ -275,7 +293,7 @@ export const characters: Characters = {
         sub: "Energy Recharge",
         materials: () =>
             standard({
-                ascension: "Hurricane Seed",
+                boss: "Hurricane Seed",
                 local: "Cecilia",
                 common: ItemGroup.slime,
                 weekly: "Tail of Boreas",
@@ -295,7 +313,7 @@ export const characters: Characters = {
         sub: "CRIT DMG",
         materials: () =>
             standard({
-                ascension: "Lightning Prism",
+                boss: "Lightning Prism",
                 local: "Cor Lapis",
                 common: ItemGroup.nectar,
                 weekly: "Ring of Boreas",
@@ -315,7 +333,7 @@ export const characters: Characters = {
         sub: "Energy Recharge",
         materials: () =>
             standard({
-                ascension: "Cleansing Heart",
+                boss: "Cleansing Heart",
                 local: "Philanemo Mushroom",
                 common: ItemGroup.nectar,
                 weekly: "Ring of Boreas",
@@ -335,7 +353,7 @@ export const characters: Characters = {
         sub: "Healing Bonus",
         materials: () =>
             standard({
-                ascension: "Hoarfrost Core",
+                boss: "Hoarfrost Core",
                 local: "Violetgrass",
                 common: ItemGroup.scroll,
                 weekly: "Tail of Boreas",
@@ -355,7 +373,7 @@ export const characters: Characters = {
         sub: "CRIT Rate",
         materials: () =>
             standard({
-                ascension: "Everflame Seed",
+                boss: "Everflame Seed",
                 local: "Small Lamp Grass",
                 common: ItemGroup.fatui_insignia,
                 weekly: "Dvalin's Plume",
@@ -375,7 +393,7 @@ export const characters: Characters = {
         sub: "Healing Bonus",
         materials: () =>
             standard({
-                ascension: "Hurricane Seed",
+                boss: "Hurricane Seed",
                 local: "Dandelion Seed",
                 common: ItemGroup.mask,
                 weekly: "Dvalin's Plume",
@@ -395,7 +413,7 @@ export const characters: Characters = {
         sub: "Anemo DMG Bonus",
         materials: () =>
             standard({
-                ascension: "Hurricane Seed",
+                boss: "Hurricane Seed",
                 local: "Windwheel Aster",
                 common: ItemGroup.nectar,
                 weekly: "Spirit Locket of Boreas",
@@ -415,7 +433,7 @@ export const characters: Characters = {
         sub: "ATK",
         materials: () =>
             standard({
-                ascension: "Hoarfrost Core",
+                boss: "Hoarfrost Core",
                 local: "Cor Lapis",
                 common: ItemGroup.mask,
                 weekly: "Dvalin's Sigh",
@@ -435,7 +453,7 @@ export const characters: Characters = {
         sub: "DEF",
         materials: () =>
             standard({
-                ascension: "Basalt Pillar",
+                boss: "Basalt Pillar",
                 local: "Valberry",
                 common: ItemGroup.mask,
                 weekly: "Dvalin's Claw",
@@ -455,7 +473,7 @@ export const characters: Characters = {
         sub: "Energy Recharge",
         materials: () =>
             standard({
-                ascension: "Everflame Seed",
+                boss: "Everflame Seed",
                 local: "Windwheel Aster",
                 common: ItemGroup.treasure_hoarder_insignia,
                 weekly: "Dvalin's Plume",
@@ -475,7 +493,7 @@ export const characters: Characters = {
         sub: "ATK",
         materials: () =>
             standard({
-                ascension: "Lightning Prism",
+                boss: "Lightning Prism",
                 local: "Small Lamp Grass",
                 common: ItemGroup.arrowhead,
                 weekly: "Spirit Locket of Boreas",
@@ -495,7 +513,7 @@ export const characters: Characters = {
         sub: "Geo DMG Bonus",
         materials: () =>
             standard({
-                ascension: "Basalt Pillar",
+                boss: "Basalt Pillar",
                 local: "Glaze Lily",
                 common: ItemGroup.fatui_insignia,
                 weekly: "Spirit Locket of Boreas",
@@ -515,7 +533,7 @@ export const characters: Characters = {
         sub: "ATK",
         materials: () =>
             standard({
-                ascension: "Cleansing Heart",
+                boss: "Cleansing Heart",
                 local: "Silk Flower",
                 common: ItemGroup.mask,
                 weekly: "Tail of Boreas",
@@ -535,7 +553,7 @@ export const characters: Characters = {
         sub: "Electro DMG Bonus",
         materials: () =>
             standard({
-                ascension: "Lightning Prism",
+                boss: "Lightning Prism",
                 local: "Noctilucous Jade",
                 common: ItemGroup.treasure_hoarder_insignia,
                 weekly: "Dvalin's Sigh",
@@ -555,7 +573,7 @@ export const characters: Characters = {
         sub: "Elemental Mastery",
         materials: () =>
             standard({
-                ascension: "Everflame Seed",
+                boss: "Everflame Seed",
                 local: "Jueyun Chili",
                 common: ItemGroup.slime,
                 weekly: "Dvalin's Claw",
@@ -575,7 +593,7 @@ export const characters: Characters = {
         sub: "Physical DMG Bonus",
         materials: () =>
             standard({
-                ascension: "Lightning Prism",
+                boss: "Lightning Prism",
                 local: "Wolfhook",
                 common: ItemGroup.mask,
                 weekly: "Dvalin's Claw",
@@ -595,7 +613,7 @@ export const characters: Characters = {
         sub: "HP",
         materials: () =>
             standard({
-                ascension: "Cleansing Heart",
+                boss: "Cleansing Heart",
                 local: "Philanemo Mushroom",
                 common: ItemGroup.scroll,
                 weekly: "Ring of Boreas",
@@ -615,7 +633,7 @@ export const characters: Characters = {
         sub: "Elemental Mastery",
         materials: () =>
             standard({
-                ascension: "Lightning Prism",
+                boss: "Lightning Prism",
                 local: "Valberry",
                 common: ItemGroup.slime,
                 weekly: "Dvalin's Claw",
@@ -635,7 +653,7 @@ export const characters: Characters = {
         sub: "Energy Recharge",
         materials: () =>
             standard({
-                ascension: "Hoarfrost Core",
+                boss: "Hoarfrost Core",
                 local: "Calla Lily",
                 common: ItemGroup.treasure_hoarder_insignia,
                 weekly: "Spirit Locket of Boreas",
@@ -655,7 +673,7 @@ export const characters: Characters = {
         sub: "ATK",
         materials: () =>
             standard({
-                ascension: "Everflame Seed",
+                boss: "Everflame Seed",
                 local: "Small Lamp Grass",
                 common: ItemGroup.arrowhead,
                 weekly: "Dvalin's Sigh",

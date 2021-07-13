@@ -1,4 +1,4 @@
-import { toLevel } from "../lib/getCharacterLevel";
+import { toLevel } from "../lib";
 
 test("level 1", () => {
     const conversion = toLevel(1);

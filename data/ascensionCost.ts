@@ -1,8 +1,13 @@
-import { Character } from "../lib/MyTypes";
+import { Character, ItemGroup, PricedMaterials } from "../lib/MyTypes";
 import { ItemGen } from "../lib/ItemHelper";
 
-export function ascensionCosts(gem, boss, local, common) {
-    const ig = new ItemGen(character);
+export function ascensionCosts(
+    gem: ItemGroup,
+    local: string,
+    common: ItemGroup,
+    boss?: string
+): PricedMaterials[] {
+    const ig = new ItemGen({ gem, local, common, boss });
 
     return [
         {

@@ -77,7 +77,7 @@ export interface LevelConfig {
     burst: Progression;
 }
 
-export interface CostlyLeveling {
+export interface PricedMaterials {
     mora: number;
     items: BuildItem[];
 }

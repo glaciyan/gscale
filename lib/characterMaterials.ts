@@ -1,5 +1,13 @@
 import _ from "lodash";
-import { BuildItem, Character, Item, ItemGroup, LevelConfig } from "./MyTypes";
+import { ascensionCosts } from "../data/ascensionCost";
+import {
+    BuildItem,
+    Character,
+    Item,
+    ItemGroup,
+    LevelConfig,
+    PricedMaterials,
+} from "./MyTypes";
 
 export interface MaterialList {
     mora: number;
@@ -29,21 +37,26 @@ export function getCharacterMaterials(character: Character, _lvlCfg: LevelConfig
 }
 
 export interface CharacterMaterialsArgs {
-    ascension: string;
+    boss?: string;
     local: string;
     weekly: string;
     common: ItemGroup;
     book: ItemGroup;
-	gem: ItemGroup;
+    gem: ItemGroup;
 }
 
 export interface CharacterMaterials {
-    ascension: BuildItem[];
-    normal: BuildItem[];
-    elemental: BuildItem[];
-    burst: BuildItem[];
+    ascension: PricedMaterials[];
+    normal: PricedMaterials[];
+    elemental: PricedMaterials[];
+    burst: PricedMaterials[];
 }
 
 export function standard(list: CharacterMaterialsArgs): CharacterMaterials {
-	const ascension = 
+    return {
+        ascension: ascensionCosts(list.gem, list.local, list.common, list.boss),
+        normal: [],
+        elemental: [],
+        burst: [],
+    };
 }

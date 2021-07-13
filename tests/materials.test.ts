@@ -23,6 +23,21 @@ const maxLevel: LevelConfig = {
     },
 };
 
-test("correct leveling mora", () => {
-    console.log(kazuha.materials());
+// assuming all the previous ones are correct
+test("correct amount of items in last ascension", () => {
+    const mats = kazuha.materials();
+
+    const lastAscension = mats.ascension[5];
+
+    expect(lastAscension.mora).toEqual(120000);
+    expect(lastAscension.items.length).toEqual(4);
+    expect(lastAscension.items[0].amount).toEqual(6);
+    expect(lastAscension.items[1].amount).toEqual(20);
+    expect(lastAscension.items[2].amount).toEqual(60);
+    expect(lastAscension.items[3].amount).toEqual(24);
+});
+
+test("traveler materials", () => {
+    const traveler = characters.traveler;
+    console.log(JSON.stringify(traveler.materials(), null, 2));
 });

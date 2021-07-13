@@ -746,4 +746,4 @@ export const items = {
     },
 };
 
-export const itemsTyped = items as Items;
+export const itemsArray = items as Items;
