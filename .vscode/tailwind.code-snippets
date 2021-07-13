@@ -1,0 +1,7 @@
+{
+    "Tailwind String": {
+        "prefix": "twstr",
+        "body": "/*tw*/ `$0`",
+        "description": "Creates a string which has tailwind intellisense built in"
+    }
+}
