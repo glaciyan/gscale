@@ -74,9 +74,10 @@ export function getCharacterMaterials(
         mora,
         ascension: ascensionMaterials,
         // for some unknown reason normalMaterials is the sum so thats why im recalculating here
+        // TEMP FIX
         normal: talent(normal).items,
-        elemental: elementalMaterials,
-        burst: burstMaterials,
+        elemental: talent(elemental).items,
+        burst: talent(burst).items,
         talents,
         materials,
         everything: [moraGen(mora), lazyLevelMaterial, ...materials],

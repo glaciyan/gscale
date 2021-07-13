@@ -15,7 +15,7 @@ const nav = [
     { name: "Your Builds", href: "/builds" },
 ];
 
-const version = "1.0";
+const version = "1.0 (temp fix)";
 
 const Layout = ({ children, title, current }: Props) => {
     return (
