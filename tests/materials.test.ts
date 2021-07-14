@@ -1,6 +1,7 @@
 import { levelingCosts } from "../data/characterLevels";
 import { characters } from "../data/characters";
 import { ascStageSlice, levelSlice, talentSlice } from "../lib";
+import { calculateMaterials } from "../lib/characterMaterials";
 import { sumLevelingCost, sumPriced } from "../lib/ItemHelper";
 import { CharacterProgressions, Progression } from "../lib/MyTypes";
 
@@ -102,4 +103,15 @@ test("leveling correct combine", () => {
     const slice = levelSlice(levelingCosts, { start: 1, goal: 90 });
 
     // console.log(JSON.stringify(sumLevelingCost(slice), null, 2));
+});
+
+test("print talents and ascensions", () => {
+    const materials = calculateMaterials(characters.kazuha, {
+        level: { start: 1, goal: 90 },
+        normal: { start: 1, goal: 10 },
+        elemental: { start: 1, goal: 10 },
+        burst: { start: 1, goal: 10 },
+    });
+
+    console.log(JSON.stringify(materials, null, 2));
 });

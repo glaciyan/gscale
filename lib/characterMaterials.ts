@@ -44,7 +44,7 @@ export function calculateMaterials(
     // return object:
     // total mora
     // xp needed
-    // leveling: {accXp, mora}
+    // accXp
     // ascension: {mora, materials}
     // normal: {mora, materials}
     // elemental: {mora, materials}
@@ -53,7 +53,6 @@ export function calculateMaterials(
     // all materials (ascension and talents)
     // all item names
 
-    const totalMora = 0;
     const materialTable = character.materials;
 
     // filter materials with level
@@ -73,4 +72,20 @@ export function calculateMaterials(
         elemental: sumPriced(requiredTalents.elemental),
         burst: sumPriced(requiredTalents.burst),
     };
+
+    // sum all talents
+    const talents = sumPriced([
+        summedRequiredTalents.normal,
+        summedRequiredTalents.elemental,
+        summedRequiredTalents.burst,
+    ]);
+    talents.items.sort((a, b) => a.order - b.order);
+
+    // sum everything axcept leveling
+    const talentsAndAscension = sumPriced([talents, summedRequiredAscension]);
+    talentsAndAscension.items.sort((a, b) => a.order - b.order);
+
+    const totalMora = 0;
+
+    return talentsAndAscension;
 }
