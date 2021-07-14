@@ -2,7 +2,7 @@ import { Listbox, Transition } from "@headlessui/react";
 import { CheckIcon, ChevronDownIcon } from "@heroicons/react/outline";
 import React, { Fragment } from "react";
 import { characterLevels } from "../data/characterLevels";
-import { toLevel } from "../lib/getCharacterLevel";
+import { toLevel } from "../lib";
 import { Star } from "./icons/star";
 
 interface LevelItemListProps {

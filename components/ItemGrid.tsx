@@ -1,4 +1,4 @@
-import { BuildItem } from "../data/items";
+import { BuildItem } from "../lib/MyTypes";
 import { toId } from "../lib";
 import MiniItemCard from "./ItemCard";
 

@@ -27,7 +27,7 @@ export interface Characters {
     [id: string]: Character;
 }
 
-export const enum ItemGroup {
+export enum ItemGroup {
     unknown = -1,
     pyro_gem,
     geo_gem,

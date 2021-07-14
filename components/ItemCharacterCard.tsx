@@ -1,6 +1,6 @@
 import React from "react";
 import Img from "react-optimized-image";
-import { Character } from "../data/characters";
+import { Character } from "../lib/MyTypes";
 import RarityStars from "./RarityStars";
 
 interface ItemCharacterCardProps {

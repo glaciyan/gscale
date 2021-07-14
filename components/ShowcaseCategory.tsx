@@ -1,5 +1,5 @@
 import React from "react";
-import { BuildItem } from "../data/items";
+import { BuildItem } from "../lib/MyTypes";
 import ItemGrid from "./ItemGrid";
 
 interface ShowcaseCategoryProps {

@@ -1,4 +1,3 @@
-import { getCharacterMaterials } from "../lib/characterMaterials";
 import { characters } from "../data/characters";
 import CompletionItemGrid from "./CompletionItemGrid";
 import { LevelShowcase } from "./LevelShowcase";
@@ -7,9 +6,10 @@ import { SwordIcon } from "./icons/sword";
 import { Button } from "./Button";
 import React, { useState } from "react";
 import Link from "next/link";
-import { toLevel } from "../lib/getCharacterLevel";
 import { CharacterLevel } from "./CharacterLevel";
 import { ConfirmDeleteDialouge } from "./ConfirmDeleteDialouge";
+import { calculateMaterials } from "../lib/characterMaterials";
+import { toLevel } from "../lib";
 
 export default function CharacterBuild({ build }: { build: any }) {
     const character = characters[build.characterId];
@@ -17,7 +17,7 @@ export default function CharacterBuild({ build }: { build: any }) {
 
     if (!character) return null;
 
-    const materials = getCharacterMaterials(character, {
+    const materials = calculateMaterials(character, {
         level: build.level,
         normal: build.normal,
         elemental: build.elemental,

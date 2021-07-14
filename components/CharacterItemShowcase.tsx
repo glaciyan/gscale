@@ -1,6 +1,6 @@
 import React from "react";
-import { Character } from "../data/characters";
-import { ItemGen } from "../lib/ItemGen";
+import { ItemGen } from "../lib/ItemHelper";
+import { Character } from "../lib/MyTypes";
 import MiniItemCard from "./ItemCard";
 
 interface CharacterItemShowcaseProps {
@@ -16,7 +16,15 @@ export const CharacterItemShowcase: React.FC<CharacterItemShowcaseProps> = ({
     character,
     className,
 }) => {
-    const ci = new ItemGen(character);
+    const list = character.materials.list;
+    const ci = new ItemGen({
+        local: list.local,
+        common: list.common,
+        boss: list.boss,
+        gem: list.gem,
+        book: list.book,
+        weekly: list.weekly,
+    });
 
     const local = ci.local(1);
     const common = ci.common(1, 1);

@@ -1,11 +1,12 @@
 import { GetStaticProps } from "next";
 import Layout from "../components/Layout";
 import CharacterCard from "../components/CharacterCard";
-import { Character, Characters, characters as charactersList } from "../data/characters";
+import { characters as charactersList } from "../data/characters";
 import { Search } from "../components/Search";
 import { useEffect, useState } from "react";
 import Fuse from "fuse.js";
 import router from "next/router";
+import { Character, Characters } from "../lib/MyTypes";
 
 export const getStaticProps: GetStaticProps = async () => {
     return {

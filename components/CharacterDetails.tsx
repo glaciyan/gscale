@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { Character } from "../data/characters";
 import _ from "lodash";
 import { ElementIcon } from "./icons/element";
 import { IconWithText } from "./IconWithText";
 import { CharacterItemShowcase } from "./CharacterItemShowcase";
 import Image from "next-native-image";
 import { ItemCharacterCard } from "./ItemCharacterCard";
+import { Character } from "../lib/MyTypes";
 
 interface CharacterDetailsProps {
     character: Character;
