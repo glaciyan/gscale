@@ -1,7 +1,7 @@
 import React from "react";
-import Img from "react-optimized-image";
-import { Character } from "../lib/MyTypes";
 import RarityStars from "./RarityStars";
+import Image from "next-native-image";
+import { Character } from "../lib/MyTypes";
 
 interface ItemCharacterCardProps {
     character: Character;
@@ -14,9 +14,11 @@ export const ItemCharacterCard: React.FC<ItemCharacterCardProps> = ({
 }) => {
     return (
         <div className={`w-max ${className}`}>
-            <Img
-                className="bg-gscale-dark-background-secondary rounded-t-md"
-                src={require(`../public/images/characters/mugshot/${character.id}.png?width=100?height=100`)}
+            <Image
+                layout="native"
+                width={128}
+                className="bg-gscale-dark-background-secondary rounded-t-md w-28 h-28"
+                src={`/images/characters/mugshot/${character.id}.png`}
                 alt={character.name}
             />
             <div className="flex items-center justify-center bg-gscale-dark-background-primary py-0.5 rounded-b-md">
