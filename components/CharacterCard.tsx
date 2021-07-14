@@ -3,10 +3,10 @@ import RarityStars from "./RarityStars";
 import cn from "classnames";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import buildDB from "../lib/buildsDatabase";
 import { useEffect, useState } from "react";
 import { Button } from "./Button";
 import { If } from "./If";
-import { getBuildsDB } from "../lib/buildsDatabase";
 import { upperCaseFirst } from "upper-case-first";
 
 function useIsTouch() {
@@ -40,9 +40,9 @@ export default function CharacterCard({
     const elementId = character.element;
 
     const [loadingmax, setLoadingmax] = useState(false);
-    async function maxChar() {
+    function maxChar() {
         setLoadingmax(true);
-        (await getBuildsDB()).builds
+        buildDB.builds
             .add({
                 type: "character",
                 characterId: character.id,

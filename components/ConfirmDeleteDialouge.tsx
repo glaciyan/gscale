@@ -1,7 +1,7 @@
 import React, { Dispatch, SetStateAction, useState } from "react";
+import buildsDB from "../lib/buildsDatabase";
 import { Button } from "./Button";
 import ReactModal from "react-modal";
-import { getBuildsDB } from "../lib/buildsDatabase";
 
 interface ConfirmDeleteDialougeProps {
     build: any;
@@ -60,7 +60,7 @@ export const ConfirmDeleteDialouge: React.FC<ConfirmDeleteDialougeProps> = ({
                             onClick={async () => {
                                 setisLoading(true);
 
-                                await (await getBuildsDB()).builds.delete(build.id);
+                                await buildsDB.builds.delete(build.id);
                                 setVisible(false);
 
                                 setisLoading(false);

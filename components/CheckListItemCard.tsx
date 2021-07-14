@@ -1,5 +1,5 @@
 import { toId } from "../lib";
-import { getBuildsDB } from "../lib/buildsDatabase";
+import buildsDB from "../lib/buildsDatabase";
 import { CheckIcon } from "@heroicons/react/outline";
 import { If } from "./If";
 import { ItemImage } from "./ItemImage";
@@ -33,9 +33,7 @@ export default function CheckListItemCard({
                         const completed = [...build.completed];
                         completed.splice(find, 1);
 
-                        await (
-                            await getBuildsDB()
-                        ).builds.update(Number.parseInt(build.id), {
+                        await buildsDB.builds.update(Number.parseInt(build.id), {
                             completed: completed,
                         });
 
@@ -43,9 +41,7 @@ export default function CheckListItemCard({
                     }
                 }
 
-                await (
-                    await getBuildsDB()
-                ).builds.update(Number.parseInt(build.id), {
+                await buildsDB.builds.update(Number.parseInt(build.id), {
                     completed: build.completed
                         ? [
                               {
