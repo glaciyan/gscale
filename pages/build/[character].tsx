@@ -22,10 +22,10 @@ import { ShowcaseCategory } from "../../components/ShowcaseCategory";
 import { useCorrectingState } from "../../lib/useCorrectingState";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { useRouter } from "next/router";
-import buildsDB from "../../lib/buildsDatabase";
 import { useQuery } from "../../lib/useQuery";
 import { PageDialouge } from "../../components/PageDialouge";
 import { If } from "../../components/If";
+import { getBuildsDB } from "../../lib/buildsDatabase";
 
 export const getStaticPaths: GetStaticPaths = async () => {
     const paths = Object.values(characters).map((character) => {
@@ -77,18 +77,20 @@ export default function BuildCharacter({ character }: { character: Character }) 
 
     // set build from query
     useEffect(() => {
-        if (!query) return;
-        const { edit } = query;
+        (async () => {
+            if (!query) return;
+            const { edit } = query;
 
-        if (edit && typeof edit === "string") {
-            const parsedId = Number.parseInt(edit);
-            if (!!parsedId) {
-                buildsDB.builds.get(parsedId).then((build: any) => {
-                    setbuild(build);
-                    setEditId(parsedId);
-                });
+            if (edit && typeof edit === "string") {
+                const parsedId = Number.parseInt(edit);
+                if (!!parsedId) {
+                    (await getBuildsDB()).builds.get(parsedId).then((build: any) => {
+                        setbuild(build);
+                        setEditId(parsedId);
+                    });
+                }
             }
-        }
+        })();
     }, [query]);
 
     useEffect(() => {
@@ -120,8 +122,8 @@ export default function BuildCharacter({ character }: { character: Character }) 
     }
 
     function handleSubmit() {
-        dbAction(() => {
-            buildsDB.builds
+        dbAction(async () => {
+            (await getBuildsDB()).builds
                 .add({
                     type: "character",
                     characterId: character.id,
@@ -138,7 +140,7 @@ export default function BuildCharacter({ character }: { character: Character }) 
 
     function updateBuild() {
         if (build && editId) {
-            dbAction(() => {
+            dbAction(async () => {
                 let completed = build.completed;
 
                 if (build.completed) {
@@ -151,7 +153,7 @@ export default function BuildCharacter({ character }: { character: Character }) 
                     }
                 }
 
-                buildsDB.builds
+                (await getBuildsDB()).builds
                     .update(editId, {
                         level: { start: startLevel, goal: goalLevel },
                         normal: { start: startNormal, goal: goalNormal },

@@ -1,10 +1,16 @@
-import dexie from "dexie";
+let buildsDB: any;
 
-const buildsDB = new dexie("buildsDB");
+export async function getBuildsDB() {
+    if (buildsDB) return buildsDB;
 
-// completed is going to cause some problems with async later on
-buildsDB.version(1).stores({
-    builds: "++id, &order, completed, type, characterId, level, normal, elemental, burst",
-});
+    const dexie = (await import("dexie")).default;
 
-export default buildsDB as any;
+    buildsDB = new dexie("buildsDB");
+
+    // completed is going to cause some problems with async later on
+    buildsDB.version(1).stores({
+        builds: "++id, &order, completed, type, characterId, level, normal, elemental, burst",
+    });
+
+    return buildsDB;
+}

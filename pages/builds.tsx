@@ -1,12 +1,15 @@
-import buildsDB from "../lib/buildsDatabase";
 import Layout from "../components/Layout";
 import CharacterBuild from "../components/CharacterBuild";
 import { useLiveQuery } from "dexie-react-hooks";
 import { If } from "../components/If";
 import { NothingInfo } from "../components/NothingInfo";
+import { getBuildsDB } from "../lib/buildsDatabase";
 
 export default function Builds() {
-    const allBuilds = useLiveQuery(() => buildsDB.builds.toArray(), []);
+    const allBuilds = useLiveQuery(
+        async () => (await getBuildsDB()).builds.toArray(),
+        []
+    );
 
     return (
         <>
