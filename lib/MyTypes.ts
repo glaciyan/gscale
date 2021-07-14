@@ -1,3 +1,5 @@
+import { StandardCharacterMaterialsArgs } from "./characterMaterials";
+
 export interface Character {
     id: string;
     name: string;
@@ -7,7 +9,7 @@ export interface Character {
     element: Vision;
     weapon: Weapon;
     sub: string;
-    materials: CharacterMaterials;
+    materials: CharacterMaterials & { list: StandardCharacterMaterialsArgs };
 }
 
 export interface CharacterMaterials {

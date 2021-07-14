@@ -21,12 +21,15 @@ export interface StandardCharacterMaterialsArgs {
     gem: ItemGroup;
 }
 
-export function standard(list: StandardCharacterMaterialsArgs): CharacterMaterials {
+export function standard(
+    list: StandardCharacterMaterialsArgs
+): CharacterMaterials & { list: StandardCharacterMaterialsArgs } {
     return {
         ascension: ascensionCosts(list.gem, list.local, list.common, list.boss),
         normal: talentCost(list.common, list.book, list.weekly),
         elemental: talentCost(list.common, list.book, list.weekly),
         burst: talentCost(list.common, list.book, list.weekly),
+        list,
     };
 }
 
