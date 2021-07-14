@@ -336,7 +336,7 @@ export default function BuildCharacter({ character }: { character: Character }) 
                                             <ItemCard
                                                 item={items.wanderers_advice}
                                                 label={String(
-                                                    materials.accurateXpBook[0]
+                                                    materials.accurateXpBook[2]
                                                 )}
                                             />
                                             <ItemCard
@@ -348,7 +348,7 @@ export default function BuildCharacter({ character }: { character: Character }) 
                                             <ItemCard
                                                 item={items.heros_wit}
                                                 label={String(
-                                                    materials.accurateXpBook[2]
+                                                    materials.accurateXpBook[0]
                                                 )}
                                             />
                                         </div>
