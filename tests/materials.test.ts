@@ -105,7 +105,7 @@ test("leveling correct combine", () => {
     // console.log(JSON.stringify(sumLevelingCost(slice), null, 2));
 });
 
-test("print talents and ascensions", () => {
+test("print everything", () => {
     const materials = calculateMaterials(characters.kazuha, {
         level: { start: 1, goal: 90 },
         normal: { start: 1, goal: 10 },

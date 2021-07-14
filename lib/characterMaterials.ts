@@ -80,12 +80,18 @@ export function calculateMaterials(
 
     // sum all the arrays together
     const summedRequiredLevels = sumLevelingCost(requiredLevels);
+
     const summedRequiredAscension = sumPriced(requiredAscensions);
+    summedRequiredAscension.items.sort((a, b) => a.order - b.order);
+
     const summedRequiredTalents = {
         normal: sumPriced(requiredTalents.normal),
         elemental: sumPriced(requiredTalents.elemental),
         burst: sumPriced(requiredTalents.burst),
     };
+    summedRequiredTalents.normal.items.sort((a, b) => a.order - b.order);
+    summedRequiredTalents.elemental.items.sort((a, b) => a.order - b.order);
+    summedRequiredTalents.burst.items.sort((a, b) => a.order - b.order);
 
     // sum all talents
     const talents = sumPriced([
@@ -93,7 +99,7 @@ export function calculateMaterials(
         summedRequiredTalents.elemental,
         summedRequiredTalents.burst,
     ]);
-    talents.items.sort((a, b) => a.order - b.order);
+    // talents.items.sort((a, b) => a.order - b.order);
 
     // sum everything axcept leveling
     const talentsAndAscension = sumPriced([talents, summedRequiredAscension]);
