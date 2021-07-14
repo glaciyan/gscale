@@ -49,8 +49,6 @@ const Layout = ({ children, title, current }: Props) => {
                                 className=""
                                 src="/images/svg/logo_label_small.svg"
                                 alt="logo"
-                                width={112}
-                                height={29}
                             />
                         </a>
                     </Link>
@@ -140,8 +138,6 @@ const Layout = ({ children, title, current }: Props) => {
                             className="mr-2"
                             src="/images/svg/logo_label_small.svg"
                             alt="logo"
-                            width={112}
-                            height={29}
                         />
                         <div className="mr-2"> v{version} </div>
                         by slimetsp
