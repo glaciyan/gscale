@@ -3,23 +3,6 @@ import { Characters, ItemGroup } from "../lib/MyTypes";
 import { items } from "./items";
 
 export const characters: Characters = {
-    traveler: {
-        id: "traveler",
-        name: "Traveler",
-        rarity: 5,
-        constellation: "asdf",
-        description: "adf",
-        element: "anemo",
-        weapon: "sword",
-        sub: "asdf",
-        materials: standard({
-            local: items.sea_ganoderma.name,
-            weekly: items.gilded_scale.name,
-            common: ItemGroup.treasure_hoarder_insignia,
-            book: ItemGroup.diligence,
-            gem: ItemGroup.anemo_gem,
-        }),
-    },
     kazuha: {
         id: "kazuha",
         name: "Kazuha",
