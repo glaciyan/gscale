@@ -79,7 +79,7 @@ export default function CharacterBuild({ build }: { build: any }) {
                         </div>
                     </div>
                     <div className="flex-grow p-5 rounded-md bg-gscale-dark-background-primary bg-opacity-60">
-                        <CompletionItemGrid build={build} items={materials.everything} />
+                        <CompletionItemGrid build={build} items={materials} />
                     </div>
                 </div>
                 <div className="flex items-center justify-end px-4 py-3 border-t-2 border-gscale-dark-background-500">

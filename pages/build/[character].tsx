@@ -326,6 +326,7 @@ export default function BuildCharacter({ character }: { character: Character }) 
                                         <ItemCard
                                             item={items.heros_wit}
                                             label={String(
+                                                // TODO make prop for that
                                                 Math.ceil(
                                                     materials.totalXp / items.heros_wit.xp
                                                 )
@@ -333,6 +334,7 @@ export default function BuildCharacter({ character }: { character: Character }) 
                                         />
                                         <div className="flex items-center m-0.5 bg-gscale-dark-background-ternary bg-opacity-70 rounded">
                                             <ChevronRightIcon className="w-6 h-6 ml-1" />
+                                            {/* TODO instead of indexes it should be field */}
                                             <ItemCard
                                                 item={items.wanderers_advice}
                                                 label={String(
