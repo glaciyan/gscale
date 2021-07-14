@@ -5,9 +5,9 @@ import { LevelShowcase } from "./LevelShowcase";
 import { SparklesIcon, TrendingUpIcon, FireIcon } from "@heroicons/react/outline";
 import { SwordIcon } from "./icons/sword";
 import { Button } from "./Button";
-import React, { Dispatch, SetStateAction, useState } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
-import { getCharacterLevel } from "../lib/getCharacterLevel";
+import { toLevel } from "../lib/getCharacterLevel";
 import { CharacterLevel } from "./CharacterLevel";
 import { ConfirmDeleteDialouge } from "./ConfirmDeleteDialouge";
 
@@ -17,16 +17,15 @@ export default function CharacterBuild({ build }: { build: any }) {
 
     if (!character) return null;
 
-    const materials = getCharacterMaterials(
-        character,
-        build.level,
-        build.normal,
-        build.elemental,
-        build.burst
-    );
+    const materials = getCharacterMaterials(character, {
+        level: build.level,
+        normal: build.normal,
+        elemental: build.elemental,
+        burst: build.burst,
+    });
 
-    const levelStart = getCharacterLevel(build.level.start);
-    const levelGoal = getCharacterLevel(build.level.goal);
+    const levelStart = toLevel(build.level.start);
+    const levelGoal = toLevel(build.level.goal);
 
     return (
         <>

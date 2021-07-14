@@ -60,13 +60,12 @@ export default function BuildCharacter({ character }: { character: Character }) 
 
     const [startBurst, setstartBurst, goalBurst, setgoalBurst] = useCorrectingState();
 
-    const materials = getCharacterMaterials(
-        character,
-        { start: startLevel, goal: goalLevel },
-        { start: startNormal, goal: goalNormal },
-        { start: startElemental, goal: goalElemental },
-        { start: startBurst, goal: goalBurst }
-    );
+    const materials = getCharacterMaterials(character, {
+        level: { start: startLevel, goal: goalLevel },
+        normal: { start: startNormal, goal: goalNormal },
+        elemental: { start: startElemental, goal: goalElemental },
+        burst: { start: startBurst, goal: goalBurst },
+    });
 
     const [submitting, setSubmitting] = useState(false);
     const [submitError, setSubmitError] = useState("");

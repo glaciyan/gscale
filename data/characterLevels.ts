@@ -17,8 +17,15 @@ export const characterLevels: { [numLever: number]: Level } = {
     90: { level: 90, ascended: false },
 };
 
+export interface LevelUpCostIndexed {
+    level: number;
+    xp: number;
+    mora: number;
+    accurate: [number, number, number];
+}
+
 // data from https://genshin-impact.fandom.com/wiki/Character_EXP
-export const costsTo = [
+export const levelingCosts: LevelUpCostIndexed[] = [
     { level: 20, xp: 120175, mora: 24200, accurate: [6, 0, 1] },
     { level: 40, xp: 578325, mora: 115800, accurate: [28, 3, 4] },
     { level: 50, xp: 579100, mora: 116000, accurate: [29, 0, 0] },
