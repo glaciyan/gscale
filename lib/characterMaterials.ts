@@ -1,5 +1,6 @@
 import _ from "lodash";
 import { ascensionCosts } from "../data/ascensionCost";
+import { talentCost } from "../data/talentCost";
 import {
     BuildItem,
     Character,
@@ -39,7 +40,7 @@ export function getCharacterMaterials(character: Character, _lvlCfg: LevelConfig
 }
 
 export interface CharacterMaterialsArgs {
-    boss?: string;
+    boss: string;
     local: string;
     weekly: string;
     common: ItemGroup;
@@ -50,8 +51,8 @@ export interface CharacterMaterialsArgs {
 export function standard(list: CharacterMaterialsArgs): CharacterMaterials {
     return {
         ascension: ascensionCosts(list.gem, list.local, list.common, list.boss),
-        normal: [],
-        elemental: [],
-        burst: [],
+        normal: talentCost(list.common, list.book, list.weekly),
+        elemental: talentCost(list.common, list.book, list.weekly),
+        burst: talentCost(list.common, list.book, list.weekly),
     };
 }

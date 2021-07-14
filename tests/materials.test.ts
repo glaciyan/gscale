@@ -25,7 +25,7 @@ const maxLevel: LevelConfig = {
 
 // assuming all the previous ones are correct
 test("correct amount of items in last ascension", () => {
-    const mats = kazuha.materials();
+    const mats = kazuha.materials;
 
     const lastAscension = mats.ascension[5];
 
@@ -35,9 +35,4 @@ test("correct amount of items in last ascension", () => {
     expect(lastAscension.items[1].amount).toEqual(20);
     expect(lastAscension.items[2].amount).toEqual(60);
     expect(lastAscension.items[3].amount).toEqual(24);
-});
-
-test("traveler materials", () => {
-    const traveler = characters.traveler;
-    console.log(JSON.stringify(traveler.materials(), null, 2));
 });

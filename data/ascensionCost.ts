@@ -5,7 +5,7 @@ export function ascensionCosts(
     gem: ItemGroup,
     local: string,
     common: ItemGroup,
-    boss?: string
+    boss: string
 ): PricedMaterials[] {
     const ig = new ItemGen({ gem, local, common, boss });
 
