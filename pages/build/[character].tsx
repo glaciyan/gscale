@@ -284,7 +284,9 @@ export default function BuildCharacter({ character }: { character: Character }) 
                                 <Button
                                     isLoading={submitting ? 1 : undefined}
                                     fullw
-                                    text={build ? "Update Build" : "Build Character"}
+                                    text={
+                                        build ? "Update Build" : `Build ${character.name}`
+                                    }
                                     color={`genshin-dark-element-${character.element}`}
                                     onClick={build ? updateBuild : handleSubmit}
                                 />
