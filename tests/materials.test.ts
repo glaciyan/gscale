@@ -1,6 +1,6 @@
 import { levelingCosts } from "../data/characterLevels";
 import { characters } from "../data/characters";
-import { ascStageSlice, levelSlice, talentSlice } from "../lib";
+import { ascStageSlice, levelSlice, sanitizeProgression, talentSlice } from "../lib";
 import { calculateMaterials } from "../lib/characterMaterials";
 import { sumLevelingCost, sumPriced } from "../lib/ItemHelper";
 import { CharacterProgressions, Progression } from "../lib/MyTypes";
@@ -99,19 +99,49 @@ test("materials correct combine", () => {
     // console.log(JSON.stringify(combined, null, 2));
 });
 
-test("leveling correct combine", () => {
-    const slice = levelSlice(levelingCosts, { start: 1, goal: 90 });
+// test("leveling correct combine", () => {
+//     const slice = levelSlice(levelingCosts, { start: 1, goal: 90 });
 
-    // console.log(JSON.stringify(sumLevelingCost(slice), null, 2));
-});
+//     // console.log(JSON.stringify(sumLevelingCost(slice), null, 2));
+// });
 
-test("print everything", () => {
-    const materials = calculateMaterials(characters.kazuha, {
-        level: { start: 1, goal: 90 },
-        normal: { start: 1, goal: 10 },
-        elemental: { start: 1, goal: 10 },
+// test("print everything", () => {
+//     const materials = calculateMaterials(characters.kazuha, {
+//         level: { start: 1, goal: 90 },
+//         normal: { start: 1, goal: 10 },
+//         elemental: { start: 1, goal: 10 },
+//         burst: { start: 1, goal: 10 },
+//     });
+
+//     // console.log(JSON.stringify(materials, null, 2));
+// });
+
+test("levels get sanitized", () => {
+    const prog = {
+        level: { start: 0, goal: 190 },
+        normal: { start: 2, goal: 11 },
+        elemental: { start: -1, goal: 5 },
         burst: { start: 1, goal: 10 },
-    });
+    };
 
-    // console.log(JSON.stringify(materials, null, 2));
+    sanitizeProgression(prog);
+
+    expect(prog).toEqual({
+        level: {
+            start: 1,
+            goal: 90,
+        },
+        normal: {
+            start: 2,
+            goal: 10,
+        },
+        elemental: {
+            start: 1,
+            goal: 5,
+        },
+        burst: {
+            start: 1,
+            goal: 10,
+        },
+    });
 });
