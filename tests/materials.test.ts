@@ -1,5 +1,5 @@
 import { characters } from "../data/characters";
-import { levelSlice } from "../lib";
+import { ascStageSlice } from "../lib";
 import { getCharacterMaterials } from "../lib/characterMaterials";
 import { LevelConfig, Progression } from "../lib/MyTypes";
 
@@ -41,12 +41,12 @@ test("correct amount of items in last ascension", () => {
 test("correct amount sliced from material list", () => {
     const mats = kazuha.materials;
 
-    expect(levelSlice(mats.ascension, { start: 1, goal: 90 }).length).toEqual(6);
-    expect(levelSlice(mats.ascension, { start: 21, goal: 90 }).length).toEqual(5);
-    expect(levelSlice(mats.ascension, { start: 41, goal: 80 }).length).toEqual(3);
-    expect(levelSlice(mats.ascension, { start: 51, goal: 70 }).length).toEqual(1);
-    expect(levelSlice(mats.ascension, { start: 31, goal: 40 }).length).toEqual(0);
-    expect(levelSlice(mats.ascension, { start: 50, goal: 60 }).length).toEqual(1);
+    expect(ascStageSlice(mats.ascension, { start: 1, goal: 90 }).length).toEqual(6);
+    expect(ascStageSlice(mats.ascension, { start: 21, goal: 90 }).length).toEqual(5);
+    expect(ascStageSlice(mats.ascension, { start: 41, goal: 80 }).length).toEqual(3);
+    expect(ascStageSlice(mats.ascension, { start: 51, goal: 70 }).length).toEqual(1);
+    expect(ascStageSlice(mats.ascension, { start: 31, goal: 40 }).length).toEqual(0);
+    expect(ascStageSlice(mats.ascension, { start: 50, goal: 60 }).length).toEqual(1);
     // console.log(
     //     JSON.stringify(levelSlice(mats.ascension, { start: 51, goal: 80 }), null, 2)
     // );

@@ -43,7 +43,7 @@ export function toLevel(level: number): Level {
     return highest[1];
 }
 
-export function levelSlice(array: PricedMaterials[], levels: Progression) {
+export function ascStageSlice(array: PricedMaterials[], levels: Progression) {
     const start = getAscensionLevel(levels.start);
     const end = getAscensionLevel(levels.goal);
 
