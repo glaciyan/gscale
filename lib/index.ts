@@ -1,4 +1,4 @@
-import { characterLevels, Level } from "../data/characterLevels";
+import { characterLevels, Level, LevelUpCost } from "../data/characterLevels";
 import { PricedMaterials, Progression } from "./MyTypes";
 
 export function toId(name: string) {
@@ -43,9 +43,23 @@ export function toLevel(level: number): Level {
     return highest[1];
 }
 
-export function ascStageSlice(array: PricedMaterials[], levels: Progression) {
-    const start = getAscensionLevel(levels.start);
-    const end = getAscensionLevel(levels.goal);
+export function ascStageSlice(
+    array: PricedMaterials[],
+    prog: Progression
+): PricedMaterials[] {
+    const start = getAscensionLevel(prog.start);
+    const end = getAscensionLevel(prog.goal);
 
     return array.slice(start, end);
+}
+
+export function levelSlice(array: LevelUpCost[], prog: Progression): LevelUpCost[] {
+    return array.filter(({ level }) => level > prog.start && level <= prog.goal);
+}
+
+export function talentSlice(
+    array: PricedMaterials[],
+    prog: Progression
+): PricedMaterials[] {
+    return array.slice(prog.start - 1, prog.goal - 1);
 }

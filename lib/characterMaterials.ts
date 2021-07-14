@@ -1,6 +1,7 @@
 import _ from "lodash";
-import { getAscensionLevel } from ".";
+import { ascStageSlice, getAscensionLevel, levelSlice, talentSlice } from ".";
 import { ascensionCosts } from "../data/ascensionCost";
+import { levelingCosts } from "../data/characterLevels";
 import { talentCost } from "../data/talentCost";
 import {
     BuildItem,
@@ -12,10 +13,22 @@ import {
     PricedMaterials,
 } from "./MyTypes";
 
-export interface CalculatedMaterialList {
-    mora: number;
-    xp: number;
-    // level:
+export interface StandardCharacterMaterialsArgs {
+    boss: string;
+    local: string;
+    weekly: string;
+    common: ItemGroup;
+    book: ItemGroup;
+    gem: ItemGroup;
+}
+
+export function standard(list: StandardCharacterMaterialsArgs): CharacterMaterials {
+    return {
+        ascension: ascensionCosts(list.gem, list.local, list.common, list.boss),
+        normal: talentCost(list.common, list.book, list.weekly),
+        elemental: talentCost(list.common, list.book, list.weekly),
+        burst: talentCost(list.common, list.book, list.weekly),
+    };
 }
 
 export function getCharacterMaterials(character: Character, _lvlCfg: LevelConfig) {
@@ -40,23 +53,13 @@ export function getCharacterMaterials(character: Character, _lvlCfg: LevelConfig
     const materialTable = character.materials;
 
     // filter materials from level
-    // const requiredAscensions =
-}
-
-export interface CharacterMaterialsArgs {
-    boss: string;
-    local: string;
-    weekly: string;
-    common: ItemGroup;
-    book: ItemGroup;
-    gem: ItemGroup;
-}
-
-export function standard(list: CharacterMaterialsArgs): CharacterMaterials {
-    return {
-        ascension: ascensionCosts(list.gem, list.local, list.common, list.boss),
-        normal: talentCost(list.common, list.book, list.weekly),
-        elemental: talentCost(list.common, list.book, list.weekly),
-        burst: talentCost(list.common, list.book, list.weekly),
+    const requiredAscensions = ascStageSlice(materialTable.ascension, _lvlCfg.level);
+    const requiredLevels = levelSlice(levelingCosts, _lvlCfg.level);
+    const requiredTalents = {
+        normal: talentSlice(materialTable.normal, _lvlCfg.normal),
+        elemental: talentSlice(materialTable.elemental, _lvlCfg.elemental),
+        burst: talentSlice(materialTable.burst, _lvlCfg.burst),
     };
+
+	const totalMora: number = 
 }

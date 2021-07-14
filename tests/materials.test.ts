@@ -1,5 +1,6 @@
+import { levelingCosts } from "../data/characterLevels";
 import { characters } from "../data/characters";
-import { ascStageSlice } from "../lib";
+import { ascStageSlice, levelSlice, talentSlice } from "../lib";
 import { getCharacterMaterials } from "../lib/characterMaterials";
 import { LevelConfig, Progression } from "../lib/MyTypes";
 
@@ -50,4 +51,35 @@ test("correct amount sliced from material list", () => {
     // console.log(
     //     JSON.stringify(levelSlice(mats.ascension, { start: 51, goal: 80 }), null, 2)
     // );
+});
+
+test("correct amount of leveling cost", () => {
+    expect(levelSlice(levelingCosts, { start: 1, goal: 1 }).length).toEqual(0);
+    expect(levelSlice(levelingCosts, { start: 1, goal: 20 }).length).toEqual(1);
+    expect(levelSlice(levelingCosts, { start: 1, goal: 40 }).length).toEqual(2);
+    expect(levelSlice(levelingCosts, { start: 1, goal: 50 }).length).toEqual(3);
+    expect(levelSlice(levelingCosts, { start: 1, goal: 60 }).length).toEqual(4);
+    expect(levelSlice(levelingCosts, { start: 1, goal: 70 }).length).toEqual(5);
+    expect(levelSlice(levelingCosts, { start: 1, goal: 80 }).length).toEqual(6);
+    expect(levelSlice(levelingCosts, { start: 1, goal: 90 }).length).toEqual(7);
+
+    expect(levelSlice(levelingCosts, { start: 30, goal: 40 }).length).toEqual(1);
+    expect(levelSlice(levelingCosts, { start: 30, goal: 50 }).length).toEqual(2);
+    expect(levelSlice(levelingCosts, { start: 30, goal: 60 }).length).toEqual(3);
+    expect(levelSlice(levelingCosts, { start: 30, goal: 70 }).length).toEqual(4);
+    expect(levelSlice(levelingCosts, { start: 30, goal: 80 }).length).toEqual(5);
+    expect(levelSlice(levelingCosts, { start: 30, goal: 90 }).length).toEqual(6);
+
+    expect(levelSlice(levelingCosts, { start: 70, goal: 80 })[0].xp).toEqual(1611875);
+
+    const test1 = levelSlice(levelingCosts, { start: 50, goal: 80 });
+    expect(test1.length).toEqual(3);
+    expect(test1[0].xp + test1[1].xp + test1[2].xp).toEqual(3661925);
+});
+
+test("correct amount of talent materials", () => {
+    const mats = kazuha.materials;
+
+    expect(talentSlice(mats.normal, { start: 4, goal: 8 }).length).toEqual(4);
+    console.log(JSON.stringify(talentSlice(mats.normal, { start: 4, goal: 8 }), null, 2));
 });
