@@ -1,4 +1,5 @@
 import { characterLevels, Level } from "../data/characterLevels";
+import { PricedMaterials, Progression } from "./MyTypes";
 
 export function toId(name: string) {
     return name.trim().replace(/'/g, "").replace(/[ -]/g, "_").toLowerCase();
@@ -40,4 +41,11 @@ export function toLevel(level: number): Level {
     });
 
     return highest[1];
+}
+
+export function levelSlice(array: PricedMaterials[], levels: Progression) {
+    const start = getAscensionLevel(levels.start);
+    const end = getAscensionLevel(levels.goal);
+
+    return array.slice(start, end);
 }

@@ -1,4 +1,5 @@
 import _ from "lodash";
+import { getAscensionLevel } from ".";
 import { ascensionCosts } from "../data/ascensionCost";
 import { talentCost } from "../data/talentCost";
 import {
@@ -11,7 +12,7 @@ import {
     PricedMaterials,
 } from "./MyTypes";
 
-export interface MaterialList {
+export interface CalculatedMaterialList {
     mora: number;
     xp: number;
     // level:
@@ -37,6 +38,9 @@ export function getCharacterMaterials(character: Character, _lvlCfg: LevelConfig
 
     const totalMora = 0;
     const materialTable = character.materials;
+
+    // filter materials from level
+    // const requiredAscensions =
 }
 
 export interface CharacterMaterialsArgs {
