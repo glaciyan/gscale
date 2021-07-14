@@ -1,8 +1,8 @@
 import { ItemGroup, Items } from "../lib/MyTypes";
 
 export const items = {
-    unknown: {
-        name: "Unknown Item",
+    error: {
+        name: "Error",
         rarity: 0,
     },
     sea_ganoderma: {

@@ -4,14 +4,11 @@ import itemOrder from "./itemOrder";
 import { BuildItem, Item, ItemGroup, Vision } from "./MyTypes";
 
 export function getItemFromGroup(group: ItemGroup | undefined, rarity: number): Item {
-    if (group === ItemGroup.unknown) items.unknown;
-
     const found = Object.values(items).find(
         (item: Item) => item.group === group && item.rarity === rarity
     );
 
-    if (!found) return items.unknown;
-    return found;
+    return found ?? items.error;
 }
 
 export function mora(amount: number): BuildItem {
@@ -64,7 +61,7 @@ interface ItemGenArgs {
 }
 
 function getFromItemsArray(name?: string) {
-    return !name ? items.unknown : itemsArray[toId(name)];
+    return !name ? items.error : itemsArray[toId(name)];
 }
 
 export class ItemGen {
