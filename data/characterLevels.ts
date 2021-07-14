@@ -21,7 +21,7 @@ export interface LevelUpCostIndexed {
     level: number;
     xp: number;
     mora: number;
-    accurate: number[];
+    accurate: [number, number, number];
 }
 
 // data from https://genshin-impact.fandom.com/wiki/Character_EXP

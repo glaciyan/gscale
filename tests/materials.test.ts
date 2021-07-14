@@ -113,5 +113,5 @@ test("print talents and ascensions", () => {
         burst: { start: 1, goal: 10 },
     });
 
-    console.log(JSON.stringify(materials, null, 2));
+    // console.log(JSON.stringify(materials, null, 2));
 });

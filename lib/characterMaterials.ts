@@ -12,6 +12,7 @@ import {
     ItemGroup,
     CharacterProgressions,
     PricedMaterials,
+    Materials,
 } from "./MyTypes";
 
 export interface StandardCharacterMaterialsArgs {
@@ -32,10 +33,23 @@ export function standard(list: StandardCharacterMaterialsArgs): CharacterMateria
     };
 }
 
+export interface MaterialCalculation {
+    totalMora: number;
+    totalXp: number;
+    accurateXpBook: [number, number, number];
+    ascension: Materials;
+    normal: Materials;
+    elemental: Materials;
+    burst: Materials;
+    talents: Materials;
+    everything: Materials;
+    materialNames: string[];
+}
+
 export function calculateMaterials(
     character: Character,
     progressions: CharacterProgressions
-) {
+): MaterialCalculation {
     // sanitize lvlCfg
     // get all leveling materials
     // get all ascension materials
@@ -85,7 +99,22 @@ export function calculateMaterials(
     const talentsAndAscension = sumPriced([talents, summedRequiredAscension]);
     talentsAndAscension.items.sort((a, b) => a.order - b.order);
 
-    const totalMora = 0;
+    const totalMora = talentsAndAscension.mora + summedRequiredLevels.mora;
 
-    return talentsAndAscension;
+    const materialNames = talentsAndAscension.items.map((item) => {
+        return item.name;
+    });
+
+    return {
+        totalMora,
+        totalXp: summedRequiredLevels.xp,
+        accurateXpBook: summedRequiredLevels.accurate,
+        ascension: summedRequiredAscension.items,
+        normal: summedRequiredTalents.normal.items,
+        elemental: summedRequiredTalents.elemental.items,
+        burst: summedRequiredTalents.burst.items,
+        talents: talents.items,
+        everything: talentsAndAscension.items,
+        materialNames,
+    };
 }

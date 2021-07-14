@@ -87,8 +87,10 @@ export interface PricedMaterials {
     items: BuildItem[];
 }
 
+export type Materials = BuildItem[];
+
 export interface LevelUpCost {
     xp: number;
     mora: number;
-    accurate: number[];
+    accurate: [number, number, number];
 }
