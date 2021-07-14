@@ -3,6 +3,7 @@ import { ascStageSlice, getAscensionLevel, levelSlice, talentSlice } from ".";
 import { ascensionCosts } from "../data/ascensionCost";
 import { levelingCosts } from "../data/characterLevels";
 import { talentCost } from "../data/talentCost";
+import { sumPriced } from "./ItemHelper";
 import {
     BuildItem,
     Character,
@@ -31,7 +32,7 @@ export function standard(list: StandardCharacterMaterialsArgs): CharacterMateria
     };
 }
 
-export function getCharacterMaterials(character: Character, _lvlCfg: LevelConfig) {
+export function calculateMaterials(character: Character, _lvlCfg: LevelConfig) {
     // sanitize lvlCfg
     // get all leveling materials
     // get all ascension materials
@@ -52,14 +53,21 @@ export function getCharacterMaterials(character: Character, _lvlCfg: LevelConfig
     const totalMora = 0;
     const materialTable = character.materials;
 
-    // filter materials from level
-    const requiredAscensions = ascStageSlice(materialTable.ascension, _lvlCfg.level);
+    // filter materials with level
     const requiredLevels = levelSlice(levelingCosts, _lvlCfg.level);
+    const requiredAscensions = ascStageSlice(materialTable.ascension, _lvlCfg.level);
     const requiredTalents = {
         normal: talentSlice(materialTable.normal, _lvlCfg.normal),
         elemental: talentSlice(materialTable.elemental, _lvlCfg.elemental),
         burst: talentSlice(materialTable.burst, _lvlCfg.burst),
     };
 
-	const totalMora: number = 
+    // sum all the arrays together
+    const summedRequiredLevels = {};
+    const summedRequiredAscension = sumPriced(requiredAscensions);
+    const summedRequiredTalents = {
+        normal: sumPriced(requiredTalents.normal),
+        elemental: sumPriced(requiredTalents.elemental),
+        burst: sumPriced(requiredTalents.burst),
+    };
 }

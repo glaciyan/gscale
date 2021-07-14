@@ -1,7 +1,8 @@
 import { toId } from ".";
+import { LevelUpCost } from "../data/characterLevels";
 import { items, itemsArray } from "../data/items";
 import itemOrder from "./itemOrder";
-import { BuildItem, Item, ItemGroup, Vision } from "./MyTypes";
+import { BuildItem, Item, ItemGroup, PricedMaterials, Vision } from "./MyTypes";
 
 export function getItemFromGroup(group: ItemGroup | undefined, rarity: number): Item {
     const found = Object.values(items).find(
@@ -129,3 +130,24 @@ export class ItemGen {
         };
     }
 }
+
+export function sumPriced(arr: PricedMaterials[]): PricedMaterials {
+    // assuming the array contains all the same items, 0 or more
+    let out: PricedMaterials = { mora: 0, items: [] };
+    arr.forEach((a) => {
+        a.items.forEach((arrItem) => {
+            const sameName = out.items.find((outVal) => outVal.name === arrItem.name);
+
+            if (sameName) {
+                sameName.amount += arrItem.amount;
+            } else {
+                out.items.push({ ...arrItem });
+            }
+        });
+        out.mora += a.mora;
+    });
+
+    return out;
+}
+
+export function sumLevelingCost(arr: LevelUpCost[]) {}

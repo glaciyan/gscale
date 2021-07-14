@@ -1,7 +1,7 @@
 import { levelingCosts } from "../data/characterLevels";
 import { characters } from "../data/characters";
 import { ascStageSlice, levelSlice, talentSlice } from "../lib";
-import { getCharacterMaterials } from "../lib/characterMaterials";
+import { sumPriced } from "../lib/ItemHelper";
 import { LevelConfig, Progression } from "../lib/MyTypes";
 
 const kazuha = characters.kazuha;
@@ -81,5 +81,19 @@ test("correct amount of talent materials", () => {
     const mats = kazuha.materials;
 
     expect(talentSlice(mats.normal, { start: 4, goal: 8 }).length).toEqual(4);
-    console.log(JSON.stringify(talentSlice(mats.normal, { start: 4, goal: 8 }), null, 2));
+    // console.log(JSON.stringify(talentSlice(mats.normal, { start: 4, goal: 8 }), null, 2));
+});
+
+test("materials correct combine", () => {
+    const mats = kazuha.materials;
+
+    const slice = ascStageSlice(mats.ascension, { start: 1, goal: 90 });
+    const combined = sumPriced(slice);
+    combined.items[0].amount = 9999;
+
+    expect(slice[0].items[0].amount).toEqual(1);
+    expect(combined.items[2].amount).toEqual(168);
+
+    // console.log(JSON.stringify(slice, null, 2));
+    // console.log(JSON.stringify(combined, null, 2));
 });
