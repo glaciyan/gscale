@@ -3,11 +3,11 @@ import RarityStars from "./RarityStars";
 import cn from "classnames";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import _ from "lodash";
 import { useEffect, useState } from "react";
 import { Button } from "./Button";
 import { If } from "./If";
 import { getBuildsDB } from "../lib/buildsDatabase";
+import { upperCaseFirst } from "upper-case-first";
 
 function useIsTouch() {
     const [isTouch, setisTouch] = useState(false);
@@ -97,10 +97,10 @@ export default function CharacterCard({
             <div className="px-4 py-3">
                 <div className="flex flex-wrap items-center">
                     <span className={`text-genshin-element-${elementId} mr-1`}>
-                        {_.upperFirst(character.element)}
+                        {upperCaseFirst(character.element)}
                     </span>
                     <span className="text-gscale-dark-text-secondary mr-0.5 opacity-80">
-                        {_.upperFirst(character.weapon)}
+                        {upperCaseFirst(character.weapon)}
                     </span>
                     <RarityStars
                         rarity={character.rarity}

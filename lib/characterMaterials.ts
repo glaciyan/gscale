@@ -1,4 +1,3 @@
-import _ from "lodash";
 import { ascStageSlice, levelSlice, sanitizeProgression, talentSlice } from ".";
 import { ascensionCosts } from "../data/ascensionCost";
 import { levelingCosts } from "../data/characterLevels";

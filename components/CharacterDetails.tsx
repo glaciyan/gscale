@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import _ from "lodash";
 import { ElementIcon } from "./icons/element";
 import { IconWithText } from "./IconWithText";
 import { CharacterItemShowcase } from "./CharacterItemShowcase";
 import Image from "next-native-image";
 import { ItemCharacterCard } from "./ItemCharacterCard";
 import { Character } from "../lib/MyTypes";
+import { upperCaseFirst } from "upper-case-first";
 
 interface CharacterDetailsProps {
     character: Character;
@@ -52,7 +52,7 @@ export const CharacterDetails: React.FC<CharacterDetailsProps> = ({ character })
                             }
                         >
                             <span className={`text-genshin-element-${character.element}`}>
-                                {_.upperFirst(character.element)}
+                                {upperCaseFirst(character.element)}
                             </span>
                         </IconWithText>
                         <IconWithText
@@ -77,7 +77,7 @@ export const CharacterDetails: React.FC<CharacterDetailsProps> = ({ character })
                             }
                         >
                             <div className="text-gscale-dark-text-secondary">
-                                {_.upperFirst(character.weapon)}
+                                {upperCaseFirst(character.weapon)}
                             </div>
                             <div className="mt-0.5 text-gscale-dark-text-secondary">
                                 {character.sub}
