@@ -9,7 +9,7 @@ export interface Character {
     element: Vision;
     weapon: Weapon;
     sub: string;
-    materials: () => CharacterMaterials;
+    materials: CharacterMaterials;
 }
 
 export type Vision = "cryo" | "pyro" | "geo" | "electro" | "anemo" | "hydro";
