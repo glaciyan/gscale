@@ -3,6 +3,7 @@ import { ascensionCosts } from "../data/ascensionCost";
 import {
     BuildItem,
     Character,
+    CharacterMaterials,
     Item,
     ItemGroup,
     LevelConfig,
@@ -31,9 +32,10 @@ export function getCharacterMaterials(character: Character, _lvlCfg: LevelConfig
     // burst: {mora, materials}
     // all talent materials
     // all materials (ascension and talents)
+    // all item names
 
     const totalMora = 0;
-    const materialTable = character.materials();
+    const materialTable = character.materials;
 }
 
 export interface CharacterMaterialsArgs {
@@ -43,13 +45,6 @@ export interface CharacterMaterialsArgs {
     common: ItemGroup;
     book: ItemGroup;
     gem: ItemGroup;
-}
-
-export interface CharacterMaterials {
-    ascension: PricedMaterials[];
-    normal: PricedMaterials[];
-    elemental: PricedMaterials[];
-    burst: PricedMaterials[];
 }
 
 export function standard(list: CharacterMaterialsArgs): CharacterMaterials {

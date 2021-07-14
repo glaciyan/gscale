@@ -1,5 +1,3 @@
-import { CharacterMaterials } from "./characterMaterials";
-
 export interface Character {
     id: string;
     name: string;
@@ -10,6 +8,13 @@ export interface Character {
     weapon: Weapon;
     sub: string;
     materials: CharacterMaterials;
+}
+
+export interface CharacterMaterials {
+    ascension: PricedMaterials[];
+    normal: PricedMaterials[];
+    elemental: PricedMaterials[];
+    burst: PricedMaterials[];
 }
 
 export type Vision = "cryo" | "pyro" | "geo" | "electro" | "anemo" | "hydro";
