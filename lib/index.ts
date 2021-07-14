@@ -1,4 +1,4 @@
-import { characterLevels, Level, LevelUpCost } from "../data/characterLevels";
+import { characterLevels, Level, LevelUpCostIndexed } from "../data/characterLevels";
 import { PricedMaterials, Progression } from "./MyTypes";
 
 export function toId(name: string) {
@@ -37,8 +37,13 @@ export function ascStageSlice(
     return array.slice(start, end);
 }
 
-export function levelSlice(array: LevelUpCost[], prog: Progression): LevelUpCost[] {
-    return array.filter(({ level }) => level > prog.start && level <= prog.goal);
+export function levelSlice(
+    array: LevelUpCostIndexed[],
+    prog: Progression
+): LevelUpCostIndexed[] {
+    return array.filter(
+        ({ level }) => (level ?? 1) > prog.start && (level ?? 20) <= prog.goal
+    );
 }
 
 export function talentSlice(

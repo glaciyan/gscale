@@ -3,14 +3,14 @@ import { ascStageSlice, getAscensionLevel, levelSlice, talentSlice } from ".";
 import { ascensionCosts } from "../data/ascensionCost";
 import { levelingCosts } from "../data/characterLevels";
 import { talentCost } from "../data/talentCost";
-import { sumPriced } from "./ItemHelper";
+import { sumLevelingCost, sumPriced } from "./ItemHelper";
 import {
     BuildItem,
     Character,
     CharacterMaterials,
     Item,
     ItemGroup,
-    LevelConfig,
+    CharacterProgressions,
     PricedMaterials,
 } from "./MyTypes";
 
@@ -32,7 +32,10 @@ export function standard(list: StandardCharacterMaterialsArgs): CharacterMateria
     };
 }
 
-export function calculateMaterials(character: Character, _lvlCfg: LevelConfig) {
+export function calculateMaterials(
+    character: Character,
+    progressions: CharacterProgressions
+) {
     // sanitize lvlCfg
     // get all leveling materials
     // get all ascension materials
@@ -54,16 +57,16 @@ export function calculateMaterials(character: Character, _lvlCfg: LevelConfig) {
     const materialTable = character.materials;
 
     // filter materials with level
-    const requiredLevels = levelSlice(levelingCosts, _lvlCfg.level);
-    const requiredAscensions = ascStageSlice(materialTable.ascension, _lvlCfg.level);
+    const requiredLevels = levelSlice(levelingCosts, progressions.level);
+    const requiredAscensions = ascStageSlice(materialTable.ascension, progressions.level);
     const requiredTalents = {
-        normal: talentSlice(materialTable.normal, _lvlCfg.normal),
-        elemental: talentSlice(materialTable.elemental, _lvlCfg.elemental),
-        burst: talentSlice(materialTable.burst, _lvlCfg.burst),
+        normal: talentSlice(materialTable.normal, progressions.normal),
+        elemental: talentSlice(materialTable.elemental, progressions.elemental),
+        burst: talentSlice(materialTable.burst, progressions.burst),
     };
 
     // sum all the arrays together
-    const summedRequiredLevels = {};
+    const summedRequiredLevels = sumLevelingCost(requiredLevels);
     const summedRequiredAscension = sumPriced(requiredAscensions);
     const summedRequiredTalents = {
         normal: sumPriced(requiredTalents.normal),

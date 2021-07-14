@@ -1,8 +1,15 @@
 import { toId } from ".";
-import { LevelUpCost } from "../data/characterLevels";
+import { LevelUpCostIndexed } from "../data/characterLevels";
 import { items, itemsArray } from "../data/items";
 import itemOrder from "./itemOrder";
-import { BuildItem, Item, ItemGroup, PricedMaterials, Vision } from "./MyTypes";
+import {
+    BuildItem,
+    Item,
+    ItemGroup,
+    LevelUpCost,
+    PricedMaterials,
+    Vision,
+} from "./MyTypes";
 
 export function getItemFromGroup(group: ItemGroup | undefined, rarity: number): Item {
     const found = Object.values(items).find(
@@ -150,4 +157,16 @@ export function sumPriced(arr: PricedMaterials[]): PricedMaterials {
     return out;
 }
 
-export function sumLevelingCost(arr: LevelUpCost[]) {}
+export function sumLevelingCost(arr: LevelUpCostIndexed[]) {
+    const out: LevelUpCost = { xp: 0, mora: 0, accurate: [0, 0, 0] };
+
+    arr.forEach((cost) => {
+        out.xp += cost.xp;
+        out.mora += cost.mora;
+        out.accurate[0] += cost.accurate[0];
+        out.accurate[1] += cost.accurate[1];
+        out.accurate[2] += cost.accurate[2];
+    });
+
+    return out;
+}

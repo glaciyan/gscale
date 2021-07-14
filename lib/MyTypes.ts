@@ -75,7 +75,7 @@ export type BuildItem = Item & { order: number; amount: number };
 
 export type Progression = { start: number; goal: number };
 
-export interface LevelConfig {
+export interface CharacterProgressions {
     level: Progression;
     normal: Progression;
     elemental: Progression;
@@ -85,4 +85,10 @@ export interface LevelConfig {
 export interface PricedMaterials {
     mora: number;
     items: BuildItem[];
+}
+
+export interface LevelUpCost {
+    xp: number;
+    mora: number;
+    accurate: number[];
 }

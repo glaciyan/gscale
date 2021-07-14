@@ -1,12 +1,12 @@
 import { levelingCosts } from "../data/characterLevels";
 import { characters } from "../data/characters";
 import { ascStageSlice, levelSlice, talentSlice } from "../lib";
-import { sumPriced } from "../lib/ItemHelper";
-import { LevelConfig, Progression } from "../lib/MyTypes";
+import { sumLevelingCost, sumPriced } from "../lib/ItemHelper";
+import { CharacterProgressions, Progression } from "../lib/MyTypes";
 
 const kazuha = characters.kazuha;
 
-const maxLevel: LevelConfig = {
+const maxLevel: CharacterProgressions = {
     level: {
         start: 1,
         goal: 90,
@@ -96,4 +96,10 @@ test("materials correct combine", () => {
 
     // console.log(JSON.stringify(slice, null, 2));
     // console.log(JSON.stringify(combined, null, 2));
+});
+
+test("leveling correct combine", () => {
+    const slice = levelSlice(levelingCosts, { start: 1, goal: 90 });
+
+    // console.log(JSON.stringify(sumLevelingCost(slice), null, 2));
 });
