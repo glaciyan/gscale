@@ -31,10 +31,11 @@ export const ConfirmDeleteDialouge: React.FC<ConfirmDeleteDialougeProps> = ({
             preventScroll={true}
             onRequestClose={() => setVisible(false)}
             shouldCloseOnOverlayClick={true}
-            className="fixed inset-0 z-10 overflow-y-auto text-gscale-dark-text-primary"
+            className="overflow-y-auto text-gscale-dark-text-primary"
+            overlayClassName="z-[9999] fixed inset-0"
         >
             <div className="flex items-center justify-center min-h-screen">
-                <div className="z-20 max-w-sm mx-auto rounded-md bg-gscale-dark-background-secondary">
+                <div className="z-50 max-w-sm mx-auto rounded-md bg-gscale-dark-background-secondary">
                     <div className="p-6">
                         <div className="mb-3 font-bold">Delete Build</div>
                         <div className="text-gscale-dark-text-secondary">
