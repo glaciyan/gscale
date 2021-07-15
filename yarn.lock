@@ -4190,11 +4190,6 @@ next-compose-plugins@^2.2.1:
   resolved "https://registry.yarnpkg.com/next-compose-plugins/-/next-compose-plugins-2.2.1.tgz#020fc53f275a7e719d62521bef4300fbb6fde5ab"
   integrity sha512-OjJ+fV15FXO2uQXQagLD4C0abYErBjyjE0I0FHpOEIB8upw0hg1ldFP6cqHTJBH1cZqy96OeR3u1dJ+Ez2D4Bg==
 
-next-native-image@^1.1.2:
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/next-native-image/-/next-native-image-1.1.2.tgz#1ac6923fb8a68f2e838d4eba083e0f836b2c02b2"
-  integrity sha512-J6iaEZ20qMcIQMqQVCJB+CdziDR3tpWnz8fOJUyjUsv01Val7y5AQLvhFjgCZAq4ocufp5hLsKFJZlY8XwN1HQ==
-
 next-optimized-images@^3.0.0-canary.10:
   version "3.0.0-canary.10"
   resolved "https://registry.yarnpkg.com/next-optimized-images/-/next-optimized-images-3.0.0-canary.10.tgz#5f1a38667974c867c9aa6c0f97a5cf0d831c5e46"
