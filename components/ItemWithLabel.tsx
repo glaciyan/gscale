@@ -1,7 +1,7 @@
 import { Item } from "../lib/MyTypes";
 import { ItemImage } from "./ItemImage";
 
-export default function ItemCard({ item, label }: { item: Item; label?: string }) {
+export default function ItemWithLabel({ item, label }: { item: Item; label?: string }) {
     if (label && label === "0") return null;
 
     return (

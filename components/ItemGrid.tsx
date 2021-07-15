@@ -1,6 +1,6 @@
 import { BuildItem, Materials } from "../lib/MyTypes";
 import { toId } from "../lib";
-import MiniItemCard from "./ItemCard";
+import MiniItemCard from "./ItemWithLabel";
 
 export default function ItemGrid({ items }: { items: Materials }) {
     return (

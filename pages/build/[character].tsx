@@ -15,7 +15,7 @@ import { CharacterDetails } from "../../components/CharacterDetails";
 import { Button } from "../../components/Button";
 import { calculateMaterials } from "../../lib/characterMaterials";
 import { Character } from "../../lib/MyTypes";
-import ItemCard from "../../components/ItemCard";
+import ItemWithLabel from "../../components/ItemWithLabel";
 import millify from "millify";
 import { items } from "../../data/items";
 import { ShowcaseCategory } from "../../components/ShowcaseCategory";
@@ -346,14 +346,14 @@ export default function BuildCharacter({ character }: { character: Character }) 
 
                             <div className="flex">
                                 <If cif={materials.totalMora !== 0}>
-                                    <ItemCard
+                                    <ItemWithLabel
                                         item={items.mora}
                                         label={millify(materials.totalMora)}
                                     />
                                 </If>
                                 <If cif={materials.totalXp !== 0}>
                                     <>
-                                        <ItemCard
+                                        <ItemWithLabel
                                             item={items.heros_wit}
                                             label={String(
                                                 // TODO make prop for that
@@ -365,19 +365,19 @@ export default function BuildCharacter({ character }: { character: Character }) 
                                         <div className="flex items-center m-0.5 bg-gscale-dark-background-ternary bg-opacity-70 rounded">
                                             <ChevronRightIcon className="w-6 h-6 ml-1" />
                                             {/* TODO instead of indexes it should be field */}
-                                            <ItemCard
+                                            <ItemWithLabel
                                                 item={items.wanderers_advice}
                                                 label={String(
                                                     materials.accurateXpBook[2]
                                                 )}
                                             />
-                                            <ItemCard
+                                            <ItemWithLabel
                                                 item={items.adventurers_experience}
                                                 label={String(
                                                     materials.accurateXpBook[1]
                                                 )}
                                             />
-                                            <ItemCard
+                                            <ItemWithLabel
                                                 item={items.heros_wit}
                                                 label={String(
                                                     materials.accurateXpBook[0]
