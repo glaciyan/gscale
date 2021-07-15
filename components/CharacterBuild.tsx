@@ -62,6 +62,7 @@ export default function CharacterBuild({ build }: { build: any }) {
                                     label={"Level"}
                                     element={character.element}
                                     className={`w-full sm:w-max sm:!mt-0`}
+                                    numberClassName={`maxsm:w-12`}
                                 ></LevelShowcase>
                                 <LevelShowcase
                                     left={build.normal.start}

@@ -7,6 +7,7 @@ interface LevelShowcaseProps {
     icon: React.ReactElement;
     label: string;
     element: string;
+    numberClassName?: string;
 }
 
 export const LevelShowcase: React.FC<LevelShowcaseProps & ClassName> = ({
@@ -16,8 +17,9 @@ export const LevelShowcase: React.FC<LevelShowcaseProps & ClassName> = ({
     label,
     element,
     className = "",
+    numberClassName = "",
 }) => {
-    const numberStyle = /*tw*/ `flex items-center pl-2 sm:w-14 mr-4 sm:mr-0`;
+    const numberStyle = /*tw*/ `flex items-center pl-2 sm:w-14 mr-4 sm:mr-0 ${numberClassName}`;
     return (
         <div className={`${className} sm:m-0 m-1 !ml-0 mr-2`}>
             <h3 className="font-semibold">{label}</h3>
