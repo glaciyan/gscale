@@ -3,7 +3,7 @@ import { ElementIcon } from "./icons/element";
 import { IconWithText } from "./IconWithText";
 import { CharacterItemShowcase } from "./CharacterItemShowcase";
 import Image from "../lib/next-native-image";
-import { ItemCharacterCard } from "./ItemCharacterCard";
+import { CharacterRarityMugshot } from "./CharacterRarityMugshot";
 import { Character } from "../lib/MyTypes";
 import { upperCaseFirst } from "upper-case-first";
 
@@ -28,7 +28,10 @@ export const CharacterDetails: React.FC<CharacterDetailsProps> = ({ character })
                     />
                 </div>
                 <div className="z-20 flex-1 h-full buildpagepadding">
-                    <ItemCharacterCard character={character} className="mb-6 sm:-mt-2" />
+                    <CharacterRarityMugshot
+                        character={character}
+                        className="mb-6 sm:-mt-2"
+                    />
                     <div>
                         <div className="font-bold text-gscale-dark-text-primary">
                             {character.name}

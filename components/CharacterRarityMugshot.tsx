@@ -8,7 +8,7 @@ interface ItemCharacterCardProps {
     className?: string;
 }
 
-export const ItemCharacterCard: React.FC<ItemCharacterCardProps> = ({
+export const CharacterRarityMugshot: React.FC<ItemCharacterCardProps> = ({
     character,
     className = "",
 }) => {
