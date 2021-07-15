@@ -10,6 +10,7 @@ import { CharacterLevel } from "./CharacterLevel";
 import { ConfirmDeleteDialouge } from "./ConfirmDeleteDialouge";
 import { calculateMaterials } from "../lib/characterMaterials";
 import { toLevel } from "../lib";
+import Image from "../lib/next-native-image";
 
 export default function CharacterBuild({ build }: { build: any }) {
     const character = characters[build.characterId];
@@ -36,44 +37,55 @@ export default function CharacterBuild({ build }: { build: any }) {
             />
             <div className="flex flex-col rounded-md shadow-md bg-gscale-dark-background-secondary">
                 <div className="sm:flex">
-                    <div className="flex p-4">
+                    <div className="relative flex p-4">
+                        <div className="absolute inset-x-0 top-0 z-0 w-full h-32 overflow-hidden rounded-tl-md maxsm:rounded-tr-md">
+                            <Image
+                                src={`/images/characters/card/${character.id}.png`}
+                                alt={character.name}
+                                layout="native"
+                                width="480"
+                                quality="85"
+                                className="object-cover w-full h-full opacity-25"
+                            />
+                        </div>
+                        <div className="absolute inset-x-0 top-0 z-10 w-full bg-gradient-to-t from-gscale-dark-background-secondary to-transparent h-32 overflow-hidden rounded-tl-md maxsm:rounded-tr-md"></div>
                         {/* <div className="flex justify-center flex-1 sm:hidden">
                         <ItemCharacterCard className="mx-2" character={character} />
                     </div> */}
-                        <div className="mx-3 mb-2">
+                        <div className="sm:mx-3 mx-1 mb-2 z-20">
                             <h1 className="mb-2 text-lg font-bold">{character.name}</h1>
-                            <div className="grid grid-cols-2 gap-5 sm:block">
+                            <div className="flex flex-wrap sm:block">
                                 <LevelShowcase
-                                    className=""
                                     left={<CharacterLevel level={levelStart} />}
                                     right={<CharacterLevel level={levelGoal} />}
                                     icon={<TrendingUpIcon className="iconsm" />}
                                     label={"Level"}
                                     element={character.element}
+                                    className={`w-full sm:w-max sm:!mt-0`}
                                 ></LevelShowcase>
                                 <LevelShowcase
-                                    className="sm:mt-2"
                                     left={build.normal.start}
                                     right={build.normal.goal}
                                     icon={<SwordIcon className="iconsm" />}
                                     label={"Normal"}
                                     element={character.element}
+                                    className={`sm:!mt-2`}
                                 ></LevelShowcase>
                                 <LevelShowcase
-                                    className="sm:mt-2"
                                     left={build.elemental.start}
                                     right={build.elemental.goal}
                                     icon={<SparklesIcon className="iconsm" />}
                                     label={"Elemental"}
                                     element={character.element}
+                                    className={`sm:!mt-2`}
                                 ></LevelShowcase>
                                 <LevelShowcase
-                                    className="sm:mt-2"
                                     left={build.burst.start}
                                     right={build.burst.goal}
                                     icon={<FireIcon className="iconsm" />}
                                     label={"Burst"}
                                     element={character.element}
+                                    className={`sm:!mt-2`}
                                 ></LevelShowcase>
                             </div>
                         </div>
