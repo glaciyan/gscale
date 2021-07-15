@@ -1,6 +1,6 @@
 import React from "react";
 import RarityStars from "./RarityStars";
-import Image from "next-native-image";
+import Image from "../lib/next-native-image";
 import { Character } from "../lib/MyTypes";
 
 interface ItemCharacterCardProps {
@@ -17,6 +17,7 @@ export const ItemCharacterCard: React.FC<ItemCharacterCardProps> = ({
             <Image
                 layout="native"
                 width={128}
+                priority
                 className="bg-gscale-dark-background-secondary rounded-t-md w-28 h-28"
                 src={`/images/characters/mugshot/${character.id}.png`}
                 alt={character.name}
