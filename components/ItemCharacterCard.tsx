@@ -18,7 +18,7 @@ export const ItemCharacterCard: React.FC<ItemCharacterCardProps> = ({
                 layout="native"
                 width={128}
                 priority
-                className="bg-gscale-dark-background-secondary rounded-t-md w-28 h-28"
+                className="bg-gscale-dark-background-secondary rounded-t-md w-[100px] h-[100px]"
                 src={`/images/characters/mugshot/${character.id}.png`}
                 alt={character.name}
             />
