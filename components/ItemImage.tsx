@@ -1,8 +1,9 @@
 import React from "react";
 // import Img from "react-optimized-image";
-import Image from "next-native-image";
+import Image from "../lib/next-native-image";
 import { toId } from "../lib";
 import { Item } from "../lib/MyTypes";
+import { ITEM_ICON_WIDTH } from "../lib/const";
 
 interface ItemImageProps {
     item: Item;
@@ -14,7 +15,7 @@ export const ItemImage: React.FC<ItemImageProps> = ({ item }) => {
         <Image
             src={`/images/materials/${toId(item.name)}.png`}
             layout="native"
-            width={40}
+            width={ITEM_ICON_WIDTH}
             className="object-contain w-full h-full"
             draggable={false}
             alt={item.name}

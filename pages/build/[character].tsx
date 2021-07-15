@@ -26,6 +26,9 @@ import buildsDB from "../../lib/buildsDatabase";
 import { useQuery } from "../../lib/useQuery";
 import { PageDialouge } from "../../components/PageDialouge";
 import { If } from "../../components/If";
+import { PreloadNextImage } from "../../components/PreloadNextImage";
+import { toId } from "../../lib";
+import { ITEM_ICON_WIDTH } from "../../lib/const";
 
 export const getStaticPaths: GetStaticPaths = async () => {
     const paths = Object.values(characters).map((character) => {
@@ -173,6 +176,31 @@ export default function BuildCharacter({ character }: { character: Character }) 
 
     return (
         <Layout title={`Building ${character.name}`}>
+            <PreloadNextImage
+                src={`/images/materials/mora.png`}
+                width={ITEM_ICON_WIDTH}
+            />
+            <PreloadNextImage
+                src={`/images/materials/heros_wit.png`}
+                width={ITEM_ICON_WIDTH}
+            />
+            <PreloadNextImage
+                src={`/images/materials/wanderers_advice.png`}
+                width={ITEM_ICON_WIDTH}
+            />
+            <PreloadNextImage
+                src={`/images/materials/adventurers_experience.png`}
+                width={ITEM_ICON_WIDTH}
+            />
+            {materials.materialNames.map((name) => {
+                return (
+                    <PreloadNextImage
+                        src={`/images/materials/${toId(name)}.png`}
+                        width={ITEM_ICON_WIDTH}
+                        key={name}
+                    ></PreloadNextImage>
+                );
+            })}
             <div className="max-w-screen-xl mx-3 sm:mx-4 xl:mx-auto">
                 <If cif={build?.characterId && build.characterId !== character.id}>
                     <PageDialouge
