@@ -18,9 +18,6 @@ export const getStaticProps: GetStaticProps = async () => {
 const IndexPage = ({ characters }: { characters: Characters }) => {
     const [search, setSearch] = useState<{ item: Character }[]>([]);
 
-    useEffect(() => {
-        throw "test errror;";
-    });
     return (
         <Layout title="Home" current="Characters">
             <div className="max-w-screen-xl mx-5 xl:mx-auto">
