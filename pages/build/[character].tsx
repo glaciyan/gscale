@@ -344,7 +344,7 @@ export default function BuildCharacter({ character }: { character: Character }) 
                                 </div>
                             </If>
 
-                            <div className="flex">
+                            <div className="flex flex-wrap">
                                 <If cif={materials.totalMora !== 0}>
                                     <ItemWithLabel
                                         item={items.mora}
