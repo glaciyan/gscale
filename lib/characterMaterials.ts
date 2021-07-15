@@ -91,7 +91,10 @@ export function calculateMaterials(
 
     const totalMora = talentsAndAscension.mora + summedRequiredLevels.mora;
 
-    const materialNames = talentsAndAscension.items.map((item) => {
+    const materialNames = sumPriced([
+        sumPriced(materialTable.ascension),
+        sumPriced(materialTable.normal),
+    ]).items.map((item) => {
         return item.name;
     });
 
