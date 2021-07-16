@@ -9,7 +9,8 @@ export interface Character {
     element: Vision;
     weapon: Weapon;
     sub: string;
-    materials: CharacterMaterials & { list: StandardCharacterMaterialsArgs };
+    // list is used for the item showcase
+    materials: CharacterMaterials & { list: StandardCharacterMaterialsArgs | null };
 }
 
 export interface CharacterMaterials {

@@ -17,6 +17,9 @@ export const CharacterItemShowcase: React.FC<CharacterItemShowcaseProps> = ({
     className,
 }) => {
     const list = character.materials.list;
+
+    if (!list) return null;
+
     const ci = new ItemGen({
         local: list.local,
         common: list.common,
