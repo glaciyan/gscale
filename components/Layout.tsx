@@ -116,7 +116,13 @@ const Layout = ({ children, title, current }: Props) => {
                                 >
                                     Github
                                 </a>
-                                <div>
+                                <a
+                                    href="https://twitter.com/slimetsp_dev"
+                                    className="block text-blue-400 hover:underline w-max"
+                                >
+                                    @slimetsp_dev
+                                </a>
+                                {/* <div>
                                     <span>Discord:</span>{" "}
                                     <span
                                         className="relative transition-colors duration-150 cursor-pointer select-none text-gscale-dark-text-ternary active:text-green-400"
@@ -129,7 +135,7 @@ const Layout = ({ children, title, current }: Props) => {
                                     >
                                         slimetsp#5278
                                     </span>
-                                </div>
+                                </div> */}
                             </>
                         </FooterEntry>
                     </div>
