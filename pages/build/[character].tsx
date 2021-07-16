@@ -293,12 +293,24 @@ export default function BuildCharacter({ character }: { character: Character }) 
                                         secondary
                                         text="Reset"
                                         color={`gscale-dark-text-secondary`}
-                                        className="mb-2"
+                                        className="mr-3 mb-2"
                                         onClick={() => {
                                             setgoalLevel(1);
                                             setgoalNormal(1);
                                             setgoalElemental(1);
                                             setgoalBurst(1);
+                                        }}
+                                    />
+                                    <Button
+                                        secondary
+                                        text="80-8-8-8"
+                                        color={`gscale-dark-text-secondary`}
+                                        className="mb-2"
+                                        onClick={() => {
+                                            setgoalLevel(80);
+                                            setgoalNormal(8);
+                                            setgoalElemental(8);
+                                            setgoalBurst(8);
                                         }}
                                     />
                                 </div>
