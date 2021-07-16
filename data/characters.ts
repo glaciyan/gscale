@@ -1,6 +1,12 @@
 import { standard } from "../lib/characterMaterials";
 import { Characters, ItemGroup } from "../lib/MyTypes";
 import { items } from "./items";
+import {
+    anemoTravelerTalentCost,
+    geoTravelerTalentCost,
+    normalTravelerTalentCost,
+    travelerAscensionCosts,
+} from "./travelerCost";
 
 export const characters: Characters = {
     kazuha: {
@@ -629,5 +635,52 @@ export const characters: Characters = {
             book: ItemGroup.freedom,
             gem: ItemGroup.pyro_gem,
         }),
+    },
+    // there are probably only going to be 6 variants max so duplication isnt too bad
+    traveler_geo: {
+        id: "traveler_geo",
+        imageId: "traveler",
+        name: "Traveler",
+        rarity: 5,
+        constellation: "Viator/Viatrix",
+        description:
+            "A traveler from another world who had their only kin taken away, forcing them to embark on a journey to find The Seven.",
+        element: "geo",
+        weapon: "sword",
+        sub: "ATK",
+        materials: {
+            ascension: travelerAscensionCosts(
+                ItemGroup.traveler_gem,
+                items.windwheel_aster.name,
+                ItemGroup.mask
+            ),
+            normal: normalTravelerTalentCost(),
+            elemental: geoTravelerTalentCost(),
+            burst: geoTravelerTalentCost(),
+            list: null,
+        },
+    },
+    traveler_anemo: {
+        id: "traveler_anemo",
+        imageId: "traveler",
+        name: "Traveler",
+        rarity: 5,
+        constellation: "Viator/Viatrix",
+        description:
+            "A traveler from another world who had their only kin taken away, forcing them to embark on a journey to find The Seven.",
+        element: "anemo",
+        weapon: "sword",
+        sub: "ATK",
+        materials: {
+            ascension: travelerAscensionCosts(
+                ItemGroup.traveler_gem,
+                items.windwheel_aster.name,
+                ItemGroup.mask
+            ),
+            normal: normalTravelerTalentCost(),
+            elemental: anemoTravelerTalentCost(),
+            burst: anemoTravelerTalentCost(),
+            list: null,
+        },
     },
 };

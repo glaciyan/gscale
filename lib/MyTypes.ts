@@ -2,6 +2,7 @@ import { StandardCharacterMaterialsArgs } from "./characterMaterials";
 
 export interface Character {
     id: string;
+    imageId?: string;
     name: string;
     rarity: 4 | 5;
     constellation: string;

@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 import { Button } from "./Button";
 import { If } from "./If";
 import { upperCaseFirst } from "upper-case-first";
+import { Character } from "../lib/MyTypes";
 
 function useIsTouch() {
     const [isTouch, setisTouch] = useState(false);
@@ -32,7 +33,7 @@ export default function CharacterCard({
     character,
     className,
 }: {
-    character: any;
+    character: Character;
     className?: string;
 }) {
     const isProbablyTouch = useIsTouch();
@@ -85,7 +86,9 @@ export default function CharacterCard({
                 id={character.id}
             >
                 <Image
-                    src={`/images/characters/card/${character.id}.png`}
+                    src={`/images/characters/card/${
+                        character.imageId ?? character.id
+                    }.png`}
                     layout="intrinsic"
                     height="300"
                     width="480"

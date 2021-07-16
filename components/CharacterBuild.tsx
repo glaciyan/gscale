@@ -40,7 +40,9 @@ export default function CharacterBuild({ build }: { build: any }) {
                     <div className="relative flex p-4">
                         <div className="absolute inset-x-0 top-0 z-0 w-full h-32 overflow-hidden rounded-tl-md maxsm:rounded-tr-md">
                             <Image
-                                src={`/images/characters/card/${character.id}.png`}
+                                src={`/images/characters/card/${
+                                    character.imageId ?? character.id
+                                }.png`}
                                 alt={character.name}
                                 layout="native"
                                 width="480"
