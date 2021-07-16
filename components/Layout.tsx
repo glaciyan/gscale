@@ -153,6 +153,16 @@ const Layout = ({ children, title, current }: Props) => {
                         <div className="mr-2"> v{version} </div>
                         by slimetsp
                     </div>
+                    <div className={`mt-6`}>
+                        <a href={"https://vercel.com?utm_source=gscale&utm_campaign=oss"}>
+                            <img
+                                src={"/images/powered-by-vercel.svg"}
+                                width={212}
+                                height={44}
+                                alt={"Powered by Vercel"}
+                            />
+                        </a>
+                    </div>
                     <p className="mt-6 text-gscale-dark-text-ternary">
                         gscale.cc is not affiliated with miHoYo.
                         <br />
