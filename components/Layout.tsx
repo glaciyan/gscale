@@ -44,12 +44,17 @@ const Layout = ({ children, title, current }: Props) => {
             <header className="max-w-screen-xl m-6 xl:mx-auto">
                 <div className="flex flex-wrap items-center">
                     <Link href="/">
-                        <a className="mr-16 focus-visible:ring">
+                        <a className="mr-16 focus-visible:ring flex">
                             <img
                                 className=""
                                 src="/images/svg/logo_label_small.svg"
                                 alt="logo"
                             />
+                            <span
+                                className={`text-gscale-dark-text-ternary/70 text-sm self-end mb-0.5 ml-1`}
+                            >
+                                v1.1
+                            </span>
                         </a>
                     </Link>
                     <nav className="flex py-4">
