@@ -19,7 +19,9 @@ export const CharacterRarityMugshot: React.FC<ItemCharacterCardProps> = ({
                 width={128}
                 priority
                 className="bg-gscale-dark-background-secondary rounded-t-md w-[100px] h-[100px]"
-                src={`/images/characters/mugshot/${character.id}.png`}
+                src={`/images/characters/mugshot/${
+                    character.imageId ?? character.id
+                }.png`}
                 alt={character.name}
             />
             <div className="flex items-center justify-center bg-gscale-dark-background-primary py-0.5 rounded-b-md">
