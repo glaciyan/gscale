@@ -11,6 +11,7 @@ import { ConfirmDeleteDialouge } from "./ConfirmDeleteDialouge";
 import { calculateMaterials } from "../lib/characterMaterials";
 import { toLevel } from "../lib";
 import Image from "../lib/next-native-image";
+import { upperCaseFirst } from "upper-case-first";
 
 export default function CharacterBuild({ build }: { build: any }) {
     const character = characters[build.characterId];
@@ -36,7 +37,7 @@ export default function CharacterBuild({ build }: { build: any }) {
                 setVisible={setisDialogueVisible}
             />
             <div className="flex flex-col rounded-md shadow-md bg-gscale-dark-background-secondary">
-                <div className="sm:flex">
+                <div className="sm:flex sm:flex-1">
                     <div className="relative flex p-4">
                         <div className="absolute inset-x-0 top-0 z-0 w-full h-32 overflow-hidden rounded-tl-md maxsm:rounded-tr-md">
                             <Image
@@ -55,7 +56,16 @@ export default function CharacterBuild({ build }: { build: any }) {
                         <ItemCharacterCard className="mx-2" character={character} />
                     </div> */}
                         <div className="sm:mx-3 mx-1 mb-2 z-20">
-                            <h1 className="mb-2 text-lg font-bold">{character.name}</h1>
+                            <h1 className="mb-2 text-lg font-bold">
+                                {character.name}{" "}
+                                {character.imageId === "traveler" ? (
+                                    <span
+                                        className={`text-genshin-element-${character.element}`}
+                                    >
+                                        {upperCaseFirst(character.element)}
+                                    </span>
+                                ) : null}
+                            </h1>
                             <div className="flex flex-wrap sm:block">
                                 <LevelShowcase
                                     left={<CharacterLevel level={levelStart} />}
