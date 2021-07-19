@@ -1,26 +1,14 @@
+import Head from "next/head";
 import React from "react";
-import Image, { ImageProps } from "../lib/next-native-image";
 
-export type PreloadNextImageProps = {
+export type PreloadImageProps = {
     src: string;
-    alt?: string;
-    width: string | number;
-    quality?: string | number;
 };
 
-export const PreloadNextImage: React.FC<PreloadNextImageProps> = ({
-    src,
-    width,
-    quality,
-}) => {
+export const PreloadImage: React.FC<PreloadImageProps> = ({ src }) => {
     return (
-        <Image
-            src={src}
-            layout="none"
-            // style={{ display: "none" }}
-            priority={true}
-            width={width}
-            quality={quality}
-        />
+        <Head>
+            <link rel="preload" as="image" href={src}></link>
+        </Head>
     );
 };

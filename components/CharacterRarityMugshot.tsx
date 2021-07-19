@@ -1,7 +1,7 @@
 import React from "react";
 import RarityStars from "./RarityStars";
-import Image from "../lib/next-native-image";
 import { Character } from "../lib/MyTypes";
+import { PreloadImage } from "./PreloadNextImage";
 
 interface ItemCharacterCardProps {
     character: Character;
@@ -14,10 +14,14 @@ export const CharacterRarityMugshot: React.FC<ItemCharacterCardProps> = ({
 }) => {
     return (
         <div className={`w-max ${className}`}>
-            <Image
-                layout="native"
-                width={128}
-                priority
+            <PreloadImage
+                src={`/images/characters/mugshot/${
+                    character.imageId ?? character.id
+                }.png`}
+            />
+            <img
+                width={100}
+                height={100}
                 className="bg-gscale-dark-background-secondary rounded-t-md w-[100px] h-[100px]"
                 src={`/images/characters/mugshot/${
                     character.imageId ?? character.id
