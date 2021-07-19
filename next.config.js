@@ -13,5 +13,8 @@ module.exports = withPlugins(
         future: {
             webpack5: true,
         },
+        images: {
+            imageSizes: [48, 256],
+        },
     }
 );
