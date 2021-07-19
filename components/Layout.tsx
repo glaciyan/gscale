@@ -15,7 +15,7 @@ const nav = [
     { name: "Your Builds", href: "/builds" },
 ];
 
-const version = "1.0 (temp fix)";
+const version = "1.1";
 
 const Layout = ({ children, title, current }: Props) => {
     return (
@@ -44,12 +44,17 @@ const Layout = ({ children, title, current }: Props) => {
             <header className="max-w-screen-xl m-6 xl:mx-auto">
                 <div className="flex flex-wrap items-center">
                     <Link href="/">
-                        <a className="mr-16 focus-visible:ring">
+                        <a className="mr-16 focus-visible:ring flex">
                             <img
                                 className=""
                                 src="/images/svg/logo_label_small.svg"
                                 alt="logo"
                             />
+                            <span
+                                className={`text-gscale-dark-text-ternary/70 text-sm self-end mb-0.5 ml-1`}
+                            >
+                                v1.1
+                            </span>
                         </a>
                     </Link>
                     <nav className="flex py-4">
@@ -147,6 +152,16 @@ const Layout = ({ children, title, current }: Props) => {
                         />
                         <div className="mr-2"> v{version} </div>
                         by slimetsp
+                    </div>
+                    <div className={`mt-6`}>
+                        <a href={"https://vercel.com?utm_source=gscale&utm_campaign=oss"}>
+                            <img
+                                src={"/images/powered-by-vercel.svg"}
+                                width={212}
+                                height={44}
+                                alt={"Powered by Vercel"}
+                            />
+                        </a>
                     </div>
                     <p className="mt-6 text-gscale-dark-text-ternary">
                         gscale.cc is not affiliated with miHoYo.

@@ -8,13 +8,14 @@ import {
 import React, { useEffect, useState } from "react";
 import Layout from "../../components/Layout";
 import { CharacterLevelListBox } from "../../components/CharacterLevelListBox";
-import { Character, characters } from "../../data/characters";
+import { characters } from "../../data/characters";
 import { SwordIcon } from "../../components/icons/sword";
 import { TalentLevelSelector } from "../../components/TalentLevelSelector";
 import { CharacterDetails } from "../../components/CharacterDetails";
 import { Button } from "../../components/Button";
-import { getCharacterMaterials } from "../../lib/characterMaterials";
-import ItemCard from "../../components/ItemCard";
+import { calculateMaterials } from "../../lib/characterMaterials";
+import { Character } from "../../lib/MyTypes";
+import ItemWithLabel from "../../components/ItemWithLabel";
 import millify from "millify";
 import { items } from "../../data/items";
 import { ShowcaseCategory } from "../../components/ShowcaseCategory";
@@ -25,6 +26,9 @@ import buildsDB from "../../lib/buildsDatabase";
 import { useQuery } from "../../lib/useQuery";
 import { PageDialouge } from "../../components/PageDialouge";
 import { If } from "../../components/If";
+import { PreloadImage } from "../../components/PreloadNextImage";
+import { toId } from "../../lib";
+import { ITEM_ICON_WIDTH } from "../../lib/const";
 
 export const getStaticPaths: GetStaticPaths = async () => {
     const paths = Object.values(characters).map((character) => {
@@ -60,37 +64,12 @@ export default function BuildCharacter({ character }: { character: Character }) 
 
     const [startBurst, setstartBurst, goalBurst, setgoalBurst] = useCorrectingState();
 
-    const [materials, setMaterials] = useState(
-        getCharacterMaterials(
-            character,
-            { start: startLevel, goal: goalLevel },
-            { start: startNormal, goal: goalNormal },
-            { start: startElemental, goal: goalElemental },
-            { start: startBurst, goal: goalBurst }
-        )
-    );
-
-    // update preview
-    useEffect(() => {
-        setMaterials(
-            getCharacterMaterials(
-                character,
-                { start: startLevel, goal: goalLevel },
-                { start: startNormal, goal: goalNormal },
-                { start: startElemental, goal: goalElemental },
-                { start: startBurst, goal: goalBurst }
-            )
-        );
-    }, [
-        startLevel,
-        goalLevel,
-        startNormal,
-        goalNormal,
-        startElemental,
-        goalElemental,
-        startBurst,
-        goalBurst,
-    ]);
+    const materials = calculateMaterials(character, {
+        level: { start: startLevel, goal: goalLevel },
+        normal: { start: startNormal, goal: goalNormal },
+        elemental: { start: startElemental, goal: goalElemental },
+        burst: { start: startBurst, goal: goalBurst },
+    });
 
     const [submitting, setSubmitting] = useState(false);
     const [submitError, setSubmitError] = useState("");
@@ -135,7 +114,7 @@ export default function BuildCharacter({ character }: { character: Character }) 
     //#endregion
 
     function dbAction(func: () => void) {
-        if (materials.materials.length === 0 && materials.mora === 0) {
+        if (materials.everything.length === 0 && materials.totalMora === 0) {
             setSubmitError("Nothing is being leveled up.");
             return;
         }
@@ -197,6 +176,19 @@ export default function BuildCharacter({ character }: { character: Character }) 
 
     return (
         <Layout title={`Building ${character.name}`}>
+            {/* preffer webp supporting clients */}
+            <PreloadImage src={`/images/materials/mora.webp`} />
+            <PreloadImage src={`/images/materials/heros_wit.webp`} />
+            <PreloadImage src={`/images/materials/wanderers_advice.webp`} />
+            <PreloadImage src={`/images/materials/adventurers_experience.webp`} />
+            {materials.materialNames.map((name) => {
+                return (
+                    <PreloadImage
+                        src={`/images/materials/${toId(name)}.webp`}
+                        key={name}
+                    ></PreloadImage>
+                );
+            })}
             <div className="max-w-screen-xl mx-3 sm:mx-4 xl:mx-auto">
                 <If cif={build?.characterId && build.characterId !== character.id}>
                     <PageDialouge
@@ -289,12 +281,24 @@ export default function BuildCharacter({ character }: { character: Character }) 
                                         secondary
                                         text="Reset"
                                         color={`gscale-dark-text-secondary`}
-                                        className="mb-2"
+                                        className="mr-3 mb-2"
                                         onClick={() => {
                                             setgoalLevel(1);
                                             setgoalNormal(1);
                                             setgoalElemental(1);
                                             setgoalBurst(1);
+                                        }}
+                                    />
+                                    <Button
+                                        secondary
+                                        text="80-8-8-8"
+                                        color={`gscale-dark-text-secondary`}
+                                        className="mb-2"
+                                        onClick={() => {
+                                            setgoalLevel(80);
+                                            setgoalNormal(8);
+                                            setgoalElemental(8);
+                                            setgoalBurst(8);
                                         }}
                                     />
                                 </div>
@@ -308,7 +312,9 @@ export default function BuildCharacter({ character }: { character: Character }) 
                                 <Button
                                     isLoading={submitting ? 1 : undefined}
                                     fullw
-                                    text={build ? "Update Build" : "Build Character"}
+                                    text={
+                                        build ? "Update Build" : `Build ${character.name}`
+                                    }
                                     color={`genshin-dark-element-${character.element}`}
                                     onClick={build ? updateBuild : handleSubmit}
                                 />
@@ -325,8 +331,9 @@ export default function BuildCharacter({ character }: { character: Character }) 
                             {/* When there are no materials */}
                             <If
                                 cif={
-                                    materials.materials.length === 0 &&
-                                    materials.mora === 0
+                                    // TODO make property for that
+                                    materials.everything.length === 0 &&
+                                    materials.totalMora === 0
                                 }
                             >
                                 <div className="flex items-center">
@@ -337,39 +344,43 @@ export default function BuildCharacter({ character }: { character: Character }) 
                                 </div>
                             </If>
 
-                            <div className="flex">
-                                <If cif={materials.mora !== 0}>
-                                    <ItemCard
+                            <div className="flex flex-wrap">
+                                <If cif={materials.totalMora !== 0}>
+                                    <ItemWithLabel
                                         item={items.mora}
-                                        label={millify(materials.mora)}
+                                        label={millify(materials.totalMora)}
                                     />
                                 </If>
-                                <If cif={materials.xpLazy.amount !== 0}>
+                                <If cif={materials.totalXp !== 0}>
                                     <>
-                                        <ItemCard
+                                        <ItemWithLabel
                                             item={items.heros_wit}
-                                            label={String(materials.xpLazy.amount)}
+                                            label={String(
+                                                // TODO make prop for that
+                                                Math.ceil(
+                                                    materials.totalXp / items.heros_wit.xp
+                                                )
+                                            )}
                                         />
                                         <div className="flex items-center m-0.5 bg-gscale-dark-background-ternary bg-opacity-70 rounded">
                                             <ChevronRightIcon className="w-6 h-6 ml-1" />
-                                            <ItemCard
+                                            {/* TODO instead of indexes it should be field */}
+                                            <ItemWithLabel
                                                 item={items.wanderers_advice}
                                                 label={String(
-                                                    materials.xpAccurate.wanderers_advice
-                                                        .amount
+                                                    materials.accurateXpBook[2]
                                                 )}
                                             />
-                                            <ItemCard
+                                            <ItemWithLabel
                                                 item={items.adventurers_experience}
                                                 label={String(
-                                                    materials.xpAccurate
-                                                        .adventurers_experience.amount
+                                                    materials.accurateXpBook[1]
                                                 )}
                                             />
-                                            <ItemCard
+                                            <ItemWithLabel
                                                 item={items.heros_wit}
                                                 label={String(
-                                                    materials.xpAccurate.heros_wit.amount
+                                                    materials.accurateXpBook[0]
                                                 )}
                                             />
                                         </div>
@@ -378,7 +389,7 @@ export default function BuildCharacter({ character }: { character: Character }) 
                             </div>
                             <ShowcaseCategory
                                 emphasis
-                                items={materials.materials}
+                                items={materials.everything}
                                 label="Total"
                             />
                             <ShowcaseCategory

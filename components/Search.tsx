@@ -1,12 +1,11 @@
 import React from "react";
 
 interface SearchProps {
-    content: string;
-    setContent: any;
     onConfirm: any;
+    onChange: any;
 }
 
-export const Search: React.FC<SearchProps> = ({ content, setContent, onConfirm }) => {
+export const Search: React.FC<SearchProps> = ({ onConfirm, onChange }) => {
     return (
         <form
             action="#"
@@ -39,8 +38,7 @@ export const Search: React.FC<SearchProps> = ({ content, setContent, onConfirm }
                 spellCheck="false"
                 autoCapitalize="false"
                 className="flex-1 py-2.5 focus:outline-none bg-gscale-dark-background-primary placeholder-gscale-dark-text-ternary"
-                value={content}
-                onChange={(e) => setContent(e.target.value)}
+                onChange={onChange}
                 // onFocus={(e) => {
                 //     const searchBar = e.target as HTMLInputElement;
                 //     searchBar.select();

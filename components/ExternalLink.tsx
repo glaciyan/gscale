@@ -32,7 +32,8 @@ export const ExternalLink: React.FC<ExternalLinkProps & ClassName> = ({
                     console.log("requesting close");
                     setIsOpen(false);
                 }}
-                className="fixed inset-0 z-10 overflow-y-auto text-gscale-dark-text-primary"
+                className="overflow-y-auto text-gscale-dark-text-primary"
+                overlayClassName="fixed inset-0 z-[9999]"
             >
                 <div className="flex items-center justify-center min-h-screen ">
                     <div className="z-20 mx-auto rounded-md bg-gscale-dark-background-secondary">

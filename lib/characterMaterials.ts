@@ -1,124 +1,113 @@
-import { getAscensionLevel, sumObjectArray } from ".";
-import { xp } from "./ItemGen";
-import { ascensionCosts as fullAscensionCostOf } from "../data/ascensionCost";
-import { Character } from "../data/characters";
-import { costsTo } from "../data/characterLevels";
-import _ from "lodash";
-import { BuildItem, items } from "../data/items";
-import itemOrder from "./itemOrder";
+import { ascStageSlice, levelSlice, sanitizeProgression, talentSlice } from ".";
+import { ascensionCosts } from "../data/ascensionCost";
+import { levelingCosts } from "../data/characterLevels";
 import { talentCost } from "../data/talentCost";
-import { mora as moraGen } from "./ItemGen";
+import { sumLevelingCost, sumPriced } from "./ItemHelper";
+import {
+    Character,
+    CharacterMaterials,
+    ItemGroup,
+    CharacterProgressions,
+    Materials,
+} from "./MyTypes";
 
-type Progression = { start: number; goal: number };
+export interface StandardCharacterMaterialsArgs {
+    boss: string;
+    local: string;
+    weekly: string;
+    common: ItemGroup;
+    book: ItemGroup;
+    gem: ItemGroup;
+}
 
-export function getCharacterMaterials(
+export function standard(
+    list: StandardCharacterMaterialsArgs
+): CharacterMaterials & { list: StandardCharacterMaterialsArgs } {
+    return {
+        ascension: ascensionCosts(list.gem, list.local, list.common, list.boss),
+        normal: talentCost(list.common, list.book, list.weekly),
+        elemental: talentCost(list.common, list.book, list.weekly),
+        burst: talentCost(list.common, list.book, list.weekly),
+        list,
+    };
+}
+
+export interface MaterialCalculation {
+    totalMora: number;
+    totalXp: number;
+    accurateXpBook: [number, number, number];
+    ascension: Materials;
+    normal: Materials;
+    elemental: Materials;
+    burst: Materials;
+    talents: Materials;
+    everything: Materials;
+    materialNames: string[];
+}
+
+export function calculateMaterials(
     character: Character,
-    level: Progression,
-    normal: Progression,
-    elemental: Progression,
-    burst: Progression
-) {
-    const totalMora: number[] = [];
-    const startAsc = getAscensionLevel(level.start);
-    const goalAsc = getAscensionLevel(level.goal);
+    progressions: CharacterProgressions
+): MaterialCalculation {
+    sanitizeProgression(progressions);
 
-    // leveling
-    const levelingCost = getLevelingCost(level.start, level.goal);
+    const materialTable = character.materials;
 
-    const accurateLevelMaterials = {
-        heros_wit: xp(4, levelingCost.accurate[0]),
-        adventurers_experience: xp(3, levelingCost.accurate[1]),
-        wanderers_advice: xp(2, levelingCost.accurate[2]),
+    // filter materials with level
+    const requiredLevels = levelSlice(levelingCosts, progressions.level);
+    const requiredAscensions = ascStageSlice(materialTable.ascension, progressions.level);
+    const requiredTalents = {
+        normal: talentSlice(materialTable.normal, progressions.normal),
+        elemental: talentSlice(materialTable.elemental, progressions.elemental),
+        burst: talentSlice(materialTable.burst, progressions.burst),
     };
 
-    const lazyLevelMaterial = xp(4, Math.ceil(levelingCost.xp / items.heros_wit.xp));
-    lazyLevelMaterial.order = itemOrder.xpLazy;
+    // sum all the arrays together
+    const summedRequiredLevels = sumLevelingCost(requiredLevels);
 
-    // ascension
-    const { mora: ascensionMora, items: ascensionMaterials } = getCombinedCost(
-        fullAscensionCostOf(character).slice(startAsc, goalAsc)
-    );
+    const summedRequiredAscension = sumPriced(requiredAscensions);
+    summedRequiredAscension.items.sort((a, b) => a.order - b.order);
 
-    function talent(i: Progression) {
-        return getCombinedCost(talentCost(character).slice(i.start - 1, i.goal - 1));
-    }
+    const summedRequiredTalents = {
+        normal: sumPriced(requiredTalents.normal),
+        elemental: sumPriced(requiredTalents.elemental),
+        burst: sumPriced(requiredTalents.burst),
+    };
+    summedRequiredTalents.normal.items.sort((a, b) => a.order - b.order);
+    summedRequiredTalents.elemental.items.sort((a, b) => a.order - b.order);
+    summedRequiredTalents.burst.items.sort((a, b) => a.order - b.order);
 
-    const { mora: normalMora, items: normalMaterials } = talent(normal);
-    const { mora: elementalMora, items: elementalMaterials } = talent(elemental);
-    const { mora: burstMora, items: burstMaterials } = talent(burst);
+    // sum all talents
+    const talents = sumPriced([
+        summedRequiredTalents.normal,
+        summedRequiredTalents.elemental,
+        summedRequiredTalents.burst,
+    ]);
+    // talents.items.sort((a, b) => a.order - b.order);
 
-    const talents: BuildItem[] = sumObjectArray(
-        [...normalMaterials, ...elementalMaterials, ...burstMaterials],
-        "order",
-        "amount"
-    );
+    // sum everything axcept leveling
+    const talentsAndAscension = sumPriced([talents, summedRequiredAscension]);
+    talentsAndAscension.items.sort((a, b) => a.order - b.order);
 
-    totalMora.push(levelingCost.mora);
-    totalMora.push(ascensionMora);
-    totalMora.push(normalMora);
-    totalMora.push(elementalMora);
-    totalMora.push(burstMora);
+    const totalMora = talentsAndAscension.mora + summedRequiredLevels.mora;
 
-    const materials = sumObjectArray(
-        talents.concat(ascensionMaterials),
-        "order",
-        "amount"
-    ) as BuildItem[];
-
-    const mora = totalMora.reduce((prev, current) => prev + current);
+    const materialNames = sumPriced([
+        sumPriced(materialTable.ascension),
+        sumPriced(materialTable.normal),
+    ]).items.map((item) => {
+        return item.name;
+    });
 
     return {
-        xp: levelingCost.xp,
-        xpLazy: lazyLevelMaterial,
-        xpAccurate: accurateLevelMaterials,
-        mora,
-        ascension: ascensionMaterials,
-        // for some unknown reason normalMaterials is the sum so thats why im recalculating here
-        // TEMP FIX
-        normal: talent(normal).items,
-        elemental: talent(elemental).items,
-        burst: talent(burst).items,
-        talents,
-        materials,
-        everything: [moraGen(mora), lazyLevelMaterial, ...materials],
+        totalMora,
+        totalXp: summedRequiredLevels.xp,
+        accurateXpBook: summedRequiredLevels.accurate,
+        ascension: summedRequiredAscension.items,
+        normal: summedRequiredTalents.normal.items,
+        elemental: summedRequiredTalents.elemental.items,
+        burst: summedRequiredTalents.burst.items,
+        talents: talents.items,
+        everything: talentsAndAscension.items,
+        materialNames,
     };
 }
-
-function getCombinedCost(requiredAcensions: { mora: number; items: BuildItem[] }[]) {
-    const ascensionCost = requiredAcensions.reduce(
-        (prev, current) => {
-            return {
-                mora: prev.mora + current.mora,
-                items: [...prev.items, ...current.items],
-            };
-        },
-        { mora: 0, items: [] }
-    );
-
-    ascensionCost.items = sumObjectArray(ascensionCost.items, "order", "amount");
-    return ascensionCost;
-}
-
-function getLevelingCost(start: number, goal: number) {
-    return costsTo
-        .filter(({ level }) => level > start && level <= goal)
-        .reduce(
-            (prev, curr) => {
-                return {
-                    mora: prev.mora + curr.mora,
-                    xp: prev.xp + curr.xp,
-                    accurate: prev.accurate.map((c, i) => c + curr.accurate[i]),
-                };
-            },
-            { mora: 0, xp: 0, accurate: [0, 0, 0] }
-        );
-}
-// export function getTalentMaterials(
-//     character: Character,
-//     start: number,
-//     goal: number
-// ) {
-//     if (start < 1 || start > 9) return null;
-//     if (goal < 2 || goal > 10) return null;
-//     if (start > goal) return null;
-// }

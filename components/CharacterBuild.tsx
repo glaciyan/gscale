@@ -1,15 +1,17 @@
-import { getCharacterMaterials } from "../lib/characterMaterials";
 import { characters } from "../data/characters";
 import CompletionItemGrid from "./CompletionItemGrid";
 import { LevelShowcase } from "./LevelShowcase";
 import { SparklesIcon, TrendingUpIcon, FireIcon } from "@heroicons/react/outline";
 import { SwordIcon } from "./icons/sword";
 import { Button } from "./Button";
-import React, { Dispatch, SetStateAction, useState } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
-import { getCharacterLevel } from "../lib/getCharacterLevel";
 import { CharacterLevel } from "./CharacterLevel";
 import { ConfirmDeleteDialouge } from "./ConfirmDeleteDialouge";
+import { calculateMaterials } from "../lib/characterMaterials";
+import { toLevel } from "../lib";
+import { upperCaseFirst } from "upper-case-first";
+import { Picture } from "./Picture";
 
 export default function CharacterBuild({ build }: { build: any }) {
     const character = characters[build.characterId];
@@ -17,16 +19,15 @@ export default function CharacterBuild({ build }: { build: any }) {
 
     if (!character) return null;
 
-    const materials = getCharacterMaterials(
-        character,
-        build.level,
-        build.normal,
-        build.elemental,
-        build.burst
-    );
+    const materials = calculateMaterials(character, {
+        level: build.level,
+        normal: build.normal,
+        elemental: build.elemental,
+        burst: build.burst,
+    });
 
-    const levelStart = getCharacterLevel(build.level.start);
-    const levelGoal = getCharacterLevel(build.level.goal);
+    const levelStart = toLevel(build.level.start);
+    const levelGoal = toLevel(build.level.goal);
 
     return (
         <>
@@ -36,51 +37,73 @@ export default function CharacterBuild({ build }: { build: any }) {
                 setVisible={setisDialogueVisible}
             />
             <div className="flex flex-col rounded-md shadow-md bg-gscale-dark-background-secondary">
-                <div className="sm:flex">
-                    <div className="flex p-4">
+                <div className="sm:flex sm:flex-1">
+                    <div className="relative flex p-4">
+                        <div className="absolute inset-x-0 top-0 z-0 w-full h-32 overflow-hidden rounded-tl-md maxsm:rounded-tr-md">
+                            <Picture
+                                name={`/images/characters/card/${
+                                    character.imageId ?? character.id
+                                }`}
+                                alt={character.name}
+                                width="480"
+                                height="300"
+                                className="object-cover w-full h-full opacity-25"
+                            />
+                        </div>
+                        <div className="absolute inset-x-0 top-0 z-10 w-full bg-gradient-to-t from-gscale-dark-background-secondary to-transparent h-32 overflow-hidden rounded-tl-md maxsm:rounded-tr-md"></div>
                         {/* <div className="flex justify-center flex-1 sm:hidden">
                         <ItemCharacterCard className="mx-2" character={character} />
                     </div> */}
-                        <div className="mx-3 mb-2">
-                            <h1 className="mb-2 text-lg font-bold">{character.name}</h1>
-                            <div className="grid grid-cols-2 gap-5 sm:block">
+                        <div className="sm:mx-3 mx-1 mb-2 z-20">
+                            <h1 className="mb-2 text-lg font-bold">
+                                {character.name}{" "}
+                                {character.imageId === "traveler" ? (
+                                    <span
+                                        className={`text-genshin-element-${character.element}`}
+                                    >
+                                        {upperCaseFirst(character.element)}
+                                    </span>
+                                ) : null}
+                            </h1>
+                            <div className="flex flex-wrap sm:block">
                                 <LevelShowcase
-                                    className=""
                                     left={<CharacterLevel level={levelStart} />}
                                     right={<CharacterLevel level={levelGoal} />}
                                     icon={<TrendingUpIcon className="iconsm" />}
                                     label={"Level"}
                                     element={character.element}
+                                    className={`w-full sm:w-max sm:!mt-0`}
+                                    numberClassName={`maxsm:w-12`}
                                 ></LevelShowcase>
                                 <LevelShowcase
-                                    className="sm:mt-2"
                                     left={build.normal.start}
                                     right={build.normal.goal}
                                     icon={<SwordIcon className="iconsm" />}
                                     label={"Normal"}
                                     element={character.element}
+                                    className={`sm:!mt-2`}
                                 ></LevelShowcase>
                                 <LevelShowcase
-                                    className="sm:mt-2"
                                     left={build.elemental.start}
                                     right={build.elemental.goal}
                                     icon={<SparklesIcon className="iconsm" />}
                                     label={"Elemental"}
                                     element={character.element}
+                                    className={`sm:!mt-2`}
                                 ></LevelShowcase>
                                 <LevelShowcase
-                                    className="sm:mt-2"
                                     left={build.burst.start}
                                     right={build.burst.goal}
                                     icon={<FireIcon className="iconsm" />}
                                     label={"Burst"}
                                     element={character.element}
+                                    className={`sm:!mt-2`}
                                 ></LevelShowcase>
                             </div>
                         </div>
                     </div>
                     <div className="flex-grow p-5 rounded-md bg-gscale-dark-background-primary bg-opacity-60">
-                        <CompletionItemGrid build={build} items={materials.everything} />
+                        <CompletionItemGrid build={build} items={materials} />
                     </div>
                 </div>
                 <div className="flex items-center justify-end px-4 py-3 border-t-2 border-gscale-dark-background-500">

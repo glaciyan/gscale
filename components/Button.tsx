@@ -11,6 +11,7 @@ interface ButtonProps {
     link?: any;
     fullw?: any;
     isLoading?: any;
+    disabled?: boolean | undefined;
 }
 
 function execIf(func: any, condition: boolean) {
@@ -27,6 +28,7 @@ export const Button: React.FC<ButtonProps> = ({
     link,
     fullw,
     isLoading,
+    disabled,
 }) => {
     let cn: string = `buttoncommon shadow-md w-max text-gscale-dark-text-primary bg-opacity-70 bg-${color} ${className} transition-colors hover:bg-opacity-50 active:bg-opacity-30 hover:shadow-lg select-none focus-visible:ring focus:outline-none`;
 
@@ -42,9 +44,14 @@ export const Button: React.FC<ButtonProps> = ({
         cn += " !w-full";
     }
 
+    if (disabled) {
+        cn += /*tw*/ ` !bg-gray-700 opacity-40 cursor-default ring-0`;
+    }
+
     return (
         <button
             className={cn + " flex justify-center relative"}
+            disabled={disabled}
             onClick={() => execIf(onClick, !isLoading)}
         >
             <div className={isLoading ? "invisible" : ""}>{text}</div>

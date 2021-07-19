@@ -1,9 +1,9 @@
-import { BuildItem, Item } from "../data/items";
 import { toId } from "../lib";
 import buildsDB from "../lib/buildsDatabase";
 import { CheckIcon } from "@heroicons/react/outline";
 import { If } from "./If";
 import { ItemImage } from "./ItemImage";
+import { BuildItem, Item } from "../lib/MyTypes";
 
 export default function CheckListItemCard({
     item,
@@ -22,6 +22,7 @@ export default function CheckListItemCard({
         <button
             className="relative m-1 rounded focus:outline-none focus-visible:ring"
             key={toId(item.name)}
+            title={item.name}
             onClick={async () => {
                 if (build.completed) {
                     const find = build.completed.findIndex(

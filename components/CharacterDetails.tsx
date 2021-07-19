@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { Character } from "../data/characters";
-import _ from "lodash";
 import { ElementIcon } from "./icons/element";
 import { IconWithText } from "./IconWithText";
 import { CharacterItemShowcase } from "./CharacterItemShowcase";
-import Image from "next-native-image";
-import { ItemCharacterCard } from "./ItemCharacterCard";
+import { CharacterRarityMugshot } from "./CharacterRarityMugshot";
+import { Character } from "../lib/MyTypes";
+import { upperCaseFirst } from "upper-case-first";
+import { Picture } from "./Picture";
 
 interface CharacterDetailsProps {
     character: Character;
@@ -18,17 +18,21 @@ export const CharacterDetails: React.FC<CharacterDetailsProps> = ({ character })
         <div className="maxsm:rounded-t-md sm:rounded-tl-md lg:rounded-l-md bg-gscale-dark-background-ternary500 lg:flex-grow-0">
             <div className="relative flex flex-col h-full">
                 <div className="absolute inset-x-0 top-0 z-10 w-full h-32 overflow-hidden rounded-tl-md maxsm:rounded-tr-md">
-                    <Image
-                        src={`/images/characters/card/${character.id}.png`}
+                    <Picture
+                        name={`/images/characters/card/${
+                            character.imageId ?? character.id
+                        }`}
                         alt={character.name}
-                        layout="native"
                         width="480"
-                        quality="85"
+                        height="300"
                         className="object-cover w-full h-full opacity-50"
                     />
                 </div>
                 <div className="z-20 flex-1 h-full buildpagepadding">
-                    <ItemCharacterCard character={character} className="mb-6 sm:-mt-2" />
+                    <CharacterRarityMugshot
+                        character={character}
+                        className="mb-6 sm:-mt-2"
+                    />
                     <div>
                         <div className="font-bold text-gscale-dark-text-primary">
                             {character.name}
@@ -52,7 +56,7 @@ export const CharacterDetails: React.FC<CharacterDetailsProps> = ({ character })
                             }
                         >
                             <span className={`text-genshin-element-${character.element}`}>
-                                {_.upperFirst(character.element)}
+                                {upperCaseFirst(character.element)}
                             </span>
                         </IconWithText>
                         <IconWithText
@@ -77,7 +81,7 @@ export const CharacterDetails: React.FC<CharacterDetailsProps> = ({ character })
                             }
                         >
                             <div className="text-gscale-dark-text-secondary">
-                                {_.upperFirst(character.weapon)}
+                                {upperCaseFirst(character.weapon)}
                             </div>
                             <div className="mt-0.5 text-gscale-dark-text-secondary">
                                 {character.sub}

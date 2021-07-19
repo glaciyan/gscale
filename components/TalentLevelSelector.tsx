@@ -1,4 +1,4 @@
-import { Character } from "../data/characters";
+import { Character } from "../lib/MyTypes";
 import { TalentLevelListBox } from "./TalentLevelListBox";
 
 export function TalentLevelSelector(props: {

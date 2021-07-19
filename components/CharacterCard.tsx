@@ -1,13 +1,14 @@
-import Image from "next/image";
 import RarityStars from "./RarityStars";
 import cn from "classnames";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import buildDB from "../lib/buildsDatabase";
-import _ from "lodash";
 import { useEffect, useState } from "react";
 import { Button } from "./Button";
 import { If } from "./If";
+import { upperCaseFirst } from "upper-case-first";
+import { Character } from "../lib/MyTypes";
+import { CLSPicture } from "./CLSPicture";
 
 function useIsTouch() {
     const [isTouch, setisTouch] = useState(false);
@@ -32,7 +33,7 @@ export default function CharacterCard({
     character,
     className,
 }: {
-    character: any;
+    character: Character;
     className?: string;
 }) {
     const isProbablyTouch = useIsTouch();
@@ -84,23 +85,24 @@ export default function CharacterCard({
                 className="relative flex items-center justify-center overflow-hidden bg-gscale-dark-background-secondary"
                 id={character.id}
             >
-                <Image
-                    src={`/images/characters/card/${character.id}.png`}
-                    layout="intrinsic"
-                    height="300"
+                <CLSPicture
+                    name={`/images/characters/card/${character.imageId ?? character.id}`}
                     width="480"
-                    quality="85"
+                    height="300"
+                    loading="lazy"
                     alt={`${character.name}`}
+                    className={`absolute inset-0 p-0 m-auto block max-w-full max-h-full min-h-full min-w-full`}
                 />
+
                 {isProbablyTouch ? null : cardHoverDialog}
             </div>
             <div className="px-4 py-3">
                 <div className="flex flex-wrap items-center">
                     <span className={`text-genshin-element-${elementId} mr-1`}>
-                        {_.upperFirst(character.element)}
+                        {upperCaseFirst(character.element)}
                     </span>
                     <span className="text-gscale-dark-text-secondary mr-0.5 opacity-80">
-                        {_.upperFirst(character.weapon)}
+                        {upperCaseFirst(character.weapon)}
                     </span>
                     <RarityStars
                         rarity={character.rarity}

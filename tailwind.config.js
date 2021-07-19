@@ -12,6 +12,7 @@ module.exports = {
             screens: {
                 maxsm: { max: "639px" },
                 maxlg: { max: "1023px" },
+                maxsm: { max: "639px" },
             },
             colors: {
                 gray: colors.trueGray,
