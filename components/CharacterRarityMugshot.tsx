@@ -22,6 +22,7 @@ export const CharacterRarityMugshot: React.FC<ItemCharacterCardProps> = ({
             <img
                 width={100}
                 height={100}
+                decoding="async"
                 className="bg-gscale-dark-background-secondary rounded-t-md w-[100px] h-[100px]"
                 src={`/images/characters/mugshot/${
                     character.imageId ?? character.id

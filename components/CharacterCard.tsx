@@ -9,6 +9,7 @@ import { Button } from "./Button";
 import { If } from "./If";
 import { upperCaseFirst } from "upper-case-first";
 import { Character } from "../lib/MyTypes";
+import { toBase64 } from "next/dist/next-server/lib/to-base-64";
 
 function useIsTouch() {
     const [isTouch, setisTouch] = useState(false);
@@ -79,22 +80,62 @@ export default function CharacterCard({
         </div>
     );
 
+    const imageName = `/images/characters/card/${character.imageId ?? character.id}`;
+
     const card = (
         <>
             <div
                 className="relative flex items-center justify-center overflow-hidden bg-gscale-dark-background-secondary"
                 id={character.id}
             >
-                <Image
-                    src={`/images/characters/card/${
-                        character.imageId ?? character.id
-                    }.png`}
-                    layout="intrinsic"
-                    height="300"
-                    width="480"
-                    quality="85"
-                    alt={`${character.name}`}
-                />
+                {/* i hope ill never have to clean this up */}
+                <div
+                    style={{
+                        display: "inline-block",
+                        maxWidth: "100%",
+                        overflow: "hidden",
+                        position: "relative",
+                        boxSizing: "border-box",
+                        margin: 0,
+                    }}
+                >
+                    <div
+                        style={{
+                            boxSizing: "border-box",
+                            display: "block",
+                            maxWidth: "100%",
+                        }}
+                    >
+                        <img
+                            style={{
+                                maxWidth: "100%",
+                                display: "block",
+                                margin: 0,
+                                border: "none",
+                                padding: 0,
+                            }}
+                            alt=""
+                            aria-hidden={true}
+                            role="presentation"
+                            src={`data:image/svg+xml;base64,${toBase64(
+                                `<svg width="${480}" height="${300}" xmlns="http://www.w3.org/2000/svg" version="1.1"/>`
+                            )}`}
+                        />
+                    </div>
+                    <picture>
+                        <source type="image/webp" srcSet={`${imageName}.webp`} />
+                        <source type="image/png" srcSet={`${imageName}.png`} />
+                        <img
+                            src={`${imageName}.png`}
+                            height="300"
+                            width="480"
+                            loading="lazy"
+                            decoding="async"
+                            alt={`${character.name}`}
+                            className={`absolute inset-0 p-0 m-auto block max-w-full max-h-full min-h-full min-w-full`}
+                        />
+                    </picture>
+                </div>
                 {isProbablyTouch ? null : cardHoverDialog}
             </div>
             <div className="px-4 py-3">

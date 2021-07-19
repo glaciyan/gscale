@@ -22,6 +22,7 @@ export const ItemImage: React.FC<ItemImageProps> = ({ item }) => {
                 draggable={false}
                 alt={item.name}
                 title={item.name}
+                decoding="async"
             />
         </picture>
     );
