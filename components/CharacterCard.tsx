@@ -1,4 +1,3 @@
-import Image from "next/image";
 import RarityStars from "./RarityStars";
 import cn from "classnames";
 import Link from "next/link";
@@ -9,8 +8,6 @@ import { Button } from "./Button";
 import { If } from "./If";
 import { upperCaseFirst } from "upper-case-first";
 import { Character } from "../lib/MyTypes";
-import { toBase64 } from "next/dist/next-server/lib/to-base-64";
-import { Picture } from "./Picture";
 import { CLSPicture } from "./CLSPicture";
 
 function useIsTouch() {

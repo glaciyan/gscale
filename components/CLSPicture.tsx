@@ -1,5 +1,6 @@
 import { toBase64 } from "next/dist/next-server/lib/to-base-64";
 import React from "react";
+import LazyLoad from "react-lazyload";
 import { Picture, PictureProps } from "./Picture";
 
 export type CLSPictureProps = {} & PictureProps;
@@ -39,7 +40,9 @@ export const CLSPicture: React.FC<CLSPictureProps> = ({ name, ...rest }) => {
                     )}`}
                 />
             </div>
-            <Picture name={name} {...rest} />
+            <LazyLoad once offset={100}>
+                <Picture name={name} {...rest} />
+            </LazyLoad>
         </div>
     );
 };
