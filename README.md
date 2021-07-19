@@ -8,8 +8,16 @@ This project is built using next.js and hosted on vercel.
 
 To add a new character please refer to [this pull request](https://github.com/slimetsp/gscale/pull/5) as a reference.
 
-## Generate Images
+## Run
 
-`npx @squoosh/cli --webp auto --resize '{width:240}' -d public/images/characters/card images/characters/card/*.png && npx @squoosh/cli --oxipng auto --resize '{width:240}' -d public/images/characters/card images/characters/card/*.png`
+### Build images
 
-``
+`yarn images:build`
+
+### Start dev server
+
+`yarn dev`
+
+### Start production server
+
+`yarn prod`
