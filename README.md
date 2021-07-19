@@ -2,7 +2,13 @@
 
 GScale is a calculator for Genshin Impact, you can calculate the amount of items you need for ascensions and talents.
 
-This project is built using next.js and hosted on vercel.
+This project is built using next.js and tailwindcss.
+
+<a href="https://vercel.com?utm_source=gscale&utm_campaign=oss">
+<img src="./public/images/powered-by-vercel.svg"
+	width="212"
+	height="44">
+</a>
 
 ## Contribute new characters
 
