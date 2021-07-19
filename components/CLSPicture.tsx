@@ -1,11 +1,18 @@
 import { toBase64 } from "next/dist/next-server/lib/to-base-64";
 import React from "react";
-import LazyLoad from "react-lazyload";
 import { Picture, PictureProps } from "./Picture";
+import { useIntersection } from "next/dist/client/use-intersection";
 
 export type CLSPictureProps = {} & PictureProps;
 
 export const CLSPicture: React.FC<CLSPictureProps> = ({ name, ...rest }) => {
+    const [setRef, isIntersected] = useIntersection<HTMLImageElement>({
+        disabled: false,
+        rootMargin: "200px",
+    });
+
+    console.log(`name: ${isIntersected}`);
+
     return (
         <div
             style={{
@@ -40,9 +47,7 @@ export const CLSPicture: React.FC<CLSPictureProps> = ({ name, ...rest }) => {
                     )}`}
                 />
             </div>
-            <LazyLoad once offset={100}>
-                <Picture name={name} {...rest} />
-            </LazyLoad>
+            <Picture name={name} visible={isIntersected} reff={setRef} {...rest} />
         </div>
     );
 };
