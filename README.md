@@ -10,10 +10,6 @@ To add a new character please refer to [this pull request](https://github.com/sl
 
 ## Run
 
-### Build images
-
-`yarn images:build`
-
 ### Start dev server
 
 `yarn dev`
