@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { ElementIcon } from "./icons/element";
 import { IconWithText } from "./IconWithText";
 import { CharacterItemShowcase } from "./CharacterItemShowcase";
-import Image from "../lib/next-native-image";
 import { CharacterRarityMugshot } from "./CharacterRarityMugshot";
 import { Character } from "../lib/MyTypes";
 import { upperCaseFirst } from "upper-case-first";

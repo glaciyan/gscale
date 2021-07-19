@@ -10,7 +10,6 @@ import { CharacterLevel } from "./CharacterLevel";
 import { ConfirmDeleteDialouge } from "./ConfirmDeleteDialouge";
 import { calculateMaterials } from "../lib/characterMaterials";
 import { toLevel } from "../lib";
-import Image from "../lib/next-native-image";
 import { upperCaseFirst } from "upper-case-first";
 
 export default function CharacterBuild({ build }: { build: any }) {
@@ -29,6 +28,8 @@ export default function CharacterBuild({ build }: { build: any }) {
     const levelStart = toLevel(build.level.start);
     const levelGoal = toLevel(build.level.goal);
 
+    const imageName = `/images/characters/card/${character.imageId ?? character.id}`;
+
     return (
         <>
             <ConfirmDeleteDialouge
@@ -40,16 +41,15 @@ export default function CharacterBuild({ build }: { build: any }) {
                 <div className="sm:flex sm:flex-1">
                     <div className="relative flex p-4">
                         <div className="absolute inset-x-0 top-0 z-0 w-full h-32 overflow-hidden rounded-tl-md maxsm:rounded-tr-md">
-                            <Image
-                                src={`/images/characters/card/${
-                                    character.imageId ?? character.id
-                                }.png`}
-                                alt={character.name}
-                                layout="native"
-                                width="480"
-                                quality="85"
-                                className="object-cover w-full h-full opacity-25"
-                            />
+                            <picture>
+                                <img
+                                    src={`${imageName}.png`}
+                                    alt={character.name}
+                                    width="480"
+                                    height="300"
+                                    className="object-cover w-full h-full opacity-25"
+                                />
+                            </picture>
                         </div>
                         <div className="absolute inset-x-0 top-0 z-10 w-full bg-gradient-to-t from-gscale-dark-background-secondary to-transparent h-32 overflow-hidden rounded-tl-md maxsm:rounded-tr-md"></div>
                         {/* <div className="flex justify-center flex-1 sm:hidden">
