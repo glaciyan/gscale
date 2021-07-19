@@ -5,6 +5,7 @@ import { CharacterItemShowcase } from "./CharacterItemShowcase";
 import { CharacterRarityMugshot } from "./CharacterRarityMugshot";
 import { Character } from "../lib/MyTypes";
 import { upperCaseFirst } from "upper-case-first";
+import { Picture } from "./Picture";
 
 interface CharacterDetailsProps {
     character: Character;
@@ -17,14 +18,13 @@ export const CharacterDetails: React.FC<CharacterDetailsProps> = ({ character })
         <div className="maxsm:rounded-t-md sm:rounded-tl-md lg:rounded-l-md bg-gscale-dark-background-ternary500 lg:flex-grow-0">
             <div className="relative flex flex-col h-full">
                 <div className="absolute inset-x-0 top-0 z-10 w-full h-32 overflow-hidden rounded-tl-md maxsm:rounded-tr-md">
-                    <Image
-                        src={`/images/characters/card/${
+                    <Picture
+                        name={`/images/characters/card/${
                             character.imageId ?? character.id
-                        }.png`}
+                        }`}
                         alt={character.name}
-                        layout="native"
                         width="480"
-                        quality="85"
+                        height="300"
                         className="object-cover w-full h-full opacity-50"
                     />
                 </div>
