@@ -176,14 +176,15 @@ export default function BuildCharacter({ character }: { character: Character }) 
 
     return (
         <Layout title={`Building ${character.name}`}>
-            <PreloadImage src={`/images/materials/mora.png`} />
-            <PreloadImage src={`/images/materials/heros_wit.png`} />
-            <PreloadImage src={`/images/materials/wanderers_advice.png`} />
-            <PreloadImage src={`/images/materials/adventurers_experience.png`} />
+            {/* preffer webp supporting clients */}
+            <PreloadImage src={`/images/materials/mora.webp`} />
+            <PreloadImage src={`/images/materials/heros_wit.webp`} />
+            <PreloadImage src={`/images/materials/wanderers_advice.webp`} />
+            <PreloadImage src={`/images/materials/adventurers_experience.webp`} />
             {materials.materialNames.map((name) => {
                 return (
                     <PreloadImage
-                        src={`/images/materials/${toId(name)}.png`}
+                        src={`/images/materials/${toId(name)}.webp`}
                         key={name}
                     ></PreloadImage>
                 );

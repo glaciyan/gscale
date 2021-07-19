@@ -9,15 +9,20 @@ interface ItemImageProps {
 
 export const ItemImage: React.FC<ItemImageProps> = ({ item }) => {
     if (!item) return null;
+    const name = `/images/materials/${toId(item.name)}`;
     return (
-        <img
-            src={`/images/materials/${toId(item.name)}.png`}
-            width={ITEM_ICON_WIDTH}
-            height={ITEM_ICON_WIDTH}
-            className="object-contain w-full h-full"
-            draggable={false}
-            alt={item.name}
-            title={item.name}
-        />
+        <picture>
+            <source type="image/webp" srcSet={`${name}.webp`} />
+            <source type="image/png" srcSet={`${name}.png`} />
+            <img
+                src={`${name}.png`}
+                width={ITEM_ICON_WIDTH}
+                height={ITEM_ICON_WIDTH}
+                className="object-contain w-full h-full"
+                draggable={false}
+                alt={item.name}
+                title={item.name}
+            />
+        </picture>
     );
 };
