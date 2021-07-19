@@ -11,8 +11,6 @@ export const CLSPicture: React.FC<CLSPictureProps> = ({ name, ...rest }) => {
         rootMargin: "200px",
     });
 
-    console.log(`name: ${isIntersected}`);
-
     return (
         <div
             style={{
