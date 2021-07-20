@@ -3,12 +3,36 @@ import { Characters, ItemGroup } from "../lib/MyTypes";
 import { items } from "./items";
 import {
     anemoTravelerTalentCost,
+    electroTravelerTalentCost,
     geoTravelerTalentCost,
     normalTravelerTalentCost,
     travelerAscensionCosts,
 } from "./travelerCost";
 
 export const characters: Characters = {
+    traveler_electro: {
+        id: "traveler_electro",
+        imageId: "traveler",
+        name: "Traveler",
+        rarity: 5,
+        constellation: "Viator/Viatrix",
+        description:
+            "A traveler from another world who had their only kin taken away, forcing them to embark on a journey to find The Seven.",
+        element: "electro",
+        weapon: "sword",
+        sub: "ATK",
+        materials: {
+            ascension: travelerAscensionCosts(
+                ItemGroup.traveler_gem,
+                items.windwheel_aster.name,
+                ItemGroup.mask
+            ),
+            normal: normalTravelerTalentCost(),
+            elemental: electroTravelerTalentCost(),
+            burst: electroTravelerTalentCost(),
+            list: null,
+        },
+    },
     ayaka: {
         id: "ayaka",
         name: "Ayaka",
