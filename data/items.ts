@@ -5,6 +5,48 @@ export const items = {
         name: "Error",
         rarity: 0,
     },
+
+    perpetual_heart: {
+        name: "Perpetual Heart",
+        rarity: 4,
+    },
+    sakura_bloom: {
+        name: "Sakura Bloom",
+        rarity: 1,
+    },
+
+    old_handguard: {
+        name: "Old Handguard",
+        rarity: 1,
+        group: ItemGroup.handguard,
+    },
+    kageuchi_handguard: {
+        name: "Kageuchi Handguard",
+        rarity: 2,
+        group: ItemGroup.handguard,
+    },
+    famed_handguard: {
+        name: "Famed Handguard",
+        rarity: 3,
+        group: ItemGroup.handguard,
+    },
+
+    teachings_of_elegance: {
+        name: "Teachings of Elegance",
+        rarity: 2,
+        group: ItemGroup.elegance,
+    },
+    guide_to_elegance: {
+        name: "Guide to Elegance",
+        rarity: 3,
+        group: ItemGroup.elegance,
+    },
+    philosophies_of_elegance: {
+        name: "Philosophies of Elegance",
+        rarity: 4,
+        group: ItemGroup.elegance,
+    },
+
     sea_ganoderma: {
         name: "Sea Ganoderma",
         rarity: 1,
