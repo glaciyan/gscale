@@ -14,7 +14,7 @@ This project is built using next.js and tailwindcss.
 
 ## Contribute new characters
 
-**Please note that unreleased characters are consired leaks and will not be accepted**
+**Please note that unreleased characters are considered leaks and will not be accepted**
 
 ### Add new materials (if required)
 
