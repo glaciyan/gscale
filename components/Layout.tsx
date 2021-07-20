@@ -112,6 +112,9 @@ const Layout = ({ children, title, current }: Props) => {
                             <ExternalLink href="https://genshin-impact.fandom.com/wiki/Genshin_Impact_Wiki">
                                 Genshin Impact Fandom Wiki
                             </ExternalLink>
+                            <ExternalLink href="http://genshin.honeyhunterworld.com/">
+                                Honey Hunter World
+                            </ExternalLink>
                         </FooterEntry>
                         <FooterEntry header="Other">
                             <>
