@@ -20,7 +20,7 @@ This project is built using next.js and tailwindcss.
 
 1. Put all source images into the `images/materials` folder.
 2. For all newly added source image run `yarn images:items:build <path to image>...` to generate optimized images used by the site
-3. Create a new object for each item in `data/items.ts` and make sure the name of the object is the same as the image
+3. Create a new object for each item in `data/items.ts` and make sure the name (not the prop) of the object is the same as the image
     - When it's a new item group (common enemy material, etc.): Create a new item group in `lib/MyTypes.ts` and use the `group` prop for the new object
 
 ### Add new character
