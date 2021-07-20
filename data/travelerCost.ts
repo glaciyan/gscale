@@ -156,7 +156,10 @@ export function anemoTravelerTalentCost() {
 }
 
 export function geoTravelerTalentCost() {
-    const ig = new ItemGen({ common: ItemGroup.scroll, weekly: items.dvalins_sigh.name });
+    const ig = new ItemGen({
+        common: ItemGroup.arrowhead,
+        weekly: items.tail_of_boreas.name,
+    });
 
     const ballad = new ItemGen({ book: ItemGroup.gold });
     const freedom = new ItemGen({ book: ItemGroup.prosperity });
