@@ -6,6 +6,38 @@ export const items = {
         rarity: 0,
     },
 
+    teachings_of_light: {
+        name: "Teachings of Light",
+        rarity: 2,
+        group: ItemGroup.light,
+    },
+    guide_to_light: {
+        name: "Guide to Light",
+        rarity: 3,
+        group: ItemGroup.light,
+    },
+    philosophies_of_light: {
+        name: "Philosophies of Light",
+        rarity: 4,
+        group: ItemGroup.light,
+    },
+
+    teachings_of_transience: {
+        name: "Teachings of Transience",
+        rarity: 2,
+        group: ItemGroup.transience,
+    },
+    guide_to_transience: {
+        name: "Guide to Transience",
+        rarity: 3,
+        group: ItemGroup.transience,
+    },
+    philosophies_of_transience: {
+        name: "Philosophies of Transience",
+        rarity: 4,
+        group: ItemGroup.transience,
+    },
+
     perpetual_heart: {
         name: "Perpetual Heart",
         rarity: 4,
