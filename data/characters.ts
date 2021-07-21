@@ -46,7 +46,7 @@ export const characters: Characters = {
                 items.windwheel_aster.name,
                 ItemGroup.mask
             ),
-            normal: normalTravelerTalentCost(),
+            normal: electroTravelerTalentCost(),
             elemental: electroTravelerTalentCost(),
             burst: electroTravelerTalentCost(),
             list: null,
