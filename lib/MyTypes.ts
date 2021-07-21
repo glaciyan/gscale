@@ -63,6 +63,8 @@ export enum ItemGroup {
     guyun,
     mist_elixir,
     wolf_tooth,
+    handguard,
+    elegance,
 }
 
 export interface Item {

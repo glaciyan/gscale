@@ -10,7 +10,8 @@
         "start": "next start",
         "type-check": "tsc",
         "test": "jest",
-        "images:build": "npx @squoosh/cli --webp auto --resize '{width:240}' -d public/images/characters/card images/characters/card/*.png && npx @squoosh/cli --oxipng auto --resize '{width:240}' -d public/images/characters/card images/characters/card/*.png && npx @squoosh/cli --oxipng auto --resize '{height:40}' -d public/images/materials images/materials/*.png"
+        "images:characters:build": "npx @squoosh/cli --oxipng auto --webp auto --resize '{width:240}' -d public/images/characters/card",
+        "images:items:build": "npx @squoosh/cli --oxipng auto --webp auto --resize '{width:40}' -d public/images/materials"
     },
     "dependencies": {
         "@headlessui/react": "^1.2.0",
