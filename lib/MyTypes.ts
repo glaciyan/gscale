@@ -65,6 +65,8 @@ export enum ItemGroup {
     wolf_tooth,
     handguard,
     elegance,
+    light,
+    transience,
 }
 
 export interface Item {

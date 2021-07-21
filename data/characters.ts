@@ -3,6 +3,7 @@ import { Characters, ItemGroup } from "../lib/MyTypes";
 import { items } from "./items";
 import {
     anemoTravelerTalentCost,
+    electroTravelerTalentCost,
     geoTravelerTalentCost,
     normalTravelerTalentCost,
     travelerAscensionCosts,
@@ -27,6 +28,29 @@ export const characters: Characters = {
             book: ItemGroup.elegance,
             gem: ItemGroup.cryo_gem,
         }),
+    },
+    traveler_electro: {
+        id: "traveler_electro",
+        imageId: "traveler",
+        name: "Traveler",
+        rarity: 5,
+        constellation: "Viator/Viatrix",
+        description:
+            "A traveler from another world who had their only kin taken away, forcing them to embark on a journey to find The Seven.",
+        element: "electro",
+        weapon: "sword",
+        sub: "ATK",
+        materials: {
+            ascension: travelerAscensionCosts(
+                ItemGroup.traveler_gem,
+                items.windwheel_aster.name,
+                ItemGroup.mask
+            ),
+            normal: normalTravelerTalentCost(),
+            elemental: electroTravelerTalentCost(),
+            burst: electroTravelerTalentCost(),
+            list: null,
+        },
     },
     kazuha: {
         id: "kazuha",
