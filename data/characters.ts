@@ -10,6 +10,25 @@ import {
 } from "./travelerCost";
 
 export const characters: Characters = {
+    ayaka: {
+        id: "ayaka",
+        name: "Ayaka",
+        rarity: 5,
+        constellation: "Grus Nivis",
+        description:
+            "Daughter of the Yashiro Commission's Kamisato Clan. Dignified and elegant, as well as wise and strong.",
+        element: "cryo",
+        weapon: "sword",
+        sub: "CRIT DMG",
+        materials: standard({
+            boss: items.perpetual_heart.name,
+            local: items.sakura_bloom.name,
+            weekly: items.bloodjade_branch.name,
+            common: ItemGroup.handguard,
+            book: ItemGroup.elegance,
+            gem: ItemGroup.cryo_gem,
+        }),
+    },
     traveler_electro: {
         id: "traveler_electro",
         imageId: "traveler",
@@ -32,25 +51,6 @@ export const characters: Characters = {
             burst: electroTravelerTalentCost(),
             list: null,
         },
-    },
-    ayaka: {
-        id: "ayaka",
-        name: "Ayaka",
-        rarity: 5,
-        constellation: "Grus Nivis",
-        description:
-            "Daughter of the Yashiro Commission's Kamisato Clan. Dignified and elegant, as well as wise and strong.",
-        element: "cryo",
-        weapon: "sword",
-        sub: "CRIT DMG",
-        materials: standard({
-            boss: items.perpetual_heart.name,
-            local: items.sakura_bloom.name,
-            weekly: items.bloodjade_branch.name,
-            common: ItemGroup.handguard,
-            book: ItemGroup.elegance,
-            gem: ItemGroup.cryo_gem,
-        }),
     },
     kazuha: {
         id: "kazuha",
