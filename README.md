@@ -32,7 +32,7 @@ This project is built using next.js and tailwindcss.
     - Note that those images aren't optimized with a command, so keep the image small. The preferred size is 100x100 and under 25kb.
 4. Create an object for the character at `data/characters.ts`
 
-For an example check out [the pull request for Ayaka](https://github.com/slimetsp/gscale/pull/21)
+For an example check out [the pull request for Ayaka](https://github.com/slimetsp/gscale/pull/23)
 
 ## Contribute
 
