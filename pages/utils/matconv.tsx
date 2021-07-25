@@ -5,7 +5,7 @@ import { RaritySelector } from "../../components/RaritySelector";
 export type matcalcProps = {};
 
 const matconv: React.FC<matcalcProps> = ({}) => {
-    const [neededRarity, setneededRarity] = useState(1);
+    const [neededRarity, setneededRarity] = useState(4);
 
     return (
         <Layout title={`Material Calculator`}>
