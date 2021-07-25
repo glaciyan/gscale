@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { ClassName } from "../lib/ClassName";
 import { Button } from "./Button";
 import ReactModal from "react-modal";
+import { ExternalLinkIcon } from "@heroicons/react/outline";
 
 interface ExternalLinkProps {
     href: string;
@@ -73,12 +74,18 @@ export const ExternalLink: React.FC<ExternalLinkProps & ClassName> = ({
                     </div>
                 </div>
             </ReactModal>
-            <button
-                className={`block text-blue-400 hover:underline cursor-pointer w-max ${className}`}
-                onClick={() => setIsOpen(true)}
+            <a
+                href={href}
+                className={`text-blue-400 hover:underline cursor-pointer w-max ${className}`}
+                onClick={(e) => {
+                    setIsOpen(true);
+                    e.preventDefault();
+                }}
             >
                 {children}
-            </button>
+                <ExternalLinkIcon className={`inline ml-1 w-4 h-4`}></ExternalLinkIcon>
+            </a>
+            <br />
         </>
     );
 };
