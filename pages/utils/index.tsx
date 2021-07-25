@@ -15,6 +15,10 @@ const utils: React.FC<utilsProps> = ({}) => {
                         WIP
                     </span>
                 </h1>
+                <p className={`text-gscale-dark-text-ternary`}>
+                    This is where I put simple tools I build. Do not expect the same
+                    quality as the rest of the site.
+                </p>
                 <ul className={`m-4 space-y-2 list-disc`}>
                     {utilNav.map((nav) => {
                         return (
