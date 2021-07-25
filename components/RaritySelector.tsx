@@ -1,20 +1,49 @@
 import { Listbox, Transition } from "@headlessui/react";
 import { ChevronDownIcon, CheckIcon } from "@heroicons/react/outline";
-import React, { Fragment } from "react";
+import React, { Fragment, StyleHTMLAttributes } from "react";
+import { ClassName } from "../lib/ClassName";
 import RarityStars from "./RarityStars";
 
 interface RaritySelectorProps {
     value: number;
     onChange: any;
+    noLeftRound?: undefined | boolean;
+    noRightRound?: undefined | boolean;
+    borderRadius?: string;
 }
 
-export function RaritySelector({ value, onChange }: RaritySelectorProps) {
+export function RaritySelector({
+    value,
+    onChange,
+    className,
+    noLeftRound,
+    noRightRound,
+    borderRadius = "0.375rem",
+}: RaritySelectorProps & ClassName) {
+    //#region style rounder
+    let buttonStyle = {
+        borderBottomLeftRadius: borderRadius,
+        borderTopLeftRadius: borderRadius,
+        borderTopRightRadius: borderRadius,
+        borderBottomRightRadius: borderRadius,
+    };
+    if (noRightRound) {
+        buttonStyle.borderBottomRightRadius = "0";
+        buttonStyle.borderTopRightRadius = "0";
+    }
+    if (noLeftRound) {
+        buttonStyle.borderBottomLeftRadius = "0";
+        buttonStyle.borderTopLeftRadius = "0";
+    }
+    //#endregion
+
     return (
-        <div className="flex">
+        <div className={`flex ${className}`}>
             <Listbox value={value} onChange={onChange}>
                 <div className="relative w-18">
                     <Listbox.Button
-                        className="listbutton rounded-md"
+                        style={buttonStyle}
+                        className="listbutton"
                         title={`Selected rarity ${value}`}
                     >
                         <span className="block truncate">
