@@ -6,7 +6,7 @@ export type matcalcProps = {};
 const matcalc: React.FC<matcalcProps> = ({}) => {
     return (
         <Layout title={`Material Calculator`}>
-            <div>matcalc</div>
+            <div className={`max-w-screen-xl sm:mx-auto mx-6`}>matcalc</div>
         </Layout>
     );
 };

@@ -7,8 +7,8 @@ const utilNav = [{ name: "Material Calculator", href: "/utils/matcalc" }];
 
 const utils: React.FC<utilsProps> = ({}) => {
     return (
-        <Layout title="Utilities">
-            <div className={`max-w-screen-xl mx-auto`}>
+        <Layout title="Utilities" current="Utils">
+            <div className={`max-w-screen-xl sm:mx-auto mx-6`}>
                 <h1 className={`font-bold text-xl tracking-wide`}>
                     List of GScale Utility Tools{" "}
                     <span className={`text-gscale-dark-text-ternary font-normal`}>
