@@ -3,7 +3,7 @@ import Layout from "../../components/Layout";
 
 export type matcalcProps = {};
 
-const matcalc: React.FC<matcalcProps> = ({}) => {
+const matconv: React.FC<matcalcProps> = ({}) => {
     return (
         <Layout title={`Material Calculator`}>
             <div className={`max-w-screen-xl sm:mx-auto mx-6`}>matcalc</div>
@@ -11,4 +11,4 @@ const matcalc: React.FC<matcalcProps> = ({}) => {
     );
 };
 
-export default matcalc;
+export default matconv;

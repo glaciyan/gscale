@@ -3,7 +3,7 @@ import Layout from "../../components/Layout";
 
 export type utilsProps = {};
 
-const utilNav = [{ name: "Material Calculator", href: "/utils/matcalc" }];
+const utilNav = [{ name: "Material Conversions", href: "/utils/matconversion" }];
 
 const utils: React.FC<utilsProps> = ({}) => {
     return (
