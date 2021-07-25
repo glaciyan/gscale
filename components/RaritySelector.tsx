@@ -13,7 +13,10 @@ export function RaritySelector({ value, onChange }: RaritySelectorProps) {
         <div className="flex">
             <Listbox value={value} onChange={onChange}>
                 <div className="relative w-18">
-                    <Listbox.Button className="listbutton rounded-md">
+                    <Listbox.Button
+                        className="listbutton rounded-md"
+                        title={`Selected rarity ${value}`}
+                    >
                         <span className="block truncate">
                             <RarityStars className={`h-5`} rarity={value} />
                         </span>
