@@ -13,7 +13,7 @@ export type RadarProps = {
 
 export const Radar: React.FC<RadarProps> = ({ data }) => {
     return (
-        <div className={`w-[30rem] h-[30rem] text-gscale-dark-background-primary`}>
+        <div className={`w-full h-[30rem] text-gscale-dark-background-primary`}>
             <ResponsiveRadar
                 data={data}
                 keys={["value"]}

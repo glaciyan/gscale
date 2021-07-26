@@ -21,9 +21,6 @@ export const LineGraph: React.FC<LineGrahpProps> = ({
 }) => {
     return (
         <div className="h-[37rem] w-full text-gscale-dark-background-primary">
-            <div className={`sm:hidden text-red-400`}>
-                Your screen is too small to display the graph
-            </div>
             <ResponsiveLine
                 data={data}
                 margin={{ top: 10, right: 50, bottom: 50, left: 70 }}

@@ -25,6 +25,9 @@ const WeaponScalingTest: React.FC<WeaponScalingTestProps> = ({}) => {
                 </span>
             }
         >
+            <strong className={`sm:hidden text-red-400`}>
+                Data graphs do not work well with small screens
+            </strong>
             <div className={`flex items-center flex-wrap`}>
                 <h1 className={`font-semibold`}>5 star Weapon Base Attack Scaling</h1>
                 <RarityStars rarity={5} className={`h-5`} />
