@@ -6,7 +6,7 @@ export type utilsProps = {};
 
 const utilNav = [
     { name: "Material Conversions", href: "/utils/matconv" },
-    { name: "DataViz Test", href: "/utils/weapon_scaling_test" },
+    { name: "DataViz Test", href: "/utils/dataviztest" },
 ];
 
 const utils: React.FC<utilsProps> = ({}) => {
