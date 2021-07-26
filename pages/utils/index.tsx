@@ -37,20 +37,6 @@ const utils: React.FC<utilsProps> = ({}) => {
                     >
                         new Github issue.
                     </a>
-                    <br />I am also looking to work with theorycrafters to create tools,
-                    if you are a theorycrafter and are interested send me a friend request
-                    on discord{" "}
-                    <span
-                        className="relative transition-colors duration-150 cursor-pointer text-gscale-dark-text-secondary/90 active:text-green-400"
-                        onClick={(e) => {
-                            navigator.clipboard.writeText("slimetsp#5278");
-                            e.preventDefault();
-                        }}
-                        title="Click to copy"
-                    >
-                        slimetsp#5278
-                    </span>{" "}
-                    (click to copy).
                 </p>
                 <ul className={`m-4 space-y-2 list-disc`}>
                     {utilNav.map((nav) => {
