@@ -3,31 +3,13 @@ import cn from "classnames";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import buildDB from "../lib/buildsDatabase";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Button } from "./Button";
 import { If } from "./If";
 import { upperCaseFirst } from "upper-case-first";
 import { Character } from "../lib/MyTypes";
 import { CLSPicture } from "./CLSPicture";
-
-function useIsTouch() {
-    const [isTouch, setisTouch] = useState(false);
-
-    useEffect(() => {
-        setisTouch(
-            (() => {
-                try {
-                    document.createEvent("TouchEvent");
-                    return true;
-                } catch {
-                    return false;
-                }
-            })()
-        );
-    });
-
-    return isTouch;
-}
+import { useIsTouch } from "./useIsTouch";
 
 export default function CharacterCard({
     character,
