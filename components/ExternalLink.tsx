@@ -85,7 +85,6 @@ export const ExternalLink: React.FC<ExternalLinkProps & ClassName> = ({
                 {children}
                 <ExternalLinkIcon className={`inline ml-1 w-4 h-4`}></ExternalLinkIcon>
             </a>
-            <br />
         </>
     );
 };

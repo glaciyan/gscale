@@ -97,9 +97,11 @@ const Layout = ({ children, title, current }: Props) => {
                             <ExternalLink href="http://genshin.honeyhunterworld.com/">
                                 Honey Hunter World
                             </ExternalLink>
+                            <br />
                             <ExternalLink href="https://genshin-impact.fandom.com/wiki/Genshin_Impact_Wiki">
                                 Genshin Impact Fandom Wiki
                             </ExternalLink>
+                            <br />
                             <ExternalLink href="https://paimon.moe/">
                                 paimon.moe
                             </ExternalLink>
@@ -108,6 +110,7 @@ const Layout = ({ children, title, current }: Props) => {
                             <ExternalLink href="https://genshin-impact.fandom.com/wiki/Genshin_Impact_Wiki">
                                 Genshin Impact Fandom Wiki
                             </ExternalLink>
+                            <br />
                             <ExternalLink href="http://genshin.honeyhunterworld.com/">
                                 Honey Hunter World
                             </ExternalLink>

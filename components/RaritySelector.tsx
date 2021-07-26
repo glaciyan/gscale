@@ -7,6 +7,8 @@ import RarityStars from "./RarityStars";
 interface RaritySelectorProps {
     value: number;
     onChange: any;
+    min?: number;
+    max?: number;
     noLeftRound?: undefined | boolean;
     noRightRound?: undefined | boolean;
     borderRadius?: string;
@@ -15,9 +17,11 @@ interface RaritySelectorProps {
 export function RaritySelector({
     value,
     onChange,
-    className,
+    min,
+    max,
     noLeftRound,
     noRightRound,
+    className,
     borderRadius = "0.375rem",
 }: RaritySelectorProps & ClassName) {
     //#region style rounder
@@ -63,7 +67,7 @@ export function RaritySelector({
                         leaveTo="opacity-0"
                     >
                         <Listbox.Options className="listbox">
-                            {[1, 2, 3, 4, 5].map((rarity) => (
+                            {[1, 2, 3, 4, 5].slice(min! - 1, max).map((rarity) => (
                                 <Listbox.Option
                                     key={rarity}
                                     className={({ active }) =>
