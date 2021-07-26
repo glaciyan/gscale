@@ -13,6 +13,7 @@ type Props = {
 const nav = [
     { name: "Characters", href: "/" },
     { name: "Your Builds", href: "/builds" },
+    { name: "Utils", href: "/utils" },
 ];
 
 const version = "1.1";
@@ -50,11 +51,6 @@ const Layout = ({ children, title, current }: Props) => {
                                 src="/images/svg/logo_label_small.svg"
                                 alt="logo"
                             />
-                            <span
-                                className={`text-gscale-dark-text-ternary/70 text-sm self-end mb-0.5 ml-1`}
-                            >
-                                v1.1
-                            </span>
                         </a>
                     </Link>
                     <nav className="flex py-4">
@@ -101,9 +97,11 @@ const Layout = ({ children, title, current }: Props) => {
                             <ExternalLink href="http://genshin.honeyhunterworld.com/">
                                 Honey Hunter World
                             </ExternalLink>
+                            <br />
                             <ExternalLink href="https://genshin-impact.fandom.com/wiki/Genshin_Impact_Wiki">
                                 Genshin Impact Fandom Wiki
                             </ExternalLink>
+                            <br />
                             <ExternalLink href="https://paimon.moe/">
                                 paimon.moe
                             </ExternalLink>
@@ -112,6 +110,7 @@ const Layout = ({ children, title, current }: Props) => {
                             <ExternalLink href="https://genshin-impact.fandom.com/wiki/Genshin_Impact_Wiki">
                                 Genshin Impact Fandom Wiki
                             </ExternalLink>
+                            <br />
                             <ExternalLink href="http://genshin.honeyhunterworld.com/">
                                 Honey Hunter World
                             </ExternalLink>
