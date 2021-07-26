@@ -43,7 +43,7 @@ const matconv: React.FC = () => {
     return (
         <ToolLayout
             name={`Material Converter`}
-            description={`A super simple calculator for materials (Talents/Weapon/Common/etc.)`}
+            description={`A super simple calculator for materials (Talents/Weapon/Common/etc.). All 4 do the same thing.`}
         >
             <div className={`flex flex-wrap justify-between`}>
                 <MaterialConverter defaultRarity={4} />
