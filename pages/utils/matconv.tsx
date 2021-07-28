@@ -10,28 +10,27 @@ const MaterialConverter = ({ defaultRarity }) => {
 
     const [resultRarity, sethasRarity] = useState(neededRarity - 1);
 
-    useEffect(() => {
-        if (resultRarity >= neededRarity - 1) sethasRarity(neededRarity - 1);
-    }, [neededRarity]);
+    // useEffect(() => {
+    //     if (resultRarity >= neededRarity - 1) sethasRarity(neededRarity - 1);
+    // }, [neededRarity]);
+
+    const result = neededAmount! * Math.pow(3, neededRarity - resultRarity);
 
     return (
         <div className="space-y-4 w-max border-2 border-gscale-dark-background-primary p-4 rounded-md">
             <AmountRarity
-                label={`I need`}
                 number={neededAmount}
                 setNumber={setneededAmount}
                 rarity={neededRarity}
                 setRarity={setneededRarity}
-                rarityMin={2}
             />
             <If cif={!!neededAmount}>
                 <>
                     <div className={`h-0.5 bg-gscale-dark-background-primary`}></div>
                     <AmountRarity
-                        number={neededAmount! * Math.pow(3, neededRarity - resultRarity)}
+                        number={result}
                         rarity={resultRarity}
                         setRarity={sethasRarity}
-                        rarityMax={neededRarity - 1}
                     />
                 </>
             </If>
