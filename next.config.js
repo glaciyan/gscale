@@ -16,5 +16,14 @@ module.exports = withPlugins(
         images: {
             imageSizes: [48, 256],
         },
+        async redirects() {
+            return [
+                {
+                    source: "/utils/matconv",
+                    destination: "/mc",
+                    permanent: true,
+                },
+            ];
+        },
     }
 );
