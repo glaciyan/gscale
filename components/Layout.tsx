@@ -13,7 +13,6 @@ type Props = {
 const nav = [
     { name: "Characters", href: "/" },
     { name: "Your Builds", href: "/builds" },
-    { name: "Utils", href: "/utils" },
 ];
 
 const version = "1.1";
