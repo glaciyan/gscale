@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { AmountRarity } from "../../components/AmountAndRarity";
-import { If } from "../../components/If";
-import { ToolLayout } from "../../components/ToolLayout";
+import { AmountRarity } from "../components/AmountAndRarity";
+import { If } from "../components/If";
+import { ToolLayout } from "../components/ToolLayout";
 
 //@ts-ignore
 const MaterialConverter = ({ defaultRarity }) => {
