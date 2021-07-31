@@ -6,14 +6,18 @@ export const items = {
         rarity: 0,
     },
 
-	naku_weed: {
-		name: "Naku Weed",
-		rarity: 1
-	},
-	smoldering_pearl: {
-		name: "Smoldering Pearl",
-		rarity: 4,
-	},
+    crystal_marrow: {
+        name: "Crystal Marrow",
+        rarity: 1,
+    },
+    naku_weed: {
+        name: "Naku Weed",
+        rarity: 1,
+    },
+    smoldering_pearl: {
+        name: "Smoldering Pearl",
+        rarity: 4,
+    },
     teachings_of_light: {
         name: "Teachings of Light",
         rarity: 2,
