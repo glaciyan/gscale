@@ -6,6 +6,8 @@ import { CharacterRarityMugshot } from "./CharacterRarityMugshot";
 import { Character } from "../lib/MyTypes";
 import { upperCaseFirst } from "upper-case-first";
 import { Picture } from "./Picture";
+import { ExclamationIcon } from "@heroicons/react/outline";
+import { If } from "./If";
 
 interface CharacterDetailsProps {
     character: Character;
@@ -34,6 +36,17 @@ export const CharacterDetails: React.FC<CharacterDetailsProps> = ({ character })
                         className="mb-6 sm:-mt-2"
                     />
                     <div>
+                        <If cif={character.speculated === true}>
+                            <div className="p-2 mb-2 text-sm text-orange-400 rounded-md sm:w-64 bg-gscale-dark-background-secondary">
+                                <IconWithText
+                                    icon={<ExclamationIcon className={`w-5 h-5`} />}
+                                >
+                                    <span className={`font-bold`}>Warning</span>
+                                </IconWithText>
+                                This character has not been released. Data shown here is
+                                based of external sources and speculation.
+                            </div>
+                        </If>
                         <div className="font-bold text-gscale-dark-text-primary">
                             {character.name}
                         </div>

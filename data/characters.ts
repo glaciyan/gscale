@@ -10,6 +10,26 @@ import {
 } from "./travelerCost";
 
 export const characters: Characters = {
+    yoimiya: {
+        id: "yoimiya",
+        name: "Yoimiya",
+        imageId: "nopic",
+        speculated: true,
+        rarity: 5,
+        constellation: "Carassius Auratus",
+        description: `Owner of Naganohara Fireworks. Known as "Queen of the Summer Festival," she excels in her craft of creating fireworks that symbolize people's hopes and dreams.`,
+        element: "pyro",
+        weapon: "bow",
+        sub: "CRIT Rate",
+        materials: standard({
+            boss: items.smoldering_pearl.name,
+            local: items.naku_weed.name,
+            weekly: items.dragon_lords_crown.name,
+            common: ItemGroup.scroll,
+            book: ItemGroup.transience,
+            gem: ItemGroup.pyro_gem,
+        }),
+    },
     ayaka: {
         id: "ayaka",
         name: "Ayaka",
