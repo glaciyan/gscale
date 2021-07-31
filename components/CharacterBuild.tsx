@@ -1,7 +1,12 @@
 import { characters } from "../data/characters";
 import CompletionItemGrid from "./CompletionItemGrid";
 import { LevelShowcase } from "./LevelShowcase";
-import { SparklesIcon, TrendingUpIcon, FireIcon } from "@heroicons/react/outline";
+import {
+    SparklesIcon,
+    TrendingUpIcon,
+    FireIcon,
+    ExclamationIcon,
+} from "@heroicons/react/outline";
 import { SwordIcon } from "./icons/sword";
 import { Button } from "./Button";
 import React, { useState } from "react";
@@ -12,6 +17,7 @@ import { calculateMaterials } from "../lib/characterMaterials";
 import { toLevel } from "../lib";
 import { upperCaseFirst } from "upper-case-first";
 import { Picture } from "./Picture";
+import { If } from "./If";
 
 export default function CharacterBuild({ build }: { build: any }) {
     const character = characters[build.characterId];
@@ -50,11 +56,11 @@ export default function CharacterBuild({ build }: { build: any }) {
                                 className="object-cover w-full h-full opacity-25"
                             />
                         </div>
-                        <div className="absolute inset-x-0 top-0 z-10 w-full bg-gradient-to-t from-gscale-dark-background-secondary to-transparent h-32 overflow-hidden rounded-tl-md maxsm:rounded-tr-md"></div>
+                        <div className="absolute inset-x-0 top-0 z-10 w-full h-32 overflow-hidden bg-gradient-to-t from-gscale-dark-background-secondary to-transparent rounded-tl-md maxsm:rounded-tr-md"></div>
                         {/* <div className="flex justify-center flex-1 sm:hidden">
                         <ItemCharacterCard className="mx-2" character={character} />
                     </div> */}
-                        <div className="sm:mx-3 mx-1 mb-2 z-20">
+                        <div className="z-20 mx-1 mb-2 sm:mx-3">
                             <h1 className="mb-2 text-lg font-bold">
                                 {character.name}{" "}
                                 {character.imageId === "traveler" ? (
@@ -106,7 +112,16 @@ export default function CharacterBuild({ build }: { build: any }) {
                         <CompletionItemGrid build={build} items={materials} />
                     </div>
                 </div>
-                <div className="flex items-center justify-end px-4 py-3 border-t-2 border-gscale-dark-background-500">
+                <div className="flex items-center py-3 pl-6 pr-4 border-t-2 border-gscale-dark-background-500">
+                    <If cif={character.speculated === true}>
+                        <div
+                            className={`text-orange-400`}
+                            title="This character has not been released. Data shown here is based of external sources and speculation."
+                        >
+                            <ExclamationIcon className={`w-5 h-5`}></ExclamationIcon>
+                        </div>
+                    </If>
+                    <div className="flex-1"></div>
                     <Button
                         link
                         color={"gscale-dark-text-ternary"}
