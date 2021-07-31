@@ -10,6 +10,7 @@ export interface Character {
     element: Vision;
     weapon: Weapon;
     sub: string;
+	speculated?: boolean;
     // list is used for the item showcase
     materials: CharacterMaterials & { list: StandardCharacterMaterialsArgs | null };
 }
