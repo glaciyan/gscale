@@ -90,7 +90,7 @@ export default function Builds() {
                                 />
                                 <If cif={showTotal}>
                                     <div className={`p-4`}>
-                                        <Button
+                                        {/*<Button
                                             secondary
                                             text={`${
                                                 totalNegateCheckList ? "Do Not" : ""
@@ -102,7 +102,7 @@ export default function Builds() {
                                             }
                                             color={`gscale-dark-text-secondary`}
                                             className={`text-gscale-dark-text-secondary mb-2`}
-                                        />
+                                        />*/}
                                         <p className={`text-gscale-dark-text-secondary`}>
                                             Mora: {totalMats.mora.toLocaleString("en-US")}
                                         </p>
