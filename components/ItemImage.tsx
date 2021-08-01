@@ -19,7 +19,7 @@ export const ItemImage: React.FC<ItemImageProps> = ({ item }) => {
             className="object-contain w-full h-full"
             draggable={false}
             alt={item.name}
-            title={item.name}
+            title={item.name + item.order}
             decoding="async"
         />
     );

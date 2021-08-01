@@ -10,6 +10,7 @@ import { Character, Materials, PricedMaterials } from "../lib/MyTypes";
 import { useState } from "react";
 import { hero, heroItem, sumPriced } from "../lib/ItemHelper";
 import ItemGrid from "../components/ItemGrid";
+import { Button } from "../components/Button";
 
 interface Build {
     character: Character;
@@ -18,6 +19,7 @@ interface Build {
 }
 
 export default function Builds() {
+    const [showTotal, setshowTotal] = useState(false);
     const allDBBuilds = useLiveQuery(() => buildsDB.builds.toArray(), []);
 
     const allMats: PricedMaterials[] = [];
@@ -53,12 +55,21 @@ export default function Builds() {
                             celse={<NothingInfo label="No builds" />}
                         >
                             <>
-                                <div className={`p-4`}>
-                                    <h2 className={`font-bold`}>Total</h2>
-                                    <p>Mora: {totalMats.mora}</p>
-                                    <ItemGrid items={totalMats.items} />
-                                </div>
-                                <div className="grid grid-cols-1 gap-4 xl:grid-cols-2">
+                                <Button
+                                    link
+                                    text={`${showTotal ? "Hide" : "Show"} Total`}
+                                    onClick={() => setshowTotal(!showTotal)}
+                                    className={`text-gscale-dark-text-ternary`}
+                                />
+                                <If cif={showTotal}>
+                                    <div className={`p-4`}>
+                                        <p className={`text-gscale-dark-text-secondary`}>
+                                            Mora: {totalMats.mora.toLocaleString("en-US")}
+                                        </p>
+                                        <ItemGrid items={totalMats.items} />
+                                    </div>
+                                </If>
+                                <div className="grid grid-cols-1 gap-4 mt-2 xl:grid-cols-2">
                                     {allBuilds.map((build: Build) => {
                                         if (!build.character) return null;
 
