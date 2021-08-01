@@ -93,7 +93,7 @@ export class ItemGen {
         return {
             ...getItemFromGroup(this.Gem, rarity),
             amount: amount,
-            order: itemOrder.gem + rarity,
+            order: itemOrder.gem + rarity + (this.Gem ?? 0) * 10,
         };
     }
 
@@ -109,7 +109,7 @@ export class ItemGen {
         return {
             ...getItemFromGroup(this.Common, rarity),
             amount: amount,
-            order: itemOrder.common + rarity,
+            order: itemOrder.common + rarity + (this.Common ?? 0) * 10,
         };
     }
 
@@ -133,7 +133,7 @@ export class ItemGen {
         return {
             ...getItemFromGroup(this.Book, rarity),
             amount: amount,
-            order: itemOrder.book + rarity,
+            order: itemOrder.book + rarity + (this.Book ?? 0) * 10,
         };
     }
 }
@@ -170,3 +170,8 @@ export function sumLevelingCost(arr: LevelUpCostIndexed[]) {
 
     return out;
 }
+
+export const hero = (xp: number) => Math.ceil(xp / items.heros_wit.xp);
+export const heroItem = (xp: number): BuildItem => {
+    return { amount: hero(xp), ...items.heros_wit, order: itemOrder.xpAccurate };
+};

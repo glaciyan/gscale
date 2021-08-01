@@ -10,7 +10,7 @@ export interface Character {
     element: Vision;
     weapon: Weapon;
     sub: string;
-	speculated?: boolean;
+    speculated?: boolean;
     // list is used for the item showcase
     materials: CharacterMaterials & { list: StandardCharacterMaterialsArgs | null };
 }
@@ -30,15 +30,10 @@ export interface Characters {
     [id: string]: Character;
 }
 
+// keep the groups, this now decides the order
 export enum ItemGroup {
     unknown = -1,
-    pyro_gem,
-    geo_gem,
-    cryo_gem,
-    electro_gem,
-    hydro_gem,
-    anemo_gem,
-    traveler_gem,
+    // common
     scroll,
     arrowhead,
     treasure_hoarder_insignia,
@@ -52,22 +47,35 @@ export enum ItemGroup {
     sacrificial_knife,
     mist_grass,
     ley_line,
+    handguard,
+
+    // gems
+    pyro_gem,
+    geo_gem,
+    cryo_gem,
+    electro_gem,
+    hydro_gem,
+    anemo_gem,
+    traveler_gem,
+
+    // books
     ballad,
     freedom,
     gold,
     resistance,
     diligence,
     prosperity,
+    elegance,
+    light,
+    transience,
+
+    // weapon ascension
     dandelion_gladiator,
     decarabians,
     aerosiderite,
     guyun,
     mist_elixir,
     wolf_tooth,
-    handguard,
-    elegance,
-    light,
-    transience,
 }
 
 export interface Item {

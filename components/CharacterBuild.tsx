@@ -13,24 +13,25 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { CharacterLevel } from "./CharacterLevel";
 import { ConfirmDeleteDialouge } from "./ConfirmDeleteDialouge";
-import { calculateMaterials } from "../lib/characterMaterials";
+import { calculateMaterials, MaterialCalculation } from "../lib/characterMaterials";
 import { toLevel } from "../lib";
 import { upperCaseFirst } from "upper-case-first";
 import { Picture } from "./Picture";
 import { If } from "./If";
+import { Character } from "../lib/MyTypes";
 
-export default function CharacterBuild({ build }: { build: any }) {
-    const character = characters[build.characterId];
+export default function CharacterBuild({
+    character,
+    materials,
+    build,
+}: {
+    character: Character;
+    materials: MaterialCalculation;
+    build: any;
+}) {
     const [isDialogueVisible, setisDialogueVisible] = useState(false);
 
     if (!character) return null;
-
-    const materials = calculateMaterials(character, {
-        level: build.level,
-        normal: build.normal,
-        elemental: build.elemental,
-        burst: build.burst,
-    });
 
     const levelStart = toLevel(build.level.start);
     const levelGoal = toLevel(build.level.goal);
@@ -38,7 +39,7 @@ export default function CharacterBuild({ build }: { build: any }) {
     return (
         <>
             <ConfirmDeleteDialouge
-                build={build}
+                buildId={build.id}
                 isVisible={isDialogueVisible}
                 setVisible={setisDialogueVisible}
             />

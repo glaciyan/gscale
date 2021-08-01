@@ -4,13 +4,13 @@ import { Button } from "./Button";
 import ReactModal from "react-modal";
 
 interface ConfirmDeleteDialougeProps {
-    build: any;
+    buildId: number;
     isVisible: boolean;
     setVisible: Dispatch<SetStateAction<boolean>>;
 }
 
 export const ConfirmDeleteDialouge: React.FC<ConfirmDeleteDialougeProps> = ({
-    build,
+    buildId,
     isVisible,
     setVisible,
 }) => {
@@ -61,7 +61,7 @@ export const ConfirmDeleteDialouge: React.FC<ConfirmDeleteDialougeProps> = ({
                             onClick={async () => {
                                 setisLoading(true);
 
-                                await buildsDB.builds.delete(build.id);
+                                await buildsDB.builds.delete(buildId);
                                 setVisible(false);
 
                                 setisLoading(false);

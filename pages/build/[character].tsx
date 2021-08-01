@@ -29,6 +29,7 @@ import { If } from "../../components/If";
 import { PreloadImage } from "../../components/PreloadNextImage";
 import { toId } from "../../lib";
 import { ITEM_ICON_WIDTH } from "../../lib/const";
+import { hero } from "../../lib/ItemHelper";
 
 export const getStaticPaths: GetStaticPaths = async () => {
     const paths = Object.values(characters).map((character) => {
@@ -281,7 +282,7 @@ export default function BuildCharacter({ character }: { character: Character }) 
                                         secondary
                                         text="Reset"
                                         color={`gscale-dark-text-secondary`}
-                                        className="mr-3 mb-2"
+                                        className="mb-2 mr-3"
                                         onClick={() => {
                                             setgoalLevel(1);
                                             setgoalNormal(1);
@@ -357,9 +358,7 @@ export default function BuildCharacter({ character }: { character: Character }) 
                                             item={items.heros_wit}
                                             label={String(
                                                 // TODO make prop for that
-                                                Math.ceil(
-                                                    materials.totalXp / items.heros_wit.xp
-                                                )
+                                                hero(materials.totalXp)
                                             )}
                                         />
                                         <div className="flex items-center m-0.5 bg-gscale-dark-background-ternary bg-opacity-70 rounded">
