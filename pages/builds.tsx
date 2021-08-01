@@ -6,7 +6,7 @@ import { If } from "../components/If";
 import { NothingInfo } from "../components/NothingInfo";
 import { calculateMaterials, MaterialCalculation } from "../lib/characterMaterials";
 import { characters } from "../data/characters";
-import { Character, Materials, PricedMaterials } from "../lib/MyTypes";
+import { Character, Item, Materials, PricedMaterials } from "../lib/MyTypes";
 import { useState } from "react";
 import { hero, heroItem, sumPriced } from "../lib/ItemHelper";
 import ItemGrid from "../components/ItemGrid";
@@ -20,6 +20,7 @@ interface Build {
 
 export default function Builds() {
     const [showTotal, setshowTotal] = useState(false);
+    const [totalNegateCheckList, settotalNegateCheckList] = useState(false);
     const allDBBuilds = useLiveQuery(() => buildsDB.builds.toArray(), []);
 
     const allMats: PricedMaterials[] = [];
@@ -43,6 +44,32 @@ export default function Builds() {
 
     const totalMats = sumPriced(allMats);
 
+    if (totalNegateCheckList) {
+        // negate mora
+        const checkedOffMaterials = allDBBuilds
+            ?.map((build: any) => build.completed)
+            .flat();
+
+        checkedOffMaterials?.forEach(
+            (mat: { name: string; amount: number } | undefined) => {
+                if (mat) {
+                    const found = totalMats.items.find((pred) => pred.name === mat.name);
+                    if (found) {
+                        found.amount -= mat.amount;
+                    }
+                }
+            }
+        );
+
+        checkedOffMaterials
+            ?.filter((mat: any) => {
+                return mat?.name === "Mora";
+            })
+            .forEach((mora: { name: string; amount: number }) => {
+                totalMats.mora -= mora.amount;
+            });
+    }
+
     return (
         <>
             <Layout title="Builds" current="Your Builds">
@@ -63,6 +90,19 @@ export default function Builds() {
                                 />
                                 <If cif={showTotal}>
                                     <div className={`p-4`}>
+                                        <Button
+                                            secondary
+                                            text={`${
+                                                totalNegateCheckList ? "Do Not" : ""
+                                            } Include Checklist`}
+                                            onClick={() =>
+                                                settotalNegateCheckList(
+                                                    !totalNegateCheckList
+                                                )
+                                            }
+                                            color={`gscale-dark-text-secondary`}
+                                            className={`text-gscale-dark-text-secondary mb-2`}
+                                        />
                                         <p className={`text-gscale-dark-text-secondary`}>
                                             Mora: {totalMats.mora.toLocaleString("en-US")}
                                         </p>
