@@ -1,6 +1,7 @@
 import millify from "millify";
 import { items } from "../data/items";
 import { MaterialCalculation } from "../lib/characterMaterials";
+import { hero } from "../lib/ItemHelper";
 import itemOrder from "../lib/itemOrder";
 import { BuildItem, Item, Materials } from "../lib/MyTypes";
 import CheckListItemCard from "./CheckListItemCard";
@@ -46,10 +47,10 @@ export default function CompletionItemGrid({
                     item={{
                         name: "Hero's Wit",
                         order: itemOrder.xpLazy,
-                        amount: Math.ceil(calc.totalXp / items.heros_wit.xp),
+                        amount: hero(calc.totalXp),
                         rarity: 4,
                     }}
-                    label={`${Math.ceil(calc.totalXp / items.heros_wit.xp)}`}
+                    label={`${hero(calc.totalXp)}`}
                 />
             </If>
             {calc.everything
