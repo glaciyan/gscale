@@ -93,7 +93,7 @@ export class ItemGen {
         return {
             ...getItemFromGroup(this.Gem, rarity),
             amount: amount,
-            order: itemOrder.gem + rarity + this.Gem * 10,
+            order: itemOrder.gem + rarity + (this.Gem ?? 0) * 10,
         };
     }
 
@@ -109,7 +109,7 @@ export class ItemGen {
         return {
             ...getItemFromGroup(this.Common, rarity),
             amount: amount,
-            order: itemOrder.common + rarity + this.Common * 10,
+            order: itemOrder.common + rarity + (this.Common ?? 0) * 10,
         };
     }
 
@@ -133,7 +133,7 @@ export class ItemGen {
         return {
             ...getItemFromGroup(this.Book, rarity),
             amount: amount,
-            order: itemOrder.book + rarity + this.Book * 10,
+            order: itemOrder.book + rarity + (this.Book ?? 0) * 10,
         };
     }
 }
