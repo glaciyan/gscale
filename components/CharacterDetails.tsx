@@ -44,7 +44,7 @@ export const CharacterDetails: React.FC<CharacterDetailsProps> = ({ character })
                                     <span className={`font-bold`}>Warning</span>
                                 </IconWithText>
                                 This character has not been released. Data shown here is
-                                based of external sources and speculation.
+                                from external sources and speculation.
                             </div>
                         </If>
                         <div className="font-bold text-gscale-dark-text-primary">

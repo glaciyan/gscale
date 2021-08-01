@@ -116,7 +116,7 @@ export default function CharacterBuild({ build }: { build: any }) {
                     <If cif={character.speculated === true}>
                         <div
                             className={`text-orange-400`}
-                            title="This character has not been released. Data shown here is based of external sources and speculation."
+                            title="This character has not been released. Data shown here is from external sources and speculation."
                         >
                             <ExclamationIcon className={`w-5 h-5`}></ExclamationIcon>
                         </div>
