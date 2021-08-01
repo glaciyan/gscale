@@ -172,3 +172,6 @@ export function sumLevelingCost(arr: LevelUpCostIndexed[]) {
 }
 
 export const hero = (xp: number) => Math.ceil(xp / items.heros_wit.xp);
+export const heroItem = (xp: number): BuildItem => {
+    return { amount: hero(xp), ...items.heros_wit, order: itemOrder.xpAccurate };
+};

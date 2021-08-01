@@ -8,7 +8,8 @@ import { calculateMaterials, MaterialCalculation } from "../lib/characterMateria
 import { characters } from "../data/characters";
 import { Character, Materials, PricedMaterials } from "../lib/MyTypes";
 import { useState } from "react";
-import { sumPriced } from "../lib/ItemHelper";
+import { hero, heroItem, sumPriced } from "../lib/ItemHelper";
+import ItemGrid from "../components/ItemGrid";
 
 interface Build {
     character: Character;
@@ -30,10 +31,15 @@ export default function Builds() {
             burst: build.burst,
         });
 
-        allMats.push({ mora: materials.totalMora, items: materials.everything });
+        allMats.push({
+            mora: materials.totalMora,
+            items: [...materials.everything, heroItem(materials.totalXp)],
+        });
 
         return { character, materials, build };
     });
+
+    const totalMats = sumPriced(allMats);
 
     return (
         <>
@@ -47,14 +53,10 @@ export default function Builds() {
                             celse={<NothingInfo label="No builds" />}
                         >
                             <>
-                                <div>
-                                    {sumPriced(allMats).items.map((item) => {
-                                        return (
-                                            <p>
-                                                {item.name}: {item.amount}
-                                            </p>
-                                        );
-                                    })}
+                                <div className={`p-4`}>
+                                    <h2 className={`font-bold`}>Total</h2>
+                                    <p>Mora: {totalMats.mora}</p>
+                                    <ItemGrid items={totalMats.items} />
                                 </div>
                                 <div className="grid grid-cols-1 gap-4 xl:grid-cols-2">
                                     {allBuilds.map((build: Build) => {
