@@ -10,31 +10,9 @@ import {
 } from "./travelerCost";
 
 export const characters: Characters = {
-    sayu: {
-        id: "sayu",
-        name: "Sayu",
-        imageId: "nopic",
-        speculated: true,
-        rarity: 4,
-        constellation: "Nyctereutes Minor",
-        description: `A pint-sized ninja attached to the Shuumatsuban, who always seems sleep-deprived.`,
-        element: "anemo",
-        weapon: "claymore",
-        sub: "Elemental Mastery",
-        materials: standard({
-            boss: items.marionette_core.name,
-            local: items.crystal_marrow.name,
-            weekly: items.gilded_scale.name,
-            common: ItemGroup.nectar,
-            book: ItemGroup.light,
-            gem: ItemGroup.anemo_gem,
-        }),
-    },
     yoimiya: {
         id: "yoimiya",
         name: "Yoimiya",
-        imageId: "nopic",
-        speculated: true,
         rarity: 5,
         constellation: "Carassius Auratus",
         description: `Owner of Naganohara Fireworks. Known as "Queen of the Summer Festival," she excels in her craft of creating fireworks that symbolize people's hopes and dreams.`,
@@ -48,6 +26,24 @@ export const characters: Characters = {
             common: ItemGroup.scroll,
             book: ItemGroup.transience,
             gem: ItemGroup.pyro_gem,
+        }),
+    },
+    sayu: {
+        id: "sayu",
+        name: "Sayu",
+        rarity: 4,
+        constellation: "Nyctereutes Minor",
+        description: `A pint-sized ninja attached to the Shuumatsuban, who always seems sleep-deprived.`,
+        element: "anemo",
+        weapon: "claymore",
+        sub: "Elemental Mastery",
+        materials: standard({
+            boss: items.marionette_core.name,
+            local: items.crystal_marrow.name,
+            weekly: items.gilded_scale.name,
+            common: ItemGroup.nectar,
+            book: ItemGroup.light,
+            gem: ItemGroup.anemo_gem,
         }),
     },
     ayaka: {
