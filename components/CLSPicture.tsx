@@ -1,4 +1,3 @@
-import { toBase64 } from "next/dist/next-server/lib/to-base-64";
 import React from "react";
 import { Picture, PictureProps } from "./Picture";
 import { useIntersection } from "next/dist/client/use-intersection";
@@ -40,7 +39,7 @@ export const CLSPicture: React.FC<CLSPictureProps> = ({ name, ...rest }) => {
                     alt=""
                     aria-hidden={true}
                     role="presentation"
-                    src={`data:image/svg+xml;base64,${toBase64(
+                    src={`data:image/svg+xml;base64,${btoa(
                         `<svg width="${480}" height="${300}" xmlns="http://www.w3.org/2000/svg" version="1.1"/>`
                     )}`}
                 />

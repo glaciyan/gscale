@@ -10,9 +10,7 @@ module.exports = withPlugins(
         // your other plugins here
     ],
     {
-        future: {
-            webpack5: true,
-        },
+        webpack5: true,
         images: {
             imageSizes: [48, 256],
         },
