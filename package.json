@@ -37,11 +37,13 @@
         "webpack": "^5.39.0"
     },
     "devDependencies": {
+        "@types/btoa": "^1.2.3",
         "@types/jest": "^26.0.23",
         "@types/node": "^12.12.21",
         "@types/react": "^17.0.2",
         "@types/react-dom": "^17.0.1",
         "autoprefixer": "^10.2.6",
+        "btoa": "^1.2.1",
         "jest": "^27.0.4",
         "postcss": "^8.3.0",
         "tailwindcss": "^2.2.2",

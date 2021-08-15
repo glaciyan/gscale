@@ -1,6 +1,7 @@
 import React from "react";
 import { Picture, PictureProps } from "./Picture";
 import { useIntersection } from "next/dist/client/use-intersection";
+import btoaNode from "btoa";
 
 export type CLSPictureProps = {} & PictureProps;
 
@@ -39,7 +40,7 @@ export const CLSPicture: React.FC<CLSPictureProps> = ({ name, ...rest }) => {
                     alt=""
                     aria-hidden={true}
                     role="presentation"
-                    src={`data:image/svg+xml;base64,${btoa(
+                    src={`data:image/svg+xml;base64,${btoaNode(
                         `<svg width="${480}" height="${300}" xmlns="http://www.w3.org/2000/svg" version="1.1"/>`
                     )}`}
                 />
