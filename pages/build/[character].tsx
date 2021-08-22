@@ -323,7 +323,7 @@ export default function BuildCharacter({ character }: { character: Character }) 
                         </div>
                     </div>
 
-                    <div className="relative flex-1 max-w-full overflow-auto border-t-2 border-gray-700 buildpagepadding lg:border-0 bg-gscale-dark-background-secondary maxlg:rounded-b-md lg:rounded-r-md">
+                    <div className="relative flex-1 max-w-full overflow-auto border-t-2 border-gray-700 scrollbar-matprev buildpagepadding lg:border-0 bg-gscale-dark-background-secondary maxlg:rounded-b-md lg:rounded-r-md">
                         <div className="lg:absolute">
                             <h2 className="mb-2 font-semibold text-gscale-dark-text-secondary">
                                 Material Preview
