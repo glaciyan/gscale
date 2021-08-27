@@ -10,7 +10,7 @@ function filterMissing(from, dest) {
 
 function build(source, dist, command) {
     const missing = filterMissing(source, dist);
-    console.log(`Missing Images\n---\n${missing}\n---\n`);
+    console.log(`\n\nMissing Images\n---\n${missing}\n---\n`);
 
     missing.map((file) => {
         console.log(`Building ${file}`);
