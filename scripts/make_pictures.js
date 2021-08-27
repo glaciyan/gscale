@@ -35,7 +35,7 @@ function buildItemImages() {
     const sources = "./images/materials";
     const destination = "./public/images/materials";
 
-    build(sources, destination, "images:characters:build");
+    build(sources, destination, "images:items:build");
 }
 
 buildCharacterImages();
