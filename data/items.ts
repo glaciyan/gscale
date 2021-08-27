@@ -6,6 +6,48 @@ export const items = {
         rarity: 0,
     },
 
+    // 2.1
+    spectral_nucleus: {
+        name: "Spectral Nucleus",
+        rarity: 3,
+        group: ItemGroup.spectral,
+    },
+    spectral_heart: {
+        name: "Spectral Heart",
+        rarity: 2,
+        group: ItemGroup.spectral,
+    },
+    spectral_husk: {
+        name: "Spectral Husk",
+        rarity: 1,
+        group: ItemGroup.spectral,
+    },
+    sango_pearl: {
+        name: "Sango Pearl",
+        rarity: 1,
+    },
+    dew_of_repudiation: {
+        name: "Dew of Repudiation",
+        rarity: 4,
+    },
+    signora_drop: {
+        name: "Signora Drop",
+        rarity: 5,
+    },
+    signoras_flower: {
+        name: "Signoras Flower",
+        rarity: 5,
+    },
+    amakumo_fruit: {
+        name: "Amakumo Fruit",
+        rarity: 1,
+    },
+    storm_beads: {
+        name: "Storm Beads",
+        rarity: 4,
+    },
+
+    // 2.0
     crystal_marrow: {
         name: "Crystal Marrow",
         rarity: 1,

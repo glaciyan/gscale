@@ -48,6 +48,7 @@ export enum ItemGroup {
     mist_grass,
     ley_line,
     handguard,
+    spectral,
 
     // gems
     pyro_gem,
