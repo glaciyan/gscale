@@ -10,8 +10,9 @@
         "start": "next start",
         "type-check": "tsc",
         "test": "jest",
-        "images:characters:build": "npx @squoosh/cli --oxipng auto --webp auto --resize '{width:240}' -d public/images/characters/card",
-        "images:items:build": "npx @squoosh/cli --oxipng auto --webp auto --resize '{width:40}' -d public/images/materials"
+        "images:characters:build": "squoosh-cli --oxipng auto --webp auto --resize {width:240} -d public/images/characters/card",
+        "images:items:build": "squoosh-cli --oxipng auto --webp auto --resize {width:40} -d public/images/materials",
+        "images:build": "node scripts/make_pictures.js"
     },
     "dependencies": {
         "@headlessui/react": "^1.2.0",
@@ -37,6 +38,7 @@
         "webpack": "^5.39.0"
     },
     "devDependencies": {
+        "@squoosh/cli": "^0.7.2",
         "@types/btoa": "^1.2.3",
         "@types/jest": "^26.0.23",
         "@types/node": "^12.12.21",
