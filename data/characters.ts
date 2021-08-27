@@ -22,7 +22,7 @@ export const characters: Characters = {
         materials: standard({
             boss: items.dew_of_repudiation.name,
             local: items.sango_pearl.name,
-            weekly: items.signora_butterlfy.name,
+            weekly: items.signora_butterfly.name,
             common: ItemGroup.spectral,
             book: ItemGroup.transience,
             gem: ItemGroup.hydro_gem,

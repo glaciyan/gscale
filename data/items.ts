@@ -38,9 +38,9 @@ export const items = {
         name: "Signoras Flower",
         rarity: 5,
     },
-    signora_butterlfy: {
+    signora_butterfly: {
         name: "Signora Butterfly",
-        rarity: 5
+        rarity: 5,
     },
     amakumo_fruit: {
         name: "Amakumo Fruit",
@@ -54,7 +54,7 @@ export const items = {
     // 2.0
     dendrobium: {
         name: "Dendrobium",
-        rarity: 1
+        rarity: 1,
     },
     crystal_marrow: {
         name: "Crystal Marrow",
