@@ -10,24 +10,24 @@ import {
 } from "./travelerCost";
 
 export const characters: Characters = {
-    kokomi: {
-        id: "kokomi",
-        name: "Kokomi",
-        rarity: 5,
-        constellation: "Dracaena Somnolenta",
-        description: `The Divine Priestess of Watatsumi Island. All of the island's affairs are at this young lady's fingertips.`,
-        element: "hydro",
-        weapon: "catalyst",
-        sub: "Hydro DMG%",
-        materials: standard({
-            boss: items.dew_of_repudiation.name,
-            local: items.sango_pearl.name,
-            weekly: items.signora_butterfly.name,
-            common: ItemGroup.spectral,
-            book: ItemGroup.transience,
-            gem: ItemGroup.hydro_gem,
-        }),
-    },
+    // kokomi: {
+    //     id: "kokomi",
+    //     name: "Kokomi",
+    //     rarity: 5,
+    //     constellation: "Dracaena Somnolenta",
+    //     description: `The Divine Priestess of Watatsumi Island. All of the island's affairs are at this young lady's fingertips.`,
+    //     element: "hydro",
+    //     weapon: "catalyst",
+    //     sub: "Hydro DMG%",
+    //     materials: standard({
+    //         boss: items.dew_of_repudiation.name,
+    //         local: items.sango_pearl.name,
+    //         weekly: items.signora_butterfly.name,
+    //         common: ItemGroup.spectral,
+    //         book: ItemGroup.transience,
+    //         gem: ItemGroup.hydro_gem,
+    //     }),
+    // },
     sara: {
         id: "sara",
         name: "Sara",
