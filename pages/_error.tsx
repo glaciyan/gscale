@@ -27,7 +27,7 @@ function Error() {
                     </a>{" "}
                     or message me on{" "}
                     <a
-                        href="https://twitter.com/slimetsp_dev"
+                        href="https://twitter.com/theslimetsp"
                         className={`text-blue-400 hover:underline`}
                     >
                         Twitter

@@ -123,10 +123,10 @@ const Layout = ({ children, title, current }: Props) => {
                                     Github
                                 </a>
                                 <a
-                                    href="https://twitter.com/slimetsp_dev"
+                                    href="https://twitter.com/theslimetsp"
                                     className="block text-blue-400 hover:underline w-max"
                                 >
-                                    @slimetsp_dev
+                                    @theslimetsp
                                 </a>
                                 {/* <div>
                                     <span>Discord:</span>{" "}
