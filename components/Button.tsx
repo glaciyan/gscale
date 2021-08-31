@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ButtonHTMLAttributes } from "react";
 import { SemiCircle } from "./icons/semicircle";
 
 interface ButtonProps {
@@ -18,7 +18,7 @@ function execIf(func: any, condition: boolean) {
     if (condition && func) func();
 }
 
-export const Button: React.FC<ButtonProps> = ({
+export const Button: React.FC<ButtonProps & ButtonHTMLAttributes<HTMLButtonElement>> = ({
     text,
     color,
     onClick,
