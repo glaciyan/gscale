@@ -21,13 +21,13 @@ function Error() {
                     <br /> If this continues please report this on{" "}
                     <a
                         className={`text-blue-400 hover:underline`}
-                        href="https://github.com/slimetsp/gscale/issues/new"
+                        href="https://github.com/glaciyan/gscale/issues/new"
                     >
                         Github
                     </a>{" "}
                     or message me on{" "}
                     <a
-                        href="https://twitter.com/theslimetsp"
+                        href="https://twitter.com/glaciyandev"
                         className={`text-blue-400 hover:underline`}
                     >
                         Twitter

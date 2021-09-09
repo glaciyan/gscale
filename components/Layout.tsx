@@ -117,31 +117,17 @@ const Layout = ({ children, title, current }: Props) => {
                         <FooterEntry header="Other">
                             <>
                                 <a
-                                    href="https://github.com/slimetsp/gscale"
+                                    href="https://github.com/glaciyan/gscale"
                                     className="block text-blue-400 hover:underline w-max"
                                 >
                                     Github
                                 </a>
                                 <a
-                                    href="https://twitter.com/theslimetsp"
+                                    href="https://twitter.com/glaciyandev"
                                     className="block text-blue-400 hover:underline w-max"
                                 >
-                                    @theslimetsp
+                                    @glaciyandev
                                 </a>
-                                {/* <div>
-                                    <span>Discord:</span>{" "}
-                                    <span
-                                        className="relative transition-colors duration-150 cursor-pointer select-none text-gscale-dark-text-ternary active:text-green-400"
-                                        onClick={() => {
-                                            navigator.clipboard.writeText(
-                                                "slimetsp#5278"
-                                            );
-                                        }}
-                                        title="Click to copy"
-                                    >
-                                        slimetsp#5278
-                                    </span>
-                                </div> */}
                             </>
                         </FooterEntry>
                     </div>
@@ -152,7 +138,7 @@ const Layout = ({ children, title, current }: Props) => {
                             alt="logo"
                         />
                         <div className="mr-2"> v{version} </div>
-                        by slimetsp
+                        by glaciyan
                     </div>
                     <div className={`mt-6`}>
                         <a href={"https://vercel.com?utm_source=gscale&utm_campaign=oss"}>
