@@ -11,8 +11,6 @@ import {
 
 export const characters: Characters = {
     kokomi: {
-        imageId: "nopic",
-        speculated: true,
         id: "kokomi",
         name: "Kokomi",
         rarity: 5,
