@@ -10,6 +10,24 @@ import {
 } from "./travelerCost";
 
 export const characters: Characters = {
+    aloy: {
+        id: "aloy",
+        name: "Aloy",
+        rarity: 5,
+        constellation: "Nora Fortis",
+        description: `An agile hunter from the Nora tribe. With bow in hand, she's always ready to protect the innocent.`,
+        element: "cryo",
+        weapon: "bow",
+        sub: "Cryo DMG Bonus",
+        materials: standard({
+            boss: items.crystalline_bloom.name,
+            local: items.crystal_marrow.name,
+            weekly: items.molten_moment.name,
+            common: ItemGroup.spectral,
+            book: ItemGroup.freedom,
+            gem: ItemGroup.cryo_gem,
+        }),
+    },
     kokomi: {
         id: "kokomi",
         name: "Kokomi",
@@ -22,7 +40,7 @@ export const characters: Characters = {
         materials: standard({
             boss: items.dew_of_repudiation.name,
             local: items.sango_pearl.name,
-            weekly: items.signora_butterfly.name,
+            weekly: items.hellfire_butterfly.name,
             common: ItemGroup.spectral,
             book: ItemGroup.transience,
             gem: ItemGroup.hydro_gem,
@@ -40,7 +58,7 @@ export const characters: Characters = {
         materials: standard({
             boss: items.storm_beads.name,
             local: items.dendrobium.name,
-            weekly: items.signora_drop.name,
+            weekly: items.ashen_heart.name,
             common: ItemGroup.mask,
             book: ItemGroup.elegance,
             gem: ItemGroup.electro_gem,
@@ -58,7 +76,7 @@ export const characters: Characters = {
         materials: standard({
             boss: items.storm_beads.name,
             local: items.amakumo_fruit.name,
-            weekly: items.signoras_flower.name,
+            weekly: items.molten_moment.name,
             common: ItemGroup.handguard,
             book: ItemGroup.light,
             gem: ItemGroup.electro_gem,
