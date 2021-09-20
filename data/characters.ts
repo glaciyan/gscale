@@ -10,24 +10,6 @@ import {
 } from "./travelerCost";
 
 export const characters: Characters = {
-    aloy: {
-        id: "aloy",
-        name: "Aloy",
-        rarity: 5,
-        constellation: "Nora Fortis",
-        description: `An agile hunter from the Nora tribe. With bow in hand, she's always ready to protect the innocent.`,
-        element: "cryo",
-        weapon: "bow",
-        sub: "Cryo DMG Bonus",
-        materials: standard({
-            boss: items.crystalline_bloom.name,
-            local: items.crystal_marrow.name,
-            weekly: items.molten_moment.name,
-            common: ItemGroup.spectral,
-            book: ItemGroup.freedom,
-            gem: ItemGroup.cryo_gem,
-        }),
-    },
     kokomi: {
         id: "kokomi",
         name: "Kokomi",
@@ -44,6 +26,24 @@ export const characters: Characters = {
             common: ItemGroup.spectral,
             book: ItemGroup.transience,
             gem: ItemGroup.hydro_gem,
+        }),
+    },
+    aloy: {
+        id: "aloy",
+        name: "Aloy",
+        rarity: 5,
+        constellation: "Nora Fortis",
+        description: `An agile hunter from the Nora tribe. With bow in hand, she's always ready to protect the innocent.`,
+        element: "cryo",
+        weapon: "bow",
+        sub: "Cryo DMG Bonus",
+        materials: standard({
+            boss: items.crystalline_bloom.name,
+            local: items.crystal_marrow.name,
+            weekly: items.molten_moment.name,
+            common: ItemGroup.spectral,
+            book: ItemGroup.freedom,
+            gem: ItemGroup.cryo_gem,
         }),
     },
     sara: {
