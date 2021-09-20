@@ -30,18 +30,20 @@ export const items = {
         name: "Dew of Repudiation",
         rarity: 4,
     },
-    signora_drop: {
-        name: "Signora Drop",
+
+    ashen_heart: {
+        name: "Ashen Heart",
         rarity: 5,
     },
-    signoras_flower: {
-        name: "Signoras Flower",
+    molten_moment: {
+        name: "Molten Moment",
         rarity: 5,
     },
-    signora_butterfly: {
-        name: "Signora Butterfly",
+    hellfire_butterfly: {
+        name: "Hellfire Butterfly",
         rarity: 5,
     },
+
     amakumo_fruit: {
         name: "Amakumo Fruit",
         rarity: 1,
