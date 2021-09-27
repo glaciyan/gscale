@@ -18,11 +18,18 @@ export interface StandardCharacterMaterialsArgs {
     common: ItemGroup;
     book: ItemGroup;
     gem: ItemGroup;
+    commonName?: string;
+    bookName?: string;
+    gemName?: string;
 }
 
 export function standard(
     list: StandardCharacterMaterialsArgs
 ): CharacterMaterials & { list: StandardCharacterMaterialsArgs } {
+    list.commonName = ItemGroup[list.common]
+    list.bookName = ItemGroup[list.book]
+    list.gemName = ItemGroup[list.gem]
+    
     return {
         ascension: ascensionCosts(list.gem, list.local, list.common, list.boss),
         normal: talentCost(list.common, list.book, list.weekly),

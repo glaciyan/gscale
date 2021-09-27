@@ -33,7 +33,7 @@ export const Search: React.FC<SearchProps> = ({ onConfirm, onChange }) => {
             </button>
             <input
                 type="text"
-                placeholder={"Search"}
+                placeholder={"Search for anything"}
                 autoCorrect="false"
                 spellCheck="false"
                 autoCapitalize="false"
