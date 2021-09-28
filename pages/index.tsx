@@ -42,7 +42,6 @@ const IndexPage = ({characters}: { characters: Characters }) => {
                                 "materials.list.weekly",
                                 "materials.list.bookName",
                                 "materials.list.commonName",
-                                "materials.list.gemName",
                             ],
                         });
 
