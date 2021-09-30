@@ -10,6 +10,25 @@ import {
 } from "./travelerCost";
 
 export const characters: Characters = {
+    qiqi: {
+        id: "qiqi",
+        name: "Qiqi",
+        rarity: 5,
+        constellation: "Pristina Nola",
+        description:
+            "An apprentice and herb gatherer at Bubu Pharmacy. An undead with a bone-white complexion, she seldom has much in the way of words or emotion.",
+        element: "cryo",
+        weapon: "sword",
+        sub: "Healing Bonus",
+        materials: standard({
+            boss: "Hoarfrost Core",
+            local: "Violetgrass",
+            common: ItemGroup.scroll,
+            weekly: "Tail of Boreas",
+            book: ItemGroup.prosperity,
+            gem: ItemGroup.cryo_gem,
+        }),
+    },
     kokomi: {
         id: "kokomi",
         name: "Kokomi",
@@ -462,25 +481,6 @@ export const characters: Characters = {
             weekly: "Ring of Boreas",
             book: ItemGroup.resistance,
             gem: ItemGroup.hydro_gem,
-        }),
-    },
-    qiqi: {
-        id: "qiqi",
-        name: "Qiqi",
-        rarity: 5,
-        constellation: "Pristina Nola",
-        description:
-            "An apprentice and herb gatherer at Bubu Pharmacy. An undead with a bone-white complexion, she seldom has much in the way of words or emotion.",
-        element: "cryo",
-        weapon: "sword",
-        sub: "Healing Bonus",
-        materials: standard({
-            boss: "Hoarfrost Core",
-            local: "Violetgrass",
-            common: ItemGroup.scroll,
-            weekly: "Tail of Boreas",
-            book: ItemGroup.prosperity,
-            gem: ItemGroup.cryo_gem,
         }),
     },
     diluc: {
