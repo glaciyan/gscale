@@ -6,6 +6,8 @@ export const items = {
         rarity: 0,
     },
 
+    fluorescent_fungus: { name: "Fluorescent Fungus", rarity: 1 },
+
     // 2.1
     spectral_nucleus: {
         name: "Spectral Nucleus",
