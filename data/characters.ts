@@ -353,6 +353,7 @@ export const characters: Characters = {
     tartaglia: {
         id: "tartaglia",
         name: "Childe",
+        altName: "Tartaglia",
         rarity: 5,
         constellation: "Monoceros Caeli",
         description:
