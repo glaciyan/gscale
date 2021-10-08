@@ -36,6 +36,7 @@ const IndexPage = ({ characters }: { characters: Characters }) => {
                                 { name: "element", weight: 2 },
                                 { name: "weapon", weight: 2 },
                                 "rarity",
+                                "altName",
                                 // "materials"
                                 "materials.list.boss",
                                 "materials.list.local",
