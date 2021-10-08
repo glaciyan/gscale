@@ -4,6 +4,7 @@ export interface Character {
     id: string;
     imageId?: string;
     name: string;
+    altName?: string;
     rarity: 4 | 5;
     constellation: string;
     description: string;
