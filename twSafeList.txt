@@ -54,6 +54,12 @@ ring-genshin-element-electro
 ring-genshin-element-geo
 ring-genshin-element-cryo
 ring-genshin-element-hydro
+focus-within:ring-genshin-element-anemo
+focus-within:ring-genshin-element-pyro
+focus-within:ring-genshin-element-electro
+focus-within:ring-genshin-element-geo
+focus-within:ring-genshin-element-cryo
+focus-within:ring-genshin-element-hydro
 
 ring-gscale-dark-text-secondary
 ring-gscale-dark-text-ternary
