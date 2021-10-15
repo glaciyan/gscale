@@ -1,10 +1,11 @@
 import { GetStaticProps } from "next";
-import Layout from "../components/Layout";
-import CharacterCard from "../components/CharacterCard";
-import { characters as charactersList } from "../data/characters";
-import { Search } from "../components/Search";
-import { useEffect, useState } from "react";
 import router from "next/router";
+import { useState } from "react";
+import CharacterCard from "../components/CharacterCard";
+import Layout from "../components/Layout";
+import { NothingFound } from "../components/NothingFound";
+import { Search } from "../components/Search";
+import { characters as charactersList } from "../data/characters";
 import { Character, Characters } from "../lib/MyTypes";
 
 export const getStaticProps: GetStaticProps = async () => {
@@ -60,7 +61,7 @@ const IndexPage = ({ characters }: { characters: Characters }) => {
                 <div className="grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
                     {search.length === 0 ? (
                         searchTerm.length > 0 ? (
-                            <div>No results</div>
+                            <NothingFound missedSearch={searchTerm} />
                         ) : (
                             Object.entries(characters).map(([_, character]) => {
                                 return (
