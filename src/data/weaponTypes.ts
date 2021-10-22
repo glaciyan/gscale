@@ -1,6 +1,6 @@
 import { UsingId } from "./contracts/id";
 
-interface GIWeaponType extends UsingId {
+export interface GIWeaponType extends UsingId {
     name: string;
 }
 

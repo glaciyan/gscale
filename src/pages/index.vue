@@ -14,9 +14,9 @@ import weaponTypes from "../data/weaponTypes";
             :key="character.id"
             :cardUrl="getCardUrl(character.id)"
             :name="character.name"
-            :element="getById(elements, character.element)?.name ?? 'cryo'"
+            :element="getById(elements, character.element)!.name"
             :elementId="character.element"
-            :weaponType="getById(weaponTypes, character.weaponType)?.name ?? 'sword'"
+            :weaponType="getById(weaponTypes, character.weaponType)!.name"
             :rarity="character.rarity"
             class="m-10"
         />

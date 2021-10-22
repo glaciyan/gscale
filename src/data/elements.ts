@@ -1,6 +1,6 @@
 import { UsingId } from "./contracts/id";
 
-interface GIElement extends UsingId {
+export interface GIElement extends UsingId {
     name: string;
 }
 
