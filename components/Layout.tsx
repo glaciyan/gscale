@@ -35,7 +35,6 @@ const Layout = ({ children, title, current }: Props) => {
                 />
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content="https://www.gscale.cc" />
-                <meta property="og:image" content="/images/og.png" />
                 <meta
                     property="og:description"
                     content="Genshin Impact Character Building Calculator. Calculate how much you need for your characters."
