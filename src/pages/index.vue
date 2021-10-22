@@ -9,7 +9,7 @@ import { getWeaponType } from "../data/weaponTypes";
 <!-- TODO look into statically rendering this page -->
 <!-- https://vitejs.dev/guide/ssr.html#pre-rendering-ssg -->
 <template>
-    <div class="flex flex-col">
+    <div class="flex">
         <CharacterCard
             v-for="character in Characters"
             :key="character.id"
@@ -19,7 +19,7 @@ import { getWeaponType } from "../data/weaponTypes";
             :elementId="character.element"
             :weaponType="getWeaponType(character.weaponType)!.name"
             :rarity="character.rarity"
-            class="m-10"
+            class="mx-2 mb-4"
         />
     </div>
 </template>
