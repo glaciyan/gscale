@@ -7,6 +7,8 @@ import { getCardUrl } from "../data/util/getCardUrl";
 import weaponTypes from "../data/weaponTypes";
 </script>
 
+<!-- TODO look into statically rendering this page -->
+<!-- https://vitejs.dev/guide/ssr.html#pre-rendering-ssg -->
 <template>
     <div class="flex flex-col">
         <CharacterCard
