@@ -1,10 +1,6 @@
-import { UsingId } from "./contracts/id";
+import { IElement } from "./contracts/IElement";
 
-export interface GIElement extends UsingId {
-    name: string;
-}
-
-const elements: GIElement[] = [
+const elements: IElement[] = [
     {
         id: "pyro",
         name: "Pyro",

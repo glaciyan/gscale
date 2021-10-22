@@ -1,4 +1,4 @@
-import { UsingId } from "../contracts/id";
+import { UsingId } from "../contracts/UsingId";
 
 export function getById<T extends UsingId>(
     from: T[],

@@ -1,8 +1,4 @@
-import { UsingId } from "./contracts/id";
-
-export interface GIWeaponType extends UsingId {
-    name: string;
-}
+import { GIWeaponType } from "./contracts/IWeaponType";
 
 const weaponTypes: GIWeaponType[] = [
     {

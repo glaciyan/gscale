@@ -1,16 +1,7 @@
 import { toId } from "../lib/toId";
-import { UsingId } from "./contracts/id";
-import { GIElement } from "./elements";
-import weaponTypes, { GIWeaponType } from "./weaponTypes";
+import { ICharacter } from "././contracts/ICharacter";
 
-export interface IGICharacter extends UsingId {
-    name: string;
-    weaponType: string;
-    element: string;
-    rarity: 4 | 5;
-}
-
-export class GICharacter implements IGICharacter {
+export class GICharacter implements ICharacter {
     name: string;
     weaponType: string;
     element: string;
