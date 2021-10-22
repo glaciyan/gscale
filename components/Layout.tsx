@@ -3,6 +3,7 @@ import Head from "next/head";
 import Link from "next/link";
 import { FooterEntry } from "./FooterEntry";
 import { ExternalLink } from "./ExternalLink";
+import { Support } from "./Support";
 
 type Props = {
     children?: ReactNode;
@@ -42,39 +43,42 @@ const Layout = ({ children, title, current }: Props) => {
                 <meta name="twitter:card" content="summary"></meta>
             </Head>
             <header className="max-w-screen-xl m-6 xl:mx-auto">
-                <div className="flex flex-wrap items-center">
-                    <Link href="/">
-                        <a className="mr-16 focus-visible:ring flex">
-                            <img
-                                className=""
-                                src="/images/svg/logo_label_small.svg"
-                                alt="logo"
-                            />
-                        </a>
-                    </Link>
-                    <nav className="flex py-4">
-                        {nav.map((navi, index, array) => {
-                            return (
-                                <span key={navi.href} className="flex">
-                                    <Link href={navi.href}>
-                                        <a
-                                            className={`
-                                                ${
-                                                    current === navi.name
-                                                        ? "text-gscale-dark-text-secondary hover:text-gscale-dark-text-primary"
-                                                        : "text-gscale-dark-text-ternary hover:text-gscale-dark-text-secondary"
-                                                } focus-visible:underline`}
-                                        >
-                                            {navi.name}
-                                        </a>
-                                    </Link>
-                                    {index < array.length - 1 ? (
-                                        <div className="w-px h-5 mx-2 bg-gscale-dark-background-primary" />
-                                    ) : null}
-                                </span>
-                            );
-                        })}
-                    </nav>
+                <div className="flex flex-col flex-wrap sm:items-center sm:flex-row">
+                    <div className="flex flex-wrap items-center flex-1">
+                        <Link href="/">
+                            <a className="flex mr-16 focus-visible:ring">
+                                <img
+                                    className=""
+                                    src="/images/svg/logo_label_small.svg"
+                                    alt="logo"
+                                />
+                            </a>
+                        </Link>
+                        <nav className="flex py-4">
+                            {nav.map((navi, index, array) => {
+                                return (
+                                    <span key={navi.href} className="flex">
+                                        <Link href={navi.href}>
+                                            <a
+                                                className={`
+                                                    ${
+                                                        current === navi.name
+                                                            ? "text-gscale-dark-text-secondary hover:text-gscale-dark-text-primary"
+                                                            : "text-gscale-dark-text-ternary hover:text-gscale-dark-text-secondary"
+                                                    } focus-visible:underline`}
+                                            >
+                                                {navi.name}
+                                            </a>
+                                        </Link>
+                                        {index < array.length - 1 ? (
+                                            <div className="w-px h-5 mx-2 bg-gscale-dark-background-primary" />
+                                        ) : null}
+                                    </span>
+                                );
+                            })}
+                        </nav>
+                    </div>
+                    <Support />
                 </div>
             </header>
             <main className="min-h-screen">{children}</main>
