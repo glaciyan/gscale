@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import Characters from "../data/characters";
 import CharacterCard from "../components/CharacterCard.vue";
-import { getCardUrl } from "../data/util/getCardUrl";
-import { getById } from "../data/util/getById";
+import Characters from "../data/characters";
 import elements from "../data/elements";
+import { getById } from "../data/util/getById";
+import { getCardUrl } from "../data/util/getCardUrl";
 import weaponTypes from "../data/weaponTypes";
 </script>
 
