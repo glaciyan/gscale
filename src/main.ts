@@ -2,34 +2,7 @@ import { createApp } from "vue";
 import App from "./App.vue";
 import "virtual:windi.css";
 import { createRouter, createWebHistory } from "vue-router";
-
-import Index from "./pages/index.vue";
-import Builds from "./pages/builds.vue";
-
-const routes = [
-    {
-        path: "/",
-        component: Index,
-        meta: {
-            title: "Home - GScale",
-        },
-    },
-    {
-        path: "/builds",
-        component: Builds,
-        meta: {
-            title: "Your Builds - GScale",
-        },
-    },
-    {
-        path: "/:pathMatch(.*)*",
-        name: "NotFound",
-        component: () => import("./pages/404.vue"),
-        meta: {
-            title: "Not Found - GScale",
-        },
-    },
-];
+import routes from "./routes";
 
 const router = createRouter({ history: createWebHistory(), routes });
 
