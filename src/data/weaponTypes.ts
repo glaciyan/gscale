@@ -1,6 +1,6 @@
-import { GIWeaponType } from "./contracts/IWeaponType";
+import { IWeaponType } from "./contracts/IWeaponType";
 
-const weaponTypes: GIWeaponType[] = [
+const weaponTypes: IWeaponType[] = [
     {
         id: "bow",
         name: "Bow",

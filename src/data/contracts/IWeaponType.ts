@@ -1,5 +1,5 @@
 import { UsingId } from "./UsingId";
 
-export interface GIWeaponType extends UsingId {
+export interface IWeaponType extends UsingId {
     name: string;
 }
