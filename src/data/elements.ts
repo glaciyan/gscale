@@ -1,4 +1,5 @@
 import { IElement } from "./contracts/IElement";
+import { getById } from "./util/getById";
 
 const elements: IElement[] = [
     {
@@ -12,3 +13,7 @@ const elements: IElement[] = [
 ];
 
 export default elements;
+
+export function getElement(id: string): IElement | undefined {
+    return getById(elements, id);
+}

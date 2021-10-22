@@ -1,10 +1,9 @@
 <script setup lang="ts">
 import CharacterCard from "../components/CharacterCard.vue";
 import Characters from "../data/characters";
-import elements from "../data/elements";
-import { getById } from "../data/util/getById";
 import { getCardUrl } from "../data/util/getCardUrl";
-import weaponTypes from "../data/weaponTypes";
+import { getElement } from "../data/elements";
+import { getWeaponType } from "../data/weaponTypes";
 </script>
 
 <!-- TODO look into statically rendering this page -->
@@ -16,9 +15,9 @@ import weaponTypes from "../data/weaponTypes";
             :key="character.id"
             :cardUrl="getCardUrl(character.id)"
             :name="character.name"
-            :element="getById(elements, character.element)!.name"
+            :element="getElement(character.element)!.name"
             :elementId="character.element"
-            :weaponType="getById(weaponTypes, character.weaponType)!.name"
+            :weaponType="getWeaponType(character.weaponType)!.name"
             :rarity="character.rarity"
             class="m-10"
         />
