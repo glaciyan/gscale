@@ -1,3 +1,3 @@
 export default {
-    cardBaseUrl: "/images/characters/cards",
+    cardBaseUrl: "/images/characters/card",
 };
