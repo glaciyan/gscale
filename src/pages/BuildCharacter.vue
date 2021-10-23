@@ -1,7 +1,16 @@
 <script setup lang="ts">
-import useCharacterFromRoute from "../composites/useCharacterFromRoute";
+import { onBeforeMount } from "@vue/runtime-core";
+import { useRoute } from "vue-router";
+import { getCharacter, GICharacter } from "../data/Characters";
 
-const { character } = useCharacterFromRoute();
+const route = useRoute();
+const character =
+    getCharacter(route.params.character as string) ??
+    (getCharacter("jeffrey") as GICharacter);
+
+onBeforeMount(() => {
+    document.title = `Building ${character.name} - GScale`;
+});
 </script>
 
 <template>
