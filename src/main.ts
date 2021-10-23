@@ -10,6 +10,8 @@ router.afterEach((to, from) => {
     if (to.meta.title) {
         document.title = to.meta.title as string;
     }
+
+    window.scrollTo(0, 0);
 });
 
 const app = createApp(App);
