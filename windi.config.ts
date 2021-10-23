@@ -7,6 +7,9 @@ function range(size: number, startAt = 1) {
 const em = ["anemo", "pyro", "electro", "geo", "cryo", "hydro"];
 
 export default defineConfig({
+    attributify: {
+        prefix: "w",
+    },
     safelist: [
         range(5).map((n) => `text-genshin-rarity-${n}`),
         em.map((e) => `text-genshin-element-${e}`),
