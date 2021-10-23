@@ -8,7 +8,7 @@ import { RouterView, RouterLink } from "vue-router";
         <RouterLink to="/">Characters</RouterLink>
         <RouterLink to="/builds">Builds</RouterLink>
     </header>
-    <main id="__gscale" class="h-screen">
+    <main id="__gscale" class="min-h-screen">
         <RouterView></RouterView>
     </main>
     <footer>
