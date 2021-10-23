@@ -1,5 +1,5 @@
 import { useRoute } from "vue-router";
-import { getCharacter, GICharacter } from "../data/characters";
+import { getCharacter, GICharacter } from "../data/Characters";
 
 export default function () {
     const route = useRoute();

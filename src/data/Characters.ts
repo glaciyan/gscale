@@ -1,5 +1,5 @@
 import { toId } from "../lib/toId";
-import { ICharacter } from "././contracts/ICharacter";
+import { ICharacter } from "./contracts/ICharacter";
 import { getById } from "./util/getById";
 
 export class GICharacter implements ICharacter {
