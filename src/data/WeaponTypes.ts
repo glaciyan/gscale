@@ -9,6 +9,18 @@ export const weaponTypes: IWeaponType[] = [
         id: "sword",
         name: "Sword",
     },
+    {
+        id: "claymore",
+        name: "Claymore",
+    },
+    {
+        id: "catalyst",
+        name: "Catalyst",
+    },
+    {
+        id: "polearm",
+        name: "Polearm",
+    },
 ];
 
 export default weaponTypes;

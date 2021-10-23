@@ -8,7 +8,7 @@ import { getWeaponType } from "../data/util/getWeaponType";
 <!-- TODO look into statically rendering this page -->
 <!-- https://vitejs.dev/guide/ssr.html#pre-rendering-ssg -->
 <template>
-    <div class="flex">
+    <div class="flex flex-wrap">
         <CharacterCard
             v-for="character in Characters"
             :key="character.id"
