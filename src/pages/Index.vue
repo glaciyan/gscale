@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import CharacterCard from "../components/character/CharacterCard.vue";
 import Characters from "../data/Characters";
-import { getCardUrl } from "../data/util/getCardUrl";
 import { getElement } from "../data/Elements";
 import { getWeaponType } from "../data/WeaponTypes";
 </script>
@@ -13,12 +12,13 @@ import { getWeaponType } from "../data/WeaponTypes";
         <CharacterCard
             v-for="character in Characters"
             :key="character.id"
-            :cardUrl="getCardUrl(character.id)"
             :name="character.name"
             :element="getElement(character.element)!.name"
             :elementId="character.element"
             :weaponType="getWeaponType(character.weaponType)!.name"
             :rarity="character.rarity"
+            :cardUrl="`/images/characters/card/${character.id}.webp`"
+            :buildUrl="`/build/${character.id}`"
             class="mx-2 mb-4"
         />
     </div>
