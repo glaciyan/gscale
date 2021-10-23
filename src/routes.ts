@@ -1,5 +1,6 @@
 import Index from "./pages/index.vue";
 import Builds from "./pages/builds.vue";
+import BuildingCharacter from "./pages/buildingCharacter.vue";
 
 export default [
     {
@@ -8,6 +9,10 @@ export default [
         meta: {
             title: "Home - GScale",
         },
+    },
+    {
+        path: "/build/:character",
+        component: BuildingCharacter,
     },
     {
         path: "/builds",

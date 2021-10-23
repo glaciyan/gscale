@@ -1,13 +1,15 @@
-import { createApp } from "vue";
-import App from "./App.vue";
 import "virtual:windi.css";
+import { createApp } from "vue";
 import { createRouter, createWebHistory } from "vue-router";
+import App from "./App.vue";
 import routes from "./routes";
 
 const router = createRouter({ history: createWebHistory(), routes });
 
 router.afterEach((to, from) => {
-    document.title = (to.meta.title as string) ?? "GScale";
+    if (to.meta.title) {
+        document.title = to.meta.title as string;
+    }
 });
 
 const app = createApp(App);
