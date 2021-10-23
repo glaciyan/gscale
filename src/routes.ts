@@ -1,6 +1,6 @@
-import Index from "./pages/index.vue";
-import Builds from "./pages/builds.vue";
-import BuildingCharacter from "./pages/buildingCharacter.vue";
+import Index from "./pages/Index.vue";
+import Builds from "./pages/Builds.vue";
+import BuildCharacter from "./pages/BuildCharacter.vue";
 
 export default [
     {
@@ -12,7 +12,7 @@ export default [
     },
     {
         path: "/build/:character",
-        component: BuildingCharacter,
+        component: BuildCharacter,
     },
     {
         path: "/builds",
