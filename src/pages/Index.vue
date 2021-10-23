@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import CharacterCard from "../components/CharacterCard.vue";
+import CharacterCard from "../components/character/CharacterCard.vue";
 import Characters from "../data/Characters";
 import { getCardUrl } from "../data/util/getCardUrl";
 import { getElement } from "../data/Elements";

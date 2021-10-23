@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import RarityStars from "./RarityStars.vue";
+import RarityStars from "../RarityStars.vue";
 
 const props = defineProps<{
     cardUrl: string;

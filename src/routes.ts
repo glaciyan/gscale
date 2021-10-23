@@ -18,7 +18,7 @@ export default [
         path: "/builds",
         component: Builds,
         meta: {
-            title: "Your Builds - GScale",
+            title: "Builds - GScale",
         },
     },
     {
