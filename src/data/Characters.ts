@@ -1,6 +1,5 @@
 import { toId } from "../lib/toId";
 import { ICharacter } from "./contracts/ICharacter";
-import { getById } from "./util/getById";
 
 export class GICharacter implements ICharacter {
     name: string;
@@ -18,13 +17,9 @@ export class GICharacter implements ICharacter {
     }
 }
 
-const characters: GICharacter[] = [
+export const characters: GICharacter[] = [
     new GICharacter("Amber", "bow", "pyro", 4),
     new GICharacter("Albedo", "sword", "geo", 5),
 ];
 
 export default characters;
-
-export function getCharacter(id: string) {
-    return getById(characters, id);
-}
