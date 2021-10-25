@@ -7,6 +7,11 @@ export const Items: IItem[] = [
         rarity: 0,
     },
     {
+        id: "unkown",
+        name: "Unkown Item",
+        rarity: 0,
+    },
+    {
         id: "spectral_nucleus",
         name: "Spectral Nucleus",
         rarity: 3,
