@@ -9,7 +9,7 @@ import { RouterView, RouterLink } from "vue-router";
         <RouterLink to="/builds">Builds</RouterLink>
     </header>
     <main id="__gscale" class="min-h-screen">
-        <RouterView></RouterView>
+        <RouterView />
     </main>
     <footer>
         <hr />
