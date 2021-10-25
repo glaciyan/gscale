@@ -8,18 +8,19 @@ import { getWeaponType } from "../data/util/getWeaponType";
 <!-- TODO look into statically rendering this page -->
 <!-- https://vitejs.dev/guide/ssr.html#pre-rendering-ssg -->
 <template>
-    <div class="flex flex-wrap">
-        <CharacterCard
-            v-for="character in Characters"
-            :key="character.id"
-            :name="character.name"
-            :element="getElement(character.element)!.name"
-            :elementId="character.element"
-            :weaponType="getWeaponType(character.weaponType)!.name"
-            :rarity="character.rarity"
-            :cardUrl="`/images/characters/card/${character.id}.webp`"
-            :buildUrl="`/build/${character.id}`"
-            class="mx-2 mb-4"
-        />
+    <div class="mx-auto max-w-screen-xl">
+        <div w:grid="cols-2 sm:cols-3 lg:cols-4 xl:cols-5" w:gap="5" class="grid">
+            <CharacterCard
+                v-for="character in Characters"
+                :key="character.id"
+                :name="character.name"
+                :element="getElement(character.element)!.name"
+                :elementId="character.element"
+                :weaponType="getWeaponType(character.weaponType)!.name"
+                :rarity="character.rarity"
+                :cardUrl="`/images/characters/card/${character.id}.webp`"
+                :buildUrl="`/build/${character.id}`"
+            />
+        </div>
     </div>
 </template>
