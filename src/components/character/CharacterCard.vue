@@ -25,7 +25,12 @@ const isVisible = useIntersection(image);
 </script>
 
 <template>
-    <div :class="['shadow-md w-max transition-shadow hover:ring rounded-md overflow-hidden', hoverRingColor]">
+    <div
+        :class="[
+            'shadow-md w-max transition-shadow hover:ring focus-within:ring rounded-md overflow-hidden',
+            hoverRingColor,
+        ]"
+    >
         <RouterLink :to="buildUrl" draggable="false">
             <!-- TODO temp make image component -->
             <div class="bg-gray-700 h-[150px] w-[240px] relative" ref="image">
