@@ -12,7 +12,6 @@ const rarityColor = `text-genshin-rarity-${props.rarity}`;
     <svg
         xmlns="http://www.w3.org/2000/svg"
         :viewBox="viewBox"
-        aria-hidden="true"
         fill="currentColor"
         :class="['h-5 w-auto inline', rarityColor]"
     >
