@@ -1,9 +1,8 @@
 <script setup lang="ts">
-import RarityStars from "../RarityStars.vue";
+import { ref } from "vue";
 import { RouterLink } from "vue-router";
-import { onMounted } from "@vue/runtime-core";
-import { Ref, ref } from "vue";
 import { useIntersection } from "../../composites/useIntersection";
+import RarityStars from "../RarityStars.vue";
 
 const props = defineProps<{
     name: string;
@@ -17,43 +16,40 @@ const props = defineProps<{
 }>();
 
 const elementTextColor = `text-genshin-element-${props.elementId}`;
-const hoverColor = `ring-genshin-element-${props.elementId}`;
+const hoverRingColor = `ring-genshin-element-${props.elementId}`;
 
-const card = ref(null);
+const image = ref(null);
 
-const intersecting = useIntersection(card);
+// TODO move this in a Picture component
+const isVisible = useIntersection(image);
 </script>
 
 <template>
-    <div
-        :class="[
-            'rounded-md shadow-md w-max transition-shadow overflow-hidden hover:ring',
-            hoverColor,
-        ]"
-    >
-        <div class="bg-gray-700 h-[150px] w-[240px]" ref="card">
-            <img
-                v-if="intersecting"
-                :src="cardUrl"
-                :alt="`Image of ${name}`"
-                decoding="async"
-                loading="lazy"
-                draggable="false"
-                width="240"
-                height="150"
-            />
-        </div>
-        <div class="bg-gray-600 py-3 px-4">
-            <div class="flex flex-wrap space-x-1 items-center">
-                <span :class="elementTextColor">{{ element }}</span>
-                <span class="text-gray-200">{{ weaponType }}</span>
-                <RarityStars :rarity="rarity" />
+    <div :class="['shadow-md w-max transition-shadow hover:ring rounded-md overflow-hidden', hoverRingColor]">
+        <RouterLink :to="buildUrl" draggable="false">
+            <!-- TODO temp make image component -->
+            <div class="bg-gray-700 h-[150px] w-[240px] relative" ref="image">
+                <img
+                    v-if="isVisible"
+                    :src="cardUrl"
+                    :alt="`${name}`"
+                    decoding="async"
+                    loading="lazy"
+                    draggable="false"
+                    width="240"
+                    height="150"
+                />
             </div>
-            <h3 class="font-medium text-white text-lg w-max hover:underline">
-                <RouterLink :to="buildUrl">
+            <div class="bg-gray-600 py-3 px-4">
+                <div class="flex flex-wrap space-x-1 items-center">
+                    <span :class="elementTextColor">{{ element }}</span>
+                    <span class="text-gray-200">{{ weaponType }}</span>
+                    <RarityStars :rarity="rarity" />
+                </div>
+                <span class="font-medium text-white text-lg hover:underline">
                     {{ name }}
-                </RouterLink>
-            </h3>
-        </div>
+                </span>
+            </div>
+        </RouterLink>
     </div>
 </template>
