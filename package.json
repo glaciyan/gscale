@@ -6,13 +6,18 @@
         "dev": "vite",
         "build": "vue-tsc --noEmit && vite build",
         "start": "vite preview",
-        "prod": "yarn build && yarn start"
+        "prod": "yarn build && yarn start",
+        "images:characters:build": "squoosh-cli --oxipng auto --webp auto --resize {width:240} -d public/images/characters/card",
+        "images:mugshot:build": "squoosh-cli --oxipng auto --webp auto --resize {width:100} -d public/images/characters/mugshot",
+        "images:items:build": "squoosh-cli --oxipng auto --webp auto --resize {width:40} -d public/images/materials",
+        "make:images": "node scripts/make_images.js"
     },
     "dependencies": {
         "vue": "^3.2.16",
         "vue-router": "4"
     },
     "devDependencies": {
+        "@squoosh/cli": "^0.7.2",
         "@vitejs/plugin-vue": "^1.9.3",
         "typescript": "^4.4.3",
         "vite": "^2.6.4",
