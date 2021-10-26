@@ -26,14 +26,11 @@ const isVisible = useIntersection(image);
 
 <template>
     <div
-        :class="[
-            'shadow-md w-max transition-shadow hover:ring focus-within:ring rounded-md overflow-hidden',
-            hoverRingColor,
-        ]"
+        :class="['shadow-md transition-shadow hover:ring focus-within:ring rounded-md overflow-hidden', hoverRingColor]"
     >
         <RouterLink :to="buildUrl" draggable="false">
             <!-- TODO temp make image component -->
-            <div class="bg-gray-700 h-[150px] w-[240px] relative" ref="image">
+            <div class="flex bg-gray-700 relative items-center justify-center aspect-w-8 aspect-h-5" ref="image">
                 <img
                     v-if="isVisible"
                     :src="cardUrl"
@@ -45,13 +42,16 @@ const isVisible = useIntersection(image);
                     height="150"
                 />
             </div>
-            <div class="bg-gray-600 py-3 px-4">
-                <div class="flex flex-wrap space-x-1 items-center">
-                    <span :class="elementTextColor">{{ element }}</span>
-                    <span class="text-gray-200">{{ weaponType }}</span>
+            <div class="bg-gray-600 leading-snug py-3 px-4 <sm:(py-2 px-3) ">
+                <div class="flex flex-wrap flex-row items-center <sm:(flex-col-reverse items-start -mb-0.5) ">
+                    <div class="mr-1">
+                        <span :class="elementTextColor">{{ element }}</span>
+                        {{ " " }}
+                        <span class="text-gray-200">{{ weaponType }}</span>
+                    </div>
                     <RarityStars :rarity="rarity" />
                 </div>
-                <span class="font-medium text-white text-lg hover:underline">
+                <span class="font-medium text-white text-lg <sm:(text-base) hover:underline">
                     {{ name }}
                 </span>
             </div>

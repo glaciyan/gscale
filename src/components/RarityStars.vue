@@ -3,7 +3,8 @@ const props = defineProps<{ rarity: number }>();
 
 const baseWidth = 24;
 const additionalStarWidth = 8.5;
-const viewBox = `0 0 ${baseWidth + (props.rarity - 1) * additionalStarWidth} 24`;
+const width = baseWidth + (props.rarity - 1) * additionalStarWidth;
+const viewBox = `0 0 ${width} 24`;
 
 const rarityColor = `text-genshin-rarity-${props.rarity}`;
 </script>
@@ -13,7 +14,8 @@ const rarityColor = `text-genshin-rarity-${props.rarity}`;
         xmlns="http://www.w3.org/2000/svg"
         :viewBox="viewBox"
         fill="currentColor"
-        :class="['h-5 w-auto inline', rarityColor]"
+        :class="['h-5 inline', rarityColor]"
+        :style="{ width: `${width - additionalStarWidth}px` }"
     >
         <title>{{ rarity }} Stars</title>
         <path

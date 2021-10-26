@@ -1,4 +1,5 @@
 import { defineConfig } from "windicss/helpers";
+import aspectRatio from "windicss/plugin/aspect-ratio";
 
 function range(size: number, startAt = 1) {
     return Array.from(Array(size).keys()).map((i) => i + startAt);
@@ -15,6 +16,7 @@ export default defineConfig({
         em.map((e) => `text-genshin-element-${e}`),
         em.map((e) => `ring-genshin-element-${e}`),
     ],
+    plugins: [aspectRatio],
     theme: {
         extend: {
             colors: {
