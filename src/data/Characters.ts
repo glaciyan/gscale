@@ -703,7 +703,7 @@ export const Characters: IdIndex<ICharacter> = {
         rarity: 4,
         sub: "ATK",
         constellation: "Star",
-        description: "This is Jeff.",
+        description: "This is Jeff. He is here because no other character was found.",
         localId: Items.small_lamp_grass,
         commonGroupId: ItemGroups.arrowhead,
         bossId: Items.everflame_seed,
