@@ -1,7 +1,6 @@
-import { UsingId } from "./UsingId";
+import { INamed } from "./INamed";
 
-export interface IItem extends UsingId {
-    name: string;
+export interface IItem extends INamed {
     rarity: number;
     groupId?: string;
 }

@@ -1,17 +1,20 @@
-import { UsingId } from "./UsingId";
+import { IElement } from "./IElement";
+import { IItem } from "./IItem";
+import { IItemGroup } from "./IItemGroup";
+import { INamed } from "./INamed";
+import { IWeaponType } from "./IWeaponType";
 
-export interface ICharacter extends UsingId {
-    name: string;
-    element: string;
-    weaponType: string;
+export interface ICharacter extends INamed {
+    element: IElement;
+    weaponType: IWeaponType;
     rarity: 4 | 5;
     sub: string;
     constellation: string;
     description: string;
-    localId: string;
-    commonGroupId: string;
-    bossId: string;
-    gemGroupId: string;
-    bookGroupId: string;
-    weeklyId: string;
+    localId: IItem;
+    commonGroupId: IItemGroup;
+    bossId: IItem;
+    gemGroupId: IItemGroup;
+    bookGroupId: IItemGroup;
+    weeklyId: IItem;
 }

@@ -1,3 +1,3 @@
-export interface UsingId {
-    id: string;
+export interface IdIndex<T> {
+    [id: string]: T;
 }

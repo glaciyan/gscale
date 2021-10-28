@@ -1,5 +1,3 @@
-import { UsingId } from "./UsingId";
+import { INamed } from "./INamed";
 
-export interface IElement extends UsingId {
-    name: string;
-}
+export interface IElement extends INamed {}

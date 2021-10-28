@@ -1,5 +1,3 @@
-import { UsingId } from "./UsingId";
+import { INamed } from "./INamed";
 
-export interface IWeaponType extends UsingId {
-    name: string;
-}
+export interface IWeaponType extends INamed {}

@@ -1,26 +1,27 @@
+import { IdIndex } from "./contracts/UsingId";
 import { IWeaponType } from "./contracts/IWeaponType";
 
-export const weaponTypes: IWeaponType[] = [
-    {
-        id: "bow",
+export const weaponTypes: IdIndex<IWeaponType> = {
+    bow: {
         name: "Bow",
+        normalizedName: "bow",
     },
-    {
-        id: "sword",
+    sword: {
         name: "Sword",
+        normalizedName: "sword",
     },
-    {
-        id: "claymore",
+    claymore: {
         name: "Claymore",
+        normalizedName: "claymore",
     },
-    {
-        id: "catalyst",
+    catalyst: {
         name: "Catalyst",
+        normalizedName: "catalyst",
     },
-    {
-        id: "polearm",
+    polearm: {
         name: "Polearm",
+        normalizedName: "polearm",
     },
-];
+};
 
 export default weaponTypes;

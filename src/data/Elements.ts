@@ -1,30 +1,31 @@
+import { IdIndex } from "./contracts/UsingId";
 import { IElement } from "./contracts/IElement";
 
-export const elements: IElement[] = [
-    {
-        id: "pyro",
+export const Elements: IdIndex<IElement> = {
+    pyro: {
         name: "Pyro",
+        normalizedName: "pyro",
     },
-    {
-        id: "geo",
+    geo: {
         name: "Geo",
+        normalizedName: "geo",
     },
-    {
-        id: "hydro",
+    hydro: {
         name: "Hydro",
+        normalizedName: "hydro",
     },
-    {
-        id: "anemo",
+    anemo: {
         name: "Anemo",
+        normalizedName: "anemo",
     },
-    {
-        id: "cryo",
+    cryo: {
         name: "Cryo",
+        normalizedName: "cryo",
     },
-    {
-        id: "electro",
+    electro: {
         name: "Electro",
+        normalizedName: "electro",
     },
-];
+};
 
-export default elements;
+export default Elements;

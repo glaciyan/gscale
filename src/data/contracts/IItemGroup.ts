@@ -1,5 +1,3 @@
-import { UsingId } from "./UsingId";
-
-export interface IItemGroup extends UsingId {
+export interface IItemGroup {
     itemIds: string[];
 }
