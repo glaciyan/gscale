@@ -1,5 +1,6 @@
 import { defineConfig } from "windicss/helpers";
 import aspectRatio from "windicss/plugin/aspect-ratio";
+import lineClamp from "windicss/plugin/line-clamp";
 
 function range(size: number, startAt = 1) {
     return Array.from(Array(size).keys()).map((i) => i + startAt);
@@ -8,15 +9,15 @@ function range(size: number, startAt = 1) {
 const em = ["anemo", "pyro", "electro", "geo", "cryo", "hydro"];
 
 export default defineConfig({
-    attributify: {
-        prefix: "w",
-    },
+    plugins: [aspectRatio, lineClamp],
     safelist: [
         range(5).map((n) => `text-genshin-rarity-${n}`),
         em.map((e) => `text-genshin-element-${e}`),
         em.map((e) => `ring-genshin-element-${e}`),
     ],
-    plugins: [aspectRatio],
+    attributify: {
+        prefix: "w",
+    },
     theme: {
         extend: {
             colors: {
@@ -25,9 +26,9 @@ export default defineConfig({
                     "200": "#aaacb0",
                     "300": "#87898f",
                     "400": "#646569",
-                    "500": "#444546",
-                    "600": "#2f3033",
-                    "700": "#252527",
+                    "500": "#2f3033",
+                    "600": "#292A2C",
+                    "700": "#1d1e20",
                     "800": "#18191b",
                     "900": "#09090a",
                 },

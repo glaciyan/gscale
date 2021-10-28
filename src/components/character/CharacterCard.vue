@@ -42,8 +42,8 @@ const isVisible = useIntersection(image);
                     height="150"
                 />
             </div>
-            <div class="bg-gray-600 leading-snug py-3 px-4 <sm:(py-2 px-3) ">
-                <div class="flex flex-wrap flex-row items-center <sm:(flex-col-reverse items-start -mb-0.5) ">
+            <div class="bg-gray-500 leading-snug py-3 px-4 <sm:(py-2 px-3)">
+                <div class="flex flex-wrap flex-row items-center <sm:(flex-col-reverse items-start -mb-0.5)">
                     <div class="mr-1">
                         <span :class="elementTextColor">{{ element }}</span>
                         {{ " " }}
