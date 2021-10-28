@@ -36,7 +36,7 @@ function build(source, command) {
 
     missing.map((file) => {
         console.log(`Building ${file}`);
-        exec(`yarn ${command} ${source}/${file}`, (err, stdout, stderr) => {
+        exec(`yarn ${command} ${file}`, (err, stdout, stderr) => {
             if (err) {
                 console.error(`Couldn't build ${file}\n--error--\n${stderr}\n---end of error---`);
             } else console.log(`Done building ${file}`);
