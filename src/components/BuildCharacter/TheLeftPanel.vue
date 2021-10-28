@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import { useElementTextColor } from "../../composites/elementTextColor";
-import { ICharacter } from "../../data/contracts/ICharacter";
+import ElementIcon from "~/assets/icons/element.svg";
+import SwordIcon from "~/assets/icons/sword.svg";
+import { useElementTextColor } from "~/composites/elementTextColor";
+import { ICharacter } from "~/data/contracts/ICharacter";
 import CharacterPortrait from "../character/CharacterPortrait.vue";
 import IconWithText from "../IconWithText.vue";
 import TheClampedText from "../TheClampedText.vue";
-import ElementIcon from "../../assets/icons/element.svg";
-import SwordIcon from "../../assets/icons/sword.svg";
 
 const props = defineProps<{ character: ICharacter }>();
 const elementTextColor = useElementTextColor(props.character.element.normalizedName);
