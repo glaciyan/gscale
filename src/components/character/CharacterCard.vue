@@ -13,7 +13,6 @@ const props = defineProps<{
     rarity: 4 | 5;
     cardUrl: string;
     buildUrl: string;
-    touch?: boolean;
 }>();
 
 const elementTextColor = useElementTextColor(props.elementId);
