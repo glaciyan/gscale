@@ -7,6 +7,7 @@ import { booleanToggle } from "../composites/booleanToggle";
 import { getCharacterById } from "../data/Characters";
 import { ICharacter } from "../data/contracts/ICharacter";
 import TheClampedText from "../components/TheClampedText.vue";
+import { useElementTextColor } from "../composites/elementTextColor";
 
 const route = useRoute();
 const character = getCharacterById(route.params.character as string) ?? (getCharacterById("jeffrey") as ICharacter);
@@ -14,6 +15,8 @@ const character = getCharacterById(route.params.character as string) ?? (getChar
 onBeforeMount(() => {
     document.title = `Building ${character.name} - GScale`;
 });
+
+const elementTextColor = useElementTextColor(character.element.normalizedName);
 </script>
 
 <template>
@@ -43,6 +46,9 @@ onBeforeMount(() => {
                         <TheClampedText class="mt-1 text-sm text-gray-200 leading-4 block sm:w-64">
                             {{ character.description }}
                         </TheClampedText>
+                    </div>
+                    <div>
+                        <p :class="elementTextColor">{{ character.element.name }}</p>
                     </div>
                 </div>
             </div>

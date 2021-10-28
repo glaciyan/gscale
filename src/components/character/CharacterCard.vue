@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import { RouterLink } from "vue-router";
+import { useElementTextColor } from "../../composites/elementTextColor";
 import { useIntersection } from "../../composites/useIntersection";
 import RarityStars from "../RarityStars.vue";
 
@@ -15,7 +16,7 @@ const props = defineProps<{
     touch?: boolean;
 }>();
 
-const elementTextColor = `text-genshin-element-${props.elementId}`;
+const elementTextColor = useElementTextColor(props.elementId);
 const hoverRingColor = `ring-genshin-element-${props.elementId}`;
 
 const image = ref(null);
@@ -42,8 +43,8 @@ const isVisible = useIntersection(image);
                     height="150"
                 />
             </div>
-            <div class="bg-gray-500 leading-snug py-3 px-4 <sm:(py-2 px-3)">
-                <div class="flex flex-wrap flex-row items-center <sm:(flex-col-reverse items-start -mb-0.5)">
+            <div class="bg-gray-500 leading-snug py-3 px-4 <sm:(py-2 px-3) ">
+                <div class="flex flex-wrap flex-row items-center <sm:(flex-col-reverse items-start -mb-0.5) ">
                     <div class="mr-1">
                         <span :class="elementTextColor">{{ element }}</span>
                         {{ " " }}
