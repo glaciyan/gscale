@@ -2,10 +2,10 @@
 import { useElementTextColor } from "../../composites/elementTextColor";
 import { ICharacter } from "../../data/contracts/ICharacter";
 import CharacterPortrait from "../character/CharacterPortrait.vue";
-import ElementIcon from "../icons/ElementIcon.vue";
-import SwordIcon from "../icons/SwordIcon.vue";
 import IconWithText from "../IconWithText.vue";
 import TheClampedText from "../TheClampedText.vue";
+import ElementIcon from "../../assets/icons/element.svg";
+import SwordIcon from "../../assets/icons/sword.svg";
 
 const props = defineProps<{ character: ICharacter }>();
 const elementTextColor = useElementTextColor(props.character.element.normalizedName);
@@ -45,7 +45,9 @@ const elementTextColor = useElementTextColor(props.character.element.normalizedN
                 </template>
             </IconWithText>
             <IconWithText>
-                <template #icon><SwordIcon class="text-gray-300 self-start" /></template>
+                <template #icon>
+                    <SwordIcon class="text-gray-300 self-start" />
+                </template>
                 <template #default>
                     <div class="text-gray-100">
                         <div>{{ character.weaponType.name }}<br />{{ character.sub }}</div>
