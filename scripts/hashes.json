@@ -60,6 +60,10 @@
         "hash": "af3f89bdb1911f8f6a566ec461d265b53da92b0e"
     },
     {
+        "name": "./src/data/images/characters/card/jeffrey.png",
+        "hash": "1dac2665572e5114ea2d214469a056163eb1b85d"
+    },
+    {
         "name": "./src/data/images/characters/card/kaeya.png",
         "hash": "800ec0e3b027f18fd4e0373ab418a12c1dde8433"
     },
@@ -226,6 +230,10 @@
     {
         "name": "./src/data/images/characters/mugshot/jean.png",
         "hash": "b9121ca953b87cf00539dd9441f8567ccb97e124"
+    },
+    {
+        "name": "./src/data/images/characters/mugshot/jeffrey.png",
+        "hash": "6ce6a7bb163b78d3f5f6e1c672ca76e681e2edaf"
     },
     {
         "name": "./src/data/images/characters/mugshot/kaeya.png",
@@ -726,10 +734,6 @@
     {
         "name": "./src/data/images/materials/naku_weed.png",
         "hash": "889bb9acb7548200e2c8099ec78a884fd9bfce50"
-    },
-    {
-        "name": "./src/data/images/materials/new_handguard.png",
-        "hash": "037c7a5f4e5de9320a0dc8ff21bff3caabb87aeb"
     },
     {
         "name": "./src/data/images/materials/noctilucous_jade.png",
