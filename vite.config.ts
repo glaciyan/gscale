@@ -1,3 +1,4 @@
+//@ts-ignore
 import path from "path";
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
@@ -8,6 +9,7 @@ import svg from "vite-svg-loader";
 export default defineConfig({
     resolve: {
         alias: {
+            // @ts-ignore
             "~/": `${path.resolve(__dirname, "src")}/`,
         },
     },
