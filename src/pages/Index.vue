@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import CharacterCard from "../components/character/CharacterCard.vue";
-import Characters from "../data/Characters";
-const characters = Object.values(Characters);
+import { charactersViewModel } from "../viewmodel/CharactersViewModel";
 </script>
 
 <!-- TODO look into statically rendering this page -->
@@ -10,7 +9,7 @@ const characters = Object.values(Characters);
     <div class="mx-auto max-w-screen-xl">
         <div w:grid="cols-2 sm:cols-3 lg:cols-4 xl:cols-5" w:gap="5 <sm:2" w:p="<sm:2 <xl:5" class="grid">
             <CharacterCard
-                v-for="character in characters"
+                v-for="character in charactersViewModel"
                 :key="character.name"
                 :name="character.name"
                 :element="character.element.name"
