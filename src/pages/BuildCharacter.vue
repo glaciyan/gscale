@@ -6,6 +6,7 @@ import XLContainer from "../components/XLContainer.vue";
 import { booleanToggle } from "../composites/booleanToggle";
 import { getCharacterById } from "../data/Characters";
 import { ICharacter } from "../data/contracts/ICharacter";
+import TheClampedText from "../components/TheClampedText.vue";
 
 const route = useRoute();
 const character = getCharacterById(route.params.character as string) ?? (getCharacterById("jeffrey") as ICharacter);
@@ -13,8 +14,6 @@ const character = getCharacterById(route.params.character as string) ?? (getChar
 onBeforeMount(() => {
     document.title = `Building ${character.name} - GScale`;
 });
-
-const [clamp, toggleClamp] = booleanToggle(true);
 </script>
 
 <template>
@@ -41,12 +40,9 @@ const [clamp, toggleClamp] = booleanToggle(true);
                     <div>
                         <p class="font-bold">{{ character.name }}</p>
                         <p class="text-gray-100">{{ character.constellation }}</p>
-                        <p
-                            @click="toggleClamp"
-                            :class="['mt-1 text-sm text-gray-200 leading-4 block sm:w-64', { 'line-clamp-4': clamp }]"
-                        >
+                        <TheClampedText class="mt-1 text-sm text-gray-200 leading-4 block sm:w-64">
                             {{ character.description }}
-                        </p>
+                        </TheClampedText>
                     </div>
                 </div>
             </div>
