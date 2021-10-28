@@ -32,7 +32,7 @@ onBeforeMount(() => {
                         />
                     </div>
                     <CharacterPortrait
-                        class="mb-6 z-20"
+                        class="ring mb-6 ring-gray-700 z-20"
                         :normalizedName="character.normalizedName"
                         :rarity="character.rarity"
                     />
