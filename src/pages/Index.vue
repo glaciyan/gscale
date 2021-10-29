@@ -1,7 +1,5 @@
 <script setup lang="ts">
-import CharacterCard from "../components/character/CharacterCard.vue";
 import { charactersViewModel } from "../viewmodel/CharactersViewModel";
-import XLContainer from "../components/XLContainer.vue";
 </script>
 
 <!-- TODO look into statically rendering this page -->

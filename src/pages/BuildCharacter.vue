@@ -1,8 +1,4 @@
 <script setup lang="ts">
-import { useTitle } from "@vueuse/core";
-import { useRoute } from "vue-router";
-import TheLeftPanel from "~/components/BuildCharacter/TheLeftPanel.vue";
-import XLContainer from "~/components/XLContainer.vue";
 import { getCharacterById } from "~/data/Characters";
 import { ICharacter } from "~/data/contracts/ICharacter";
 
