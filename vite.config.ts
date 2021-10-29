@@ -19,7 +19,8 @@ export default defineConfig({
         svg(),
         autoImport({
             imports: ["vue", "vue-router", "@vueuse/core"],
+            dts: true,
         }),
-        components(),
+        components({ dts: true }),
     ],
 });
