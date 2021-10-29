@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import { RouterLink, RouterView } from "vue-router";
+</script>
+
 <template>
     <header class="flex space-x-2">
         <span>gscale</span>
