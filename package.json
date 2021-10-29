@@ -19,6 +19,7 @@
     },
     "devDependencies": {
         "@squoosh/cli": "^0.7.2",
+        "@types/node": "^16.11.6",
         "@vitejs/plugin-vue": "^1.9.4",
         "typescript": "^4.4.4",
         "vite": "^2.6.13",
