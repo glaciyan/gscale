@@ -1,6 +1,6 @@
 {
     "github": {
-        "enabled": true
+        "enabled": false
     },
     "rewrites": [
         {
