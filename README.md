@@ -2,6 +2,9 @@
 
 # gscale
 
+| ⚠️ Version 2.0 (Vue rewrite and feature additions) is currently being developed on the [amber](https://github.com/glaciyan/gscale/tree/amber) branch the main branch will not be accepting of any more additions. |
+|-|
+
 GScale is a calculator for Genshin Impact, you can calculate the amount of items you need for ascensions and talents.
 
 This project is built using next.js and tailwindcss.
