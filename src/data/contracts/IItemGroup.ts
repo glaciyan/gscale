@@ -1,3 +1,5 @@
+import { IItem } from "./IItem";
+
 export interface IItemGroup {
-    itemIds: string[];
+    itemIds: IItem[];
 }
