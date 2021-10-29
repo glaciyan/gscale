@@ -13,6 +13,7 @@ This is a vue rewrite for gscale currently running with a customized vite setup.
 - Look into pre-rendering the index page (nice to have)
 
 ## Planned new features
+- weapons (heavily seperated from characters, probably everything in a different tab)
 - +3 compensation for talents
 - integration with hoyolab map
 - auto check for common, book and gem
