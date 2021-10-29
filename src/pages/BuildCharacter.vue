@@ -1,13 +1,21 @@
 <script setup lang="ts">
-import { getCharacterById } from "~/data/Characters";
-import { ICharacter } from "~/data/contracts/ICharacter";
+import AscensionLevelSelector from "~/components/AscensionLevelSelector.vue";
 import TheCharacterDetailPanel from "~/components/BuildCharacter/TheCharacterDetailPanel.vue";
 import XLContainer from "~/components/XLContainer.vue";
+import { getCharacterById } from "~/data/Characters";
+import { ICharacter } from "~/data/contracts/ICharacter";
+import { AscensionLevel } from "~/interfaces/AscensionLevel";
 
 const route = useRoute();
 const character = getCharacterById(route.params.character as string) ?? (getCharacterById("jeffrey") as ICharacter);
 
 useTitle(`Building ${character.name} - GScale`);
+
+const starting = ref<AscensionLevel>({ level: 20, ascended: false });
+
+watch(starting, () => {
+    console.log(starting.value);
+});
 </script>
 
 <template>
@@ -24,9 +32,10 @@ useTitle(`Building ${character.name} - GScale`);
                         buildpagepadding
                         sm:(w-[20rem]
                         border-gray-300 border-r-2)
-                        lg:(flex-grow-0)
-                    "
-                ></div>
+                        lg:(flex-grow-0) "
+                >
+                    <AscensionLevelSelector v-model:value="starting"></AscensionLevelSelector>
+                </div>
             </div>
         </div>
     </XLContainer>

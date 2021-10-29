@@ -9,7 +9,6 @@
         "sourceMap": true,
         "esModuleInterop": true,
         "resolveJsonModule": true,
-        "noUnusedLocals": true,
         "strictNullChecks": true,
         "forceConsistentCasingInFileNames": true,
         "lib": ["esnext", "dom"],
