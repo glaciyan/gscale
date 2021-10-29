@@ -1,11 +1,21 @@
-# Vue 3 + Typescript + Vite
+# gscale 2.0
+|🛑 gscale 2.0 is currently heavy in development. Because things are changing fast, I am currently not accepting any contributions until version 2.0 is ready for production!|
+|-|
 
-This template should help get you started developing with Vue 3 and Typescript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+This is a vue rewrite for gscale currently running with a customized vite setup. In the future I'm hoping on using nuxt when static pre-rendering and other vital features are functional.
 
-## Recommended IDE Setup
+## TODO
+- Image component with png fallback
+- Finish up /build/x page
+- Finish up /builds page
+- Header
+- Footer
+- Look into pre-rendering the index page (nice to have)
 
--   [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
-
-## Type Support For `.vue` Imports in TS
-
-Since TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic Vue component type by default. In most cases this is fine if you don't really care about component prop types outside of templates. However, if you wish to get actual prop types in `.vue` imports (for example to get props validation when using manual `h(...)` calls), you can enable Volar's `.vue` type support plugin by running `Volar: Switch TS Plugin on/off` from VSCode command palette.
+## Planned new features
+- +3 compensation for talents
+- integration with hoyolab map
+- auto check for common, book and gem
+	- no need for calculator just type in what items you have from your inventory and gscale will check how much you need to craft, if you have enough and will automatically check off materials
+- advanced checklist ui per item to fit all of that new stuff
+	- could be an extra button next to "Edit" leading to a planner page
