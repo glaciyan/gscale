@@ -15,6 +15,18 @@ useTitle(`Building ${character.name} - GScale`);
         <div class="w-full lg:flex lg:h-[51.5rem]">
             <div class="flex <sm:block">
                 <TheCharacterDetailPanel :character="character" />
+                <div
+                    class="
+                        flex flex-col flex-grow
+                        space-y-6
+                        bg-gray-600
+                        text-gray-100
+                        buildpagepadding
+                        sm:(w-[20rem]
+                        border-gray-300 border-r-2)
+                        lg:(flex-grow-0)
+                    "
+                ></div>
             </div>
         </div>
     </XLContainer>
