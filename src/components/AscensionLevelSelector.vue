@@ -9,7 +9,7 @@ defineProps<{ value: AscensionLevel }>();
     <Listbox :model-value="value" @update:model-value="$emit('update:value', $event)">
         <ListboxButton>{{ value.level }} {{ value.ascended }}</ListboxButton>
         <ListboxOptions>
-            <ListboxOption v-for="option in Levels" :key="option.level + (option.ascended ? 100 : 0)" :value="option">
+            <ListboxOption v-for="option in Levels" :key="option.level + option.ascended.toString()" :value="option">
                 {{ option.level }} {{ option.ascended }}
             </ListboxOption>
         </ListboxOptions>
