@@ -2,6 +2,7 @@ import Index from "./pages/Index.vue";
 import Builds from "./pages/Builds.vue";
 import BuildCharacter from "./pages/BuildCharacter.vue";
 
+// Define all routes here
 export default [
     {
         path: "/",

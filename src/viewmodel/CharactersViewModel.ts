@@ -1,6 +1,7 @@
 import Characters from "../data/Characters";
 import { ICharacterViewModel } from "../interfaces/ICharacterViewModel";
 
+// This will be used to display the character cards
 export const charactersViewModel: ICharacterViewModel[] = [
     Characters.kokomi,
     Characters.aloy,
