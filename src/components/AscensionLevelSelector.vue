@@ -45,7 +45,7 @@ export default defineComponent({
                 class="
                     cursor-default
                     font-normal font-sans
-                    bg-dark-500
+                    bg-dark-400
                     text-base text-left
                     w-max
                     py-2
@@ -60,20 +60,6 @@ export default defineComponent({
                 :modelValue="value.ascended"
                 @update:modelValue="update({ ascended: $event })"
             />
-            <!-- <label :for="checkboxId">
-                <input
-                    :id="checkboxId"
-                    :name="checkboxId"
-                    class="h-px -m-px w-px p-0 appearance-none absolute whitespace-nowrap overflow-hidden"
-                    type="checkbox"
-                    aria-label="Ascended"
-                    :aria-checked="value.ascended"
-                    :disabled="cannotAscend"
-                    :checked="value.ascended"
-                    @change="update({ ascended: ($event as any).target.checked })"
-                />
-                <div><AscensionStar /></div>
-            </label> -->
         </div>
         <ListboxOptions>
             <ListboxOption

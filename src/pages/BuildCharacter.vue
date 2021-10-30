@@ -27,11 +27,12 @@ watch(starting, () => {
                     class="
                         flex flex-col flex-grow
                         bg-dark-600
-                        text-dark-100
+                        text-dark-50
                         buildpagepadding
                         sm:(w-[20rem]
-                        border-dark-300 border-r-2)
-                        lg:(flex-grow-0) "
+                        border-dark-200 border-r-2)
+                        lg:(flex-grow-0)
+                    "
                 >
                     <AscensionLevelSelector checkboxId="asc1" v-model:value="starting"></AscensionLevelSelector>
                 </div>

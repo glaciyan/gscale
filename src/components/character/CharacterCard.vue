@@ -47,7 +47,7 @@ const isVisible = useIntersection(image);
                     <div class="mr-1">
                         <span :class="elementTextColor">{{ element }}</span>
                         {{ " " }}
-                        <span class="text-dark-100">{{ weaponType }}</span>
+                        <span class="text-dark-50">{{ weaponType }}</span>
                     </div>
                     <RarityStars :rarity="rarity" />
                 </div>

@@ -41,7 +41,7 @@ export default defineComponent({
         />
         <Center
             :class="[
-                'cursor-pointer h-full bg-dark-400 transition-colors w-10 hover:bg-dark-400/70',
+                'cursor-pointer h-full bg-dark-300 transition-colors w-10 hover:bg-dark-400/70',
                 { '!bg-dark-600': active },
             ]"
             aria-hidden="true"

@@ -31,14 +31,14 @@ const elementTextColor = useElementTextColor(props.character.element.normalizedN
         <div>
             <p class="font-bold">{{ character.name }}</p>
             <p class="text-light-900">{{ character.constellation }}</p>
-            <TheClampedText class="mt-1 text-sm text-dark-100 leading-4 block sm:w-64">
+            <TheClampedText class="mt-1 text-sm text-dark-50 leading-4 block sm:w-64">
                 {{ character.description }}
             </TheClampedText>
         </div>
         <div class="space-y-1 my-6">
             <IconWithText>
                 <template #icon>
-                    <ElementIcon class="text-dark-200" />
+                    <ElementIcon class="text-dark-100" />
                 </template>
                 <template #default>
                     <p :class="elementTextColor">{{ character.element.name }}</p>
@@ -46,10 +46,10 @@ const elementTextColor = useElementTextColor(props.character.element.normalizedN
             </IconWithText>
             <IconWithText>
                 <template #icon>
-                    <SwordIcon class="text-dark-200 self-start" />
+                    <SwordIcon class="text-dark-100 self-start" />
                 </template>
                 <template #default>
-                    <div class="text-dark-100">
+                    <div class="text-dark-50">
                         <div>{{ character.weaponType.name }}<br />{{ character.sub }}</div>
                     </div>
                 </template>
