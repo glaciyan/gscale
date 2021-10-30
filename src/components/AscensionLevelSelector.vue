@@ -3,6 +3,7 @@ import { Listbox, ListboxButton, ListboxOption, ListboxOptions } from "@headless
 import { AscensionLevel, Levels } from "~/interfaces/AscensionLevel";
 import AscensionStar from "~/assets/icons/asc_star.svg";
 import { PropType } from "vue-demi";
+import AscensionCheckbox from "./AscensionCheckbox.vue";
 
 export default defineComponent({
     props: {
@@ -10,8 +11,12 @@ export default defineComponent({
             type: Object as PropType<AscensionLevel>,
             required: true,
         },
+        checkboxId: {
+            type: String,
+            required: true,
+        },
     },
-    components: { Listbox, ListboxButton, ListboxOption, ListboxOptions, AscensionStar },
+    components: { Listbox, ListboxButton, ListboxOption, ListboxOptions, AscensionStar, AscensionCheckbox },
     setup(props, { emit }) {
         const update = (val: { level?: number; ascended?: boolean }) => {
             // make a copy of the object and merge with current value https://github.com/vuejs/vue/issues/4373#issuecomment-279826554
@@ -34,30 +39,26 @@ export default defineComponent({
 </script>
 
 <template>
-    <Listbox :model-value="value" @update:model-value="$emit('update:value', $event)">
+    <Listbox :modelValue="value" @update:modelValue="$emit('update:value', $event)">
         <div class="flex">
-            <ListboxButton
-                class="
-                    rounded-md
-                    cursor-default
-                    bg-dark-500
-                    shadow-md
-                    text-base text-left
-                    w-max
-                    py-2
-                    px-4
-                    text-light-900
-                "
-            >
+            <ListboxButton class="cursor-default bg-dark-500 text-base text-left w-max py-2 px-4 text-light-900">
                 {{ value.level }}
             </ListboxButton>
-            <input
-                type="checkbox"
-                aria-label="Ascended"
-                :checked="value.ascended"
-                :disabled="cannotAscend"
-                @change="update({ ascended: ($event as any).target.checked })"
-            />
+            <AscensionCheckbox :modelValue="value.ascended" @update:modelValue="update({ ascended: $event })" />
+            <!-- <label :for="checkboxId">
+                <input
+                    :id="checkboxId"
+                    :name="checkboxId"
+                    class="h-px -m-px w-px p-0 appearance-none absolute whitespace-nowrap overflow-hidden"
+                    type="checkbox"
+                    aria-label="Ascended"
+                    :aria-checked="value.ascended"
+                    :disabled="cannotAscend"
+                    :checked="value.ascended"
+                    @change="update({ ascended: ($event as any).target.checked })"
+                />
+                <div><AscensionStar /></div>
+            </label> -->
         </div>
         <ListboxOptions>
             <ListboxOption

@@ -33,7 +33,7 @@ watch(starting, () => {
                         border-dark-300 border-r-2)
                         lg:(flex-grow-0) "
                 >
-                    <AscensionLevelSelector v-model:value="starting"></AscensionLevelSelector>
+                    <AscensionLevelSelector checkboxId="asc1" v-model:value="starting"></AscensionLevelSelector>
                 </div>
             </div>
         </div>
