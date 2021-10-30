@@ -3,6 +3,9 @@ import { IItemGroup } from "./contracts/IItemGroup";
 import { Items } from "./Items";
 
 export const ItemGroups: IdIndex<IItemGroup> = {
+    unknown: {
+        itemIds: [Items.unknown, Items.unknown, Items.unknown],
+    },
     spectral: {
         itemIds: [Items.spectral_nucleus, Items.spectral_heart, Items.spectral_husk],
     },
