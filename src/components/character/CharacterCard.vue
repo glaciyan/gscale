@@ -30,7 +30,7 @@ const isVisible = useIntersection(image);
     >
         <RouterLink :to="buildUrl" draggable="false">
             <!-- TODO temp make image component -->
-            <div class="flex bg-gray-700 relative items-center justify-center aspect-w-8 aspect-h-5" ref="image">
+            <div class="flex bg-dark-700 relative items-center justify-center aspect-w-8 aspect-h-5" ref="image">
                 <img
                     v-if="isVisible"
                     :src="cardUrl"
@@ -42,12 +42,12 @@ const isVisible = useIntersection(image);
                     height="150"
                 />
             </div>
-            <div class="bg-gray-400 leading-snug py-3 px-4 <sm:(py-2 px-3) ">
-                <div class="flex flex-wrap flex-row items-center <sm:(flex-col-reverse items-start -mb-0.5) ">
+            <div class="bg-dark-400 leading-snug py-3 px-4 <sm:(py-2 px-3)">
+                <div class="flex flex-wrap flex-row items-center <sm:(flex-col-reverse items-start -mb-0.5)">
                     <div class="mr-1">
                         <span :class="elementTextColor">{{ element }}</span>
                         {{ " " }}
-                        <span class="text-gray-100">{{ weaponType }}</span>
+                        <span class="text-dark-100">{{ weaponType }}</span>
                     </div>
                     <RarityStars :rarity="rarity" />
                 </div>

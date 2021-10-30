@@ -21,7 +21,7 @@ export default defineConfig({
     theme: {
         extend: {
             colors: {
-                gray: {
+                dark: {
                     "100": "#aaacb0",
                     "200": "#87898f",
                     "300": "#404040",

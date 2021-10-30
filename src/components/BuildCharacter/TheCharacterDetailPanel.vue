@@ -12,7 +12,7 @@ const elementTextColor = useElementTextColor(props.character.element.normalizedN
 </script>
 
 <template>
-    <div class="flex flex-col h-full bg-gray-700 p-6 relative">
+    <div class="flex flex-col h-full bg-dark-700 p-6 relative">
         <div aria-hidden="true" class="h-32 w-full opacity-50 inset-x-0 top-0 z-10 absolute">
             <img
                 class="h-full object-cover w-full"
@@ -23,7 +23,7 @@ const elementTextColor = useElementTextColor(props.character.element.normalizedN
             />
         </div>
         <CharacterPortrait
-            class="ring mb-6 ring-gray-700 z-20"
+            class="ring mb-6 ring-dark-700 z-20"
             :normalizedName="character.normalizedName"
             :rarity="character.rarity"
         />
@@ -31,14 +31,14 @@ const elementTextColor = useElementTextColor(props.character.element.normalizedN
         <div>
             <p class="font-bold">{{ character.name }}</p>
             <p class="text-light-900">{{ character.constellation }}</p>
-            <TheClampedText class="mt-1 text-sm text-gray-100 leading-4 block sm:w-64">
+            <TheClampedText class="mt-1 text-sm text-dark-100 leading-4 block sm:w-64">
                 {{ character.description }}
             </TheClampedText>
         </div>
         <div class="space-y-1 my-6">
             <IconWithText>
                 <template #icon>
-                    <ElementIcon class="text-gray-200" />
+                    <ElementIcon class="text-dark-200" />
                 </template>
                 <template #default>
                     <p :class="elementTextColor">{{ character.element.name }}</p>
@@ -46,10 +46,10 @@ const elementTextColor = useElementTextColor(props.character.element.normalizedN
             </IconWithText>
             <IconWithText>
                 <template #icon>
-                    <SwordIcon class="text-gray-200 self-start" />
+                    <SwordIcon class="text-dark-200 self-start" />
                 </template>
                 <template #default>
-                    <div class="text-gray-100">
+                    <div class="text-dark-100">
                         <div>{{ character.weaponType.name }}<br />{{ character.sub }}</div>
                     </div>
                 </template>

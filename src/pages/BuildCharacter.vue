@@ -27,12 +27,13 @@ watch(starting, () => {
                     class="
                         flex flex-col flex-grow
                         space-y-6
-                        bg-gray-600
-                        text-gray-100
+                        bg-dark-600
+                        text-dark-100
                         buildpagepadding
                         sm:(w-[20rem]
-                        border-gray-300 border-r-2)
-                        lg:(flex-grow-0) "
+                        border-dark-300 border-r-2)
+                        lg:(flex-grow-0)
+                    "
                 >
                     <AscensionLevelSelector v-model:value="starting"></AscensionLevelSelector>
                 </div>
