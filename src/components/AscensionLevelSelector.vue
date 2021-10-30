@@ -41,8 +41,19 @@ export default defineComponent({
 <template>
     <Listbox :modelValue="value" @update:modelValue="$emit('update:value', $event)">
         <div class="flex">
-            <ListboxButton class="cursor-default bg-dark-500 text-base text-left w-max py-2 px-4 text-light-900">
-                {{ value.level }}
+            <ListboxButton
+                class="
+                    cursor-default
+                    font-normal font-sans
+                    bg-dark-500
+                    text-base text-left
+                    w-max
+                    py-2
+                    px-4
+                    text-light-900
+                "
+            >
+                <div>{{ value.level }}</div>
             </ListboxButton>
             <AscensionCheckbox
                 :checkboxId="checkboxId"
