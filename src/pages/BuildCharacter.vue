@@ -14,7 +14,7 @@ useTitle(`Building ${character.name} - GScale`);
 const starting = ref<AscensionLevel>({ level: 20, ascended: false });
 
 watch(starting, () => {
-    console.log(starting.value);
+    console.log(JSON.stringify(starting.value));
 });
 </script>
 
