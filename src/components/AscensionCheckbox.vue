@@ -17,6 +17,14 @@ export default defineComponent({
             type: Boolean,
         },
     },
+
+    setup() {
+        const active = ref(false);
+
+        return {
+            active,
+        };
+    },
 });
 </script>
 
@@ -31,8 +39,16 @@ export default defineComponent({
             :checked="modelValue"
             @change="$emit('update:modelValue', ($event as any).target.checked)"
         />
-        <Center class="h-full bg-dark-400 w-10">
-            <AscensionStarIcon :class="[{ 'text-genshin-rarity-5': modelValue }, 'w-full h-full']" />
+        <Center
+            :class="[
+                'cursor-pointer h-full bg-dark-400 transition-colors w-10 hover:bg-dark-400/70',
+                { '!bg-dark-600': active },
+            ]"
+            aria-hidden="true"
+            @mousedown="active = true"
+            @mouseup="active = false"
+        >
+            <AscensionStarIcon :class="[{ 'text-genshin-rarity-5': modelValue }, 'transition-colors']" />
         </Center>
     </label>
 </template>
