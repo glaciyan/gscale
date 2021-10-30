@@ -41,14 +41,22 @@ export default defineComponent({
         />
         <Center
             :class="[
-                'cursor-pointer h-full bg-dark-300 transition-colors w-10 hover:bg-dark-400/70',
-                { '!bg-dark-600': active },
+                'cursor-pointer h-full bg-dark-300 transition-colors w-10',
+                { 'hover:bg-dark-400/70': !disabled },
+                { '!bg-dark-600': active && !disabled },
             ]"
             aria-hidden="true"
             @mousedown="active = true"
             @mouseup="active = false"
+            @mouseout="active = false"
         >
-            <AscensionStarIcon :class="[{ 'text-genshin-rarity-5': modelValue }, 'transition-colors']" />
+            <AscensionStarIcon
+                :class="[
+                    { 'text-genshin-rarity-5': modelValue },
+                    { 'text-dark-100/40': disabled },
+                    'transition-colors',
+                ]"
+            />
         </Center>
     </label>
 </template>

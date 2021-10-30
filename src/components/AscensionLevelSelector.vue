@@ -59,6 +59,7 @@ export default defineComponent({
             <AscensionCheckbox
                 :checkboxId="checkboxId"
                 :modelValue="value.ascended"
+                :disabled="cannotAscend"
                 @update:modelValue="update({ ascended: $event })"
             />
         </div>
