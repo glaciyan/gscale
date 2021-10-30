@@ -1,7 +1,7 @@
 <script lang="ts">
 import { Listbox, ListboxButton, ListboxOption, ListboxOptions } from "@headlessui/vue";
 import { AscensionLevel, Levels } from "~/interfaces/AscensionLevel";
-import AscensionStar from "~/assets/icons/asc_star.svg";
+import AscensionStarIcon from "~/components/icons/AscensionStarIcon.vue";
 import { PropType } from "vue-demi";
 import AscensionCheckbox from "./AscensionCheckbox.vue";
 
@@ -16,7 +16,7 @@ export default defineComponent({
             required: true,
         },
     },
-    components: { Listbox, ListboxButton, ListboxOption, ListboxOptions, AscensionStar, AscensionCheckbox },
+    components: { Listbox, ListboxButton, ListboxOption, ListboxOptions, AscensionStarIcon, AscensionCheckbox },
     setup(props, { emit }) {
         const update = (val: { level?: number; ascended?: boolean }) => {
             // make a copy of the object and merge with current value https://github.com/vuejs/vue/issues/4373#issuecomment-279826554
@@ -72,7 +72,7 @@ export default defineComponent({
                 :key="option.level + option.ascended.toString()"
                 :value="option"
             >
-                {{ active }} {{ option.level }} <AscensionStar v-if="option.ascended" class="ml-1" />
+                {{ active }} {{ option.level }} <AscensionStarIcon v-if="option.ascended" class="ml-1" />
             </ListboxOption>
         </ListboxOptions>
     </Listbox>

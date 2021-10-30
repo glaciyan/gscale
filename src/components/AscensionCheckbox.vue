@@ -1,9 +1,9 @@
 <script lang="ts">
-import AscensionStar from "~/assets/icons/asc_star.svg";
+import AscensionStarIcon from "~/components/icons/AscensionStarIcon.vue";
 import Center from "./Center.vue";
 
 export default defineComponent({
-    components: { AscensionStar, Center },
+    components: { AscensionStarIcon, Center },
     emits: ["update:modelValue"],
     props: {
         checkboxId: {
@@ -32,7 +32,7 @@ export default defineComponent({
             @change="$emit('update:modelValue', ($event as any).target.checked)"
         />
         <Center class="h-full bg-dark-400 w-10">
-            <AscensionStar :class="[{ 'text-genshin-rarity-5': modelValue }, 'w-full h-full']" />
+            <AscensionStarIcon :class="[{ 'text-genshin-rarity-5': modelValue }, 'w-full h-full']" />
         </Center>
     </label>
 </template>

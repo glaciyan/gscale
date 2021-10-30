@@ -10,8 +10,7 @@
         "images:characters:build": "squoosh-cli --oxipng auto --webp auto --resize {width:240} -d public/images/characters/card",
         "images:mugshot:build": "squoosh-cli --oxipng auto --webp auto --resize {width:100} -d public/images/characters/mugshot",
         "images:items:build": "squoosh-cli --oxipng auto --webp auto --resize {width:40} -d public/images/materials",
-        "make:images": "node scripts/make_images.js",
-        "postinstall": "npx patch-package"
+        "make:images": "node scripts/make_images.js"
     },
     "dependencies": {
         "@headlessui/vue": "^1.4.1",
@@ -27,7 +26,6 @@
         "unplugin-auto-import": "^0.4.13",
         "vite": "^2.6.13",
         "vite-plugin-windicss": "^1.4.12",
-        "vite-svg-loader": "^3.0.0",
         "vue-tsc": "^0.3.0",
         "windicss": "^3.2.0"
     }
