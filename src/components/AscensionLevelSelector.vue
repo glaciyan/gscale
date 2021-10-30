@@ -46,6 +46,7 @@ export default defineComponent({
                     cursor-default
                     font-normal font-sans
                     bg-dark-400
+                    border-r-[1px] border-dark-500
                     text-base text-left
                     w-max
                     py-2
