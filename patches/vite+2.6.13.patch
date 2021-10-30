@@ -1,0 +1,15 @@
+diff --git a/node_modules/vite/client.d.ts b/node_modules/vite/client.d.ts
+index 2586f07..e041529 100644
+--- a/node_modules/vite/client.d.ts
++++ b/node_modules/vite/client.d.ts
+@@ -83,10 +83,6 @@ declare module '*.gif' {
+   const src: string
+   export default src
+ }
+-declare module '*.svg' {
+-  const src: string
+-  export default src
+-}
+ declare module '*.ico' {
+   const src: string
+   export default src
