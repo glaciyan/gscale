@@ -24,8 +24,6 @@ export default defineComponent({
     <label :for="checkboxId">
         <input
             :id="checkboxId"
-            :name="checkboxId"
-            class="h-px -m-px w-px p-0 appearance-none absolute whitespace-nowrap overflow-hidden"
             type="checkbox"
             aria-label="Ascended"
             :disabled="disabled"
@@ -38,3 +36,18 @@ export default defineComponent({
         </Center>
     </label>
 </template>
+
+<style scoped>
+input {
+    height: 1px;
+    width: 1px;
+    padding: 0px;
+    margin: -1px;
+    position: absolute;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    white-space: nowrap;
+    overflow: hidden;
+}
+</style>

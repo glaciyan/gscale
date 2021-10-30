@@ -44,7 +44,11 @@ export default defineComponent({
             <ListboxButton class="cursor-default bg-dark-500 text-base text-left w-max py-2 px-4 text-light-900">
                 {{ value.level }}
             </ListboxButton>
-            <AscensionCheckbox :modelValue="value.ascended" @update:modelValue="update({ ascended: $event })" />
+            <AscensionCheckbox
+                :checkboxId="checkboxId"
+                :modelValue="value.ascended"
+                @update:modelValue="update({ ascended: $event })"
+            />
             <!-- <label :for="checkboxId">
                 <input
                     :id="checkboxId"
