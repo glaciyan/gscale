@@ -30,7 +30,7 @@ const isVisible = useIntersection(image);
     >
         <RouterLink :to="buildUrl" draggable="false">
             <!-- TODO temp make image component -->
-            <div class="flex bg-dark-700 relative items-center justify-center aspect-w-8 aspect-h-5" ref="image">
+            <div class="flex bg-dark-600 relative items-center justify-center aspect-w-8 aspect-h-5" ref="image">
                 <img
                     v-if="isVisible"
                     :src="cardUrl"
