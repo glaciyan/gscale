@@ -45,6 +45,7 @@ export default defineComponent({
                 'cursor-pointer h-full bg-dark-300 transition-colors w-10',
                 { 'hover:bg-dark-400/70': !disabled },
                 { '!bg-dark-600': active && !disabled },
+                { 'cursor-default': disabled },
             ]"
             aria-hidden="true"
             @mousedown="active = true"
@@ -53,9 +54,9 @@ export default defineComponent({
         >
             <AscensionStarIcon
                 :class="[
-                    { 'text-genshin-rarity-5': modelValue },
-                    { 'text-dark-100/40': disabled },
-                    'transition-colors',
+                    { '!text-genshin-rarity-5': modelValue },
+                    { '!text-dark-100/40': disabled },
+                    'transition-colors text-dark-100',
                 ]"
             />
         </Center>
