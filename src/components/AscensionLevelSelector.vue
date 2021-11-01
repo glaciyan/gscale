@@ -22,6 +22,10 @@ export default defineComponent({
         ValueListboxLayout,
     },
     setup(props, { emit }) {
+        const buttonId = props.id + "button";
+        const checkboxId = props.id + "checkbox";
+        const listId = props.id + "list";
+
         const update = (val: { level?: number; ascended?: boolean }) => {
             // make a copy of the object and merge with current value https://github.com/vuejs/vue/issues/4373#issuecomment-279826554
             const updatedObject = Object.assign({}, props.value, val);
@@ -41,14 +45,19 @@ export default defineComponent({
         };
 
         const list = ref<any>(null);
+        const button = ref<any>(null);
 
         return {
+            buttonId,
+            checkboxId,
+            listId,
             update,
             cannotAscend,
             Levels,
             listVisible,
             handleListClick,
             list,
+            button,
         };
     },
 });
@@ -59,6 +68,8 @@ export default defineComponent({
         <template #button>
             <div class="flex">
                 <button
+                    :id="buttonId"
+                    ref="button"
                     class="
                         bg-dark-400
                         border-r-[1px] border-dark-500
@@ -70,11 +81,14 @@ export default defineComponent({
                         focus:outline-none
                     "
                     @click="listVisible = !listVisible"
+                    aria-haspopup="true"
+                    :aria-expanded="listVisible"
+                    :aria-controls="listId"
                 >
                     {{ value.level }}
                 </button>
                 <AscensionCheckbox
-                    :checkboxId="id + 'checkbox'"
+                    :checkboxId="checkboxId"
                     :modelValue="value.ascended"
                     :disabled="cannotAscend"
                     @update:modelValue="update({ ascended: $event })"
@@ -82,7 +96,7 @@ export default defineComponent({
             </div>
         </template>
         <template #list>
-            <transition name="appear" @afterEnter="list.focus()">
+            <transition name="appear" @afterEnter="list.focus()" @beforeLeave="button.focus()">
                 <div
                     v-if="listVisible"
                     class="rounded-md bg-dark-400 mt-1 z-50 absolute"
@@ -91,7 +105,14 @@ export default defineComponent({
                     <teleport to="#app">
                         <div @click.capture="listVisible = false" class="inset-0 z-40 absolute"></div>
                     </teleport>
-                    <ul ref="list" tabindex="0" role="listbox" class="list-none m-0 max-h-96 p-0 py-1 overflow-y-auto">
+                    <ul
+                        :id="listId"
+                        ref="list"
+                        tabindex="0"
+                        role="listbox"
+                        class="list-none m-0 max-h-96 p-0 py-1 overflow-y-auto"
+                        :aria-labelledby="buttonId"
+                    >
                         <li
                             v-for="option in Levels"
                             tabindex="0"
@@ -99,7 +120,8 @@ export default defineComponent({
                             class="cursor-default flex py-2 pr-6 pl-6 items-center hover:bg-dark-700"
                             @click="handleListClick(option)"
                         >
-                            {{ option.level }} <AscensionStarIcon v-if="option.ascended" class="flex-shrink-0 ml-1" />
+                            {{ option.level }} <span v-if="option.ascended" class="sr-only">Ascended</span>
+                            <AscensionStarIcon v-if="option.ascended" class="flex-shrink-0 ml-1" />
                         </li>
                     </ul>
                 </div>
