@@ -39,7 +39,7 @@ export default defineComponent({
 </script>
 
 <template>
-    <Listbox :modelValue="value" @update:modelValue="$emit('update:value', $event)">
+    <Listbox :modelValue="value" @update:modelValue="update($event)">
         <div class="relative">
             <div class="flex">
                 <ListboxButton
