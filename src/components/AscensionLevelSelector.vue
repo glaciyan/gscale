@@ -96,7 +96,7 @@ export default defineComponent({
             </div>
         </template>
         <template #list>
-            <transition name="appear" @afterEnter="list.focus()" @beforeLeave="button.focus()">
+            <transition name="fade" @afterEnter="list.focus()" @beforeLeave="button.focus()">
                 <div
                     v-if="listVisible"
                     class="rounded-md bg-dark-300 mt-1 text-light-normal z-50 absolute"
@@ -129,15 +129,3 @@ export default defineComponent({
         </template>
     </ValueListboxLayout>
 </template>
-
-<style scoped>
-.appear-enter-active,
-.appear-leave-active {
-    @apply transition-opacity duration-100;
-}
-
-.appear-enter-from,
-.appear-leave-to {
-    @apply opacity-0;
-}
-</style>

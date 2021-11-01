@@ -16,3 +16,15 @@ import { RouterLink, RouterView } from "vue-router";
         <span>footer</span>
     </footer>
 </template>
+
+<style>
+.fade-enter-active,
+.fade-leave-active {
+    @apply transition-opacity duration-100;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+    @apply opacity-0;
+}
+</style>
