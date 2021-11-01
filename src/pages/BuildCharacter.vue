@@ -4,19 +4,14 @@ import TheCharacterDetailPanel from "~/components/BuildCharacter/TheCharacterDet
 import XLContainer from "~/components/XLContainer.vue";
 import { getCharacterById } from "~/data/Characters";
 import { ICharacter } from "~/data/contracts/ICharacter";
-import { AscensionLevel } from "~/interfaces/AscensionLevel";
+import { ascensionLevels } from "~/composites/ascensionLevels";
 
 const route = useRoute();
 const character = getCharacterById(route.params.character as string) ?? (getCharacterById("jeffrey") as ICharacter);
 
+const { start: ascStart, goal: ascGoal } = ascensionLevels();
+
 useTitle(`Building ${character.name} - GScale`);
-
-const starting = ref<AscensionLevel>({ level: 1, ascended: false });
-const goal = ref<AscensionLevel>({ level: 20, ascended: false });
-
-watch(starting, () => {
-    console.log(JSON.stringify(starting.value));
-});
 </script>
 
 <template>
@@ -32,10 +27,16 @@ watch(starting, () => {
                         buildpagepadding
                         sm:(w-[20rem]
                         border-dark-200 border-r-2)
-                        lg:(flex-grow-0) "
+                        lg:(flex-grow-0)
+                    "
                 >
-                    <AscensionLevelSelector id="asc1" v-model:value="starting" />
-                    <AscensionLevelSelector id="asc2" v-model:value="goal" />
+                    <section>
+                        <h2 class="font-semibold text-light-100">Level</h2>
+                        <div class="flex">
+                            <AscensionLevelSelector id="asc1" v-model:value="ascStart" />
+                            <AscensionLevelSelector id="asc2" v-model:value="ascGoal" />
+                        </div>
+                    </section>
                 </div>
             </div>
         </div>
