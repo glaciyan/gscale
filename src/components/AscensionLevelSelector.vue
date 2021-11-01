@@ -99,7 +99,7 @@ export default defineComponent({
             <transition name="appear" @afterEnter="list.focus()" @beforeLeave="button.focus()">
                 <div
                     v-if="listVisible"
-                    class="rounded-md bg-dark-400 mt-1 text-light-normal z-50 absolute"
+                    class="rounded-md bg-dark-300 mt-1 text-light-normal z-50 absolute"
                     @keyup.esc.capture="listVisible = false"
                 >
                     <teleport to="#app">
