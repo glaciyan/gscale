@@ -6,6 +6,11 @@ import AscensionCheckbox from "./AscensionCheckbox.vue";
 import ValueListboxLayout from "./ValueListboxLayout.vue";
 
 export default defineComponent({
+    components: {
+        AscensionStarIcon,
+        AscensionCheckbox,
+        ValueListboxLayout,
+    },
     props: {
         value: {
             type: Object as PropType<AscensionLevel>,
@@ -15,11 +20,6 @@ export default defineComponent({
             type: String,
             required: true,
         },
-    },
-    components: {
-        AscensionStarIcon,
-        AscensionCheckbox,
-        ValueListboxLayout,
     },
     setup(props, { emit }) {
         const buttonId = props.id + "button";
