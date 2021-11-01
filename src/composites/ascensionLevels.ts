@@ -3,7 +3,7 @@ import { compareAscension } from "../lib/compareAscension";
 
 export function ascensionLevels() {
     const start = ref<AscensionLevel>({ level: 1, ascended: false });
-    const goal = ref<AscensionLevel>({ level: 20, ascended: false });
+    const goal = ref<AscensionLevel>({ level: 1, ascended: false });
 
     watch(start, () => {
         if (compareAscension(start.value, goal.value) === 1) {
