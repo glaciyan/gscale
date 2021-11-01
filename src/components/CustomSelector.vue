@@ -1,15 +1,16 @@
 <script lang="ts">
+import { PropType } from "vue-demi";
 import ValueListboxLayout from "./ValueListboxLayout.vue";
 
 export default defineComponent({
     components: { ValueListboxLayout },
     props: {
         modelValue: {
-            type: [String, Number],
+            type: [String, Number, Object],
             required: true,
         },
         listItems: {
-            type: Array,
+            type: Array as PropType<any[]>,
             required: true,
         },
         id: {
