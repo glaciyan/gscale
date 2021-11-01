@@ -1,48 +1,21 @@
-<script lang="ts">
-import { PropType } from "vue-demi";
+<script setup lang="ts">
 import ValueListboxLayout from "./ValueListboxLayout.vue";
 
-export default defineComponent({
-    components: { ValueListboxLayout },
-    props: {
-        modelValue: {
-            type: [String, Number, Object],
-            required: true,
-        },
-        listItems: {
-            type: Array as PropType<any[]>,
-            required: true,
-        },
-        id: {
-            type: String,
-            required: true,
-        },
-    },
-    emits: ["update:modelValue"],
-    setup(props, { emit }) {
-        const buttonId = props.id + "button";
-        const listId = props.id + "list";
+const props = defineProps<{ modelValue: any; listItems: any[]; id: string }>();
+const emit = defineEmits(["update:modelValue"]);
 
-        const listVisible = ref(false);
+const buttonId = props.id + "button";
+const listId = props.id + "list";
 
-        const list = ref<any>(null);
-        const button = ref<any>(null);
+const listVisible = ref(false);
 
-        const handleListClick = (val: any) => {
-            listVisible.value = false;
-            emit("update:modelValue", val);
-        };
+const list = ref<any>(null);
+const button = ref<any>(null);
 
-        return {
-            buttonId,
-            listId,
-            listVisible,
-            list,
-            button,
-            handleListClick,
-        };
-    },
-});
+const handleListClick = (val: any) => {
+    listVisible.value = false;
+    emit("update:modelValue", val);
+};
 </script>
 
 <template>
