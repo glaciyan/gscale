@@ -11,7 +11,8 @@ const character = getCharacterById(route.params.character as string) ?? (getChar
 
 useTitle(`Building ${character.name} - GScale`);
 
-const starting = ref<AscensionLevel>({ level: 20, ascended: false });
+const starting = ref<AscensionLevel>({ level: 1, ascended: false });
+const goal = ref<AscensionLevel>({ level: 20, ascended: false });
 
 watch(starting, () => {
     console.log(JSON.stringify(starting.value));
@@ -31,10 +32,10 @@ watch(starting, () => {
                         buildpagepadding
                         sm:(w-[20rem]
                         border-dark-200 border-r-2)
-                        lg:(flex-grow-0)
-                    "
+                        lg:(flex-grow-0) "
                 >
-                    <AscensionLevelSelector checkboxId="asc1" v-model:value="starting"></AscensionLevelSelector>
+                    <AscensionLevelSelector id="asc1" v-model:value="starting" />
+                    <AscensionLevelSelector id="asc2" v-model:value="goal" />
                 </div>
             </div>
         </div>

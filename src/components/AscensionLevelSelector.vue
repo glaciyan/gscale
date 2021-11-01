@@ -1,5 +1,4 @@
 <script lang="ts">
-import { Listbox, ListboxButton, ListboxOption, ListboxOptions } from "@headlessui/vue";
 import { AscensionLevel, Levels } from "~/interfaces/AscensionLevel";
 import AscensionStarIcon from "~/components/icons/AscensionStarIcon.vue";
 import { PropType } from "vue-demi";
@@ -18,10 +17,6 @@ export default defineComponent({
         },
     },
     components: {
-        Listbox,
-        ListboxButton,
-        ListboxOption,
-        ListboxOptions,
         AscensionStarIcon,
         AscensionCheckbox,
         ValueListboxLayout,
