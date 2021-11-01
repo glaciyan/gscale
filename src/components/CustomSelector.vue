@@ -1,21 +1,36 @@
 <script setup lang="ts">
 import ValueListboxLayout from "./ValueListboxLayout.vue";
+import { onClickOutside } from "@vueuse/core";
+import { UseFocusTrap } from "@vueuse/integrations/useFocusTrap/component";
 
 const props = defineProps<{ modelValue: any; listItems: any[]; id: string }>();
 const emit = defineEmits(["update:modelValue"]);
 
-const buttonId = props.id + "button";
 const listId = props.id + "list";
 
+const list = ref<any>(null);
 const listVisible = ref(false);
 
-const list = ref<any>(null);
-const button = ref<any>(null);
+const openList = () => {
+    listVisible.value = true;
+};
+
+const closeList = () => {
+    listVisible.value = false;
+};
+
+onClickOutside(list, (event) => {
+    closeList();
+    event.preventDefault();
+});
 
 const handleListClick = (val: any) => {
-    listVisible.value = false;
+    closeList();
     emit("update:modelValue", val);
 };
+
+const buttonId = props.id + "button";
+const button = ref<any>(null);
 </script>
 
 <template>
@@ -34,7 +49,7 @@ const handleListClick = (val: any) => {
                     text-light-900
                     focus:outline-none
                 "
-                @click="listVisible = !listVisible"
+                @click="openList()"
                 aria-haspopup="true"
                 :aria-expanded="listVisible"
                 :aria-controls="listId"
@@ -44,14 +59,11 @@ const handleListClick = (val: any) => {
         </template>
         <template #list>
             <transition name="fade" @afterEnter="list.focus()" @beforeLeave="button.focus()">
-                <div
+                <UseFocusTrap
                     v-if="listVisible"
                     class="rounded-md bg-dark-300 mt-1 text-light-normal z-50 absolute"
-                    @keyup.esc.capture="listVisible = false"
+                    @keyup.esc.capture="closeList()"
                 >
-                    <teleport to="#app">
-                        <div @click.capture="listVisible = false" class="inset-0 z-40 absolute"></div>
-                    </teleport>
                     <ul
                         :id="listId"
                         ref="list"
@@ -64,13 +76,15 @@ const handleListClick = (val: any) => {
                             v-for="option in listItems"
                             tabindex="0"
                             role="option"
-                            class="cursor-default flex py-2 pr-6 pl-6 items-center hover:bg-dark-700"
+                            class="cursor-default flex py-2 pr-6 pl-6 items-center hover:bg-dark-700 focus:bg-dark-700"
                             @click="handleListClick(option)"
+                            @keypress.enter="handleListClick(option)"
+                            @keypress.space.prevent="handleListClick(option)"
                         >
                             <slot name="item" :option="option" />
                         </li>
                     </ul>
-                </div>
+                </UseFocusTrap>
             </transition>
         </template>
     </ValueListboxLayout>
