@@ -4,6 +4,7 @@ import { AscensionLevel, Levels } from "~/interfaces/AscensionLevel";
 import AscensionStarIcon from "~/components/icons/AscensionStarIcon.vue";
 import { PropType } from "vue-demi";
 import AscensionCheckbox from "./AscensionCheckbox.vue";
+import ValueListboxLayout from "./ValueListboxLayout.vue";
 
 export default defineComponent({
     props: {
@@ -11,12 +12,20 @@ export default defineComponent({
             type: Object as PropType<AscensionLevel>,
             required: true,
         },
-        checkboxId: {
+        id: {
             type: String,
             required: true,
         },
     },
-    components: { Listbox, ListboxButton, ListboxOption, ListboxOptions, AscensionStarIcon, AscensionCheckbox },
+    components: {
+        Listbox,
+        ListboxButton,
+        ListboxOption,
+        ListboxOptions,
+        AscensionStarIcon,
+        AscensionCheckbox,
+        ValueListboxLayout,
+    },
     setup(props, { emit }) {
         const update = (val: { level?: number; ascended?: boolean }) => {
             // make a copy of the object and merge with current value https://github.com/vuejs/vue/issues/4373#issuecomment-279826554
@@ -29,60 +38,79 @@ export default defineComponent({
             return props.value.level === 1 || props.value.level === 90;
         });
 
+        const listVisible = ref(false);
+
+        const handleListClick = (val: { level?: number; ascended?: boolean }) => {
+            listVisible.value = false;
+            update(val);
+        };
+
+        const list = ref<any>(null);
+
         return {
             update,
             cannotAscend,
             Levels,
+            listVisible,
+            handleListClick,
+            list,
         };
     },
 });
 </script>
 
 <template>
-    <Listbox :modelValue="value" @update:modelValue="update($event)">
-        <div class="relative">
+    <ValueListboxLayout>
+        <template #button>
             <div class="flex">
-                <ListboxButton
+                <button
                     class="
-                        cursor-default
-                        font-normal font-sans
                         bg-dark-400
                         border-r-[1px] border-dark-500
-                        text-base text-left
+                        text-left
                         w-max
                         py-2
                         px-4
                         text-light-900
+                        focus:outline-none
                     "
+                    @click="listVisible = !listVisible"
                 >
-                    <div>{{ value.level }}</div>
-                </ListboxButton>
+                    {{ value.level }}
+                </button>
                 <AscensionCheckbox
-                    :checkboxId="checkboxId"
+                    :checkboxId="id + 'checkbox'"
                     :modelValue="value.ascended"
                     :disabled="cannotAscend"
                     @update:modelValue="update({ ascended: $event })"
                 />
             </div>
-            <transition name="appear">
-                <ListboxOptions
-                    class="rounded-md list-none bg-dark-400 m-0 mt-1 w-max max-h-96 p-0 py-1 overflow-y-auto"
+        </template>
+        <template #list>
+            <transition name="appear" @afterEnter="list.focus()">
+                <div
+                    v-if="listVisible"
+                    class="rounded-md bg-dark-400 mt-1 z-50 absolute"
+                    @keyup.esc.capture="listVisible = false"
                 >
-                    <ListboxOption
-                        v-slot="{ active }"
-                        class=""
-                        v-for="option in Levels"
-                        :key="option.level + option.ascended.toString()"
-                        :value="option"
-                    >
-                        <div :class="['flex items-center cursor-default py-2 pl-6 pr-6', { 'bg-dark-700': active }]">
+                    <teleport to="#app">
+                        <div @click.capture="listVisible = false" class="inset-0 z-40 absolute"></div>
+                    </teleport>
+                    <ul ref="list" tabindex="0" role="listbox" class="list-none m-0 max-h-96 p-0 py-1 overflow-y-auto">
+                        <li
+                            v-for="option in Levels"
+                            tabindex="0"
+                            role="option"
+                            class="cursor-default flex py-2 pr-6 pl-6 items-center hover:bg-dark-700"
+                            @click="handleListClick(option)"
+                        >
                             {{ option.level }} <AscensionStarIcon v-if="option.ascended" class="flex-shrink-0 ml-1" />
-                        </div>
-                    </ListboxOption>
-                </ListboxOptions>
+                        </li>
+                    </ul>
+                </div>
             </transition>
-        </div>
-    </Listbox>
+        </template>
+    </ValueListboxLayout>
 </template>
 
 <style scoped>
