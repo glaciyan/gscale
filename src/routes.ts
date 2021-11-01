@@ -1,6 +1,7 @@
 import Index from "./pages/Index.vue";
 import Builds from "./pages/Builds.vue";
 import BuildCharacter from "./pages/BuildCharacter.vue";
+import title from "./lib/title";
 
 // Define all routes here
 export default [
@@ -8,7 +9,7 @@ export default [
         path: "/",
         component: Index,
         meta: {
-            title: "Home - GScale",
+            title: title("Home"),
         },
     },
     {
@@ -19,7 +20,7 @@ export default [
         path: "/builds",
         component: Builds,
         meta: {
-            title: "Builds - GScale",
+            title: title("Builds"),
         },
     },
     {
@@ -27,7 +28,7 @@ export default [
         name: "NotFound",
         component: () => import("./pages/404.vue"),
         meta: {
-            title: "Not Found - GScale",
+            title: title("Not Found"),
         },
     },
 ];

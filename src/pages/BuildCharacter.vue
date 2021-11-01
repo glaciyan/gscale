@@ -5,13 +5,14 @@ import XLContainer from "~/components/XLContainer.vue";
 import { getCharacterById } from "~/data/Characters";
 import { ICharacter } from "~/data/contracts/ICharacter";
 import { ascensionLevels } from "~/composites/ascensionLevels";
+import title from "~/lib/title";
 
 const route = useRoute();
 const character = getCharacterById(route.params.character as string) ?? (getCharacterById("jeffrey") as ICharacter);
 
 const { start: ascStart, goal: ascGoal } = ascensionLevels();
 
-useTitle(`Building ${character.name} - GScale`);
+useTitle(title(`Building ${character.name}`));
 </script>
 
 <template>
