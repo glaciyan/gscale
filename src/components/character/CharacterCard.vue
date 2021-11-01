@@ -38,12 +38,13 @@ const isVisible = useIntersection(image);
                     decoding="async"
                     loading="lazy"
                     draggable="false"
+                    aria-hidden="true"
                     width="240"
                     height="150"
                 />
             </div>
-            <div class="bg-dark-400 leading-snug py-3 px-4 <sm:(py-2 px-3)">
-                <div class="flex flex-wrap flex-row items-center <sm:(flex-col-reverse items-start -mb-0.5)">
+            <div class="bg-dark-400 leading-snug py-3 px-4 <sm:(py-2 px-3) ">
+                <div class="flex flex-wrap flex-row items-center <sm:(flex-col-reverse items-start -mb-0.5) ">
                     <div class="mr-1">
                         <span :class="elementTextColor">{{ element }}</span>
                         {{ " " }}
