@@ -27,11 +27,10 @@ useTitle(`Building ${character.name} - GScale`);
                         buildpagepadding
                         sm:(w-[20rem]
                         border-dark-200 border-r-2)
-                        lg:(flex-grow-0)
-                    "
+                        lg:(flex-grow-0) "
                 >
                     <section>
-                        <h2 class="font-semibold text-light-100">Level</h2>
+                        <h2 class="font-semibold text-light-important">Level</h2>
                         <div class="flex">
                             <AscensionLevelSelector id="asc1" v-model:value="ascStart" />
                             <AscensionLevelSelector id="asc2" v-model:value="ascGoal" />

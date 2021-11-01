@@ -12,7 +12,7 @@ const elementTextColor = useElementTextColor(props.character.element.normalizedN
 </script>
 
 <template>
-    <div class="flex flex-col h-full bg-dark-700 p-6 relative">
+    <div class="flex flex-col h-full bg-dark-700 px-6 pt-4 pb-6 relative">
         <div aria-hidden="true" class="h-32 w-full opacity-50 inset-x-0 top-0 z-10 absolute">
             <img
                 class="h-full object-cover w-full"
@@ -29,9 +29,9 @@ const elementTextColor = useElementTextColor(props.character.element.normalizedN
         />
         <!-- Character details -->
         <div>
-            <p class="font-bold">{{ character.name }}</p>
-            <p class="text-light-900">{{ character.constellation }}</p>
-            <TheClampedText class="mt-1 text-sm text-dark-50 leading-4 block sm:w-64">
+            <p class="font-bold text-light-important">{{ character.name }}</p>
+            <p>{{ character.constellation }}</p>
+            <TheClampedText class="mt-1 text-sm text-light-ternary leading-4 block sm:w-64">
                 {{ character.description }}
             </TheClampedText>
         </div>

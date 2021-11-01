@@ -33,6 +33,11 @@ export default defineConfig({
                     "800": "#18191b",
                     "900": "#09090a",
                 },
+                light: {
+                    important: "#F4F4F4",
+                    normal: "#C9CBCF",
+                    ternary: "#8A8C8F",
+                },
                 genshin: {
                     element: {
                         anemo: "#80FFD7",
