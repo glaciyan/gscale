@@ -13,7 +13,6 @@
         "make:images": "node scripts/make_images.js"
     },
     "dependencies": {
-        "@headlessui/vue": "^1.4.1",
         "@vueuse/core": "^6.7.4",
         "vue": "^3.2.16",
         "vue-router": "4"
