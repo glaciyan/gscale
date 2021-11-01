@@ -4,11 +4,10 @@ import Center from "./Center.vue";
 
 export default defineComponent({
     components: { AscensionStarIcon, Center },
-    emits: ["update:modelValue"],
     props: {
         checkboxId: {
             type: String,
-            require: true,
+            required: true,
         },
         disabled: {
             type: Boolean,
@@ -17,7 +16,7 @@ export default defineComponent({
             type: Boolean,
         },
     },
-
+    emits: ["update:modelValue"],
     setup() {
         const active = ref(false);
 
@@ -31,8 +30,8 @@ export default defineComponent({
 <template>
     <label :for="checkboxId">
         <input
-            class="sr-only"
             :id="checkboxId"
+            class="sr-only"
             type="checkbox"
             aria-label="Ascended"
             :disabled="disabled"
