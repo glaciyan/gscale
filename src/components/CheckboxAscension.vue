@@ -1,10 +1,9 @@
 <script lang="ts">
-import AscensionStarIcon from "~/components/icons/AscensionStar.vue";
 import Center from "./Center.vue";
-import Star from "./icons/Star.vue";
+import StarIcon from "./icons/Star.vue";
 
 export default defineComponent({
-    components: { AscensionStarIcon, Center, StarIcon: Star },
+    components: { Center, StarIcon },
     props: {
         checkboxId: {
             type: String,
