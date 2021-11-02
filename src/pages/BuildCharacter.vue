@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import AscensionLevelSelector from "~/components/AscensionLevelSelector.vue";
+import AscensionLevelSelector from "~/components/LevelSelectorAscension.vue";
 import TheCharacterDetailPanel from "~/components/BuildCharacter/TheCharacterDetailPanel.vue";
 import CustomSelector from "~/components/CustomSelector.vue";
 import Flex from "~/components/Flex.vue";
@@ -34,7 +34,8 @@ useTitle(title(`Building ${character.name}`));
                         text-dark-50
                         sm:(w-[20rem]
                         border-dark-200 border-r-2)
-                        lg:(flex-grow-0) "
+                        lg:(flex-grow-0)
+                    "
                 >
                     <div class="p-6">
                         <div class="space-y-6">
