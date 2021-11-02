@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import { Listbox, ListboxButton, ListboxOption, ListboxOptions } from "@headlessui/vue";
 import ValueListboxLayout from "./ValueListboxLayout.vue";
+import DownChevron from "./icons/DownChevron.vue";
+import Flex from "./Flex.vue";
+import Center from "./Center.vue";
 
 withDefaults(defineProps<{ modelValue: any; listItems: any[]; id: string; keyFunc?: (option: any) => string }>(), {
     keyFunc: (option) => option,
@@ -22,12 +25,19 @@ defineEmits(["update:modelValue"]);
                         text-left text-base
                         w-max
                         py-2
-                        px-4
+                        pr-0
+                        pl-4
+                        transition-colors
                         text-light-900
+                        hover:bg-dark-500
                         focus:outline-none
+                        focus-visible:ring
                     "
                 >
-                    <slot name="button" :value="modelValue" />
+                    <Center>
+                        <slot name="button" :value="modelValue" />
+                        <DownChevron class="h-5 mx-2 text-light-ternary w-5" />
+                    </Center>
                 </ListboxButton>
             </template>
             <template #list>
