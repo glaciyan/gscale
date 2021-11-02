@@ -3,7 +3,7 @@
         <path
             d="M21 7L13 15L9 11L3 17M13 7H21H13ZM21 7V15V7Z"
             stroke="currentColor"
-            stroke-width="2"
+            stroke-width="1.5"
             stroke-linecap="round"
             stroke-linejoin="round"
         />

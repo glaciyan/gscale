@@ -3,7 +3,7 @@
         <path
             d="M5 3V7V3ZM3 5H7H3ZM6 17V21V17ZM4 19H8H4ZM13 3L15.286 9.857L21 12L15.286 14.143L13 21L10.714 14.143L5 12L10.714 9.857L13 3Z"
             stroke="currentColor"
-            stroke-width="2"
+            stroke-width="1.5"
             stroke-linecap="round"
             stroke-linejoin="round"
         />
