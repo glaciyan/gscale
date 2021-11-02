@@ -1,14 +1,16 @@
 <script setup lang="ts">
 import AscensionLevelSelector from "~/components/AscensionLevelSelector.vue";
 import TheCharacterDetailPanel from "~/components/BuildCharacter/TheCharacterDetailPanel.vue";
+import CustomSelector from "~/components/CustomSelector.vue";
+import Flex from "~/components/Flex.vue";
 import XLContainer from "~/components/XLContainer.vue";
+
+import { ascensionLevels } from "~/composites/ascensionLevels";
 import { getCharacterById } from "~/data/Characters";
 import { ICharacter } from "~/data/contracts/ICharacter";
-import { ascensionLevels } from "~/composites/ascensionLevels";
-import Flex from "~/components/Flex.vue";
-import title from "~/lib/title";
 import { range } from "~/lib/range";
-import CustomSelector from "~/components/CustomSelector.vue";
+import title from "~/lib/title";
+import SelectorGroup from "~/components/SelectorGroup.vue";
 
 const route = useRoute();
 const character = getCharacterById(route.params.character as string) ?? (getCharacterById("jeffrey") as ICharacter);
@@ -30,41 +32,30 @@ useTitle(title(`Building ${character.name}`));
                         flex flex-col flex-grow
                         bg-dark-600
                         text-dark-50
-                        buildpagepadding
                         sm:(w-[20rem]
                         border-dark-200 border-r-2)
                         lg:(flex-grow-0) "
                 >
-                    <div class="text-light-important p-6">
-                        <section>
-                            <h2>Level</h2>
-                            <Flex>
-                                <AscensionLevelSelector id="level1" v-model:value="ascStart" />
-                                <AscensionLevelSelector id="level2" v-model:value="ascGoal" />
-                            </Flex>
-                        </section>
-                        <section>
-                            <h2>Normal</h2>
-                            <Flex>
+                    <div class="p-6">
+                        <div class="space-y-6">
+                            <SelectorGroup title="Level">
+                                <AscensionLevelSelector class="rounded-l-md" id="level1" v-model:value="ascStart" />
+                                <AscensionLevelSelector cbClass="rounded-r-md" id="level2" v-model:value="ascGoal" />
+                            </SelectorGroup>
+                            <SelectorGroup title="Normal">
                                 <CustomSelector id="normal1" v-model="nStart" :listItems="range(10)">
                                     <template #button="{ value }">
                                         {{ value }}
                                     </template>
                                     <template #item="{ option }">
-                                        {{ option }}
+                                        <span class="mr-2">{{ option }}</span>
                                     </template>
                                 </CustomSelector>
-                            </Flex>
-                        </section>
+                            </SelectorGroup>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </XLContainer>
 </template>
-
-<style>
-h2 {
-    @apply font-semibold mb-2;
-}
-</style>
