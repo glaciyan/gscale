@@ -4,20 +4,20 @@ import { AscensionLevel, Levels } from "~/interfaces/AscensionLevel";
 import AscensionCheckbox from "./CheckboxAscension.vue";
 import CustomSelector from "./SelectorCustom.vue";
 
-const props = defineProps<{ value: AscensionLevel; id: string; cbClass?: string }>();
-const emit = defineEmits(["update:value"]);
+const props = defineProps<{ modelValue: AscensionLevel; id: string; cbClass?: string }>();
+const emit = defineEmits(["update:modelValue"]);
 
 const checkboxId = props.id + "checkbox";
 
 const update = (val: { level?: number; ascended?: boolean }) => {
     // make a copy of the object and merge with current value https://github.com/vuejs/vue/issues/4373#issuecomment-279826554
-    const updatedObject = Object.assign({}, props.value, val);
+    const updatedObject = Object.assign({}, props.modelValue, val);
 
-    emit("update:value", updatedObject);
+    emit("update:modelValue", updatedObject);
 };
 
 const cannotAscend = computed(() => {
-    return props.value.level === 1 || props.value.level === 90;
+    return props.modelValue.level === 1 || props.modelValue.level === 90;
 });
 
 const keyFunc = (option: AscensionLevel) => option.level + option.ascended.toString();
@@ -26,8 +26,8 @@ const keyFunc = (option: AscensionLevel) => option.level + option.ascended.toStr
 <template>
     <CustomSelector
         :id="id"
-        :modelValue="value"
-        @update:modelValue="$emit('update:value', $event)"
+        :modelValue="modelValue"
+        @update:modelValue="$emit('update:modelValue', $event)"
         :listItems="Levels"
         :keyFunc="keyFunc"
         :class="$attrs.class"
@@ -43,7 +43,7 @@ const keyFunc = (option: AscensionLevel) => option.level + option.ascended.toStr
     <AscensionCheckbox
         :class="cbClass"
         :checkboxId="checkboxId"
-        :modelValue="value.ascended"
+        :modelValue="modelValue.ascended"
         :disabled="cannotAscend"
         @update:modelValue="update({ ascended: $event })"
     />

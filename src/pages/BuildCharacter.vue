@@ -38,8 +38,8 @@ const { start: burstStart, goal: burstGoal } = useTalentLevelRange();
                     <div class="p-6">
                         <div class="space-y-6">
                             <SelectorGroup title="Level">
-                                <SelectorAscensionLevel class="rounded-l-md" id="level1" v-model:value="ascStart" />
-                                <SelectorAscensionLevel cbClass="rounded-r-md" id="level2" v-model:value="ascGoal" />
+                                <SelectorAscensionLevel class="rounded-l-md" id="level1" v-model="ascStart" />
+                                <SelectorAscensionLevel cbClass="rounded-r-md" id="level2" v-model="ascGoal" />
                             </SelectorGroup>
                             <SelectorGroup title="Normal Attack">
                                 <SelectorTalentLevel v-model="normalStart" />
