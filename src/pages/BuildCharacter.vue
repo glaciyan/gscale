@@ -4,7 +4,7 @@ import AscensionLevelSelector from "~/components/SelectorAscensionLevel.vue";
 import SelectorGroup from "~/components/SelectorGroup.vue";
 import SelectorTalentLevel from "~/components/SelectorTalentLevel.vue";
 import XLContainer from "~/components/XLContainer.vue";
-import { useAscensionLevelRange } from "~/composites/ascensionLevels";
+import { useAscensionLevelRange } from "~/composites/useAscensionLevelRange";
 import { useTalentLevelRange } from "~/composites/useTalentLevelRange";
 import { getCharacterById } from "~/data/Characters";
 import { ICharacter } from "~/data/contracts/ICharacter";
