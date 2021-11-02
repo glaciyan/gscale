@@ -1,53 +1,26 @@
-<script lang="ts">
-import { AscensionLevel, Levels } from "~/interfaces/AscensionLevel";
+<script setup lang="ts">
 import AscensionStarIcon from "~/components/icons/AscensionStarIcon.vue";
-import { PropType } from "vue-demi";
+import { AscensionLevel, Levels } from "~/interfaces/AscensionLevel";
 import AscensionCheckbox from "./AscensionCheckbox.vue";
-import ValueListboxLayout from "./ValueListboxLayout.vue";
 import CustomSelector from "./CustomSelector.vue";
 
-export default defineComponent({
-    components: {
-        AscensionStarIcon,
-        AscensionCheckbox,
-        ValueListboxLayout,
-        CustomSelector,
-    },
-    props: {
-        value: {
-            type: Object as PropType<AscensionLevel>,
-            required: true,
-        },
-        id: {
-            type: String,
-            required: true,
-        },
-    },
-    setup(props, { emit }) {
-        const checkboxId = props.id + "checkbox";
+const props = defineProps<{ value: AscensionLevel; id: string }>();
+const emit = defineEmits(["update:value"]);
 
-        const update = (val: { level?: number; ascended?: boolean }) => {
-            // make a copy of the object and merge with current value https://github.com/vuejs/vue/issues/4373#issuecomment-279826554
-            const updatedObject = Object.assign({}, props.value, val);
+const checkboxId = props.id + "checkbox";
 
-            emit("update:value", updatedObject);
-        };
+const update = (val: { level?: number; ascended?: boolean }) => {
+    // make a copy of the object and merge with current value https://github.com/vuejs/vue/issues/4373#issuecomment-279826554
+    const updatedObject = Object.assign({}, props.value, val);
 
-        const cannotAscend = computed(() => {
-            return props.value.level === 1 || props.value.level === 90;
-        });
+    emit("update:value", updatedObject);
+};
 
-        const keyFunc = (option: AscensionLevel) => option.level + option.ascended.toString();
-
-        return {
-            checkboxId,
-            update,
-            cannotAscend,
-            Levels,
-            keyFunc,
-        };
-    },
+const cannotAscend = computed(() => {
+    return props.value.level === 1 || props.value.level === 90;
 });
+
+const keyFunc = (option: AscensionLevel) => option.level + option.ascended.toString();
 </script>
 
 <template>
