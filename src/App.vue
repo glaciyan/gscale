@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from "vue-router";
+import Navigation from "./components/Navigation.vue";
 </script>
 
 <template>
     <header class="flex space-x-2">
         <span>gscale</span>
-        <RouterLink to="/">Characters</RouterLink>
-        <RouterLink to="/builds">Builds</RouterLink>
+        <Navigation orientation="verical" />
     </header>
     <main id="__gscale" class="min-h-screen mt-[80px]">
         <RouterView />

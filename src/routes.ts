@@ -32,3 +32,14 @@ export default [
         },
     },
 ];
+
+export const navigation: { path: string; name: string }[] = [
+    {
+        path: "/",
+        name: "Characters",
+    },
+    {
+        path: "/builds",
+        name: "Your Builds",
+    },
+];
