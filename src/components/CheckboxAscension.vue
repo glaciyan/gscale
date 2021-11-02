@@ -1,30 +1,11 @@
-<script lang="ts">
+<script setup lang="ts">
 import Center from "./Center.vue";
 import StarIcon from "./icons/Star.vue";
 
-export default defineComponent({
-    components: { Center, StarIcon },
-    props: {
-        checkboxId: {
-            type: String,
-            required: true,
-        },
-        disabled: {
-            type: Boolean,
-        },
-        modelValue: {
-            type: Boolean,
-        },
-    },
-    emits: ["update:modelValue"],
-    setup() {
-        const active = ref(false);
+defineProps<{ modelValue: boolean; checkboxId: string; disabled: boolean }>();
+defineEmits(["update:modelValue"]);
 
-        return {
-            active,
-        };
-    },
-});
+const active = ref(false);
 </script>
 
 <template>
