@@ -1,16 +1,13 @@
 <script setup lang="ts">
-import AscensionLevelSelector from "~/components/SelectorAscensionLevel.vue";
 import TheCharacterDetailPanel from "~/components/BuildCharacter/TheCharacterDetailPanel.vue";
-import CustomSelector from "~/components/SelectorCustom.vue";
-import Flex from "~/components/Flex.vue";
+import AscensionLevelSelector from "~/components/SelectorAscensionLevel.vue";
+import SelectorGroup from "~/components/SelectorGroup.vue";
+import SelectorTalentLevel from "~/components/SelectorTalentLevel.vue";
 import XLContainer from "~/components/XLContainer.vue";
-
 import { ascensionLevels } from "~/composites/ascensionLevels";
 import { getCharacterById } from "~/data/Characters";
 import { ICharacter } from "~/data/contracts/ICharacter";
-import { range } from "~/lib/range";
 import title from "~/lib/title";
-import SelectorGroup from "~/components/SelectorGroup.vue";
 
 const route = useRoute();
 const character = getCharacterById(route.params.character as string) ?? (getCharacterById("jeffrey") as ICharacter);

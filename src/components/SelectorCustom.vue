@@ -1,9 +1,8 @@
 <script setup lang="ts">
 import { Listbox, ListboxButton, ListboxOption, ListboxOptions } from "@headlessui/vue";
-import ValueListboxLayout from "./ValueListboxLayout.vue";
-import DownChevron from "./icons/DownChevron.vue";
-import Flex from "./Flex.vue";
 import Center from "./Center.vue";
+import DownChevron from "./icons/DownChevron.vue";
+import ValueListboxLayout from "./ValueListboxLayout.vue";
 
 withDefaults(defineProps<{ modelValue: any; listItems: any[]; id: string; keyFunc?: (option: any) => string }>(), {
     keyFunc: (option) => option,
