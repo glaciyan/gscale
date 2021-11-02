@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import TheCharacterDetailPanel from "~/components/BuildCharacter/TheCharacterDetailPanel.vue";
 import SelectorAscensionLevel from "~/components/SelectorAscensionLevel.vue";
-import SelectorGroup from "~/components/SelectorGroup.vue";
+import Titled from "~/components/Titled.vue";
 import SelectorTalentLevel from "~/components/SelectorTalentLevel.vue";
 import XLContainer from "~/components/XLContainer.vue";
 import { useAscensionLevelRange } from "~/composites/useAscensionLevelRange";
@@ -33,26 +33,27 @@ const { start: burstStart, goal: burstGoal } = useTalentLevelRange();
                         text-dark-50
                         sm:(w-[20rem]
                         border-dark-200 border-r-2)
-                        lg:(flex-grow-0) "
+                        lg:(flex-grow-0)
+                    "
                 >
                     <div class="p-6">
                         <div class="space-y-6">
-                            <SelectorGroup title="Level">
+                            <Titled title="Level">
                                 <SelectorAscensionLevel class="rounded-l-md" id="level1" v-model="ascStart" />
                                 <SelectorAscensionLevel cbClass="rounded-r-md" id="level2" v-model="ascGoal" />
-                            </SelectorGroup>
-                            <SelectorGroup title="Normal Attack">
-                                <SelectorTalentLevel v-model="normalStart" />
-                                <SelectorTalentLevel v-model="normalGoal" />
-                            </SelectorGroup>
-                            <SelectorGroup title="Elemental Attack">
-                                <SelectorTalentLevel v-model="emStart" />
-                                <SelectorTalentLevel v-model="emGoal" />
-                            </SelectorGroup>
-                            <SelectorGroup title="Burst">
-                                <SelectorTalentLevel v-model="burstStart" />
-                                <SelectorTalentLevel v-model="burstGoal" />
-                            </SelectorGroup>
+                            </Titled>
+                            <Titled title="Normal Attack">
+                                <SelectorTalentLevel id="normal1" v-model="normalStart" />
+                                <SelectorTalentLevel id="normal2" v-model="normalGoal" />
+                            </Titled>
+                            <Titled title="Elemental Attack">
+                                <SelectorTalentLevel id="em1" v-model="emStart" />
+                                <SelectorTalentLevel id="em2" v-model="emGoal" />
+                            </Titled>
+                            <Titled title="Burst">
+                                <SelectorTalentLevel id="burst1" v-model="burstStart" />
+                                <SelectorTalentLevel id="burst2" v-model="burstGoal" />
+                            </Titled>
                         </div>
                     </div>
                 </div>
