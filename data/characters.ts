@@ -10,6 +10,24 @@ import {
 } from "./travelerCost";
 
 export const characters: Characters = {
+    thoma: {
+        id: "thoma",
+        name: "Thoma",
+        rarity: 4,
+        constellation: "Rubeum Scutum",
+        description: `The Kamisato Clan's housekeeper. A well-known "fixer" in Inazuma.`,
+        element: "pyro",
+        weapon: "polearm",
+        sub: "ATK",
+        materials: standard({
+            boss: items.smoldering_pearl.name,
+            local: items.fluorescent_fungus.name,
+            weekly: items.hellfire_butterfly.name,
+            common: ItemGroup.treasure_hoarder_insignia,
+            book: ItemGroup.transience,
+            gem: ItemGroup.pyro_gem,
+        }),
+    },
     kokomi: {
         id: "kokomi",
         name: "Kokomi",
