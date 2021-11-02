@@ -1,9 +1,10 @@
 <script lang="ts">
 import AscensionStarIcon from "~/components/icons/AscensionStar.vue";
 import Center from "./Center.vue";
+import Star from "./icons/Star.vue";
 
 export default defineComponent({
-    components: { AscensionStarIcon, Center },
+    components: { AscensionStarIcon, Center, StarIcon: Star },
     props: {
         checkboxId: {
             type: String,
@@ -53,7 +54,7 @@ export default defineComponent({
             @mouseup="active = false"
             @mouseout="active = false"
         >
-            <AscensionStarIcon
+            <StarIcon
                 :class="[
                     { '!text-genshin-rarity-5': modelValue },
                     { '!text-dark-100/40': disabled },

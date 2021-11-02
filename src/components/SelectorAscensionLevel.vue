@@ -3,6 +3,7 @@ import AscensionStarIcon from "~/components/icons/AscensionStar.vue";
 import { AscensionLevel, Levels } from "~/interfaces/AscensionLevel";
 import AscensionCheckbox from "./CheckboxAscension.vue";
 import CustomSelector from "./SelectorCustom.vue";
+import StarIcon from "./icons/Star.vue";
 
 const props = defineProps<{ modelValue: AscensionLevel; id: string; cbClass?: string }>();
 const emit = defineEmits(["update:modelValue"]);
@@ -37,7 +38,7 @@ const keyFunc = (option: AscensionLevel) => option.level + option.ascended.toStr
         </template>
         <template #item="{ option }">
             {{ option.level }} <span v-if="option.ascended" class="sr-only">Ascended</span>
-            <AscensionStarIcon v-if="option.ascended" class="flex-shrink-0 ml-1" />
+            <StarIcon v-if="option.ascended" class="flex-shrink-0 ml-1" />
         </template>
     </CustomSelector>
     <AscensionCheckbox
