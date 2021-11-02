@@ -1,16 +1,19 @@
 <script setup lang="ts">
 import TheCharacterDetailPanel from "~/components/BuildCharacter/TheCharacterDetailPanel.vue";
+import ElementalIcon from "~/components/icons/Elemental.vue";
+import FireIcon from "~/components/icons/Fire.vue";
+import GrowthIcon from "~/components/icons/Growth.vue";
+import SwordIcon from "~/components/icons/Sword.vue";
 import SelectorAscensionLevel from "~/components/SelectorAscensionLevel.vue";
-import Titled from "~/components/Titled.vue";
+import SelectorIconSeperator from "~/components/SelectorIconSeperator.vue";
 import SelectorTalentLevel from "~/components/SelectorTalentLevel.vue";
+import Titled from "~/components/Titled.vue";
 import XLContainer from "~/components/XLContainer.vue";
 import { useAscensionLevelRange } from "~/composites/useAscensionLevelRange";
 import { useTalentLevelRange } from "~/composites/useTalentLevelRange";
 import { getCharacterById } from "~/data/Characters";
 import { ICharacter } from "~/data/contracts/ICharacter";
 import title from "~/lib/title";
-import SelectorIconSeperator from "~/components/SelectorIconSeperator.vue";
-import SwordIcon from "~/components/icons/Sword.vue";
 
 const route = useRoute();
 const character = getCharacterById(route.params.character as string) ?? (getCharacterById("jeffrey") as ICharacter);
@@ -35,13 +38,15 @@ const { start: burstStart, goal: burstGoal } = useTalentLevelRange();
                         text-dark-50
                         sm:(w-[20rem]
                         border-dark-200 border-r-2)
-                        lg:(flex-grow-0)
-                    "
+                        lg:(flex-grow-0) "
                 >
                     <div class="p-6">
                         <div class="space-y-6">
                             <Titled title="Level">
                                 <SelectorAscensionLevel class="rounded-l-md" id="level1" v-model="ascStart" />
+                                <SelectorIconSeperator :element="character.element.normalizedName">
+                                    <GrowthIcon class="-m-0.5" />
+                                </SelectorIconSeperator>
                                 <SelectorAscensionLevel cbClass="rounded-r-md" id="level2" v-model="ascGoal" />
                             </Titled>
                             <Titled title="Normal Attack">
@@ -53,10 +58,16 @@ const { start: burstStart, goal: burstGoal } = useTalentLevelRange();
                             </Titled>
                             <Titled title="Elemental Attack">
                                 <SelectorTalentLevel class="rounded-l-md" id="em1" v-model="emStart" />
+                                <SelectorIconSeperator :element="character.element.normalizedName">
+                                    <ElementalIcon class="-m-0.5" />
+                                </SelectorIconSeperator>
                                 <SelectorTalentLevel class="rounded-r-md" id="em2" v-model="emGoal" />
                             </Titled>
                             <Titled title="Burst">
                                 <SelectorTalentLevel class="rounded-l-md" id="burst1" v-model="burstStart" />
+                                <SelectorIconSeperator :element="character.element.normalizedName">
+                                    <FireIcon class="-m-0.5" />
+                                </SelectorIconSeperator>
                                 <SelectorTalentLevel class="rounded-r-md" id="burst2" v-model="burstGoal" />
                             </Titled>
                         </div>
