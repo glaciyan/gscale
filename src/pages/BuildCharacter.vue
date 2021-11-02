@@ -34,8 +34,7 @@ useTitle(title(`Building ${character.name}`));
                         text-dark-50
                         sm:(w-[20rem]
                         border-dark-200 border-r-2)
-                        lg:(flex-grow-0)
-                    "
+                        lg:(flex-grow-0) "
                 >
                     <div class="p-6">
                         <div class="space-y-6">
@@ -44,14 +43,7 @@ useTitle(title(`Building ${character.name}`));
                                 <AscensionLevelSelector cbClass="rounded-r-md" id="level2" v-model:value="ascGoal" />
                             </SelectorGroup>
                             <SelectorGroup title="Normal">
-                                <CustomSelector id="normal1" v-model="nStart" :listItems="range(10)">
-                                    <template #button="{ value }">
-                                        {{ value }}
-                                    </template>
-                                    <template #item="{ option }">
-                                        <span class="mr-2">{{ option }}</span>
-                                    </template>
-                                </CustomSelector>
+                                <SelectorTalentLevel v-model="nStart" />
                             </SelectorGroup>
                         </div>
                     </div>
