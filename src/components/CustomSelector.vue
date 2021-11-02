@@ -17,6 +17,7 @@ defineEmits(["update:modelValue"]);
         <ValueListboxLayout>
             <template #button>
                 <ListboxButton
+                    :class="$attrs.class"
                     class="
                         cursor-pointer
                         font-normal font-sans
@@ -62,9 +63,13 @@ defineEmits(["update:modelValue"]);
                             v-for="option in listItems"
                             :key="keyFunc(option)"
                             :value="option"
-                            class="cursor-default flex py-2 pr-6 pl-6 items-center hover:bg-dark-700 focus:bg-dark-700"
+                            v-slot="{ active }"
                         >
-                            <slot name="item" :option="option" />
+                            <div
+                                :class="['cursor-default flex py-2 pr-6 pl-6 items-center', { 'bg-dark-500': active }]"
+                            >
+                                <slot name="item" :option="option" />
+                            </div>
                         </ListboxOption>
                     </ListboxOptions>
                 </transition>

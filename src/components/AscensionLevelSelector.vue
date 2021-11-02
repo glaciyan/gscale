@@ -4,7 +4,7 @@ import { AscensionLevel, Levels } from "~/interfaces/AscensionLevel";
 import AscensionCheckbox from "./AscensionCheckbox.vue";
 import CustomSelector from "./CustomSelector.vue";
 
-const props = defineProps<{ value: AscensionLevel; id: string }>();
+const props = defineProps<{ value: AscensionLevel; id: string; cbClass?: string }>();
 const emit = defineEmits(["update:value"]);
 
 const checkboxId = props.id + "checkbox";
@@ -30,6 +30,7 @@ const keyFunc = (option: AscensionLevel) => option.level + option.ascended.toStr
         @update:modelValue="$emit('update:value', $event)"
         :listItems="Levels"
         :keyFunc="keyFunc"
+        :class="$attrs.class"
     >
         <template #button="slotProps">
             {{ (slotProps.value as any).level }}
@@ -40,6 +41,7 @@ const keyFunc = (option: AscensionLevel) => option.level + option.ascended.toStr
         </template>
     </CustomSelector>
     <AscensionCheckbox
+        :class="cbClass"
         :checkboxId="checkboxId"
         :modelValue="value.ascended"
         :disabled="cannotAscend"

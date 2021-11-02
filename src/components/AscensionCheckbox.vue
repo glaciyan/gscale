@@ -28,7 +28,7 @@ export default defineComponent({
 </script>
 
 <template>
-    <label :for="checkboxId">
+    <label :for="checkboxId" class="focus-within:ring">
         <input
             :id="checkboxId"
             class="sr-only"
@@ -45,6 +45,7 @@ export default defineComponent({
                 { 'hover:bg-dark-400/70': !disabled },
                 { '!bg-dark-600': active && !disabled },
                 { 'cursor-default': disabled },
+                $attrs.class,
             ]"
             aria-hidden="true"
             @mousedown="active = true"
