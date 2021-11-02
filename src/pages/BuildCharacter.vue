@@ -9,6 +9,8 @@ import { useTalentLevelRange } from "~/composites/useTalentLevelRange";
 import { getCharacterById } from "~/data/Characters";
 import { ICharacter } from "~/data/contracts/ICharacter";
 import title from "~/lib/title";
+import SelectorIconSeperator from "~/components/SelectorIconSeperator.vue";
+import SwordIcon from "~/components/icons/Sword.vue";
 
 const route = useRoute();
 const character = getCharacterById(route.params.character as string) ?? (getCharacterById("jeffrey") as ICharacter);
@@ -33,7 +35,8 @@ const { start: burstStart, goal: burstGoal } = useTalentLevelRange();
                         text-dark-50
                         sm:(w-[20rem]
                         border-dark-200 border-r-2)
-                        lg:(flex-grow-0) "
+                        lg:(flex-grow-0)
+                    "
                 >
                     <div class="p-6">
                         <div class="space-y-6">
@@ -43,6 +46,9 @@ const { start: burstStart, goal: burstGoal } = useTalentLevelRange();
                             </Titled>
                             <Titled title="Normal Attack">
                                 <SelectorTalentLevel class="rounded-l-md" id="normal1" v-model="normalStart" />
+                                <SelectorIconSeperator :element="character.element.normalizedName">
+                                    <SwordIcon class="h-[26px] -m-0.5 w-[26px]" />
+                                </SelectorIconSeperator>
                                 <SelectorTalentLevel class="rounded-r-md" id="normal2" v-model="normalGoal" />
                             </Titled>
                             <Titled title="Elemental Attack">

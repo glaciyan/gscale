@@ -14,6 +14,7 @@ export default defineConfig({
         range(5).map((n) => `text-genshin-rarity-${n}`),
         em.map((e) => `text-genshin-element-${e}`),
         em.map((e) => `ring-genshin-element-${e}`),
+        em.map((e) => `bg-genshin-element-${e}-dark`),
     ],
     attributify: {
         prefix: "w",

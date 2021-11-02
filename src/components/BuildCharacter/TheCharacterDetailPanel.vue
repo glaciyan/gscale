@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import ElementIcon from "~/components/icons/ElementIcon.vue";
-import SwordIcon from "~/components/icons/SwordIcon.vue";
+import ElementIcon from "~/components/icons/Element.vue";
+import SwordIcon from "~/components/icons/Sword.vue";
 import { useElementTextColor } from "~/composites/elementTextColor";
 import { ICharacter } from "~/data/contracts/ICharacter";
 import CharacterPortrait from "../character/CharacterPortrait.vue";

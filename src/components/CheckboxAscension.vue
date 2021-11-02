@@ -1,5 +1,5 @@
 <script lang="ts">
-import AscensionStarIcon from "~/components/icons/AscensionStarIcon.vue";
+import AscensionStarIcon from "~/components/icons/AscensionStar.vue";
 import Center from "./Center.vue";
 
 export default defineComponent({

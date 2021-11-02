@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import AscensionStarIcon from "~/components/icons/AscensionStarIcon.vue";
+import AscensionStarIcon from "~/components/icons/AscensionStar.vue";
 import { AscensionLevel, Levels } from "~/interfaces/AscensionLevel";
 import AscensionCheckbox from "./CheckboxAscension.vue";
 import CustomSelector from "./SelectorCustom.vue";
