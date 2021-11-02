@@ -37,18 +37,27 @@ export default defineComponent({
             return props.value.level === 1 || props.value.level === 90;
         });
 
+        const keyFunc = (option: AscensionLevel) => option.level + option.ascended.toString();
+
         return {
             checkboxId,
             update,
             cannotAscend,
             Levels,
+            keyFunc,
         };
     },
 });
 </script>
 
 <template>
-    <CustomSelector :id="id" :modelValue="value" @update:modelValue="$emit('update:value', $event)" :listItems="Levels">
+    <CustomSelector
+        :id="id"
+        :modelValue="value"
+        @update:modelValue="$emit('update:value', $event)"
+        :listItems="Levels"
+        :keyFunc="keyFunc"
+    >
         <template #button="slotProps">
             {{ (slotProps.value as any).level }}
         </template>
