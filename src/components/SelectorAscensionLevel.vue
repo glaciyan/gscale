@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import AscensionStarIcon from "~/components/icons/AscensionStarIcon.vue";
 import { AscensionLevel, Levels } from "~/interfaces/AscensionLevel";
-import AscensionCheckbox from "./AscensionCheckbox.vue";
-import CustomSelector from "./CustomSelector.vue";
+import AscensionCheckbox from "./CheckboxAscension.vue";
+import CustomSelector from "./SelectorCustom.vue";
 
 const props = defineProps<{ value: AscensionLevel; id: string; cbClass?: string }>();
 const emit = defineEmits(["update:value"]);
