@@ -7,7 +7,7 @@ import SwordIcon from "~/components/icons/Sword.vue";
 import SelectorAscensionLevel from "~/components/SelectorAscensionLevel.vue";
 import SelectorIconSeperator from "~/components/SelectorIconSeperator.vue";
 import SelectorTalentLevel from "~/components/SelectorTalentLevel.vue";
-import Titled from "~/components/Titled.vue";
+import TitledSelectorGroup from "~/components/TitledSelectorGroup.vue";
 import XLContainer from "~/components/XLContainer.vue";
 import { useAscensionLevelRange } from "~/composites/useAscensionLevelRange";
 import { useTalentLevelRange } from "~/composites/useTalentLevelRange";
@@ -42,34 +42,34 @@ const { start: burstStart, goal: burstGoal } = useTalentLevelRange();
                 >
                     <div class="p-6">
                         <div class="space-y-6">
-                            <Titled title="Level">
+                            <TitledSelectorGroup title="Level">
                                 <SelectorAscensionLevel class="rounded-l-md" id="level1" v-model="ascStart" />
                                 <SelectorIconSeperator :element="character.element.normalizedName">
                                     <GrowthIcon class="-m-0.5" />
                                 </SelectorIconSeperator>
                                 <SelectorAscensionLevel cbClass="rounded-r-md" id="level2" v-model="ascGoal" />
-                            </Titled>
-                            <Titled title="Normal Attack">
+                            </TitledSelectorGroup>
+                            <TitledSelectorGroup title="Normal Attack">
                                 <SelectorTalentLevel class="rounded-l-md" id="normal1" v-model="normalStart" />
                                 <SelectorIconSeperator :element="character.element.normalizedName">
                                     <SwordIcon class="h-[26px] -m-0.5 w-[26px]" />
                                 </SelectorIconSeperator>
                                 <SelectorTalentLevel class="rounded-r-md" id="normal2" v-model="normalGoal" />
-                            </Titled>
-                            <Titled title="Elemental Attack">
+                            </TitledSelectorGroup>
+                            <TitledSelectorGroup title="Elemental Attack">
                                 <SelectorTalentLevel class="rounded-l-md" id="em1" v-model="emStart" />
                                 <SelectorIconSeperator :element="character.element.normalizedName">
                                     <ElementalIcon class="-m-0.5" />
                                 </SelectorIconSeperator>
                                 <SelectorTalentLevel class="rounded-r-md" id="em2" v-model="emGoal" />
-                            </Titled>
-                            <Titled title="Burst">
+                            </TitledSelectorGroup>
+                            <TitledSelectorGroup title="Burst">
                                 <SelectorTalentLevel class="rounded-l-md" id="burst1" v-model="burstStart" />
                                 <SelectorIconSeperator :element="character.element.normalizedName">
                                     <FireIcon class="-m-0.5" />
                                 </SelectorIconSeperator>
                                 <SelectorTalentLevel class="rounded-r-md" id="burst2" v-model="burstGoal" />
-                            </Titled>
+                            </TitledSelectorGroup>
                         </div>
                     </div>
                 </div>
