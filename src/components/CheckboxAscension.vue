@@ -28,7 +28,7 @@ export default defineComponent({
 </script>
 
 <template>
-    <label :for="checkboxId" class="focus-within:ring">
+    <label :for="checkboxId">
         <input
             :id="checkboxId"
             class="sr-only"
@@ -41,6 +41,7 @@ export default defineComponent({
         />
         <Center
             :class="[
+                'checkbox-focus-visible-ring',
                 'cursor-pointer h-full bg-dark-300 transition-colors w-10',
                 { 'hover:bg-dark-400/70': !disabled },
                 { '!bg-dark-600': active && !disabled },
@@ -62,3 +63,9 @@ export default defineComponent({
         </Center>
     </label>
 </template>
+
+<style scoped>
+input[type="checkbox"]:focus-visible + .checkbox-focus-visible-ring {
+    @apply ring;
+}
+</style>
