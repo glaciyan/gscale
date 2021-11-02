@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import TheCharacterDetailPanel from "~/components/BuildCharacter/TheCharacterDetailPanel.vue";
-import AscensionLevelSelector from "~/components/SelectorAscensionLevel.vue";
+import SelectorAscensionLevel from "~/components/SelectorAscensionLevel.vue";
 import SelectorGroup from "~/components/SelectorGroup.vue";
 import SelectorTalentLevel from "~/components/SelectorTalentLevel.vue";
 import XLContainer from "~/components/XLContainer.vue";
@@ -38,8 +38,8 @@ const { start: burstStart, goal: burstGoal } = useTalentLevelRange();
                     <div class="p-6">
                         <div class="space-y-6">
                             <SelectorGroup title="Level">
-                                <AscensionLevelSelector class="rounded-l-md" id="level1" v-model:value="ascStart" />
-                                <AscensionLevelSelector cbClass="rounded-r-md" id="level2" v-model:value="ascGoal" />
+                                <SelectorAscensionLevel class="rounded-l-md" id="level1" v-model:value="ascStart" />
+                                <SelectorAscensionLevel cbClass="rounded-r-md" id="level2" v-model:value="ascGoal" />
                             </SelectorGroup>
                             <SelectorGroup title="Normal Attack">
                                 <SelectorTalentLevel v-model="normalStart" />
