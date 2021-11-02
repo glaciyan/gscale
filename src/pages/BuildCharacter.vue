@@ -33,8 +33,7 @@ const { start: burstStart, goal: burstGoal } = useTalentLevelRange();
                         text-dark-50
                         sm:(w-[20rem]
                         border-dark-200 border-r-2)
-                        lg:(flex-grow-0)
-                    "
+                        lg:(flex-grow-0) "
                 >
                     <div class="p-6">
                         <div class="space-y-6">
@@ -43,16 +42,16 @@ const { start: burstStart, goal: burstGoal } = useTalentLevelRange();
                                 <SelectorAscensionLevel cbClass="rounded-r-md" id="level2" v-model="ascGoal" />
                             </Titled>
                             <Titled title="Normal Attack">
-                                <SelectorTalentLevel id="normal1" v-model="normalStart" />
-                                <SelectorTalentLevel id="normal2" v-model="normalGoal" />
+                                <SelectorTalentLevel class="rounded-l-md" id="normal1" v-model="normalStart" />
+                                <SelectorTalentLevel class="rounded-r-md" id="normal2" v-model="normalGoal" />
                             </Titled>
                             <Titled title="Elemental Attack">
-                                <SelectorTalentLevel id="em1" v-model="emStart" />
-                                <SelectorTalentLevel id="em2" v-model="emGoal" />
+                                <SelectorTalentLevel class="rounded-l-md" id="em1" v-model="emStart" />
+                                <SelectorTalentLevel class="rounded-r-md" id="em2" v-model="emGoal" />
                             </Titled>
                             <Titled title="Burst">
-                                <SelectorTalentLevel id="burst1" v-model="burstStart" />
-                                <SelectorTalentLevel id="burst2" v-model="burstGoal" />
+                                <SelectorTalentLevel class="rounded-l-md" id="burst1" v-model="burstStart" />
+                                <SelectorTalentLevel class="rounded-r-md" id="burst2" v-model="burstGoal" />
                             </Titled>
                         </div>
                     </div>
