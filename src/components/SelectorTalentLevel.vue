@@ -2,13 +2,13 @@
 import SelectorCustom from "./SelectorCustom.vue";
 import { range } from "~/lib/range";
 
-defineProps<{ modelValue: number }>();
+defineProps<{ modelValue: number; id: string }>();
 defineEmits(["update:modelValue"]);
 </script>
 
 <template>
     <SelectorCustom
-        id="normal1"
+        :id="id"
         :modelValue="modelValue"
         @update:modelValue="$emit('update:modelValue', $event)"
         :listItems="range(10)"
