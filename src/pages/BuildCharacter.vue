@@ -8,7 +8,7 @@ import SelectorAscensionLevel from "~/components/SelectorAscensionLevel.vue";
 import SelectorIconSeperator from "~/components/SelectorIconSeperator.vue";
 import SelectorTalentLevel from "~/components/SelectorTalentLevel.vue";
 import TitledSelectorGroup from "~/components/TitledSelectorGroup.vue";
-import XLContainer from "~/components/XLContainer.vue";
+import XLContainer from "~/components/container/XLContainer.vue";
 import { useAscensionLevelRange } from "~/composites/useAscensionLevelRange";
 import { useTalentLevelRange } from "~/composites/useTalentLevelRange";
 import { getCharacterById } from "~/data/Characters";
@@ -38,7 +38,8 @@ const { start: burstStart, goal: burstGoal } = useTalentLevelRange();
                         text-dark-50
                         sm:(w-[20rem]
                         border-dark-200 border-r-2)
-                        lg:(flex-grow-0) "
+                        lg:(flex-grow-0)
+                    "
                 >
                     <div class="p-6">
                         <div class="space-y-6">
