@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import AscensionLevelSelector from "~/components/LevelSelectorAscension.vue";
+import AscensionLevelSelector from "~/components/SelectorAscensionLevel.vue";
 import TheCharacterDetailPanel from "~/components/BuildCharacter/TheCharacterDetailPanel.vue";
 import CustomSelector from "~/components/CustomSelector.vue";
 import Flex from "~/components/Flex.vue";
