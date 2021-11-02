@@ -38,11 +38,11 @@ const { start: burstStart, goal: burstGoal } = useTalentLevelRange();
                         text-dark-50
                         sm:(w-[20rem]
                         border-dark-200 border-r-2)
-                        lg:(flex-grow-0)
-                    "
+                        lg:(flex-grow-0) "
                 >
                     <div class="p-6">
                         <div class="space-y-6">
+                            <!-- Level -->
                             <TitledSelectorGroup title="Level">
                                 <SelectorAscensionLevel class="rounded-l-md" id="level1" v-model="ascStart" />
                                 <SelectorIconSeperator :element="character.element.normalizedName">
@@ -50,6 +50,8 @@ const { start: burstStart, goal: burstGoal } = useTalentLevelRange();
                                 </SelectorIconSeperator>
                                 <SelectorAscensionLevel cbClass="rounded-r-md" id="level2" v-model="ascGoal" />
                             </TitledSelectorGroup>
+
+                            <!-- Normal -->
                             <TitledSelectorGroup title="Normal Attack">
                                 <SelectorTalentLevel class="rounded-l-md" id="normal1" v-model="normalStart" />
                                 <SelectorIconSeperator :element="character.element.normalizedName">
@@ -57,6 +59,8 @@ const { start: burstStart, goal: burstGoal } = useTalentLevelRange();
                                 </SelectorIconSeperator>
                                 <SelectorTalentLevel class="rounded-r-md" id="normal2" v-model="normalGoal" />
                             </TitledSelectorGroup>
+
+                            <!-- Elemental -->
                             <TitledSelectorGroup title="Elemental Attack">
                                 <SelectorTalentLevel class="rounded-l-md" id="em1" v-model="emStart" />
                                 <SelectorIconSeperator :element="character.element.normalizedName">
@@ -64,6 +68,8 @@ const { start: burstStart, goal: burstGoal } = useTalentLevelRange();
                                 </SelectorIconSeperator>
                                 <SelectorTalentLevel class="rounded-r-md" id="em2" v-model="emGoal" />
                             </TitledSelectorGroup>
+
+                            <!-- Burst -->
                             <TitledSelectorGroup title="Burst">
                                 <SelectorTalentLevel class="rounded-l-md" id="burst1" v-model="burstStart" />
                                 <SelectorIconSeperator :element="character.element.normalizedName">
