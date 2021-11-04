@@ -31,7 +31,7 @@ const { start: burstStart, goal: burstGoal } = useTalentLevelRange();
         <div class="w-full lg:flex lg:h-[51.5rem]">
             <div class="flex <sm:block">
                 <TheCharacterDetailPanel :character="character" />
-                <div
+                <section
                     class="
                         flex flex-col flex-grow
                         bg-dark-600
@@ -79,7 +79,7 @@ const { start: burstStart, goal: burstGoal } = useTalentLevelRange();
                             </TitledSelectorGroup>
                         </div>
                     </div>
-                </div>
+                </section>
             </div>
         </div>
     </XLContainer>

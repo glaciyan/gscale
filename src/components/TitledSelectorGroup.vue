@@ -5,10 +5,10 @@ defineProps<{ title: string }>();
 </script>
 
 <template>
-    <section>
+    <div>
         <h2 class="font-semibold text-light-important mb-2">{{ title }}</h2>
         <Flex class="shadow-md w-max">
             <slot />
         </Flex>
-    </section>
+    </div>
 </template>
