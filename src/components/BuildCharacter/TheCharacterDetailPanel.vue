@@ -1,14 +1,13 @@
 <script setup lang="ts">
 import ElementIcon from "~/components/icons/Element.vue";
 import SwordIcon from "~/components/icons/Sword.vue";
-import { useElementTextColor } from "~/composites/elementTextColor";
 import { ICharacter } from "~/data/contracts/ICharacter";
 import CharacterPortrait from "../character/CharacterPortrait.vue";
 import IconWithText from "../IconWithText.vue";
 import TheClampedText from "../TheClampedText.vue";
 
 const props = defineProps<{ character: ICharacter }>();
-const elementTextColor = useElementTextColor(props.character.element.normalizedName);
+const elementTextColor = `text-genshin-element-${props.character.element.normalizedName}`;
 </script>
 
 <template>
