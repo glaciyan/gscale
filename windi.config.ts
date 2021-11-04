@@ -15,6 +15,8 @@ export default defineConfig({
         em.map((e) => `text-genshin-element-${e}`),
         em.map((e) => `ring-genshin-element-${e}`),
         em.map((e) => `bg-genshin-element-${e}-dark`),
+        em.map((e) => `bg-genshin-element-${e}`),
+        em.map((e) => `border-genshin-element-${e}`),
     ],
     attributify: {
         prefix: "w",
@@ -47,6 +49,9 @@ export default defineConfig({
                         geo: "#FFE667",
                         cryo: "#99FFFF",
                         hydro: "#80C0FF",
+
+                        // Semantic colors (without having to majorly change up the api of Button.vue)
+                        neutral: "#F4F4F4",
 
                         // todo check contrast with white text
                         "anemo-dark": "#2FD09A",

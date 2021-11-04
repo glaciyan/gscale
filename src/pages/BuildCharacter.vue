@@ -14,6 +14,7 @@ import { useTalentLevelRange } from "~/composites/useTalentLevelRange";
 import { getCharacterById } from "~/data/Characters";
 import { ICharacter } from "~/data/contracts/ICharacter";
 import title from "~/lib/title";
+import Button from "~/components/Button.vue";
 
 const route = useRoute();
 
@@ -32,6 +33,19 @@ const { start: ascStart, goal: ascGoal } = useAscensionLevelRange();
 const { start: normalStart, goal: normalGoal } = useTalentLevelRange();
 const { start: emStart, goal: emGoal } = useTalentLevelRange();
 const { start: burstStart, goal: burstGoal } = useTalentLevelRange();
+
+const loading = ref(false);
+
+const handleClick = () => {
+    loading.value = true;
+    console.log("button click");
+};
+
+whenever(loading, () => {
+    setTimeout(() => {
+        loading.value = false;
+    }, 3000);
+});
 </script>
 
 <template>
@@ -85,6 +99,35 @@ const { start: burstStart, goal: burstGoal } = useTalentLevelRange();
                                 </SelectorIconSeperator>
                                 <SelectorTalentLevel class="rounded-r-md" id="burst2" v-model="burstGoal" />
                             </TitledSelectorGroup>
+                        </div>
+
+                        <div class="flex flex-col w-32">
+                            <Button
+                                class="mt-12"
+                                :element="character.element.normalizedName"
+                                :isLoading="loading"
+                                @click="handleClick"
+                            >
+                                Build {{ character.name }}
+                            </Button>
+                            <Button
+                                look="outline"
+                                class="mt-2"
+                                :element="character.element.normalizedName"
+                                :isLoading="loading"
+                                @click="loading = true"
+                            >
+                                Build {{ character.name }}
+                            </Button>
+                            <Button
+                                look="ghost"
+                                class="mt-2 text-light-ternary"
+                                :element="character.element.normalizedName"
+                                :isLoading="loading"
+                                @click="loading = true"
+                            >
+                                Build {{ character.name }}
+                            </Button>
                         </div>
                     </div>
                 </section>
