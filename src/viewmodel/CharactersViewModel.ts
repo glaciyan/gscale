@@ -1,4 +1,4 @@
-import Characters from "../data/Characters";
+import { Characters } from "../data/Characters";
 import { ICharacterViewModel } from "../interfaces/ICharacterViewModel";
 
 // This will be used to display the character cards

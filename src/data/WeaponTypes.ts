@@ -1,7 +1,7 @@
 import { IdIndex } from "./contracts/UsingId";
 import { IWeaponType } from "./contracts/IWeaponType";
 
-export const weaponTypes: IdIndex<IWeaponType> = {
+export const WeaponTypes: IdIndex<IWeaponType> = {
     bow: {
         name: "Bow",
         normalizedName: "bow",
@@ -23,5 +23,3 @@ export const weaponTypes: IdIndex<IWeaponType> = {
         normalizedName: "polearm",
     },
 };
-
-export default weaponTypes;

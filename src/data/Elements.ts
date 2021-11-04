@@ -27,5 +27,3 @@ export const Elements: IdIndex<IElement> = {
         normalizedName: "electro",
     },
 };
-
-export default Elements;
