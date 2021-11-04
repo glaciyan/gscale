@@ -11,10 +11,10 @@ export interface ICharacter extends INamed {
     sub: string;
     constellation: string;
     description: string;
-    localId: IItem;
-    commonGroupId: IItemGroup;
-    bossId: IItem;
-    gemGroupId: IItemGroup;
-    bookGroupId: IItemGroup;
-    weeklyId: IItem;
+    local: IItem;
+    commonGroup: IItemGroup;
+    boss: IItem;
+    gemGroup: IItemGroup;
+    bookGroup: IItemGroup;
+    weekly: IItem;
 }
