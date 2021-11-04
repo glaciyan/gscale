@@ -1,11 +1,11 @@
 import { Ref, ref } from "vue";
 
 export function useBooleanToggle(defaultValue = false): [Ref<boolean>, () => void] {
-    const boolean = ref(defaultValue);
+    const value = ref(defaultValue);
 
     function toggle() {
-        boolean.value = !boolean.value;
+        value.value = !value.value;
     }
 
-    return [boolean, toggle];
+    return [value, toggle];
 }
