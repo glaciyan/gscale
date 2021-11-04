@@ -12,7 +12,7 @@ defineEmits(["update:modelValue"]);
 </script>
 
 <template>
-    <Listbox :modelValue="modelValue" @update:modelValue="$emit('update:modelValue', $event)">
+    <Listbox :modelValue="modelValue" @update:modelValue="$emit('update:modelValue', $event)" v-slot="{ open }">
         <ValueListboxLayout>
             <template #button>
                 <ListboxButton
@@ -36,7 +36,12 @@ defineEmits(["update:modelValue"]);
                 >
                     <Center>
                         <slot name="button" :value="modelValue" />
-                        <DownChevron class="h-5 mx-2 text-light-ternary w-5" />
+                        <DownChevron
+                            :class="[
+                                'h-5 mx-2 text-light-ternary w-5 transition-transform',
+                                { 'transform-gpu -rotate-180': open },
+                            ]"
+                        />
                     </Center>
                 </ListboxButton>
             </template>
