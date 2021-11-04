@@ -1,6 +1,6 @@
 import { Ref, ref } from "vue";
 
-export function booleanToggle(defaultValue = false): [Ref<boolean>, () => void] {
+export function useBooleanToggle(defaultValue = false): [Ref<boolean>, () => void] {
     const boolean = ref(defaultValue);
 
     function toggle() {

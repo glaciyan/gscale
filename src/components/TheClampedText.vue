@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { booleanToggle } from "../composites/booleanToggle";
+import { useBooleanToggle } from "../composites/useBooleanToggle";
 
-const [clamp, toggleClamp] = booleanToggle(true);
+const [clamp, toggleClamp] = useBooleanToggle(true);
 </script>
 
 <template>
