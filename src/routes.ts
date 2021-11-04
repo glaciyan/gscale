@@ -17,6 +17,10 @@ export default [
         component: BuildCharacter,
     },
     {
+        path: "/build/traveler/:travelerElement",
+        component: BuildCharacter,
+    },
+    {
         path: "/builds",
         component: Builds,
         meta: {

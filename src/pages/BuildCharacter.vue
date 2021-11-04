@@ -16,7 +16,15 @@ import { ICharacter } from "~/data/contracts/ICharacter";
 import title from "~/lib/title";
 
 const route = useRoute();
-const character = getCharacterById(route.params.character as string) ?? (getCharacterById("jeffrey") as ICharacter);
+
+// TODO temp
+function getTraveler(element: string) {
+    return getCharacterById("jeffrey") as ICharacter;
+}
+
+const character = route.params.travelerElement
+    ? getTraveler(route.params.travelerElement as string)
+    : getCharacterById(route.params.character as string) ?? (getCharacterById("jeffrey") as ICharacter);
 
 useTitle(title(`Building ${character.name}`));
 
