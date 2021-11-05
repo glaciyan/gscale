@@ -9,9 +9,7 @@ import Navigation from "./components/Navigation.vue";
         <Navigation orientation="verical" />
     </header>
     <main id="__gscale" class="min-h-screen mt-[80px]">
-        <transition name="fade-300">
-            <RouterView />
-        </transition>
+        <RouterView />
     </main>
     <footer>
         <hr />
@@ -27,16 +25,6 @@ import Navigation from "./components/Navigation.vue";
 
 .fade-enter-from,
 .fade-leave-to {
-    @apply opacity-0;
-}
-
-.fade-300-enter-active,
-.fade-300-leave-active {
-    @apply transition-opacity duration-300;
-}
-
-.fade-300-enter-from,
-.fade-300-leave-to {
     @apply opacity-0;
 }
 </style>
