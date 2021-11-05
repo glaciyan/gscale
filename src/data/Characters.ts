@@ -3,7 +3,6 @@ import { IdIndex } from "./contracts/UsingId";
 import { Elements } from "./Elements";
 import { ItemGroups } from "./ItemGroups";
 import { Items } from "./Items";
-import { getById } from "./util/getById";
 import { WeaponTypes } from "./WeaponTypes";
 
 export const Characters: IdIndex<ICharacter> = {
