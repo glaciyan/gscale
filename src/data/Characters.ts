@@ -6,8 +6,6 @@ import { Items } from "./Items";
 import { getById } from "./util/getById";
 import { WeaponTypes } from "./WeaponTypes";
 
-export const getCharacterById = (id: string) => getById(Characters, id);
-
 export const Characters: IdIndex<ICharacter> = {
     kokomi: {
         name: "Kokomi",

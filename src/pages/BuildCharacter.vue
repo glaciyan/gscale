@@ -11,21 +11,21 @@ import TitledSelectorGroup from "~/components/TitledSelectorGroup.vue";
 import XLContainer from "~/components/container/XLContainer.vue";
 import { useAscensionLevelRange } from "~/composites/useAscensionLevelRange";
 import { useTalentLevelRange } from "~/composites/useTalentLevelRange";
-import { getCharacterById } from "~/data/Characters";
 import { ICharacter } from "~/data/contracts/ICharacter";
 import title from "~/lib/title";
 import Button from "~/components/Button.vue";
+import repo from "~/data/repository/GenshinDataRepository";
 
 const route = useRoute();
 
 // TODO temp
 function getTraveler(element: string) {
-    return getCharacterById("jeffrey") as ICharacter;
+    return repo.getCharacter("jeffrey") as ICharacter;
 }
 
 const character = route.params.travelerElement
     ? getTraveler(route.params.travelerElement as string)
-    : getCharacterById(route.params.character as string) ?? (getCharacterById("jeffrey") as ICharacter);
+    : repo.getCharacter(route.params.character as string) ?? (repo.getCharacter("jeffrey") as ICharacter);
 
 useTitle(title(`Building ${character.name}`));
 
