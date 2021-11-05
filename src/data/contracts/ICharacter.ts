@@ -1,16 +1,8 @@
-import { IElement } from "./IElement";
+import { IBaseCharacter } from "./IBaseCharacter";
 import { IItem } from "./IItem";
 import { IItemGroup } from "./IItemGroup";
-import { INamed } from "./INamed";
-import { IWeaponType } from "./IWeaponType";
 
-export interface ICharacter extends INamed {
-    element: IElement;
-    weaponType: IWeaponType;
-    rarity: 4 | 5;
-    sub: string;
-    constellation: string;
-    description: string;
+export interface ICharacter extends IBaseCharacter {
     local: IItem;
     commonGroup: IItemGroup;
     boss: IItem;
