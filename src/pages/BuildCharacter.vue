@@ -101,8 +101,9 @@ whenever(loading, () => {
                             </TitledSelectorGroup>
                         </div>
 
-                        <div class="flex flex-col w-32">
+                        <div class="flex flex-col">
                             <Button
+                                fullWidth
                                 class="mt-12"
                                 :element="character.element.normalizedName"
                                 :isLoading="loading"
