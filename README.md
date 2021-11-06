@@ -12,7 +12,6 @@ This is a vue rewrite for gscale currently running with a customized vite setup.
 - Finish up /builds page
 - Header
 - Footer
-- Look into pre-rendering the index page (nice to have)
 
 ## Planned new features
 
