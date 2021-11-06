@@ -1,3 +1,4 @@
+import { Travelers } from "~/data/Travelers";
 import { Characters } from "../data/Characters";
 import { ICharacterViewModel } from "../interfaces/ICharacterViewModel";
 
@@ -10,6 +11,7 @@ export const charactersViewModel: ICharacterViewModel[] = [
     Characters.yoimiya,
     Characters.sayu,
     Characters.ayaka,
+    Travelers.traveler_electro,
     Characters.kazuha,
     Characters.eula,
     Characters.yanfei,
@@ -43,4 +45,6 @@ export const charactersViewModel: ICharacterViewModel[] = [
     Characters.lisa,
     Characters.kaeya,
     Characters.amber,
+    Travelers.traveler_geo,
+    Travelers.traveler_anemo,
 ];

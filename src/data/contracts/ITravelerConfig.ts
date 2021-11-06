@@ -7,6 +7,8 @@ export interface ITravelerConfig {
     element: IElement;
 
     talentCommonGroup: IItemGroup;
-    talentBooks: ITravelerTalentBooks;
     talentBoss: IItem;
+
+    talentBooks: ITravelerTalentBooks;
+    normalTalentBooks: ITravelerTalentBooks;
 }

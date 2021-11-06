@@ -26,8 +26,10 @@ export class Traveler implements ITraveler {
         this.ascensionCommonGroup = ItemGroups.mask;
 
         this.talentCommonGroup = config.talentCommonGroup;
-        this.talentBooks = config.talentBooks;
         this.talentBoss = config.talentBoss;
+
+        this.talentBooks = config.talentBooks;
+        this.normalTalentBooks = config.normalTalentBooks;
     }
 
     name: string;
@@ -44,6 +46,8 @@ export class Traveler implements ITraveler {
     ascensionCommonGroup: IItemGroup;
 
     talentCommonGroup: IItemGroup;
-    talentBooks: ITravelerTalentBooks;
     talentBoss: IItem;
+
+    talentBooks: ITravelerTalentBooks;
+    normalTalentBooks: ITravelerTalentBooks;
 }

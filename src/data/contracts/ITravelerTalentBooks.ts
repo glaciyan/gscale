@@ -1,7 +1,6 @@
 import { IItemGroup } from "./IItemGroup";
 
 export interface ITravelerTalentBooks {
-    1: IItemGroup;
     2: IItemGroup;
     3: IItemGroup;
     4: IItemGroup;

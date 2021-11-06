@@ -9,6 +9,8 @@ export interface ITraveler extends IBaseCharacter {
     ascensionCommonGroup: IItemGroup;
 
     talentCommonGroup: IItemGroup;
-    talentBooks: ITravelerTalentBooks;
     talentBoss: IItem;
+
+    talentBooks: ITravelerTalentBooks;
+    normalTalentBooks: ITravelerTalentBooks;
 }
