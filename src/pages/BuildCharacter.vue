@@ -18,14 +18,10 @@ import repo from "~/data/repository/GenshinDataRepository";
 
 const route = useRoute();
 
-// TODO temp
-function getTraveler(element: string) {
-    return repo.getCharacter("jeffrey") as ICharacter;
-}
-
-const character = route.params.travelerElement
-    ? getTraveler(route.params.travelerElement as string)
-    : repo.getCharacter(route.params.character as string) ?? (repo.getCharacter("jeffrey") as ICharacter);
+const character =
+    repo.getCharacter(route.params.character as string) ??
+    repo.getTraveler(route.params.character as string) ??
+    (repo.getCharacter("jeffrey") as ICharacter);
 
 useTitle(title(`Building ${character.name}`));
 
