@@ -29,7 +29,7 @@ const { buttonStyle } = useButtonStyle(props.look, props.element);
         :class="[
             buttonStyle,
             fullWidth ? 'w-full' : 'w-max',
-            'focus:outline-none focus-visible:ring py-2 px-4 rounded-md',
+            'focus:outline-none focus-visible:ring py-2 px-4 rounded-md shadow-md',
         ]"
         :disabled="_disabled"
         :aria-disabled="_disabled"
