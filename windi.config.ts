@@ -1,10 +1,7 @@
 import { defineConfig } from "windicss/helpers";
 import aspectRatio from "windicss/plugin/aspect-ratio";
 import lineClamp from "windicss/plugin/line-clamp";
-
-function range(size: number, startAt = 1) {
-    return Array.from(Array(size).keys()).map((i) => i + startAt);
-}
+import { range } from "./src/lib/range";
 
 const em = ["anemo", "pyro", "electro", "geo", "cryo", "hydro"];
 
