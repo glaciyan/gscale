@@ -5,6 +5,7 @@ import { ICharacter } from "~/data/contracts/ICharacter";
 import CharacterPortrait from "../character/CharacterPortrait.vue";
 import IconWithText from "../IconWithText.vue";
 import TheClampedText from "../TheClampedText.vue";
+import { getCharacterImage } from "~/data/util/getCharacterImage";
 
 const props = defineProps<{ character: ICharacter }>();
 const elementTextColor = `text-genshin-element-${props.character.element.normalizedName}`;
@@ -15,7 +16,7 @@ const elementTextColor = `text-genshin-element-${props.character.element.normali
         <div aria-hidden="true" class="h-32 w-full opacity-50 inset-x-0 top-0 z-10 absolute">
             <img
                 class="h-full object-cover w-full"
-                :src="`/images/characters/card/${character.normalizedName}.webp`"
+                :src="getCharacterImage(character.normalizedName, 'card').webp"
                 width="240"
                 height="150"
                 draggable="false"

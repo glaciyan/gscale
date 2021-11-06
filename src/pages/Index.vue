@@ -2,6 +2,7 @@
 import { charactersViewModel } from "../viewmodel/CharactersViewModel";
 import XLContainer from "~/components/container/XLContainer.vue";
 import CharacterCard from "~/components/character/CharacterCard.vue";
+import { getCharacterImage } from "~/data/util/getCharacterImage";
 </script>
 
 <!-- TODO look into statically rendering this page -->
@@ -17,7 +18,7 @@ import CharacterCard from "~/components/character/CharacterCard.vue";
                 :elementId="character.element.normalizedName"
                 :weaponType="character.weaponType.name"
                 :rarity="character.rarity"
-                :cardUrl="`/images/characters/card/${character.normalizedName}.webp`"
+                :cardUrl="getCharacterImage(character.normalizedName, 'card').webp"
                 :buildUrl="`/build/${character.normalizedName}`"
             />
         </div>
