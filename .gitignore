@@ -4,6 +4,7 @@ dist
 dist-ssr
 *.local
 .vercel
+auto-imports.d.ts
 
 # Logs
 logs
