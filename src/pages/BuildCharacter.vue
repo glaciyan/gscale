@@ -62,7 +62,7 @@ whenever(loading, () => {
                         border-dark-200 border-r-2)
                         lg:(flex-grow-0) "
                 >
-                    <div class="p-6">
+                    <div class="flex flex-col h-full p-6 justify-between">
                         <div class="space-y-6">
                             <!-- Level -->
                             <TitledSelectorGroup title="Level">
@@ -101,35 +101,14 @@ whenever(loading, () => {
                             </TitledSelectorGroup>
                         </div>
 
-                        <div class="flex flex-col">
-                            <Button
-                                fullWidth
-                                class="mt-12"
-                                :element="character.element.normalizedName"
-                                :isLoading="loading"
-                                @click="handleClick"
-                            >
-                                Build {{ character.name }}
-                            </Button>
-                            <Button
-                                look="outline"
-                                class="mt-2"
-                                :element="character.element.normalizedName"
-                                :isLoading="loading"
-                                @click="loading = true"
-                            >
-                                Build {{ character.name }}
-                            </Button>
-                            <Button
-                                look="ghost"
-                                class="mt-2 text-light-ternary"
-                                :element="character.element.normalizedName"
-                                :isLoading="loading"
-                                @click="loading = true"
-                            >
-                                Build {{ character.name }}
-                            </Button>
-                        </div>
+                        <Button
+                            fullWidth
+                            :element="character.element.normalizedName"
+                            :isLoading="loading"
+                            @click="handleClick"
+                        >
+                            Build {{ character.name }}
+                        </Button>
                     </div>
                 </section>
             </div>
