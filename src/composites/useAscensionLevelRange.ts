@@ -1,4 +1,4 @@
-import { AscensionLevel } from "~/interfaces/AscensionLevel";
+import { AscensionLevel } from "~/lib/interfaces/AscensionLevel";
 import { compareAscension } from "../lib/compareAscension";
 
 export function useAscensionLevelRange() {

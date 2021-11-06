@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { charactersViewModel } from "../viewmodel/CharactersViewModel";
-import XLContainer from "~/components/container/XLContainer.vue";
 import CharacterCard from "~/components/character/CharacterCard.vue";
-import { getCharacterImage } from "~/data/util/getCharacterImage";
+import XLContainer from "~/components/container/XLContainer.vue";
+import { getCharacterImage } from "~/lib/data/util/getCharacterImage";
+import { charactersViewModel } from "~/lib/viewmodel/CharactersViewModel";
 </script>
 
 <!-- TODO look into statically rendering this page -->

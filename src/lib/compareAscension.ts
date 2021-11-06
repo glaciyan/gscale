@@ -1,4 +1,4 @@
-import { AscensionLevel } from "~/interfaces/AscensionLevel";
+import { AscensionLevel } from "~/lib/interfaces/AscensionLevel";
 
 /**
  * Compare 2 ascension levels

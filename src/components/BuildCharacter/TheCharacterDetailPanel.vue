@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import ElementIcon from "~/components/icons/Element.vue";
 import SwordIcon from "~/components/icons/Sword.vue";
-import { ICharacter } from "~/data/contracts/ICharacter";
+import { ICharacter } from "~/lib/data/contracts/ICharacter";
+import { getCharacterImage } from "~/lib/data/util/getCharacterImage";
 import CharacterPortrait from "../character/CharacterPortrait.vue";
 import IconWithText from "../IconWithText.vue";
 import TheClampedText from "../TheClampedText.vue";
-import { getCharacterImage } from "~/data/util/getCharacterImage";
 
 const props = defineProps<{ character: ICharacter }>();
 const elementTextColor = `text-genshin-element-${props.character.element.normalizedName}`;

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import RarityStars from "../RarityStars.vue";
-import { getCharacterImage } from "~/data/util/getCharacterImage";
+import { getCharacterImage } from "~/lib/data/util/getCharacterImage";
 
 const props = defineProps<{ normalizedName: string; rarity?: 4 | 5 }>();
 const mugshotRounding = ["rounded-t-md", { "rounded-b-md": props.rarity === undefined }];

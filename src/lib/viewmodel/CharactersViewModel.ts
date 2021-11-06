@@ -1,4 +1,4 @@
-import { Travelers } from "~/data/Travelers";
+import { Travelers } from "~/lib/data/Travelers";
 import { Characters } from "../data/Characters";
 import { ICharacterViewModel } from "../interfaces/ICharacterViewModel";
 

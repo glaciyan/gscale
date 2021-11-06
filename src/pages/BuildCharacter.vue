@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import TheCharacterDetailPanel from "~/components/BuildCharacter/TheCharacterDetailPanel.vue";
+import Button from "~/components/Button.vue";
+import XLContainer from "~/components/container/XLContainer.vue";
 import ElementalIcon from "~/components/icons/Elemental.vue";
 import FireIcon from "~/components/icons/Fire.vue";
 import GrowthIcon from "~/components/icons/Growth.vue";
@@ -8,13 +10,11 @@ import SelectorAscensionLevel from "~/components/SelectorAscensionLevel.vue";
 import SelectorIconSeperator from "~/components/SelectorIconSeperator.vue";
 import SelectorTalentLevel from "~/components/SelectorTalentLevel.vue";
 import TitledSelectorGroup from "~/components/TitledSelectorGroup.vue";
-import XLContainer from "~/components/container/XLContainer.vue";
 import { useAscensionLevelRange } from "~/composites/useAscensionLevelRange";
 import { useTalentLevelRange } from "~/composites/useTalentLevelRange";
-import { ICharacter } from "~/data/contracts/ICharacter";
+import { ICharacter } from "~/lib/data/contracts/ICharacter";
+import repo from "~/lib/data/repository/GenshinDataRepository";
 import title from "~/lib/title";
-import Button from "~/components/Button.vue";
-import repo from "~/data/repository/GenshinDataRepository";
 
 const route = useRoute();
 
@@ -56,7 +56,8 @@ whenever(loading, () => {
                         text-dark-50
                         sm:(w-[20rem]
                         border-dark-200 border-r-2)
-                        lg:(flex-grow-0) "
+                        lg:(flex-grow-0)
+                    "
                 >
                     <div class="flex flex-col h-full p-6 justify-between">
                         <div class="space-y-6">
