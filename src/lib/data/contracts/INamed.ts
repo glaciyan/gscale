@@ -1,4 +1,4 @@
 export interface INamed {
-    name: string;
-    normalizedName: string;
+  name: string;
+  normalizedName: string;
 }

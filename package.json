@@ -1,33 +1,33 @@
 {
-    "name": "gscale",
-    "license": "MIT",
-    "version": "0.0.0",
-    "scripts": {
-        "dev": "vite",
-        "build": "vue-tsc --noEmit && vite build",
-        "start": "vite preview",
-        "prod": "yarn build && yarn start",
-        "images:characters:build": "squoosh-cli --oxipng auto --webp auto --resize {width:240} -d public/images/characters/card",
-        "images:mugshot:build": "squoosh-cli --oxipng auto --webp auto --resize {width:100} -d public/images/characters/mugshot",
-        "images:items:build": "squoosh-cli --oxipng auto --webp auto --resize {width:40} -d public/images/materials",
-        "make:images": "node scripts/make_images.js"
-    },
-    "dependencies": {
-        "@headlessui/vue": "^1.4.1",
-        "@vueuse/core": "^6.7.4",
-        "@vueuse/integrations": "^6.7.4",
-        "vue": "^3.2.16",
-        "vue-router": "4"
-    },
-    "devDependencies": {
-        "@squoosh/cli": "^0.7.2",
-        "@types/node": "^16.11.6",
-        "@vitejs/plugin-vue": "^1.9.4",
-        "typescript": "^4.4.4",
-        "unplugin-auto-import": "^0.4.13",
-        "vite": "^2.6.13",
-        "vite-plugin-windicss": "^1.4.12",
-        "vue-tsc": "^0.3.0",
-        "windicss": "^3.2.0"
-    }
+  "name": "gscale",
+  "license": "MIT",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "start": "vite preview",
+    "prod": "yarn build && yarn start",
+    "images:characters:build": "squoosh-cli --oxipng auto --webp auto --resize {width:240} -d public/images/characters/card",
+    "images:mugshot:build": "squoosh-cli --oxipng auto --webp auto --resize {width:100} -d public/images/characters/mugshot",
+    "images:items:build": "squoosh-cli --oxipng auto --webp auto --resize {width:40} -d public/images/materials",
+    "make:images": "node scripts/make_images.js"
+  },
+  "dependencies": {
+    "@headlessui/vue": "^1.4.1",
+    "@vueuse/core": "^6.7.4",
+    "@vueuse/integrations": "^6.7.4",
+    "vue": "^3.2.16",
+    "vue-router": "4"
+  },
+  "devDependencies": {
+    "@squoosh/cli": "^0.7.2",
+    "@types/node": "^16.11.6",
+    "@vitejs/plugin-vue": "^1.9.4",
+    "typescript": "^4.4.4",
+    "unplugin-auto-import": "^0.4.13",
+    "vite": "^2.6.13",
+    "vite-plugin-windicss": "^1.4.12",
+    "vue-tsc": "^0.3.0",
+    "windicss": "^3.2.0"
+  }
 }

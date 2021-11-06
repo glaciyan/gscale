@@ -11,25 +11,25 @@ const liyueBooks = generateTravelerTalentBooks(ItemGroups.prosperity, ItemGroups
 const inazumaBooks = generateTravelerTalentBooks(ItemGroups.transience, ItemGroups.elegance, ItemGroups.light);
 
 export const Travelers: IdIndex<ITraveler> = {
-    traveler_electro: new Traveler({
-        element: Elements.electro,
-        talentBoss: Items.dragon_lords_crown,
-        talentCommonGroup: ItemGroups.handguard,
-        talentBooks: inazumaBooks,
-        normalTalentBooks: inazumaBooks,
-    }),
-    traveler_geo: new Traveler({
-        element: Elements.geo,
-        talentBoss: Items.tail_of_boreas,
-        talentCommonGroup: ItemGroups.arrow,
-        talentBooks: liyueBooks,
-        normalTalentBooks: mondstadtBooks,
-    }),
-    traveler_anemo: new Traveler({
-        element: Elements.anemo,
-        talentBoss: Items.dvalins_sigh,
-        talentCommonGroup: ItemGroups.scroll,
-        talentBooks: mondstadtBooks,
-        normalTalentBooks: mondstadtBooks,
-    }),
+  traveler_electro: new Traveler({
+    element: Elements.electro,
+    talentBoss: Items.dragon_lords_crown,
+    talentCommonGroup: ItemGroups.handguard,
+    talentBooks: inazumaBooks,
+    normalTalentBooks: inazumaBooks,
+  }),
+  traveler_geo: new Traveler({
+    element: Elements.geo,
+    talentBoss: Items.tail_of_boreas,
+    talentCommonGroup: ItemGroups.arrow,
+    talentBooks: liyueBooks,
+    normalTalentBooks: mondstadtBooks,
+  }),
+  traveler_anemo: new Traveler({
+    element: Elements.anemo,
+    talentBoss: Items.dvalins_sigh,
+    talentCommonGroup: ItemGroups.scroll,
+    talentBooks: mondstadtBooks,
+    normalTalentBooks: mondstadtBooks,
+  }),
 };

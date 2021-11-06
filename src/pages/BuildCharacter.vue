@@ -19,9 +19,9 @@ import title from "~/lib/title";
 const route = useRoute();
 
 const character =
-    repo.getCharacter(route.params.character as string) ??
-    repo.getTraveler(route.params.character as string) ??
-    (repo.getCharacter("jeffrey") as ICharacter);
+  repo.getCharacter(route.params.character as string) ??
+  repo.getTraveler(route.params.character as string) ??
+  (repo.getCharacter("jeffrey") as ICharacter);
 
 useTitle(title(`Building ${character.name}`));
 
@@ -33,82 +33,77 @@ const { start: burstStart, goal: burstGoal } = useTalentLevelRange();
 const loading = ref(false);
 
 const handleClick = () => {
-    loading.value = true;
-    console.log("button click");
+  loading.value = true;
+  console.log("button click");
 };
 
 whenever(loading, () => {
-    setTimeout(() => {
-        loading.value = false;
-    }, 3000);
+  setTimeout(() => {
+    loading.value = false;
+  }, 3000);
 });
 </script>
 
 <template>
-    <XLContainer>
-        <div class="w-full lg:flex lg:h-[51.5rem]">
-            <div class="flex <sm:block">
-                <TheCharacterDetailPanel :character="character" />
-                <section
-                    class="
-                        flex flex-col flex-grow
-                        bg-dark-600
-                        text-dark-50
-                        sm:(w-[20rem]
-                        border-dark-200 border-r-2)
-                        lg:(flex-grow-0)
-                    "
-                >
-                    <div class="flex flex-col h-full p-6 justify-between">
-                        <div class="space-y-6">
-                            <!-- Level -->
-                            <TitledSelectorGroup title="Level">
-                                <SelectorAscensionLevel class="rounded-l-md" id="level1" v-model="ascStart" />
-                                <SelectorIconSeperator :element="character.element.normalizedName">
-                                    <GrowthIcon class="-m-0.5" />
-                                </SelectorIconSeperator>
-                                <SelectorAscensionLevel cbClass="rounded-r-md" id="level2" v-model="ascGoal" />
-                            </TitledSelectorGroup>
+  <XLContainer>
+    <div class="w-full lg:flex lg:h-[51.5rem]">
+      <div class="flex <sm:block">
+        <TheCharacterDetailPanel :character="character" />
+        <section
+          class="
+            flex flex-col flex-grow
+            bg-dark-600
+            text-dark-50
+            sm:(w-[20rem]
+            border-dark-200 border-r-2)
+            lg:(flex-grow-0)
+          "
+        >
+          <div class="flex flex-col h-full p-6 justify-between">
+            <div class="space-y-6">
+              <!-- Level -->
+              <TitledSelectorGroup title="Level">
+                <SelectorAscensionLevel class="rounded-l-md" id="level1" v-model="ascStart" />
+                <SelectorIconSeperator :element="character.element.normalizedName">
+                  <GrowthIcon class="-m-0.5" />
+                </SelectorIconSeperator>
+                <SelectorAscensionLevel cbClass="rounded-r-md" id="level2" v-model="ascGoal" />
+              </TitledSelectorGroup>
 
-                            <!-- Normal -->
-                            <TitledSelectorGroup title="Normal Attack">
-                                <SelectorTalentLevel class="rounded-l-md" id="normal1" v-model="normalStart" />
-                                <SelectorIconSeperator :element="character.element.normalizedName">
-                                    <SwordIcon class="h-[26px] -m-0.5 w-[26px]" />
-                                </SelectorIconSeperator>
-                                <SelectorTalentLevel class="rounded-r-md" id="normal2" v-model="normalGoal" />
-                            </TitledSelectorGroup>
+              <!-- Normal -->
+              <TitledSelectorGroup title="Normal Attack">
+                <SelectorTalentLevel class="rounded-l-md" id="normal1" v-model="normalStart" />
+                <SelectorIconSeperator :element="character.element.normalizedName">
+                  <SwordIcon class="h-[26px] -m-0.5 w-[26px]" />
+                </SelectorIconSeperator>
+                <SelectorTalentLevel class="rounded-r-md" id="normal2" v-model="normalGoal" />
+              </TitledSelectorGroup>
 
-                            <!-- Elemental -->
-                            <TitledSelectorGroup title="Elemental Attack">
-                                <SelectorTalentLevel class="rounded-l-md" id="em1" v-model="emStart" />
-                                <SelectorIconSeperator :element="character.element.normalizedName">
-                                    <ElementalIcon class="-m-0.5" />
-                                </SelectorIconSeperator>
-                                <SelectorTalentLevel class="rounded-r-md" id="em2" v-model="emGoal" />
-                            </TitledSelectorGroup>
+              <!-- Elemental -->
+              <TitledSelectorGroup title="Elemental Attack">
+                <SelectorTalentLevel class="rounded-l-md" id="em1" v-model="emStart" />
+                <SelectorIconSeperator :element="character.element.normalizedName">
+                  <ElementalIcon class="-m-0.5" />
+                </SelectorIconSeperator>
+                <SelectorTalentLevel class="rounded-r-md" id="em2" v-model="emGoal" />
+              </TitledSelectorGroup>
 
-                            <!-- Burst -->
-                            <TitledSelectorGroup title="Burst">
-                                <SelectorTalentLevel class="rounded-l-md" id="burst1" v-model="burstStart" />
-                                <SelectorIconSeperator :element="character.element.normalizedName">
-                                    <FireIcon class="-m-0.5" />
-                                </SelectorIconSeperator>
-                                <SelectorTalentLevel class="rounded-r-md" id="burst2" v-model="burstGoal" />
-                            </TitledSelectorGroup>
-                        </div>
-
-                        <Button
-                            fullWidth
-                            :element="character.element.normalizedName"
-                            :isLoading="loading"
-                            @click="handleClick"
-                        >
-                            Build {{ character.name }}
-                        </Button>
-                    </div>
-                </section>
+              <!-- Burst -->
+              <TitledSelectorGroup title="Burst">
+                <SelectorTalentLevel class="rounded-l-md" id="burst1" v-model="burstStart" />
+                <SelectorIconSeperator :element="character.element.normalizedName">
+                  <FireIcon class="-m-0.5" />
+                </SelectorIconSeperator>
+                <SelectorTalentLevel class="rounded-r-md" id="burst2" v-model="burstGoal" />
+              </TitledSelectorGroup>
             </div>
-        </div>
-    </XLContainer>
+
+            <Button fullWidth :element="character.element.normalizedName" :isLoading="loading" @click="handleClick">
+              Build {{ character.name }}
+            </Button>
+          </div>
+        </section>
+      </div>
+    </div>
+  </XLContainer>
 </template>

@@ -7,17 +7,17 @@ defineEmits(["update:modelValue"]);
 </script>
 
 <template>
-    <SelectorCustom
-        :id="id"
-        :modelValue="modelValue"
-        @update:modelValue="$emit('update:modelValue', $event)"
-        :listItems="range(10)"
-    >
-        <template #button="{ value }">
-            {{ value }}
-        </template>
-        <template #item="{ option }">
-            <span class="mr-2">{{ option }}</span>
-        </template>
-    </SelectorCustom>
+  <SelectorCustom
+    :id="id"
+    :modelValue="modelValue"
+    @update:modelValue="$emit('update:modelValue', $event)"
+    :listItems="range(10)"
+  >
+    <template #button="{ value }">
+      {{ value }}
+    </template>
+    <template #item="{ option }">
+      <span class="mr-2">{{ option }}</span>
+    </template>
+  </SelectorCustom>
 </template>

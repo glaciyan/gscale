@@ -4,11 +4,11 @@ import { IItemGroup } from "./IItemGroup";
 import { ITravelerTalentBooks } from "./ITravelerTalentBooks";
 
 export interface ITravelerConfig {
-    element: IElement;
+  element: IElement;
 
-    talentCommonGroup: IItemGroup;
-    talentBoss: IItem;
+  talentCommonGroup: IItemGroup;
+  talentBoss: IItem;
 
-    talentBooks: ITravelerTalentBooks;
-    normalTalentBooks: ITravelerTalentBooks;
+  talentBooks: ITravelerTalentBooks;
+  normalTalentBooks: ITravelerTalentBooks;
 }

@@ -3,10 +3,10 @@ import { Characters } from "../Characters";
 import { Travelers } from "../Travelers";
 
 export default {
-    getCharacter(id: string) {
-        return getById(Characters, id);
-    },
-    getTraveler(id: string) {
-        return getById(Travelers, id);
-    },
+  getCharacter(id: string) {
+    return getById(Characters, id);
+  },
+  getTraveler(id: string) {
+    return getById(Travelers, id);
+  },
 };

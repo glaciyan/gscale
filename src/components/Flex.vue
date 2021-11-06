@@ -1,3 +1,3 @@
 <template>
-    <div class="flex"><slot /></div>
+  <div class="flex"><slot /></div>
 </template>

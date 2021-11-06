@@ -4,18 +4,18 @@ import Center from "./Center.vue";
 import { useButtonStyle } from "~/composites/useButtonStyle";
 
 const props = withDefaults(
-    defineProps<{
-        element: string;
-        look?: "solid" | "outline" | "ghost";
-        isLoading?: boolean;
-        disabled?: boolean;
-        fullWidth?: boolean;
-    }>(),
-    {
-        look: "solid",
-        disabled: false,
-        isLoading: false,
-    }
+  defineProps<{
+    element: string;
+    look?: "solid" | "outline" | "ghost";
+    isLoading?: boolean;
+    disabled?: boolean;
+    fullWidth?: boolean;
+  }>(),
+  {
+    look: "solid",
+    disabled: false,
+    isLoading: false,
+  }
 );
 
 const _disabled = computed(() => props.isLoading || props.disabled);
@@ -24,21 +24,21 @@ const { buttonStyle } = useButtonStyle(props.look, props.element);
 </script>
 
 <template>
-    <button
-        type="button"
-        :class="[
-            buttonStyle,
-            fullWidth ? 'w-full' : 'w-max',
-            'focus:outline-none focus-visible:ring py-2 px-4 rounded-md shadow-md',
-        ]"
-        :disabled="_disabled"
-        :aria-disabled="_disabled"
-    >
-        <Center>
-            <Spinner v-if="isLoading" class="absolute" />
-            <span :class="{ 'opacity-0': isLoading }">
-                <slot />
-            </span>
-        </Center>
-    </button>
+  <button
+    type="button"
+    :class="[
+      buttonStyle,
+      fullWidth ? 'w-full' : 'w-max',
+      'focus:outline-none focus-visible:ring py-2 px-4 rounded-md shadow-md',
+    ]"
+    :disabled="_disabled"
+    :aria-disabled="_disabled"
+  >
+    <Center>
+      <Spinner v-if="isLoading" class="absolute" />
+      <span :class="{ 'opacity-0': isLoading }">
+        <slot />
+      </span>
+    </Center>
+  </button>
 </template>

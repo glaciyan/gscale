@@ -4,13 +4,13 @@ import { IItemGroup } from "./IItemGroup";
 import { ITravelerTalentBooks } from "./ITravelerTalentBooks";
 
 export interface ITraveler extends IBaseCharacter {
-    local: IItem;
-    gemGroup: IItemGroup;
-    ascensionCommonGroup: IItemGroup;
+  local: IItem;
+  gemGroup: IItemGroup;
+  ascensionCommonGroup: IItemGroup;
 
-    talentCommonGroup: IItemGroup;
-    talentBoss: IItem;
+  talentCommonGroup: IItemGroup;
+  talentBoss: IItem;
 
-    talentBooks: ITravelerTalentBooks;
-    normalTalentBooks: ITravelerTalentBooks;
+  talentBooks: ITravelerTalentBooks;
+  normalTalentBooks: ITravelerTalentBooks;
 }

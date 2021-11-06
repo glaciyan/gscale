@@ -3,7 +3,7 @@ import { INamed } from "../data/contracts/INamed";
 import { IWeaponType } from "../data/contracts/IWeaponType";
 
 export interface ICharacterViewModel extends INamed {
-    element: IElement;
-    weaponType: IWeaponType;
-    rarity: 4 | 5;
+  element: IElement;
+  weaponType: IWeaponType;
+  rarity: 4 | 5;
 }

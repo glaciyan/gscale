@@ -10,41 +10,41 @@ const emit = defineEmits(["update:modelValue"]);
 const checkboxId = props.id + "checkbox";
 
 const update = (val: { level?: number; ascended?: boolean }) => {
-    // make a copy of the object and merge with current value https://github.com/vuejs/vue/issues/4373#issuecomment-279826554
-    const updatedObject = Object.assign({}, props.modelValue, val);
+  // make a copy of the object and merge with current value https://github.com/vuejs/vue/issues/4373#issuecomment-279826554
+  const updatedObject = Object.assign({}, props.modelValue, val);
 
-    emit("update:modelValue", updatedObject);
+  emit("update:modelValue", updatedObject);
 };
 
 const cannotAscend = computed(() => {
-    return props.modelValue.level === 1 || props.modelValue.level === 90;
+  return props.modelValue.level === 1 || props.modelValue.level === 90;
 });
 
 const keyFunc = (option: AscensionLevel) => option.level + option.ascended.toString();
 </script>
 
 <template>
-    <CustomSelector
-        :id="id"
-        :modelValue="modelValue"
-        @update:modelValue="$emit('update:modelValue', $event)"
-        :listItems="Levels"
-        :keyFunc="keyFunc"
-        :class="$attrs.class"
-    >
-        <template #button="slotProps">
-            {{ (slotProps.value as any).level }}
-        </template>
-        <template #item="{ option }">
-            {{ option.level }} <span v-if="option.ascended" class="sr-only">Ascended</span>
-            <StarIcon v-if="option.ascended" class="flex-shrink-0 ml-1" />
-        </template>
-    </CustomSelector>
-    <AscensionCheckbox
-        :class="cbClass"
-        :checkboxId="checkboxId"
-        :modelValue="modelValue.ascended"
-        :disabled="cannotAscend"
-        @update:modelValue="update({ ascended: $event })"
-    />
+  <CustomSelector
+    :id="id"
+    :modelValue="modelValue"
+    @update:modelValue="$emit('update:modelValue', $event)"
+    :listItems="Levels"
+    :keyFunc="keyFunc"
+    :class="$attrs.class"
+  >
+    <template #button="slotProps">
+      {{ (slotProps.value as any).level }}
+    </template>
+    <template #item="{ option }">
+      {{ option.level }} <span v-if="option.ascended" class="sr-only">Ascended</span>
+      <StarIcon v-if="option.ascended" class="flex-shrink-0 ml-1" />
+    </template>
+  </CustomSelector>
+  <AscensionCheckbox
+    :class="cbClass"
+    :checkboxId="checkboxId"
+    :modelValue="modelValue.ascended"
+    :disabled="cannotAscend"
+    @update:modelValue="update({ ascended: $event })"
+  />
 </template>
