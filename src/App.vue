@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from "vue-router";
 import Navigation from "./components/Navigation.vue";
+import VercelLogo from "~/assets/powered-by-vercel.svg";
 </script>
 
 <template>
@@ -14,6 +15,9 @@ import Navigation from "./components/Navigation.vue";
   <footer>
     <hr />
     <span>footer</span>
+    <a href="https://vercel.com?utm_source=gscale&utm_campaign=oss">
+      <img :src="VercelLogo" width="212" height="44" alt="Powered by Vercel" />
+    </a>
   </footer>
 </template>
 

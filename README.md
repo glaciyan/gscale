@@ -5,6 +5,12 @@
 
 This is a vue rewrite for gscale currently running with a customized vite setup. In the future I'm hoping on using nuxt when static pre-rendering and other vital features are functional.
 
+<a href="https://vercel.com?utm_source=gscale&utm_campaign=oss">
+<img src="./src/assets/powered-by-vercel.svg"
+	width="212"
+	height="44">
+</a>
+
 ## TODO
 
 - Finish up /build/x page
