@@ -2,7 +2,7 @@ import { compareAscension } from "./compareAscension";
 import { AscensionLevel } from "./interfaces/AscensionLevel";
 
 // TODO prettier is a problem in this file
-export function getAscensionStage(level: AscensionLevel) {
+export function getAscensionStage(level: AscensionLevel): number {
   if (
     compareAscension(level, { level: 20, ascended: true }).isGreaterOrEqual() &&
     compareAscension(level, { level: 40, ascended: false }).isLessOrEqual()
