@@ -9,7 +9,6 @@ const props = withDefaults(
     look?: "solid" | "outline" | "ghost";
     isLoading?: boolean;
     disabled?: boolean;
-    fullWidth?: boolean;
   }>(),
   {
     look: "solid",
@@ -26,11 +25,7 @@ const { buttonStyle } = useButtonStyle(props.look, props.element);
 <template>
   <button
     type="button"
-    :class="[
-      buttonStyle,
-      fullWidth ? 'w-full' : 'w-max',
-      'focus:outline-none focus-visible:ring py-2 px-4 rounded-md shadow-md',
-    ]"
+    :class="[buttonStyle, 'focus:outline-none focus-visible:ring py-2 px-4 rounded-md shadow-md']"
     :disabled="_disabled"
     :aria-disabled="_disabled"
   >

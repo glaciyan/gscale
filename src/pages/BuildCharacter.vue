@@ -56,8 +56,7 @@ whenever(loading, () => {
             text-dark-50
             sm:(w-[20rem]
             border-dark-200 border-r-2)
-            lg:(flex-grow-0)
-          "
+            lg:(flex-grow-0) "
         >
           <div class="flex flex-col h-full p-6 justify-between">
             <div class="space-y-6">
@@ -98,7 +97,7 @@ whenever(loading, () => {
               </TitledSelectorGroup>
             </div>
 
-            <Button fullWidth :element="character.element.normalizedName" :isLoading="loading" @click="handleClick">
+            <Button :element="character.element.normalizedName" :isLoading="loading" @click="handleClick">
               Build {{ character.name }}
             </Button>
           </div>
