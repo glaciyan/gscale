@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from "vue-router";
-import Navigation from "./components/Navigation.vue";
+import { RouterView } from "vue-router";
 import VercelLogo from "~/assets/powered-by-vercel.svg";
+import Navigation from "./components/Navigation.vue";
 </script>
 
 <template>
@@ -18,6 +18,7 @@ import VercelLogo from "~/assets/powered-by-vercel.svg";
     <a href="https://vercel.com?utm_source=gscale&utm_campaign=oss">
       <img :src="VercelLogo" width="212" height="44" alt="Powered by Vercel" />
     </a>
+    <a href="https://github.com/glaciyan/gscale-amber">Github</a>
   </footer>
 </template>
 
