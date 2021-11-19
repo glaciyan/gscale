@@ -23,6 +23,7 @@ This is a vue rewrite for gscale currently running with a customized vite setup.
 
 ### Planned to release on launch
 
+- more caching over web workers
 - +3 compensation for talents
 - integration with hoyolab map
 - auto check for common, book and gem
