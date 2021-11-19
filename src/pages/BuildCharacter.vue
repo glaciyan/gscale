@@ -13,6 +13,8 @@ import TitledSelectorGroup from "~/components/TitledSelectorGroup.vue";
 import { useAscensionLevelRange } from "~/composites/useAscensionLevelRange";
 import { useTalentLevelRange } from "~/composites/useTalentLevelRange";
 import { ICharacter } from "~/lib/data/contracts/ICharacter";
+import { IItem } from "~/lib/data/contracts/IItem";
+import { Items } from "~/lib/data/Items";
 import repo from "~/lib/data/repository/GenshinDataRepository";
 import title from "~/lib/title";
 
@@ -42,6 +44,9 @@ whenever(loading, () => {
     loading.value = false;
   }, 3000);
 });
+
+const items = ref<IItem[]>([]);
+const hasItems = computed(() => items.value.length !== 0);
 </script>
 
 <template>
@@ -103,6 +108,13 @@ whenever(loading, () => {
           </div>
         </section>
       </div>
+      <section class="bg-dark-600 w-full p-6">
+        <span class="font-semibold text-light-important">Material Preview</span>
+        <div v-if="hasItems">
+          <span>Has Items</span>
+        </div>
+        <div v-else>No Items</div>
+      </section>
     </div>
   </XLContainer>
 </template>
