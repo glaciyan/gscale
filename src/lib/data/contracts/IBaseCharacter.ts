@@ -9,4 +9,5 @@ export interface IBaseCharacter extends INamed {
   sub: string;
   constellation: string;
   description: string;
+  meta?: string;
 }
