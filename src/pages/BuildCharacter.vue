@@ -6,15 +6,17 @@ import ElementalIcon from "~/components/icons/Elemental.vue";
 import FireIcon from "~/components/icons/Fire.vue";
 import GrowthIcon from "~/components/icons/Growth.vue";
 import SwordIcon from "~/components/icons/Sword.vue";
+import ItemCard from "~/components/ItemCard.vue";
 import SelectorAscensionLevel from "~/components/SelectorAscensionLevel.vue";
 import SelectorGroup from "~/components/SelectorGroup.vue";
 import SelectorIconSeperator from "~/components/SelectorIconSeperator.vue";
 import SelectorTalentLevel from "~/components/SelectorTalentLevel.vue";
 import { useAscensionLevelRange } from "~/composites/useAscensionLevelRange";
 import { useTalentLevelRange } from "~/composites/useTalentLevelRange";
+import { calculateAscension } from "~/lib/calculator";
 import { ICharacter } from "~/lib/data/contracts/ICharacter";
-import { IItem } from "~/lib/data/contracts/IItem";
 import repo from "~/lib/data/repository/GenshinDataRepository";
+import { getMaterialImage } from "~/lib/data/util/getMaterialImage";
 import title from "~/lib/title";
 
 const route = useRoute();
@@ -44,7 +46,8 @@ whenever(loading, () => {
   }, 3000);
 });
 
-const items = ref<IItem[]>([]);
+const items = computed(() => calculateAscension(character, ascStart.value, ascGoal.value));
+
 const hasItems = computed(() => items.value.length !== 0);
 </script>
 
@@ -109,8 +112,14 @@ const hasItems = computed(() => items.value.length !== 0);
       </div>
       <section class="bg-dark-600 w-full p-6">
         <span class="font-semibold text-light-important">Material Preview</span>
-        <div v-if="hasItems">
-          <span>Has Items</span>
+        <div v-if="hasItems" class="flex flex-wrap">
+          <ItemCard
+            v-for="item in items"
+            :key="item.item.normalizedName + 'asc'"
+            :imageTitle="item.item.name"
+            :amount="item.amount"
+            :imageUrl="getMaterialImage(item.item.normalizedName).webp"
+          />
         </div>
         <div v-else>No Items</div>
       </section>
