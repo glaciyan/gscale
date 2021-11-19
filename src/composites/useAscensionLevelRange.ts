@@ -6,13 +6,13 @@ export function useAscensionLevelRange() {
   const goal = ref<AscensionLevel>({ level: 1, ascended: false });
 
   watch(start, (value) => {
-    if (compareAscension(value, goal.value) === 1) {
+    if (compareAscension(value, goal.value).isGreater()) {
       goal.value = value;
     }
   });
 
   watch(goal, (value) => {
-    if (compareAscension(value, start.value) === -1) {
+    if (compareAscension(value, start.value).isLess()) {
       start.value = value;
     }
   });
