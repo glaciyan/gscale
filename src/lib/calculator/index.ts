@@ -15,19 +15,19 @@ export function calculateAscension(
   const startAscension = getAscensionStage(start);
   const goalAscension = getAscensionStage(goal);
 
-  // execute an anonymous function which either returns traveler
-  // materials if meta is "traveler" or just return all materials from the character
+  // this is like rust's match as expression https://doc.rust-lang.org/rust-by-example/flow_control/match.html
   const items = (() => {
-    if (character.meta === "traveler") {
-      const traveler = character as ITraveler;
-      return {
-        gemGroup: traveler.gemGroup,
-        local: traveler.local,
-        commonGroup: traveler.ascensionCommonGroup,
-        boss: undefined,
-      };
-    } else {
-      return character as ICharacter;
+    switch (character.meta) {
+      case undefined:
+        return character as ICharacter;
+      case "traveler":
+        const traveler = character as ITraveler;
+        return {
+          gemGroup: traveler.gemGroup,
+          local: traveler.local,
+          commonGroup: traveler.ascensionCommonGroup,
+          boss: undefined,
+        };
     }
   })();
 
