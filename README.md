@@ -3,7 +3,7 @@
 | 🛑 gscale 2.0 is currently heavy in development. Because things are changing fast, I am currently not accepting any contributions until version 2.0 is ready for production! |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
-This is a vue rewrite for gscale currently running with a customized vite setup. In the future I'm hoping on using nuxt when static pre-rendering and other vital features are functional.
+This is a vue rewrite for gscale currently running with a customized vite setup.
 
 <a href="https://vercel.com?utm_source=gscale&utm_campaign=oss">
 <img src="./src/assets/powered-by-vercel.svg"
@@ -18,12 +18,12 @@ This is a vue rewrite for gscale currently running with a customized vite setup.
 - Finish up /builds page
 - Header
 - Footer
+- Add new features
 
 ## Planned new features
 
 ### Planned to release on launch
 
-- more caching over web workers
 - +3 compensation for talents
 - integration with hoyolab map
 - auto check for common, book and gem
