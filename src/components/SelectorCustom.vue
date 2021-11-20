@@ -4,7 +4,7 @@ import Center from "./Center.vue";
 import DownChevron from "./icons/DownChevron.vue";
 import ValueListboxLayout from "./ValueListboxLayout.vue";
 
-defineProps<{ modelValue: any; listItems: any[]; id: string; keyFunc?: (option: any) => string }>();
+defineProps<{ modelValue: any; listItems: any[]; id: string }>();
 
 defineEmits(["update:modelValue"]);
 </script>
