@@ -18,7 +18,7 @@ import Navigation from "./components/Navigation.vue";
     <a href="https://vercel.com?utm_source=gscale&utm_campaign=oss">
       <img :src="VercelLogo" width="212" height="44" alt="Powered by Vercel" />
     </a>
-    <a href="https://github.com/glaciyan/gscale-amber">Github</a>
+    <a href="https://github.com/glaciyan/gscale-amber" target="_blank">Github</a>
   </footer>
 </template>
 
