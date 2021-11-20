@@ -46,9 +46,6 @@ export function calculateAscension(
   start: AscensionLevel,
   goal: AscensionLevel
 ): IItemWithAmountNotNull[] {
-  const startAscension = getAscensionStage(start);
-  const goalAscension = getAscensionStage(goal);
-
   // this works like rusts match as expression https://doc.rust-lang.org/rust-by-example/flow_control/match.html
   const items = (() => {
     switch (character.meta) {
@@ -64,6 +61,9 @@ export function calculateAscension(
         };
     }
   })();
+
+  const startAscension = getAscensionStage(start);
+  const goalAscension = getAscensionStage(goal);
 
   //@ts-ignore becase of the reduce the array is not going to include any null items
   return AscensionCostTable(items).slice(startAscension, goalAscension).reduce(mergeAmountByName, []);
