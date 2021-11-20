@@ -24,7 +24,7 @@ export function calculateAscension(
   const startAscension = getAscensionStage(start);
   const goalAscension = getAscensionStage(goal);
 
-  // this is like rust's match as expression https://doc.rust-lang.org/rust-by-example/flow_control/match.html
+  // this works like rusts match as expression https://doc.rust-lang.org/rust-by-example/flow_control/match.html
   const items = (() => {
     switch (character.meta) {
       case undefined:
