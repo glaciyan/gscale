@@ -4,9 +4,7 @@ import Center from "./Center.vue";
 import DownChevron from "./icons/DownChevron.vue";
 import ValueListboxLayout from "./ValueListboxLayout.vue";
 
-withDefaults(defineProps<{ modelValue: any; listItems: any[]; id: string; keyFunc?: (option: any) => string }>(), {
-  keyFunc: (option) => option,
-});
+defineProps<{ modelValue: any; listItems: any[]; id: string; keyFunc?: (option: any) => string }>();
 
 defineEmits(["update:modelValue"]);
 </script>
@@ -60,7 +58,7 @@ defineEmits(["update:modelValue"]);
               overflow-y-auto
             "
           >
-            <ListboxOption v-for="option in listItems" :key="keyFunc(option)" :value="option" v-slot="{ active }">
+            <ListboxOption v-for="(option, index) in listItems" :key="id + index" :value="option" v-slot="{ active }">
               <div :class="['cursor-default flex py-2 pr-6 pl-6 items-center', { 'bg-dark-500': active }]">
                 <slot name="item" :option="option" />
               </div>

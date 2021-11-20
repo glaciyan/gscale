@@ -19,8 +19,6 @@ const update = (val: { level?: number; ascended?: boolean }) => {
 const cannotAscend = computed(() => {
   return props.modelValue.level === 1 || props.modelValue.level === 90;
 });
-
-const keyFunc = (option: AscensionLevel) => option.level + option.ascended.toString();
 </script>
 
 <template>
@@ -29,7 +27,6 @@ const keyFunc = (option: AscensionLevel) => option.level + option.ascended.toStr
     :modelValue="modelValue"
     @update:modelValue="$emit('update:modelValue', $event)"
     :listItems="Levels"
-    :keyFunc="keyFunc"
     :class="$attrs.class"
   >
     <template #button="slotProps">
