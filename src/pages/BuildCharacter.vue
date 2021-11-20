@@ -17,8 +17,10 @@ import { calculateAscension, calculateLeveling } from "~/lib/calculator";
 import { ICharacter } from "~/lib/data/contracts/ICharacter";
 import repo from "~/lib/data/repository/GenshinDataRepository";
 import { getMaterialImage } from "~/lib/data/util/getMaterialImage";
+import mergeAmountByName from "~/lib/mergeAmountByName";
 import sortItems from "~/lib/sortItems";
 import title from "~/lib/title";
+import MaterialPreviewContainer from "~/components/MaterialPreviewContainer.vue";
 
 const route = useRoute();
 
@@ -47,14 +49,16 @@ whenever(loading, () => {
   }, 3000);
 });
 
-const items = computed(() => sortItems(calculateAscension(character, ascStart.value, ascGoal.value)));
+const ascItems = computed(() => sortItems(calculateAscension(character, ascStart.value, ascGoal.value)));
 
-const hasItems = computed(() => items.value.length !== 0);
+const hasItems = computed(() => ascItems.value.length !== 0);
 
 const levelingItems = computed(() => calculateLeveling(ascStart.value, ascGoal.value));
-watch(levelingItems, (value) => {
-  console.log(JSON.stringify(value));
-});
+
+const total = computed(() =>
+  //@ts-ignore because mergeAmountByName makes sure there are no nulls
+  sortItems([ascItems.value, [levelingItems.value.mora, levelingItems.value.lazy]].reduce(mergeAmountByName, []))
+);
 </script>
 
 <template>
@@ -118,14 +122,25 @@ watch(levelingItems, (value) => {
       </div>
       <section class="bg-dark-600 w-full p-6">
         <span class="font-semibold text-light-important">Material Preview</span>
-        <div v-if="hasItems" class="flex flex-wrap">
-          <ItemCard
-            v-for="item in items"
-            :key="item.item.normalizedName + 'asc'"
-            :imageTitle="item.item.name"
-            :amount="item.amount"
-            :imageUrl="getMaterialImage(item.item.normalizedName).webp"
-          />
+        <div v-if="hasItems" class="flex flex-col">
+          <MaterialPreviewContainer title="Total" bold>
+            <ItemCard
+              v-for="item in total"
+              :key="item.item.normalizedName + 'total'"
+              :imageTitle="item.item.name"
+              :amount="item.amount"
+              :imageUrl="getMaterialImage(item.item.normalizedName).webp"
+            />
+          </MaterialPreviewContainer>
+          <MaterialPreviewContainer title="Ascension">
+            <ItemCard
+              v-for="item in ascItems"
+              :key="item.item.normalizedName + 'asc'"
+              :imageTitle="item.item.name"
+              :amount="item.amount"
+              :imageUrl="getMaterialImage(item.item.normalizedName).webp"
+            />
+          </MaterialPreviewContainer>
         </div>
         <div v-else>No Items</div>
       </section>
