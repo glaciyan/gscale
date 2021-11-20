@@ -13,7 +13,7 @@ import SelectorIconSeperator from "~/components/SelectorIconSeperator.vue";
 import SelectorTalentLevel from "~/components/SelectorTalentLevel.vue";
 import { useAscensionLevelRange } from "~/composites/useAscensionLevelRange";
 import { useTalentLevelRange } from "~/composites/useTalentLevelRange";
-import { calculateAscension } from "~/lib/calculator";
+import { calculateAscension, calculateLeveling } from "~/lib/calculator";
 import { ICharacter } from "~/lib/data/contracts/ICharacter";
 import repo from "~/lib/data/repository/GenshinDataRepository";
 import { getMaterialImage } from "~/lib/data/util/getMaterialImage";
@@ -50,6 +50,11 @@ whenever(loading, () => {
 const items = computed(() => sortItems(calculateAscension(character, ascStart.value, ascGoal.value)));
 
 const hasItems = computed(() => items.value.length !== 0);
+
+const levelingItems = computed(() => calculateLeveling(ascStart.value, ascGoal.value));
+watch(levelingItems, (value) => {
+  console.log(JSON.stringify(value));
+});
 </script>
 
 <template>

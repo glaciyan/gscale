@@ -3,9 +3,18 @@ import { IBaseCharacter } from "../data/contracts/IBaseCharacter";
 import { ICharacter } from "../data/contracts/ICharacter";
 import { ITraveler } from "../data/contracts/ITraveler";
 import { IItemWithAmountNotNull, ItemWithAmount } from "../data/entities/ItemWithAmount";
+import LevelingCostTable from "../data/LevelingCostTable";
 import { getAscensionStage } from "../getAscensionStage";
+import getLevelingIndex from "../getLevelingIndex";
 import { AscensionLevel } from "../interfaces/AscensionLevel";
 import mergeAmountByName from "../mergeAmountByName";
+
+export function calculateLeveling(start: AscensionLevel, goal: AscensionLevel) {
+  const startAscension = getLevelingIndex(start);
+  const goalAscension = getLevelingIndex(goal);
+
+  return LevelingCostTable.slice(startAscension, goalAscension);
+}
 
 export function calculateAscension(
   character: IBaseCharacter,
