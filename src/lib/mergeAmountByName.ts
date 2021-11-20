@@ -11,7 +11,7 @@ export default (total: ItemWithAmount[], current: ItemWithAmount[]) => {
       const itemWithSameNameIndex = total.findIndex((i) => i?.item.normalizedName === item.item.normalizedName);
 
       if (itemWithSameNameIndex === -1) {
-        total.push(item);
+        total.push(Object.assign({}, item));
       } else {
         //@ts-ignore will not be undefined
         total[itemWithSameNameIndex].amount += item.amount;
