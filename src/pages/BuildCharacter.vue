@@ -17,6 +17,7 @@ import { calculateAscension } from "~/lib/calculator";
 import { ICharacter } from "~/lib/data/contracts/ICharacter";
 import repo from "~/lib/data/repository/GenshinDataRepository";
 import { getMaterialImage } from "~/lib/data/util/getMaterialImage";
+import sortItems from "~/lib/sortItems";
 import title from "~/lib/title";
 
 const route = useRoute();
@@ -46,7 +47,7 @@ whenever(loading, () => {
   }, 3000);
 });
 
-const items = computed(() => calculateAscension(character, ascStart.value, ascGoal.value));
+const items = computed(() => sortItems(calculateAscension(character, ascStart.value, ascGoal.value)));
 
 const hasItems = computed(() => items.value.length !== 0);
 </script>
