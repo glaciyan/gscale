@@ -7,6 +7,7 @@ import FireIcon from "~/components/icons/Fire.vue";
 import GrowthIcon from "~/components/icons/Growth.vue";
 import SwordIcon from "~/components/icons/Sword.vue";
 import ItemCard from "~/components/ItemCard.vue";
+import MaterialPreviewContainer from "~/components/MaterialPreviewContainer.vue";
 import SelectorAscensionLevel from "~/components/SelectorAscensionLevel.vue";
 import SelectorGroup from "~/components/SelectorGroup.vue";
 import SelectorIconSeperator from "~/components/SelectorIconSeperator.vue";
@@ -20,7 +21,6 @@ import { getMaterialImage } from "~/lib/data/util/getMaterialImage";
 import mergeAmountByName from "~/lib/mergeAmountByName";
 import sortItems from "~/lib/sortItems";
 import title from "~/lib/title";
-import MaterialPreviewContainer from "~/components/MaterialPreviewContainer.vue";
 
 const route = useRoute();
 
@@ -36,23 +36,21 @@ const { start: normalStart, goal: normalGoal } = useTalentLevelRange();
 const { start: emStart, goal: emGoal } = useTalentLevelRange();
 const { start: burstStart, goal: burstGoal } = useTalentLevelRange();
 
+// TODO temp
 const loading = ref(false);
-
 const handleClick = () => {
   loading.value = true;
   console.log("button click");
 };
-
 whenever(loading, () => {
   setTimeout(() => {
     loading.value = false;
   }, 3000);
 });
 
+// ---------Calculator---------
+// Ascension
 const ascItems = computed(() => sortItems(calculateAscension(character, ascStart.value, ascGoal.value)));
-
-const hasItems = computed(() => ascItems.value.length !== 0);
-
 const levelingItems = computed(() => calculateLeveling(ascStart.value, ascGoal.value));
 
 const total = computed(() =>
