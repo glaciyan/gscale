@@ -120,7 +120,7 @@ const total = computed(() =>
       </div>
       <section class="bg-dark-600 w-full p-6">
         <span class="font-semibold text-light-important">Material Preview</span>
-        <div v-if="hasItems" class="flex flex-col">
+        <div v-if="total.length !== 0" class="flex flex-col">
           <MaterialPreviewContainer title="Total" bold>
             <ItemCard
               v-for="item in total"
@@ -130,7 +130,7 @@ const total = computed(() =>
               :imageUrl="getMaterialImage(item.item.normalizedName).webp"
             />
           </MaterialPreviewContainer>
-          <MaterialPreviewContainer title="Ascension">
+          <MaterialPreviewContainer v-if="ascItems.length !== 0" title="Ascension">
             <ItemCard
               v-for="item in ascItems"
               :key="item.item.normalizedName + 'asc'"
