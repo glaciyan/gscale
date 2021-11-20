@@ -65,6 +65,6 @@ export function calculateAscension(
     }
   })();
 
-  //@ts-ignore becase of the reduce the array is not goign to include any null items
+  //@ts-ignore becase of the reduce the array is not going to include any null items
   return AscensionCostTable(items).slice(startAscension, goalAscension).reduce(mergeAmountByName, []);
 }
