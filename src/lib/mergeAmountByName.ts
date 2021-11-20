@@ -1,4 +1,4 @@
-import { ItemWithAmount } from "../data/entities/ItemWithAmount";
+import { ItemWithAmount } from "./data/entities/ItemWithAmount";
 
 export default (total: ItemWithAmount[], current: ItemWithAmount[]) => {
   current.forEach((item) => {

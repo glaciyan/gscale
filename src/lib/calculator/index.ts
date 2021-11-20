@@ -5,7 +5,7 @@ import { ITraveler } from "../data/contracts/ITraveler";
 import { IItemWithAmountNotNull, ItemWithAmount } from "../data/entities/ItemWithAmount";
 import { getAscensionStage } from "../getAscensionStage";
 import { AscensionLevel } from "../interfaces/AscensionLevel";
-import mergeAmountByName from "./mergeAmountByName";
+import mergeAmountByName from "../mergeAmountByName";
 
 export function calculateAscension(
   character: IBaseCharacter,
