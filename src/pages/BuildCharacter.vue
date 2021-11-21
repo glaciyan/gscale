@@ -121,7 +121,7 @@ const total = computed(() =>
       <section class="bg-dark-600 w-full p-6">
         <span class="font-semibold text-light-important">Material Preview</span>
         <div v-if="total.length !== 0" class="flex flex-col">
-          <MaterialPreviewContainer title="Total" bold>
+          <MaterialPreviewContainer title="Total" semiBold>
             <ItemCard
               v-for="item in total"
               :key="item.item.normalizedName + 'total'"
