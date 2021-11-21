@@ -7,7 +7,7 @@ import FireIcon from "~/components/icons/Fire.vue";
 import GrowthIcon from "~/components/icons/Growth.vue";
 import SwordIcon from "~/components/icons/Sword.vue";
 import ItemCard from "~/components/ItemCard.vue";
-import MaterialPreviewContainer from "~/components/MaterialPreviewContainer.vue";
+import MaterialPreviewHeader from "~/components/MaterialPreviewHeader.vue";
 import SelectorAscensionLevel from "~/components/SelectorAscensionLevel.vue";
 import SelectorGroup from "~/components/SelectorGroup.vue";
 import SelectorIconSeperator from "~/components/SelectorIconSeperator.vue";
@@ -121,7 +121,7 @@ const total = computed(() =>
       <section class="bg-dark-600 w-full p-6">
         <span class="font-semibold text-light-important">Material Preview</span>
         <div v-if="total.length !== 0" class="flex flex-col">
-          <MaterialPreviewContainer title="Total" semiBold>
+          <MaterialPreviewHeader title="Total" class="font-semibold">
             <ItemCard
               v-for="item in total"
               :key="item.item.normalizedName + 'total'"
@@ -129,8 +129,8 @@ const total = computed(() =>
               :amount="item.amount"
               :imageUrl="getMaterialImage(item.item.normalizedName).webp"
             />
-          </MaterialPreviewContainer>
-          <MaterialPreviewContainer v-if="ascItems.length !== 0" title="Ascension">
+          </MaterialPreviewHeader>
+          <MaterialPreviewHeader v-if="ascItems.length !== 0" title="Ascension">
             <ItemCard
               v-for="item in ascItems"
               :key="item.item.normalizedName + 'asc'"
@@ -138,7 +138,7 @@ const total = computed(() =>
               :amount="item.amount"
               :imageUrl="getMaterialImage(item.item.normalizedName).webp"
             />
-          </MaterialPreviewContainer>
+          </MaterialPreviewHeader>
         </div>
         <div v-else>No Items</div>
       </section>
