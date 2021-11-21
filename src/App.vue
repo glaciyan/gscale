@@ -32,4 +32,37 @@ import Navigation from "./components/Navigation.vue";
 .fade-leave-to {
   @apply opacity-0;
 }
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(./assets/fonts/OpenSans-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(./assets/fonts/OpenSans-Medium.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(./assets/fonts/OpenSans-SemiBold.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(./assets/fonts/OpenSans-Bold.ttf) format("truetype");
+}
 </style>
