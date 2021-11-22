@@ -70,4 +70,34 @@ export function calculateAscension(
   return mergeAmountByName(AscensionCostTable(items).slice(startAscension, goalAscension));
 }
 
+function calculateSingleTalent(character: IBaseCharacter, level: number, normalTalent = false) {
+  const items = (() => {
+    switch (character.meta) {
+      case "traveler":
+        const traveler = character as ITraveler;
+        return {
+          commonGroup: normalTalent ? traveler.normalTalentCommonGroup : traveler.talentCommonGroup,
+          bookGroup: normalTalent ? traveler.normalTalentBooks[level] : traveler.talentBooks[level],
+          weekly: normalTalent ? traveler.normalTalentBoss : traveler.talentBoss,
+        };
+      default:
+        return character as ICharacter;
+    }
+  })();
+
+  // @ts-ignore because typescript is being stupid
+  return TalentCostTable(items, level);
+}
+
+export function calculateTalent(
+  character: IBaseCharacter,
+  start: number,
+  goal: number,
+  normalTalent = false
+): IItemWithAmountNotNull[] {
+  return mergeAmountByName(
+    range(goal - start, start).map<ItemWithAmount[]>((level) => {
+      return calculateSingleTalent(character, level, normalTalent);
+    })
+  );
 }

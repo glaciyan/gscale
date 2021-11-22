@@ -14,7 +14,7 @@ import SelectorIconSeperator from "~/components/SelectorIconSeperator.vue";
 import SelectorTalentLevel from "~/components/SelectorTalentLevel.vue";
 import { useAscensionLevelRange } from "~/composites/useAscensionLevelRange";
 import { useTalentLevelRange } from "~/composites/useTalentLevelRange";
-import { calculateAscension, calculateLeveling } from "~/lib/calculator";
+import { calculateAscension, calculateLeveling, calculateTalent } from "~/lib/calculator";
 import { ICharacter } from "~/lib/data/contracts/ICharacter";
 import repo from "~/lib/data/repository/GenshinDataRepository";
 import { getMaterialImage } from "~/lib/data/util/getMaterialImage";
@@ -52,10 +52,12 @@ whenever(loading, () => {
 // Ascension
 const ascItems = computed(() => sortItems(calculateAscension(character, ascStart.value, ascGoal.value)));
 const levelingItems = computed(() => calculateLeveling(ascStart.value, ascGoal.value));
+const normalItems = computed(() => sortItems(calculateTalent(character, normalStart.value, normalGoal.value, true)));
 
 const total = computed(() =>
-  //@ts-ignore because mergeAmountByName makes sure there are no nulls
-  sortItems([ascItems.value, [levelingItems.value.mora, levelingItems.value.lazy]].reduce(mergeAmountByName, []))
+  sortItems(
+    mergeAmountByName([ascItems.value, normalItems.value, [(levelingItems.value.mora, levelingItems.value.lazy)]])
+  )
 );
 </script>
 
@@ -130,10 +132,19 @@ const total = computed(() =>
               :imageUrl="getMaterialImage(item.item.normalizedName).webp"
             />
           </MaterialPreviewHeader>
-          <MaterialPreviewHeader v-if="ascItems.length !== 0" title="Ascension">
+          <MaterialPreviewHeader title="Ascension">
             <ItemCard
               v-for="item in ascItems"
               :key="item.item.normalizedName + 'asc'"
+              :imageTitle="item.item.name"
+              :amount="item.amount"
+              :imageUrl="getMaterialImage(item.item.normalizedName).webp"
+            />
+          </MaterialPreviewHeader>
+          <MaterialPreviewHeader title="Normal Talent">
+            <ItemCard
+              v-for="item in normalItems"
+              :key="item.item.normalizedName + 'normal'"
               :imageTitle="item.item.name"
               :amount="item.amount"
               :imageUrl="getMaterialImage(item.item.normalizedName).webp"
