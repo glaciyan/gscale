@@ -12,6 +12,7 @@ const categoryPrecedence = [
   "book",
   "weekly",
   "special",
+  "special_talent",
 ];
 
 export default (items: IItemWithAmountNotNull[]) => {
