@@ -22,3 +22,7 @@ export const grouped = (group?: IItemGroup) => {
 export function mora(amount: number): ItemWithAmount {
   return { item: Items.mora, amount };
 }
+
+export function crown(amount: number): ItemWithAmount {
+  return { item: Items.crown_of_insight, amount };
+}
