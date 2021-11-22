@@ -48,9 +48,9 @@ whenever(loading, () => {
 });
 
 // ---------Calculator---------
-// Ascension
-const ascItems = computed(() => sortItems(calculateAscension(character, ascStart.value, ascGoal.value)));
 const levelingItems = computed(() => calculateLeveling(ascStart.value, ascGoal.value));
+
+const ascItems = computed(() => sortItems(calculateAscension(character, ascStart.value, ascGoal.value)));
 const normalItems = computed(() => sortItems(calculateTalent(character, normalStart.value, normalGoal.value, true)));
 const emItems = computed(() => sortItems(calculateTalent(character, emStart.value, emGoal.value)));
 const burstItems = computed(() => sortItems(calculateTalent(character, burstStart.value, burstGoal.value)));
@@ -62,7 +62,7 @@ const total = computed(() =>
       normalItems.value,
       emItems.value,
       burstItems.value,
-      [(levelingItems.value.mora, levelingItems.value.lazy)],
+      [levelingItems.value.mora, levelingItems.value.lazy],
     ])
   )
 );
