@@ -6,7 +6,7 @@ import ElementalIcon from "~/components/icons/Elemental.vue";
 import FireIcon from "~/components/icons/Fire.vue";
 import GrowthIcon from "~/components/icons/Growth.vue";
 import SwordIcon from "~/components/icons/Sword.vue";
-import MaterialGrid from "~/components/MaterialGrid.vue";
+import MaterialList from "~/components/MaterialList.vue";
 import MaterialPreviewHeader from "~/components/MaterialPreviewHeader.vue";
 import SelectorAscensionLevel from "~/components/SelectorAscensionLevel.vue";
 import SelectorGroup from "~/components/SelectorGroup.vue";
@@ -131,19 +131,19 @@ const total = computed(() =>
         <span class="font-semibold text-light-important">Material Preview</span>
         <div v-if="total.length !== 0" class="flex flex-col">
           <MaterialPreviewHeader title="Total" class="font-semibold">
-            <MaterialGrid :items="total" key="total" />
+            <MaterialList :items="total" key="total" />
           </MaterialPreviewHeader>
           <MaterialPreviewHeader title="Ascension">
-            <MaterialGrid :items="ascItems" key="asc" />
+            <MaterialList :items="ascItems" key="asc" />
           </MaterialPreviewHeader>
           <MaterialPreviewHeader title="Normal Attack">
-            <MaterialGrid :items="normalItems" key="normal" />
+            <MaterialList :items="normalItems" key="normal" />
           </MaterialPreviewHeader>
           <MaterialPreviewHeader title="Elemental Attack">
-            <MaterialGrid :items="emItems" key="em" />
+            <MaterialList :items="emItems" key="em" />
           </MaterialPreviewHeader>
           <MaterialPreviewHeader title="Burst">
-            <MaterialGrid :items="burstItems" key="burst" />
+            <MaterialList :items="burstItems" key="burst" />
           </MaterialPreviewHeader>
         </div>
         <div v-else>No Items</div>
