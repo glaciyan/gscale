@@ -12,5 +12,8 @@ export interface ITraveler extends IBaseCharacter {
   talentBoss: IItem;
 
   talentBooks: ITravelerTalentBooks;
+
   normalTalentBooks: ITravelerTalentBooks;
+  normalTalentCommonGroup: IItemGroup;
+  normalTalentBoss: IItem;
 }

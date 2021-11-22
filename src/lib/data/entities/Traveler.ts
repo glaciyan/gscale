@@ -31,7 +31,10 @@ export class Traveler implements ITraveler {
     this.talentBoss = config.talentBoss;
 
     this.talentBooks = config.talentBooks;
+
     this.normalTalentBooks = config.normalTalentBooks;
+    this.normalTalentCommonGroup = config.normalTalentCommonGroup;
+    this.normalTalentBoss = config.normalTalentBoss;
   }
 
   name: string;
@@ -52,6 +55,8 @@ export class Traveler implements ITraveler {
 
   talentBooks: ITravelerTalentBooks;
   normalTalentBooks: ITravelerTalentBooks;
+  normalTalentCommonGroup: IItemGroup;
+  normalTalentBoss: IItem;
 
   meta: string;
 }

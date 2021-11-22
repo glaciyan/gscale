@@ -17,13 +17,17 @@ export const Travelers: IdIndex<ITraveler> = {
     talentCommonGroup: ItemGroups.handguard,
     talentBooks: inazumaBooks,
     normalTalentBooks: inazumaBooks,
+    normalTalentCommonGroup: ItemGroups.handguard,
+    normalTalentBoss: Items.dragon_lords_crown,
   }),
   traveler_geo: new Traveler({
     element: Elements.geo,
     talentBoss: Items.tail_of_boreas,
-    talentCommonGroup: ItemGroups.arrow,
+    talentCommonGroup: ItemGroups.arrowhead,
     talentBooks: liyueBooks,
     normalTalentBooks: mondstadtBooks,
+    normalTalentCommonGroup: ItemGroups.scroll,
+    normalTalentBoss: Items.tail_of_boreas,
   }),
   traveler_anemo: new Traveler({
     element: Elements.anemo,
@@ -31,5 +35,7 @@ export const Travelers: IdIndex<ITraveler> = {
     talentCommonGroup: ItemGroups.scroll,
     talentBooks: mondstadtBooks,
     normalTalentBooks: mondstadtBooks,
+    normalTalentCommonGroup: ItemGroups.scroll,
+    normalTalentBoss: Items.dvalins_sigh,
   }),
 };

@@ -11,4 +11,6 @@ export interface ITravelerConfig {
 
   talentBooks: ITravelerTalentBooks;
   normalTalentBooks: ITravelerTalentBooks;
+  normalTalentCommonGroup: IItemGroup;
+  normalTalentBoss: IItem;
 }
