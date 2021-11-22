@@ -6,7 +6,7 @@ import ElementalIcon from "~/components/icons/Elemental.vue";
 import FireIcon from "~/components/icons/Fire.vue";
 import GrowthIcon from "~/components/icons/Growth.vue";
 import SwordIcon from "~/components/icons/Sword.vue";
-import ItemCard from "~/components/ItemCard.vue";
+import MaterialGrid from "~/components/MaterialGrid.vue";
 import MaterialPreviewHeader from "~/components/MaterialPreviewHeader.vue";
 import SelectorAscensionLevel from "~/components/SelectorAscensionLevel.vue";
 import SelectorGroup from "~/components/SelectorGroup.vue";
@@ -17,7 +17,6 @@ import { useTalentLevelRange } from "~/composites/useTalentLevelRange";
 import { calculateAscension, calculateLeveling, calculateTalent } from "~/lib/calculator";
 import { ICharacter } from "~/lib/data/contracts/ICharacter";
 import repo from "~/lib/data/repository/GenshinDataRepository";
-import { getMaterialImage } from "~/lib/data/util/getMaterialImage";
 import mergeAmountByName from "~/lib/mergeAmountByName";
 import sortItems from "~/lib/sortItems";
 import title from "~/lib/title";
@@ -132,49 +131,19 @@ const total = computed(() =>
         <span class="font-semibold text-light-important">Material Preview</span>
         <div v-if="total.length !== 0" class="flex flex-col">
           <MaterialPreviewHeader title="Total" class="font-semibold">
-            <ItemCard
-              v-for="item in total"
-              :key="item.item.normalizedName + 'total'"
-              :imageTitle="item.item.name"
-              :amount="item.amount"
-              :imageUrl="getMaterialImage(item.item.normalizedName).webp"
-            />
+            <MaterialGrid :items="total" key="total" />
           </MaterialPreviewHeader>
           <MaterialPreviewHeader title="Ascension">
-            <ItemCard
-              v-for="item in ascItems"
-              :key="item.item.normalizedName + 'asc'"
-              :imageTitle="item.item.name"
-              :amount="item.amount"
-              :imageUrl="getMaterialImage(item.item.normalizedName).webp"
-            />
+            <MaterialGrid :items="ascItems" key="asc" />
           </MaterialPreviewHeader>
           <MaterialPreviewHeader title="Normal Attack">
-            <ItemCard
-              v-for="item in normalItems"
-              :key="item.item.normalizedName + 'normal'"
-              :imageTitle="item.item.name"
-              :amount="item.amount"
-              :imageUrl="getMaterialImage(item.item.normalizedName).webp"
-            />
+            <MaterialGrid :items="normalItems" key="normal" />
           </MaterialPreviewHeader>
           <MaterialPreviewHeader title="Elemental Attack">
-            <ItemCard
-              v-for="item in emItems"
-              :key="item.item.normalizedName + 'em'"
-              :imageTitle="item.item.name"
-              :amount="item.amount"
-              :imageUrl="getMaterialImage(item.item.normalizedName).webp"
-            />
+            <MaterialGrid :items="emItems" key="em" />
           </MaterialPreviewHeader>
           <MaterialPreviewHeader title="Burst">
-            <ItemCard
-              v-for="item in burstItems"
-              :key="item.item.normalizedName + 'burst'"
-              :imageTitle="item.item.name"
-              :amount="item.amount"
-              :imageUrl="getMaterialImage(item.item.normalizedName).webp"
-            />
+            <MaterialGrid :items="burstItems" key="burst" />
           </MaterialPreviewHeader>
         </div>
         <div v-else>No Items</div>
