@@ -1,11 +1,11 @@
-import { ItemWithAmount } from "./data/entities/ItemWithAmount";
+import { IItemWithAmountNotNull, ItemWithAmount } from "./data/entities/ItemWithAmount";
 
 /**
  * Intended to be used as an argument for Array.prototype.reduce where the array is of type ItemWithAmount[][]
  * Will merge all ItemWithAmount by the items normalizedName property and add together its amount property.
  * This function will also filter out any undefined items and items which have an amount of 0.
  */
-export default (total: ItemWithAmount[], current: ItemWithAmount[]) => {
+const merge = (total: ItemWithAmount[], current: ItemWithAmount[]) => {
   current.forEach((item) => {
     if (item && item.amount > 0) {
       const itemWithSameNameIndex = total.findIndex((i) => i?.item.normalizedName === item.item.normalizedName);
@@ -21,3 +21,8 @@ export default (total: ItemWithAmount[], current: ItemWithAmount[]) => {
 
   return total;
 };
+
+export default function (table: ItemWithAmount[][]): IItemWithAmountNotNull[] {
+  // the reduce function will filter out any null items
+  return table.reduce(merge, []) as IItemWithAmountNotNull[];
+}

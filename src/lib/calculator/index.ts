@@ -2,13 +2,15 @@ import AscensionCostTable from "../data/AscensionCostTable";
 import { IBaseCharacter } from "../data/contracts/IBaseCharacter";
 import { ICharacter } from "../data/contracts/ICharacter";
 import { ITraveler } from "../data/contracts/ITraveler";
-import { IItemWithAmountNotNull } from "../data/entities/ItemWithAmount";
+import { IItemWithAmountNotNull, ItemWithAmount } from "../data/entities/ItemWithAmount";
 import { Items } from "../data/Items";
 import LevelingCostTable from "../data/LevelingCostTable";
+import TalentCostTable from "../data/TalentCostTable";
 import { getAscensionStage } from "../getAscensionStage";
 import getLevelingIndex from "../getLevelingIndex";
 import { AscensionLevel } from "../interfaces/AscensionLevel";
 import mergeAmountByName from "../mergeAmountByName";
+import { range } from "../range";
 
 export function calculateLeveling(
   start: AscensionLevel,
@@ -49,8 +51,6 @@ export function calculateAscension(
   // this works like rusts match as expression https://doc.rust-lang.org/rust-by-example/flow_control/match.html
   const items = (() => {
     switch (character.meta) {
-      case undefined:
-        return character as ICharacter;
       case "traveler":
         const traveler = character as ITraveler;
         return {
@@ -59,12 +59,15 @@ export function calculateAscension(
           commonGroup: traveler.ascensionCommonGroup,
           boss: undefined,
         };
+      default:
+        return character as ICharacter;
     }
   })();
 
   const startAscension = getAscensionStage(start);
   const goalAscension = getAscensionStage(goal);
 
-  //@ts-ignore becase of the reduce the array is not going to include any null items
-  return AscensionCostTable(items).slice(startAscension, goalAscension).reduce(mergeAmountByName, []);
+  return mergeAmountByName(AscensionCostTable(items).slice(startAscension, goalAscension));
+}
+
 }
