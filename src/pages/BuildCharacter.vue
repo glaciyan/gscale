@@ -53,10 +53,18 @@ whenever(loading, () => {
 const ascItems = computed(() => sortItems(calculateAscension(character, ascStart.value, ascGoal.value)));
 const levelingItems = computed(() => calculateLeveling(ascStart.value, ascGoal.value));
 const normalItems = computed(() => sortItems(calculateTalent(character, normalStart.value, normalGoal.value, true)));
+const emItems = computed(() => sortItems(calculateTalent(character, emStart.value, emGoal.value)));
+const burstItems = computed(() => sortItems(calculateTalent(character, burstStart.value, burstGoal.value)));
 
 const total = computed(() =>
   sortItems(
-    mergeAmountByName([ascItems.value, normalItems.value, [(levelingItems.value.mora, levelingItems.value.lazy)]])
+    mergeAmountByName([
+      ascItems.value,
+      normalItems.value,
+      emItems.value,
+      burstItems.value,
+      [(levelingItems.value.mora, levelingItems.value.lazy)],
+    ])
   )
 );
 </script>
@@ -141,10 +149,28 @@ const total = computed(() =>
               :imageUrl="getMaterialImage(item.item.normalizedName).webp"
             />
           </MaterialPreviewHeader>
-          <MaterialPreviewHeader title="Normal Talent">
+          <MaterialPreviewHeader title="Normal Attack">
             <ItemCard
               v-for="item in normalItems"
               :key="item.item.normalizedName + 'normal'"
+              :imageTitle="item.item.name"
+              :amount="item.amount"
+              :imageUrl="getMaterialImage(item.item.normalizedName).webp"
+            />
+          </MaterialPreviewHeader>
+          <MaterialPreviewHeader title="Elemental Attack">
+            <ItemCard
+              v-for="item in emItems"
+              :key="item.item.normalizedName + 'em'"
+              :imageTitle="item.item.name"
+              :amount="item.amount"
+              :imageUrl="getMaterialImage(item.item.normalizedName).webp"
+            />
+          </MaterialPreviewHeader>
+          <MaterialPreviewHeader title="Burst">
+            <ItemCard
+              v-for="item in burstItems"
+              :key="item.item.normalizedName + 'burst'"
               :imageTitle="item.item.name"
               :amount="item.amount"
               :imageUrl="getMaterialImage(item.item.normalizedName).webp"
