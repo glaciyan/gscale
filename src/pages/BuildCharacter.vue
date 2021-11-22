@@ -128,7 +128,7 @@ const total = computed(() =>
           </div>
         </section>
       </div>
-      <section class="bg-dark-600 w-full p-6">
+      <section class="bg-dark-600 w-full p-6 overflow-y-scroll">
         <span class="font-semibold text-light-important">Material Preview</span>
         <div v-if="total.length !== 0" class="flex flex-col">
           <MaterialPreviewHeader title="Total" class="font-semibold">
