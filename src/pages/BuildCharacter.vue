@@ -70,7 +70,7 @@ const total = computed(() =>
 
 <template>
   <XLContainer>
-    <div class="w-full lg:flex lg:h-[51.5rem]">
+    <div class="w-full lg:flex lg:h-[48rem]">
       <div class="flex <sm:block">
         <TheCharacterDetailPanel :character="character" />
         <section
