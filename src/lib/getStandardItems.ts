@@ -1,10 +1,10 @@
 import { IBaseCharacter } from "./data/contracts/IBaseCharacter";
 import { ICharacter } from "./data/contracts/ICharacter";
-import { IStandardAscensionItems } from "./data/contracts/IStandardCharacterItems";
+import { IStandardAscensionItems, IStandardTalentItems } from "./data/contracts/IStandardCharacterItems";
 import { ITraveler } from "./data/contracts/ITraveler";
 import { Items } from "./data/Items";
 
-export const getStandardAscensionItems = (character: IBaseCharacter): Partial<IStandardAscensionItems> => {
+export const getStandardAscensionItems = (character: IBaseCharacter): IStandardAscensionItems => {
   switch (character.meta) {
     case "traveler":
       const traveler = character as ITraveler;
@@ -19,7 +19,11 @@ export const getStandardAscensionItems = (character: IBaseCharacter): Partial<IS
   }
 };
 
-export const getStandardTalentItems = (character: IBaseCharacter, level: number, normalTalent: boolean) => {
+export const getStandardTalentItems = (
+  character: IBaseCharacter,
+  level: number,
+  normalTalent: boolean
+): IStandardTalentItems => {
   switch (character.meta) {
     case "traveler":
       const traveler = character as ITraveler;
