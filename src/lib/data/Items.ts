@@ -2,9 +2,9 @@ import { IdIndex } from "./contracts/UsingId";
 import { IItem } from "./contracts/IItem";
 
 export const Items: IdIndex<IItem> = {
-  unkown: {
-    name: "Unkown Item",
-    normalizedName: "unkown",
+  unknown: {
+    name: "Unknown Item",
+    normalizedName: "unknown",
     rarity: 0,
     category: "none",
   },
