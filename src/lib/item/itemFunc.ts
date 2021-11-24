@@ -1,7 +1,7 @@
-import { IItem } from "./data/contracts/IItem";
-import { IItemGroup } from "./data/contracts/IItemGroup";
-import { ItemWithAmount } from "./data/entities/ItemWithAmount";
-import { Items } from "./data/Items";
+import { IItem } from "../data/contracts/IItem";
+import { IItemGroup } from "../data/contracts/IItemGroup";
+import { ItemWithAmount } from "../data/entities/ItemWithAmount";
+import { Items } from "../data/Items";
 import getItemFromGroup from "./getItemFromGroup";
 import { tryGetItemWithAmount } from "./tryGetItemWithAmount";
 

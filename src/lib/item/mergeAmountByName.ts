@@ -1,5 +1,5 @@
-import { ItemWithAmount } from "./data/entities/ItemWithAmount";
-import { Items } from "./data/Items";
+import { ItemWithAmount } from "../data/entities/ItemWithAmount";
+import { Items } from "../data/Items";
 
 /**
  * Intended to be used as an argument for Array.prototype.reduce where the array is of type ItemWithAmount[][]

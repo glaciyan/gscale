@@ -1,4 +1,4 @@
-import { ItemWithAmount } from "./data/entities/ItemWithAmount";
+import { ItemWithAmount } from "../data/entities/ItemWithAmount";
 
 // lower index is more important
 const categoryPrecedence = [

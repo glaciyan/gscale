@@ -1,4 +1,4 @@
-import { grouped, mora, single } from "../itemFunc";
+import { grouped, mora, single } from "../item/itemFunc";
 import { IItem } from "./contracts/IItem";
 import { IItemGroup } from "./contracts/IItemGroup";
 import { IStandardAscensionItems } from "./contracts/IStandardCharacterItems";

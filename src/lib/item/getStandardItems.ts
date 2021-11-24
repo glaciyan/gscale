@@ -1,8 +1,8 @@
-import { IBaseCharacter } from "./data/contracts/IBaseCharacter";
-import { ICharacter } from "./data/contracts/ICharacter";
-import { IStandardAscensionItems, IStandardTalentItems } from "./data/contracts/IStandardCharacterItems";
-import { ITraveler } from "./data/contracts/ITraveler";
-import { Items } from "./data/Items";
+import { IBaseCharacter } from "../data/contracts/IBaseCharacter";
+import { ICharacter } from "../data/contracts/ICharacter";
+import { IStandardAscensionItems, IStandardTalentItems } from "../data/contracts/IStandardCharacterItems";
+import { ITraveler } from "../data/contracts/ITraveler";
+import { Items } from "../data/Items";
 
 export const getStandardAscensionItems = (character: IBaseCharacter): IStandardAscensionItems => {
   switch (character.meta) {

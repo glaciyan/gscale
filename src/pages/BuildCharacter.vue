@@ -17,8 +17,8 @@ import { useTalentLevelRange } from "~/composites/useTalentLevelRange";
 import { calculateAscension, calculateLeveling, calculateTalent } from "~/lib/calculator";
 import { ICharacter } from "~/lib/data/contracts/ICharacter";
 import repo from "~/lib/data/repository/GenshinDataRepository";
-import mergeAmountByName from "~/lib/mergeAmountByName";
-import sortItems from "~/lib/sortItems";
+import mergeAmountByName from "~/lib/item/mergeAmountByName";
+import sortItems from "~/lib/item/sortItems";
 import title from "~/lib/title";
 
 const route = useRoute();
@@ -80,7 +80,8 @@ const total = computed(() =>
             text-dark-50
             sm:(w-[20rem]
             border-dark-200 border-r-2)
-            lg:(flex-grow-0) "
+            lg:(flex-grow-0)
+          "
         >
           <div class="flex flex-col h-full p-6 justify-between">
             <div class="space-y-6">

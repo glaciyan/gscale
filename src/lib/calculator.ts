@@ -7,9 +7,9 @@ import LevelingCostTable from "./data/LevelingCostTable";
 import TalentCostTable from "./data/TalentCostTable";
 import { getAscensionStage } from "./getAscensionStage";
 import getLevelingIndex from "./getLevelingIndex";
-import { getStandardAscensionItems, getStandardTalentItems } from "./getStandardItems";
+import { getStandardAscensionItems, getStandardTalentItems } from "./item/getStandardItems";
 import { AscensionLevel } from "./interfaces/AscensionLevel";
-import mergeAmountByName from "./mergeAmountByName";
+import mergeAmountByName from "./item/mergeAmountByName";
 import { range } from "./range";
 
 export function calculateLeveling(
