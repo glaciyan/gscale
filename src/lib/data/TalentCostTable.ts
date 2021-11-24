@@ -5,7 +5,7 @@ import { ItemWithAmount } from "./entities/ItemWithAmount";
 
 export default (
   items: { commonGroup?: IItemGroup; bookGroup?: IItemGroup; weekly?: IItem },
-  level: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
+  level: number
 ): ItemWithAmount[] => {
   const common = grouped(items.commonGroup);
   const book = grouped(items.bookGroup);
@@ -31,5 +31,7 @@ export default (
       return [mora(450000), common(9, 3), book(12, 4), weekly(2)];
     case 9: // 9 -> 10
       return [mora(700000), common(12, 3), book(16, 4), weekly(2), crown(1)];
+    default:
+      return [];
   }
 };

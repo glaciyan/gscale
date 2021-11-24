@@ -85,7 +85,6 @@ function calculateSingleTalent(character: IBaseCharacter, level: number, normalT
     }
   })();
 
-  // @ts-ignore because typescript is being stupid
   return TalentCostTable(items, level);
 }
 
