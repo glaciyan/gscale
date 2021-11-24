@@ -1,13 +1,13 @@
 import AscensionCostTable from "../data/AscensionCostTable";
 import { IBaseCharacter } from "../data/contracts/IBaseCharacter";
-import { ICharacter } from "../data/contracts/ICharacter";
-import { ITraveler } from "../data/contracts/ITraveler";
+import { IStandardAscensionItems } from "../data/contracts/IStandardCharacterItems";
 import { IItemWithAmountNotNull, ItemWithAmount } from "../data/entities/ItemWithAmount";
 import { Items } from "../data/Items";
 import LevelingCostTable from "../data/LevelingCostTable";
 import TalentCostTable from "../data/TalentCostTable";
 import { getAscensionStage } from "../getAscensionStage";
 import getLevelingIndex from "../getLevelingIndex";
+import { getStandardAscensionItems, getStandardTalentItems } from "../getStandardItems";
 import { AscensionLevel } from "../interfaces/AscensionLevel";
 import mergeAmountByName from "../mergeAmountByName";
 import { range } from "../range";
@@ -49,43 +49,12 @@ export function calculateAscension(
   goal: AscensionLevel
 ): IItemWithAmountNotNull[] {
   // this works like rusts match as expression https://doc.rust-lang.org/rust-by-example/flow_control/match.html
-  const items = (() => {
-    switch (character.meta) {
-      case "traveler":
-        const traveler = character as ITraveler;
-        return {
-          gemGroup: traveler.gemGroup,
-          local: traveler.local,
-          commonGroup: traveler.ascensionCommonGroup,
-          boss: undefined,
-        };
-      default:
-        return character as ICharacter;
-    }
-  })();
+  const items: Partial<IStandardAscensionItems> = getStandardAscensionItems(character);
 
   const startAscension = getAscensionStage(start);
   const goalAscension = getAscensionStage(goal);
 
   return mergeAmountByName(AscensionCostTable(items).slice(startAscension, goalAscension));
-}
-
-function calculateSingleTalent(character: IBaseCharacter, level: number, normalTalent = false) {
-  const items = (() => {
-    switch (character.meta) {
-      case "traveler":
-        const traveler = character as ITraveler;
-        return {
-          commonGroup: normalTalent ? traveler.normalTalentCommonGroup : traveler.talentCommonGroup,
-          bookGroup: normalTalent ? traveler.normalTalentBooks[level] : traveler.talentBooks[level],
-          weekly: normalTalent ? traveler.normalTalentBoss : traveler.talentBoss,
-        };
-      default:
-        return character as ICharacter;
-    }
-  })();
-
-  return TalentCostTable(items, level);
 }
 
 export function calculateTalent(
@@ -94,6 +63,11 @@ export function calculateTalent(
   goal: number,
   normalTalent = false
 ): IItemWithAmountNotNull[] {
+  function calculateSingleTalent(character: IBaseCharacter, level: number, normalTalent = false) {
+    const items = getStandardTalentItems(character, level, normalTalent);
+    return TalentCostTable(items, level);
+  }
+
   return mergeAmountByName(
     range(goal - start, start).map<ItemWithAmount[]>((level) => {
       return calculateSingleTalent(character, level, normalTalent);

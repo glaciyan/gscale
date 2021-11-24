@@ -1,14 +1,10 @@
 import { grouped, mora, single } from "../itemFunc";
 import { IItem } from "./contracts/IItem";
 import { IItemGroup } from "./contracts/IItemGroup";
+import { IStandardAscensionItems } from "./contracts/IStandardCharacterItems";
 import { ItemWithAmount } from "./entities/ItemWithAmount";
 
-export default (items: {
-  gemGroup?: IItemGroup;
-  local?: IItem;
-  commonGroup?: IItemGroup;
-  boss?: IItem;
-}): ItemWithAmount[][] => {
+export default (items: Partial<IStandardAscensionItems>): ItemWithAmount[][] => {
   const gem = grouped(items.gemGroup);
   const local = single(items.local);
   const common = grouped(items.commonGroup);
