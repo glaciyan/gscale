@@ -1,16 +1,16 @@
-import AscensionCostTable from "../data/AscensionCostTable";
-import { IBaseCharacter } from "../data/contracts/IBaseCharacter";
-import { IStandardAscensionItems } from "../data/contracts/IStandardCharacterItems";
-import { ItemWithAmount } from "../data/entities/ItemWithAmount";
-import { Items } from "../data/Items";
-import LevelingCostTable from "../data/LevelingCostTable";
-import TalentCostTable from "../data/TalentCostTable";
-import { getAscensionStage } from "../getAscensionStage";
-import getLevelingIndex from "../getLevelingIndex";
-import { getStandardAscensionItems, getStandardTalentItems } from "../getStandardItems";
-import { AscensionLevel } from "../interfaces/AscensionLevel";
-import mergeAmountByName from "../mergeAmountByName";
-import { range } from "../range";
+import AscensionCostTable from "./data/AscensionCostTable";
+import { IBaseCharacter } from "./data/contracts/IBaseCharacter";
+import { IStandardAscensionItems } from "./data/contracts/IStandardCharacterItems";
+import { ItemWithAmount } from "./data/entities/ItemWithAmount";
+import { Items } from "./data/Items";
+import LevelingCostTable from "./data/LevelingCostTable";
+import TalentCostTable from "./data/TalentCostTable";
+import { getAscensionStage } from "./getAscensionStage";
+import getLevelingIndex from "./getLevelingIndex";
+import { getStandardAscensionItems, getStandardTalentItems } from "./getStandardItems";
+import { AscensionLevel } from "./interfaces/AscensionLevel";
+import mergeAmountByName from "./mergeAmountByName";
+import { range } from "./range";
 
 export function calculateLeveling(
   start: AscensionLevel,
