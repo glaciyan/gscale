@@ -2,6 +2,7 @@ import { IBaseCharacter } from "./data/contracts/IBaseCharacter";
 import { ICharacter } from "./data/contracts/ICharacter";
 import { IStandardAscensionItems } from "./data/contracts/IStandardCharacterItems";
 import { ITraveler } from "./data/contracts/ITraveler";
+import { Items } from "./data/Items";
 
 export const getStandardAscensionItems = (character: IBaseCharacter): Partial<IStandardAscensionItems> => {
   switch (character.meta) {
@@ -11,7 +12,7 @@ export const getStandardAscensionItems = (character: IBaseCharacter): Partial<IS
         gemGroup: traveler.gemGroup,
         local: traveler.local,
         commonGroup: traveler.ascensionCommonGroup,
-        boss: undefined,
+        boss: Items.none,
       };
     default:
       return character as ICharacter;

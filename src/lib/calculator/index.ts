@@ -1,7 +1,7 @@
 import AscensionCostTable from "../data/AscensionCostTable";
 import { IBaseCharacter } from "../data/contracts/IBaseCharacter";
 import { IStandardAscensionItems } from "../data/contracts/IStandardCharacterItems";
-import { IItemWithAmountNotNull, ItemWithAmount } from "../data/entities/ItemWithAmount";
+import { ItemWithAmount } from "../data/entities/ItemWithAmount";
 import { Items } from "../data/Items";
 import LevelingCostTable from "../data/LevelingCostTable";
 import TalentCostTable from "../data/TalentCostTable";
@@ -15,7 +15,7 @@ import { range } from "../range";
 export function calculateLeveling(
   start: AscensionLevel,
   goal: AscensionLevel
-): { mora: IItemWithAmountNotNull; lazy: IItemWithAmountNotNull; accurate: IItemWithAmountNotNull[] } {
+): { mora: ItemWithAmount; lazy: ItemWithAmount; accurate: ItemWithAmount[] } {
   const startLevelIndex = getLevelingIndex(start);
   const goatLevelIndex = getLevelingIndex(goal);
 
@@ -47,7 +47,7 @@ export function calculateAscension(
   character: IBaseCharacter,
   start: AscensionLevel,
   goal: AscensionLevel
-): IItemWithAmountNotNull[] {
+): ItemWithAmount[] {
   // this works like rusts match as expression https://doc.rust-lang.org/rust-by-example/flow_control/match.html
   const items: Partial<IStandardAscensionItems> = getStandardAscensionItems(character);
 
@@ -62,7 +62,7 @@ export function calculateTalent(
   start: number,
   goal: number,
   normalTalent = false
-): IItemWithAmountNotNull[] {
+): ItemWithAmount[] {
   function calculateSingleTalent(character: IBaseCharacter, level: number, normalTalent = false) {
     const items = getStandardTalentItems(character, level, normalTalent);
     return TalentCostTable(items, level);

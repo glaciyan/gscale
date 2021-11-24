@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { IItemWithAmountNotNull } from "~/lib/data/entities/ItemWithAmount";
+import { ItemWithAmount } from "~/lib/data/entities/ItemWithAmount";
 import ItemCard from "./ItemCard.vue";
 import { getMaterialImage } from "~/lib/data/util/getMaterialImage";
 
-defineProps<{ items: IItemWithAmountNotNull[]; key: string }>();
+defineProps<{ items: ItemWithAmount[]; key: string }>();
 </script>
 
 <template>

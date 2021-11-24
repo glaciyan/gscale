@@ -1,8 +1,6 @@
 import { IItem } from "../contracts/IItem";
 
-export interface IItemWithAmountNotNull {
+export interface ItemWithAmount {
   item: IItem;
   amount: number;
 }
-
-export type ItemWithAmount = IItemWithAmountNotNull | null;

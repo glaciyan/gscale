@@ -8,6 +8,13 @@ export const Items: IdIndex<IItem> = {
     rarity: 0,
     category: "none",
   },
+  none: {
+    name: "",
+    normalizedName: "none",
+    rarity: 0,
+    category: "none",
+  },
+
   spectral_nucleus: {
     name: "Spectral Nucleus",
     normalizedName: "spectral_nucleus",

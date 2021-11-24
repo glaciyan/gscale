@@ -7,14 +7,16 @@ import { tryGetItemWithAmount } from "./tryGetItemWithAmount";
 
 export const single = (item?: IItem) => {
   return (amount: number): ItemWithAmount => {
-    if (!item) return null;
+    if (!item) return { item: Items.unknown, amount };
+
     return { item, amount };
   };
 };
 
 export const grouped = (group?: IItemGroup) => {
   return (amount: number, rarity: number) => {
-    if (!group) return null;
+    if (!group) return { item: Items.unknown, amount };
+
     return tryGetItemWithAmount(getItemFromGroup(group, rarity), amount);
   };
 };

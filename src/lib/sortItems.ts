@@ -1,4 +1,4 @@
-import { IItemWithAmountNotNull } from "./data/entities/ItemWithAmount";
+import { ItemWithAmount } from "./data/entities/ItemWithAmount";
 
 // lower index is more important
 const categoryPrecedence = [
@@ -15,7 +15,7 @@ const categoryPrecedence = [
   "special_talent",
 ];
 
-export default (items: IItemWithAmountNotNull[]) => {
+export default (items: ItemWithAmount[]) => {
   return items.sort(({ item: a }, { item: b }) => {
     const aPriority = categoryPrecedence.findIndex((i) => i === a.category);
     const bPriority = categoryPrecedence.findIndex((i) => i === b.category);
