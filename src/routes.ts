@@ -1,7 +1,7 @@
 import Index from "./pages/Index.vue";
 import Builds from "./pages/Builds.vue";
 import BuildCharacter from "./pages/BuildCharacter.vue";
-import title from "./lib/title";
+import title from "./title";
 
 // Define all routes here
 export default [

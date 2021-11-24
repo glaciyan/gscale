@@ -19,7 +19,7 @@ import { ICharacter } from "~/lib/data/contracts/ICharacter";
 import repo from "~/lib/data/repository/GenshinDataRepository";
 import mergeAmountByName from "~/lib/item/mergeAmountByName";
 import sortItems from "~/lib/item/sortItems";
-import title from "~/lib/title";
+import title from "~/title";
 
 const route = useRoute();
 
