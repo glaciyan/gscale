@@ -1,5 +1,5 @@
-import { compareAscension } from "./compareAscension";
-import { AscensionLevel } from "./interfaces/AscensionLevel";
+import { compareAscension } from "../level/compareAscension";
+import { AscensionLevel } from "../interfaces/AscensionLevel";
 
 export default (level: AscensionLevel): number => {
   function f(at: number) {

@@ -1,5 +1,5 @@
 import { AscensionLevel } from "~/lib/interfaces/AscensionLevel";
-import { compareAscension } from "../lib/compareAscension";
+import { compareAscension } from "../lib/level/compareAscension";
 
 export function useAscensionLevelRange() {
   const start = ref<AscensionLevel>({ level: 1, ascended: false });
