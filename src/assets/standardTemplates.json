@@ -1,0 +1,47 @@
+[
+  {
+    "name": "Max",
+    "asc": {
+      "goal": { "level": 90, "ascended": false }
+    },
+    "normal": {
+      "goal": 10
+    },
+    "em": {
+      "goal": 10
+    },
+    "burst": {
+      "goal": 10
+    }
+  },
+  {
+    "name": "Reset",
+    "asc": {
+      "goal": { "level": 1, "ascended": false }
+    },
+    "normal": {
+      "goal": 1
+    },
+    "em": {
+      "goal": 1
+    },
+    "burst": {
+      "goal": 1
+    }
+  },
+  {
+    "name": "80-8-8-8",
+    "asc": {
+      "goal": { "level": 80, "ascended": false }
+    },
+    "normal": {
+      "goal": 8
+    },
+    "em": {
+      "goal": 8
+    },
+    "burst": {
+      "goal": 8
+    }
+  }
+]
