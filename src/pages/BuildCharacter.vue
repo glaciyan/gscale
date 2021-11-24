@@ -80,8 +80,7 @@ const total = computed(() =>
             text-dark-50
             sm:(w-[20rem]
             border-dark-200 border-r-2)
-            lg:(flex-grow-0)
-          "
+            lg:(flex-grow-0) "
         >
           <div class="flex flex-col h-full p-6 justify-between">
             <div class="space-y-6">
@@ -128,7 +127,7 @@ const total = computed(() =>
           </div>
         </section>
       </div>
-      <section class="bg-dark-600 w-full p-6 overflow-y-scroll">
+      <section class="bg-dark-600 w-full p-6 overflow-y-auto">
         <span class="font-semibold text-light-important">Material Preview</span>
         <div v-if="total.length !== 0" class="flex flex-col">
           <MaterialPreviewHeader title="Total" class="font-semibold">
