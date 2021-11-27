@@ -120,7 +120,7 @@ const Layout = ({ children, title, current }: Props) => {
                         <FooterEntry header="Other">
                             <>
                                 <a
-                                    href="https://github.com/glacuu/gscale"
+                                    href="https://github.com/glaciyan/gscale"
                                     className="block text-blue-400 hover:underline w-max"
                                 >
                                     Github
