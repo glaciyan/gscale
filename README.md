@@ -22,3 +22,4 @@ Since I am only adding new characters to the website feel free to tackle on any 
 ### Pull request
 
 All pull request are first merged with the `dev` branch after a code review. If all tests go well those changes are going to be merged with main at the next major version.
+
