@@ -51,9 +51,9 @@ export default function CharacterCard({
                         />
                     </div>
 
-                    <h3 className="mt-1 text-lg font-medium text-gscale-dark-text-primary hover:underline w-max">
+                    <span className="mt-1 text-lg font-medium text-gscale-dark-text-primary hover:underline w-max">
                         {character.name}
-                    </h3>
+                    </span>
                 </div>
             </a>
         </Link>
