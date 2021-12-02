@@ -15,6 +15,7 @@ export default function CharacterCard({
     return (
         <Link href={`build/${character.id}`}>
             <a
+                title={`Build ${character.name}`}
                 className={cn(
                     `relative group bg-gscale-dark-background-primary rounded-lg overflow-hidden shadow-md hover:shadow-lg ring-genshin-element-${character.element} transition-all hover:ring`,
                     className
