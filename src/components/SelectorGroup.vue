@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Flex from "./Flex.vue";
+import Flex from "./Flex.ts";
 
 defineProps<{ title: string }>();
 </script>
