@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { navigation } from "~/routes";
+import { navigation } from "~/router";
 import { RouterLink } from "vue-router";
 import Center from "./Center.vue";
 

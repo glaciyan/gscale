@@ -2,9 +2,10 @@ import Index from "./pages/Index.vue";
 import Builds from "./pages/Builds.vue";
 import BuildCharacter from "./pages/BuildCharacter.vue";
 import title from "./title";
+import { createRouter, createWebHistory } from "vue-router"
 
 // Define all routes here
-export default [
+const routes = [
   {
     path: "/",
     component: Index,
@@ -36,6 +37,20 @@ export default [
     },
   },
 ];
+
+const router = createRouter({ history: createWebHistory(), routes });
+
+router.afterEach((to, ) => {
+  // Take the optional title value from the route and set it as the page title
+  if (to.meta.title) {
+    document.title = to.meta.title as string;
+  }
+
+  // after each navigation scroll to the top of the page
+  window.scrollTo(0, 0);
+});
+
+export default router;
 
 export const navigation: { path: string; name: string }[] = [
   {
