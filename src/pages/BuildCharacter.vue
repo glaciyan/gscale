@@ -22,6 +22,7 @@ import mergeAmountByName from "~/lib/item/mergeAmountByName";
 import sortItems from "~/lib/item/sortItems";
 import title from "~/title";
 
+//#region Get character and set title
 const route = useRoute();
 
 const character =
@@ -30,7 +31,9 @@ const character =
   (repo.getCharacter("jeffrey") as ICharacter);
 
 useTitle(title(`Building ${character.name}`));
+//#endregion
 
+//#region Levels
 const { start: ascStart, goal: ascGoal } = useAscensionLevelRange();
 const { start: normalStart, goal: normalGoal } = useTalentLevelRange();
 const { start: emStart, goal: emGoal } = useTalentLevelRange();
@@ -46,8 +49,9 @@ const { templates } = useLevelSelectorTemplate(
   burstStart,
   burstGoal
 );
+//#endregion
 
-// TODO temp
+//#region temp button handler
 const loading = ref(false);
 const handleClick = () => {
   loading.value = true;
@@ -58,8 +62,9 @@ whenever(loading, () => {
     loading.value = false;
   }, 3000);
 });
+//#endregion
 
-// ---------Calculator---------
+//#region Compute items
 const levelingItems = computed(() => calculateLeveling(ascStart.value, ascGoal.value));
 
 const ascItems = computed(() => sortItems(calculateAscension(character, ascStart.value, ascGoal.value)));
@@ -78,6 +83,7 @@ const total = computed(() =>
     ])
   )
 );
+//#endregion
 </script>
 
 <template>
