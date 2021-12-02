@@ -20,9 +20,9 @@ export default defineConfig({
   },
   theme: {
     extend: {
-      fontFamily: {
-        sans: ["Open Sans", "ui-sans-serif", "system-ui"],
-      },
+      // fontFamily: {
+      //   sans: ["Open Sans", "ui-sans-serif", "system-ui"],
+      // },
       colors: {
         dark: {
           "50": "#aaacb0",

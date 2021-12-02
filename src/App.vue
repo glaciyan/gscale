@@ -23,7 +23,7 @@ import Navigation from "./components/Navigation.vue";
 </template>
 
 <style>
-@import url(./assets/fonts/OpenSans.css);
+/* @import url(./assets/fonts/OpenSans.css); */
 
 .fade-enter-active,
 .fade-leave-active {
