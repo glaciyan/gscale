@@ -23,6 +23,8 @@ import Navigation from "./components/Navigation.vue";
 </template>
 
 <style>
+@import url(./assets/fonts/OpenSans.css);
+
 .fade-enter-active,
 .fade-leave-active {
   @apply transition-opacity duration-100;
@@ -32,6 +34,4 @@ import Navigation from "./components/Navigation.vue";
 .fade-leave-to {
   @apply opacity-0;
 }
-
-@import url(./assets/fonts/OpenSans.css);
 </style>
