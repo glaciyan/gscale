@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { RouterView } from "vue-router";
-import VercelLogo from "~/assets/powered-by-vercel.svg";
-import TheHeader from "~/components/TheHeader.vue"
+import VercelLogo from "~/assets/powered-by-vercel.svg?url";
+import TheHeader from "~/components/TheHeader.vue";
 </script>
 
 <template>
