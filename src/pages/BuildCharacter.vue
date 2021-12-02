@@ -174,6 +174,7 @@ const total = computed(() =>
             <MaterialList :items="burstItems" key="burst" />
           </MaterialPreviewHeader>
         </div>
+        <!-- TODO make this look like an item -->
         <div v-else>No Items</div>
       </section>
     </div>
