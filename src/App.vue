@@ -1,15 +1,12 @@
 <script setup lang="ts">
 import { RouterView } from "vue-router";
 import VercelLogo from "~/assets/powered-by-vercel.svg";
-import Navigation from "./components/Navigation.vue";
+import TheHeader from "~/components/TheHeader.vue"
 </script>
 
 <template>
-  <header class="flex space-x-2">
-    <span>gscale</span>
-    <Navigation orientation="verical" />
-  </header>
-  <main id="__gscale" class="min-h-screen mt-[80px]">
+  <TheHeader />
+  <main id="__gscale" class="min-h-screen">
     <RouterView />
   </main>
   <footer>
