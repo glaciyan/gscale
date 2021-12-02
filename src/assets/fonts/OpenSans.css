@@ -4,7 +4,7 @@
   font-weight: 400;
   font-stretch: normal;
   font-display: swap;
-  src: url(./assets/fonts/OpenSans-Regular.ttf) format("truetype");
+  src: url(./OpenSans-Regular.ttf) format("truetype");
 }
 
 @font-face {
@@ -13,7 +13,7 @@
   font-weight: 500;
   font-stretch: normal;
   font-display: swap;
-  src: url(./assets/fonts/OpenSans-Medium.ttf) format("truetype");
+  src: url(./OpenSans-Medium.ttf) format("truetype");
 }
 
 @font-face {
@@ -22,7 +22,7 @@
   font-weight: 600;
   font-stretch: normal;
   font-display: swap;
-  src: url(./assets/fonts/OpenSans-SemiBold.ttf) format("truetype");
+  src: url(./OpenSans-SemiBold.ttf) format("truetype");
 }
 
 @font-face {
@@ -31,5 +31,5 @@
   font-weight: 700;
   font-stretch: normal;
   font-display: swap;
-  src: url(./assets/fonts/OpenSans-Bold.ttf) format("truetype");
+  src: url(./OpenSans-Bold.ttf) format("truetype");
 }
