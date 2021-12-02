@@ -1,14 +1,12 @@
 <script setup lang="ts">
-import Flex from "./Flex.ts";
-
 defineProps<{ title: string }>();
 </script>
 
 <template>
   <fieldset>
     <legend class="font-semibold text-light-important mb-2">{{ title }}</legend>
-    <Flex class="shadow-md w-max">
+    <div class="flex shadow-md w-max">
       <slot />
-    </Flex>
+    </div>
   </fieldset>
 </template>
