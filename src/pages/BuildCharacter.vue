@@ -7,10 +7,10 @@ import GrowthIcon from "~/components/icons/Growth.vue";
 import SwordIcon from "~/components/icons/Sword.vue";
 import MaterialList from "~/components/MaterialList.vue";
 import MaterialPreviewHeader from "~/components/MaterialPreviewHeader.vue";
-import SelectorAscensionLevel from "~/components/SelectorAscensionLevel.vue";
-import SelectorGroup from "~/components/SelectorGroup.vue";
-import SelectorIconSeperator from "~/components/SelectorIconSeperator.vue";
-import SelectorTalentLevel from "~/components/SelectorTalentLevel.vue";
+import SelectorAscensionLevel from "~/components/levelSelector/SelectorAscensionLevel.vue";
+import SelectorGroup from "~/components/levelSelector/SelectorGroup.vue";
+import SelectorIconSeperator from "~/components/levelSelector/SelectorIconSeperator.vue";
+import SelectorTalentLevel from "~/components/levelSelector/SelectorTalentLevel.vue";
 import { useAscensionLevelRange } from "~/composites/useAscensionLevelRange";
 import { useLevelSelectorTemplate } from "~/composites/useLevelSelectorTemplate";
 import { useTalentLevelRange } from "~/composites/useTalentLevelRange";
@@ -98,7 +98,8 @@ const total = computed(() =>
             text-dark-50
             sm:(w-[20rem]
             border-dark-200 border-r-2)
-            lg:(flex-grow-0) "
+            lg:(flex-grow-0)
+          "
         >
           <div class="flex flex-col h-full p-6 justify-between">
             <div>

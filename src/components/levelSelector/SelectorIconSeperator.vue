@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Center from "./Center.vue";
+import Center from "../Center.vue";
 const props = defineProps<{ element: string }>();
 
 const backgroundColor = `bg-genshin-element-${props.element}-dark`;

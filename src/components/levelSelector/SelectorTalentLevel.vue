@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import SelectorCustom from "./SelectorCustom.vue";
+import SelectorCustom from "../SelectorCustom.vue";
 import { range } from "~/lib/range";
 
 defineProps<{ modelValue: number; id: string }>();
