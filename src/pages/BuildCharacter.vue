@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import TheCharacterDetailPanel from "~/components/BuildCharacter/TheCharacterDetailPanel.vue";
 import Button from "~/components/Button.vue";
-import XLContainer from "~/components/container/XLContainer.vue";
 import ElementalIcon from "~/components/icons/Elemental.vue";
 import FireIcon from "~/components/icons/Fire.vue";
 import GrowthIcon from "~/components/icons/Growth.vue";
@@ -21,6 +20,7 @@ import repo from "~/lib/data/repository/GenshinDataRepository";
 import mergeAmountByName from "~/lib/item/mergeAmountByName";
 import sortItems from "~/lib/item/sortItems";
 import title from "~/title";
+import Container from "~/components/Container.vue";
 
 //#region Get character and set title
 const route = useRoute();
@@ -87,7 +87,7 @@ const total = computed(() =>
 </script>
 
 <template>
-  <XLContainer>
+  <Container>
     <div class="w-full lg:flex lg:h-[48rem]">
       <div class="flex <sm:block">
         <TheCharacterDetailPanel :character="character" />
@@ -178,5 +178,5 @@ const total = computed(() =>
         <div v-else>No Items</div>
       </section>
     </div>
-  </XLContainer>
+  </Container>
 </template>

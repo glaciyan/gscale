@@ -4,6 +4,7 @@ import lineClamp from "windicss/plugin/line-clamp";
 import { range } from "./src/lib/range";
 
 const em = ["anemo", "pyro", "electro", "geo", "cryo", "hydro"];
+const sizes = ["sm", "md", "lg", "xl", "2xl"];
 
 export default defineConfig({
   plugins: [aspectRatio, lineClamp],
@@ -14,6 +15,7 @@ export default defineConfig({
     em.map((e) => `bg-genshin-element-${e}-dark`),
     em.map((e) => `bg-genshin-element-${e}`),
     em.map((e) => `border-genshin-element-${e}`),
+    sizes.map((s) => `max-w-screen-${s}`),
   ],
   attributify: {
     prefix: "w",
