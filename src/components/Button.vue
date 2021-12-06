@@ -2,7 +2,7 @@
 import Spinner from "./Spinner.vue";
 import Center from "./Center.vue";
 import { useButtonStyle } from "~/composites/useButtonStyle";
-import { useInjectElement } from "~/lib/useInjectElement";
+import { useInjectElement } from "~/composites/useInjectElement";
 
 const injectedElement = useInjectElement();
 

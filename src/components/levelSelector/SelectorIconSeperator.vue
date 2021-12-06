@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useInjectElement } from "~/lib/useInjectElement";
+import { useInjectElement } from "~/composites/useInjectElement";
 import Center from "../Center.vue";
 const props = defineProps<{ element?: string }>();
 
