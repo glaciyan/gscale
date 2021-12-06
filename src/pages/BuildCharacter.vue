@@ -21,6 +21,10 @@ import mergeAmountByName from "~/lib/item/mergeAmountByName";
 import sortItems from "~/lib/item/sortItems";
 import title from "~/title";
 import Container from "~/components/Container.vue";
+import RangeLevel from "~/components/levelRange/RangeLevel.vue";
+import RangeNormal from "~/components/levelRange/RangeNormal.vue";
+import RangeElemental from "~/components/levelRange/RangeElemental.vue";
+import RangeBurst from "~/components/levelRange/RangeBurst.vue";
 
 //#region Get character and set title
 const route = useRoute();
@@ -88,6 +92,7 @@ const total = computed(() =>
 
 <template>
   <Container>
+    <div>TODO Breadcrumb</div>
     <div class="w-full lg:flex lg:h-[48rem]">
       <div class="flex <sm:block">
         <TheCharacterDetailPanel :character="character" />
@@ -98,44 +103,15 @@ const total = computed(() =>
             text-dark-50
             sm:(w-[20rem]
             border-dark-200 border-r-2)
-            lg:(flex-grow-0)
-          "
+            lg:(flex-grow-0) "
         >
           <div class="flex flex-col h-full p-6 justify-between">
             <div>
               <div class="space-y-6">
-                <!-- Level -->
-                <SelectorGroup title="Level">
-                  <SelectorAscensionLevel class="rounded-l-md" id="level1" v-model="ascStart" />
-                  <SelectorIconSeperator :element="character.element.normalizedName">
-                    <GrowthIcon class="-m-0.5" />
-                  </SelectorIconSeperator>
-                  <SelectorAscensionLevel cbClass="rounded-r-md" id="level2" v-model="ascGoal" />
-                </SelectorGroup>
-                <!-- Normal -->
-                <SelectorGroup title="Normal Attack">
-                  <SelectorTalentLevel class="rounded-l-md" id="normal1" v-model="normalStart" />
-                  <SelectorIconSeperator :element="character.element.normalizedName">
-                    <SwordIcon class="h-[26px] -m-0.5 w-[26px]" />
-                  </SelectorIconSeperator>
-                  <SelectorTalentLevel class="rounded-r-md" id="normal2" v-model="normalGoal" />
-                </SelectorGroup>
-                <!-- Elemental -->
-                <SelectorGroup title="Elemental Attack">
-                  <SelectorTalentLevel class="rounded-l-md" id="em1" v-model="emStart" />
-                  <SelectorIconSeperator :element="character.element.normalizedName">
-                    <ElementalIcon class="-m-0.5" />
-                  </SelectorIconSeperator>
-                  <SelectorTalentLevel class="rounded-r-md" id="em2" v-model="emGoal" />
-                </SelectorGroup>
-                <!-- Burst -->
-                <SelectorGroup title="Burst">
-                  <SelectorTalentLevel class="rounded-l-md" id="burst1" v-model="burstStart" />
-                  <SelectorIconSeperator :element="character.element.normalizedName">
-                    <FireIcon class="-m-0.5" />
-                  </SelectorIconSeperator>
-                  <SelectorTalentLevel class="rounded-r-md" id="burst2" v-model="burstGoal" />
-                </SelectorGroup>
+                <RangeLevel v-model:start="ascStart" v-model:goal="ascGoal" />
+                <RangeNormal v-model:start="normalStart" v-model:goal="normalGoal" />
+                <RangeElemental v-model:start="emStart" v-model:goal="emGoal" />
+                <RangeBurst v-model:start="burstStart" v-model:goal="burstGoal" />
               </div>
               <div class="mt-6">
                 <Button
