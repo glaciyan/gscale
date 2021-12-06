@@ -122,6 +122,10 @@ const total = computed(() =>
                   <RangeBurst v-model:start="burstStart" v-model:goal="burstGoal" />
                 </div>
                 <div class="mt-6">
+                  <div class="mb-2">
+                    <span class="font-semibold text-light-important">Templates</span>
+                    <!-- TODO <Button look="ghost" class="ml-2 !h-8 !text-light-ternary">Add Custom</Button> -->
+                  </div>
                   <Button
                     v-for="template of templates"
                     look="outline"
