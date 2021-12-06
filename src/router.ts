@@ -17,10 +17,6 @@ const routes = [
     component: BuildCharacter,
   },
   {
-    path: "/build/traveler/:travelerElement",
-    component: BuildCharacter,
-  },
-  {
     path: "/builds",
     component: () => import("./pages/Builds.vue"),
     meta: {
