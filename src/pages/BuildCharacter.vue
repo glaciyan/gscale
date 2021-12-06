@@ -127,9 +127,7 @@ const total = computed(() =>
                   </Button>
                 </div>
               </div>
-              <Button :element="character.element.normalizedName" :isLoading="loading" @click="handleClick">
-                Build {{ character.name }}
-              </Button>
+              <Button :isLoading="loading" @click="handleClick"> Build {{ character.name }} </Button>
             </div>
           </section>
         </div>
