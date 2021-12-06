@@ -25,6 +25,7 @@ import RangeLevel from "~/components/levelRange/RangeLevel.vue";
 import RangeNormal from "~/components/levelRange/RangeNormal.vue";
 import RangeElemental from "~/components/levelRange/RangeElemental.vue";
 import RangeBurst from "~/components/levelRange/RangeBurst.vue";
+import ElementProvider from "~/components/ElementProvider.vue";
 
 //#region Get character and set title
 const route = useRoute();
@@ -91,69 +92,70 @@ const total = computed(() =>
 </script>
 
 <template>
-  <Container>
-    <div>TODO Breadcrumb</div>
-    <div class="w-full lg:flex lg:h-[48rem]">
-      <div class="flex <sm:block">
-        <TheCharacterDetailPanel :character="character" />
-        <section
-          class="
-            flex flex-col flex-grow
-            bg-dark-600
-            text-dark-50
-            sm:(w-[20rem]
-            border-dark-200 border-r-2)
-            lg:(flex-grow-0) "
-        >
-          <div class="flex flex-col h-full p-6 justify-between">
-            <div>
-              <div class="space-y-6">
-                <RangeLevel v-model:start="ascStart" v-model:goal="ascGoal" />
-                <RangeNormal v-model:start="normalStart" v-model:goal="normalGoal" />
-                <RangeElemental v-model:start="emStart" v-model:goal="emGoal" />
-                <RangeBurst v-model:start="burstStart" v-model:goal="burstGoal" />
+  <ElementProvider :element="character.element.normalizedName">
+    <Container>
+      <div>TODO Breadcrumb</div>
+      <div class="w-full lg:flex lg:h-[48rem]">
+        <div class="flex <sm:block">
+          <TheCharacterDetailPanel :character="character" />
+          <section
+            class="
+              flex flex-col flex-grow
+              bg-dark-600
+              text-dark-50
+              sm:(w-[20rem]
+              border-dark-200 border-r-2)
+              lg:(flex-grow-0) "
+          >
+            <div class="flex flex-col h-full p-6 justify-between">
+              <div>
+                <div class="space-y-6">
+                  <RangeLevel v-model:start="ascStart" v-model:goal="ascGoal" />
+                  <RangeNormal v-model:start="normalStart" v-model:goal="normalGoal" />
+                  <RangeElemental v-model:start="emStart" v-model:goal="emGoal" />
+                  <RangeBurst v-model:start="burstStart" v-model:goal="burstGoal" />
+                </div>
+                <div class="mt-6">
+                  <Button
+                    v-for="template of templates"
+                    look="outline"
+                    element="neutral"
+                    class="mr-3 text-light-normal mb-2"
+                    @click.prevent="template.applyTemplate"
+                  >
+                    {{ template.name }}
+                  </Button>
+                </div>
               </div>
-              <div class="mt-6">
-                <Button
-                  v-for="template of templates"
-                  look="outline"
-                  element="neutral"
-                  class="mr-3 text-light-normal mb-2"
-                  @click.prevent="template.applyTemplate"
-                >
-                  {{ template.name }}
-                </Button>
-              </div>
+              <Button :element="character.element.normalizedName" :isLoading="loading" @click="handleClick">
+                Build {{ character.name }}
+              </Button>
             </div>
-
-            <Button :element="character.element.normalizedName" :isLoading="loading" @click="handleClick">
-              Build {{ character.name }}
-            </Button>
+          </section>
+        </div>
+        <section class="bg-dark-600 w-full p-6 overflow-y-auto">
+          <span class="font-semibold text-light-important">Material Preview</span>
+          <div v-if="total.length !== 0" class="flex flex-col">
+            <MaterialPreviewHeader title="Total" class="font-semibold">
+              <MaterialList :items="total" key="total" />
+            </MaterialPreviewHeader>
+            <MaterialPreviewHeader title="Ascension">
+              <MaterialList :items="ascItems" key="asc" />
+            </MaterialPreviewHeader>
+            <MaterialPreviewHeader title="Normal Attack">
+              <MaterialList :items="normalItems" key="normal" />
+            </MaterialPreviewHeader>
+            <MaterialPreviewHeader title="Elemental Attack">
+              <MaterialList :items="emItems" key="em" />
+            </MaterialPreviewHeader>
+            <MaterialPreviewHeader title="Burst">
+              <MaterialList :items="burstItems" key="burst" />
+            </MaterialPreviewHeader>
           </div>
+          <!-- TODO make this look like an item -->
+          <div v-else>No Items</div>
         </section>
       </div>
-      <section class="bg-dark-600 w-full p-6 overflow-y-auto">
-        <span class="font-semibold text-light-important">Material Preview</span>
-        <div v-if="total.length !== 0" class="flex flex-col">
-          <MaterialPreviewHeader title="Total" class="font-semibold">
-            <MaterialList :items="total" key="total" />
-          </MaterialPreviewHeader>
-          <MaterialPreviewHeader title="Ascension">
-            <MaterialList :items="ascItems" key="asc" />
-          </MaterialPreviewHeader>
-          <MaterialPreviewHeader title="Normal Attack">
-            <MaterialList :items="normalItems" key="normal" />
-          </MaterialPreviewHeader>
-          <MaterialPreviewHeader title="Elemental Attack">
-            <MaterialList :items="emItems" key="em" />
-          </MaterialPreviewHeader>
-          <MaterialPreviewHeader title="Burst">
-            <MaterialList :items="burstItems" key="burst" />
-          </MaterialPreviewHeader>
-        </div>
-        <!-- TODO make this look like an item -->
-        <div v-else>No Items</div>
-      </section>
-    </div>
-  </Container>
+    </Container>
+  </ElementProvider>
 </template>

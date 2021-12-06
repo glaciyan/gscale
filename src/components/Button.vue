@@ -2,10 +2,13 @@
 import Spinner from "./Spinner.vue";
 import Center from "./Center.vue";
 import { useButtonStyle } from "~/composites/useButtonStyle";
+import { useInjectElement } from "~/lib/useInjectElement";
+
+const injectedElement = useInjectElement();
 
 const props = withDefaults(
   defineProps<{
-    element: string;
+    element?: string;
     look?: "solid" | "outline" | "ghost";
     isLoading?: boolean;
     disabled?: boolean;
@@ -19,7 +22,7 @@ const props = withDefaults(
 
 const _disabled = computed(() => props.isLoading || props.disabled);
 
-const { buttonStyle } = useButtonStyle(props.look, props.element);
+const { buttonStyle } = useButtonStyle(props.look, props.element ?? injectedElement);
 </script>
 
 <template>
