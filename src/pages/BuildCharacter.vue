@@ -20,6 +20,7 @@ import sortItems from "~/lib/item/sortItems";
 import { db } from "~/lib/offlineDatabase/db";
 import title from "~/title";
 import { RouterLink } from "vue-router";
+import { useLoadingFunction } from "~/composites/useLoadingFunction";
 
 //#region Get character and set title
 const route = useRoute();
@@ -55,14 +56,11 @@ const router = useRouter();
 
 const submitError = ref({ message: "", helpUrl: "" });
 
-const submitting = ref(false);
-const handleSubmit = async () => {
+const { loading: submitting, execute: handleSubmit } = useLoadingFunction(async () => {
   if (total.value.length === 0) {
     submitError.value = { message: "This build has no materials.", helpUrl: "help/howtouse" };
     return;
   }
-
-  submitting.value = true;
 
   try {
     await db.builds.add({
@@ -84,10 +82,8 @@ const handleSubmit = async () => {
     });
   } catch (error: any) {
     submitError.value = { message: "Something didn't work.", helpUrl: "/help/database" };
-  } finally {
-    submitting.value = false;
   }
-};
+});
 //#endregion
 
 //#region Compute items
