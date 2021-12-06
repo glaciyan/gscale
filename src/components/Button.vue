@@ -28,7 +28,7 @@ const { buttonStyle } = useButtonStyle(props.look, props.element ?? injectedElem
 <template>
   <button
     type="button"
-    :class="[buttonStyle, 'focus:outline-none focus-visible:ring py-2 px-4 rounded-md shadow-md']"
+    :class="[buttonStyle, 'focus:outline-none focus-visible:ring h-[42px] px-4 rounded-md shadow-md']"
     :disabled="_disabled"
     :aria-disabled="_disabled"
   >
