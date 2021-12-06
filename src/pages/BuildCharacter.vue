@@ -75,7 +75,13 @@ const handleSubmit = async () => {
       burst: { start: burstStart.value, goal: burstGoal.value },
     });
 
-    router.push("/builds");
+    // TODO remove artificial load time
+    await new Promise((resolve) => {
+      setTimeout(() => {
+        resolve("");
+        router.push("/builds");
+      }, 1000);
+    });
   } catch (error: any) {
     submitError.value = { message: "Something didn't work.", helpUrl: "/help/database" };
   } finally {
