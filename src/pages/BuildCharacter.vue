@@ -52,11 +52,12 @@ const { templates } = useLevelSelectorTemplate(
 //#region Submit build handler
 const router = useRouter();
 
-const loading = ref(false);
-const handleClick = async () => {
-  loading.value = true;
+const submitting = ref(false);
+const handleSubmit = async () => {
+  submitting.value = true;
+
   try {
-    const id = await db.builds.add({
+    await db.builds.add({
       type: "character",
       characterId: character.normalizedName,
       // use toRaw here because dexie can't copy a proxy
@@ -66,13 +67,11 @@ const handleClick = async () => {
       burst: { start: burstStart.value, goal: burstGoal.value },
     });
 
-    console.log(`created build with id ${id}`);
-
     router.push("/builds");
   } catch (error: any) {
     console.error(error.message);
   } finally {
-    loading.value = false;
+    submitting.value = false;
   }
 };
 //#endregion
@@ -134,7 +133,7 @@ const total = computed(() =>
                   </Button>
                 </div>
               </div>
-              <Button :isLoading="loading" @click="handleClick">Build {{ character.name }}</Button>
+              <Button :isLoading="submitting" @click="handleSubmit">Build {{ character.name }}</Button>
             </div>
           </section>
         </div>
