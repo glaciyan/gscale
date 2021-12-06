@@ -29,7 +29,7 @@ const active = ref(false);
         'cursor-pointer h-full bg-dark-300 transition-colors w-10',
         { 'hover:bg-dark-400/70': !disabled },
         { '!bg-dark-600': active && !disabled },
-        { 'cursor-default': disabled },
+        { 'cursor-not-allowed': disabled },
         $attrs.class,
       ]"
       aria-hidden="true"
