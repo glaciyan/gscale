@@ -11,20 +11,10 @@ defineEmits(["update:start", "update:goal"]);
 
 <template>
   <SelectorGroup legend="Burst">
-    <SelectorTalentLevel
-      class="rounded-l-md"
-      id="burst1"
-      :modelValue="start"
-      @update:modelValue="$emit('update:start', $event)"
-    />
+    <SelectorTalentLevel class="rounded-l-md" :modelValue="start" @update:modelValue="$emit('update:start', $event)" />
     <SelectorIconSeperator :element="element">
       <Fire class="-m-0.5" />
     </SelectorIconSeperator>
-    <SelectorTalentLevel
-      class="rounded-r-md"
-      id="burst2"
-      :modelValue="goal"
-      @update:modelValue="$emit('update:goal', $event)"
-    />
+    <SelectorTalentLevel class="rounded-r-md" :modelValue="goal" @update:modelValue="$emit('update:goal', $event)" />
   </SelectorGroup>
 </template>

@@ -4,10 +4,8 @@ import AscensionCheckbox from "../CheckboxAscension.vue";
 import StarIcon from "../icons/Star.vue";
 import CustomSelector from "../SelectorCustom.vue";
 
-const props = defineProps<{ modelValue: AscensionLevel; id: string; cbClass?: string }>();
+const props = defineProps<{ modelValue: AscensionLevel; cbClass?: string }>();
 const emit = defineEmits(["update:modelValue"]);
-
-const checkboxId = props.id + "checkbox";
 
 const update = (val: { level?: number; ascended?: boolean }) => {
   // make a copy of the object and merge with current value https://github.com/vuejs/vue/issues/4373#issuecomment-279826554
@@ -23,7 +21,6 @@ const cannotAscend = computed(() => {
 
 <template>
   <CustomSelector
-    :id="id"
     :modelValue="modelValue"
     @update:modelValue="$emit('update:modelValue', $event)"
     :listItems="Levels"
@@ -39,7 +36,6 @@ const cannotAscend = computed(() => {
   </CustomSelector>
   <AscensionCheckbox
     :class="cbClass"
-    :checkboxId="checkboxId"
     :modelValue="modelValue.ascended"
     :disabled="cannotAscend"
     @update:modelValue="update({ ascended: $event })"

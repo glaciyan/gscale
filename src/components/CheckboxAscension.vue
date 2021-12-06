@@ -1,17 +1,20 @@
 <script setup lang="ts">
+import incrId from "~/lib/incrId";
 import Center from "./Center.vue";
 import StarIcon from "./icons/Star.vue";
 
-defineProps<{ modelValue: boolean; checkboxId: string; disabled: boolean }>();
+defineProps<{ modelValue: boolean; disabled: boolean }>();
 defineEmits(["update:modelValue"]);
+
+const id = `checkbox_${incrId()}`;
 
 const active = ref(false);
 </script>
 
 <template>
-  <label :for="checkboxId">
+  <label :for="id">
     <input
-      :id="checkboxId"
+      :id="id"
       class="sr-only"
       type="checkbox"
       aria-label="Ascended"

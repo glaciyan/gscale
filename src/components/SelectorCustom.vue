@@ -1,9 +1,12 @@
 <script setup lang="ts">
 import { Listbox, ListboxButton, ListboxOption, ListboxOptions } from "@headlessui/vue";
+import incrId from "~/lib/incrId";
 import Center from "./Center.vue";
 import DownChevron from "./icons/DownChevron.vue";
 
-defineProps<{ modelValue: any; listItems: any[]; id: string }>();
+defineProps<{ modelValue: any; listItems: any[] }>();
+
+const id = `selector_${incrId()}`;
 
 defineEmits(["update:modelValue"]);
 </script>

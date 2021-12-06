@@ -18,7 +18,6 @@ defineEmits(["update:start", "update:goal"]);
   <SelectorGroup legend="Level">
     <SelectorAscensionLevel
       class="rounded-l-md"
-      id="level1"
       :modelValue="start"
       @update:modelValue="$emit('update:start', $event)"
     />
@@ -27,7 +26,6 @@ defineEmits(["update:start", "update:goal"]);
     </SelectorIconSeperator>
     <SelectorAscensionLevel
       cbClass="rounded-r-md"
-      id="level2"
       :modelValue="goal"
       @update:modelValue="$emit('update:goal', $event)"
     />
