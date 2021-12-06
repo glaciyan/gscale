@@ -1,5 +1,8 @@
 # How to contribute images
 
+| 🛑 Freshly data mined images are not allowed in gscale, please only create a pull request 2-3 days before the release of that content. |
+| -------------------------------------------------------------------------------------------------------------------------------------- |
+
 ## Prerequisites
 
 - Your own fork of gscale to create a pull request. To learn about pull requests refer to [this documentation](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/getting-started/about-collaborative-development-models).
