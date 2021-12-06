@@ -131,7 +131,7 @@ const total = computed(() =>
             </div>
           </section>
         </div>
-        <section class="bg-dark-600 w-full p-6 overflow-y-auto">
+        <section class="bg-dark-600 w-full p-6 overflow-y-auto scrollbar-matprev">
           <span class="font-semibold text-light-important">Material Preview</span>
           <div v-if="total.length !== 0" class="flex flex-col">
             <MaterialPreviewHeader title="Total" class="font-semibold">
@@ -157,3 +157,21 @@ const total = computed(() =>
     </Container>
   </ElementProvider>
 </template>
+
+<style scoped>
+.scrollbar-matprev::-webkit-scrollbar {
+  width: 12px;
+}
+
+.scrollbar-matprev::-webkit-scrollbar-thumb {
+  background-color: #7b7b7b;
+  border-radius: 8px;
+  border: solid 3px #252527;
+}
+
+.scrollbar-matprev::-webkit-scrollbar-track-piece {
+  background-color: #252527;
+  border: solid 3px #252527;
+  border-radius: 0px 6px 6px 0px;
+}
+</style>
