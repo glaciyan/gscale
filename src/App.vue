@@ -21,14 +21,6 @@ import TheHeader from "~/components/TheHeader.vue";
 
 <style>
 /* @import url(./assets/fonts/OpenSans.css); */
-
-.fade-enter-active,
-.fade-leave-active {
-  @apply transition-opacity duration-100;
-}
-
-.fade-enter-from,
-.fade-leave-to {
-  @apply opacity-0;
-}
+@import url(./styles/transition/fade.css);
+@import url(./styles/dark.css);
 </style>
