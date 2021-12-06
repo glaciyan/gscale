@@ -19,6 +19,7 @@ import mergeAmountByName from "~/lib/item/mergeAmountByName";
 import sortItems from "~/lib/item/sortItems";
 import { db } from "~/lib/offlineDatabase/db";
 import title from "~/title";
+import { RouterLink } from "vue-router";
 
 //#region Get character and set title
 const route = useRoute();
@@ -52,9 +53,17 @@ const { templates } = useLevelSelectorTemplate(
 //#region Submit build handler
 const router = useRouter();
 
+const submitError = ref({ message: "", helpUrl: "" });
+
 const submitting = ref(false);
 const handleSubmit = async () => {
   submitting.value = true;
+
+  if (total.value.length === 0) {
+    submitError.value = { message: "This build has no materials.", helpUrl: "help/howtouse" };
+    submitting.value = false;
+    return;
+  }
 
   try {
     await db.builds.add({
@@ -69,7 +78,7 @@ const handleSubmit = async () => {
 
     router.push("/builds");
   } catch (error: any) {
-    console.error(error.message);
+    submitError.value = { message: "Something didn't work.", helpUrl: "/help/database" };
   } finally {
     submitting.value = false;
   }
@@ -137,7 +146,14 @@ const total = computed(() =>
                   </Button>
                 </div>
               </div>
-              <Button :isLoading="submitting" @click="handleSubmit">Build {{ character.name }}</Button>
+              <div class="w-full">
+                <div v-if="submitError.message" class="mb-2">
+                  <span class="text-red-400">{{ submitError.message }}</span>
+                  {{ " " }}
+                  <RouterLink :to="submitError.helpUrl" class="text-blue-400 hover:underline">Help</RouterLink>
+                </div>
+                <Button :isLoading="submitting" @click="handleSubmit" class="w-full">Build {{ character.name }}</Button>
+              </div>
             </div>
           </section>
         </div>
