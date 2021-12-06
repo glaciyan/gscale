@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import CharacterCard from "~/components/character/CharacterCard.vue";
-import XLContainer from "~/components/container/XLContainer.vue";
 import { getCharacterImage } from "~/lib/data/util/getCharacterImage";
 import { charactersViewModel } from "~/lib/viewmodel/CharactersViewModel";
 import Container from "~/components/Container.vue";

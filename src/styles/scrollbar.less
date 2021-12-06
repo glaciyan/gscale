@@ -1,0 +1,19 @@
+.custom-scrollbar {
+  .border {
+    border: solid @scrollbar-border-size @scrollbar-background;
+  }
+
+  &::-webkit-scrollbar {
+    width: @scrollbar-width;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: @scrollbar-foreground;
+    border-radius: 8px;
+    .border();
+  }
+  &::-webkit-scrollbar-track-piece {
+    background-color: @scrollbar-background;
+    border-radius: 6px;
+    .border();
+  }
+}

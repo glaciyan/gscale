@@ -56,6 +56,7 @@ defineEmits(["update:modelValue"]);
               z-30
               absolute
               overflow-y-auto
+              custom-scrollbar
             "
           >
             <ListboxOption v-for="(option, index) in listItems" :key="id + index" :value="option" v-slot="{ active }">
@@ -69,3 +70,12 @@ defineEmits(["update:modelValue"]);
     </div>
   </Listbox>
 </template>
+
+<style scoped lang="less">
+@import url(~/styles/scrollbar.less);
+
+@scrollbar-foreground: #7b7b7b;
+@scrollbar-background: #373739;
+@scrollbar-border-size: 2px;
+@scrollbar-width: 10px;
+</style>
