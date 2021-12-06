@@ -1,16 +1,14 @@
 <script setup lang="ts">
 import TheCharacterDetailPanel from "~/components/BuildCharacter/TheCharacterDetailPanel.vue";
 import Button from "~/components/Button.vue";
-import ElementalIcon from "~/components/icons/Elemental.vue";
-import FireIcon from "~/components/icons/Fire.vue";
-import GrowthIcon from "~/components/icons/Growth.vue";
-import SwordIcon from "~/components/icons/Sword.vue";
+import Container from "~/components/Container.vue";
+import ElementProvider from "~/components/ElementProvider.vue";
+import RangeBurst from "~/components/levelRange/RangeBurst.vue";
+import RangeElemental from "~/components/levelRange/RangeElemental.vue";
+import RangeLevel from "~/components/levelRange/RangeLevel.vue";
+import RangeNormal from "~/components/levelRange/RangeNormal.vue";
 import MaterialList from "~/components/MaterialList.vue";
 import MaterialPreviewHeader from "~/components/MaterialPreviewHeader.vue";
-import SelectorAscensionLevel from "~/components/levelSelector/SelectorAscensionLevel.vue";
-import SelectorGroup from "~/components/levelSelector/SelectorGroup.vue";
-import SelectorIconSeperator from "~/components/levelSelector/SelectorIconSeperator.vue";
-import SelectorTalentLevel from "~/components/levelSelector/SelectorTalentLevel.vue";
 import { useAscensionLevelRange } from "~/composites/useAscensionLevelRange";
 import { useLevelSelectorTemplate } from "~/composites/useLevelSelectorTemplate";
 import { useTalentLevelRange } from "~/composites/useTalentLevelRange";
@@ -19,13 +17,8 @@ import { ICharacter } from "~/lib/data/contracts/ICharacter";
 import repo from "~/lib/data/repository/GenshinDataRepository";
 import mergeAmountByName from "~/lib/item/mergeAmountByName";
 import sortItems from "~/lib/item/sortItems";
+import { db } from "~/lib/offlineDatabase/db";
 import title from "~/title";
-import Container from "~/components/Container.vue";
-import RangeLevel from "~/components/levelRange/RangeLevel.vue";
-import RangeNormal from "~/components/levelRange/RangeNormal.vue";
-import RangeElemental from "~/components/levelRange/RangeElemental.vue";
-import RangeBurst from "~/components/levelRange/RangeBurst.vue";
-import ElementProvider from "~/components/ElementProvider.vue";
 
 //#region Get character and set title
 const route = useRoute();
@@ -56,17 +49,32 @@ const { templates } = useLevelSelectorTemplate(
 );
 //#endregion
 
-//#region temp button handler
+//#region Submit build handler
+const router = useRouter();
+
 const loading = ref(false);
-const handleClick = () => {
+const handleClick = async () => {
   loading.value = true;
-  console.log("button click");
-};
-whenever(loading, () => {
-  setTimeout(() => {
+  try {
+    const id = await db.builds.add({
+      type: "character",
+      characterId: character.normalizedName,
+      // use toRaw here because dexie can't copy a proxy
+      level: { start: toRaw(ascStart.value), goal: toRaw(ascGoal.value) },
+      normal: { start: normalStart.value, goal: normalGoal.value },
+      elemental: { start: emStart.value, goal: emGoal.value },
+      burst: { start: burstStart.value, goal: burstGoal.value },
+    });
+
+    console.log(`created build with id ${id}`);
+
+    router.push("/builds");
+  } catch (error: any) {
+    console.error(error.message);
+  } finally {
     loading.value = false;
-  }, 3000);
-});
+  }
+};
 //#endregion
 
 //#region Compute items

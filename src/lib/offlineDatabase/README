@@ -1,0 +1,3 @@
+builds database
+  /build/[character] - for creating (and editing) a "build" (editing may be done by planner instead)
+  /builds - for retrieving a list of all builds, deleting individual builds and adding/removing completed items

@@ -1,4 +1,7 @@
-export function useTalentLevelRange() {
+import type { Ref } from "vue";
+import type StartGoalRange from "~/lib/interfaces/StartGoalRange";
+
+export function useTalentLevelRange(): StartGoalRange<Ref<number>> {
   const start = ref(1);
   const goal = ref(1);
 
