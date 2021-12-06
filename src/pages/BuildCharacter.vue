@@ -94,7 +94,6 @@ const total = computed(() =>
 <template>
   <ElementProvider :element="character.element.normalizedName">
     <Container>
-      <div>TODO Breadcrumb</div>
       <div class="w-full lg:flex lg:h-[48rem]">
         <div class="flex <sm:block">
           <TheCharacterDetailPanel :character="character" />
