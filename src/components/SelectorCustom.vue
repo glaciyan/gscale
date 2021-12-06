@@ -2,7 +2,6 @@
 import { Listbox, ListboxButton, ListboxOption, ListboxOptions } from "@headlessui/vue";
 import Center from "./Center.vue";
 import DownChevron from "./icons/DownChevron.vue";
-import ValueListboxLayout from "./ValueListboxLayout.vue";
 
 defineProps<{ modelValue: any; listItems: any[]; id: string }>();
 
@@ -11,36 +10,34 @@ defineEmits(["update:modelValue"]);
 
 <template>
   <Listbox :modelValue="modelValue" @update:modelValue="$emit('update:modelValue', $event)" v-slot="{ open }">
-    <ValueListboxLayout>
-      <template #button>
-        <ListboxButton
-          :class="$attrs.class"
-          class="
-            cursor-pointer
-            font-normal font-sans
-            bg-dark-400
-            border-r-[1px] border-dark-500
-            text-left text-base
-            w-max
-            py-2
-            pr-0
-            pl-4
-            transition-colors
-            text-light-900
-            hover:bg-dark-500
-            focus:outline-none
-            focus-visible:ring
-          "
-        >
-          <Center>
-            <slot name="button" :value="modelValue" />
-            <DownChevron
-              :class="['h-5 mx-2 text-light-ternary w-5 transition-transform', { 'transform-gpu -rotate-180': open }]"
-            />
-          </Center>
-        </ListboxButton>
-      </template>
-      <template #list>
+    <div class="relative">
+      <ListboxButton
+        :class="$attrs.class"
+        class="
+          cursor-pointer
+          font-normal font-sans
+          bg-dark-400
+          border-r-[1px] border-dark-500
+          text-left text-base
+          w-max
+          py-2
+          pr-0
+          pl-4
+          transition-colors
+          text-light-900
+          hover:bg-dark-500
+          focus:outline-none
+          focus-visible:ring
+        "
+      >
+        <Center>
+          <slot name="button" :value="modelValue" />
+          <DownChevron
+            :class="['h-5 mx-2 text-light-ternary w-5 transition-transform', { 'transform-gpu -rotate-180': open }]"
+          />
+        </Center>
+      </ListboxButton>
+      <div class="absolute">
         <transition name="fade">
           <ListboxOptions
             class="
@@ -65,7 +62,7 @@ defineEmits(["update:modelValue"]);
             </ListboxOption>
           </ListboxOptions>
         </transition>
-      </template>
-    </ValueListboxLayout>
+      </div>
+    </div>
   </Listbox>
 </template>
