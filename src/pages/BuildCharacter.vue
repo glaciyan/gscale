@@ -57,13 +57,12 @@ const submitError = ref({ message: "", helpUrl: "" });
 
 const submitting = ref(false);
 const handleSubmit = async () => {
-  submitting.value = true;
-
   if (total.value.length === 0) {
     submitError.value = { message: "This build has no materials.", helpUrl: "help/howtouse" };
-    submitting.value = false;
     return;
   }
+
+  submitting.value = true;
 
   try {
     await db.builds.add({
