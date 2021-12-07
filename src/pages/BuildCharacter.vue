@@ -78,7 +78,7 @@ const { loading: submitting, execute: handleSubmit } = useLoadingFunction(async 
       setTimeout(() => {
         resolve("");
         router.push("/builds");
-      }, 1000);
+      }, 3000);
     });
   } catch (error: any) {
     submitError.value = { message: "Something didn't work.", helpUrl: "/help/database" };
@@ -121,7 +121,8 @@ const total = computed(() =>
               text-dark-50
               sm:(w-[20rem]
               border-dark-200 border-r-2)
-              lg:(flex-grow-0) "
+              lg:(flex-grow-0)
+            "
           >
             <div class="flex flex-col h-full p-6 justify-between">
               <div>
