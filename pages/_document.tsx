@@ -7,12 +7,21 @@ class MyDocument extends Document {
     }
 
     render() {
+        const cloudflareToken = process.env.NEXT_PUBLIC_CLOUDFLARE;
+
         return (
             <Html lang="en" className="bg-gscale-dark-background-ternary">
                 <Head />
                 <body>
                     <Main />
                     <NextScript />
+                    {cloudflareToken ? (
+                        <script
+                            defer
+                            src="https://static.cloudflareinsights.com/beacon.min.js"
+                            data-cf-beacon={`{"token": "${cloudflareToken}"}`}
+                        ></script>
+                    ) : null}
                 </body>
             </Html>
         );
