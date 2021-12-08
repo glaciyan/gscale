@@ -42,8 +42,8 @@ const Layout = ({ children, title, current }: Props) => {
                 <meta name="twitter:card" content="summary"></meta>
             </Head>
             <header className="max-w-screen-xl m-6 xl:mx-auto">
-                <div className="flex flex-col flex-wrap sm:items-center sm:flex-row">
-                    <div className="flex flex-wrap items-center flex-1">
+                <div className="flex flex-col flex-wrap sm:flex-row sm:items-center">
+                    <div className="flex flex-wrap flex-1 items-center">
                         <Link href="/">
                             <a className="flex mr-16 focus-visible:ring">
                                 <img
@@ -70,7 +70,7 @@ const Layout = ({ children, title, current }: Props) => {
                                             </a>
                                         </Link>
                                         {index < array.length - 1 ? (
-                                            <div className="w-px h-5 mx-2 bg-gscale-dark-background-primary" />
+                                            <div className="bg-gscale-dark-background-primary h-5 mx-2 w-px" />
                                         ) : null}
                                     </span>
                                 );
@@ -81,19 +81,24 @@ const Layout = ({ children, title, current }: Props) => {
                 </div>
             </header>
             <main className="min-h-screen">{children}</main>
-            <footer className="mt-8 bg-gscale-dark-background-secondary">
-                <div className="max-w-screen-xl py-12 mx-6 xl:mx-auto">
-                    <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 xl:grid-cols-4">
+            <footer className="bg-gscale-dark-background-secondary mt-8">
+                <div className="max-w-screen-xl mx-6 py-12 xl:mx-auto">
+                    <div className="grid gap-12 grid-cols-1 sm:grid-cols-2 xl:grid-cols-4">
                         <FooterEntry header="Navigation">
                             {nav.map((nav) => {
                                 return (
                                     <Link href={nav.href} key={nav.name}>
-                                        <a className="block text-gscale-dark-text-secondary hover:underline w-max">
+                                        <a className="text-gscale-dark-text-secondary w-max block hover:underline">
                                             {nav.name}
                                         </a>
                                     </Link>
                                 );
                             })}
+                            <Link href="/privacy">
+                                <a className="text-gscale-dark-text-secondary w-max block hover:underline">
+                                    Privacy
+                                </a>
+                            </Link>
                         </FooterEntry>
                         <FooterEntry header="Data Sources">
                             <ExternalLink href="http://genshin.honeyhunterworld.com/">
@@ -121,20 +126,20 @@ const Layout = ({ children, title, current }: Props) => {
                             <>
                                 <a
                                     href="https://github.com/glaciyan/gscale"
-                                    className="block text-blue-400 hover:underline w-max"
+                                    className="w-max text-blue-400 block hover:underline"
                                 >
                                     Github
                                 </a>
                                 <a
                                     href="https://twitter.com/glaciyandev"
-                                    className="block text-blue-400 hover:underline w-max"
+                                    className="w-max text-blue-400 block hover:underline"
                                 >
                                     @glaciyandev
                                 </a>
                             </>
                         </FooterEntry>
                     </div>
-                    <div className="flex items-center mt-24">
+                    <div className="flex mt-24 items-center">
                         <img
                             className="mr-2"
                             src="/images/svg/logo_label_small.svg"
