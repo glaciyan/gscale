@@ -11,7 +11,7 @@ defineProps<{ orientation: "verical" | "horizontal" }>();
     <RouterLink
       v-for="nav in navigation"
       :to="nav.path"
-      class="rounded-lg text-light-ternary py-1 px-3 hover:text-light-normal"
+      class="rounded-lg text-light-ternary py-1 px-3 transition-colors hover:(text-light-normal bg-dark-500/50)"
     >
       {{ nav.name }}
     </RouterLink>
