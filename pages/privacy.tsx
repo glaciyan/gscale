@@ -35,8 +35,8 @@ const Privacy: NextPage = () => {
                                 help determine if localization is needed.
                             </li>
                             <li>
-                                <span className={`font-bol`}>Referers</span>: To help find
-                                websites which might contain feedback.
+                                <span className={`font-bold`}>Referers</span>: To help
+                                find websites which might contain feedback.
                             </li>
                             <li>
                                 <span className={`font-bold`}>Hosts</span>: This is always
@@ -80,7 +80,7 @@ const Privacy: NextPage = () => {
                         .
                         <br />
                         <br />
-                        That's it, thank your very much.
+                        That's it, thank you very much.
                         <br />- glaciyan
                     </p>
                 </div>
