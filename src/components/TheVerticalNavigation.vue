@@ -7,7 +7,7 @@ defineProps<{ orientation: "verical" | "horizontal" }>();
 </script>
 
 <template>
-  <Center>
+  <Center class="space-x-2">
     <RouterLink
       v-for="nav in navigation"
       :to="nav.path"
