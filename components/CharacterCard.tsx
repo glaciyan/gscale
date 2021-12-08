@@ -13,7 +13,7 @@ export default function CharacterCard({
     className?: string;
 }) {
     return (
-        <Link href={`build/${character.id}`}>
+        <Link href={`/build/${character.id}`}>
             <a
                 title={`Build ${character.name}`}
                 className={cn(
@@ -22,7 +22,7 @@ export default function CharacterCard({
                 )}
             >
                 <div
-                    className="relative flex items-center justify-center overflow-hidden bg-gscale-dark-background-secondary"
+                    className="bg-gscale-dark-background-secondary flex relative items-center justify-center overflow-hidden"
                     id={character.id}
                 >
                     <CLSPicture
@@ -36,7 +36,7 @@ export default function CharacterCard({
                         className={`absolute inset-0 p-0 m-auto block max-w-full max-h-full min-h-full min-w-full`}
                     />
                 </div>
-                <div className="px-4 py-3">
+                <div className="py-3 px-4">
                     <div className="flex flex-wrap items-center">
                         <span
                             className={`text-genshin-element-${character.element} mr-1`}
@@ -48,11 +48,11 @@ export default function CharacterCard({
                         </span>
                         <RarityStars
                             rarity={character.rarity}
-                            className="inline w-auto h-5"
+                            className="h-5 w-auto inline"
                         />
                     </div>
 
-                    <span className="mt-1 text-lg font-medium text-gscale-dark-text-primary hover:underline w-max">
+                    <span className="font-medium mt-1 text-lg text-gscale-dark-text-primary w-max hover:underline">
                         {character.name}
                     </span>
                 </div>
