@@ -36,3 +36,4 @@ This is a vue rewrite for gscale currently running with a customized vite setup.
 - weapons (heavily seperated from characters, probably everything in a different tab)
 - level templates [#22](https://github.com/glaciyan/gscale/issues/22)
 - reorder your builds with drag and drop
+- account sync with supabase
