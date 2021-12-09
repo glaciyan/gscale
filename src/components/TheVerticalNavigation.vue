@@ -11,7 +11,7 @@ defineProps<{ orientation: "verical" | "horizontal" }>();
     <RouterLink
       v-for="nav in navigation"
       :to="nav.path"
-      class="rounded-lg text-light-ternary py-1 px-3 transition-colors hover:(text-light-normal bg-dark-500/50)"
+      class="rounded-lg text-light-ternary py-1 px-3 transition-all hover:(text-light-normal bg-dark-500/50 shadow-sm)"
     >
       {{ nav.name }}
     </RouterLink>
@@ -21,6 +21,6 @@ defineProps<{ orientation: "verical" | "horizontal" }>();
 <style scoped>
 .router-link-active,
 .router-link-exact-active {
-  @apply bg-dark-500 text-light-normal hover:text-light-important;
+  @apply bg-dark-500 shadow-md text-light-normal hover:text-light-important;
 }
 </style>
