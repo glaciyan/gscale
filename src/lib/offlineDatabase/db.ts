@@ -12,7 +12,7 @@ export interface Builds {
   order?: number;
   completed?: Array<ItemWithAmount>;
   type: string;
-  characterId: string;
+  entityId: string;
   level: StartGoalRange<AscensionLevel>;
   normal: StartGoalRange<number>;
   elemental: StartGoalRange<number>;

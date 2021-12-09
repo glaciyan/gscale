@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { RouterLink } from "vue-router";
 import TheCharacterDetailPanel from "~/components/BuildCharacter/TheCharacterDetailPanel.vue";
 import Button from "~/components/Button.vue";
 import Container from "~/components/Container.vue";
@@ -11,6 +12,7 @@ import MaterialList from "~/components/MaterialList.vue";
 import MaterialPreviewHeader from "~/components/MaterialPreviewHeader.vue";
 import { useAscensionLevelRange } from "~/composites/useAscensionLevelRange";
 import { useLevelSelectorTemplate } from "~/composites/useLevelSelectorTemplate";
+import { useLoadingFunction } from "~/composites/useLoadingFunction";
 import { useTalentLevelRange } from "~/composites/useTalentLevelRange";
 import { calculateAscension, calculateLeveling, calculateTalent } from "~/lib/calculator";
 import { ICharacter } from "~/lib/data/contracts/ICharacter";
@@ -19,8 +21,6 @@ import mergeAmountByName from "~/lib/item/mergeAmountByName";
 import sortItems from "~/lib/item/sortItems";
 import { db } from "~/lib/offlineDatabase/db";
 import title from "~/title";
-import { RouterLink } from "vue-router";
-import { useLoadingFunction } from "~/composites/useLoadingFunction";
 
 //#region Get character and set title
 const route = useRoute();
@@ -65,7 +65,7 @@ const { loading: submitting, execute: handleSubmit } = useLoadingFunction(async 
   try {
     await db.builds.add({
       type: "character",
-      characterId: character.normalizedName,
+      entityId: character.normalizedName,
       // use toRaw here because dexie can't copy a proxy
       level: { start: toRaw(ascStart.value), goal: toRaw(ascGoal.value) },
       normal: { start: normalStart.value, goal: normalGoal.value },
@@ -121,8 +121,7 @@ const total = computed(() =>
               text-dark-50
               sm:(w-[20rem]
               border-dark-200 border-r-2)
-              lg:(flex-grow-0)
-            "
+              lg:(flex-grow-0) "
           >
             <div class="flex flex-col h-full p-6 justify-between">
               <div>
