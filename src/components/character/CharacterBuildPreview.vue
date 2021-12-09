@@ -7,6 +7,7 @@ import sortItems from "~/lib/item/sortItems";
 import { calculateLeveling, calculateAscension, calculateTalent } from "~/lib/calculator";
 import mergeAmountByName from "~/lib/item/mergeAmountByName";
 import MaterialList from "../MaterialList.vue";
+import Button from "../Button.vue";
 
 const props = defineProps<{ build: Build }>();
 
@@ -73,7 +74,10 @@ const items = computed(() =>
           </div>
         </div>
       </div>
-      <div class="bg-dark-600/70 border-t-2 border-dark-400">menu</div>
+      <div class="flex bg-dark-600/70 border-t-2 border-dark-400 py-3 px-6 justify-end">
+        <Button look="ghost" element="neutral" class="mr-2 !h-9 !text-light-ternary">Delete</Button>
+        <Button look="outline" class="!h-9">Planner</Button>
+      </div>
     </div>
   </ElementProvider>
 </template>
