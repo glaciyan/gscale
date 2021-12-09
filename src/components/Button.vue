@@ -28,7 +28,7 @@ const { buttonStyle } = useButtonStyle(props.look, props.element ?? element);
 <template>
   <button
     type="button"
-    :class="[buttonStyle, 'focus:outline-none focus-visible:ring h-[42px] px-4 rounded-lg shadow-md']"
+    :class="[buttonStyle, 'focus:outline-none focus-visible:ring h-[42px] px-4 rounded-lg ']"
     :disabled="_disabled"
     :aria-disabled="_disabled"
   >
