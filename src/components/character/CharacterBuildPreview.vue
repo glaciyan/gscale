@@ -30,24 +30,50 @@ const items = computed(() =>
 
 <template>
   <ElementProvider :element="character.element">
-    <div class="rounded-md flex flex-col bg-dark-600 shadow-md">
-      <div class="sm:flex">
-        <div>
-          <img
-            class="object-cover h-32 w-full opacity-25"
-            :src="getCharacterImage(character.normalizedName, 'card').webp"
-            width="240"
-            height="150"
-            draggable="false"
-          />
-          <div class="p-4">
-            <p class="font-bold text-lg">{{ character.name }}</p>
+    <div class="rounded-md flex flex-col bg-dark-700 shadow-md">
+      <div class="flex flex-grow">
+        <div class="sm:flex">
+          <div class="min-h-32 relative sm:w-48">
+            <div
+              class="
+                inset-x-0
+                top-0
+                z-0
+                absolute
+                before:(
+                content-none
+                bg-gradient-to-b
+                from-transparent
+                h-full
+                to-dark-700
+                w-full
+                inset-0
+                z-10
+                absolute
+                )
+                "
+            >
+              <img
+                class="object-cover h-32 w-full opacity-25"
+                :src="getCharacterImage(character.normalizedName, 'card').webp"
+                width="240"
+                height="150"
+                draggable="false"
+                alt=""
+              />
+            </div>
+            <div class="p-4 inset-0 z-20 absolute">
+              <p class="font-bold text-lg text-light-important">{{ character.name }}</p>
+            </div>
+          </div>
+        </div>
+        <div class="bg-dark-600">
+          <div class="flex flex-wrap h-full h-max p-4">
+            <MaterialList :items="items" />
           </div>
         </div>
       </div>
-      <div class="flex flex-wrap">
-        <MaterialList :items="items" class="flex flex-wrap" />
-      </div>
+      <div class="bg-dark-600/70 border-t-2 border-dark-400">menu</div>
     </div>
   </ElementProvider>
 </template>
