@@ -9,7 +9,18 @@ import Center from "./Center.vue";
     <RouterLink
       v-for="nav in navigation"
       :to="nav.path"
-      class="rounded-lg text-light-ternary py-1 px-3 transition-all hover:(text-light-normal bg-dark-500/50 shadow-sm) "
+      class="
+        border
+        rounded-lg
+        border-dark-500
+        text-light-ternary
+        py-1
+        px-3
+        transition-all
+        hover:(text-light-normal
+        bg-dark-500/50
+        shadow-sm)
+        "
     >
       {{ nav.name }}
     </RouterLink>
