@@ -81,6 +81,7 @@ const { loading: submitting, execute: handleSubmit } = useLoadingFunction(async 
       }, 3000);
     });
   } catch (error: any) {
+    console.error(error);
     submitError.value = { message: "Something didn't work.", helpUrl: "/help/database" };
   }
 });
