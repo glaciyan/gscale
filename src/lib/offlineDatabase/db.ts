@@ -7,7 +7,7 @@ import StartGoalRange from "../interfaces/StartGoalRange";
 import * as Legacy from "../legacy";
 import { toId } from "../toId";
 
-export interface Builds {
+export interface Build {
   id?: number;
   order?: number;
   completed?: Array<ItemWithAmount>;
@@ -20,7 +20,7 @@ export interface Builds {
 }
 
 export class CustomDexie extends Dexie {
-  builds!: Table<Builds>;
+  builds!: Table<Build>;
 
   constructor() {
     super("buildsDB");
