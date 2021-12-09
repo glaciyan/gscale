@@ -8,6 +8,11 @@ import { calculateLeveling, calculateAscension, calculateTalent } from "~/lib/ca
 import mergeAmountByName from "~/lib/item/mergeAmountByName";
 import MaterialList from "../MaterialList.vue";
 import Button from "../Button.vue";
+import RangeLevelDisplay from "../levelRange/display/RangeLevelDisplay.vue";
+import RangeTalentDisplay from "../levelRange/display/RangeTalentDisplay.vue";
+import Sword from "../icons/Sword.vue";
+import Elemental from "../icons/Elemental.vue";
+import Fire from "../icons/Fire.vue";
 
 const props = defineProps<{ build: Build }>();
 const emit = defineEmits(["deleted"]);
@@ -42,7 +47,7 @@ const deleteBuild = async () => {
     <div class="rounded-md flex flex-col bg-dark-700 shadow-md">
       <div class="flex flex-grow">
         <div class="sm:flex">
-          <div class="min-h-32 relative sm:w-48">
+          <div class="flex min-h-32 relative sm:w-50">
             <div
               class="
                 inset-x-0
@@ -71,9 +76,26 @@ const deleteBuild = async () => {
                 alt=""
               />
             </div>
-            <div class="p-4 inset-0 z-20 absolute">
-              <p class="font-bold text-lg text-light-important">{{ character.name }}</p>
-              <RangeLevelDisplay :range="build.level" />
+            <div class="p-6 inset-0 z-20">
+              <p class="font-bold text-lg text-light-important mb-2">{{ character.name }}</p>
+              <div class="space-y-2">
+                <RangeLevelDisplay :range="build.level" />
+                <RangeTalentDisplay title="Normal" :range="build.normal">
+                  <template #icon>
+                    <Sword class="h-[26px] -m-0.5 w-[26px]" />
+                  </template>
+                </RangeTalentDisplay>
+                <RangeTalentDisplay title="Elemental" :range="build.elemental">
+                  <template #icon>
+                    <Elemental class="-m-0.5" />
+                  </template>
+                </RangeTalentDisplay>
+                <RangeTalentDisplay title="Burst" :range="build.burst">
+                  <template #icon>
+                    <Fire class="-m-0.5" />
+                  </template>
+                </RangeTalentDisplay>
+              </div>
             </div>
           </div>
         </div>

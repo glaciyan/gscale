@@ -2,13 +2,13 @@
 import { AscensionLevel } from "~/lib/interfaces/AscensionLevel";
 import StarIcon from "./icons/Star.vue";
 
-defineProps<{ ascensionLevel: AscensionLevel }>();
+defineProps<{ ascensionLevel: AscensionLevel; small?: boolean }>();
 </script>
 
 <template>
   {{ ascensionLevel.level }}
   <template v-if="ascensionLevel.ascended">
     <span class="sr-only">Ascended</span>
-    <StarIcon class="flex-shrink-0 ml-1" />
+    <StarIcon :class="['flex-shrink-0 ml-1', { 'w-5 h-5': small }]" />
   </template>
 </template>
