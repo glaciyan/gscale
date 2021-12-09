@@ -2,8 +2,6 @@
 import { navigation } from "~/router";
 import { RouterLink } from "vue-router";
 import Center from "./Center.vue";
-
-defineProps<{ orientation: "verical" | "horizontal" }>();
 </script>
 
 <template>
@@ -11,7 +9,7 @@ defineProps<{ orientation: "verical" | "horizontal" }>();
     <RouterLink
       v-for="nav in navigation"
       :to="nav.path"
-      class="rounded-lg text-light-ternary py-1 px-3 transition-all hover:(text-light-normal bg-dark-500/50 shadow-sm)"
+      class="rounded-lg text-light-ternary py-1 px-3 transition-all hover:(text-light-normal bg-dark-500/50 shadow-sm) "
     >
       {{ nav.name }}
     </RouterLink>
