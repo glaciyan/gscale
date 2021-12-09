@@ -110,7 +110,7 @@ const total = computed(() =>
 </script>
 
 <template>
-  <ElementProvider :element="character.element.normalizedName">
+  <ElementProvider :element="character.element">
     <Container>
       <div class="w-full lg:flex lg:h-[48rem]">
         <div class="flex <sm:block">

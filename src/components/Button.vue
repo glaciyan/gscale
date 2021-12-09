@@ -4,7 +4,7 @@ import Center from "./Center.vue";
 import { useButtonStyle } from "~/composites/useButtonStyle";
 import { useInjectElement } from "~/composites/useInjectElement";
 
-const injectedElement = useInjectElement();
+const element = useInjectElement().normalizedName;
 
 const props = withDefaults(
   defineProps<{
@@ -22,7 +22,7 @@ const props = withDefaults(
 
 const _disabled = computed(() => props.isLoading || props.disabled);
 
-const { buttonStyle } = useButtonStyle(props.look, props.element ?? injectedElement);
+const { buttonStyle } = useButtonStyle(props.look, props.element ?? element);
 </script>
 
 <template>

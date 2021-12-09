@@ -3,9 +3,9 @@ import { useInjectElement } from "~/composites/useInjectElement";
 import Center from "../Center.vue";
 const props = defineProps<{ element?: string }>();
 
-const injectedElement = useInjectElement();
+const element = useInjectElement().normalizedName;
 
-const backgroundColor = `bg-genshin-element-${props.element ?? injectedElement}-dark`;
+const backgroundColor = `bg-genshin-element-${props.element ?? element}-dark`;
 </script>
 
 <template>

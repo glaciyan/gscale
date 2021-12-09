@@ -1,5 +1,7 @@
 <script setup lang="ts">
-const props = defineProps<{ element: string }>();
+import { IElement } from "~/lib/data/contracts/IElement";
+
+const props = defineProps<{ element: IElement }>();
 
 provide("element", props.element);
 </script>
