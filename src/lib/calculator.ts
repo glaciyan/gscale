@@ -57,6 +57,7 @@ export function calculateAscension(
   return mergeAmountByName(AscensionCostTable(items).slice(startAscension, goalAscension));
 }
 
+// create wrapped for normalTalent argument cause its confusing
 export function calculateTalent(
   character: IBaseCharacter,
   start: number,

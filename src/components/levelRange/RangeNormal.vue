@@ -4,6 +4,7 @@ import SelectorTalentLevel from "../levelSelector/SelectorTalentLevel.vue";
 import SelectorIconSeperator from "../levelSelector/SelectorIconSeperator.vue";
 import Sword from "../icons/Sword.vue";
 
+// TODO model with start goal range
 defineProps<{ start: number; goal: number; element?: string }>();
 
 defineEmits(["update:start", "update:goal"]);
