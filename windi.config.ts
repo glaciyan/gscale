@@ -1,4 +1,5 @@
 import { defineConfig } from "windicss/helpers";
+import plugin from "windicss/plugin";
 import aspectRatio from "windicss/plugin/aspect-ratio";
 import lineClamp from "windicss/plugin/line-clamp";
 import { range } from "./src/lib/range";
@@ -7,7 +8,17 @@ const em = ["anemo", "pyro", "electro", "geo", "cryo", "hydro", "neutral"];
 const sizes = ["sm", "md", "lg", "xl", "2xl"];
 
 export default defineConfig({
-  plugins: [aspectRatio, lineClamp],
+  plugins: [
+    aspectRatio,
+    lineClamp,
+    plugin(({ addUtilities }) => {
+      addUtilities({
+        ".content-none": {
+          content: "''",
+        },
+      });
+    }),
+  ],
   safelist: [
     range(5).map((n) => `text-genshin-rarity-${n}`),
     em.map((e) => `text-genshin-element-${e}`),
