@@ -26,4 +26,8 @@ export const Elements: IdIndex<IElement> = {
     name: "Electro",
     normalizedName: "electro",
   },
+  neutral: {
+    name: "Neutral",
+    normalizedName: "neutral",
+  },
 };

@@ -3,7 +3,7 @@ import aspectRatio from "windicss/plugin/aspect-ratio";
 import lineClamp from "windicss/plugin/line-clamp";
 import { range } from "./src/lib/range";
 
-const em = ["anemo", "pyro", "electro", "geo", "cryo", "hydro"];
+const em = ["anemo", "pyro", "electro", "geo", "cryo", "hydro", "neutral"];
 const sizes = ["sm", "md", "lg", "xl", "2xl"];
 
 export default defineConfig({
@@ -62,6 +62,7 @@ export default defineConfig({
             "geo-dark": "#edad54",
             "cryo-dark": "#57cbcb",
             "hydro-dark": "#3D9EFF",
+            "neutral-dark": "#8D8D8D",
           },
 
           rarity: {
