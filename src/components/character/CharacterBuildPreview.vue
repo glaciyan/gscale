@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import repo from "~/lib/data/repository/GenshinDataRepository";
-import { Build } from "~/lib/offlineDatabase/db";
+import { Build, db } from "~/lib/offlineDatabase/db";
 import ElementProvider from "../ElementProvider.vue";
 import { getCharacterImage } from "~/lib/data/util/getCharacterImage";
 import sortItems from "~/lib/item/sortItems";
@@ -10,6 +10,7 @@ import MaterialList from "../MaterialList.vue";
 import Button from "../Button.vue";
 
 const props = defineProps<{ build: Build }>();
+const emit = defineEmits(["deleted"]);
 
 const character = repo.needCharacter(props.build.entityId);
 
@@ -76,7 +77,7 @@ const deleteBuild = async () => {
             </div>
           </div>
         </div>
-        <div class="bg-dark-600">
+        <div class="bg-dark-600 w-full">
           <div class="flex flex-wrap h-full h-max p-4">
             <MaterialList :items="items" />
           </div>
