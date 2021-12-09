@@ -163,19 +163,19 @@ const total = computed(() =>
           <span class="font-semibold text-light-important">Material Preview</span>
           <div v-if="total.length !== 0" class="flex flex-col">
             <MaterialPreviewHeader title="Total" class="font-semibold">
-              <MaterialList :items="total" key="total" />
+              <MaterialList :items="total" />
             </MaterialPreviewHeader>
             <MaterialPreviewHeader title="Ascension">
-              <MaterialList :items="ascItems" key="asc" />
+              <MaterialList :items="ascItems" />
             </MaterialPreviewHeader>
             <MaterialPreviewHeader title="Normal Attack">
-              <MaterialList :items="normalItems" key="normal" />
+              <MaterialList :items="normalItems" />
             </MaterialPreviewHeader>
             <MaterialPreviewHeader title="Elemental Attack">
-              <MaterialList :items="emItems" key="em" />
+              <MaterialList :items="emItems" />
             </MaterialPreviewHeader>
             <MaterialPreviewHeader title="Burst">
-              <MaterialList :items="burstItems" key="burst" />
+              <MaterialList :items="burstItems" />
             </MaterialPreviewHeader>
           </div>
           <!-- TODO make this look like an item -->
