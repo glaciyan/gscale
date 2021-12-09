@@ -18,7 +18,7 @@ onBeforeMount(() => {
 <template>
   <Container size="2xl">
     <div w:grid="gap-5 cols-2 <sm:cols-1" class="grid">
-      <CharacterBuildPreview v-for="build in builds" :build="build" />
+      <CharacterBuildPreview v-for="build in builds" @deleted="getBuilds" :build="build" />
     </div>
   </Container>
 </template>

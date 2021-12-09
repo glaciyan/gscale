@@ -27,6 +27,13 @@ const items = computed(() =>
   )
 );
 //#endregion
+
+const deleteBuild = async () => {
+  if (props.build.id) {
+    await db.builds.delete(props.build.id);
+    emit("deleted");
+  }
+};
 </script>
 
 <template>
@@ -75,7 +82,9 @@ const items = computed(() =>
         </div>
       </div>
       <div class="flex bg-dark-600/70 border-t-2 border-dark-400 py-3 px-6 justify-end">
-        <Button look="ghost" element="neutral" class="mr-2 !h-9 !text-light-ternary">Delete</Button>
+        <Button @click="deleteBuild" look="ghost" element="neutral" class="mr-2 !h-9 !text-light-ternary"
+          >Delete</Button
+        >
         <Button look="outline" class="!h-9">Planner</Button>
       </div>
     </div>
