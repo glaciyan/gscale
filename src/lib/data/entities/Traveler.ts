@@ -11,7 +11,7 @@ import { WeaponTypes } from "../WeaponTypes";
 
 export class Traveler implements ITraveler {
   constructor(config: ITravelerConfig) {
-    this.meta = "traveler";
+    this.isTraveler = true;
 
     this.name = "Traveler";
     this.normalizedName = `traveler_${config.element.normalizedName}`;
@@ -58,5 +58,5 @@ export class Traveler implements ITraveler {
   normalTalentCommonGroup: IItemGroup;
   normalTalentBoss: IItem;
 
-  meta: string;
+  isTraveler?: boolean | undefined;
 }
