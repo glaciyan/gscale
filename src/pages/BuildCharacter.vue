@@ -25,10 +25,7 @@ import title from "~/title";
 //#region Get character and set title
 const route = useRoute();
 
-const character =
-  repo.getCharacter(route.params.character as string) ??
-  repo.getTraveler(route.params.character as string) ??
-  (repo.getCharacter("jeffrey") as ICharacter);
+const character = repo.needCharacter(route.params.character as string);
 
 useTitle(title(`Building ${character.name}`));
 //#endregion
