@@ -72,6 +72,7 @@ const deleteBuild = async () => {
             </div>
             <div class="p-4 inset-0 z-20 absolute">
               <p class="font-bold text-lg text-light-important">{{ character.name }}</p>
+              <RangeLevelDisplay :range="build.level" />
             </div>
           </div>
         </div>
