@@ -70,13 +70,7 @@ const { loading: submitting, execute: handleSubmit } = useLoadingFunction(async 
       burst: { start: burstStart.value, goal: burstGoal.value },
     });
 
-    // TODO remove artificial load time
-    await new Promise((resolve) => {
-      setTimeout(() => {
-        resolve("");
-        router.push("/builds");
-      }, 3000);
-    });
+    router.push("/builds");
   } catch (error: any) {
     console.error(error);
     submitError.value = { message: "Something didn't work.", helpUrl: "/help/database" };
