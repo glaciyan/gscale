@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { AscensionLevel, Levels } from "~/lib/interfaces/AscensionLevel";
 import AscensionCheckbox from "../CheckboxAscension.vue";
-import StarIcon from "../icons/Star.vue";
 import CustomSelector from "../SelectorCustom.vue";
+import AscensionLevelDisplay from "../AscensionLevelDisplay.vue";
 
 const props = defineProps<{ modelValue: AscensionLevel; cbClass?: string }>();
 const emit = defineEmits(["update:modelValue"]);
@@ -30,8 +30,7 @@ const cannotAscend = computed(() => {
       {{ (slotProps.value as any).level }}
     </template>
     <template #item="{ option }">
-      {{ option.level }} <span v-if="option.ascended" class="sr-only">Ascended</span>
-      <StarIcon v-if="option.ascended" class="flex-shrink-0 ml-1" />
+      <AscensionLevelDisplay :ascensionLevel="option" />
     </template>
   </CustomSelector>
   <AscensionCheckbox
