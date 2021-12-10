@@ -7,9 +7,9 @@
     "build": "vue-tsc --noEmit && vite build",
     "start": "vite preview",
     "prod": "yarn build && yarn start",
-    "images:characters:build": "npx @squoosh/cli --oxipng auto --webp auto --resize {width:240} -d public/images/characters/card",
-    "images:mugshot:build": "npx @squoosh/cli --oxipng auto --webp auto --resize {width:100} -d public/images/characters/mugshot",
-    "images:items:build": "npx @squoosh/cli --oxipng auto --webp auto --resize {width:40} -d public/images/materials",
+    "images:characters:build": "squoosh-cli --oxipng auto --webp auto --resize {width:240} -d public/images/characters/card",
+    "images:mugshot:build": "squoosh-cli --oxipng auto --webp auto --resize {width:100} -d public/images/characters/mugshot",
+    "images:items:build": "squoosh-cli --oxipng auto --webp auto --resize {width:40} -d public/images/materials",
     "make:images": "node scripts/make_images.js"
   },
   "dependencies": {
