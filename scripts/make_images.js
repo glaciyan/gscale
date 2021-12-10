@@ -44,8 +44,8 @@ function build(source, command) {
   });
 }
 
-build("./src/data/images/characters/card", "images:characters:build");
-build("./src/data/images/characters/mugshot", "images:mugshot:build");
-build("./src/data/images/materials", "images:items:build");
+build("./src/lib/data/images/characters/card", "images:characters:build");
+build("./src/lib/data/images/characters/mugshot", "images:mugshot:build");
+build("./src/lib/data/images/materials", "images:items:build");
 
 writeHashesFile();
