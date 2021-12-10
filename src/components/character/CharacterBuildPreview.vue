@@ -90,8 +90,8 @@ const deleteBuild = async () => {
         <Button @click="deleteBuild" look="ghost" element="neutral" class="mr-2 !h-9 !text-light-ternary">
           Delete
         </Button>
-        <Button look="outline" class="mr-2 !h-9">Edit</Button>
-        <Button class="!h-9">Planner</Button>
+        <Button look="outline" class="cursor-not-allowed mr-2 !h-9">Edit</Button>
+        <Button class="cursor-not-allowed !h-9">Planner</Button>
       </div>
     </div>
   </ElementProvider>
