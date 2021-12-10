@@ -48,23 +48,7 @@ const deleteBuild = async () => {
       <div class="flex flex-grow">
         <div class="sm:flex">
           <div class="flex min-h-32 relative sm:w-50">
-            <div
-              class="
-                inset-x-0
-                top-0
-                absolute
-                after:(
-                content-none
-                bg-gradient-to-b
-                from-transparent
-                h-full
-                to-dark-700
-                w-full
-                inset-0
-                absolute
-                )
-                "
-            >
+            <div class="inset-x-0 top-0 absolute fading-out">
               <img
                 class="object-cover h-32 w-full opacity-25"
                 :src="getCharacterImage(character.normalizedName, 'card').webp"
@@ -112,3 +96,9 @@ const deleteBuild = async () => {
     </div>
   </ElementProvider>
 </template>
+
+<style scoped>
+.fading-out::after {
+  @apply bg-gradient-to-b from-transparent h-full to-dark-700 w-full inset-0 content-none absolute;
+}
+</style>
