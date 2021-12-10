@@ -21,6 +21,8 @@ import mergeAmountByName from "~/lib/item/mergeAmountByName";
 import sortItems from "~/lib/item/sortItems";
 import { db } from "~/lib/offlineDatabase/db";
 import title from "~/title";
+import DownChevron from "../components/icons/DownChevron.vue";
+import Center from "../components/Center.vue";
 
 //#region Get character and set title
 const route = useRoute();
@@ -113,8 +115,7 @@ const total = computed(() =>
               text-dark-50
               sm:(w-[20rem]
               border-dark-200 border-r-2)
-              lg:(flex-grow-0)
-            "
+              lg:(flex-grow-0) "
           >
             <div class="flex flex-col h-full p-6 justify-between">
               <div>
@@ -157,16 +158,16 @@ const total = computed(() =>
             <ItemListHeader title="Total" class="font-semibold">
               <ItemList :items="total" />
             </ItemListHeader>
-            <ItemListHeader title="Ascension">
+            <ItemListHeader v-if="ascItems.length !== 0" title="Ascension">
               <ItemList :items="ascItems" />
             </ItemListHeader>
-            <ItemListHeader title="Normal Attack">
+            <ItemListHeader v-if="normalItems.length !== 0" title="Normal Attack">
               <ItemList :items="normalItems" />
             </ItemListHeader>
-            <ItemListHeader title="Elemental Attack">
+            <ItemListHeader v-if="emItems.length !== 0" title="Elemental Attack">
               <ItemList :items="emItems" />
             </ItemListHeader>
-            <ItemListHeader title="Burst">
+            <ItemListHeader v-if="burstItems.length !== 0" title="Burst">
               <ItemList :items="burstItems" />
             </ItemListHeader>
           </div>
