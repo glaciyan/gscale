@@ -52,9 +52,8 @@ const deleteBuild = async () => {
               class="
                 inset-x-0
                 top-0
-                z-0
                 absolute
-                before:(
+                after:(
                 content-none
                 bg-gradient-to-b
                 from-transparent
@@ -62,10 +61,9 @@ const deleteBuild = async () => {
                 to-dark-700
                 w-full
                 inset-0
-                z-10
                 absolute
                 )
-              "
+                "
             >
               <img
                 class="object-cover h-32 w-full opacity-25"
