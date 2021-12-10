@@ -12,7 +12,7 @@ const _amountLabel = computed(() => millify(props.itemWithAmount.amount));
     <div class="h-12 p-1 w-12">
       <Image
         class="h-full object-contain w-full"
-        type="material"
+        type="item"
         :name="itemWithAmount.item.normalizedName"
         width="40"
         height="40"

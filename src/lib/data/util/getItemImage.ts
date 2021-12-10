@@ -1,4 +1,4 @@
-export function getMaterialImage(name: string) {
+export function getItemImage(name: string) {
   const path = `/images/materials/${name}`;
 
   return {

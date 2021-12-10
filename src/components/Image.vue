@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { getCharacterImage } from "~/lib/data/util/getCharacterImage";
-import { getMaterialImage } from "~/lib/data/util/getMaterialImage";
+import { getItemImage } from "~/lib/data/util/getItemImage";
 
 const props = defineProps<{
-  type: "characterMugshot" | "characterCard" | "material";
+  type: "characterMugshot" | "characterCard" | "item";
   name: string;
 }>();
 
@@ -13,8 +13,8 @@ const src = (() => {
       return getCharacterImage(props.name, "card");
     case "characterMugshot":
       return getCharacterImage(props.name, "mugshot");
-    case "material":
-      return getMaterialImage(props.name);
+    case "item":
+      return getItemImage(props.name);
   }
 })();
 </script>

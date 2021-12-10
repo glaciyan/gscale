@@ -8,8 +8,8 @@ import RangeBurst from "~/components/levelRange/RangeBurst.vue";
 import RangeElemental from "~/components/levelRange/RangeElemental.vue";
 import RangeLevel from "~/components/levelRange/RangeLevel.vue";
 import RangeNormal from "~/components/levelRange/RangeNormal.vue";
-import MaterialList from "~/components/MaterialList.vue";
-import MaterialPreviewHeader from "~/components/MaterialPreviewHeader.vue";
+import ItemList from "~/components/ItemList.vue";
+import ItemListHeader from "~/components/ItemListHeader.vue";
 import { useAscensionLevelRange } from "~/composites/useAscensionLevelRange";
 import { useLevelSelectorTemplate } from "~/composites/useLevelSelectorTemplate";
 import { useLoadingFunction } from "~/composites/useLoadingFunction";
@@ -113,7 +113,8 @@ const total = computed(() =>
               text-dark-50
               sm:(w-[20rem]
               border-dark-200 border-r-2)
-              lg:(flex-grow-0) "
+              lg:(flex-grow-0)
+            "
           >
             <div class="flex flex-col h-full p-6 justify-between">
               <div>
@@ -153,21 +154,21 @@ const total = computed(() =>
         <section class="bg-dark-600 w-full p-6 overflow-y-auto custom-scrollbar">
           <span class="font-semibold text-light-important">Material Preview</span>
           <div v-if="total.length !== 0" class="flex flex-col">
-            <MaterialPreviewHeader title="Total" class="font-semibold">
-              <MaterialList :items="total" />
-            </MaterialPreviewHeader>
-            <MaterialPreviewHeader title="Ascension">
-              <MaterialList :items="ascItems" />
-            </MaterialPreviewHeader>
-            <MaterialPreviewHeader title="Normal Attack">
-              <MaterialList :items="normalItems" />
-            </MaterialPreviewHeader>
-            <MaterialPreviewHeader title="Elemental Attack">
-              <MaterialList :items="emItems" />
-            </MaterialPreviewHeader>
-            <MaterialPreviewHeader title="Burst">
-              <MaterialList :items="burstItems" />
-            </MaterialPreviewHeader>
+            <ItemListHeader title="Total" class="font-semibold">
+              <ItemList :items="total" />
+            </ItemListHeader>
+            <ItemListHeader title="Ascension">
+              <ItemList :items="ascItems" />
+            </ItemListHeader>
+            <ItemListHeader title="Normal Attack">
+              <ItemList :items="normalItems" />
+            </ItemListHeader>
+            <ItemListHeader title="Elemental Attack">
+              <ItemList :items="emItems" />
+            </ItemListHeader>
+            <ItemListHeader title="Burst">
+              <ItemList :items="burstItems" />
+            </ItemListHeader>
           </div>
           <!-- TODO make this look like an item -->
           <div v-else>No Items</div>

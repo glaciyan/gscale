@@ -2,11 +2,10 @@
 import repo from "~/lib/data/repository/GenshinDataRepository";
 import { Build, db } from "~/lib/offlineDatabase/db";
 import ElementProvider from "../ElementProvider.vue";
-import { getCharacterImage } from "~/lib/data/util/getCharacterImage";
 import sortItems from "~/lib/item/sortItems";
 import { calculateLeveling, calculateAscension, calculateTalent } from "~/lib/calculator";
 import mergeAmountByName from "~/lib/item/mergeAmountByName";
-import MaterialList from "../MaterialList.vue";
+import ItemList from "../ItemList.vue";
 import Button from "../Button.vue";
 import RangeLevelDisplay from "../levelRange/display/RangeLevelDisplay.vue";
 import RangeTalentDisplay from "../levelRange/display/RangeTalentDisplay.vue";
@@ -83,7 +82,7 @@ const deleteBuild = async () => {
         </div>
         <div class="bg-dark-600 w-full">
           <div class="flex flex-wrap h-full h-max p-4">
-            <MaterialList :items="items" />
+            <ItemList :items="items" />
           </div>
         </div>
       </div>
