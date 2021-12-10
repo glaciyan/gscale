@@ -14,7 +14,6 @@ This is a vue rewrite for gscale currently running with a customized vite setup.
 ## TODO
 
 - Finish up /build/x page
-- Image component with png fallback
 - Finish up /builds page
 - Header
 - Footer

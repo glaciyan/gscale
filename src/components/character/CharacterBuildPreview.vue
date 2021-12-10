@@ -13,6 +13,7 @@ import RangeTalentDisplay from "../levelRange/display/RangeTalentDisplay.vue";
 import Sword from "../icons/Sword.vue";
 import Elemental from "../icons/Elemental.vue";
 import Fire from "../icons/Fire.vue";
+import Image from "../Image.vue";
 
 const props = defineProps<{ build: Build }>();
 const emit = defineEmits(["deleted"]);
@@ -49,13 +50,12 @@ const deleteBuild = async () => {
         <div class="sm:flex">
           <div class="flex min-h-32 relative sm:w-50">
             <div class="inset-x-0 top-0 absolute fading-out">
-              <img
+              <Image
                 class="object-cover h-32 w-full opacity-25"
-                :src="getCharacterImage(character.normalizedName, 'card').webp"
+                type="characterCard"
+                :name="character.normalizedName"
                 width="240"
                 height="150"
-                draggable="false"
-                alt=""
               />
             </div>
             <div class="p-6 relative">

@@ -6,6 +6,7 @@ import { getCharacterImage } from "~/lib/data/util/getCharacterImage";
 import CharacterPortrait from "../character/CharacterPortrait.vue";
 import IconWithText from "../IconWithText.vue";
 import TheClampedText from "../TheClampedText.vue";
+import Image from "../Image.vue";
 
 const props = defineProps<{ character: IBaseCharacter }>();
 const elementTextColor = `text-genshin-element-${props.character.element.normalizedName}`;
@@ -14,12 +15,12 @@ const elementTextColor = `text-genshin-element-${props.character.element.normali
 <template>
   <aside class="flex flex-col h-full bg-dark-700 px-6 pt-4 pb-6 relative">
     <div aria-hidden="true" class="h-32 w-full opacity-50 inset-x-0 top-0 absolute">
-      <img
+      <Image
         class="h-full object-cover w-full"
-        :src="getCharacterImage(character.normalizedName, 'card').webp"
+        type="characterCard"
+        :name="character.normalizedName"
         width="240"
         height="150"
-        draggable="false"
       />
     </div>
     <div class="relative">
