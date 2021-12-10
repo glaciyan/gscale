@@ -65,7 +65,7 @@ const deleteBuild = async () => {
                 z-10
                 absolute
                 )
-                "
+              "
             >
               <img
                 class="object-cover h-32 w-full opacity-25"
@@ -76,7 +76,7 @@ const deleteBuild = async () => {
                 alt=""
               />
             </div>
-            <div class="p-6 inset-0 z-20">
+            <div class="p-6 relative">
               <p class="font-bold text-lg text-light-important mb-2">{{ character.name }}</p>
               <div class="space-y-2">
                 <RangeLevelDisplay :range="build.level" />
