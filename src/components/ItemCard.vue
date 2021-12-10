@@ -1,20 +1,22 @@
 <script setup lang="ts">
+import { ItemWithAmount } from "~/lib/data/entities/ItemWithAmount";
 import millify from "~/lib/millify";
+import Image from "./Image.vue";
 
-const props = defineProps<{ imageUrl: string; imageTitle: string; amount: number }>();
-const _amountLabel = computed(() => millify(props.amount));
+const props = defineProps<{ itemWithAmount: ItemWithAmount }>();
+const _amountLabel = computed(() => millify(props.itemWithAmount.amount));
 </script>
 
 <template>
   <div class="rounded flex flex-col bg-dark-400 m-1 shadow w-max items-center overflow-hidden">
     <div class="h-12 p-1 w-12">
-      <img
+      <Image
         class="h-full object-contain w-full"
-        :alt="imageTitle"
-        :title="imageTitle"
+        type="material"
+        :name="itemWithAmount.item.normalizedName"
         width="40"
         height="40"
-        :src="imageUrl"
+        :alt="itemWithAmount.item.name"
       />
     </div>
     <div class="bg-dark-300 text-center w-full px-1">{{ _amountLabel }}</div>
