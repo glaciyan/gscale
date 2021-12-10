@@ -50,7 +50,7 @@ const deleteBuild = async () => {
           <div class="flex min-h-32 relative sm:w-50">
             <div class="inset-x-0 top-0 absolute fading-out">
               <Image
-                class="object-cover h-32 w-full opacity-25"
+                class="object-cover h-32 w-full opacity-50"
                 type="characterCard"
                 :name="character.normalizedName"
                 width="240"
