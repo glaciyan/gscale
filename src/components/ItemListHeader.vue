@@ -3,8 +3,11 @@ defineProps<{ title: string }>();
 </script>
 
 <template>
-  <span :class="['mb-1 mt-2', $attrs.class]">{{ title }}</span>
+  <div class="flex items-center">
+    <slot name="icon" />
+    <span :class="['mb-1 mt-2 mx-2', $attrs.class]">{{ title }}</span>
+  </div>
   <div class="flex flex-wrap">
-    <slot />
+    <slot name="itemList" />
   </div>
 </template>

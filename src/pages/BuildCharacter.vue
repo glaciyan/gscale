@@ -23,6 +23,11 @@ import { db } from "~/lib/offlineDatabase/db";
 import title from "~/title";
 import DownChevron from "../components/icons/DownChevron.vue";
 import Center from "../components/Center.vue";
+import Growth from "../components/icons/Growth.vue";
+import Sword from "../components/icons/Sword.vue";
+import Elemental from "../components/icons/Elemental.vue";
+import Fire from "../components/icons/Fire.vue";
+import ItemPreviewSection from "~/components/ItemPreviewSection.vue";
 
 //#region Get character and set title
 const route = useRoute();
@@ -156,20 +161,14 @@ const total = computed(() =>
           <span class="font-semibold text-light-important">Material Preview</span>
           <div v-if="total.length !== 0" class="flex flex-col">
             <ItemListHeader title="Total" class="font-semibold">
-              <ItemList :items="total" />
+              <template #itemList>
+                <ItemList :items="total" />
+              </template>
             </ItemListHeader>
-            <ItemListHeader v-if="ascItems.length !== 0" title="Ascension">
-              <ItemList :items="ascItems" />
-            </ItemListHeader>
-            <ItemListHeader v-if="normalItems.length !== 0" title="Normal Attack">
-              <ItemList :items="normalItems" />
-            </ItemListHeader>
-            <ItemListHeader v-if="emItems.length !== 0" title="Elemental Attack">
-              <ItemList :items="emItems" />
-            </ItemListHeader>
-            <ItemListHeader v-if="burstItems.length !== 0" title="Burst">
-              <ItemList :items="burstItems" />
-            </ItemListHeader>
+            <ItemPreviewSection :items="ascItems" title="Ascension" :icon="Growth" />
+            <ItemPreviewSection :items="normalItems" title="Normal Attack" :icon="Sword" noResize />
+            <ItemPreviewSection :items="emItems" title="Elemental Attack" :icon="Elemental" />
+            <ItemPreviewSection :items="burstItems" title="Ascension" :icon="Fire" />
           </div>
           <!-- TODO make this look like an item -->
           <div v-else class="rounded-lg flex bg-dark-400 shadow-md mt-2 text-center w-max p-4 items-center">
