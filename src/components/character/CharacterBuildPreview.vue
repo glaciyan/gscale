@@ -34,67 +34,71 @@ const items = computed(() =>
 );
 //#endregion
 
+const hidden = ref(false);
 const deleteBuild = async () => {
   if (props.build.id) {
     await db.builds.delete(props.build.id);
-    emit("deleted");
+    emit("deleted", props.build.id);
+    hidden.value = true;
   }
 };
 </script>
 
 <template>
-  <ElementProvider :element="character.element">
-    <div class="rounded-md flex flex-col bg-dark-700 shadow-md">
-      <div class="flex flex-grow">
-        <div class="sm:flex">
-          <div class="flex min-h-32 relative sm:w-50">
-            <div class="inset-x-0 top-0 absolute fading-out">
-              <Image
-                class="object-cover h-32 w-full opacity-50"
-                type="characterCard"
-                :name="character.normalizedName"
-                width="240"
-                height="150"
-              />
-            </div>
-            <div class="p-6 relative">
-              <p class="font-bold text-lg text-light-important mb-2">{{ character.name }}</p>
-              <div class="space-y-2">
-                <RangeLevelDisplay :range="build.level" />
-                <RangeTalentDisplay title="Normal" :range="build.normal">
-                  <template #icon>
-                    <Sword class="h-[26px] -m-0.5 w-[26px]" />
-                  </template>
-                </RangeTalentDisplay>
-                <RangeTalentDisplay title="Elemental" :range="build.elemental">
-                  <template #icon>
-                    <Elemental class="-m-0.5" />
-                  </template>
-                </RangeTalentDisplay>
-                <RangeTalentDisplay title="Burst" :range="build.burst">
-                  <template #icon>
-                    <Fire class="-m-0.5" />
-                  </template>
-                </RangeTalentDisplay>
+  <template v-if="!hidden">
+    <ElementProvider :element="character.element">
+      <div class="rounded-md flex flex-col bg-dark-700 shadow-md">
+        <div class="flex flex-grow">
+          <div class="sm:flex">
+            <div class="flex min-h-32 relative sm:w-50">
+              <div class="inset-x-0 top-0 absolute fading-out">
+                <Image
+                  class="object-cover h-32 w-full opacity-50"
+                  type="characterCard"
+                  :name="character.normalizedName"
+                  width="240"
+                  height="150"
+                />
+              </div>
+              <div class="p-6 relative">
+                <p class="font-bold text-lg text-light-important mb-2">{{ character.name }}</p>
+                <div class="space-y-2">
+                  <RangeLevelDisplay :range="build.level" />
+                  <RangeTalentDisplay title="Normal" :range="build.normal">
+                    <template #icon>
+                      <Sword class="h-[26px] -m-0.5 w-[26px]" />
+                    </template>
+                  </RangeTalentDisplay>
+                  <RangeTalentDisplay title="Elemental" :range="build.elemental">
+                    <template #icon>
+                      <Elemental class="-m-0.5" />
+                    </template>
+                  </RangeTalentDisplay>
+                  <RangeTalentDisplay title="Burst" :range="build.burst">
+                    <template #icon>
+                      <Fire class="-m-0.5" />
+                    </template>
+                  </RangeTalentDisplay>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="bg-dark-600 w-full">
-          <div class="flex flex-wrap h-full h-max p-4">
-            <ItemList :items="items" />
+          <div class="bg-dark-600 w-full">
+            <div class="flex flex-wrap h-full h-max p-4">
+              <ItemList :items="items" />
+            </div>
           </div>
         </div>
+        <div class="flex bg-dark-600/70 border-t-2 border-dark-400 py-3 px-6 justify-end">
+          <Button @click="deleteBuild" look="ghost" element="neutral" class="mr-2 !h-9 !text-light-ternary">
+            Delete
+          </Button>
+          <Button look="outline" class="cursor-not-allowed mr-2 !h-9">Edit</Button>
+          <Button class="cursor-not-allowed !h-9">Planner</Button>
+        </div>
       </div>
-      <div class="flex bg-dark-600/70 border-t-2 border-dark-400 py-3 px-6 justify-end">
-        <Button @click="deleteBuild" look="ghost" element="neutral" class="mr-2 !h-9 !text-light-ternary">
-          Delete
-        </Button>
-        <Button look="outline" class="cursor-not-allowed mr-2 !h-9">Edit</Button>
-        <Button class="cursor-not-allowed !h-9">Planner</Button>
-      </div>
-    </div>
-  </ElementProvider>
+    </ElementProvider>
+  </template>
 </template>
 
 <style scoped>
