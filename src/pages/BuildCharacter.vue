@@ -171,9 +171,8 @@ const total = computed(() =>
             <ItemPreviewSection :items="burstItems" title="Ascension" :icon="Fire" />
           </div>
           <div v-else class="rounded-lg flex bg-dark-400 shadow-md mt-2 text-center w-max p-4 items-center">
-            <DownChevron class="mr-4 transform rotate-90" />
             <div class="text-center">
-              <p>Try selecting some levels</p>
+              <p>No materials</p>
             </div>
           </div>
         </section>
