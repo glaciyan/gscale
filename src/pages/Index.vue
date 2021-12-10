@@ -8,17 +8,7 @@ import Container from "~/components/Container.vue";
 <template>
   <Container>
     <div w:grid="cols-2 sm:cols-3 lg:cols-4 xl:cols-5" w:gap="5 <sm:2" class="grid">
-      <CharacterCard
-        v-for="character in charactersViewModel"
-        :key="character.name"
-        :name="character.name"
-        :element="character.element.name"
-        :elementId="character.element.normalizedName"
-        :weaponType="character.weaponType.name"
-        :rarity="character.rarity"
-        :cardUrl="getCharacterImage(character.normalizedName, 'card').webp"
-        :buildUrl="`/build/${character.normalizedName}`"
-      />
+      <CharacterCard v-for="character in charactersViewModel" :key="character.normalizedName" :character="character" />
     </div>
   </Container>
 </template>
