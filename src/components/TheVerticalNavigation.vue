@@ -8,6 +8,7 @@ import Center from "./Center.vue";
   <Center class="space-x-2">
     <RouterLink
       v-for="nav in navigation"
+      :key="nav.path"
       :to="nav.path"
       class="
         border
