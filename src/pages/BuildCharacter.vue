@@ -15,14 +15,11 @@ import { useLevelSelectorTemplate } from "~/composites/useLevelSelectorTemplate"
 import { useLoadingFunction } from "~/composites/useLoadingFunction";
 import { useTalentLevelRange } from "~/composites/useTalentLevelRange";
 import { calculateAscension, calculateLeveling, calculateTalent } from "~/lib/calculator";
-import { ICharacter } from "~/lib/data/contracts/ICharacter";
 import repo from "~/lib/data/repository/GenshinDataRepository";
 import mergeAmountByName from "~/lib/item/mergeAmountByName";
 import sortItems from "~/lib/item/sortItems";
 import { db } from "~/lib/offlineDatabase/db";
 import title from "~/title";
-import DownChevron from "../components/icons/DownChevron.vue";
-import Center from "../components/Center.vue";
 import Growth from "../components/icons/GrowthIcon.vue";
 import Sword from "../components/icons/SwordIcon.vue";
 import Elemental from "../components/icons/ElementalIcon.vue";
@@ -120,7 +117,8 @@ const total = computed(() =>
               text-dark-50
               sm:(w-[20rem]
               border-dark-200 border-r-2)
-              lg:(flex-grow-0) "
+              lg:(flex-grow-0)
+            "
           >
             <div class="flex flex-col h-full p-6 justify-between">
               <div>

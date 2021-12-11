@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import RarityStars from "../RarityStars.vue";
-import { getCharacterImage } from "~/lib/data/util/getCharacterImage";
 import Image from "../GImage.vue";
 
 const props = defineProps<{ normalizedName: string; rarity?: 4 | 5 }>();

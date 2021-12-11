@@ -1,9 +1,8 @@
 <script setup lang="ts">
-import Button from "./Button.vue";
 import { UseFocusTrap } from "@vueuse/integrations/useFocusTrap/component";
 
-const props = defineProps<{ open: boolean; backdropClass?: string; shellClass?: string; transition?: string }>();
-const emit = defineEmits(["close"]);
+defineProps<{ open: boolean; backdropClass?: string; shellClass?: string; transition?: string }>();
+defineEmits(["close"]);
 </script>
 
 <template>
