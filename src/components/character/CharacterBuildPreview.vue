@@ -9,10 +9,10 @@ import ItemList from "../ItemList.vue";
 import Button from "../Button.vue";
 import RangeLevelDisplay from "../levelRange/display/RangeLevelDisplay.vue";
 import RangeTalentDisplay from "../levelRange/display/RangeTalentDisplay.vue";
-import Sword from "../icons/Sword.vue";
-import Elemental from "../icons/Elemental.vue";
-import Fire from "../icons/Fire.vue";
-import Image from "../Image.vue";
+import Sword from "../icons/SwordIcon.vue";
+import Elemental from "../icons/ElementalIcon.vue";
+import Fire from "../icons/FireIcon.vue";
+import Image from "../GImage.vue";
 
 const props = defineProps<{ build: Build }>();
 const emit = defineEmits(["deleted"]);

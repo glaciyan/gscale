@@ -5,6 +5,7 @@ import Button from "./Button.vue";
 withDefaults(
   defineProps<{ isOpen: boolean; header: string; content: string; question?: string; closeText: string }>(),
   {
+    question: undefined,
     closeText: "Close",
   }
 );

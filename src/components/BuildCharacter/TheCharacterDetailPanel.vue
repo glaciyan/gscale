@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import ElementIcon from "~/components/icons/Element.vue";
-import SwordIcon from "~/components/icons/Sword.vue";
+import ElementIcon from "~/components/icons/ElementIcon.vue";
+import SwordIcon from "~/components/icons/SwordIcon.vue";
 import { IBaseCharacter } from "~/lib/data/contracts/IBaseCharacter";
 import { getCharacterImage } from "~/lib/data/util/getCharacterImage";
 import CharacterPortrait from "../character/CharacterPortrait.vue";
 import IconWithText from "../IconWithText.vue";
 import TheClampedText from "../TheClampedText.vue";
-import Image from "../Image.vue";
+import Image from "../GImage.vue";
 
 const props = defineProps<{ character: IBaseCharacter }>();
 const elementTextColor = `text-genshin-element-${props.character.element.normalizedName}`;

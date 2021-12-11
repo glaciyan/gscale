@@ -2,7 +2,7 @@
 import CharacterCard from "~/components/character/CharacterCard.vue";
 import { getCharacterImage } from "~/lib/data/util/getCharacterImage";
 import { charactersViewModel } from "~/lib/viewmodel/CharactersViewModel";
-import Container from "~/components/Container.vue";
+import Container from "~/components/PageContainer";
 </script>
 
 <template>

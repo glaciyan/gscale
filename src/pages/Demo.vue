@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Container from "../components/Container.vue";
+import Container from "../components/PageContainer";
 import Button from "../components/Button.vue";
 import ButtonDemo from "~/demo/ButtonDemo.vue";
 import ModalDemo from "~/demo/ModalDemo.vue";

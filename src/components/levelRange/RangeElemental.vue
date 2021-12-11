@@ -2,7 +2,7 @@
 import SelectorGroup from "../levelSelector/SelectorGroup.vue";
 import SelectorTalentLevel from "../levelSelector/SelectorTalentLevel.vue";
 import SelectorIconSeperator from "../levelSelector/SelectorIconSeperator.vue";
-import Elemental from "../icons/Elemental.vue";
+import Elemental from "../icons/ElementalIcon.vue";
 
 defineProps<{ start: number; goal: number; element?: string }>();
 

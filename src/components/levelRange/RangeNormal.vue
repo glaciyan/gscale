@@ -2,7 +2,7 @@
 import SelectorGroup from "../levelSelector/SelectorGroup.vue";
 import SelectorTalentLevel from "../levelSelector/SelectorTalentLevel.vue";
 import SelectorIconSeperator from "../levelSelector/SelectorIconSeperator.vue";
-import Sword from "../icons/Sword.vue";
+import Sword from "../icons/SwordIcon.vue";
 
 // TODO model with start goal range
 defineProps<{ start: number; goal: number; element?: string }>();

@@ -2,7 +2,7 @@
 import { RouterLink } from "vue-router";
 import TheCharacterDetailPanel from "~/components/BuildCharacter/TheCharacterDetailPanel.vue";
 import Button from "~/components/Button.vue";
-import Container from "~/components/Container.vue";
+import Container from "~/components/PageContainer";
 import ElementProvider from "~/components/ElementProvider.vue";
 import RangeBurst from "~/components/levelRange/RangeBurst.vue";
 import RangeElemental from "~/components/levelRange/RangeElemental.vue";
@@ -23,10 +23,10 @@ import { db } from "~/lib/offlineDatabase/db";
 import title from "~/title";
 import DownChevron from "../components/icons/DownChevron.vue";
 import Center from "../components/Center.vue";
-import Growth from "../components/icons/Growth.vue";
-import Sword from "../components/icons/Sword.vue";
-import Elemental from "../components/icons/Elemental.vue";
-import Fire from "../components/icons/Fire.vue";
+import Growth from "../components/icons/GrowthIcon.vue";
+import Sword from "../components/icons/SwordIcon.vue";
+import Elemental from "../components/icons/ElementalIcon.vue";
+import Fire from "../components/icons/FireIcon.vue";
 import ItemPreviewSection from "~/components/ItemPreviewSection.vue";
 
 //#region Get character and set title

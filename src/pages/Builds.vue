@@ -2,7 +2,7 @@
 import { db } from "~/lib/offlineDatabase/db";
 import CharacterBuildPreview from "~/components/character/CharacterBuildPreview.vue";
 import { Build } from "~/lib/offlineDatabase/db";
-import Container from "../components/Container.vue";
+import Container from "../components/PageContainer";
 
 const builds = ref<Build[]>();
 

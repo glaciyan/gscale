@@ -2,7 +2,7 @@
 import { Listbox, ListboxButton, ListboxOption, ListboxOptions } from "@headlessui/vue";
 import incrId from "~/lib/incrId";
 import Center from "./Center.vue";
-import DownChevron from "./icons/DownChevron.vue";
+import DownChevron from "./icons/DownChevronIcon.vue";
 
 defineProps<{ modelValue: any; listItems: any[] }>();
 

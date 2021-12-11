@@ -2,8 +2,9 @@
 import { ItemWithAmount } from "~/lib/data/entities/ItemWithAmount";
 import ItemListHeader from "./ItemListHeader.vue";
 import ItemList from "./ItemList.vue";
+import { Component } from "vue";
 
-defineProps<{ items: ItemWithAmount[]; title: string; icon: any; noResize?: boolean }>();
+defineProps<{ items: ItemWithAmount[]; title: string; icon: Component; noResize?: boolean }>();
 </script>
 
 <template>

@@ -3,7 +3,7 @@ import { AscensionLevel } from "~/lib/interfaces/AscensionLevel";
 import StartGoalRange from "~/lib/interfaces/StartGoalRange";
 import AscensionLevelDisplay from "../../AscensionLevelDisplay.vue";
 import SelectorIconSeperator from "../../levelSelector/SelectorIconSeperator.vue";
-import GrowthIcon from "../../icons/Growth.vue";
+import GrowthIcon from "../../icons/GrowthIcon.vue";
 
 defineProps<{ range: StartGoalRange<AscensionLevel> }>();
 

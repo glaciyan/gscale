@@ -4,7 +4,7 @@ import { RouterLink } from "vue-router";
 import { ICharacterViewModel } from "~/lib/interfaces/ICharacterViewModel";
 import { useIntersection } from "../../composites/useIntersection";
 import RarityStars from "../RarityStars.vue";
-import Image from "../Image.vue";
+import Image from "../GImage.vue";
 
 const props = defineProps<{
   character: ICharacterViewModel;
@@ -31,8 +31,8 @@ const isVisible = useIntersection(image);
           height="150"
         />
       </div>
-      <div class="bg-dark-400 leading-snug py-3 px-4 <sm:(py-2 px-3) ">
-        <div class="flex flex-wrap flex-row items-center <sm:(flex-col-reverse items-start -mb-0.5) ">
+      <div class="bg-dark-400 leading-snug py-3 px-4 <sm:(py-2 px-3)">
+        <div class="flex flex-wrap flex-row items-center <sm:(flex-col-reverse items-start -mb-0.5)">
           <div class="mr-1">
             <span :class="elementTextColor">{{ character.element.name }}</span>
             {{ " " }}

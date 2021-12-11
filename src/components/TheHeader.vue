@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import Navigation from "~/components/TheVerticalNavigation.vue";
 import LogoWithLabel from "~/assets/logo-label.svg?component";
-import Container from "./Container.vue";
+import Container from "./PageContainer";
 import { RouterLink } from "vue-router";
 </script>
 

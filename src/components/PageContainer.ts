@@ -1,4 +1,3 @@
-<script lang="ts">
 export default defineComponent({
   props: {
     as: {
@@ -13,9 +12,8 @@ export default defineComponent({
     },
   },
   render() {
-    let className = `<sm:mx-2 <xl:mx-5 mx-auto max-w-screen-${this.$props.size}`;
+    const className = `<sm:mx-2 <xl:mx-5 mx-auto max-w-screen-${this.$props.size}`;
 
     return h(this.$props.as, { class: className }, this.$slots);
   },
 });
-</script>

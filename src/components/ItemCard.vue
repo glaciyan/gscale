@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ItemWithAmount } from "~/lib/data/entities/ItemWithAmount";
 import millify from "~/lib/millify";
-import Image from "./Image.vue";
+import Image from "./GImage.vue";
 
 const props = defineProps<{ itemWithAmount: ItemWithAmount }>();
 const _amountLabel = computed(() => millify(props.itemWithAmount.amount));

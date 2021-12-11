@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import incrId from "~/lib/incrId";
 import Center from "./Center.vue";
-import StarIcon from "./icons/Star.vue";
+import StarIcon from "./icons/StarIcon.vue";
 
 defineProps<{ modelValue: boolean; disabled: boolean }>();
 defineEmits(["update:modelValue"]);
