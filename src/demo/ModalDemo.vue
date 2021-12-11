@@ -5,7 +5,15 @@ import Modal from "~/components/Modal.vue";
 
 const popOverOpen = ref(false);
 
-const modalOpen = ref(false);
+const dialog = useConfirmDialog();
+
+dialog.onConfirm(() => {
+  console.log("confirmed");
+});
+
+dialog.onCancel(() => {
+  console.log("cancelled");
+});
 </script>
 
 <template>
@@ -25,17 +33,17 @@ const modalOpen = ref(false);
         </PopOver>
       </div>
       <div>
-        <Button @click="modalOpen = true" element="electro">Open Modal</Button>
+        <Button @click="dialog.reveal" element="electro">Open Modal</Button>
         <Modal
-          :isOpen="modalOpen"
-          @close="modalOpen = false"
+          :isOpen="dialog.isRevealed.value"
+          @close="dialog.cancel"
           header="This is a modal"
           content="Pretty cool right?"
           question="Do it?"
           closeText="Cancel"
         >
           <template #buttons>
-            <Button element="danger" class="!text-light-important">OBLITERATE</Button>
+            <Button element="danger" class="!text-light-important" @click="dialog.confirm">OBLITERATE</Button>
           </template>
         </Modal>
       </div>
