@@ -7,3 +7,13 @@
 .fade-leave-to {
   @apply opacity-0;
 }
+
+.fade-slow-enter-active,
+.fade-slow-leave-active {
+  @apply transition-opacity;
+}
+
+.fade-slow-enter-from,
+.fade-slow-leave-to {
+  @apply opacity-0;
+}

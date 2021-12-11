@@ -2,13 +2,13 @@
 import Button from "./Button.vue";
 import { UseFocusTrap } from "@vueuse/integrations/useFocusTrap/component";
 
-const props = defineProps<{ open: boolean; backdropClass?: string; shellClass?: string }>();
+const props = defineProps<{ open: boolean; backdropClass?: string; shellClass?: string; transition?: string }>();
 const emit = defineEmits(["close"]);
 </script>
 
 <template>
   <teleport to="#app">
-    <transition>
+    <transition :name="transition">
       <UseFocusTrap v-if="open" @keydown.esc="$emit('close')">
         <div @click.self="$emit('close')" :class="backdropClass">
           <div @keydown.esc.stop="$emit('close')" :class="$attrs.class">
