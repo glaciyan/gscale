@@ -3,8 +3,9 @@ import plugin from "windicss/plugin";
 import aspectRatio from "windicss/plugin/aspect-ratio";
 import lineClamp from "windicss/plugin/line-clamp";
 import { range } from "./src/lib/range";
+import colors from "windicss/colors";
 
-const em = ["anemo", "pyro", "electro", "geo", "cryo", "hydro", "neutral"];
+const em = ["anemo", "pyro", "electro", "geo", "cryo", "hydro", "neutral", "danger"];
 const sizes = ["sm", "md", "lg", "xl", "2xl"];
 
 export default defineConfig({
@@ -65,7 +66,7 @@ export default defineConfig({
 
             // Semantic colors (without having to majorly change up the api of Button.vue)
             neutral: "#F4F4F4",
-            danger: "#F4F4F4",
+            danger: "#EF4444",
 
             // todo check contrast with white text
             "anemo-dark": "#2FD09A",
