@@ -65,6 +65,7 @@ export default defineConfig({
 
             // Semantic colors (without having to majorly change up the api of Button.vue)
             neutral: "#F4F4F4",
+            danger: "#F4F4F4",
 
             // todo check contrast with white text
             "anemo-dark": "#2FD09A",
