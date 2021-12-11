@@ -137,6 +137,7 @@ const total = computed(() =>
                   </div>
                   <Button
                     v-for="template of templates"
+                    :key="template.name"
                     look="outline"
                     element="neutral"
                     class="mr-3 text-light-normal mb-2"
