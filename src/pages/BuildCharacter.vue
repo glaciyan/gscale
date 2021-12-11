@@ -153,7 +153,7 @@ const total = computed(() =>
                   {{ " " }}
                   <RouterLink :to="submitError.helpUrl" class="text-blue-400 hover:underline">Help</RouterLink>
                 </div>
-                <Button :isLoading="submitting" @click="handleSubmit" class="w-full">Build {{ character.name }}</Button>
+                <Button :isLoading="submitting" class="w-full" @click="handleSubmit">Build {{ character.name }}</Button>
               </div>
             </div>
           </section>

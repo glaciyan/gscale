@@ -10,8 +10,8 @@ const emit = defineEmits(["close"]);
   <teleport to="#app">
     <transition :name="transition">
       <UseFocusTrap v-if="open" @keydown.esc="$emit('close')">
-        <div @click.self="$emit('close')" :class="backdropClass">
-          <div @keydown.esc.stop="$emit('close')" :class="$attrs.class">
+        <div :class="backdropClass" @click.self="$emit('close')">
+          <div :class="$attrs.class" @keydown.esc.stop="$emit('close')">
             <slot />
           </div>
         </div>

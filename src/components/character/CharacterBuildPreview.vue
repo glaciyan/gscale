@@ -90,7 +90,7 @@ const deleteBuild = async () => {
           </div>
         </div>
         <div class="flex bg-dark-600/70 border-t-2 border-dark-400 py-3 px-6 justify-end">
-          <Button @click="deleteBuild" look="ghost" element="neutral" class="mr-2 !h-9 !text-light-ternary">
+          <Button look="ghost" element="neutral" class="mr-2 !h-9 !text-light-ternary" @click="deleteBuild">
             Delete
           </Button>
           <Button look="outline" class="cursor-not-allowed mr-2 !h-9">Edit</Button>

@@ -9,8 +9,8 @@ defineEmits(["update:modelValue"]);
 <template>
   <SelectorCustom
     :modelValue="modelValue"
-    @update:modelValue="$emit('update:modelValue', $event)"
     :listItems="range(10)"
+    @update:modelValue="$emit('update:modelValue', $event)"
   >
     <template #button="{ value }">
       {{ value }}

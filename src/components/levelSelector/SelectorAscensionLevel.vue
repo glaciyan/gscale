@@ -22,9 +22,9 @@ const cannotAscend = computed(() => {
 <template>
   <CustomSelector
     :modelValue="modelValue"
-    @update:modelValue="$emit('update:modelValue', $event)"
     :listItems="Levels"
     :class="$attrs.class"
+    @update:modelValue="$emit('update:modelValue', $event)"
   >
     <template #button="slotProps">
       {{ (slotProps.value as any).level }}

@@ -12,7 +12,7 @@ defineEmits(["update:modelValue"]);
 </script>
 
 <template>
-  <Listbox :modelValue="modelValue" @update:modelValue="$emit('update:modelValue', $event)" v-slot="{ open }">
+  <Listbox v-slot="{ open }" :modelValue="modelValue" @update:modelValue="$emit('update:modelValue', $event)">
     <div class="relative">
       <ListboxButton
         :class="$attrs.class"
@@ -59,7 +59,7 @@ defineEmits(["update:modelValue"]);
               custom-scrollbar
             "
           >
-            <ListboxOption v-for="(option, index) in listItems" :key="id + index" :value="option" v-slot="{ active }">
+            <ListboxOption v-for="(option, index) in listItems" :key="id + index" v-slot="{ active }" :value="option">
               <div :class="['cursor-default flex py-2 pr-6 pl-6 items-center', { 'bg-dark-500': active }]">
                 <slot name="item" :option="option" />
               </div>

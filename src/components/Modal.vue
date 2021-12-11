@@ -15,9 +15,9 @@ defineEmits(["close"]);
 <template>
   <PopOver
     :open="isOpen"
-    @close="$emit('close')"
     backdropClass="fixed inset-0 bg-dark-900/80 z-[990] flex items-center justify-center"
     transition="fade-slow"
+    @close="$emit('close')"
   >
     <div class="rounded-md bg-dark-400 shadow-md mx-1 min-w-60 overflow-hidden">
       <div class="p-4">
@@ -26,7 +26,7 @@ defineEmits(["close"]);
       </div>
       <div class="flex bg-dark-600 border-t-2 border-dark-200 py-3 px-6 justify-end items-center">
         <div v-if="question" class="flex-1 mr-12 text-light-normal">{{ question }}</div>
-        <Button element="neutral" look="ghost" @click="$emit('close')" class="mr-2">
+        <Button element="neutral" look="ghost" class="mr-2" @click="$emit('close')">
           {{ closeText }}
         </Button>
         <slot name="buttons" />

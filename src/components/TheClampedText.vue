@@ -5,7 +5,7 @@ const [clamp, toggleClamp] = useBooleanToggle(true);
 </script>
 
 <template>
-  <p @click="toggleClamp" :class="{ 'line-clamp-4': clamp }">
+  <p :class="{ 'line-clamp-4': clamp }" @click="toggleClamp">
     <slot />
   </p>
 </template>

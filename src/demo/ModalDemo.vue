@@ -21,26 +21,26 @@ dialog.onCancel(() => {
     <h1>Pop Over</h1>
     <div class="flex space-x-2">
       <div>
-        <Button @click="popOverOpen = true" element="cryo">Open Pop Over</Button>
+        <Button element="cryo" @click="popOverOpen = true">Open Pop Over</Button>
         <PopOver
           :open="popOverOpen"
-          @close="popOverOpen = false"
           backdropClass="fixed inset-0 bg-dark-800/70 z-[990] flex items-center justify-center"
           class=""
+          @close="popOverOpen = false"
         >
           <p>pop!</p>
           <Button element="cryo" @click="popOverOpen = false">Close</Button>
         </PopOver>
       </div>
       <div>
-        <Button @click="dialog.reveal" element="electro">Open Modal</Button>
+        <Button element="electro" @click="dialog.reveal">Open Modal</Button>
         <Modal
           :isOpen="dialog.isRevealed.value"
-          @close="dialog.cancel"
           header="This is a modal"
           content="Pretty cool right?"
           question="Do it?"
           closeText="Cancel"
+          @close="dialog.cancel"
         >
           <template #buttons>
             <Button element="danger" class="!text-light-important" @click="dialog.confirm">OBLITERATE</Button>
