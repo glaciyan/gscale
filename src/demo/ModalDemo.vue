@@ -20,7 +20,7 @@ const modalOpen = ref(false);
           backdropClass="fixed inset-0 bg-dark-800/70 z-[990] flex items-center justify-center"
           class=""
         >
-          <p>modal</p>
+          <p>pop!</p>
           <Button element="cryo" @click="popOverOpen = false">Close</Button>
         </PopOver>
       </div>
