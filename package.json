@@ -15,7 +15,7 @@
   "dependencies": {
     "@headlessui/vue": "^1.4.1",
     "@vueuse/core": "^6.7.4",
-    "@vueuse/integrations": "^6.7.4",
+    "@vueuse/integrations": "^7.2.2",
     "dexie": "^3.2.0",
     "vue": "^3.2.16",
     "vue-router": "4"
