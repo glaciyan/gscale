@@ -4,6 +4,7 @@ dist
 dist-ssr
 *.local
 .vercel
+src/version.ts
 
 # Logs
 logs
