@@ -32,6 +32,7 @@ const modalOpen = ref(false);
           header="This is a modal"
           content="Pretty cool right?"
           question="Do it?"
+          closeText="Cancel"
         >
           <template #buttons>
             <Button element="danger" class="!text-light-important">OBLITERATE</Button>
