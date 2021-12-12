@@ -39,8 +39,6 @@ const items = computed(() =>
 //#region Deleting
 const deleted = ref(false);
 
-const deleteDialog = useConfirmDialog();
-
 const { loading: isDeleting, execute: deleteBuild } = useLoadingFunction(async () => {
   if (props.build.id) {
     try {
@@ -54,6 +52,7 @@ const { loading: isDeleting, execute: deleteBuild } = useLoadingFunction(async (
   }
 });
 
+const deleteDialog = useConfirmDialog();
 deleteDialog.onConfirm(deleteBuild);
 
 const hidden = computed(() => deleted.value || isDeleting.value);
