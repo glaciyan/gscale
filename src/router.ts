@@ -24,13 +24,6 @@ const routes = [
     },
   },
   {
-    path: "/demo",
-    component: () => import("./pages/Demo.vue"),
-    meta: {
-      title: title("Demo"),
-    },
-  },
-  {
     path: "/:pathMatch(.*)*",
     name: "NotFound",
     component: () => import("./pages/NotFound.vue"),
@@ -62,9 +55,5 @@ export const navigation: { path: string; name: string }[] = [
   {
     path: "/builds",
     name: "Your Builds",
-  },
-  {
-    path: "/demo",
-    name: "Demos",
   },
 ];
