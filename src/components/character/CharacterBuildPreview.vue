@@ -46,8 +46,9 @@ const { loading: deleting, execute: deleteBuild } = useLoadingFunction(async () 
   }
 });
 
-const deleteDialog = useConfirmDialog();
 deleteDialog.onConfirm(deleteBuild);
+
+const hidden = computed(() => deleted.value || isDeleting.value);
 //#endregion
 </script>
 
