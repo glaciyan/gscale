@@ -12,6 +12,12 @@ withDefaults(
 defineEmits(["close"]);
 </script>
 
+<script lang="ts">
+export default defineComponent({
+  inheritAttrs: false,
+});
+</script>
+
 <template>
   <PopOver
     :open="isOpen"
@@ -19,7 +25,7 @@ defineEmits(["close"]);
     transition="fade-slow"
     @close="$emit('close')"
   >
-    <div class="rounded-md bg-dark-400 shadow-md mx-1 min-w-60 overflow-hidden">
+    <div :class="['rounded-md bg-dark-400 shadow-md mx-1 min-w-60 overflow-hidden', $attrs.class]">
       <div class="p-6">
         <p class="font-bold text-light-important mb-1">{{ header }}</p>
         <p class="text-light-normal">{{ content }}</p>
