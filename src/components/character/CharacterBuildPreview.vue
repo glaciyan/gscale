@@ -37,12 +37,20 @@ const items = computed(() =>
 //#endregion
 
 //#region Deleting
-const hidden = ref(false);
-const { loading: deleting, execute: deleteBuild } = useLoadingFunction(async () => {
+const deleted = ref(false);
+
+const deleteDialog = useConfirmDialog();
+
+const { loading: isDeleting, execute: deleteBuild } = useLoadingFunction(async () => {
   if (props.build.id) {
-    await db.builds.delete(props.build.id);
-    emit("deleted", props.build.id);
-    hidden.value = true;
+    try {
+      await db.builds.delete(props.build.id);
+      emit("deleted", props.build.id);
+      deleted.value = true;
+    } catch (error) {
+      // TODO prompt user to refresh page and try again
+      console.error(error);
+    }
   }
 });
 
@@ -116,7 +124,7 @@ const hidden = computed(() => deleted.value || isDeleting.value);
     closeText="Cancel"
     @close="deleteDialog.cancel"
   >
-    <Button :isLoading="deleting" element="danger" class="!text-white" @click="deleteDialog.confirm">Delete</Button>
+    <Button element="danger" class="!text-white" @click="deleteDialog.confirm">Delete</Button>
   </Modal>
 </template>
 
