@@ -13,6 +13,8 @@ import Sword from "../icons/SwordIcon.vue";
 import Elemental from "../icons/ElementalIcon.vue";
 import Fire from "../icons/FireIcon.vue";
 import Image from "../GImage.vue";
+import Modal from "../Modal.vue";
+import { useLoadingFunction } from "~/composites/useLoadingFunction";
 
 const props = defineProps<{ build: Build }>();
 const emit = defineEmits(["deleted"]);
@@ -34,14 +36,19 @@ const items = computed(() =>
 );
 //#endregion
 
+//#region Deleting
 const hidden = ref(false);
-const deleteBuild = async () => {
+const { loading: deleting, execute: deleteBuild } = useLoadingFunction(async () => {
   if (props.build.id) {
     await db.builds.delete(props.build.id);
     emit("deleted", props.build.id);
     hidden.value = true;
   }
-};
+});
+
+const deleteDialog = useConfirmDialog();
+deleteDialog.onConfirm(deleteBuild);
+//#endregion
 </script>
 
 <template>
@@ -90,7 +97,7 @@ const deleteBuild = async () => {
           </div>
         </div>
         <div class="flex bg-dark-600/70 border-t-2 border-dark-400 py-3 px-6 justify-end">
-          <Button look="ghost" element="neutral" class="mr-2 !h-9 !text-light-ternary" @click="deleteBuild">
+          <Button look="ghost" element="neutral" class="mr-2 !h-9 !text-light-ternary" @click="deleteDialog.reveal">
             Delete
           </Button>
           <Button look="outline" class="cursor-not-allowed mr-2 !h-9">Edit</Button>
@@ -99,6 +106,17 @@ const deleteBuild = async () => {
       </div>
     </ElementProvider>
   </template>
+  <Modal
+    class="max-w-96"
+    :isOpen="deleteDialog.isRevealed.value"
+    header="Delete build"
+    :content="`This will delete your ${character.name} build including your checklist.`"
+    question="Are you sure?"
+    closeText="Cancel"
+    @close="deleteDialog.cancel"
+  >
+    <Button :isLoading="deleting" element="danger" class="!text-white" @click="deleteDialog.confirm">Delete</Button>
+  </Modal>
 </template>
 
 <style scoped>
