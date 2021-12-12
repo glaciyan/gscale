@@ -20,7 +20,7 @@ const isVisible = useIntersection(image);
 
 <template>
   <div :class="['shadow-md transition-shadow hover:ring focus-within:ring rounded-md overflow-hidden', hoverRingColor]">
-    <RouterLink :to="`/build/${character.normalizedName}`" draggable="false">
+    <RouterLink :to="`/build/${character.normalizedName}`" draggable="false" :title="character.name">
       <div ref="image" class="flex bg-dark-600 relative items-center justify-center aspect-w-8 aspect-h-5">
         <Image v-if="isVisible" type="characterCard" :name="character.normalizedName" width="240" height="150" />
       </div>
