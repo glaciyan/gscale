@@ -20,7 +20,7 @@ defineEmits(["close"]);
     @close="$emit('close')"
   >
     <div class="rounded-md bg-dark-400 shadow-md mx-1 min-w-60 overflow-hidden">
-      <div class="p-4">
+      <div class="p-6">
         <p class="font-bold text-light-important mb-1">{{ header }}</p>
         <p class="text-light-normal">{{ content }}</p>
       </div>
@@ -29,7 +29,7 @@ defineEmits(["close"]);
         <Button element="neutral" look="ghost" class="mr-2" @click="$emit('close')">
           {{ closeText }}
         </Button>
-        <slot name="buttons" />
+        <slot />
       </div>
     </div>
   </PopOver>
