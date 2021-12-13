@@ -18,6 +18,7 @@ import ItemChecklist from "../ItemChecklist.vue";
 import { ItemWithAmount } from "~/lib/data/entities/ItemWithAmount";
 import ItemCheckState from "~/lib/item/ItemCheckState";
 import useCheckList from "~/composites/useCheckList";
+import GSpinner from "../GSpinner.vue";
 
 const props = defineProps<{ build: Build }>();
 const emit = defineEmits(["deleted"]);
@@ -120,9 +121,12 @@ const handleItemClick = (item: ItemWithAmount, state: ItemCheckState) => {
               </div>
             </div>
           </div>
-          <div class="bg-dark-600 w-full">
+          <div class="bg-dark-600 w-full relative">
             <div class="flex flex-wrap h-full h-max p-4">
-              <ItemChecklist :items="items" :checkedOff="checkList.items.value" @itemClick="handleItemClick" />
+              <div v-if="checkList.loading.value" class="flex inset-0 absolute items-center justify-center">
+                <GSpinner />
+              </div>
+              <ItemChecklist v-else :items="items" :checkedOff="checkList.items.value" @itemClick="handleItemClick" />
             </div>
           </div>
         </div>
