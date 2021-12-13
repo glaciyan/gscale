@@ -25,6 +25,7 @@ import Sword from "../components/icons/SwordIcon.vue";
 import Elemental from "../components/icons/ElementalIcon.vue";
 import Fire from "../components/icons/FireIcon.vue";
 import ItemPreviewSection from "~/components/ItemPreviewSection.vue";
+import getAllCharacterItems from "~/lib/item/getAllCharacterItems";
 
 //#region Get character and set title
 const route = useRoute();
@@ -102,6 +103,10 @@ const total = computed(() =>
   )
 );
 //#endregion
+
+//#region Preload images
+const items = getAllCharacterItems(character);
+//#endregion
 </script>
 
 <template>
@@ -117,8 +122,7 @@ const total = computed(() =>
               text-dark-50
               sm:(w-[20rem]
               border-dark-200 border-r-2)
-              lg:(flex-grow-0)
-            "
+              lg:(flex-grow-0) "
           >
             <div class="flex flex-col h-full p-6 justify-between">
               <div>
