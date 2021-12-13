@@ -33,16 +33,19 @@ const routes = [
   },
 ];
 
-const router = createRouter({ history: createWebHistory(), routes });
+const router = createRouter({
+  history: createWebHistory(),
+  routes,
+  scrollBehavior(_to, _from, savedPosition) {
+    return savedPosition ? savedPosition : { top: 0, left: 0 };
+  },
+});
 
 router.afterEach((to) => {
   // Take the optional title value from the route and set it as the page title
   if (to.meta.title) {
     document.title = to.meta.title as string;
   }
-
-  // after each navigation scroll to the top of the page
-  window.scrollTo(0, 0);
 });
 
 export default router;
