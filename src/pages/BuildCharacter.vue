@@ -61,7 +61,7 @@ const submitError = ref({ message: "", helpUrl: "" });
 
 const { loading: submitting, execute: handleSubmit } = useLoadingFunction(async () => {
   if (total.value.length === 0) {
-    submitError.value = { message: "This build has no materials.", helpUrl: "help/howtouse" };
+    submitError.value = { message: "This build has no materials.", helpUrl: "/help/howtouse" };
     return;
   }
 
