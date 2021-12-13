@@ -26,6 +26,7 @@ import Elemental from "../components/icons/ElementalIcon.vue";
 import Fire from "../components/icons/FireIcon.vue";
 import ItemPreviewSection from "~/components/ItemPreviewSection.vue";
 import getAllCharacterItems from "~/lib/item/getAllCharacterItems";
+import { getItemImage } from "~/lib/data/util/getItemImage";
 
 //#region Get character and set title
 const route = useRoute();
@@ -105,7 +106,10 @@ const total = computed(() =>
 //#endregion
 
 //#region Preload images
-const items = getAllCharacterItems(character);
+const preloads = getAllCharacterItems(character).map((item) => {
+  // Only preloading webp because >95% of users have a compatible browser
+  return (new Image().src = getItemImage(item.normalizedName).webp);
+});
 //#endregion
 </script>
 
