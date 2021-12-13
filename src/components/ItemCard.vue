@@ -4,7 +4,8 @@ import millify from "~/lib/millify";
 import Image from "./GImage.vue";
 
 const props = defineProps<{ itemWithAmount: ItemWithAmount }>();
-const _amountLabel = computed(() => millify(props.itemWithAmount.amount));
+
+const amount = computed(() => millify(props.itemWithAmount.amount));
 </script>
 
 <template>
@@ -20,6 +21,6 @@ const _amountLabel = computed(() => millify(props.itemWithAmount.amount));
         :title="itemWithAmount.item.name"
       />
     </div>
-    <div class="bg-dark-300 text-center w-full px-1">{{ _amountLabel }}</div>
+    <div class="bg-dark-300 text-center w-full px-1">{{ amount }}</div>
   </div>
 </template>
