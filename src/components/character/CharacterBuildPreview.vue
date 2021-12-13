@@ -16,6 +16,7 @@ import Modal from "../Modal.vue";
 import { useLoadingFunction } from "~/composites/useLoadingFunction";
 import ItemChecklist from "../ItemChecklist.vue";
 import { ItemWithAmount } from "~/lib/data/entities/ItemWithAmount";
+import ItemCheckState from "~/lib/item/ItemCheckState";
 
 const props = defineProps<{ build: Build }>();
 const emit = defineEmits(["deleted"]);
@@ -62,8 +63,18 @@ const hidden = computed(() => deleted.value || isDeleting.value);
 //#region Checklist
 const checkedOffItems = ref<ItemWithAmount[]>([]);
 
-const checkOffItem = (item: ItemWithAmount) => {
-  checkedOffItems.value = [...toRaw(checkedOffItems.value), item];
+const handleItemClick = (item: ItemWithAmount, state: ItemCheckState) => {
+  const checkListIndex = checkedOffItems.value.findIndex((i) => i.item.normalizedName === item.item.normalizedName);
+
+  if (checkListIndex === -1) {
+    checkedOffItems.value.push(Object.assign({}, item));
+  }
+
+  if (state === ItemCheckState.Done) {
+    checkedOffItems.value[checkListIndex].amount = 0;
+  } else {
+    checkedOffItems.value[checkListIndex].amount = item.amount;
+  }
 };
 //#endregion
 </script>
@@ -109,7 +120,7 @@ const checkOffItem = (item: ItemWithAmount) => {
           </div>
           <div class="bg-dark-600 w-full">
             <div class="flex flex-wrap h-full h-max p-4">
-              <ItemChecklist :items="items" @itemClick="checkOffItem" />
+              <ItemChecklist :items="items" :checkedOff="checkedOffItems" @itemClick="handleItemClick" />
             </div>
           </div>
         </div>
