@@ -5,7 +5,6 @@ import ElementProvider from "../ElementProvider.vue";
 import sortItems from "~/lib/item/sortItems";
 import { calculateLeveling, calculateAscension, calculateTalent } from "~/lib/calculator";
 import mergeAmountByName from "~/lib/item/mergeAmountByName";
-import ItemList from "../ItemList.vue";
 import Button from "../Button.vue";
 import RangeLevelDisplay from "../levelRange/display/RangeLevelDisplay.vue";
 import RangeTalentDisplay from "../levelRange/display/RangeTalentDisplay.vue";
@@ -15,6 +14,8 @@ import Fire from "../icons/FireIcon.vue";
 import Image from "../GImage.vue";
 import Modal from "../Modal.vue";
 import { useLoadingFunction } from "~/composites/useLoadingFunction";
+import ItemChecklist from "../ItemChecklist.vue";
+import { ItemWithAmount } from "~/lib/data/entities/ItemWithAmount";
 
 const props = defineProps<{ build: Build }>();
 const emit = defineEmits(["deleted"]);
@@ -56,6 +57,14 @@ const deleteDialog = useConfirmDialog();
 deleteDialog.onConfirm(deleteBuild);
 
 const hidden = computed(() => deleted.value || isDeleting.value);
+//#endregion
+
+//#region Checklist
+const checkedOffItems = ref<ItemWithAmount[]>([]);
+
+const checkOffItem = (item: ItemWithAmount) => {
+  checkedOffItems.value = [...toRaw(checkedOffItems.value), item];
+};
 //#endregion
 </script>
 
@@ -100,7 +109,7 @@ const hidden = computed(() => deleted.value || isDeleting.value);
           </div>
           <div class="bg-dark-600 w-full">
             <div class="flex flex-wrap h-full h-max p-4">
-              <ItemList :items="items" />
+              <ItemChecklist :items="items" @itemClick="checkOffItem" />
             </div>
           </div>
         </div>
