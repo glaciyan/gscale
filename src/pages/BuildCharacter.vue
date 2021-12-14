@@ -27,7 +27,6 @@ import Fire from "../components/icons/FireIcon.vue";
 import ItemPreviewSection from "~/components/ItemPreviewSection.vue";
 import getAllCharacterItems from "~/lib/item/getAllCharacterItems";
 import { getItemImage } from "~/lib/data/util/getItemImage";
-import { Characters } from "~/lib/data/Characters";
 
 const router = useRouter();
 const route = useRoute();
