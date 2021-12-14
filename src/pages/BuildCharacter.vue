@@ -106,7 +106,7 @@ const total = computed(() =>
 //#endregion
 
 //#region Preload images
-const preloads = getAllCharacterItems(character).map((item) => {
+getAllCharacterItems(character).map((item) => {
   // Only preloading webp because >95% of users have a compatible browser
   return (new Image().src = getItemImage(item.normalizedName).webp);
 });
