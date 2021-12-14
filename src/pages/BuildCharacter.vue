@@ -38,10 +38,6 @@ const character = ref(repo.needCharacter(route.params.character as string));
 useTitle(title(`Building ${character.value.name}`));
 //#endregion
 
-const switchCharacter = () => {
-  character.value = Characters.ganyu;
-};
-
 //#region Levels
 const level = useAscensionLevelRange();
 const normal = useTalentLevelRange();
@@ -156,7 +152,6 @@ getAllCharacterItems(character.value).map((item) => {
 <template>
   <ElementProvider :element="character.element">
     <Container>
-      <Button element="cryo" @click="switchCharacter">Switch to Ganyu</Button>
       <div class="w-full lg:flex lg:h-[48rem]">
         <div class="flex <sm:block">
           <TheCharacterDetailPanel :character="character" />
