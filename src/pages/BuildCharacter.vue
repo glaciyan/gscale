@@ -55,6 +55,39 @@ const { templates } = useLevelSelectorTemplate(
 );
 //#endregion
 
+//#region Edit handle (TODO temp)
+const editId = ref(0);
+
+if (route.query.edit && typeof route.query.edit === "string") {
+  const id = parseInt(route.query.edit);
+
+  // is a number (not not)
+  if (!isNaN(id)) {
+    db.builds.get(id).then((build) => {
+      if (build) {
+        editId.value = id;
+
+        ascStart.value = build.level.start;
+        ascGoal.value = build.level.goal;
+
+        normalStart.value = build.normal.start;
+        normalGoal.value = build.normal.goal;
+
+        emStart.value = build.elemental.start;
+        emGoal.value = build.elemental.goal;
+
+        burstStart.value = build.burst.start;
+        burstGoal.value = build.burst.goal;
+      } else {
+        console.error("Couldn't find any build with that id");
+      }
+    });
+  } else {
+    console.error("Invalid id format");
+  }
+}
+//#endregion
+
 //#region Submit build handler
 const submitError = ref({ message: "", helpUrl: "" });
 
@@ -65,15 +98,27 @@ const { loading: submitting, execute: handleSubmit } = useLoadingFunction(async 
   }
 
   try {
-    await db.builds.add({
-      type: "character",
-      entityId: character.normalizedName,
-      // use toRaw here because dexie can't copy a proxy
-      level: { start: toRaw(ascStart.value), goal: toRaw(ascGoal.value) },
-      normal: { start: normalStart.value, goal: normalGoal.value },
-      elemental: { start: emStart.value, goal: emGoal.value },
-      burst: { start: burstStart.value, goal: burstGoal.value },
-    });
+    // TODO temp until inline edit
+    if (editId.value) {
+      await db.builds.update(editId.value, {
+        entityId: character.normalizedName,
+        // use toRaw here because dexie can't copy a proxy
+        level: { start: toRaw(ascStart.value), goal: toRaw(ascGoal.value) },
+        normal: { start: normalStart.value, goal: normalGoal.value },
+        elemental: { start: emStart.value, goal: emGoal.value },
+        burst: { start: burstStart.value, goal: burstGoal.value },
+      });
+    } else {
+      await db.builds.add({
+        type: "character",
+        entityId: character.normalizedName,
+        // use toRaw here because dexie can't copy a proxy
+        level: { start: toRaw(ascStart.value), goal: toRaw(ascGoal.value) },
+        normal: { start: normalStart.value, goal: normalGoal.value },
+        elemental: { start: emStart.value, goal: emGoal.value },
+        burst: { start: burstStart.value, goal: burstGoal.value },
+      });
+    }
 
     router.push("/builds");
   } catch (error: any) {
