@@ -28,9 +28,10 @@ import ItemPreviewSection from "~/components/ItemPreviewSection.vue";
 import getAllCharacterItems from "~/lib/item/getAllCharacterItems";
 import { getItemImage } from "~/lib/data/util/getItemImage";
 
-//#region Get character and set title
+const router = useRouter();
 const route = useRoute();
 
+//#region Get character and set title
 const character = repo.needCharacter(route.params.character as string);
 
 useTitle(title(`Building ${character.name}`));
@@ -55,8 +56,6 @@ const { templates } = useLevelSelectorTemplate(
 //#endregion
 
 //#region Submit build handler
-const router = useRouter();
-
 const submitError = ref({ message: "", helpUrl: "" });
 
 const { loading: submitting, execute: handleSubmit } = useLoadingFunction(async () => {
