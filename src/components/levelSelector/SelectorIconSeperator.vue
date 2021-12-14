@@ -1,10 +1,9 @@
 <script setup lang="ts">
-import { ComputedRef } from "vue";
-import { IElement } from "~/lib/data/contracts/IElement";
+import { useElementContext } from "~/composites/useElementContext";
 import Center from "../Center.vue";
 const props = defineProps<{ element?: string }>();
 
-const element = inject("element") as ComputedRef<IElement>;
+const element = useElementContext();
 
 const backgroundColor = computed(() => `bg-genshin-element-${props.element ?? element.value.normalizedName}-dark`);
 </script>

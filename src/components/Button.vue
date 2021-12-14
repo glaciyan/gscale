@@ -1,10 +1,9 @@
 <script setup lang="ts">
 import Spinner from "./GSpinner.vue";
 import Center from "./Center.vue";
-import { IElement } from "~/lib/data/contracts/IElement";
-import { ComputedRef } from "vue";
+import { useElementContext } from "~/composites/useElementContext";
 
-const injectedElement = inject("element") as ComputedRef<IElement>;
+const injectedElement = useElementContext();
 
 const props = withDefaults(
   defineProps<{
