@@ -1,19 +1,17 @@
-import { Ref } from "vue-demi";
 import { AscensionLevel } from "~/lib/interfaces/AscensionLevel";
 import standardTemplates from "~/assets/standardTemplates.json";
 import StartGoalRange from "~/lib/interfaces/StartGoalRange";
 
 interface Template {
   name: string;
-  asc: Partial<StartGoalRange<AscensionLevel>>;
+  level: Partial<StartGoalRange<AscensionLevel>>;
   normal: Partial<StartGoalRange<number>>;
   em: Partial<StartGoalRange<number>>;
   burst: Partial<StartGoalRange<number>>;
 }
 
 export function useLevelSelectorTemplate(
-  ascStart: Ref<AscensionLevel>,
-  ascGoal: Ref<AscensionLevel>,
+  level: StartGoalRange<AscensionLevel>,
   normal: StartGoalRange<number>,
   elemental: StartGoalRange<number>,
   burst: StartGoalRange<number>
@@ -23,8 +21,8 @@ export function useLevelSelectorTemplate(
       return {
         name: template.name,
         applyTemplate: () => {
-          if (template.asc.start) ascStart.value = template.asc.start;
-          if (template.asc.goal) ascGoal.value = template.asc.goal;
+          if (template.level.start) level.start = template.level.start;
+          if (template.level.goal) level.goal = template.level.goal;
 
           if (template.normal.start) normal.start = template.normal.start;
           if (template.normal.goal) normal.goal = template.normal.goal;

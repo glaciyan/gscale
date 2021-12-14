@@ -1,24 +1,30 @@
 import { AscensionLevel } from "~/lib/interfaces/AscensionLevel";
+import StartGoalRange from "~/lib/interfaces/StartGoalRange";
 import { compareAscension } from "../lib/level/compareAscension";
 
-export function useAscensionLevelRange() {
-  const start = ref<AscensionLevel>({ level: 1, ascended: false });
-  const goal = ref<AscensionLevel>({ level: 1, ascended: false });
-
-  watch(start, (value) => {
-    if (compareAscension(value, goal.value).isGreater()) {
-      goal.value = value;
-    }
+export function useAscensionLevelRange(): StartGoalRange<AscensionLevel> {
+  const range = reactive<StartGoalRange<AscensionLevel>>({
+    start: { level: 1, ascended: false },
+    goal: { level: 1, ascended: false },
   });
 
-  watch(goal, (value) => {
-    if (compareAscension(value, start.value).isLess()) {
-      start.value = value;
+  watch(
+    () => range.start,
+    (start) => {
+      if (compareAscension(start, range.goal).isGreater()) {
+        range.goal = start;
+      }
     }
-  });
+  );
 
-  return {
-    start,
-    goal,
-  };
+  watch(
+    () => range.goal,
+    (goal) => {
+      if (compareAscension(goal, range.start).isLess()) {
+        range.start = goal;
+      }
+    }
+  );
+
+  return range;
 }

@@ -43,12 +43,12 @@ const switchCharacter = () => {
 };
 
 //#region Levels
-const { start: ascStart, goal: ascGoal } = useAscensionLevelRange();
+const level = useAscensionLevelRange();
 const normal = useTalentLevelRange();
 const elemental = useTalentLevelRange();
 const burst = useTalentLevelRange();
 
-const { templates } = useLevelSelectorTemplate(ascStart, ascGoal, normal, elemental, burst);
+const { templates } = useLevelSelectorTemplate(level, normal, elemental, burst);
 //#endregion
 
 //#region Edit handle (TODO temp)
@@ -63,8 +63,8 @@ if (route.query.edit && typeof route.query.edit === "string") {
       if (build) {
         editId.value = id;
 
-        ascStart.value = build.level.start;
-        ascGoal.value = build.level.goal;
+        level.start = build.level.start;
+        level.goal = build.level.goal;
 
         normal.start = build.normal.start;
         normal.goal = build.normal.goal;
@@ -99,7 +99,7 @@ const { loading: submitting, execute: handleSubmit } = useLoadingFunction(async 
       await db.builds.update(editId.value, {
         entityId: character.value.normalizedName,
         // use toRaw here because dexie can't copy a proxy
-        level: { start: toRaw(ascStart.value), goal: toRaw(ascGoal.value) },
+        level: { start: toRaw(level.start), goal: toRaw(level.goal) },
         normal: { start: normal.start, goal: normal.goal },
         elemental: { start: elemental.start, goal: elemental.goal },
         burst: { start: burst.start, goal: burst.goal },
@@ -109,7 +109,7 @@ const { loading: submitting, execute: handleSubmit } = useLoadingFunction(async 
         type: "character",
         entityId: character.value.normalizedName,
         // use toRaw here because dexie can't copy a proxy
-        level: { start: toRaw(ascStart.value), goal: toRaw(ascGoal.value) },
+        level: { start: toRaw(level.start), goal: toRaw(level.goal) },
         normal: { start: normal.start, goal: normal.goal },
         elemental: { start: elemental.start, goal: elemental.goal },
         burst: { start: burst.start, goal: burst.goal },
@@ -125,9 +125,9 @@ const { loading: submitting, execute: handleSubmit } = useLoadingFunction(async 
 //#endregion
 
 //#region Compute items
-const levelingItems = computed(() => calculateLeveling(ascStart.value, ascGoal.value));
+const levelingItems = computed(() => calculateLeveling(level.start, level.goal));
 
-const ascItems = computed(() => sortItems(calculateAscension(character.value, ascStart.value, ascGoal.value)));
+const ascItems = computed(() => sortItems(calculateAscension(character.value, level.start, level.goal)));
 const normalItems = computed(() => sortItems(calculateTalent(character.value, normal.start, normal.goal, true)));
 const emItems = computed(() => sortItems(calculateTalent(character.value, elemental.start, elemental.goal)));
 const burstItems = computed(() => sortItems(calculateTalent(character.value, burst.start, burst.goal)));
@@ -172,7 +172,7 @@ getAllCharacterItems(character.value).map((item) => {
             <div class="flex flex-col h-full p-6 justify-between">
               <div>
                 <div class="space-y-6">
-                  <RangeLevel v-model:start="ascStart" v-model:goal="ascGoal" />
+                  <RangeLevel v-model:start="level.start" v-model:goal="level.goal" />
                   <RangeNormal v-model:start="normal.start" v-model:goal="normal.goal" />
                   <RangeElemental v-model:start="elemental.start" v-model:goal="elemental.goal" />
                   <RangeBurst v-model:start="burst.start" v-model:goal="burst.goal" />
