@@ -1,24 +1,28 @@
-import type { Ref } from "vue";
 import type StartGoalRange from "~/lib/interfaces/StartGoalRange";
 
-export function useTalentLevelRange(): StartGoalRange<Ref<number>> {
-  const start = ref(1);
-  const goal = ref(1);
-
-  watch(start, (value) => {
-    if (value > goal.value) {
-      goal.value = value;
-    }
+export function useTalentLevelRange(): StartGoalRange<number> {
+  const range = reactive({
+    start: 1,
+    goal: 1,
   });
 
-  watch(goal, (value) => {
-    if (value < start.value) {
-      start.value = value;
+  watch(
+    () => range.start,
+    (start) => {
+      if (start > range.goal) {
+        range.goal = start;
+      }
     }
-  });
+  );
 
-  return {
-    start,
-    goal,
-  };
+  watch(
+    () => range.goal,
+    (goal) => {
+      if (goal < range.start) {
+        range.start = goal;
+      }
+    }
+  );
+
+  return range;
 }

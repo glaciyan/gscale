@@ -44,20 +44,11 @@ const switchCharacter = () => {
 
 //#region Levels
 const { start: ascStart, goal: ascGoal } = useAscensionLevelRange();
-const { start: normalStart, goal: normalGoal } = useTalentLevelRange();
-const { start: emStart, goal: emGoal } = useTalentLevelRange();
-const { start: burstStart, goal: burstGoal } = useTalentLevelRange();
+const normal = useTalentLevelRange();
+const elemental = useTalentLevelRange();
+const burst = useTalentLevelRange();
 
-const { templates } = useLevelSelectorTemplate(
-  ascStart,
-  ascGoal,
-  normalStart,
-  normalGoal,
-  emStart,
-  emGoal,
-  burstStart,
-  burstGoal
-);
+const { templates } = useLevelSelectorTemplate(ascStart, ascGoal, normal, elemental, burst);
 //#endregion
 
 //#region Edit handle (TODO temp)
@@ -75,14 +66,14 @@ if (route.query.edit && typeof route.query.edit === "string") {
         ascStart.value = build.level.start;
         ascGoal.value = build.level.goal;
 
-        normalStart.value = build.normal.start;
-        normalGoal.value = build.normal.goal;
+        normal.start = build.normal.start;
+        normal.goal = build.normal.goal;
 
-        emStart.value = build.elemental.start;
-        emGoal.value = build.elemental.goal;
+        elemental.start = build.elemental.start;
+        elemental.goal = build.elemental.goal;
 
-        burstStart.value = build.burst.start;
-        burstGoal.value = build.burst.goal;
+        burst.start = build.burst.start;
+        burst.goal = build.burst.goal;
       } else {
         console.error("Couldn't find any build with that id");
       }
@@ -109,9 +100,9 @@ const { loading: submitting, execute: handleSubmit } = useLoadingFunction(async 
         entityId: character.value.normalizedName,
         // use toRaw here because dexie can't copy a proxy
         level: { start: toRaw(ascStart.value), goal: toRaw(ascGoal.value) },
-        normal: { start: normalStart.value, goal: normalGoal.value },
-        elemental: { start: emStart.value, goal: emGoal.value },
-        burst: { start: burstStart.value, goal: burstGoal.value },
+        normal: { start: normal.start, goal: normal.goal },
+        elemental: { start: elemental.start, goal: elemental.goal },
+        burst: { start: burst.start, goal: burst.goal },
       });
     } else {
       await db.builds.add({
@@ -119,9 +110,9 @@ const { loading: submitting, execute: handleSubmit } = useLoadingFunction(async 
         entityId: character.value.normalizedName,
         // use toRaw here because dexie can't copy a proxy
         level: { start: toRaw(ascStart.value), goal: toRaw(ascGoal.value) },
-        normal: { start: normalStart.value, goal: normalGoal.value },
-        elemental: { start: emStart.value, goal: emGoal.value },
-        burst: { start: burstStart.value, goal: burstGoal.value },
+        normal: { start: normal.start, goal: normal.goal },
+        elemental: { start: elemental.start, goal: elemental.goal },
+        burst: { start: burst.start, goal: burst.goal },
       });
     }
 
@@ -137,11 +128,9 @@ const { loading: submitting, execute: handleSubmit } = useLoadingFunction(async 
 const levelingItems = computed(() => calculateLeveling(ascStart.value, ascGoal.value));
 
 const ascItems = computed(() => sortItems(calculateAscension(character.value, ascStart.value, ascGoal.value)));
-const normalItems = computed(() =>
-  sortItems(calculateTalent(character.value, normalStart.value, normalGoal.value, true))
-);
-const emItems = computed(() => sortItems(calculateTalent(character.value, emStart.value, emGoal.value)));
-const burstItems = computed(() => sortItems(calculateTalent(character.value, burstStart.value, burstGoal.value)));
+const normalItems = computed(() => sortItems(calculateTalent(character.value, normal.start, normal.goal, true)));
+const emItems = computed(() => sortItems(calculateTalent(character.value, elemental.start, elemental.goal)));
+const burstItems = computed(() => sortItems(calculateTalent(character.value, burst.start, burst.goal)));
 
 const total = computed(() =>
   sortItems(
@@ -184,9 +173,9 @@ getAllCharacterItems(character.value).map((item) => {
               <div>
                 <div class="space-y-6">
                   <RangeLevel v-model:start="ascStart" v-model:goal="ascGoal" />
-                  <RangeNormal v-model:start="normalStart" v-model:goal="normalGoal" />
-                  <RangeElemental v-model:start="emStart" v-model:goal="emGoal" />
-                  <RangeBurst v-model:start="burstStart" v-model:goal="burstGoal" />
+                  <RangeNormal v-model:start="normal.start" v-model:goal="normal.goal" />
+                  <RangeElemental v-model:start="elemental.start" v-model:goal="elemental.goal" />
+                  <RangeBurst v-model:start="burst.start" v-model:goal="burst.goal" />
                 </div>
                 <div class="mt-6">
                   <div class="mb-2">
