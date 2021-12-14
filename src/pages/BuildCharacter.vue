@@ -203,7 +203,9 @@ getAllCharacterItems(character).map((item) => {
                   {{ " " }}
                   <RouterLink :to="submitError.helpUrl" class="text-blue-400 hover:underline">Help</RouterLink>
                 </div>
-                <Button :isLoading="submitting" class="w-full" @click="handleSubmit">Build {{ character.name }}</Button>
+                <Button :isLoading="submitting" class="w-full" @click="handleSubmit">
+                  {{ editId ? "Update" : "Build" }} {{ character.name }}
+                </Button>
               </div>
             </div>
           </section>
