@@ -8,7 +8,7 @@ import TheClampedText from "../TheClampedText.vue";
 import Image from "../GImage.vue";
 
 const props = defineProps<{ character: IBaseCharacter }>();
-const elementTextColor = `text-genshin-element-${props.character.element.normalizedName}`;
+const elementTextColor = computed(() => `text-genshin-element-${props.character.element.normalizedName}`);
 </script>
 
 <template>

@@ -7,7 +7,7 @@ const props = defineProps<{
   name: string;
 }>();
 
-const src = (() => {
+const src = computed(() => {
   switch (props.type) {
     case "characterCard":
       return getCharacterImage(props.name, "card");
@@ -16,7 +16,7 @@ const src = (() => {
     case "item":
       return getItemImage(props.name);
   }
-})();
+});
 </script>
 
 <script lang="ts">

@@ -27,15 +27,20 @@ import Fire from "../components/icons/FireIcon.vue";
 import ItemPreviewSection from "~/components/ItemPreviewSection.vue";
 import getAllCharacterItems from "~/lib/item/getAllCharacterItems";
 import { getItemImage } from "~/lib/data/util/getItemImage";
+import { Characters } from "~/lib/data/Characters";
 
 const router = useRouter();
 const route = useRoute();
 
 //#region Get character and set title
-const character = repo.needCharacter(route.params.character as string);
+const character = ref(repo.needCharacter(route.params.character as string));
 
-useTitle(title(`Building ${character.name}`));
+useTitle(title(`Building ${character.value.name}`));
 //#endregion
+
+const switchCharacter = () => {
+  character.value = Characters.ganyu;
+};
 
 //#region Levels
 const { start: ascStart, goal: ascGoal } = useAscensionLevelRange();
@@ -101,7 +106,7 @@ const { loading: submitting, execute: handleSubmit } = useLoadingFunction(async 
     // TODO temp until inline edit
     if (editId.value) {
       await db.builds.update(editId.value, {
-        entityId: character.normalizedName,
+        entityId: character.value.normalizedName,
         // use toRaw here because dexie can't copy a proxy
         level: { start: toRaw(ascStart.value), goal: toRaw(ascGoal.value) },
         normal: { start: normalStart.value, goal: normalGoal.value },
@@ -111,7 +116,7 @@ const { loading: submitting, execute: handleSubmit } = useLoadingFunction(async 
     } else {
       await db.builds.add({
         type: "character",
-        entityId: character.normalizedName,
+        entityId: character.value.normalizedName,
         // use toRaw here because dexie can't copy a proxy
         level: { start: toRaw(ascStart.value), goal: toRaw(ascGoal.value) },
         normal: { start: normalStart.value, goal: normalGoal.value },
@@ -131,10 +136,12 @@ const { loading: submitting, execute: handleSubmit } = useLoadingFunction(async 
 //#region Compute items
 const levelingItems = computed(() => calculateLeveling(ascStart.value, ascGoal.value));
 
-const ascItems = computed(() => sortItems(calculateAscension(character, ascStart.value, ascGoal.value)));
-const normalItems = computed(() => sortItems(calculateTalent(character, normalStart.value, normalGoal.value, true)));
-const emItems = computed(() => sortItems(calculateTalent(character, emStart.value, emGoal.value)));
-const burstItems = computed(() => sortItems(calculateTalent(character, burstStart.value, burstGoal.value)));
+const ascItems = computed(() => sortItems(calculateAscension(character.value, ascStart.value, ascGoal.value)));
+const normalItems = computed(() =>
+  sortItems(calculateTalent(character.value, normalStart.value, normalGoal.value, true))
+);
+const emItems = computed(() => sortItems(calculateTalent(character.value, emStart.value, emGoal.value)));
+const burstItems = computed(() => sortItems(calculateTalent(character.value, burstStart.value, burstGoal.value)));
 
 const total = computed(() =>
   sortItems(
@@ -150,7 +157,7 @@ const total = computed(() =>
 //#endregion
 
 //#region Preload images
-getAllCharacterItems(character).map((item) => {
+getAllCharacterItems(character.value).map((item) => {
   // Only preloading webp because >95% of users have a compatible browser
   return (new Image().src = getItemImage(item.normalizedName).webp);
 });
@@ -160,6 +167,7 @@ getAllCharacterItems(character).map((item) => {
 <template>
   <ElementProvider :element="character.element">
     <Container>
+      <Button element="cryo" @click="switchCharacter">Switch to Ganyu</Button>
       <div class="w-full lg:flex lg:h-[48rem]">
         <div class="flex <sm:block">
           <TheCharacterDetailPanel :character="character" />

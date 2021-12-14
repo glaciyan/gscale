@@ -1,9 +1,17 @@
-<script setup lang="ts">
-import { IElement } from "~/lib/data/contracts/IElement";
-
-const props = defineProps<{ element: IElement }>();
-
-provide("element", props.element);
+<script lang="ts">
+export default defineComponent({
+  provide() {
+    return {
+      element: computed(() => this.element),
+    };
+  },
+  props: {
+    element: {
+      type: Object,
+      required: true,
+    },
+  },
+});
 </script>
 
 <template>

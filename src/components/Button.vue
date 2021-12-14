@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import Spinner from "./GSpinner.vue";
 import Center from "./Center.vue";
-import { useButtonStyle } from "~/composites/useButtonStyle";
-import { useInjectElement } from "~/composites/useInjectElement";
+import { IElement } from "~/lib/data/contracts/IElement";
+import { ComputedRef } from "vue";
 
-const injectedElement = useInjectElement()?.normalizedName;
+const injectedElement = inject("element") as ComputedRef<IElement>;
 
 const props = withDefaults(
   defineProps<{
@@ -23,7 +23,18 @@ const props = withDefaults(
 
 const _disabled = computed(() => props.isLoading || props.disabled);
 
-const { buttonStyle } = useButtonStyle(props.look, props.element ?? injectedElement);
+const element = computed(() => props.element ?? injectedElement.value.normalizedName);
+
+const buttonStyle = computed(() => {
+  switch (props.look) {
+    case "solid":
+      return `bg-genshin-element-${element.value} transition-colors hover:bg-opacity-70 active:bg-opacity-50 text-black font-semibold shadow-md`;
+    case "outline":
+      return `border-1 border-genshin-element-${element.value} text-genshin-element-${element.value} bg-dark-900 transition-colors bg-opacity-0 hover:bg-opacity-20 active:bg-opacity-40`;
+    case "ghost":
+      return `text-genshin-element-${element.value} bg-dark-900 transition-colors bg-opacity-0 hover:bg-opacity-20 active:bg-opacity-40`;
+  }
+});
 </script>
 
 <template>
