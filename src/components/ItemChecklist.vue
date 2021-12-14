@@ -2,7 +2,7 @@
 import { ItemWithAmount } from "~/lib/data/entities/ItemWithAmount";
 import incrId from "~/lib/incrId";
 import ItemCheckState from "~/lib/item/ItemCheckState";
-import ItemCardChecklist from "./ItemCardChecklist.vue";
+import ItemCardClickable from "./ItemCardClickable.vue";
 
 const props = defineProps<{ items: ItemWithAmount[]; checkedOff: ItemWithAmount[] }>();
 defineEmits(["itemClick"]);
@@ -23,7 +23,7 @@ const getState = (item: ItemWithAmount): ItemCheckState => {
 </script>
 
 <template>
-  <ItemCardChecklist
+  <ItemCardClickable
     v-for="item in items"
     :key="item.item.normalizedName + id"
     :itemWithAmount="item"
