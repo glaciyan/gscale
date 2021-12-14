@@ -10,6 +10,24 @@ import {
 } from "./travelerCost";
 
 export const characters: Characters = {
+    itto: {
+        id: "itto",
+        name: "Itto",
+        rarity: 5,
+        constellation: "Taurus Iracundus",
+        "description": `Fast as the wind and mighty as thunder, he is an intrepid man with Oni blood running through his veins.`,
+        element: "geo",
+        weapon: "claymore",
+        sub: "CRIT Rate",
+        materials: standard({
+            boss: items.riftborn_regalia.name,
+            local: items.onikabuto.name,
+            weekly: items.ashen_heart.name,
+            common: ItemGroup.slime,
+            book: ItemGroup.elegance,
+            gem: ItemGroup.geo_gem
+        })
+    },
     thoma: {
         id: "thoma",
         name: "Thoma",

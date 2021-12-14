@@ -6,6 +6,9 @@ export const items = {
         rarity: 0,
     },
 
+    onikabuto: { name: "Onikabuto", rarity: 1 },
+    riftborn_regalia: { name: "Riftborn Regalia", rarity: 4 },
+
     fluorescent_fungus: { name: "Fluorescent Fungus", rarity: 1 },
 
     // 2.1
