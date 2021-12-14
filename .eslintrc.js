@@ -9,7 +9,7 @@ module.exports = {
     sourceType: "module",
   },
   plugins: ["@typescript-eslint"],
-  extends: ["plugin:vue/vue3-recommended", "prettier"],
+  extends: ["plugin:@typescript-eslint/recommended", "plugin:vue/vue3-recommended", "prettier"],
   rules: {
     "vue/attribute-hyphenation": [
       "error",

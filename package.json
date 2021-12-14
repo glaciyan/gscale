@@ -8,6 +8,7 @@
     "build": "yarn pre && vue-tsc --noEmit && vite build",
     "start": "vite preview",
     "prod": "yarn build && yarn start",
+    "lint": "eslint ./src --ext .ts,.vue",
     "genver": "node scripts/version.js",
     "images:characters:build": "squoosh-cli --oxipng auto --webp auto --resize {width:240} -d public/images/characters/card",
     "images:mugshot:build": "squoosh-cli --oxipng auto --webp auto --resize {width:100} -d public/images/characters/mugshot",
