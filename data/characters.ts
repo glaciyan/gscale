@@ -15,7 +15,7 @@ export const characters: Characters = {
         name: "Itto",
         rarity: 5,
         constellation: "Taurus Iracundus",
-        "description": `Fast as the wind and mighty as thunder, he is an intrepid man with Oni blood running through his veins.`,
+        description: `Fast as the wind and mighty as thunder, he is an intrepid man with Oni blood running through his veins.`,
         element: "geo",
         weapon: "claymore",
         sub: "CRIT Rate",
@@ -25,8 +25,26 @@ export const characters: Characters = {
             weekly: items.ashen_heart.name,
             common: ItemGroup.slime,
             book: ItemGroup.elegance,
-            gem: ItemGroup.geo_gem
-        })
+            gem: ItemGroup.geo_gem,
+        }),
+    },
+    gorou: {
+        id: "gorou",
+        name: "Gorou",
+        rarity: 4,
+        constellation: "Canis Bellatoris",
+        description: `The great general of Watatsumi Island's forces. He is deeply trusted by his subordinates.`,
+        element: "geo",
+        weapon: "bow",
+        sub: "Geo DMG Bonus",
+        materials: standard({
+            boss: items.perpetual_heart.name,
+            local: items.sango_pearl.name,
+            weekly: items.molten_moment.name,
+            common: ItemGroup.spectral,
+            book: ItemGroup.light,
+            gem: ItemGroup.geo_gem,
+        }),
     },
     thoma: {
         id: "thoma",
