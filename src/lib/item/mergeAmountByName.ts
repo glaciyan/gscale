@@ -15,7 +15,6 @@ const merge = (total: ItemWithAmount[], current: ItemWithAmount[]) => {
         if (itemWithSameNameIndex === -1) {
           total.push(Object.assign({}, item));
         } else {
-          //@ts-ignore will not be undefined
           total[itemWithSameNameIndex].amount += item.amount;
         }
       }

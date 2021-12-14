@@ -63,6 +63,7 @@ const hidden = computed(() => deleted.value || isDeleting.value);
 //#endregion
 
 //#region Checklist
+// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 const checkList = useCheckList(props.build.id!);
 
 const handleItemClick = (item: ItemWithAmount, state: ItemCheckState) => {
