@@ -1,7 +1,7 @@
 [
   {
     "name": "Max",
-    "asc": {
+    "level": {
       "goal": { "level": 90, "ascended": false }
     },
     "normal": {
@@ -16,7 +16,7 @@
   },
   {
     "name": "Reset",
-    "asc": {
+    "level": {
       "goal": { "level": 1, "ascended": false }
     },
     "normal": {
@@ -31,7 +31,7 @@
   },
   {
     "name": "80-8-8-8",
-    "asc": {
+    "level": {
       "goal": { "level": 80, "ascended": false }
     },
     "normal": {
