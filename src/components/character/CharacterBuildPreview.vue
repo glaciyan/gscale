@@ -135,7 +135,7 @@ const handleItemClick = (item: ItemWithAmount, state: ItemCheckState) => {
             Delete
           </Button>
           <Button look="outline" class="mr-2 !h-9">Edit</Button>
-          <Button class="!h-9">Planner</Button>
+          <!-- <Button class="!h-9">Planner</Button> -->
         </div>
       </div>
     </ElementProvider>
