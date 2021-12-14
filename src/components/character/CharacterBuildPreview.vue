@@ -80,6 +80,14 @@ const handleItemClick = (item: ItemWithAmount, state: ItemCheckState) => {
   }
 };
 //#endregion
+
+//#region Edit Button
+const router = useRouter();
+
+const edit = () => {
+  router.push(`/build/${character.normalizedName}?edit=${props.build.id}`);
+};
+//#endregion
 </script>
 
 <template>
@@ -134,7 +142,7 @@ const handleItemClick = (item: ItemWithAmount, state: ItemCheckState) => {
           <Button look="ghost" element="neutral" class="mr-2 !h-9 !text-light-ternary" @click="deleteDialog.reveal">
             Delete
           </Button>
-          <Button look="outline" class="mr-2 !h-9">Edit</Button>
+          <Button look="outline" class="mr-2 !h-9" @click="edit">Edit</Button>
           <!-- <Button class="!h-9">Planner</Button> -->
         </div>
       </div>
