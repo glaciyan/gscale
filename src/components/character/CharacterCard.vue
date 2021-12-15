@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import { RouterLink } from "vue-router";
-import { ICharacterViewModel } from "~/lib/types/ICharacterViewModel";
+import { ICharacterViewModel } from "~/lib/data/contracts/ICharacterViewModel";
 import { useIntersection } from "../../composites/useIntersection";
 import RarityStars from "../RarityStars.vue";
 import Image from "../GImage.vue";
