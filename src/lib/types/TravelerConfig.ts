@@ -1,7 +1,7 @@
 import { IElement } from "../data/contracts/IElement";
 import { IItem } from "../data/contracts/IItem";
 import { IItemGroup } from "../data/contracts/IItemGroup";
-import { ITravelerTalentBooks } from "../data/contracts/ITravelerTalentBooks";
+import { TravelerTalentBooks } from "./TravelerTalentBooks";
 
 export interface TravelerConfig {
   element: IElement;
@@ -9,8 +9,8 @@ export interface TravelerConfig {
   talentCommonGroup: IItemGroup;
   talentBoss: IItem;
 
-  talentBooks: ITravelerTalentBooks;
-  normalTalentBooks: ITravelerTalentBooks;
+  talentBooks: TravelerTalentBooks;
+  normalTalentBooks: TravelerTalentBooks;
   normalTalentCommonGroup: IItemGroup;
   normalTalentBoss: IItem;
 }

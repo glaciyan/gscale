@@ -1,11 +1,11 @@
 import { IItemGroup } from "../contracts/IItemGroup";
-import { ITravelerTalentBooks } from "../contracts/ITravelerTalentBooks";
+import { TravelerTalentBooks } from "../../types/TravelerTalentBooks";
 
 export function generateTravelerTalentBooks(
   first: IItemGroup,
   second: IItemGroup,
   third: IItemGroup
-): ITravelerTalentBooks {
+): TravelerTalentBooks {
   return {
     1: first,
     2: second,

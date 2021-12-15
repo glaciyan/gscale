@@ -3,7 +3,7 @@ import { IItem } from "../contracts/IItem";
 import { IItemGroup } from "../contracts/IItemGroup";
 import { ITraveler } from "../contracts/ITraveler";
 import { TravelerConfig } from "../../types/TravelerConfig";
-import { ITravelerTalentBooks } from "../contracts/ITravelerTalentBooks";
+import { TravelerTalentBooks } from "../../types/TravelerTalentBooks";
 import { IWeaponType } from "../contracts/IWeaponType";
 import { ItemGroups } from "../ItemGroups";
 import { Items } from "../Items";
@@ -53,8 +53,8 @@ export class Traveler implements ITraveler {
   talentCommonGroup: IItemGroup;
   talentBoss: IItem;
 
-  talentBooks: ITravelerTalentBooks;
-  normalTalentBooks: ITravelerTalentBooks;
+  talentBooks: TravelerTalentBooks;
+  normalTalentBooks: TravelerTalentBooks;
   normalTalentCommonGroup: IItemGroup;
   normalTalentBoss: IItem;
 

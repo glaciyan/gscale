@@ -1,7 +1,7 @@
 import { IBaseCharacter } from "./IBaseCharacter";
 import { IItem } from "./IItem";
 import { IItemGroup } from "./IItemGroup";
-import { ITravelerTalentBooks } from "./ITravelerTalentBooks";
+import { TravelerTalentBooks } from "../../types/TravelerTalentBooks";
 
 export interface ITraveler extends IBaseCharacter {
   local: IItem;
@@ -11,9 +11,9 @@ export interface ITraveler extends IBaseCharacter {
   talentCommonGroup: IItemGroup;
   talentBoss: IItem;
 
-  talentBooks: ITravelerTalentBooks;
+  talentBooks: TravelerTalentBooks;
 
-  normalTalentBooks: ITravelerTalentBooks;
+  normalTalentBooks: TravelerTalentBooks;
   normalTalentCommonGroup: IItemGroup;
   normalTalentBoss: IItem;
 }
