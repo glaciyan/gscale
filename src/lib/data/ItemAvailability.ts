@@ -1,7 +1,7 @@
 import { IItemAvailability } from "./contracts/IItemAvailability";
 import { IdIndex } from "./contracts/UsingId";
 import { ItemGroups as ig } from "./ItemGroups";
-import { DaysOfWeek as dw } from "./util/DaysOfWeek";
+import { DaysOfWeek as dw } from "./DaysOfWeek";
 
 export const ItemAvailability: IdIndex<IItemAvailability> = {
   freedom: {
