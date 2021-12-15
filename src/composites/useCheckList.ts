@@ -1,4 +1,4 @@
-import { ItemWithAmount } from "~/lib/data/entities/ItemWithAmount";
+import { ItemWithAmount } from "~/lib/types/ItemWithAmount";
 import { db } from "~/lib/offlineDatabase/db";
 
 export default (buildId: number) => {

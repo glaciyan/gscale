@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ItemWithAmount } from "~/lib/data/entities/ItemWithAmount";
+import { ItemWithAmount } from "~/lib/types/ItemWithAmount";
 import ItemListHeader from "./ItemListHeader.vue";
 import ItemList from "./ItemList.vue";
 import type { Component } from "vue";

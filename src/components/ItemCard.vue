@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ItemWithAmount } from "~/lib/data/entities/ItemWithAmount";
+import { ItemWithAmount } from "~/lib/types/ItemWithAmount";
 import millify from "~/lib/millify";
 import Image from "./GImage.vue";
 

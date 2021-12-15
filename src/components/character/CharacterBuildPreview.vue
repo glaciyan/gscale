@@ -15,7 +15,7 @@ import Image from "../GImage.vue";
 import Modal from "../Modal.vue";
 import { useLoadingFunction } from "~/composites/useLoadingFunction";
 import ItemChecklist from "../ItemChecklist.vue";
-import { ItemWithAmount } from "~/lib/data/entities/ItemWithAmount";
+import { ItemWithAmount } from "~/lib/types/ItemWithAmount";
 import ItemCheckState from "~/lib/item/ItemCheckState";
 import useCheckList from "~/composites/useCheckList";
 import GSpinner from "../GSpinner.vue";

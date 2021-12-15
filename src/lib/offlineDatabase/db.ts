@@ -1,5 +1,5 @@
 import Dexie, { Table } from "dexie";
-import { ItemWithAmount } from "../data/entities/ItemWithAmount";
+import { ItemWithAmount } from "../types/ItemWithAmount";
 import { Items } from "../data/Items";
 import GenshinDataRepository from "../data/repository/GenshinDataRepository";
 import { AscensionLevel } from "../types/AscensionLevel";

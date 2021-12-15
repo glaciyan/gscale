@@ -1,7 +1,7 @@
 import { crown, grouped, mora, single } from "../item/itemFunc";
 import { IItem } from "./contracts/IItem";
 import { IItemGroup } from "./contracts/IItemGroup";
-import { ItemWithAmount } from "./entities/ItemWithAmount";
+import { ItemWithAmount } from "../types/ItemWithAmount";
 
 export default (
   items: { commonGroup?: IItemGroup; bookGroup?: IItemGroup; weekly?: IItem },

@@ -1,6 +1,6 @@
 import { grouped, mora, single } from "../item/itemFunc";
 import { IStandardAscensionItems } from "./contracts/IStandardCharacterItems";
-import { ItemWithAmount } from "./entities/ItemWithAmount";
+import { ItemWithAmount } from "../types/ItemWithAmount";
 
 export default (items: Partial<IStandardAscensionItems>): ItemWithAmount[][] => {
   const gem = grouped(items.gemGroup);

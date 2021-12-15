@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ItemWithAmount } from "~/lib/data/entities/ItemWithAmount";
+import { ItemWithAmount } from "~/lib/types/ItemWithAmount";
 import ItemCard from "./ItemCard.vue";
 import incrId from "~/lib/incrId";
 

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import ItemCard from "./ItemCard.vue";
-import { ItemWithAmount } from "~/lib/data/entities/ItemWithAmount";
+import { ItemWithAmount } from "~/lib/types/ItemWithAmount";
 import ItemCheckState from "~/lib/item/ItemCheckState";
 import FireIcon from "./icons/FireIcon.vue";
 

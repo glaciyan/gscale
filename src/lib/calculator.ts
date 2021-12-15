@@ -1,7 +1,7 @@
 import AscensionCostTable from "./data/AscensionCostTable";
 import { IBaseCharacter } from "./data/contracts/IBaseCharacter";
 import { IStandardAscensionItems } from "./data/contracts/IStandardCharacterItems";
-import { ItemWithAmount } from "./data/entities/ItemWithAmount";
+import { ItemWithAmount } from "./types/ItemWithAmount";
 import { Items } from "./data/Items";
 import LevelingCostTable from "./data/LevelingCostTable";
 import TalentCostTable from "./data/TalentCostTable";

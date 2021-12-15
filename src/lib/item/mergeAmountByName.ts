@@ -1,4 +1,4 @@
-import { ItemWithAmount } from "../data/entities/ItemWithAmount";
+import { ItemWithAmount } from "../types/ItemWithAmount";
 import { Items } from "../data/Items";
 
 /**
