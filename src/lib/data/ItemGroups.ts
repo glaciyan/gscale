@@ -1,4 +1,4 @@
-import { IdIndex } from "./contracts/UsingId";
+import { IdIndex } from "../types/UsingId";
 import { IItemGroup } from "./contracts/IItemGroup";
 import { Items } from "./Items";
 

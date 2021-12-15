@@ -1,5 +1,5 @@
 import { ITraveler } from "./contracts/ITraveler";
-import { IdIndex } from "./contracts/UsingId";
+import { IdIndex } from "../types/UsingId";
 import { Elements } from "./Elements";
 import { Traveler } from "./entities/Traveler";
 import { generateTravelerTalentBooks } from "./util/generateTravelerTalentBooks";

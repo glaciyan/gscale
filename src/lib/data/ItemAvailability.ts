@@ -1,5 +1,5 @@
 import { IItemAvailability } from "./contracts/IItemAvailability";
-import { IdIndex } from "./contracts/UsingId";
+import { IdIndex } from "../types/UsingId";
 import { ItemGroups as ig } from "./ItemGroups";
 import { DaysOfWeek as dw } from "./DaysOfWeek";
 

@@ -1,4 +1,4 @@
-import { IdIndex } from "./contracts/UsingId";
+import { IdIndex } from "../types/UsingId";
 import { IElement } from "./contracts/IElement";
 
 export const Elements: IdIndex<IElement> = {

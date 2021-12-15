@@ -1,5 +1,5 @@
 import { ICharacter } from "./contracts/ICharacter";
-import { IdIndex } from "./contracts/UsingId";
+import { IdIndex } from "../types/UsingId";
 import { Elements } from "./Elements";
 import { ItemGroups } from "./ItemGroups";
 import { Items } from "./Items";

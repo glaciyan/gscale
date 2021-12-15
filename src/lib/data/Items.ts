@@ -1,4 +1,4 @@
-import { IdIndex } from "./contracts/UsingId";
+import { IdIndex } from "../types/UsingId";
 import { IItem } from "./contracts/IItem";
 
 export const Items: IdIndex<IItem> = {

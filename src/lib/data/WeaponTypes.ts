@@ -1,4 +1,4 @@
-import { IdIndex } from "./contracts/UsingId";
+import { IdIndex } from "../types/UsingId";
 import { IWeaponType } from "./contracts/IWeaponType";
 
 export const WeaponTypes: IdIndex<IWeaponType> = {

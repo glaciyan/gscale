@@ -1,4 +1,4 @@
-import { IdIndex } from "../contracts/UsingId";
+import { IdIndex } from "../../types/UsingId";
 
 // Get an object by key or undefined if nothing was found
 export function getById<T>(from: IdIndex<T>, id: string): T | undefined {
