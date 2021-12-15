@@ -2,7 +2,7 @@ import { IElement } from "../contracts/IElement";
 import { IItem } from "../contracts/IItem";
 import { IItemGroup } from "../contracts/IItemGroup";
 import { ITraveler } from "../contracts/ITraveler";
-import { ITravelerConfig } from "../contracts/ITravelerConfig";
+import { TravelerConfig } from "../../types/TravelerConfig";
 import { ITravelerTalentBooks } from "../contracts/ITravelerTalentBooks";
 import { IWeaponType } from "../contracts/IWeaponType";
 import { ItemGroups } from "../ItemGroups";
@@ -10,7 +10,7 @@ import { Items } from "../Items";
 import { WeaponTypes } from "../WeaponTypes";
 
 export class Traveler implements ITraveler {
-  constructor(config: ITravelerConfig) {
+  constructor(config: TravelerConfig) {
     this.isTraveler = true;
 
     this.name = "Traveler";
