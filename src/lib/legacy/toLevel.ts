@@ -1,5 +1,5 @@
 import { characterLevels } from "./characterLevels";
-import { AscensionLevel } from "../interfaces/AscensionLevel";
+import { AscensionLevel } from "../types/AscensionLevel";
 
 export function fromLegacyLevel(level: number): AscensionLevel {
   let highest: [string, AscensionLevel] = ["1", { level: 1, ascended: false }];

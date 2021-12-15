@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { AscensionLevel } from "~/lib/interfaces/AscensionLevel";
-import StartGoalRange from "~/lib/interfaces/StartGoalRange";
+import { AscensionLevel } from "~/lib/types/AscensionLevel";
+import StartGoalRange from "~/lib/types/StartGoalRange";
 import AscensionLevelDisplay from "../../AscensionLevelDisplay.vue";
 import SelectorIconSeperator from "../../levelSelector/SelectorIconSeperator.vue";
 import GrowthIcon from "../../icons/GrowthIcon.vue";

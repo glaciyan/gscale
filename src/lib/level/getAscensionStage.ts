@@ -1,5 +1,5 @@
 import { compareAscension } from "./compareAscension";
-import { AscensionLevel } from "../interfaces/AscensionLevel";
+import { AscensionLevel } from "../types/AscensionLevel";
 
 // TODO prettier is a problem in this file
 export function getAscensionStage(level: AscensionLevel): number {

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { AscensionLevel } from "~/lib/interfaces/AscensionLevel";
+import { AscensionLevel } from "~/lib/types/AscensionLevel";
 import StarIcon from "./icons/StarIcon.vue";
 
 defineProps<{ ascensionLevel: AscensionLevel; small?: boolean }>();

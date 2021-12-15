@@ -1,5 +1,5 @@
-import { AscensionLevel } from "~/lib/interfaces/AscensionLevel";
-import StartGoalRange from "~/lib/interfaces/StartGoalRange";
+import { AscensionLevel } from "~/lib/types/AscensionLevel";
+import StartGoalRange from "~/lib/types/StartGoalRange";
 import { compareAscension } from "../lib/level/compareAscension";
 
 export function useAscensionLevelRange(): StartGoalRange<AscensionLevel> {

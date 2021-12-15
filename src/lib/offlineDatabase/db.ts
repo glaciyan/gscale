@@ -2,8 +2,8 @@ import Dexie, { Table } from "dexie";
 import { ItemWithAmount } from "../data/entities/ItemWithAmount";
 import { Items } from "../data/Items";
 import GenshinDataRepository from "../data/repository/GenshinDataRepository";
-import { AscensionLevel } from "../interfaces/AscensionLevel";
-import StartGoalRange from "../interfaces/StartGoalRange";
+import { AscensionLevel } from "../types/AscensionLevel";
+import StartGoalRange from "../types/StartGoalRange";
 import * as Legacy from "../legacy";
 import { toId } from "../toId";
 

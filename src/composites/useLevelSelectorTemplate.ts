@@ -1,6 +1,6 @@
-import { AscensionLevel } from "~/lib/interfaces/AscensionLevel";
+import { AscensionLevel } from "~/lib/types/AscensionLevel";
 import standardTemplates from "~/assets/standardTemplates.json";
-import StartGoalRange from "~/lib/interfaces/StartGoalRange";
+import StartGoalRange from "~/lib/types/StartGoalRange";
 
 interface Template {
   name: string;

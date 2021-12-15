@@ -1,4 +1,4 @@
-import { AscensionLevel } from "~/lib/interfaces/AscensionLevel";
+import { AscensionLevel } from "~/lib/types/AscensionLevel";
 
 class CompareAscensionResult {
   constructor(value: number) {

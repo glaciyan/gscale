@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { AscensionLevel } from "~/lib/interfaces/AscensionLevel";
+import { AscensionLevel } from "~/lib/types/AscensionLevel";
 import Growth from "../icons/GrowthIcon.vue";
 import SelectorAscensionLevel from "../levelSelector/SelectorAscensionLevel.vue";
 import SelectorGroup from "../levelSelector/SelectorGroup.vue";

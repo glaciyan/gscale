@@ -8,7 +8,7 @@ import TalentCostTable from "./data/TalentCostTable";
 import { getAscensionStage } from "./level/getAscensionStage";
 import getLevelingIndex from "./level/getLevelingIndex";
 import { getStandardAscensionItems, getStandardTalentItems } from "./item/getStandardItems";
-import { AscensionLevel } from "./interfaces/AscensionLevel";
+import { AscensionLevel } from "./types/AscensionLevel";
 import mergeAmountByName from "./item/mergeAmountByName";
 import { range } from "./range";
 

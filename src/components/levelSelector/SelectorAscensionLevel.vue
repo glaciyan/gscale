@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { AscensionLevel, Levels } from "~/lib/interfaces/AscensionLevel";
+import { AscensionLevel, Levels } from "~/lib/types/AscensionLevel";
 import AscensionCheckbox from "../CheckboxAscension.vue";
 import CustomSelector from "../SelectorCustom.vue";
 import AscensionLevelDisplay from "../AscensionLevelDisplay.vue";

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import StartGoalRange from "~/lib/interfaces/StartGoalRange";
+import StartGoalRange from "~/lib/types/StartGoalRange";
 import SelectorIconSeperator from "../../levelSelector/SelectorIconSeperator.vue";
 
 defineProps<{ range: StartGoalRange<number>; title: string }>();

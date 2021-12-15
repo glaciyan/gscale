@@ -1,6 +1,6 @@
 import { Travelers } from "~/lib/data/Travelers";
 import { Characters } from "../data/Characters";
-import { ICharacterViewModel } from "../interfaces/ICharacterViewModel";
+import { ICharacterViewModel } from "../types/ICharacterViewModel";
 
 // This will be used to display the character cards
 export const charactersViewModel: ICharacterViewModel[] = [

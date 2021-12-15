@@ -1,4 +1,4 @@
-import type StartGoalRange from "~/lib/interfaces/StartGoalRange";
+import type StartGoalRange from "~/lib/types/StartGoalRange";
 
 export function useTalentLevelRange(): StartGoalRange<number> {
   const range = reactive({
