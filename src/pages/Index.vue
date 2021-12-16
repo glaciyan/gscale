@@ -6,8 +6,10 @@ import SearchBar from "~/components/SearchBar.vue";
 import useCharacterSearch from "~/composites/useCharacterSearch";
 import SearchHelp from "~/components/TheSearchHelp.vue";
 
+//#region Search
 const search = ref("");
 const { result: filteredCharacters, noResults: noSearchResults } = useCharacterSearch(search, charactersViewModel);
+//#endregion
 
 const characters = computed(() => {
   if (filteredCharacters.value && filteredCharacters.value.length > 0) {
@@ -17,9 +19,20 @@ const characters = computed(() => {
   }
 });
 
+//#region Search help
 const mockSuggestClick = (newVal: string) => {
   search.value = newVal;
 };
+//#endregion
+
+//#region Press enter to go to first character
+const router = useRouter();
+const goToFirstCharacter = () => {
+  if (characters.value[0]) {
+    router.push(`/build/${characters.value[0].normalizedName}`);
+  }
+};
+//#endregion
 </script>
 
 <template>
@@ -28,6 +41,7 @@ const mockSuggestClick = (newVal: string) => {
       v-model.trim="search"
       class="mb-6 <sm:mb-2"
       placeholder="Search for Names, Materials, Elements, etc..."
+      @keydown.enter="goToFirstCharacter"
     />
     <SearchHelp v-if="noSearchResults" :search="search" @click="mockSuggestClick" />
     <div v-else w:grid="cols-2 sm:cols-3 lg:cols-4 xl:cols-5" w:gap="5 <md:2" class="grid">
