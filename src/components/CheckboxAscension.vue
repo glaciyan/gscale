@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import incrId from "~/lib/incrId";
 import Center from "./Center.vue";
-import StarIcon from "./icons/StarIcon.vue";
+import AscensionStarIcon from "./icons/AscensionStarIcon.vue";
 
 defineProps<{ modelValue: boolean; disabled: boolean }>();
 defineEmits(["update:modelValue"]);
@@ -37,7 +37,7 @@ const active = ref(false);
       @mouseup="active = false"
       @mouseout="active = false"
     >
-      <StarIcon
+      <AscensionStarIcon
         :class="[
           { '!text-genshin-rarity-5': modelValue },
           { '!text-dark-100/40': disabled },
