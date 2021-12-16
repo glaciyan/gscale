@@ -157,10 +157,13 @@ getAllCharacterItems(character.value).map((item) => {
             class="
               flex flex-col flex-grow
               bg-dark-600
+              border-dark-200
               text-dark-50
               sm:(w-[20rem]
-              border-dark-200 border-r-2)
-              lg:(flex-grow-0) "
+              border-r-2)
+              <sm:border-b-2
+              lg:(flex-grow-0)
+              "
           >
             <div class="flex flex-col h-full p-6 justify-between">
               <div>
