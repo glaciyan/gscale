@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { RouterLink } from "vue-router";
-import Center from "./Center.vue";
 
 const navigation: { path: string; name: string }[] = [
   {
@@ -15,7 +14,7 @@ const navigation: { path: string; name: string }[] = [
 </script>
 
 <template>
-  <Center class="space-x-2">
+  <div class="flex space-x-2 items-center">
     <RouterLink
       v-for="nav in navigation"
       :key="nav.path"
@@ -28,6 +27,7 @@ const navigation: { path: string; name: string }[] = [
         py-1
         px-3
         transition-all
+        whitespace-nowrap
         hover:(text-light-normal
         bg-dark-500/50
         shadow-sm)
@@ -35,7 +35,7 @@ const navigation: { path: string; name: string }[] = [
     >
       {{ nav.name }}
     </RouterLink>
-  </Center>
+  </div>
 </template>
 
 <style scoped>
