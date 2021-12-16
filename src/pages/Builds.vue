@@ -29,7 +29,6 @@ const hasBuilds = computed(() => totalBuilds.value > 0);
 const handleBuildDelete = () => {
   if (totalBuilds.value <= 1) {
     window.scrollTo({ top: 0 });
-    builds.value = [];
   }
 
   totalBuilds.value--;
