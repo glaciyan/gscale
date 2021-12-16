@@ -10,7 +10,7 @@ import version from "~/version";
 
 <template>
   <footer class="bg-dark-600 mt-8">
-    <PageContainer class="py-12">
+    <PageContainer class="py-12 <sm:mx-5">
       <div w:grid="cols-1 sm:cols-2 xl:cols-4" class="grid gap-12">
         <FooterSection title="Pages">
           <GLink to="/" isRouter gray>Characters</GLink>
