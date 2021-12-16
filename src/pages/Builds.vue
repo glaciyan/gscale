@@ -11,9 +11,12 @@ import useRandomElement from "~/composites/useRandomElement";
 const { element, pickNew: newElement } = useRandomElement();
 
 const builds = ref<Build[]>();
+const totalBuilds = ref(0);
 
 const getBuilds = async () => {
-  builds.value = await db.builds.toArray();
+  const buildsFromDb = await db.builds.toArray();
+  builds.value = buildsFromDb;
+  totalBuilds.value = buildsFromDb.length;
 };
 
 onBeforeMount(() => {
@@ -21,16 +24,15 @@ onBeforeMount(() => {
   newElement();
 });
 
-const hasBuilds = computed(() => {
-  if (builds.value?.length) return builds.value?.length > 0;
-  return false;
-});
+const hasBuilds = computed(() => totalBuilds.value > 0);
 
 const handleBuildDelete = () => {
-  if (builds.value?.length && builds.value?.length <= 1) {
+  if (totalBuilds.value <= 1) {
     window.scrollTo({ top: 0 });
     builds.value = [];
   }
+
+  totalBuilds.value--;
 };
 </script>
 
