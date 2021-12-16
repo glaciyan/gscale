@@ -1,4 +1,5 @@
 export default defineComponent({
+  name: "PageContainer",
   props: {
     as: {
       type: String,
