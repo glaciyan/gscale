@@ -2,7 +2,7 @@
 import ItemCard from "./ItemCard.vue";
 import { ItemWithAmount } from "~/lib/types/ItemWithAmount";
 import ItemCheckState from "~/lib/item/ItemCheckState";
-import FireIcon from "./icons/FireIcon.vue";
+import CheckIcon from "./icons/CheckIcon.vue";
 
 const props = defineProps<{ itemWithAmount: ItemWithAmount; state: ItemCheckState }>();
 defineEmits(["click"]);
@@ -24,7 +24,7 @@ const partial = computed(() => props.state === ItemCheckState.Partial);
         { 'ring-2 hover:(ring-green-400) ring-yellow-200': partial },
       ]"
     >
-      <FireIcon v-if="done" />
+      <CheckIcon v-if="done" />
     </div>
     <ItemCard :itemWithAmount="itemWithAmount" :grayscale="done" class="!m-0" />
   </div>
