@@ -1,4 +1,4 @@
-import _ from "lodash";
+import sample from "~/lib/sample";
 
 const elements = ["anemo", "pyro", "electro", "geo", "cryo", "hydro"];
 
@@ -6,7 +6,7 @@ export default function () {
   const element = ref("cryo");
 
   const pickNew = () => {
-    element.value = _.sample(elements) ?? "cryo";
+    element.value = sample(elements) ?? "cryo";
   };
 
   return {
