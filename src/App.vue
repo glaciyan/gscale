@@ -6,7 +6,7 @@ import TheHeader from "~/components/TheHeader.vue";
 
 <template>
   <TheHeader />
-  <main id="__gscale" class="min-h-screen">
+  <main class="min-h-screen">
     <RouterView />
   </main>
   <footer>
