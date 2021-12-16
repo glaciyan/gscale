@@ -161,9 +161,9 @@ getAllCharacterItems(character.value).map((item) => {
               text-dark-50
               sm:(w-[20rem]
               border-r-2)
-              <sm:border-b-2
+              <sm:border-bbui-2
               lg:(flex-grow-0)
-              "
+            "
           >
             <div class="flex flex-col h-full p-6 justify-between">
               <div>

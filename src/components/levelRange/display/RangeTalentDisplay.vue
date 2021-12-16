@@ -10,7 +10,7 @@ const className = "flex bg-dark-400 pl-3 items-center w-15 <lg:(w-9 pl-2)";
 <template>
   <div>
     <p class="font-semibold">{{ title }}</p>
-    <div class="rounded-lg flex h-8 w-max overflow-hidden">
+    <div class="rounded-lg flex h-8 shadow-md w-max overflow-hidden">
       <div :class="className">
         {{ range.start }}
       </div>

@@ -13,7 +13,7 @@ const className = "flex bg-dark-400 pl-3 items-center w-15";
 <template>
   <div>
     <p class="font-semibold">Level</p>
-    <div class="rounded-lg flex h-8 w-max overflow-hidden">
+    <div class="rounded-lg flex h-8 shadow-md w-max overflow-hidden">
       <div :class="className">
         <AscensionLevelDisplay small :ascensionLevel="range.start" />
       </div>
