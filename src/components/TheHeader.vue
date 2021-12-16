@@ -3,9 +3,6 @@ import Navigation from "~/components/TheVerticalNavigation.vue";
 import LogoWithLabel from "~/assets/logo-label.svg?component";
 import Container from "./PageContainer";
 import { RouterLink } from "vue-router";
-import GLink from "./GLink";
-import Button from "./Button.vue";
-import HeartIcon from "./icons/HeartIcon.vue";
 import ButtonSupport from "./ButtonSupport.vue";
 </script>
 
