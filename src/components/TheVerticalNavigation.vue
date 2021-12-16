@@ -1,7 +1,17 @@
 <script setup lang="ts">
-import { navigation } from "~/router";
 import { RouterLink } from "vue-router";
 import Center from "./Center.vue";
+
+const navigation: { path: string; name: string }[] = [
+  {
+    path: "/",
+    name: "Characters",
+  },
+  {
+    path: "/builds",
+    name: "Your Builds",
+  },
+];
 </script>
 
 <template>
