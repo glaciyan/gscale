@@ -1,5 +1,6 @@
 import Index from "./pages/Index.vue";
 import BuildCharacter from "./pages/BuildCharacter.vue";
+import Builds from "./pages/Builds.vue";
 import title from "./title";
 import { createRouter, createWebHistory } from "vue-router";
 
@@ -18,7 +19,7 @@ const routes = [
   },
   {
     path: "/builds",
-    component: () => import("./pages/Builds.vue"),
+    component: Builds,
     meta: {
       title: title("Builds"),
     },
