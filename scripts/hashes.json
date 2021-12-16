@@ -52,8 +52,16 @@
         "hash": "e613ae32856134e882e5a71dcd68c40f375f77cc"
     },
     {
+        "name": "./src/lib/data/images/characters/card/gorou.png",
+        "hash": "1ecaa02e69cd8b5e35e43dae64f3fedb353a45f0"
+    },
+    {
         "name": "./src/lib/data/images/characters/card/hu_tao.png",
         "hash": "4bfc8c6a21e6e29a6552e6e1aa15d85014d8d405"
+    },
+    {
+        "name": "./src/lib/data/images/characters/card/itto.png",
+        "hash": "b070bc645f5ad8d3267da9547ef221edbb76c147"
     },
     {
         "name": "./src/lib/data/images/characters/card/jean.png",
@@ -134,6 +142,10 @@
     {
         "name": "./src/lib/data/images/characters/card/tartaglia.png",
         "hash": "90cbebe27e131bca9b3920f9d469bfabcd617e7d"
+    },
+    {
+        "name": "./src/lib/data/images/characters/card/thoma.png",
+        "hash": "af264820a0860d3f1d6603781aa1f702ecd34f6f"
     },
     {
         "name": "./src/lib/data/images/characters/card/traveler.png",
@@ -560,6 +572,10 @@
         "hash": "a9c0b3080d6d98332068b0abf0fd205b177487a4"
     },
     {
+        "name": "./src/lib/data/images/materials/fluorescent_fungus.png",
+        "hash": "b06ccdb079346bc21edc13c2c417a96e0ea7779f"
+    },
+    {
         "name": "./src/lib/data/images/materials/forbidden_curse_scroll.png",
         "hash": "7f6a2e5ac599c9da47be17a574aca88851cfaf36"
     },
@@ -752,6 +768,10 @@
         "hash": "07628d6b0bb488b6e15265c1b5985551e936cc49"
     },
     {
+        "name": "./src/lib/data/images/materials/onikabuto.webp",
+        "hash": "f6ec2944696b45d83581be2df3b10530d80e27bc"
+    },
+    {
         "name": "./src/lib/data/images/materials/perpetual_heart.png",
         "hash": "418b12b71f494c0cf2dbc5fc800c0d2b57133def"
     },
@@ -830,6 +850,10 @@
     {
         "name": "./src/lib/data/images/materials/relic_from_guyun.png",
         "hash": "b6f99f6aaf923a4b4d2be283ada632a44a48fbca"
+    },
+    {
+        "name": "./src/lib/data/images/materials/riftborn_regalia.webp",
+        "hash": "ae6edc14c6dd3c57ed730b6d209dc84edacd05a0"
     },
     {
         "name": "./src/lib/data/images/materials/ring_of_boreas.png",
