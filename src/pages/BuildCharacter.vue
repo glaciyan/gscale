@@ -188,8 +188,8 @@ getAllCharacterItems(character.value).map((item) => {
                 </div>
               </div>
               <div class="w-full">
-                <div v-if="submitError.message" class="mb-2">
-                  <span class="text-red-400">{{ submitError.message }}</span>
+                <div class="flex flex-col h-8 mb-2 justify-end">
+                  <span v-if="submitError.message" class="text-red-400">{{ submitError.message }}</span>
                   <!-- {{ " " }}
                   <RouterLink :to="submitError.helpUrl" class="text-blue-400 hover:underline">Help</RouterLink> -->
                 </div>
