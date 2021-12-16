@@ -10,6 +10,8 @@ import useRandomElement from "~/composites/useRandomElement";
 
 const { element, pickNew: newElement } = useRandomElement();
 
+const ready = ref(false);
+
 const builds = ref<Build[]>();
 const totalBuilds = ref(0);
 
@@ -17,6 +19,7 @@ const getBuilds = async () => {
   const buildsFromDb = await db.builds.toArray();
   builds.value = buildsFromDb;
   totalBuilds.value = buildsFromDb.length;
+  ready.value = true;
 };
 
 onBeforeMount(() => {
@@ -36,7 +39,7 @@ const handleBuildDelete = () => {
 </script>
 
 <template>
-  <Container size="2xl">
+  <Container v-if="ready" size="2xl">
     <div v-if="hasBuilds" w:grid="gap-5 cols-2 <sm:cols-1" class="grid">
       <CharacterBuildPreview v-for="build in builds" :key="build.id" :build="build" @deleted="handleBuildDelete" />
     </div>
