@@ -200,7 +200,7 @@ getAllCharacterItems(character.value).map((item) => {
             </div>
           </section>
         </div>
-        <section class="bg-dark-600 w-full p-6 overflow-y-auto custom-scrollbar">
+        <section class="bg-dark-600 w-full p-6 overflow-y-auto custom-scrollbar <sm:p-4">
           <span class="font-semibold text-light-important">Material Preview</span>
           <div v-if="total.length !== 0" class="flex flex-col">
             <ItemListHeader title="Total" class="font-semibold">
