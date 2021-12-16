@@ -151,7 +151,7 @@ getAllCharacterItems(character.value).map((item) => {
 <template>
   <ElementProvider :element="character.element">
     <Container>
-      <div class="w-full lg:flex lg:h-[48rem]">
+      <div class="rounded-md w-full overflow-hidden lg:flex lg:h-[48rem]">
         <div class="flex <sm:block">
           <TheCharacterDetailPanel :character="character" />
           <section
