@@ -94,7 +94,7 @@ const edit = () => {
 <template>
   <template v-if="!hidden">
     <ElementProvider :element="character.element">
-      <div class="rounded-md flex flex-col bg-dark-700 shadow-md">
+      <div class="rounded-md flex flex-col bg-dark-700 shadow-md overflow-hidden">
         <div class="flex flex-grow">
           <div class="sm:flex">
             <div class="flex min-h-32 relative sm:w-50">
