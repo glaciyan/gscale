@@ -95,9 +95,9 @@ const edit = () => {
   <template v-if="!hidden">
     <ElementProvider :element="character.element">
       <div class="rounded-md flex flex-col bg-dark-700 shadow-md overflow-hidden">
-        <div class="flex flex-grow <md:flex-col">
-          <div class="sm:flex">
-            <div class="flex min-h-32 relative sm:w-50">
+        <div class="flex flex-grow <lg:flex-col">
+          <div class="lg:flex">
+            <div class="flex min-h-32 relative lg:w-50">
               <div class="inset-x-0 top-0 absolute fading-out">
                 <Image
                   class="object-cover h-32 w-full opacity-50"
@@ -109,23 +109,25 @@ const edit = () => {
               </div>
               <div class="p-6 relative <sm:p-4">
                 <p class="font-bold text-lg text-light-important mb-2">{{ character.name }}</p>
-                <div class="space-y-2">
-                  <RangeLevelDisplay :range="build.level" />
-                  <RangeTalentDisplay title="Normal" :range="build.normal">
-                    <template #icon>
-                      <Sword class="h-[26px] -m-0.5 w-[26px]" />
-                    </template>
-                  </RangeTalentDisplay>
-                  <RangeTalentDisplay title="Elemental" :range="build.elemental">
-                    <template #icon>
-                      <Elemental class="-m-0.5" />
-                    </template>
-                  </RangeTalentDisplay>
-                  <RangeTalentDisplay title="Burst" :range="build.burst">
-                    <template #icon>
-                      <Fire class="-m-0.5" />
-                    </template>
-                  </RangeTalentDisplay>
+                <div class="-m-1">
+                  <RangeLevelDisplay class="m-1" :range="build.level" />
+                  <div class="flex flex-wrap">
+                    <RangeTalentDisplay class="m-1" title="Normal" :range="build.normal">
+                      <template #icon>
+                        <Sword class="h-[26px] -m-0.5 w-[26px]" />
+                      </template>
+                    </RangeTalentDisplay>
+                    <RangeTalentDisplay class="m-1" title="Elemental" :range="build.elemental">
+                      <template #icon>
+                        <Elemental class="-m-0.5" />
+                      </template>
+                    </RangeTalentDisplay>
+                    <RangeTalentDisplay class="m-1" title="Burst" :range="build.burst">
+                      <template #icon>
+                        <Fire class="-m-0.5" />
+                      </template>
+                    </RangeTalentDisplay>
+                  </div>
                 </div>
               </div>
             </div>

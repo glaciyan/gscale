@@ -4,7 +4,7 @@ import SelectorIconSeperator from "../../levelSelector/SelectorIconSeperator.vue
 
 defineProps<{ range: StartGoalRange<number>; title: string }>();
 
-const className = "flex bg-dark-400 pl-3 items-center w-15";
+const className = "flex bg-dark-400 pl-3 items-center w-15 <lg:(w-9 pl-2)";
 </script>
 
 <template>
