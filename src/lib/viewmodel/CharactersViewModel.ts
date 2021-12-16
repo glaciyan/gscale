@@ -1,9 +1,9 @@
 import { Travelers } from "~/lib/data/Travelers";
 import { Characters } from "../data/Characters";
-import { ICharacterViewModel } from "../data/contracts/ICharacterViewModel";
+import { IBaseCharacter } from "../data/contracts/IBaseCharacter";
 
 // This will be used to display the character cards
-export const charactersViewModel: ICharacterViewModel[] = [
+export const charactersViewModel: IBaseCharacter[] = [
   Characters.kokomi,
   Characters.aloy,
   Characters.sara,
