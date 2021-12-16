@@ -153,12 +153,19 @@ const edit = () => {
     class="max-w-96"
     :isOpen="deleteDialog.isRevealed.value"
     header="Delete build"
-    :content="`This will delete your ${character.name} build including your checklist.`"
     question="Are you sure?"
     closeText="Cancel"
     @close="deleteDialog.cancel"
   >
-    <Button element="danger" class="!text-white" @click="deleteDialog.confirm">Delete</Button>
+    <template #default>
+      <p>
+        This will delete your <span class="font-bold text-light-important">{{ character.name }}</span> build including
+        your checklist.
+      </p>
+    </template>
+    <template #buttons>
+      <Button element="danger" class="!text-white" @click="deleteDialog.confirm">Delete</Button>
+    </template>
   </Modal>
 </template>
 
