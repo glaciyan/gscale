@@ -15,6 +15,16 @@ export const Items: IdIndex<IItem> = {
     category: "none",
   },
 
+  onikabuto: { name: "Onikabuto", normalizedName: "onikabuto", rarity: 1, category: "local" },
+  riftborn_regalia: { name: "Riftborn Regalia", normalizedName: "riftborn_regalia", rarity: 4, category: "boss" },
+
+  fluorescent_fungus: {
+    name: "Fluorescent Fungus",
+    normalizedName: "fluorescent_fungus",
+    rarity: 1,
+    category: "local",
+  },
+
   spectral_nucleus: {
     name: "Spectral Nucleus",
     normalizedName: "spectral_nucleus",
