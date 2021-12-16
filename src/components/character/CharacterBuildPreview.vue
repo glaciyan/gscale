@@ -95,7 +95,7 @@ const edit = () => {
   <template v-if="!hidden">
     <ElementProvider :element="character.element">
       <div class="rounded-md flex flex-col bg-dark-700 shadow-md overflow-hidden">
-        <div class="flex flex-grow">
+        <div class="flex flex-grow <md:flex-col">
           <div class="sm:flex">
             <div class="flex min-h-32 relative sm:w-50">
               <div class="inset-x-0 top-0 absolute fading-out">
@@ -107,7 +107,7 @@ const edit = () => {
                   height="150"
                 />
               </div>
-              <div class="p-6 relative">
+              <div class="p-6 relative <sm:p-4">
                 <p class="font-bold text-lg text-light-important mb-2">{{ character.name }}</p>
                 <div class="space-y-2">
                   <RangeLevelDisplay :range="build.level" />
@@ -131,7 +131,7 @@ const edit = () => {
             </div>
           </div>
           <div class="bg-dark-600 w-full relative">
-            <div class="flex flex-wrap h-full h-max p-4">
+            <div class="flex flex-wrap h-full h-max p-4 <sm:p-3">
               <div v-if="checkList.loading.value" class="flex inset-0 absolute items-center justify-center">
                 <GSpinner />
               </div>
