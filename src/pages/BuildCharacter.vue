@@ -191,8 +191,8 @@ getAllCharacterItems(character.value).map((item) => {
               <div class="w-full">
                 <div v-if="submitError.message" class="mb-2">
                   <span class="text-red-400">{{ submitError.message }}</span>
-                  {{ " " }}
-                  <RouterLink :to="submitError.helpUrl" class="text-blue-400 hover:underline">Help</RouterLink>
+                  <!-- {{ " " }}
+                  <RouterLink :to="submitError.helpUrl" class="text-blue-400 hover:underline">Help</RouterLink> -->
                 </div>
                 <Button :isLoading="submitting" class="w-full" @click="handleSubmit">
                   {{ editId ? "Update" : "Build" }} {{ character.name }}

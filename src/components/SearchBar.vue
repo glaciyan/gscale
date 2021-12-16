@@ -16,7 +16,6 @@ const focus = () => {
       flex
       bg-dark-400
       shadow-md
-      mb-6
       w-full
       transition-shadow
       overflow-hidden

@@ -6,8 +6,8 @@ import { RouterLink } from "vue-router";
 </script>
 
 <template>
-  <Container as="header" class="flex space-x-2 h-28 items-center">
-    <RouterLink to="/" class="mr-16">
+  <Container as="header" class="flex flex-wrap space-x-2 h-28 items-center <sm:my-4">
+    <RouterLink to="/" class="mr-16 <sm:(ml-2)">
       <LogoWithLabel />
     </RouterLink>
     <Navigation orientation="verical" />

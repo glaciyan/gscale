@@ -19,7 +19,7 @@ const characters = computed(() => {
 
 <template>
   <Container>
-    <SearchBar v-model="search" placeholder="Search for Names, Materials, Elements, etc..." />
+    <SearchBar v-model="search" class="mb-6 <sm:mb-2" placeholder="Search for Names, Materials, Elements, etc..." />
     <p v-if="noSearchResults">No Results</p>
     <div v-else w:grid="cols-2 sm:cols-3 lg:cols-4 xl:cols-5" w:gap="5 <sm:2" class="grid">
       <CharacterCard v-for="character in characters" :key="character.normalizedName" :character="character" />
