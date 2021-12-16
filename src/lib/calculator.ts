@@ -48,7 +48,6 @@ export function calculateAscension(
   start: AscensionLevel,
   goal: AscensionLevel
 ): ItemWithAmount[] {
-  // this works like rusts match as expression https://doc.rust-lang.org/rust-by-example/flow_control/match.html
   const items: Partial<IStandardAscensionItems> = getStandardAscensionItems(character);
 
   const startAscension = getAscensionStage(start);
