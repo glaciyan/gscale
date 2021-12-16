@@ -12,7 +12,11 @@ const partial = computed(() => props.state === ItemCheckState.Partial);
 </script>
 
 <template>
-  <div class="cursor-pointer m-1 relative select-none" :title="itemWithAmount.item.name" @click="$emit('click', state)">
+  <div
+    class="cursor-pointer m-1 relative select-none"
+    :title="`${state === ItemCheckState.Partial ? '(Partial) ' : ''}${itemWithAmount.item.name}`"
+    @click="$emit('click', state)"
+  >
     <div
       :class="[
         'ring-inset hover:ring-2 transition-all absolute inset-0 rounded-md ring-green-400 flex items-center justify-center',
