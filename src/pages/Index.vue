@@ -5,10 +5,20 @@ import Container from "~/components/PageContainer";
 import SearchBar from "~/components/SearchBar.vue";
 import useCharacterSearch from "~/composites/useCharacterSearch";
 import SearchHelp from "~/components/TheSearchHelp.vue";
+import { breakpointsTailwind } from "@vueuse/core";
 
 //#region Search
 const search = ref("");
 const { result: filteredCharacters, noResults: noSearchResults } = useCharacterSearch(search, charactersViewModel);
+
+const breakpoints = useBreakpoints(breakpointsTailwind);
+const placeholder = computed(() => {
+  if (breakpoints.sm.value) {
+    return "Search for Names, Materials, Elements, etc...";
+  } else {
+    return "Search...";
+  }
+});
 //#endregion
 
 const characters = computed(() => {
@@ -40,7 +50,7 @@ const goToFirstCharacter = () => {
     <SearchBar
       v-model.trim="search"
       class="mb-6 <sm:mb-2"
-      placeholder="Search for Names, Materials, Elements, etc..."
+      :placeholder="placeholder"
       @keydown.enter="goToFirstCharacter"
     />
     <SearchHelp v-if="noSearchResults" :search="search" @click="mockSuggestClick" />
