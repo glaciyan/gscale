@@ -236,8 +236,16 @@
         "hash": "e510d20b88e069f99b2fba73e678f61419f60b2d"
     },
     {
+        "name": "./src/lib/data/images/characters/mugshot/gorou.webp",
+        "hash": "c7fd975bc6f72381a1477754fa2182b58afa14ce"
+    },
+    {
         "name": "./src/lib/data/images/characters/mugshot/hu_tao.png",
         "hash": "3b400d6ca502cabdefe35f2fc14344c7b48981ba"
+    },
+    {
+        "name": "./src/lib/data/images/characters/mugshot/itto.webp",
+        "hash": "46249f6cb72916c6677899f5a7e3963d15be2870"
     },
     {
         "name": "./src/lib/data/images/characters/mugshot/jean.png",
@@ -318,6 +326,10 @@
     {
         "name": "./src/lib/data/images/characters/mugshot/tartaglia.png",
         "hash": "b7e92834963b6f7ab4d52831c221aaa4dd2d0a43"
+    },
+    {
+        "name": "./src/lib/data/images/characters/mugshot/thoma.webp",
+        "hash": "511399b0b246d56719def43626480d342dd2f236"
     },
     {
         "name": "./src/lib/data/images/characters/mugshot/traveler.png",
