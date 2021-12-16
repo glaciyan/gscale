@@ -18,7 +18,7 @@ export default defineComponent({
 <template>
   <PopOver
     :open="isOpen"
-    backdropClass="fixed inset-0 bg-dark-900/80 z-[990] flex items-center justify-center"
+    backdropClass="fixed inset-0 bg-dark-900/80 z-90 flex items-center justify-center"
     transition="fade-slow"
     @close="$emit('close')"
   >

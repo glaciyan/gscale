@@ -3,7 +3,7 @@ import { ItemWithAmount } from "~/lib/types/ItemWithAmount";
 import millify from "~/lib/millify";
 import Image from "./GImage.vue";
 
-const props = defineProps<{ itemWithAmount: ItemWithAmount }>();
+const props = defineProps<{ itemWithAmount: ItemWithAmount; grayscale?: boolean }>();
 
 const amount = computed(() => millify(props.itemWithAmount.amount));
 </script>
@@ -12,7 +12,7 @@ const amount = computed(() => millify(props.itemWithAmount.amount));
   <div class="rounded flex flex-col bg-dark-400 m-1 shadow w-max items-center overflow-hidden">
     <div class="h-12 p-1 w-12">
       <Image
-        class="h-full object-contain w-full"
+        :class="['h-full object-contain w-full', { 'filter grayscale': grayscale }]"
         type="item"
         :name="itemWithAmount.item.normalizedName"
         width="40"

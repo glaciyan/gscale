@@ -50,13 +50,14 @@ defineEmits(["update:modelValue"]);
               m-0
               mt-1
               text-light-normal
-              max-h-96
+              max-h-[350px]
               p-0
               py-1
               z-30
               absolute
               overflow-y-auto
               custom-scrollbar
+              <sm:max-h-60
             "
           >
             <ListboxOption v-for="(option, index) in listItems" :key="id + index" v-slot="{ active }" :value="option">
