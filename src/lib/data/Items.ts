@@ -15,6 +15,139 @@ export const Items: IdIndex<IItem> = {
     category: "none",
   },
 
+  // Inazuma weapon materials
+  chaos_oculus: {
+    name: "Chaos Oculus",
+    normalizedName: "chaos_oculus",
+    rarity: 4,
+    groupId: "sentinel_gear",
+    category: "weaponCommon",
+  },
+  chaos_axis: {
+    name: "Chaos Axis",
+    normalizedName: "chaos_axis",
+    rarity: 3,
+    groupId: "sentinel_gear",
+    category: "weaponCommon",
+  },
+  chaos_gear: {
+    name: "Chaos Gear",
+    normalizedName: "chaos_gear",
+    rarity: 2,
+    groupId: "sentinel_gear",
+    category: "weaponCommon",
+  },
+
+  polarizing_prism: {
+    name: "Polarizing Prism",
+    normalizedName: "polarizing_prism",
+    rarity: 4,
+    groupId: "prism",
+    category: "weaponCommon",
+  },
+  crystal_prism: {
+    name: "Crystal Prism",
+    normalizedName: "crystal_prism",
+    rarity: 3,
+    groupId: "prism",
+    category: "weaponCommon",
+  },
+  dismal_prism: {
+    name: "Dismal Prism",
+    normalizedName: "dismal_prism",
+    rarity: 2,
+    groupId: "prism",
+    category: "weaponCommon",
+  },
+
+  concealed_talon: {
+    name: "Concealed Talon",
+    normalizedName: "concealed_talon",
+    rarity: 4,
+    groupId: "claw",
+    category: "weaponCommon",
+  },
+  concealed_unguis: {
+    name: "Concealed Unguis",
+    normalizedName: "concealed_unguis",
+    rarity: 3,
+    groupId: "claw",
+    category: "weaponCommon",
+  },
+  concealed_claw: {
+    name: "Concealed Claw",
+    normalizedName: "concealed_claw",
+    rarity: 2,
+    groupId: "claw",
+    category: "weaponCommon",
+  },
+
+  narukamis_affection: {
+    name: "Narukami's Affection",
+    normalizedName: "narukamis_affection",
+    rarity: 4,
+    groupId: "narukami",
+    category: "weaponAscension",
+  },
+  narukamis_joy: {
+    name: "Narukami's Joy",
+    normalizedName: "narukamis_joy",
+    rarity: 3,
+    groupId: "narukami",
+    category: "weaponAscension",
+  },
+  narukamis_wisdom: {
+    name: "Narukami's Wisdom",
+    normalizedName: "narukamis_wisdom",
+    rarity: 2,
+    groupId: "narukami",
+    category: "weaponAscension",
+  },
+
+  mask_of_the_one_horned: {
+    name: "Mask of the One-Horned",
+    normalizedName: "mask_of_the_one_horned",
+    rarity: 4,
+    groupId: "oni_mask",
+    category: "weaponAscension",
+  },
+  mask_of_the_tigers_bite: {
+    name: "Mask of the Tiger's Bite",
+    normalizedName: "Mask of the Tiger's Bite",
+    rarity: 3,
+    groupId: "oni_mask",
+    category: "weaponAscension",
+  },
+  mask_of_the_wicked_lieutenant: {
+    name: "Mask of the Wicked Lieutenant",
+    normalizedName: "mask_of_the_wicked_lieutenant",
+    rarity: 2,
+    groupId: "oni_mask",
+    category: "weaponAscension",
+  },
+
+  jade_branch_of_a_distant_sea: {
+    name: "Jade Branch of a Distant Sea",
+    normalizedName: "jade_branch_of_a_distant_sea",
+    rarity: 4,
+    groupId: "coral",
+    category: "weaponAscension",
+  },
+  jeweled_branch_of_a_distant_sea: {
+    name: "Jeweled Branch of a Distant Sea",
+    normalizedName: "jeweled_branch_of_a_distant_sea",
+    rarity: 3,
+    groupId: "coral",
+    category: "weaponAscension",
+  },
+  coral_branch_of_a_distant_sea: {
+    name: "Coral Branch of a Distant Sea",
+    normalizedName: "coral_branch_of_a_distant_sea",
+    rarity: 2,
+    groupId: "coral",
+    category: "weaponAscension",
+  },
+
   onikabuto: { name: "Onikabuto", normalizedName: "onikabuto", rarity: 1, category: "local" },
   riftborn_regalia: { name: "Riftborn Regalia", normalizedName: "riftborn_regalia", rarity: 4, category: "boss" },
 
