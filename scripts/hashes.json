@@ -464,6 +464,10 @@
         "hash": "c604434dbaf3cabf3fd6e538abc334b6e0f44542"
     },
     {
+        "name": "./src/lib/data/images/materials/chaos_axis.webp",
+        "hash": "7835e0088c74f431c88a2073632807a600c8487c"
+    },
+    {
         "name": "./src/lib/data/images/materials/chaos_circuit.png",
         "hash": "d560cbf799ce3a308e8487a3e0935b1340f25640"
     },
@@ -476,12 +480,36 @@
         "hash": "f46b960c66e2a4e18bf3a6f4d50f2af1ba4d1837"
     },
     {
+        "name": "./src/lib/data/images/materials/chaos_gear.webp",
+        "hash": "3b46f375810f955e2b048ea5f20673eca4437c48"
+    },
+    {
+        "name": "./src/lib/data/images/materials/chaos_oculus.webp",
+        "hash": "61cc3db05626457df705062da34d92c3f5dcde9a"
+    },
+    {
         "name": "./src/lib/data/images/materials/chunk_of_aerosiderite.png",
         "hash": "24f96d932d4583bb397c099ec99f3dedddf02067"
     },
     {
         "name": "./src/lib/data/images/materials/cleansing_heart.png",
         "hash": "3bc435f1181040b3908af9730dfca1b4d30ad263"
+    },
+    {
+        "name": "./src/lib/data/images/materials/concealed_claw.webp",
+        "hash": "3a86e453fdaee684bf1c92d1d7ea99c31db3baaa"
+    },
+    {
+        "name": "./src/lib/data/images/materials/concealed_talon.webp",
+        "hash": "a50bed5b95a6cf7ed47fc7eeff2097708cb7c286"
+    },
+    {
+        "name": "./src/lib/data/images/materials/concealed_unguis.webp",
+        "hash": "bfe636d8bf0f794166c3f2971cc8b3892c86287e"
+    },
+    {
+        "name": "./src/lib/data/images/materials/coral_branch_of_a_distant_sea.webp",
+        "hash": "a1868236132485f402391a166dd543bd755d68f3"
     },
     {
         "name": "./src/lib/data/images/materials/cor_lapis.png",
@@ -498,6 +526,10 @@
     {
         "name": "./src/lib/data/images/materials/crystal_marrow.png",
         "hash": "3e177674cff00d27978c764bac69dce289334c0d"
+    },
+    {
+        "name": "./src/lib/data/images/materials/crystal_prism.webp",
+        "hash": "89d9fc8feece38c32c32281e028af88da4cb279b"
     },
     {
         "name": "./src/lib/data/images/materials/damaged_mask.png",
@@ -526,6 +558,10 @@
     {
         "name": "./src/lib/data/images/materials/dew_of_repudiation.png",
         "hash": "bbe387c53e94d01a361bc654952af8f506fbea7e"
+    },
+    {
+        "name": "./src/lib/data/images/materials/dismal_prism.webp",
+        "hash": "f7b375e76c972c629e919ab1eb6ff409c53aae90"
     },
     {
         "name": "./src/lib/data/images/materials/divine_body_from_guyun.png",
@@ -684,6 +720,14 @@
         "hash": "643bf76ec5c5ff43bac1fb2f5dc479ae736c8be2"
     },
     {
+        "name": "./src/lib/data/images/materials/jade_branch_of_a_distant_sea.webp",
+        "hash": "4206250d65fac365275ae829968de6a9974499f1"
+    },
+    {
+        "name": "./src/lib/data/images/materials/jeweled_branch_of_a_distant_sea.webp",
+        "hash": "e80242ee2a39d451a5edfafab933ec5d239e4a8d"
+    },
+    {
         "name": "./src/lib/data/images/materials/jueyun_chili.png",
         "hash": "db7e025d86563009e46020a3cf94144dc056a2ee"
     },
@@ -718,6 +762,18 @@
     {
         "name": "./src/lib/data/images/materials/marionette_core.png",
         "hash": "a649873a17a9a99e466e4edad94acdee177561e1"
+    },
+    {
+        "name": "./src/lib/data/images/materials/mask_of_the_one_horned.webp",
+        "hash": "6ff831fd472ee9581a5a3cb0b3dd7cd5704da70b"
+    },
+    {
+        "name": "./src/lib/data/images/materials/mask_of_the_tigers_bite.webp",
+        "hash": "afc8c12e1b9584005cb6277f0526f71ec1200051"
+    },
+    {
+        "name": "./src/lib/data/images/materials/mask_of_the_wicked_lieutenant.webp",
+        "hash": "22434278ebb3a6034f037f4a48907a4c16fbca86"
     },
     {
         "name": "./src/lib/data/images/materials/mist_grass.png",
@@ -762,6 +818,18 @@
     {
         "name": "./src/lib/data/images/materials/naku_weed.png",
         "hash": "889bb9acb7548200e2c8099ec78a884fd9bfce50"
+    },
+    {
+        "name": "./src/lib/data/images/materials/narukamis_affection.webp",
+        "hash": "60cda265048dd191c47da8c75287c8d1fe556a2b"
+    },
+    {
+        "name": "./src/lib/data/images/materials/narukamis_joy.webp",
+        "hash": "eb51bf5bc7bbfd5457d95337936d1a204fcf18cc"
+    },
+    {
+        "name": "./src/lib/data/images/materials/narukamis_wisdom.webp",
+        "hash": "8cdcb75848ed121fbb875a473b2bf7dd3b560188"
     },
     {
         "name": "./src/lib/data/images/materials/noctilucous_jade.png",
@@ -830,6 +898,10 @@
     {
         "name": "./src/lib/data/images/materials/piece_of_aerosiderite.png",
         "hash": "e081919a229cf31cb1362578b9282a5f51d6c977"
+    },
+    {
+        "name": "./src/lib/data/images/materials/polarizing_prism.webp",
+        "hash": "1afe3a049424b2dad8cddbd88d38eeeae59af065"
     },
     {
         "name": "./src/lib/data/images/materials/primogem.png",
