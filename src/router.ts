@@ -3,6 +3,7 @@ import BuildCharacter from "./pages/BuildCharacter.vue";
 import Builds from "./pages/Builds.vue";
 import title from "./title";
 import { createRouter, createWebHistory } from "vue-router";
+import Privacy from "./assets/articles/privacy.md";
 
 // Define all routes here
 const routes = [
@@ -22,6 +23,13 @@ const routes = [
     component: Builds,
     meta: {
       title: title("Builds"),
+    },
+  },
+  {
+    path: "/privacy",
+    component: Privacy,
+    meta: {
+      title: title("Privacy"),
     },
   },
   {

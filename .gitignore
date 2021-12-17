@@ -5,6 +5,7 @@ dist-ssr
 *.local
 .vercel
 src/version.ts
+.obsidian
 
 # Logs
 logs

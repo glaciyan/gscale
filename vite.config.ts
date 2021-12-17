@@ -4,6 +4,7 @@ import vue from "@vitejs/plugin-vue";
 import windi from "vite-plugin-windicss";
 import svgLoader from "vite-svg-loader";
 import autoImport from "unplugin-auto-import/vite";
+import markdown from "vite-plugin-md";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -13,7 +14,12 @@ export default defineConfig({
     },
   },
   plugins: [
-    vue(),
+    vue({
+      include: [/\.vue$/, /\.md$/],
+    }),
+    markdown({
+      wrapperComponent: "GArticle",
+    }),
     windi(),
     svgLoader(),
     autoImport({
