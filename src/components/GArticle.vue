@@ -23,7 +23,7 @@ import PageContainer from "./PageContainer";
     @apply font-bold;
   }
   ul {
-    @apply list-disc ml-8;
+    @apply list-disc ml-8 p-0 mx-4;
   }
   a {
     @apply text-blue-400 hover:underline;
