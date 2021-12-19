@@ -2,7 +2,7 @@
 import ElementIcon from "~/components/icons/ElementIcon.vue";
 import SwordIcon from "~/components/icons/SwordIcon.vue";
 import { IBaseCharacter } from "~/lib/data/contracts/IBaseCharacter";
-import CharacterPortrait from "../character/CharacterPortrait.vue";
+import CharacterPortrait from "../GPortrait.vue";
 import IconWithText from "../IconWithText.vue";
 import TheClampedText from "../TheClampedText.vue";
 import Image from "../GImage.vue";
