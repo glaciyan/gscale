@@ -7,7 +7,7 @@ const rounding = ["rounded-t-md", { "rounded-b-md": props.rarity === undefined }
 </script>
 
 <template>
-  <div class="rounded-md bg-dark-500 w-[100px]">
+  <div class="rounded-md h-max bg-dark-500 w-[100px]">
     <div :class="['bg-dark-500', rounding]">
       <Image
         :class="[rounding, { '': weapon }]"
