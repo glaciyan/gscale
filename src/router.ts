@@ -25,17 +25,6 @@ const routes = [
     },
   },
   {
-    path: "/weapons",
-    component: () => import("./pages/weapon/Weapons.vue"),
-    meta: {
-      title: title("Weapons"),
-    },
-  },
-  {
-    path: "/build/weapon/:weapon",
-    component: () => import("./pages/weapon/BuildWeapon.vue"),
-  },
-  {
     path: "/:pathMatch(.*)*",
     name: "NotFound",
     component: () => import("./pages/NotFound.vue"),
