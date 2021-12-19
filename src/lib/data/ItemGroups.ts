@@ -4,6 +4,35 @@ import { Items } from "./Items";
 
 export const ItemGroups: IdIndex<IItemGroup> = {
   unknown: { normalizedName: "unknown", itemIds: [Items.unknown, Items.unknown, Items.unknown, Items.unknown] },
+
+  sentinel_gear: {
+    normalizedName: "sentinel_gear",
+    itemIds: [Items.chaos_gear, Items.chaos_axis, Items.chaos_oculus],
+  },
+  prism: {
+    normalizedName: "prism",
+    itemIds: [Items.dismal_prism, Items.crystal_prism, Items.polarizing_prism],
+  },
+  oni_mask: {
+    normalizedName: "oni_mask",
+    itemIds: [Items.mask_of_the_wicked_lieutenant, Items.mask_of_the_tigers_bite, Items.mask_of_the_one_horned],
+  },
+  coral: {
+    normalizedName: "coral",
+    itemIds: [
+      Items.coral_branch_of_a_distant_sea,
+      Items.jeweled_branch_of_a_distant_sea,
+      Items.jade_branch_of_a_distant_sea,
+    ],
+  },
+  claw: {
+    normalizedName: "claw",
+    itemIds: [Items.concealed_claw, Items.concealed_unguis, Items.concealed_talon],
+  },
+  narukami: {
+    normalizedName: "narukami",
+    itemIds: [Items.narukamis_wisdom, Items.narukamis_joy, Items.narukamis_affection],
+  },
   spectral: {
     normalizedName: "spectral",
     itemIds: [Items.spectral_nucleus, Items.spectral_heart, Items.spectral_husk],
