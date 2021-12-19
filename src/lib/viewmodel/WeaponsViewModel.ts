@@ -2,6 +2,10 @@ import { IWeapon } from "../data/contracts/IWeapon";
 import { Weapons } from "../data/Weapons";
 
 export const weaponsViewModel: IWeapon[] = [
+  Weapons.redhorn_stonethresher,
+  Weapons.wavebreakers_fin,
+  Weapons.mouuns_moon,
+  Weapons.cinnabar_spindle,
   Weapons.akuoumaru,
   Weapons.polar_star,
   Weapons.luxurious_sea_lord,
