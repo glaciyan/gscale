@@ -3,6 +3,15 @@ const fs = require("fs");
 const crypto = require("crypto");
 const lastHashes = JSON.parse(fs.readFileSync("./scripts/hashes.json").toString());
 
+async function main() {
+  await build("./src/lib/data/images/characters/card", "images:characters:build");
+  await build("./src/lib/data/images/characters/mugshot", "images:mugshot:build");
+  await build("./src/lib/data/images/materials", "images:items:build");
+  await build("./src/lib/data/images/weapons", "images:weapons:build");
+
+  writeHashesFile();
+}
+
 const builtImages = [];
 
 function writeHashesFile() {
@@ -20,8 +29,6 @@ function filterFilesNeedingBuild(from) {
 
   builtImages.push(...hashes);
 
-  console.log(hashes);
-
   // return file names which have been changed or are missing
   return hashes
     .filter((val) => {
@@ -31,22 +38,20 @@ function filterFilesNeedingBuild(from) {
 }
 
 function build(source, command) {
+  console.log(`Building ${source} with ${command}`);
   const missing = filterFilesNeedingBuild(source);
-  console.log(`\n\nMissing Images\n---\n${missing}\n---\n`);
+  // console.log(`\n\nMissing Images\n---\n${missing.join("\n")}\n---\n`);
 
-  missing.map((file) => {
-    console.log(`Building ${file}`);
-    exec(`yarn ${command} ${file}`, (err, stdout, stderr) => {
+  return new Promise((resolve, reject) => {
+    exec(`yarn ${command} ${missing.join(" ")}`, (err, stdout, stderr) => {
       if (err) {
-        console.error(`Couldn't build ${file}\n--error--\n${stderr}\n---end of error---`);
-      } else console.log(`Done building ${file}`);
+        reject("Couldn't build files");
+      } else {
+        console.log(`Finished ${command}`);
+        resolve();
+      }
     });
   });
 }
 
-build("./src/lib/data/images/characters/card", "images:characters:build");
-build("./src/lib/data/images/characters/mugshot", "images:mugshot:build");
-build("./src/lib/data/images/materials", "images:items:build");
-build("./src/lib/data/images/weapons", "images:weapons:build");
-
-writeHashesFile();
+main();
