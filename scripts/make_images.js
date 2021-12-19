@@ -16,6 +16,7 @@ const builtImages = [];
 
 function writeHashesFile() {
   fs.writeFileSync("./scripts/hashes.json", JSON.stringify(builtImages, null, 4));
+  console.log("Wrote hashes");
 }
 
 function filterFilesNeedingBuild(from) {
@@ -38,19 +39,21 @@ function filterFilesNeedingBuild(from) {
 }
 
 function build(source, command) {
-  console.log(`Building ${source} with ${command}`);
   const missing = filterFilesNeedingBuild(source);
-  // console.log(`\n\nMissing Images\n---\n${missing.join("\n")}\n---\n`);
 
   return new Promise((resolve, reject) => {
-    exec(`yarn ${command} ${missing.join(" ")}`, (err, stdout, stderr) => {
-      if (err) {
-        reject("Couldn't build files");
-      } else {
-        console.log(`Finished ${command}`);
-        resolve();
-      }
-    });
+    if (missing.length === 0) resolve();
+    else {
+      console.log(`Building ${source} with ${command} (${missing.length} missing or changed images)`);
+      exec(`yarn ${command} ${missing.join(" ")}`, (err, stdout, stderr) => {
+        if (err) {
+          reject(err);
+        } else {
+          console.log(`Finished ${command}`);
+          resolve();
+        }
+      });
+    }
   });
 }
 
