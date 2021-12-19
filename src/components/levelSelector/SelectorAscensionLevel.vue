@@ -29,6 +29,8 @@ const cannotAscend = computed(() => {
 const levels = computed(() => {
   return AllLevels.filter((l) => compareAscension(l, props.maxLevel).isLessOrEqual());
 });
+
+// TODO if necessary correct modelValue if maxLevel has changed
 </script>
 
 <template>
