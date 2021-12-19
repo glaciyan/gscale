@@ -7,7 +7,7 @@ import { weaponsViewModel } from "~/lib/viewmodel/WeaponsViewModel";
 <template>
   <PageContainer size="md">
     <p class="font-bold mb-2 text-lg">Weapons (Beta)</p>
-    <div class="flex flex-wrap">
+    <div class="flex flex-wrap justify-center">
       <template v-for="weapon in weaponsViewModel" :key="weapon.normalizedName">
         <WeaponCard :weapon="weapon" />
       </template>
