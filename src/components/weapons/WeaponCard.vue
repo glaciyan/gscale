@@ -7,7 +7,7 @@ defineProps<{ weapon: IWeapon }>();
 
 <template>
   <div>
-    <p>{{ weapon.name }}</p>
+    <p>{{ weapon.normalizedName }}</p>
     <GPortrait :normalizedName="weapon.normalizedName" :rarity="weapon.rarity" weapon />
   </div>
 </template>
