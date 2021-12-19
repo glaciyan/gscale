@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { AscensionLevel } from "~/lib/types/AscensionLevel";
-import Levels from "~/lib/data/Levels";
+import AllLevels from "~/lib/data/Levels";
 import AscensionCheckbox from "../CheckboxAscension.vue";
 import CustomSelector from "../SelectorCustom.vue";
 import AscensionLevelDisplay from "../AscensionLevelDisplay.vue";
@@ -26,15 +26,15 @@ const cannotAscend = computed(() => {
   );
 });
 
-const listItems = computed(() => {
-  return Levels.filter((l) => compareAscension(l, props.maxLevel).isLessOrEqual());
+const levels = computed(() => {
+  return AllLevels.filter((l) => compareAscension(l, props.maxLevel).isLessOrEqual());
 });
 </script>
 
 <template>
   <CustomSelector
     :modelValue="modelValue"
-    :listItems="listItems"
+    :listItems="levels"
     :class="$attrs.class"
     @update:modelValue="$emit('update:modelValue', $event)"
   >
