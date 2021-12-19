@@ -9,6 +9,7 @@ defineProps<{
   start: AscensionLevel;
   goal: AscensionLevel;
   element?: string;
+  max?: AscensionLevel;
 }>();
 
 defineEmits(["update:start", "update:goal"]);
@@ -19,6 +20,7 @@ defineEmits(["update:start", "update:goal"]);
     <SelectorAscensionLevel
       class="rounded-l-md"
       :modelValue="start"
+      :maxLevel="max"
       @update:modelValue="$emit('update:start', $event)"
     />
     <SelectorIconSeperator :element="element">
@@ -27,6 +29,7 @@ defineEmits(["update:start", "update:goal"]);
     <SelectorAscensionLevel
       cbClass="rounded-r-md"
       :modelValue="goal"
+      :maxLevel="max"
       @update:modelValue="$emit('update:goal', $event)"
     />
   </SelectorGroup>
