@@ -8,7 +8,7 @@ const navigation: { path: string; name: string }[] = [
   },
   {
     path: "/builds",
-    name: "Builds",
+    name: "Your Builds",
   },
 ];
 </script>
