@@ -17,15 +17,15 @@ const partial = computed(() => props.state === ItemCheckState.Partial);
     :title="`${state === ItemCheckState.Partial ? '(Partial) ' : ''}${itemWithAmount.item.name}`"
     @click="$emit('click', state)"
   >
+    <ItemCard :itemWithAmount="itemWithAmount" :grayscale="done" class="!m-0" />
     <div
       :class="[
-        'ring-inset hover:ring-2 transition-all absolute inset-0 rounded-md z-10 ring-green-400 flex items-center justify-center',
+        'ring-inset hover:ring-2 transition-all absolute inset-0 rounded-md ring-green-400 flex items-center justify-center',
         { 'ring !hover:ring bg-black/30 text-green-400': done },
         { 'ring-2 hover:(ring-green-400) ring-yellow-200': partial },
       ]"
     >
       <CheckIcon v-if="done" />
     </div>
-    <ItemCard :itemWithAmount="itemWithAmount" :grayscale="done" class="!m-0" />
   </div>
 </template>
