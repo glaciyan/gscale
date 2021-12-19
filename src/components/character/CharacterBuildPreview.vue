@@ -108,7 +108,14 @@ const edit = () => {
                 />
               </div>
               <div class="p-6 relative <sm:p-4">
-                <p class="font-bold text-lg text-light-important mb-2">{{ character.name }}</p>
+                <p class="font-bold text-lg text-light-important mb-2">
+                  {{ character.name
+                  }}<span
+                    v-if="character.isTraveler"
+                    :class="`text-genshin-element-${character.element.normalizedName}`"
+                    >{{ " " }}{{ character.element.name }}</span
+                  >
+                </p>
                 <div class="-m-1">
                   <RangeLevelDisplay class="m-1" :range="build.level" />
                   <div class="flex flex-wrap">
