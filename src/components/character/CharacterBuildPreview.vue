@@ -148,7 +148,7 @@ const edit = () => {
             </div>
           </div>
         </div>
-        <div class="flex bg-dark-600/70 border-t-2 border-dark-400 py-3 px-6 justify-end">
+        <div class="flex bg-dark-600/70 border-t-2 border-dark-300 py-3 px-6 justify-end">
           <Button look="ghost" element="neutral" class="mr-2 !h-9 !text-light-ternary" @click="deleteDialog.reveal">
             Delete
           </Button>
