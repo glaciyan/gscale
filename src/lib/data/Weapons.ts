@@ -1397,4 +1397,15 @@ export const Weapons: IdIndex<IWeapon> = {
     weaponCommon: ItemGroups.claw,
     generalCommon: ItemGroups.handguard,
   },
+
+  error: {
+    name: "",
+    normalizedName: "error",
+    rarity: 4,
+    weaponType: WeaponTypes.claymore,
+    sub: "ATK",
+    weaponAscensionGroup: ItemGroups.coral,
+    weaponCommon: ItemGroups.claw,
+    generalCommon: ItemGroups.handguard,
+  },
 };

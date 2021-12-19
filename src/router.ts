@@ -32,6 +32,10 @@ const routes = [
     },
   },
   {
+    path: "/build/weapon/:weapon",
+    component: () => import("./pages/weapon/BuildWeapon.vue"),
+  },
+  {
     path: "/:pathMatch(.*)*",
     name: "NotFound",
     component: () => import("./pages/NotFound.vue"),
