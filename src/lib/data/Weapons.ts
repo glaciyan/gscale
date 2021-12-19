@@ -4,6 +4,47 @@ import { ItemGroups } from "./ItemGroups";
 import { WeaponTypes } from "./WeaponTypes";
 
 export const Weapons: IdIndex<IWeapon> = {
+  wavebreakers_fin: {
+    name: "Wavebreaker's Fin",
+    normalizedName: "wavebreakers_fin",
+    rarity: 4,
+    weaponType: WeaponTypes.polearm,
+    sub: "ATK",
+    weaponAscensionGroup: ItemGroups.oni_mask,
+    weaponCommon: ItemGroups.claw,
+    generalCommon: ItemGroups.handguard,
+  },
+  mouuns_moon: {
+    name: "Mouun's Moon",
+    normalizedName: "mouuns_moon",
+    rarity: 4,
+    weaponType: WeaponTypes.bow,
+    sub: "ATK",
+    weaponAscensionGroup: ItemGroups.narukami,
+    weaponCommon: ItemGroups.prism,
+    generalCommon: ItemGroups.spectral,
+  },
+  cinnabar_spindle: {
+    name: "Cinnabar Spindle",
+    normalizedName: "cinnabar_spindle",
+    rarity: 4,
+    weaponType: WeaponTypes.sword,
+    sub: "DEF",
+    weaponAscensionGroup: ItemGroups.decarabians,
+    weaponCommon: ItemGroups.chaos,
+    generalCommon: ItemGroups.mask,
+  },
+  redhorn_stonethresher: {
+    name: "Redhorn Stonethresher",
+    normalizedName: "redhorn_stonethresher",
+    rarity: 5,
+    weaponType: WeaponTypes.claymore,
+    sub: "CRIT DMG",
+    weaponAscensionGroup: ItemGroups.narukami,
+    weaponCommon: ItemGroups.claw,
+    generalCommon: ItemGroups.handguard,
+  },
+
   wolfs_gravestone: {
     name: "Wolf's Gravestone",
     normalizedName: "wolfs_gravestone",

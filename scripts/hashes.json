@@ -1248,6 +1248,10 @@
         "hash": "47516242743455f3ceca1b37c78759baa449f56e"
     },
     {
+        "name": "./src/lib/data/images/weapons/cinnabar_spindle.webp",
+        "hash": "874f96fb1511a0cff9c47c650371d954803df42a"
+    },
+    {
         "name": "./src/lib/data/images/weapons/compound_bow.png",
         "hash": "b9743836e80ce063547bceab888828d365bfa8cc"
     },
@@ -1428,6 +1432,10 @@
         "hash": "684f5ffd2cb3c8d39acec26a6dc0927914a122aa"
     },
     {
+        "name": "./src/lib/data/images/weapons/mouuns_moon.webp",
+        "hash": "5fbbb266eb4ae985454d7d5781d6703b1af92539"
+    },
+    {
         "name": "./src/lib/data/images/weapons/old_mercs_pal.png",
         "hash": "6f1e78b084a04d65f1a313a27ee1bc49ec547b49"
     },
@@ -1490,6 +1498,10 @@
     {
         "name": "./src/lib/data/images/weapons/recurve_bow.png",
         "hash": "d603aecde28c475628f0287329a3d1be9ff04998"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/redhorn_stonethresher.webp",
+        "hash": "d0fc274565071c6049f02eb6488ee78e1ee2bc0d"
     },
     {
         "name": "./src/lib/data/images/weapons/royal_bow.png",
@@ -1662,6 +1674,10 @@
     {
         "name": "./src/lib/data/images/weapons/waster_greatsword.png",
         "hash": "ba4c0f53544f5250eec6f50d22aa8139b1f470c2"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/wavebreakers_fin.webp",
+        "hash": "2fe8a66b4804fc07f3b65e1157b53e9123474f56"
     },
     {
         "name": "./src/lib/data/images/weapons/whiteblind.png",
