@@ -12,7 +12,7 @@ const elementTextColor = computed(() => `text-genshin-element-${props.character.
 </script>
 
 <template>
-  <aside class="flex flex-col h-full bg-dark-700 px-6 pt-4 pb-6 relative">
+  <aside class="flex flex-col bg-dark-700 px-6 pt-4 pb-6 relative">
     <div aria-hidden="true" class="h-32 w-full opacity-50 inset-x-0 top-0 absolute">
       <Image
         class="h-full object-cover w-full"

@@ -153,18 +153,7 @@ getAllCharacterItems(character.value).map((item) => {
       <div class="rounded-md w-full overflow-hidden lg:flex lg:h-[48rem]">
         <div class="flex <sm:block">
           <TheCharacterDetailPanel :character="character" />
-          <section
-            class="
-              flex flex-col flex-grow
-              bg-dark-600
-              border-dark-200
-              text-dark-50
-              sm:(w-[20rem]
-              border-r-2)
-              <sm:border-bbui-2
-              lg:(flex-grow-0)
-            "
-          >
+          <section class="flex flex-col flex-grow bg-dark-600 text-dark-50 sm:w-[20rem] lg:flex-grow-0">
             <div class="flex flex-col h-full p-6 justify-between">
               <div>
                 <div class="space-y-6">
@@ -203,7 +192,19 @@ getAllCharacterItems(character.value).map((item) => {
             </div>
           </section>
         </div>
-        <section class="bg-dark-600 w-full p-6 overflow-y-auto custom-scrollbar <sm:p-4">
+        <section
+          class="
+            bg-dark-600
+            border-dark-300
+            w-full
+            p-6
+            overflow-y-auto
+            custom-scrollbar
+            <sm:p-4
+            lg:border-l-2
+            <lg:border-t-2
+          "
+        >
           <span class="font-semibold text-light-important">Material Preview</span>
           <div v-if="total.length !== 0" class="flex flex-col">
             <ItemListHeader title="Total" class="font-semibold">

@@ -108,7 +108,14 @@ const edit = () => {
                 />
               </div>
               <div class="p-6 relative <sm:p-4">
-                <p class="font-bold text-lg text-light-important mb-2">{{ character.name }}</p>
+                <p class="font-bold text-lg text-light-important mb-2">
+                  {{ character.name
+                  }}<span
+                    v-if="character.isTraveler"
+                    :class="`text-genshin-element-${character.element.normalizedName}`"
+                    >{{ " " }}{{ character.element.name }}</span
+                  >
+                </p>
                 <div class="-m-1">
                   <RangeLevelDisplay class="m-1" :range="build.level" />
                   <div class="flex flex-wrap">
@@ -141,7 +148,7 @@ const edit = () => {
             </div>
           </div>
         </div>
-        <div class="flex bg-dark-600/70 border-t-2 border-dark-400 py-3 px-6 justify-end">
+        <div class="flex bg-dark-600/70 border-t-2 border-dark-300 py-3 px-6 justify-end">
           <Button look="ghost" element="neutral" class="mr-2 !h-9 !text-light-ternary" @click="deleteDialog.reveal">
             Delete
           </Button>
