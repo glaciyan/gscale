@@ -14,6 +14,7 @@ import version from "~/version";
       <div w:grid="cols-1 sm:cols-2 xl:cols-4" class="grid gap-12">
         <FooterSection title="Pages">
           <GLink to="/" isRouter gray>Characters</GLink>
+          <GLink to="/weapons" isRouter gray>Weapons</GLink>
           <GLink to="/builds" isRouter gray>Your Builds</GLink>
           <GLink to="/privacy" isRouter gray>Privacy</GLink>
         </FooterSection>
