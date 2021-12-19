@@ -26,7 +26,7 @@ const routes = [
   },
   {
     path: "/weapons",
-    component: () => import("./pages/Weapons.vue"),
+    component: () => import("./pages/weapon/Weapons.vue"),
     meta: {
       title: title("Weapons"),
     },
