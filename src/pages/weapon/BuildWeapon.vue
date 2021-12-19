@@ -47,7 +47,7 @@ const total = computed(() => []);
         <div class="flex flex-col space-y-4 justify-around sm:px-4">
           <p class="font-bold text-light-important">{{ weapon.name }}</p>
           <RangeLevel v-model:start="level.start" v-model:goal="level.goal" :max="maxLevel" />
-          <Button class="w-max">Build {{ weapon.name }}</Button>
+          <Button class="w-max">Save</Button>
         </div>
       </section>
       <section class="bg-dark-600 w-full p-6 overflow-y-auto custom-scrollbar <sm:p-4">
