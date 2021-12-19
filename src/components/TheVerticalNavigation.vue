@@ -7,10 +7,6 @@ const navigation: { path: string; name: string }[] = [
     name: "Characters",
   },
   {
-    path: "/weapons",
-    name: "Weapons",
-  },
-  {
     path: "/builds",
     name: "Builds",
   },
@@ -35,7 +31,7 @@ const navigation: { path: string; name: string }[] = [
         hover:(text-light-normal
         bg-dark-500/50
         shadow-sm)
-      "
+        "
     >
       {{ nav.name }}
     </RouterLink>
