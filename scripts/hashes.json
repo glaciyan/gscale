@@ -464,6 +464,10 @@
         "hash": "c604434dbaf3cabf3fd6e538abc334b6e0f44542"
     },
     {
+        "name": "./src/lib/data/images/materials/chaos_axis.webp",
+        "hash": "7835e0088c74f431c88a2073632807a600c8487c"
+    },
+    {
         "name": "./src/lib/data/images/materials/chaos_circuit.png",
         "hash": "d560cbf799ce3a308e8487a3e0935b1340f25640"
     },
@@ -476,12 +480,36 @@
         "hash": "f46b960c66e2a4e18bf3a6f4d50f2af1ba4d1837"
     },
     {
+        "name": "./src/lib/data/images/materials/chaos_gear.webp",
+        "hash": "3b46f375810f955e2b048ea5f20673eca4437c48"
+    },
+    {
+        "name": "./src/lib/data/images/materials/chaos_oculus.webp",
+        "hash": "61cc3db05626457df705062da34d92c3f5dcde9a"
+    },
+    {
         "name": "./src/lib/data/images/materials/chunk_of_aerosiderite.png",
         "hash": "24f96d932d4583bb397c099ec99f3dedddf02067"
     },
     {
         "name": "./src/lib/data/images/materials/cleansing_heart.png",
         "hash": "3bc435f1181040b3908af9730dfca1b4d30ad263"
+    },
+    {
+        "name": "./src/lib/data/images/materials/concealed_claw.webp",
+        "hash": "3a86e453fdaee684bf1c92d1d7ea99c31db3baaa"
+    },
+    {
+        "name": "./src/lib/data/images/materials/concealed_talon.webp",
+        "hash": "a50bed5b95a6cf7ed47fc7eeff2097708cb7c286"
+    },
+    {
+        "name": "./src/lib/data/images/materials/concealed_unguis.webp",
+        "hash": "bfe636d8bf0f794166c3f2971cc8b3892c86287e"
+    },
+    {
+        "name": "./src/lib/data/images/materials/coral_branch_of_a_distant_sea.webp",
+        "hash": "a1868236132485f402391a166dd543bd755d68f3"
     },
     {
         "name": "./src/lib/data/images/materials/cor_lapis.png",
@@ -498,6 +526,10 @@
     {
         "name": "./src/lib/data/images/materials/crystal_marrow.png",
         "hash": "3e177674cff00d27978c764bac69dce289334c0d"
+    },
+    {
+        "name": "./src/lib/data/images/materials/crystal_prism.webp",
+        "hash": "89d9fc8feece38c32c32281e028af88da4cb279b"
     },
     {
         "name": "./src/lib/data/images/materials/damaged_mask.png",
@@ -526,6 +558,10 @@
     {
         "name": "./src/lib/data/images/materials/dew_of_repudiation.png",
         "hash": "bbe387c53e94d01a361bc654952af8f506fbea7e"
+    },
+    {
+        "name": "./src/lib/data/images/materials/dismal_prism.webp",
+        "hash": "f7b375e76c972c629e919ab1eb6ff409c53aae90"
     },
     {
         "name": "./src/lib/data/images/materials/divine_body_from_guyun.png",
@@ -684,6 +720,14 @@
         "hash": "643bf76ec5c5ff43bac1fb2f5dc479ae736c8be2"
     },
     {
+        "name": "./src/lib/data/images/materials/jade_branch_of_a_distant_sea.webp",
+        "hash": "4206250d65fac365275ae829968de6a9974499f1"
+    },
+    {
+        "name": "./src/lib/data/images/materials/jeweled_branch_of_a_distant_sea.webp",
+        "hash": "e80242ee2a39d451a5edfafab933ec5d239e4a8d"
+    },
+    {
         "name": "./src/lib/data/images/materials/jueyun_chili.png",
         "hash": "db7e025d86563009e46020a3cf94144dc056a2ee"
     },
@@ -718,6 +762,18 @@
     {
         "name": "./src/lib/data/images/materials/marionette_core.png",
         "hash": "a649873a17a9a99e466e4edad94acdee177561e1"
+    },
+    {
+        "name": "./src/lib/data/images/materials/mask_of_the_one_horned.webp",
+        "hash": "6ff831fd472ee9581a5a3cb0b3dd7cd5704da70b"
+    },
+    {
+        "name": "./src/lib/data/images/materials/mask_of_the_tigers_bite.webp",
+        "hash": "afc8c12e1b9584005cb6277f0526f71ec1200051"
+    },
+    {
+        "name": "./src/lib/data/images/materials/mask_of_the_wicked_lieutenant.webp",
+        "hash": "22434278ebb3a6034f037f4a48907a4c16fbca86"
     },
     {
         "name": "./src/lib/data/images/materials/mist_grass.png",
@@ -762,6 +818,18 @@
     {
         "name": "./src/lib/data/images/materials/naku_weed.png",
         "hash": "889bb9acb7548200e2c8099ec78a884fd9bfce50"
+    },
+    {
+        "name": "./src/lib/data/images/materials/narukamis_affection.webp",
+        "hash": "60cda265048dd191c47da8c75287c8d1fe556a2b"
+    },
+    {
+        "name": "./src/lib/data/images/materials/narukamis_joy.webp",
+        "hash": "eb51bf5bc7bbfd5457d95337936d1a204fcf18cc"
+    },
+    {
+        "name": "./src/lib/data/images/materials/narukamis_wisdom.webp",
+        "hash": "8cdcb75848ed121fbb875a473b2bf7dd3b560188"
     },
     {
         "name": "./src/lib/data/images/materials/noctilucous_jade.png",
@@ -830,6 +898,10 @@
     {
         "name": "./src/lib/data/images/materials/piece_of_aerosiderite.png",
         "hash": "e081919a229cf31cb1362578b9282a5f51d6c977"
+    },
+    {
+        "name": "./src/lib/data/images/materials/polarizing_prism.webp",
+        "hash": "1afe3a049424b2dad8cddbd88d38eeeae59af065"
     },
     {
         "name": "./src/lib/data/images/materials/primogem.png",
@@ -1118,5 +1190,517 @@
     {
         "name": "./src/lib/data/images/materials/wolfhook.png",
         "hash": "27313dd15b3c6df2955ccf6b35d8cb38c9422bc0"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/akuoumaru.webp",
+        "hash": "c6e4b97c4c5b173b0c4ecc8880f0691b3de18bd4"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/alley_hunter.png",
+        "hash": "23bd20d5c73b102d9177db466a96877e0ec6895e"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/amenoma_kageuchi.webp",
+        "hash": "ffc63e3605586a25ff4e39bc726a3c9bc28ccd52"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/amos_bow.png",
+        "hash": "45a4e7ba6dcd8a1ce772abaf8ea10812ee4f3354"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/apprentices_notes.png",
+        "hash": "7b8a35409a77629976f6ce573efec588fd8d85e4"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/aquila_favonia.png",
+        "hash": "e776efcaa3d5ac7a836e4364d4a936d5813bd602"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/beginners_protector.png",
+        "hash": "e57943377cb648f147f9f804970ccd17181117a0"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/blackcliff_agate.png",
+        "hash": "e7e3f1e8d6f13b98f750f7cc12f8711a008613fe"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/blackcliff_longsword.png",
+        "hash": "5f657588f593f8658900afbbb1dfe9a890a299a5"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/blackcliff_pole.png",
+        "hash": "05d82b50cdfb2791c99f5be7b06159307afbb45b"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/blackcliff_slasher.png",
+        "hash": "62eb16e99798f353f093091f139ad389dbb4064c"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/blackcliff_warbow.png",
+        "hash": "76be57745dcb6c5678461e62515fbb5f67ac2fbb"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/black_tassel.png",
+        "hash": "946e18cb2905a1941f00e5c8df496e476d6c60a9"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/bloodtainted_greatsword.png",
+        "hash": "47516242743455f3ceca1b37c78759baa449f56e"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/cinnabar_spindle.webp",
+        "hash": "874f96fb1511a0cff9c47c650371d954803df42a"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/compound_bow.png",
+        "hash": "b9743836e80ce063547bceab888828d365bfa8cc"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/cool_steel.png",
+        "hash": "87ebf5008b056f9b2e63eece606037b5836e2067"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/crescent_pike.png",
+        "hash": "4b761c5eddb52ea722317b6d8fed8af88390b909"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/dark_iron_sword.png",
+        "hash": "2c10366058b7c3b25632c977f4d6f7ddf23678aa"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/deathmatch.png",
+        "hash": "aa919189d1cd9bd72eb4ca65639b471871001d69"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/debate_club.png",
+        "hash": "22ee1ee48f0b19b9998d8e1d14d3ea55f513a3d4"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/dodoco_tales.webp",
+        "hash": "117c7a76bcf7e7e93e70ab02dcffe7646d5c74af"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/dragonspine_spear.png",
+        "hash": "6571a7ad88003660037a5633e2cb3ae52b29ec63"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/dragons_bane.png",
+        "hash": "aef6e484907b58975e4aad50008c96ee11535e69"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/dull_blade.png",
+        "hash": "f29a323e9a9f3c166b4872be4ee9075bdddb5da9"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/elegy_for_the_end.png",
+        "hash": "dde3c6019f274e733729585d054eee2ebd78d3b0"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/emerald_orb.png",
+        "hash": "7a86436bd0deb601c2288776db2eabe6f426b3a5"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/engulfing_lightning.webp",
+        "hash": "5909a8125c6e2fd34359fc663cacd4513d4d3896"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/everlasting_moonglow.webp",
+        "hash": "4f03673a9a938896e7e7f47abbd824acf3ed8d02"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/eye_of_perception.png",
+        "hash": "0dbd6d604ea658840078f6757192d2d18b1348dd"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/favonius_codex.png",
+        "hash": "f6a2f529236ff8b3ed1c0b009ae73b3b8b2949c8"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/favonius_greatsword.png",
+        "hash": "da40e4df0b7fca9d32f5d7f71b69c726e38fcc3c"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/favonius_lance.png",
+        "hash": "6b08441da2f700d2c14621c3149a8a535860e730"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/favonius_sword.png",
+        "hash": "5e58002b9a89fecad29300652c85dd0b42d3014d"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/favonius_warbow.png",
+        "hash": "d3f78b2e0143bc4ae038c103eeca5b240e872fb6"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/ferrous_shadow.png",
+        "hash": "176ad2a146bfd90a63cca600e6a93710136e9e7b"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/festering_desire.png",
+        "hash": "73f603b85e2ac4b7c7828607824b6a73b4309881"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/fillet_blade.png",
+        "hash": "2873e81206d59fdf1aa502ec23faf7d04f913dbc"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/freedom_sworn.webp",
+        "hash": "50e3ec624b0bd335fe2a441222d49129814b1568"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/frostbearer.png",
+        "hash": "2b6ab32606734ad545c969057b719c1c98b60f47"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/hakushin_ring.webp",
+        "hash": "3e9ed380ec1ade75edcbee9cf085bfd7b05c217e"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/halberd.png",
+        "hash": "266453f97418fcd7ef5f1ab7075f380243bfa21c"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/hamayumi.webp",
+        "hash": "ed10ed01b6846b645aa81e5a6128e40a5830479d"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/harbinger_of_dawn.png",
+        "hash": "b8a2e5855442f8e5af3e93c147fe7362fd215429"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/hunters_bow.png",
+        "hash": "e339c6f3c8c9d5a904d5a94e1c0ec83d97aa5ccd"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/iron_point.png",
+        "hash": "46b3a3da9da786be30c25cf2199d00b82d0396cd"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/iron_sting.png",
+        "hash": "c540d1eed22da738fb7bfde74e8fc57e06a2687c"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/katsuragikiri_nagamasa.webp",
+        "hash": "9cb84b9cb367a8314b3e3695544c837ad979fcbd"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/kitain_cross_spear.webp",
+        "hash": "9a7fb61c4e00110d68d5b856b4b0b48f0c8bb076"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/lions_roar.png",
+        "hash": "5b1ef839b9791db11394d56652213f52495635e5"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/lithic_blade.png",
+        "hash": "ce33846bc531bc22482c2d632a3e4729acad832e"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/lithic_spear.png",
+        "hash": "fbb35cd7ad147890d8b60b8bd9c7797c26c71c9f"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/lost_prayer_to_the_sacred_winds.png",
+        "hash": "2c24151488307da300015de5dba8c275b53a353b"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/luxurious_sea_lord.webp",
+        "hash": "0f3badb627636d23231f0641958ef214d1843a63"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/magic_guide.png",
+        "hash": "cf85dcf00daedae3c4ba1d3382edc8ea69dded83"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/mappa_mare.png",
+        "hash": "9dc3b0cd5cf34962cba703bf5e59d68ebab5330b"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/memory_of_dust.png",
+        "hash": "87abb6037849574ad13e115882585d6ff73819d8"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/messenger.png",
+        "hash": "5b6634dd984bb4b112320b3400e0a58eeee47a93"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/mistsplitter_reforged.webp",
+        "hash": "56ff853a094f0489268647afdb27dc9ccb99b803"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/mitternachts_waltz.webp",
+        "hash": "684f5ffd2cb3c8d39acec26a6dc0927914a122aa"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/mouuns_moon.webp",
+        "hash": "5fbbb266eb4ae985454d7d5781d6703b1af92539"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/old_mercs_pal.png",
+        "hash": "6f1e78b084a04d65f1a313a27ee1bc49ec547b49"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/otherworldly_story.png",
+        "hash": "6a9f1be2bc8dfed38cdc55829721f7b8ebc8a640"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/pocket_grimoire.png",
+        "hash": "23028de9baebcae9c1b07f5142b47a6ebc19b4a6"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/polar_star.webp",
+        "hash": "9b91dcc5a83252f7b9d4b9d26d43c8e7d5ea442e"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/predator.webp",
+        "hash": "01ab9609d2330a9971d32a23676f04c586f08d88"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/primordial_jade_cutter.png",
+        "hash": "b3b87f2f736b9ed9d9e7f25b8147a294965ea5d7"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/primordial_jade_winged_spear.png",
+        "hash": "4a419c26ed229068d0ddac3b7523eca6f727f38f"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/prototype_amber.png",
+        "hash": "fd95c8000f7397fe27a3fb9f97c62e6e04f66b9c"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/prototype_archaic.png",
+        "hash": "b4cfd6eed1dee188ce562b216cda7aca5629fd6b"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/prototype_crescent.png",
+        "hash": "149dd0937cc8bf35d567af2bdfee32a53adb2fea"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/prototype_rancour.png",
+        "hash": "b6ae3286bdd49cb5cf7137c3a1b613ed672b4ad1"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/prototype_starglitter.png",
+        "hash": "03974090d2a22bf5e52f4930155b881bbd9669ff"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/quartz.png",
+        "hash": "52110d7744667e72f29eed8ae931233638a5f51f"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/rainslasher.png",
+        "hash": "7eca00e88c3f751e193b2ef2f891c053f45a5854"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/raven_bow.png",
+        "hash": "eb22b60d79523f6fa569df3043c46d357ba0e1b9"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/recurve_bow.png",
+        "hash": "d603aecde28c475628f0287329a3d1be9ff04998"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/redhorn_stonethresher.webp",
+        "hash": "d0fc274565071c6049f02eb6488ee78e1ee2bc0d"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/royal_bow.png",
+        "hash": "ae1b037d1c85b446fe571361a86ae5a748e9708e"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/royal_greatsword.png",
+        "hash": "c3c58508308419094dbe922dc64ee07752da2846"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/royal_grimoire.png",
+        "hash": "56283e44482838d6ef3609e1be0a19b83e11c360"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/royal_longsword.png",
+        "hash": "395ade6367928a7f2be040377cacdfa319e4b6bd"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/royal_spear.png",
+        "hash": "a8afcf424c0788718e95f178b290394ce99f98c1"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/rust.png",
+        "hash": "1824c9de99093a9dcbc2ee57bcb5b69226522ec3"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/sacrificial_bow.png",
+        "hash": "65d9f370d5241901a0b980b9b5949563238d41ea"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/sacrificial_fragments.png",
+        "hash": "3f12e617be89685788e237f4deb27ca56a56030d"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/sacrificial_greatsword.png",
+        "hash": "cd7cd8636f3c52a0757a722d93b97aa9f7588015"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/sacrificial_sword.png",
+        "hash": "18756abc0449a7a6a56ed7570da1f05f5033c59d"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/seasoned_hunters_bow.png",
+        "hash": "245130b6c1f41c955e41b2fb81ca786fb381263e"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/serpent_spine.png",
+        "hash": "a6261bd6c37145d8d44dc8df7015b1dcb9634e6d"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/sharpshooters_oath.png",
+        "hash": "7cf11ad84e7d440f727fc728e074f124b2492320"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/silver_sword.png",
+        "hash": "8f559954ebd0821f500c492592b703f61bedbe95"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/skyrider_greatsword.png",
+        "hash": "84602a797881ec0b08a994b431e6ea3d5e4593bd"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/skyrider_sword.png",
+        "hash": "211f4bc1ceb78a3f218c03529106f2f99012e7e0"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/skyward_atlas.png",
+        "hash": "90a6459e82c251c8b78d533a185fb35c63d81042"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/skyward_blade.png",
+        "hash": "363d08577925cf560c7ac87894b6e631370c1579"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/skyward_harp.png",
+        "hash": "95cc1e32b508ce2b27f65c2b2ef7101b4275e92e"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/skyward_pride.png",
+        "hash": "22bac63960614ae001842bb425b134fc805edf70"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/skyward_spine.png",
+        "hash": "9778b8fe10b02abebb831b2b5f21c4b00d85796f"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/slingshot.png",
+        "hash": "d596c2fa14ba90a7f4f38f68b5410c8ab1bc4d54"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/snow_tombed_starsilver.png",
+        "hash": "84ef85b21deaa32fbbc745fa766c78edf7a05052"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/solar_pearl.png",
+        "hash": "7efd18ff0548cfd70ff89dca138cef67d28c3c9c"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/song_of_broken_pines.png",
+        "hash": "1a96842a18dbaac9a5b51150ccb252bd95364b67"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/staff_of_homa.png",
+        "hash": "fb30e85f3cc0e1240f1444b8627a173e52854792"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/summit_shaper.png",
+        "hash": "ef03fad0a4a4723c631e91f679577cd5fc7351b3"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/sword_of_descension.png",
+        "hash": "8e8497e8354db509c982f1c2c12da0d7788f5042"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/the_alley_flash.png",
+        "hash": "d28e5ee660aede0c76d39783159eb76e0012cf36"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/the_bell.png",
+        "hash": "2f98872e923b52adbd375dedccc957317bf2c65c"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/the_black_sword.png",
+        "hash": "02e24d8d4ab28b9f19f928dda16c37044b8ae8d7"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/the_catch.webp",
+        "hash": "0e343097d8c2fe100d6147741089f60d8391ece5"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/the_flute.png",
+        "hash": "ebc0a0dcee5e322821fcc1f0c93d222ac7c85daa"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/the_stringless.png",
+        "hash": "0688b2ab290cecc2b1b8152f09403e1f22084d3c"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/the_unforged.png",
+        "hash": "fdc58a1faf4fea719ed66ead4b73732a7c0e8362"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/the_viridescent_hunt.png",
+        "hash": "258c5748e2b3240382baf65df7a21fbd37f80b98"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/the_widsith.png",
+        "hash": "1d9619c6ae82291bef65b9dd24e2e819b8abf226"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/thrilling_tales_of_dragon_slayers.png",
+        "hash": "3944636d9f807cea24b911984de7a82353bb1851"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/thundering_pulse.webp",
+        "hash": "2c73da118aee78db1f48fd7d4a86c581b8b0acf4"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/travelers_handy_sword.png",
+        "hash": "f97fc497818b4e21b690c6812260d31fca3788ad"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/twin_nephrite.png",
+        "hash": "2e59a0dbb904e6faa9cca5ecb04fae97feabc956"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/vortex_vanquisher.png",
+        "hash": "c492defcea72b004c4626c7731e1ef4a548c80ab"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/waster_greatsword.png",
+        "hash": "ba4c0f53544f5250eec6f50d22aa8139b1f470c2"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/wavebreakers_fin.webp",
+        "hash": "2fe8a66b4804fc07f3b65e1157b53e9123474f56"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/whiteblind.png",
+        "hash": "7c02e2f6443d6d3c8a54cd81b1981863922fe417"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/white_iron_greatsword.png",
+        "hash": "08c8c394ffebde32f2b22485c33d2f45ac87100c"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/white_tassel.png",
+        "hash": "854b3cbfe74b1f9a32647958108e82e5e72b897f"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/windblume_ode.png",
+        "hash": "ba956be542af637aa9c9cc4aca6930766f8501c7"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/wine_and_song.png",
+        "hash": "faa34d7aa17e6221ec73686a93d7555bbc2b259c"
+    },
+    {
+        "name": "./src/lib/data/images/weapons/wolfs_gravestone.png",
+        "hash": "25ab826ff65eb3d3ec54d5f9823a388eb994f618"
     }
 ]

@@ -4,6 +4,35 @@ import { Items } from "./Items";
 
 export const ItemGroups: IdIndex<IItemGroup> = {
   unknown: { normalizedName: "unknown", itemIds: [Items.unknown, Items.unknown, Items.unknown, Items.unknown] },
+
+  sentinel_gear: {
+    normalizedName: "sentinel_gear",
+    itemIds: [Items.chaos_gear, Items.chaos_axis, Items.chaos_oculus],
+  },
+  prism: {
+    normalizedName: "prism",
+    itemIds: [Items.dismal_prism, Items.crystal_prism, Items.polarizing_prism],
+  },
+  oni_mask: {
+    normalizedName: "oni_mask",
+    itemIds: [Items.mask_of_the_wicked_lieutenant, Items.mask_of_the_tigers_bite, Items.mask_of_the_one_horned],
+  },
+  coral: {
+    normalizedName: "coral",
+    itemIds: [
+      Items.coral_branch_of_a_distant_sea,
+      Items.jeweled_branch_of_a_distant_sea,
+      Items.jade_branch_of_a_distant_sea,
+    ],
+  },
+  claw: {
+    normalizedName: "claw",
+    itemIds: [Items.concealed_claw, Items.concealed_unguis, Items.concealed_talon],
+  },
+  narukami: {
+    normalizedName: "narukami",
+    itemIds: [Items.narukamis_wisdom, Items.narukamis_joy, Items.narukamis_affection],
+  },
   spectral: {
     normalizedName: "spectral",
     itemIds: [Items.spectral_nucleus, Items.spectral_heart, Items.spectral_husk],
@@ -112,24 +141,6 @@ export const ItemGroups: IdIndex<IItemGroup> = {
     normalizedName: "slime",
     itemIds: [Items.slime_condensate, Items.slime_secretions, Items.slime_concentrate],
   },
-  // chaos: { normalizedName: "chaos", itemIds: [Items.chaos_device, Items.chaos_circuit, Items.chaos_core] },
-  // horn: { normalizedName: "horn", itemIds: [Items.heavy_horn, Items.black_bronze_horn, Items.black_crystal_horn] },
-  // bone_shard: {
-  //   normalizedName: "bone_shard",
-  //   itemIds: [Items.fragile_bone_shard, Items.sturdy_bone_shard, Items.fossilized_bone_shard],
-  // },
-  // sacrificial_knife: {
-  //   normalizedName: "sacrificial_knife",
-  //   itemIds: [Items.hunters_sacrificial_knife, Items.agents_sacrificial_knife, Items.inspectors_sacrificial_knife],
-  // },
-  // mist_grass: {
-  //   normalizedName: "mist_grass",
-  //   itemIds: [Items.mist_grass_pollen, Items.mist_grass, Items.mist_grass_wick],
-  // },
-  // ley_line: {
-  //   normalizedName: "ley_line",
-  //   itemIds: [Items.dead_ley_line_branch, Items.dead_ley_line_leaves, Items.ley_line_sprouts],
-  // },
   ballad: {
     normalizedName: "ballad",
     itemIds: [Items.teachings_of_ballad, Items.guide_to_ballad, Items.philosophies_of_ballad],
@@ -151,58 +162,80 @@ export const ItemGroups: IdIndex<IItemGroup> = {
     normalizedName: "prosperity",
     itemIds: [Items.teachings_of_prosperity, Items.guide_to_prosperity, Items.philosophies_of_prosperity],
   },
-  // dandelion_gladiator: {
-  //   normalizedName: "dandelion_gladiator",
-  //   itemIds: [
-  //     Items.fetters_of_the_dandelion_gladiator,
-  //     Items.chains_of_the_dandelion_gladiator,
-  //     Items.shackles_of_the_dandelion_gladiator,
-  //     Items.dream_of_the_dandelion_gladiator,
-  //   ],
-  // },
-  // decarabians: {
-  //   normalizedName: "decarabians",
-  //   itemIds: [
-  //     Items.tile_of_decarabians_tower,
-  //     Items.debris_of_decarabians_city,
-  //     Items.fragment_of_decarabians_epic,
-  //     Items.scattered_piece_of_decarabians_dream,
-  //   ],
-  // },
-  // aerosiderite: {
-  //   normalizedName: "aerosiderite",
-  //   itemIds: [
-  //     Items.grain_of_aerosiderite,
-  //     Items.piece_of_aerosiderite,
-  //     Items.bit_of_aerosiderite,
-  //     Items.chunk_of_aerosiderite,
-  //   ],
-  // },
-  // guyun: {
-  //   normalizedName: "guyun",
-  //   itemIds: [
-  //     Items.luminous_sands_from_guyun,
-  //     Items.lustrous_stone_from_guyun,
-  //     Items.relic_from_guyun,
-  //     Items.divine_body_from_guyun,
-  //   ],
-  // },
-  // mist_elixir: {
-  //   normalizedName: "mist_elixir",
-  //   itemIds: [
-  //     Items.mist_veiled_lead_elixir,
-  //     Items.mist_veiled_mercury_elixir,
-  //     Items.mist_veiled_gold_elixir,
-  //     Items.mist_veiled_primo_elixir,
-  //   ],
-  // },
-  // wolf_tooth: {
-  //   normalizedName: "wolf_tooth",
-  //   itemIds: [
-  //     Items.boreal_wolfs_milk_tooth,
-  //     Items.boreal_wolfs_cracked_tooth,
-  //     Items.boreal_wolfs_broken_fang,
-  //     Items.boreal_wolfs_nostalgia,
-  //   ],
-  // },
+
+  // Weapon common
+  chaos: { normalizedName: "chaos", itemIds: [Items.chaos_device, Items.chaos_circuit, Items.chaos_core] },
+  horn: { normalizedName: "horn", itemIds: [Items.heavy_horn, Items.black_bronze_horn, Items.black_crystal_horn] },
+  bone_shard: {
+    normalizedName: "bone_shard",
+    itemIds: [Items.fragile_bone_shard, Items.sturdy_bone_shard, Items.fossilized_bone_shard],
+  },
+  sacrificial_knife: {
+    normalizedName: "sacrificial_knife",
+    itemIds: [Items.hunters_sacrificial_knife, Items.agents_sacrificial_knife, Items.inspectors_sacrificial_knife],
+  },
+  mist_grass: {
+    normalizedName: "mist_grass",
+    itemIds: [Items.mist_grass_pollen, Items.mist_grass, Items.mist_grass_wick],
+  },
+  ley_line: {
+    normalizedName: "ley_line",
+    itemIds: [Items.dead_ley_line_branch, Items.dead_ley_line_leaves, Items.ley_line_sprouts],
+  },
+
+  // Weapon Ascension
+  dandelion_gladiator: {
+    normalizedName: "dandelion_gladiator",
+    itemIds: [
+      Items.fetters_of_the_dandelion_gladiator,
+      Items.chains_of_the_dandelion_gladiator,
+      Items.shackles_of_the_dandelion_gladiator,
+      Items.dream_of_the_dandelion_gladiator,
+    ],
+  },
+  decarabians: {
+    normalizedName: "decarabians",
+    itemIds: [
+      Items.tile_of_decarabians_tower,
+      Items.debris_of_decarabians_city,
+      Items.fragment_of_decarabians_epic,
+      Items.scattered_piece_of_decarabians_dream,
+    ],
+  },
+  aerosiderite: {
+    normalizedName: "aerosiderite",
+    itemIds: [
+      Items.grain_of_aerosiderite,
+      Items.piece_of_aerosiderite,
+      Items.bit_of_aerosiderite,
+      Items.chunk_of_aerosiderite,
+    ],
+  },
+  guyun: {
+    normalizedName: "guyun",
+    itemIds: [
+      Items.luminous_sands_from_guyun,
+      Items.lustrous_stone_from_guyun,
+      Items.relic_from_guyun,
+      Items.divine_body_from_guyun,
+    ],
+  },
+  mist_elixir: {
+    normalizedName: "mist_elixir",
+    itemIds: [
+      Items.mist_veiled_lead_elixir,
+      Items.mist_veiled_mercury_elixir,
+      Items.mist_veiled_gold_elixir,
+      Items.mist_veiled_primo_elixir,
+    ],
+  },
+  wolf_tooth: {
+    normalizedName: "wolf_tooth",
+    itemIds: [
+      Items.boreal_wolfs_milk_tooth,
+      Items.boreal_wolfs_cracked_tooth,
+      Items.boreal_wolfs_broken_fang,
+      Items.boreal_wolfs_nostalgia,
+    ],
+  },
 };

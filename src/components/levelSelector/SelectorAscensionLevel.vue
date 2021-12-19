@@ -1,11 +1,15 @@
 <script setup lang="ts">
 import { AscensionLevel } from "~/lib/types/AscensionLevel";
-import Levels from "~/lib/data/Levels";
+import AllLevels from "~/lib/data/Levels";
 import AscensionCheckbox from "../CheckboxAscension.vue";
 import CustomSelector from "../SelectorCustom.vue";
 import AscensionLevelDisplay from "../AscensionLevelDisplay.vue";
+import { compareAscension } from "~/lib/level/compareAscension";
 
-const props = defineProps<{ modelValue: AscensionLevel; cbClass?: string }>();
+const props = withDefaults(defineProps<{ modelValue: AscensionLevel; cbClass?: string; maxLevel?: AscensionLevel }>(), {
+  cbClass: undefined,
+  maxLevel: () => ({ level: 90, ascended: false }),
+});
 const emit = defineEmits(["update:modelValue"]);
 
 const update = (val: { level?: number; ascended?: boolean }) => {
@@ -16,14 +20,23 @@ const update = (val: { level?: number; ascended?: boolean }) => {
 };
 
 const cannotAscend = computed(() => {
-  return props.modelValue.level === 1 || props.modelValue.level === 90;
+  return (
+    props.modelValue.level === 1 ||
+    (props.modelValue.level === props.maxLevel.level && props.maxLevel.ascended === false)
+  );
 });
+
+const levels = computed(() => {
+  return AllLevels.filter((l) => compareAscension(l, props.maxLevel).isLessOrEqual());
+});
+
+// TODO if necessary correct modelValue if maxLevel has changed
 </script>
 
 <template>
   <CustomSelector
     :modelValue="modelValue"
-    :listItems="Levels"
+    :listItems="levels"
     :class="$attrs.class"
     @update:modelValue="$emit('update:modelValue', $event)"
   >

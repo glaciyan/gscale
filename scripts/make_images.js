@@ -3,10 +3,20 @@ const fs = require("fs");
 const crypto = require("crypto");
 const lastHashes = JSON.parse(fs.readFileSync("./scripts/hashes.json").toString());
 
+async function main() {
+  await build("./src/lib/data/images/characters/card", "images:characters:build");
+  await build("./src/lib/data/images/characters/mugshot", "images:mugshot:build");
+  await build("./src/lib/data/images/materials", "images:items:build");
+  await build("./src/lib/data/images/weapons", "images:weapons:build");
+
+  writeHashesFile();
+}
+
 const builtImages = [];
 
 function writeHashesFile() {
   fs.writeFileSync("./scripts/hashes.json", JSON.stringify(builtImages, null, 4));
+  console.log("Wrote hashes");
 }
 
 function filterFilesNeedingBuild(from) {
@@ -20,8 +30,6 @@ function filterFilesNeedingBuild(from) {
 
   builtImages.push(...hashes);
 
-  console.log(hashes);
-
   // return file names which have been changed or are missing
   return hashes
     .filter((val) => {
@@ -32,20 +40,21 @@ function filterFilesNeedingBuild(from) {
 
 function build(source, command) {
   const missing = filterFilesNeedingBuild(source);
-  console.log(`\n\nMissing Images\n---\n${missing}\n---\n`);
 
-  missing.map((file) => {
-    console.log(`Building ${file}`);
-    exec(`yarn ${command} ${file}`, (err, stdout, stderr) => {
-      if (err) {
-        console.error(`Couldn't build ${file}\n--error--\n${stderr}\n---end of error---`);
-      } else console.log(`Done building ${file}`);
-    });
+  return new Promise((resolve, reject) => {
+    if (missing.length === 0) resolve();
+    else {
+      console.log(`Building ${source} with ${command} (${missing.length} missing or changed images)`);
+      exec(`yarn ${command} ${missing.join(" ")}`, (err, stdout, stderr) => {
+        if (err) {
+          reject(err);
+        } else {
+          console.log(`Finished ${command}`);
+          resolve();
+        }
+      });
+    }
   });
 }
 
-build("./src/lib/data/images/characters/card", "images:characters:build");
-build("./src/lib/data/images/characters/mugshot", "images:mugshot:build");
-build("./src/lib/data/images/materials", "images:items:build");
-
-writeHashesFile();
+main();

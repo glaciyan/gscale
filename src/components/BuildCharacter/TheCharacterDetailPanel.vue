@@ -2,7 +2,7 @@
 import ElementIcon from "~/components/icons/ElementIcon.vue";
 import SwordIcon from "~/components/icons/SwordIcon.vue";
 import { IBaseCharacter } from "~/lib/data/contracts/IBaseCharacter";
-import CharacterPortrait from "../character/CharacterPortrait.vue";
+import GPortrait from "../GPortrait.vue";
 import IconWithText from "../IconWithText.vue";
 import TheClampedText from "../TheClampedText.vue";
 import Image from "../GImage.vue";
@@ -23,7 +23,7 @@ const elementTextColor = computed(() => `text-genshin-element-${props.character.
       />
     </div>
     <div class="relative">
-      <CharacterPortrait
+      <GPortrait
         class="ring mb-6 ring-dark-700"
         :normalizedName="character.normalizedName"
         :rarity="character.rarity"
