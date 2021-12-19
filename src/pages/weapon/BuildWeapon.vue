@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import repo from "~/lib/data/repository/GenshinDataRepository";
 import { Weapons } from "~/lib/data/Weapons";
-import PageContainer from "~/components/PageContainer";
 import { useAscensionLevelRange } from "~/composites/useAscensionLevelRange";
 import RangeLevel from "~/components/levelRange/RangeLevel.vue";
 import ElementProvider from "~/components/ElementProvider.vue";
@@ -42,7 +41,7 @@ const total = computed(() => []);
 
 <template>
   <ElementProvider :element="Elements.neutral">
-    <PageContainer size="sm">
+    <div class="mx-auto max-w-screen-sm <sm:mx-2">
       <section class="flex bg-dark-700 p-6 <sm:(flex-col space-y-6) ">
         <GPortrait :normalizedName="weapon.normalizedName" :rarity="weapon.rarity" weapon />
         <div class="flex flex-col space-y-4 justify-around sm:px-4">
@@ -66,6 +65,6 @@ const total = computed(() => []);
           </div>
         </div>
       </section>
-    </PageContainer>
+    </div>
   </ElementProvider>
 </template>
