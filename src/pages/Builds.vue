@@ -4,7 +4,7 @@ import CharacterBuildPreview from "~/components/character/CharacterBuildPreview.
 import { Build } from "~/lib/offlineDatabase/db";
 import Container from "../components/PageContainer";
 import GLink from "~/components/GLink";
-import Button from "~/components/ElementButton.vue";
+import EButton from "~/components/ElementButton.vue";
 import Center from "../components/Center.vue";
 import useRandomElement from "~/composites/useRandomElement";
 import repo from "~/lib/data/repository/GenshinDataRepository";
@@ -79,7 +79,7 @@ const hideTotal = () => {
 <template>
   <Container v-if="builds !== null" size="2xl">
     <div class="flex space-x-2 mb-4">
-      <Button element="neutral" @click="showTotal">Show Total</Button>
+      <EButton element="neutral" @click="showTotal">Show Total</EButton>
     </div>
     <div v-if="hasBuilds" w:grid="gap-5 cols-2 <sm:cols-1" class="grid">
       <CharacterBuildPreview
@@ -95,7 +95,7 @@ const hideTotal = () => {
       <div class="rounded-lg flex flex-col bg-dark-400 shadow-md w-max py-4 px-6 items-center justify-center">
         <div class="m-2 text-6xl">?</div>
         <p>You don't have any builds.</p>
-        <GLink to="/" isRouter><Button :element="element" class="mt-2">Create one</Button></GLink>
+        <GLink to="/" isRouter><EButton :element="element" class="mt-2">Create one</EButton></GLink>
       </div>
     </Center>
   </Container>
@@ -112,7 +112,7 @@ const hideTotal = () => {
         <div class="flex flex-wrap max-h-[60vh] overflow-y-auto">
           <ItemList :items="total" />
         </div>
-        <Button element="neutral" class="mt-4 w-max self-end" @click="hideTotal">Close</Button>
+        <EButton element="neutral" class="mt-4 w-max self-end" @click="hideTotal">Close</EButton>
       </div>
     </PopOver>
   </teleport>

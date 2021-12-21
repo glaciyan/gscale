@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import TheCharacterDetailPanel from "~/components/BuildCharacter/TheCharacterDetailPanel.vue";
-import Button from "~/components/ElementButton.vue";
+import EButton from "~/components/ElementButton.vue";
 import Container from "~/components/PageContainer";
 import ElementProvider from "~/components/ElementProvider.vue";
 import RangeBurst from "~/components/levelRange/RangeBurst.vue";
@@ -167,7 +167,7 @@ getAllCharacterItems(character.value).map((item) => {
                     <span class="font-semibold text-light-important">Templates</span>
                     <!-- TODO <Button look="ghost" class="ml-2 !h-8 !text-light-ternary">Add Custom</Button> -->
                   </div>
-                  <Button
+                  <EButton
                     v-for="template of templates"
                     :key="template.name"
                     look="outline"
@@ -176,7 +176,7 @@ getAllCharacterItems(character.value).map((item) => {
                     @click.prevent="template.applyTemplate"
                   >
                     {{ template.name }}
-                  </Button>
+                  </EButton>
                 </div>
               </div>
               <div class="w-full">
@@ -185,9 +185,9 @@ getAllCharacterItems(character.value).map((item) => {
                   <!-- {{ " " }}
                   <RouterLink :to="submitError.helpUrl" class="text-blue-400 hover:underline">Help</RouterLink> -->
                 </div>
-                <Button :isLoading="submitting" class="w-full" @click="handleSubmit">
+                <EButton :isLoading="submitting" class="w-full" @click="handleSubmit">
                   {{ editId ? "Update" : "Build" }} {{ character.name }}
-                </Button>
+                </EButton>
               </div>
             </div>
           </section>

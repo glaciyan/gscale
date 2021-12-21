@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import PopOver from "./PopOver.vue";
-import Button from "./ElementButton.vue";
+import EButton from "./ElementButton.vue";
 
 withDefaults(defineProps<{ isOpen: boolean; header: string; question?: string; closeText: string }>(), {
   question: undefined,
@@ -33,9 +33,9 @@ export default defineComponent({
         </div>
         <div class="flex bg-dark-600 border-t-2 border-dark-200 py-3 px-6 justify-end items-center">
           <div v-if="question" class="flex-1 mr-12 text-light-normal">{{ question }}</div>
-          <Button element="neutral" look="ghost" class="mr-2" @click="$emit('close')">
+          <EButton element="neutral" look="ghost" class="mr-2" @click="$emit('close')">
             {{ closeText }}
-          </Button>
+          </EButton>
           <slot name="buttons" />
         </div>
       </div>

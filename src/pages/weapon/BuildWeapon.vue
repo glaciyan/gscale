@@ -9,7 +9,7 @@ import { AscensionLevel } from "~/lib/types/AscensionLevel";
 import ItemListHeader from "~/components/ItemListHeader.vue";
 import ItemList from "~/components/ItemList.vue";
 import GPortrait from "~/components/GPortrait.vue";
-import Button from "../../components/ElementButton.vue";
+import EButton from "../../components/ElementButton.vue";
 
 //#region Get weapon from route and handle 404 with a redirect
 const router = useRouter();
@@ -42,12 +42,12 @@ const total = computed(() => []);
 <template>
   <ElementProvider :element="Elements.neutral">
     <div class="mx-auto max-w-screen-sm <sm:mx-2">
-      <section class="flex bg-dark-700 p-6 <sm:(flex-col space-y-6)">
+      <section class="flex bg-dark-700 p-6 <sm:(flex-col space-y-6) ">
         <GPortrait :normalizedName="weapon.normalizedName" :rarity="weapon.rarity" weapon />
         <div class="flex flex-col space-y-4 justify-around sm:px-4">
           <p class="font-bold text-light-important">{{ weapon.name }}</p>
           <RangeLevel v-model:start="level.start" v-model:goal="level.goal" :max="maxLevel" />
-          <Button class="w-max">Save</Button>
+          <EButton class="w-max">Save</EButton>
         </div>
       </section>
       <section class="bg-dark-600 w-full p-6 overflow-y-auto custom-scrollbar <sm:p-4">

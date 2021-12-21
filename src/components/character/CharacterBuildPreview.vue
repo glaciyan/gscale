@@ -6,7 +6,7 @@ import { ITraveler } from "~/lib/data/contracts/ITraveler";
 import ItemCheckState from "~/lib/item/ItemCheckState";
 import { Build, db } from "~/lib/offlineDatabase/db";
 import { ItemWithAmount } from "~/lib/types/ItemWithAmount";
-import Button from "../ElementButton.vue";
+import EButton from "../ElementButton.vue";
 import ElementProvider from "../ElementProvider.vue";
 import Image from "../GImage.vue";
 import GSpinner from "../GSpinner.vue";
@@ -130,10 +130,10 @@ const edit = () => {
           </div>
         </div>
         <div class="flex bg-dark-600/70 border-t-2 border-dark-300 py-3 px-6 justify-end">
-          <Button look="ghost" element="neutral" class="mr-2 !h-9 !text-light-ternary" @click="deleteDialog.reveal">
+          <EButton look="ghost" element="neutral" class="mr-2 !h-9 !text-light-ternary" @click="deleteDialog.reveal">
             Delete
-          </Button>
-          <Button look="outline" class="mr-2 !h-9" @click="edit">Edit</Button>
+          </EButton>
+          <EButton look="outline" class="mr-2 !h-9" @click="edit">Edit</EButton>
           <!-- <Button class="!h-9">Planner</Button> -->
         </div>
       </div>
@@ -154,7 +154,7 @@ const edit = () => {
       </p>
     </template>
     <template #buttons>
-      <Button element="danger" class="!text-white" @click="deleteDialog.confirm">Delete</Button>
+      <EButton element="danger" class="!text-white" @click="deleteDialog.confirm">Delete</EButton>
     </template>
   </Modal>
 </template>
