@@ -38,6 +38,7 @@ export default function (search: Ref<string>, characters: IBaseCharacter[]) {
             },
             "rarity",
             "items",
+            "altName",
           ],
         });
       }
