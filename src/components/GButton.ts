@@ -17,7 +17,7 @@ export default defineComponent({
     },
     bStyle: {
       type: String,
-      default: "bg-dark-500 text-light-normal shadow-md font-semibold",
+      default: "bg-dark-400 text-light-normal shadow-md font-semibold hover:bg-dark-300 transition-colors",
     },
   },
   computed: {
