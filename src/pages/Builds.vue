@@ -108,6 +108,7 @@ const hideTotal = () => {
       @close="hideTotal"
     >
       <div class="rounded-md flex flex-col max-w-screen-md bg-dark-600 p-4">
+        <p class="font-semibold text-lg text-light-important mb-4 ml-2">Total Items</p>
         <div class="flex flex-wrap max-h-[60vh] overflow-y-auto">
           <ItemList :items="total" />
         </div>
