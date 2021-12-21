@@ -12,6 +12,7 @@ import totalBuildItems from "~/lib/item/totalBuildItems";
 import mergeAmountByName from "~/lib/item/mergeAmountByName";
 import ItemList from "~/components/ItemList.vue";
 import PopOver from "~/components/PopOver.vue";
+import { useScrollLock } from "@vueuse/core";
 
 const { element, pickNew: newElement } = useRandomElement();
 
@@ -54,18 +55,31 @@ const handleBuildDelete = () => {
   totalBuilds.value--;
 };
 
-const showTotal = ref(false);
-
 const total = computed(() => {
   console.log("calculating overall total");
   return mergeAmountByName(builds.value.map((build) => build.total.value));
 });
+
+//#region Total Popover
+const totalVisible = ref(false);
+const lock = useScrollLock(document.body);
+
+const showTotal = () => {
+  totalVisible.value = true;
+  lock.value = true;
+};
+
+const hideTotal = () => {
+  totalVisible.value = false;
+  lock.value = false;
+};
+//#endregion
 </script>
 
 <template>
   <Container v-if="builds !== null" size="2xl">
     <div class="flex space-x-2 mb-4">
-      <Button element="neutral" @click="showTotal = true">Show Total</Button>
+      <Button element="neutral" @click="showTotal">Show Total</Button>
     </div>
     <div v-if="hasBuilds" w:grid="gap-5 cols-2 <sm:cols-1" class="grid">
       <CharacterBuildPreview
@@ -87,17 +101,17 @@ const total = computed(() => {
   </Container>
   <teleport to="#totalItems">
     <PopOver
-      :open="showTotal"
+      :open="totalVisible"
       backdropClass="fixed inset-0 bg-dark-900/80"
-      shellClass="fixed inset-0 flex items-center justify-center"
+      shellClass="fixed inset-0 flex items-center justify-center p-2"
       transition="fade-slow"
-      @close="showTotal = false"
+      @close="hideTotal"
     >
       <div class="rounded-md flex flex-col max-w-screen-md bg-dark-600 p-4">
         <div class="flex flex-wrap max-h-[60vh] overflow-y-auto">
           <ItemList :items="total" />
         </div>
-        <Button element="neutral" class="mt-4 w-max self-end" @click="showTotal = false">Close</Button>
+        <Button element="neutral" class="mt-4 w-max self-end" @click="hideTotal">Close</Button>
       </div>
     </PopOver>
   </teleport>
