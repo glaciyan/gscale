@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import HeartIcon from "./icons/HeartIcon.vue";
-import GButton from "./GButton";
+import GButton from "./GButton.vue";
 </script>
 
 <template>

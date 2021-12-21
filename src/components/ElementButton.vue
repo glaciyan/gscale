@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import GButton from "./GButton";
+import GButton from "./GButton.vue";
 import { useElementContext } from "~/composites/useElementContext";
 
 const injectedElement = useElementContext();

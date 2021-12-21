@@ -12,7 +12,7 @@ import mergeAmountByName from "~/lib/item/mergeAmountByName";
 import ItemList from "~/components/ItemList.vue";
 import PopOver from "~/components/PopOver.vue";
 import { useScrollLock } from "@vueuse/core";
-import GButton from "~/components/GButton";
+import GButton from "~/components/GButton.vue";
 import EButton from "~/components/ElementButton.vue";
 
 const { element, pickNew: newElement } = useRandomElement();
