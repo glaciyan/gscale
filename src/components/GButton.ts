@@ -31,7 +31,7 @@ export default defineComponent({
       this.as ?? "button",
       {
         type: "button",
-        class: `${this.bStyle} focus:outline-none focus-visible:ring h-[42px] px-4 rounded-lg`,
+        class: `${this.bStyle} focus:outline-none focus-visible:ring h-[42px] px-4 rounded-lg font-sans text-base`,
         disabled: this.off,
         ariaDisabled: this.off,
       },
