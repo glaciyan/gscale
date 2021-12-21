@@ -1,53 +1,34 @@
 <script setup lang="ts">
-import repo from "~/lib/data/repository/GenshinDataRepository";
+import useCheckList from "~/composites/useCheckList";
+import { useLoadingFunction } from "~/composites/useLoadingFunction";
+import { ICharacter } from "~/lib/data/contracts/ICharacter";
+import { ITraveler } from "~/lib/data/contracts/ITraveler";
+import ItemCheckState from "~/lib/item/ItemCheckState";
 import { Build, db } from "~/lib/offlineDatabase/db";
-import ElementProvider from "../ElementProvider.vue";
-import sortItems from "~/lib/item/sortItems";
-import { calculateLeveling, calculateAscension, calculateTalent } from "~/lib/calculator";
-import mergeAmountByName from "~/lib/item/mergeAmountByName";
+import { ItemWithAmount } from "~/lib/types/ItemWithAmount";
 import Button from "../Button.vue";
-import RangeLevelDisplay from "../levelRange/display/RangeLevelDisplay.vue";
-import RangeTalentDisplay from "../levelRange/display/RangeTalentDisplay.vue";
-import Sword from "../icons/SwordIcon.vue";
+import ElementProvider from "../ElementProvider.vue";
+import Image from "../GImage.vue";
+import GSpinner from "../GSpinner.vue";
 import Elemental from "../icons/ElementalIcon.vue";
 import Fire from "../icons/FireIcon.vue";
-import Image from "../GImage.vue";
-import Modal from "../Modal.vue";
-import { useLoadingFunction } from "~/composites/useLoadingFunction";
+import Sword from "../icons/SwordIcon.vue";
 import ItemChecklist from "../ItemChecklist.vue";
-import { ItemWithAmount } from "~/lib/types/ItemWithAmount";
-import ItemCheckState from "~/lib/item/ItemCheckState";
-import useCheckList from "~/composites/useCheckList";
-import GSpinner from "../GSpinner.vue";
+import RangeLevelDisplay from "../levelRange/display/RangeLevelDisplay.vue";
+import RangeTalentDisplay from "../levelRange/display/RangeTalentDisplay.vue";
+import Modal from "../Modal.vue";
 
-const props = defineProps<{ build: Build }>();
+const props = defineProps<{ character: ICharacter | ITraveler; total: ItemWithAmount[]; data: Build }>();
 const emit = defineEmits(["deleted"]);
-
-const character = repo.needCharacter(props.build.entityId);
-
-//#region total items
-const levelingItems = calculateLeveling(props.build.level.start, props.build.level.goal);
-const items = computed(() =>
-  sortItems(
-    mergeAmountByName([
-      calculateAscension(character, props.build.level.start, props.build.level.goal),
-      calculateTalent(character, props.build.normal.start, props.build.normal.goal, true),
-      calculateTalent(character, props.build.elemental.start, props.build.elemental.goal),
-      calculateTalent(character, props.build.burst.start, props.build.burst.goal),
-      [levelingItems.mora, levelingItems.lazy],
-    ])
-  )
-);
-//#endregion
 
 //#region Deleting
 const deleted = ref(false);
 
 const { loading: isDeleting, execute: deleteBuild } = useLoadingFunction(async () => {
-  if (props.build.id) {
+  if (props.data.id) {
     try {
-      await db.builds.delete(props.build.id);
-      emit("deleted", props.build.id);
+      await db.builds.delete(props.data.id);
+      emit("deleted", props.data.id);
       deleted.value = true;
     } catch (error) {
       // TODO prompt user to refresh page and try again
@@ -64,7 +45,7 @@ const hidden = computed(() => deleted.value || isDeleting.value);
 
 //#region Checklist
 // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-const checkList = useCheckList(props.build.id!);
+const checkList = useCheckList(props.data.id!);
 
 const handleItemClick = (item: ItemWithAmount, state: ItemCheckState) => {
   const checkListIndex = checkList.items.value.findIndex((i) => i.item.normalizedName === item.item.normalizedName);
@@ -86,7 +67,7 @@ const handleItemClick = (item: ItemWithAmount, state: ItemCheckState) => {
 const router = useRouter();
 
 const edit = () => {
-  router.push(`/build/${character.normalizedName}?edit=${props.build.id}`);
+  router.push(`/build/${props.character.normalizedName}?edit=${props.data.id}`);
 };
 //#endregion
 </script>
@@ -117,19 +98,19 @@ const edit = () => {
                   >
                 </p>
                 <div class="-m-1">
-                  <RangeLevelDisplay class="m-1" :range="build.level" />
+                  <RangeLevelDisplay class="m-1" :range="data.level" />
                   <div class="flex flex-wrap">
-                    <RangeTalentDisplay class="m-1" title="Normal" :range="build.normal">
+                    <RangeTalentDisplay class="m-1" title="Normal" :range="data.normal">
                       <template #icon>
                         <Sword class="h-[26px] -m-0.5 w-[26px]" />
                       </template>
                     </RangeTalentDisplay>
-                    <RangeTalentDisplay class="m-1" title="Elemental" :range="build.elemental">
+                    <RangeTalentDisplay class="m-1" title="Elemental" :range="data.elemental">
                       <template #icon>
                         <Elemental class="-m-0.5" />
                       </template>
                     </RangeTalentDisplay>
-                    <RangeTalentDisplay class="m-1" title="Burst" :range="build.burst">
+                    <RangeTalentDisplay class="m-1" title="Burst" :range="data.burst">
                       <template #icon>
                         <Fire class="-m-0.5" />
                       </template>
@@ -144,7 +125,7 @@ const edit = () => {
               <div v-if="checkList.loading.value" class="flex inset-0 absolute items-center justify-center">
                 <GSpinner />
               </div>
-              <ItemChecklist v-else :items="items" :checkedOff="checkList.items.value" @itemClick="handleItemClick" />
+              <ItemChecklist v-else :items="total" :checkedOff="checkList.items.value" @itemClick="handleItemClick" />
             </div>
           </div>
         </div>
