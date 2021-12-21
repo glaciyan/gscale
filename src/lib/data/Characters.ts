@@ -342,6 +342,7 @@ export const Characters: IdIndex<ICharacter> = {
   },
   tartaglia: {
     name: "Childe",
+    altName: "Tartaglia",
     normalizedName: "tartaglia",
     element: Elements.hydro,
     weaponType: WeaponTypes.bow,

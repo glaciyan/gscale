@@ -10,4 +10,5 @@ export interface IBaseCharacter extends INamed {
   constellation: string;
   description: string;
   isTraveler?: boolean;
+  altName?: string;
 }
