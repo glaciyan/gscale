@@ -4,7 +4,7 @@ import CharacterBuildPreview from "~/components/character/CharacterBuildPreview.
 import { Build } from "~/lib/offlineDatabase/db";
 import Container from "../components/PageContainer";
 import GLink from "~/components/GLink";
-import Button from "~/components/Button.vue";
+import Button from "~/components/ElementButton.vue";
 import Center from "../components/Center.vue";
 import useRandomElement from "~/composites/useRandomElement";
 import repo from "~/lib/data/repository/GenshinDataRepository";

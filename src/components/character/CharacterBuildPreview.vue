@@ -6,7 +6,7 @@ import { ITraveler } from "~/lib/data/contracts/ITraveler";
 import ItemCheckState from "~/lib/item/ItemCheckState";
 import { Build, db } from "~/lib/offlineDatabase/db";
 import { ItemWithAmount } from "~/lib/types/ItemWithAmount";
-import Button from "../Button.vue";
+import Button from "../ElementButton.vue";
 import ElementProvider from "../ElementProvider.vue";
 import Image from "../GImage.vue";
 import GSpinner from "../GSpinner.vue";

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Button from "./Button.vue";
+import Button from "./ElementButton.vue";
 import GLink from "./GLink";
 import HeartIcon from "./icons/HeartIcon.vue";
 </script>

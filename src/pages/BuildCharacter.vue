@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import TheCharacterDetailPanel from "~/components/BuildCharacter/TheCharacterDetailPanel.vue";
-import Button from "~/components/Button.vue";
+import Button from "~/components/ElementButton.vue";
 import Container from "~/components/PageContainer";
 import ElementProvider from "~/components/ElementProvider.vue";
 import RangeBurst from "~/components/levelRange/RangeBurst.vue";

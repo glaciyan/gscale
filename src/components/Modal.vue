@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import PopOver from "./PopOver.vue";
-import Button from "./Button.vue";
+import Button from "./ElementButton.vue";
 
 withDefaults(defineProps<{ isOpen: boolean; header: string; question?: string; closeText: string }>(), {
   question: undefined,
