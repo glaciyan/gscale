@@ -9,10 +9,11 @@ import Center from "../components/Center.vue";
 import useRandomElement from "~/composites/useRandomElement";
 import repo from "~/lib/data/repository/GenshinDataRepository";
 import totalBuildItems from "~/lib/item/totalBuildItems";
+import mergeAmountByName from "~/lib/item/mergeAmountByName";
+import ItemList from "~/components/ItemList.vue";
+import PopOver from "~/components/PopOver.vue";
 
 const { element, pickNew: newElement } = useRandomElement();
-
-const ready = ref(false);
 
 const buildsData = ref<Build[]>();
 const totalBuilds = ref(0);
@@ -36,8 +37,6 @@ const getBuilds = async () => {
   const buildsFromDb = await db.builds.where("type").equals("character").toArray();
   buildsData.value = buildsFromDb;
   totalBuilds.value = buildsFromDb.length;
-
-  ready.value = true;
 };
 
 onBeforeMount(() => {
@@ -54,10 +53,20 @@ const handleBuildDelete = () => {
 
   totalBuilds.value--;
 };
+
+const showTotal = ref(false);
+
+const total = computed(() => {
+  console.log("calculating overall total");
+  return mergeAmountByName(builds.value.map((build) => build.total.value));
+});
 </script>
 
 <template>
   <Container v-if="builds !== null" size="2xl">
+    <div class="flex space-x-2 mb-4">
+      <Button element="neutral" @click="showTotal = true">Show Total</Button>
+    </div>
     <div v-if="hasBuilds" w:grid="gap-5 cols-2 <sm:cols-1" class="grid">
       <CharacterBuildPreview
         v-for="build in builds"
@@ -76,4 +85,20 @@ const handleBuildDelete = () => {
       </div>
     </Center>
   </Container>
+  <teleport to="#totalItems">
+    <PopOver
+      :open="showTotal"
+      backdropClass="fixed inset-0 bg-dark-900/80"
+      shellClass="fixed inset-0 flex items-center justify-center"
+      transition="fade-slow"
+      @close="showTotal = false"
+    >
+      <div class="rounded-md flex flex-col max-w-screen-md bg-dark-600 p-4">
+        <div class="flex flex-wrap max-h-[60vh] overflow-y-auto">
+          <ItemList :items="total" />
+        </div>
+        <Button element="neutral" class="mt-4 w-max self-end" @click="showTotal = false">Close</Button>
+      </div>
+    </PopOver>
+  </teleport>
 </template>
