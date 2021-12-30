@@ -13,7 +13,7 @@ export default defineComponent({
     },
   },
   render() {
-    const className = `<sm:mx-2 <xl:mx-5 mx-auto max-w-screen-${this.$props.size}`;
+    const className = `px-4 mx-auto max-w-screen-${this.$props.size}`;
 
     return h(this.$props.as, { class: className }, this.$slots);
   },
