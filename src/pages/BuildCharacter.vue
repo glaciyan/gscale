@@ -3,10 +3,7 @@ import TheCharacterDetailPanel from "~/components/BuildCharacter/TheCharacterDet
 import EButton from "~/components/ElementButton.vue";
 import Container from "~/components/PageContainer";
 import ElementProvider from "~/components/ElementProvider.vue";
-import RangeBurst from "~/components/levelRange/RangeBurst.vue";
-import RangeElemental from "~/components/levelRange/RangeElemental.vue";
 import RangeLevel from "~/components/levelRange/RangeLevel.vue";
-import RangeNormal from "~/components/levelRange/RangeNormal.vue";
 import ItemList from "~/components/ItemList.vue";
 import ItemListHeader from "~/components/ItemListHeader.vue";
 import { useAscensionLevelRange } from "~/composites/useAscensionLevelRange";
@@ -26,6 +23,7 @@ import Fire from "../components/icons/FireIcon.vue";
 import ItemPreviewSection from "~/components/ItemPreviewSection.vue";
 import getAllCharacterItems from "~/lib/item/getAllCharacterItems";
 import { getItemImage } from "~/lib/data/util/getItemImage";
+import RangeTalent from "~/components/levelRange/RangeTalent.vue";
 
 const router = useRouter();
 const route = useRoute();
@@ -158,9 +156,9 @@ getAllCharacterItems(character.value).map((item) => {
               <div>
                 <div class="space-y-6">
                   <RangeLevel v-model:start="level.start" v-model:goal="level.goal" />
-                  <RangeNormal v-model:start="normal.start" v-model:goal="normal.goal" />
-                  <RangeElemental v-model:start="elemental.start" v-model:goal="elemental.goal" />
-                  <RangeBurst v-model:start="burst.start" v-model:goal="burst.goal" />
+                  <RangeTalent v-model:start="normal.start" v-model:goal="normal.goal" :icon="Sword" />
+                  <RangeTalent v-model:start="elemental.start" v-model:goal="elemental.goal" :icon="Elemental" />
+                  <RangeTalent v-model:start="burst.start" v-model:goal="burst.goal" :icon="Fire" />
                 </div>
                 <div class="mt-6">
                   <div class="mb-2">
@@ -213,7 +211,7 @@ getAllCharacterItems(character.value).map((item) => {
               </template>
             </ItemListHeader>
             <ItemPreviewSection :items="ascItems" title="Ascension" :icon="Growth" />
-            <ItemPreviewSection :items="normalItems" title="Normal Attack" :icon="Sword" noResize />
+            <ItemPreviewSection :items="normalItems" title="Normal Attack" :icon="Sword" />
             <ItemPreviewSection :items="emItems" title="Elemental Attack" :icon="Elemental" />
             <ItemPreviewSection :items="burstItems" title="Ascension" :icon="Fire" />
           </div>
