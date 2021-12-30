@@ -3,7 +3,6 @@ import plugin from "windicss/plugin";
 import aspectRatio from "windicss/plugin/aspect-ratio";
 import lineClamp from "windicss/plugin/line-clamp";
 import { range } from "./src/lib/range";
-import colors from "windicss/colors";
 
 const em = ["anemo", "pyro", "electro", "geo", "cryo", "hydro", "neutral", "danger"];
 const sizes = ["sm", "md", "lg", "xl", "2xl"];
