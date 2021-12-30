@@ -100,21 +100,9 @@ const edit = () => {
                 <div class="-m-1">
                   <RangeLevelDisplay class="m-1" :range="data.level" />
                   <div class="flex flex-wrap">
-                    <RangeTalentDisplay class="m-1" title="Normal" :range="data.normal">
-                      <template #icon>
-                        <Sword class="h-[26px] -m-0.5 w-[26px]" />
-                      </template>
-                    </RangeTalentDisplay>
-                    <RangeTalentDisplay class="m-1" title="Elemental" :range="data.elemental">
-                      <template #icon>
-                        <Elemental class="-m-0.5" />
-                      </template>
-                    </RangeTalentDisplay>
-                    <RangeTalentDisplay class="m-1" title="Burst" :range="data.burst">
-                      <template #icon>
-                        <Fire class="-m-0.5" />
-                      </template>
-                    </RangeTalentDisplay>
+                    <RangeTalentDisplay class="m-1" title="Normal" :range="data.normal" :icon="Sword" />
+                    <RangeTalentDisplay class="m-1" title="Elemental" :range="data.elemental" :icon="Elemental" />
+                    <RangeTalentDisplay class="m-1" title="Burst" :range="data.burst" :icon="Fire" />
                   </div>
                 </div>
               </div>
