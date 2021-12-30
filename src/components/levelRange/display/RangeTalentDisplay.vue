@@ -1,8 +1,9 @@
 <script setup lang="ts">
+import type { Component } from "vue";
 import StartGoalRange from "~/lib/types/StartGoalRange";
 import SelectorIconSeperator from "../../levelSelector/SelectorIconSeperator.vue";
 
-defineProps<{ range: StartGoalRange<number>; title: string }>();
+defineProps<{ range: StartGoalRange<number>; title: string; icon: Component }>();
 
 const className = "flex bg-dark-400 pl-3 items-center w-15 <lg:(w-9 pl-2)";
 </script>
@@ -15,7 +16,7 @@ const className = "flex bg-dark-400 pl-3 items-center w-15 <lg:(w-9 pl-2)";
         {{ range.start }}
       </div>
       <SelectorIconSeperator class="!w-9">
-        <slot name="icon" />
+        <component :is="icon" class="-m-0.5" />
       </SelectorIconSeperator>
       <div :class="className">
         {{ range.goal }}
