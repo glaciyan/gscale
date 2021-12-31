@@ -40,15 +40,6 @@ const normal = useTalentLevelRange();
 const elemental = useTalentLevelRange();
 const burst = useTalentLevelRange();
 
-watch(burst, () => {
-  console.log(JSON.stringify(burst));
-});
-
-const logging = (value: boolean) => {
-  console.log("calling");
-  console.log(value);
-};
-
 const { templates } = useLevelSelectorTemplate(level, normal, elemental, burst);
 //#endregion
 
@@ -168,9 +159,8 @@ getAllCharacterItems(character.value).map((item) => {
                   <RangeTalent
                     v-model:start="normal.start"
                     v-model:goal="normal.goal"
-                    :compensating="normal.compensating"
+                    v-model:compensating="normal.compensating"
                     :icon="Sword"
-                    @update:compensating="logging"
                   />
                   <RangeTalent
                     v-model:start="elemental.start"
