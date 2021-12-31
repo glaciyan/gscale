@@ -17,20 +17,22 @@ defineEmits(["update:start", "update:goal"]);
 
 <template>
   <SelectorGroup legend="Level">
-    <SelectorAscensionLevel
-      class="rounded-l-md"
-      :modelValue="start"
-      :maxLevel="max"
-      @update:modelValue="$emit('update:start', $event)"
-    />
-    <SelectorIconSeperator :element="element">
-      <Growth class="-m-0.5" />
-    </SelectorIconSeperator>
-    <SelectorAscensionLevel
-      cbClass="rounded-r-md"
-      :modelValue="goal"
-      :maxLevel="max"
-      @update:modelValue="$emit('update:goal', $event)"
-    />
+    <div class="flex shadow-md">
+      <SelectorAscensionLevel
+        class="rounded-l-md"
+        :modelValue="start"
+        :maxLevel="max"
+        @update:modelValue="$emit('update:start', $event)"
+      />
+      <SelectorIconSeperator :element="element">
+        <Growth class="-m-0.5" />
+      </SelectorIconSeperator>
+      <SelectorAscensionLevel
+        cbClass="rounded-r-md"
+        :modelValue="goal"
+        :maxLevel="max"
+        @update:modelValue="$emit('update:goal', $event)"
+      />
+    </div>
   </SelectorGroup>
 </template>
