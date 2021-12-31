@@ -33,7 +33,10 @@ const toggleUpgraded = () => {
         @update:modelValue="$emit('update:goal', $event)"
       />
     </div>
-    <GButton title="Add 3 to talent" :class="['ml-2 !h-[40px]', { 'text-cyan-400': upgraded }]" @click="toggleUpgraded"
+    <GButton
+      title="Add 3 to talent"
+      :class="['ml-2 !h-[40px] font-normal', { 'text-cyan-400': upgraded }]"
+      @click="toggleUpgraded"
       >+3</GButton
     >
   </SelectorGroup>
