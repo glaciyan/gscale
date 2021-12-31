@@ -60,15 +60,15 @@ if (route.query.edit && typeof route.query.edit === "string") {
 
         normal.start = build.normal.start;
         normal.goal = build.normal.goal;
-        normal.compensating = build.normal.compensating ?? false;
+        normal.upgraded = build.normal.upgraded ?? false;
 
         elemental.start = build.elemental.start;
         elemental.goal = build.elemental.goal;
-        elemental.compensating = build.elemental.compensating ?? false;
+        elemental.upgraded = build.elemental.upgraded ?? false;
 
         burst.start = build.burst.start;
         burst.goal = build.burst.goal;
-        burst.compensating = build.burst.compensating ?? false;
+        burst.upgraded = build.burst.upgraded ?? false;
       } else {
         console.error("Couldn't find any build with that id");
       }
@@ -162,19 +162,19 @@ getAllCharacterItems(character.value).map((item) => {
                   <RangeTalent
                     v-model:start="normal.start"
                     v-model:goal="normal.goal"
-                    v-model:compensating="normal.compensating"
+                    v-model:upgraded="normal.upgraded"
                     :icon="Sword"
                   />
                   <RangeTalent
                     v-model:start="elemental.start"
                     v-model:goal="elemental.goal"
-                    v-model:compensating="elemental.compensating"
+                    v-model:upgraded="elemental.upgraded"
                     :icon="Elemental"
                   />
                   <RangeTalent
                     v-model:start="burst.start"
                     v-model:goal="burst.goal"
-                    v-model:compensating="burst.compensating"
+                    v-model:upgraded="burst.upgraded"
                     :icon="Fire"
                   />
                 </div>

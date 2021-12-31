@@ -4,7 +4,7 @@ export function useTalentLevelRange(): Talent {
   const range = reactive<Talent>({
     start: 1,
     goal: 1,
-    compensating: false,
+    upgraded: false,
   });
 
   watch(

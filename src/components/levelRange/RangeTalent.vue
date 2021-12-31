@@ -5,12 +5,12 @@ import SelectorIconSeperator from "../levelSelector/SelectorIconSeperator.vue";
 import SelectorTalentLevel from "../levelSelector/SelectorTalentLevel.vue";
 import GButton from "../GButton.vue";
 
-const props = defineProps<{ start: number; goal: number; compensating: boolean; icon: Component; element?: string }>();
+const props = defineProps<{ start: number; goal: number; upgraded: boolean; icon: Component; element?: string }>();
 
-const emit = defineEmits(["update:start", "update:goal", "update:compensating"]);
+const emit = defineEmits(["update:start", "update:goal", "update:upgraded"]);
 
-const toggleCompensating = () => {
-  emit("update:compensating", !props.compensating);
+const toggleUpgraded = () => {
+  emit("update:upgraded", !props.upgraded);
 };
 </script>
 
@@ -20,7 +20,7 @@ const toggleCompensating = () => {
       <SelectorTalentLevel
         class="rounded-l-md"
         :modelValue="start"
-        :compensating="compensating"
+        :upgraded="upgraded"
         @update:modelValue="$emit('update:start', $event)"
       />
       <SelectorIconSeperator :element="element">
@@ -29,14 +29,11 @@ const toggleCompensating = () => {
       <SelectorTalentLevel
         class="rounded-r-md"
         :modelValue="goal"
-        :compensating="compensating"
+        :upgraded="upgraded"
         @update:modelValue="$emit('update:goal', $event)"
       />
     </div>
-    <GButton
-      title="Add 3 to talent"
-      :class="['ml-2 !h-[40px]', { 'text-cyan-400': compensating }]"
-      @click="toggleCompensating"
+    <GButton title="Add 3 to talent" :class="['ml-2 !h-[40px]', { 'text-cyan-400': upgraded }]" @click="toggleUpgraded"
       >+3</GButton
     >
   </SelectorGroup>
