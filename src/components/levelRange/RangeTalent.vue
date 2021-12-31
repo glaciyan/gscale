@@ -5,7 +5,8 @@ import SelectorIconSeperator from "../levelSelector/SelectorIconSeperator.vue";
 import SelectorTalentLevel from "../levelSelector/SelectorTalentLevel.vue";
 import GButton from "../GButton.vue";
 
-const props = defineProps<{ start: number; goal: number; upgraded: boolean; icon: Component; element?: string }>();
+const props =
+  defineProps<{ title: string; start: number; goal: number; upgraded: boolean; icon: Component; element?: string }>();
 
 const emit = defineEmits(["update:start", "update:goal", "update:upgraded"]);
 
@@ -15,7 +16,7 @@ const toggleUpgraded = () => {
 </script>
 
 <template>
-  <SelectorGroup legend="Normal Attack">
+  <SelectorGroup :legend="title">
     <div class="flex">
       <div class="flex shadow-md">
         <SelectorTalentLevel

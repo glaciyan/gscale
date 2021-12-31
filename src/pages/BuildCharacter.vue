@@ -163,18 +163,21 @@ getAllCharacterItems(character.value).map((item) => {
                     v-model:start="normal.start"
                     v-model:goal="normal.goal"
                     v-model:upgraded="normal.upgraded"
+                    title="Normal Attack"
                     :icon="Sword"
                   />
                   <RangeTalent
                     v-model:start="elemental.start"
                     v-model:goal="elemental.goal"
                     v-model:upgraded="elemental.upgraded"
+                    title="Elemental Attack"
                     :icon="Elemental"
                   />
                   <RangeTalent
                     v-model:start="burst.start"
                     v-model:goal="burst.goal"
                     v-model:upgraded="burst.upgraded"
+                    title="Burst"
                     :icon="Fire"
                   />
                 </div>
