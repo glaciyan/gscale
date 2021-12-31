@@ -40,6 +40,15 @@ const normal = useTalentLevelRange();
 const elemental = useTalentLevelRange();
 const burst = useTalentLevelRange();
 
+watch(burst, () => {
+  console.log(JSON.stringify(burst));
+});
+
+const logging = (value: boolean) => {
+  console.log("calling");
+  console.log(value);
+};
+
 const { templates } = useLevelSelectorTemplate(level, normal, elemental, burst);
 //#endregion
 
@@ -92,9 +101,9 @@ const { loading: submitting, execute: handleSubmit } = useLoadingFunction(async 
         entityId: character.value.normalizedName,
         // use toRaw here because dexie can't copy a proxy
         level: { start: toRaw(level.start), goal: toRaw(level.goal) },
-        normal: { start: normal.start, goal: normal.goal },
-        elemental: { start: elemental.start, goal: elemental.goal },
-        burst: { start: burst.start, goal: burst.goal },
+        ormal: { ...normal },
+        elemental: { ...elemental },
+        burst: { ...burst },
       });
     } else {
       await db.builds.add({
@@ -102,9 +111,9 @@ const { loading: submitting, execute: handleSubmit } = useLoadingFunction(async 
         entityId: character.value.normalizedName,
         // use toRaw here because dexie can't copy a proxy
         level: { start: toRaw(level.start), goal: toRaw(level.goal) },
-        normal: { start: normal.start, goal: normal.goal },
-        elemental: { start: elemental.start, goal: elemental.goal },
-        burst: { start: burst.start, goal: burst.goal },
+        normal: { ...normal },
+        elemental: { ...elemental },
+        burst: { ...burst },
       });
     }
 
@@ -156,9 +165,25 @@ getAllCharacterItems(character.value).map((item) => {
               <div>
                 <div class="space-y-6">
                   <RangeLevel v-model:start="level.start" v-model:goal="level.goal" />
-                  <RangeTalent v-model:start="normal.start" v-model:goal="normal.goal" :icon="Sword" />
-                  <RangeTalent v-model:start="elemental.start" v-model:goal="elemental.goal" :icon="Elemental" />
-                  <RangeTalent v-model:start="burst.start" v-model:goal="burst.goal" :icon="Fire" />
+                  <RangeTalent
+                    v-model:start="normal.start"
+                    v-model:goal="normal.goal"
+                    :compensating="normal.compensating"
+                    :icon="Sword"
+                    @update:compensating="logging"
+                  />
+                  <RangeTalent
+                    v-model:start="elemental.start"
+                    v-model:goal="elemental.goal"
+                    v-model:compensating="elemental.compensating"
+                    :icon="Elemental"
+                  />
+                  <RangeTalent
+                    v-model:start="burst.start"
+                    v-model:goal="burst.goal"
+                    v-model:compensating="burst.compensating"
+                    :icon="Fire"
+                  />
                 </div>
                 <div class="mt-6">
                   <div class="mb-2">

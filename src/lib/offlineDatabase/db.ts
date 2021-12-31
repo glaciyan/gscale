@@ -6,6 +6,7 @@ import { AscensionLevel } from "../types/AscensionLevel";
 import StartGoalRange from "../types/StartGoalRange";
 import * as Legacy from "../legacy";
 import { toId } from "../toId";
+import { Talent } from "../types/Talent";
 
 export interface Build {
   id?: number;
@@ -14,9 +15,9 @@ export interface Build {
   type: string;
   entityId: string;
   level: StartGoalRange<AscensionLevel>;
-  normal: StartGoalRange<number>;
-  elemental: StartGoalRange<number>;
-  burst: StartGoalRange<number>;
+  normal: Talent;
+  elemental: Talent;
+  burst: Talent;
 }
 
 export class CustomDexie extends Dexie {

@@ -1,15 +1,43 @@
 <script setup lang="ts">
-import type { Component } from "vue";
+import type { Component, PropType } from "vue";
 import SelectorGroup from "../levelSelector/SelectorGroup.vue";
 import SelectorIconSeperator from "../levelSelector/SelectorIconSeperator.vue";
 import SelectorTalentLevel from "../levelSelector/SelectorTalentLevel.vue";
 import GButton from "../GButton.vue";
 
-defineProps<{ start: number; goal: number; icon: Component; element?: string }>();
+const props = defineProps<{ start: number; goal: number; compensating: boolean; icon: Component; element?: string }>();
 
-defineEmits(["update:start", "update:goal"]);
+const emit = defineEmits(["update:start", "update:goal", "update:compensating"]);
 
-const [compensating, toggle] = useToggle();
+const toggleCompensating = () => {
+  emit("update:compensating", !props.compensating);
+};
+
+// export default defineComponent({
+//   props: {
+//     start: {
+//       type: Number,
+//       required: true,
+//     },
+//     goal: {
+//       type: Number,
+//       required: true,
+//     },
+//     compensation: {
+//       type: Boolean,
+//       required: true,
+//     },
+//     icon: {
+//       type: Object as PropType<Component>,
+//       required: true,
+//     },
+//     element: {
+//       type: String,
+//       default: undefined,
+//     },
+//   },
+//   emits: ["update:start", "update:goal", "update:compensation"],
+// });
 </script>
 
 <template>
@@ -34,7 +62,7 @@ const [compensating, toggle] = useToggle();
     <GButton
       title="Add 3 to talent"
       :class="['ml-2 !h-[40px]', { 'text-cyan-400': compensating }]"
-      @click="() => toggle()"
+      @click="toggleCompensating"
       >+3</GButton
     >
   </SelectorGroup>

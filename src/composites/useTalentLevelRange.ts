@@ -1,9 +1,10 @@
-import type StartGoalRange from "~/lib/types/StartGoalRange";
+import { Talent } from "~/lib/types/Talent";
 
-export function useTalentLevelRange(): StartGoalRange<number> {
-  const range = reactive({
+export function useTalentLevelRange(): Talent {
+  const range = reactive<Talent>({
     start: 1,
     goal: 1,
+    compensating: false,
   });
 
   watch(
