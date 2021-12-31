@@ -92,7 +92,7 @@ const { loading: submitting, execute: handleSubmit } = useLoadingFunction(async 
         entityId: character.value.normalizedName,
         // use toRaw here because dexie can't copy a proxy
         level: { start: toRaw(level.start), goal: toRaw(level.goal) },
-        ormal: { ...normal },
+        normal: { ...normal },
         elemental: { ...elemental },
         burst: { ...burst },
       });
