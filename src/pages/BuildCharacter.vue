@@ -60,12 +60,15 @@ if (route.query.edit && typeof route.query.edit === "string") {
 
         normal.start = build.normal.start;
         normal.goal = build.normal.goal;
+        normal.upgraded = build.normal.upgraded ?? false;
 
         elemental.start = build.elemental.start;
         elemental.goal = build.elemental.goal;
+        elemental.upgraded = build.elemental.upgraded ?? false;
 
         burst.start = build.burst.start;
         burst.goal = build.burst.goal;
+        burst.upgraded = build.burst.upgraded ?? false;
       } else {
         console.error("Couldn't find any build with that id");
       }
@@ -92,9 +95,9 @@ const { loading: submitting, execute: handleSubmit } = useLoadingFunction(async 
         entityId: character.value.normalizedName,
         // use toRaw here because dexie can't copy a proxy
         level: { start: toRaw(level.start), goal: toRaw(level.goal) },
-        normal: { start: normal.start, goal: normal.goal },
-        elemental: { start: elemental.start, goal: elemental.goal },
-        burst: { start: burst.start, goal: burst.goal },
+        normal: { ...normal },
+        elemental: { ...elemental },
+        burst: { ...burst },
       });
     } else {
       await db.builds.add({
@@ -102,9 +105,9 @@ const { loading: submitting, execute: handleSubmit } = useLoadingFunction(async 
         entityId: character.value.normalizedName,
         // use toRaw here because dexie can't copy a proxy
         level: { start: toRaw(level.start), goal: toRaw(level.goal) },
-        normal: { start: normal.start, goal: normal.goal },
-        elemental: { start: elemental.start, goal: elemental.goal },
-        burst: { start: burst.start, goal: burst.goal },
+        normal: { ...normal },
+        elemental: { ...elemental },
+        burst: { ...burst },
       });
     }
 
@@ -156,9 +159,24 @@ getAllCharacterItems(character.value).map((item) => {
               <div>
                 <div class="space-y-6">
                   <RangeLevel v-model:start="level.start" v-model:goal="level.goal" />
-                  <RangeTalent v-model:start="normal.start" v-model:goal="normal.goal" :icon="Sword" />
-                  <RangeTalent v-model:start="elemental.start" v-model:goal="elemental.goal" :icon="Elemental" />
-                  <RangeTalent v-model:start="burst.start" v-model:goal="burst.goal" :icon="Fire" />
+                  <RangeTalent
+                    v-model:start="normal.start"
+                    v-model:goal="normal.goal"
+                    v-model:upgraded="normal.upgraded"
+                    :icon="Sword"
+                  />
+                  <RangeTalent
+                    v-model:start="elemental.start"
+                    v-model:goal="elemental.goal"
+                    v-model:upgraded="elemental.upgraded"
+                    :icon="Elemental"
+                  />
+                  <RangeTalent
+                    v-model:start="burst.start"
+                    v-model:goal="burst.goal"
+                    v-model:upgraded="burst.upgraded"
+                    :icon="Fire"
+                  />
                 </div>
                 <div class="mt-6">
                   <div class="mb-2">
