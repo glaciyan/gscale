@@ -5,7 +5,7 @@ defineProps<{ legend: string }>();
 <template>
   <fieldset>
     <legend class="font-semibold text-light-important mb-2">{{ legend }}</legend>
-    <div class="flex w-max">
+    <div class="w-max">
       <slot />
     </div>
   </fieldset>
