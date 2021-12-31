@@ -60,12 +60,15 @@ if (route.query.edit && typeof route.query.edit === "string") {
 
         normal.start = build.normal.start;
         normal.goal = build.normal.goal;
+        normal.compensating = build.normal.compensating ?? false;
 
         elemental.start = build.elemental.start;
         elemental.goal = build.elemental.goal;
+        elemental.compensating = build.elemental.compensating ?? false;
 
         burst.start = build.burst.start;
         burst.goal = build.burst.goal;
+        burst.compensating = build.burst.compensating ?? false;
       } else {
         console.error("Couldn't find any build with that id");
       }
