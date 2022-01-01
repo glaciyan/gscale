@@ -100,7 +100,7 @@ const hideTotal = () => {
       </div>
     </Center>
   </Container>
-  <teleport to="#totalItems">
+  <teleport to="#modal">
     <PopOver
       :open="totalVisible"
       backdropClass="fixed inset-0 bg-dark-900/80"

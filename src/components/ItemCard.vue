@@ -18,9 +18,8 @@ const amount = computed(() => millify(props.itemWithAmount.amount));
         width="40"
         height="40"
         :alt="itemWithAmount.item.name"
-        :title="itemWithAmount.item.name"
       />
     </div>
-    <div class="bg-dark-300 text-center w-full px-1" :title="itemWithAmount.amount.toLocaleString()">{{ amount }}</div>
+    <div class="bg-dark-300 text-center w-full px-1">{{ amount }}</div>
   </div>
 </template>

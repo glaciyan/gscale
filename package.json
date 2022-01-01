@@ -17,6 +17,7 @@
     "make:images": "node scripts/make_images.js"
   },
   "dependencies": {
+    "@floating-ui/dom": "^0.1.10",
     "@headlessui/vue": "^1.4.1",
     "@vueuse/core": "^7.3.0",
     "@vueuse/integrations": "^7.3.0",

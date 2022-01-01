@@ -10,8 +10,6 @@ import TheFooter from "./components/TheFooter.vue";
     <RouterView />
   </main>
   <TheFooter />
-  <div id="totalItems"></div>
-  <div id="modal"></div>
 </template>
 
 <style>

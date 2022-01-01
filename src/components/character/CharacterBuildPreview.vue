@@ -3,7 +3,7 @@ import useCheckList from "~/composites/useCheckList";
 import { useLoadingFunction } from "~/composites/useLoadingFunction";
 import { ICharacter } from "~/lib/data/contracts/ICharacter";
 import { ITraveler } from "~/lib/data/contracts/ITraveler";
-import ItemCheckState from "~/lib/item/ItemCheckState";
+import FillAmount, { FillState } from "~/lib/item/FillAmount";
 import { Build, db } from "~/lib/offlineDatabase/db";
 import { ItemWithAmount } from "~/lib/types/ItemWithAmount";
 import EButton from "../ElementButton.vue";
@@ -47,7 +47,7 @@ const hidden = computed(() => deleted.value || isDeleting.value);
 // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 const checkList = useCheckList(props.data.id!);
 
-const handleItemClick = (item: ItemWithAmount, state: ItemCheckState) => {
+const handleItemClick = (item: ItemWithAmount, fillAmount: FillAmount) => {
   const checkListIndex = checkList.items.value.findIndex((i) => i.item.normalizedName === item.item.normalizedName);
 
   if (checkListIndex === -1) {
@@ -55,7 +55,7 @@ const handleItemClick = (item: ItemWithAmount, state: ItemCheckState) => {
     return;
   }
 
-  if (state === ItemCheckState.Done) {
+  if (fillAmount.state === FillState.Done) {
     checkList.setItemAmount(checkListIndex, 0);
   } else {
     checkList.setItemAmount(checkListIndex, item.amount);
