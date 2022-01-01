@@ -57,7 +57,6 @@ const handleBuildDelete = () => {
 };
 
 const total = computed(() => {
-  console.log("calculating overall total");
   return mergeAmountByName(builds.value.map((build) => build.total.value));
 });
 

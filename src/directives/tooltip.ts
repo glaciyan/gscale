@@ -83,7 +83,6 @@ export default (app: App<Element>, options: TooltipOptions) => {
 
   app.directive("tooltip", {
     mounted(el, binding, vnode) {
-      console.log(vnode);
 
       if (!binding.arg) binding.arg = "top";
 
