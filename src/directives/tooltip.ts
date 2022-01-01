@@ -21,7 +21,10 @@ export default (app: App<Element>, options: TooltipOptions) => {
     el.setAttribute("data-v-tooltip", value);
   };
 
-  const showTooltip = (el: any, placement: any) => {
+  const showTooltip = (el: any, placement: any, event: MouseEvent) => {
+    // don't show tooltip on sm screens
+    if (event.view?.innerWidth && event.view.innerWidth < 640) return;
+
     tooltipContent.innerHTML = el.getAttribute("data-v-tooltip");
 
     const middleware: Middleware[] = [
@@ -84,7 +87,7 @@ export default (app: App<Element>, options: TooltipOptions) => {
 
       if (!binding.arg) binding.arg = "top";
 
-      useEventListener(el, "mouseenter", () => showTooltip(el, binding.arg!));
+      useEventListener(el, "mouseenter", (ev) => showTooltip(el, binding.arg!, ev));
       useEventListener(el, "mouseleave", hideTooltip);
 
       updateContent(el, binding.value);
