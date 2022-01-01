@@ -1,6 +1,6 @@
-import { computePosition, offset, shift, flip, arrow, Middleware } from "@floating-ui/dom";
+import { arrow, computePosition, flip, Middleware, offset, shift } from "@floating-ui/dom";
 import { useEventListener } from "@vueuse/core";
-import { App } from "vue";
+import type { App } from "vue";
 
 interface TooltipOptions {
   tooltipId: string;
@@ -16,8 +16,13 @@ export default (app: App<Element>, options: TooltipOptions) => {
   const tooltipContent = document.querySelector(`#${options.tooltipContentId}`) as HTMLDivElement;
   const arrowElement = document.querySelector(`#${options.tooltipArrowId}`) as HTMLDivElement | null;
 
-  const showTooltip = (el: any, content: string, placement: any) => {
-    tooltipContent.innerText = content;
+  const updateContent = (el: any, value: any) => {
+    // thanks to https://github.com/maciejziemichod/v-tooltip/blob/main/tooltip.js#L5
+    el.setAttribute("data-v-tooltip", value);
+  };
+
+  const showTooltip = (el: any, placement: any) => {
+    tooltipContent.innerHTML = el.getAttribute("data-v-tooltip");
 
     const middleware: Middleware[] = [
       offset(options.offset ?? 0),
@@ -61,24 +66,31 @@ export default (app: App<Element>, options: TooltipOptions) => {
   };
 
   const hideTooltip = () => {
-    tooltipContent.innerText = "";
-
     Object.assign(tooltip.style, {
       opacity: "0",
-      transform: `translate(0px, 0px)`,
     });
   };
 
-  addEventListener("resize", hideTooltip);
+  addEventListener("resize", () => {
+    tooltipContent.innerText = "";
+    Object.assign(tooltip.style, {
+      transform: "translate(0px, 0px)",
+    });
+  });
 
   app.directive("tooltip", {
-    mounted(el, binding) {
-      console.log(el.innerText, binding.value, binding.arg);
+    mounted(el, binding, vnode) {
+      console.log(vnode);
 
       if (!binding.arg) binding.arg = "top";
 
-      useEventListener(el, "mouseenter", () => showTooltip(el, binding.value, binding.arg!));
+      useEventListener(el, "mouseenter", () => showTooltip(el, binding.arg!));
       useEventListener(el, "mouseleave", hideTooltip);
+
+      updateContent(el, binding.value);
+    },
+    updated(el, binding) {
+      updateContent(el, binding.value);
     },
   });
 };
