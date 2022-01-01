@@ -1,21 +1,30 @@
 <script setup lang="ts">
 import ItemCard from "./ItemCard.vue";
 import { ItemWithAmount } from "~/lib/types/ItemWithAmount";
-import ItemCheckState from "~/lib/item/ItemCheckState";
 import CheckIcon from "./icons/CheckIcon.vue";
+import FillAmount, { FillState } from "~/lib/item/FillAmount";
 
-const props = defineProps<{ itemWithAmount: ItemWithAmount; state: ItemCheckState }>();
+const props = defineProps<{ itemWithAmount: ItemWithAmount; fillAmount: FillAmount }>();
 defineEmits(["click"]);
 
-const done = computed(() => props.state === ItemCheckState.Done);
-const partial = computed(() => props.state === ItemCheckState.Partial);
+const done = computed(() => props.fillAmount.state === FillState.Done);
+const partial = computed(() => props.fillAmount.state === FillState.Partial);
+
+const tooltip = computed(() => {
+  if (done.value) {
+    return `${props.itemWithAmount.item.name} (Done)`;
+  } else if (partial.value) {
+    return `${props.itemWithAmount.item.name} ()`;
+  }
+});
 </script>
 
 <template>
   <div
+    v-tooltip="tooltip"
     class="cursor-pointer m-1 relative select-none"
-    :title="`${state === ItemCheckState.Partial ? '(Partial) ' : ''}${itemWithAmount.item.name}`"
-    @click="$emit('click', state)"
+    :title="`${fillAmount.state === FillState.Partial ? '(Partial) ' : ''}${itemWithAmount.item.name}`"
+    @click="$emit('click', fillAmount)"
   >
     <ItemCard :itemWithAmount="itemWithAmount" :grayscale="done" class="!m-0" />
     <div

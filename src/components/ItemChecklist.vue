@@ -1,23 +1,23 @@
 <script setup lang="ts">
 import { ItemWithAmount } from "~/lib/types/ItemWithAmount";
 import incrId from "~/lib/incrId";
-import ItemCheckState from "~/lib/item/ItemCheckState";
 import ItemCardClickable from "./ItemCardClickable.vue";
+import FillAmount, { FillState } from "~/lib/item/FillAmount";
 
 const props = defineProps<{ items: ItemWithAmount[]; checkedOff: ItemWithAmount[] }>();
 defineEmits(["itemClick"]);
 
 const id = incrId();
 
-const getState = (item: ItemWithAmount): ItemCheckState => {
+const getState = (item: ItemWithAmount): FillAmount => {
   const fromChecklist = props.checkedOff.find((i) => i.item.normalizedName === item.item.normalizedName);
 
   if (!fromChecklist || fromChecklist?.amount === 0) {
-    return ItemCheckState.None;
+    return { state: FillState.None, amount: 0 };
   } else if (fromChecklist.amount >= item.amount) {
-    return ItemCheckState.Done;
+    return { state: FillState.Done, amount: fromChecklist.amount };
   } else {
-    return ItemCheckState.Partial;
+    return { state: FillState.Partial, amount: fromChecklist.amount };
   }
 };
 </script>
@@ -27,7 +27,7 @@ const getState = (item: ItemWithAmount): ItemCheckState => {
     v-for="item in items"
     :key="item.item.normalizedName + id"
     :itemWithAmount="item"
-    :state="getState(item)"
+    :fillAmount="getState(item)"
     @click="$emit('itemClick', item, $event)"
   />
 </template>
