@@ -12,7 +12,7 @@ const partial = computed(() => props.fillAmount.state === FillState.Partial);
 
 const tooltip = computed(() => {
   if (done.value) {
-    return `${props.itemWithAmount.item.name} (Done)`;
+    return `${props.itemWithAmount.item.name} (${props.itemWithAmount.amount.toLocaleString()})`;
   } else if (partial.value) {
     return `${
       props.itemWithAmount.item.name
