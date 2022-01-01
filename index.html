@@ -24,9 +24,14 @@
 
     <div id="modal"></div>
 
-    <div id="tooltip" role="tooltip" class="transition-opacity top-0 left-0" style="opacity: 0">
+    <div
+      id="tooltip"
+      role="tooltip"
+      class="rounded-md bg-dark-300 shadow-md py-1 px-2 transition-opacity top-0 left-0 absolute pointer-events-none"
+      style="opacity: 0"
+    >
       <p id="tooltipContent"></p>
-      <div class="arrow" id="tooltipArrow"></div>
+      <div class="bg-dark-300 h-2 transform w-2 rotate-45 absolute" id="tooltipArrow"></div>
     </div>
 
     <script type="module" src="/src/main.ts"></script>
