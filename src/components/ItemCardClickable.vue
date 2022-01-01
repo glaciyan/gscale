@@ -14,18 +14,17 @@ const tooltip = computed(() => {
   if (done.value) {
     return `${props.itemWithAmount.item.name} (Done)`;
   } else if (partial.value) {
-    return `${props.itemWithAmount.item.name} ()`;
+    return `${
+      props.itemWithAmount.item.name
+    } (${props.fillAmount.amount.toLocaleString()}/${props.itemWithAmount.amount.toLocaleString()})`;
+  } else {
+    return `${props.itemWithAmount.item.name} (${props.itemWithAmount.amount.toLocaleString()})`;
   }
 });
 </script>
 
 <template>
-  <div
-    v-tooltip="tooltip"
-    class="cursor-pointer m-1 relative select-none"
-    :title="`${fillAmount.state === FillState.Partial ? '(Partial) ' : ''}${itemWithAmount.item.name}`"
-    @click="$emit('click', fillAmount)"
-  >
+  <div v-tooltip="tooltip" class="cursor-pointer m-1 relative select-none" @click="$emit('click', fillAmount)">
     <ItemCard :itemWithAmount="itemWithAmount" :grayscale="done" class="!m-0" />
     <div
       :class="[
