@@ -12,13 +12,13 @@ const partial = computed(() => props.fillAmount.state === FillState.Partial);
 
 const tooltip = computed(() => {
   if (done.value) {
-    return `${props.itemWithAmount.item.name} (${props.itemWithAmount.amount.toLocaleString()})`;
+    return `${props.itemWithAmount.amount.toLocaleString()} ${props.itemWithAmount.item.name}`;
   } else if (partial.value) {
-    return `${
+    return `${props.fillAmount.amount.toLocaleString()}/${props.itemWithAmount.amount.toLocaleString()} ${
       props.itemWithAmount.item.name
-    } (${props.fillAmount.amount.toLocaleString()}/${props.itemWithAmount.amount.toLocaleString()})`;
+    }`;
   } else {
-    return `${props.itemWithAmount.item.name} (${props.itemWithAmount.amount.toLocaleString()})`;
+    return `${props.itemWithAmount.amount.toLocaleString()} ${props.itemWithAmount.item.name}`;
   }
 });
 </script>
