@@ -12,6 +12,7 @@ import totalBuildItems from "~/lib/item/totalBuildItems";
 import { Build, db } from "~/lib/offlineDatabase/db";
 import { ItemWithAmount } from "~/lib/types/ItemWithAmount";
 import Container from "../components/PageContainer";
+import { RouterLink } from "vue-router";
 
 const buildsData = ref<{ character: ICharacter | ITraveler; items: ItemWithAmount[]; data: Build }[]>();
 const buildsReady = computed(() => buildsData.value !== undefined);
@@ -75,12 +76,29 @@ const hideTotal = () => {
         :data="build.data"
         @deleted="onDelete"
       />
-      <Center v-if="buildsData!.length <= 2">
-        <div class="rounded-lg flex flex-col h-full bg-dark-400 shadow-md py-4 px-6 items-center justify-center">
-          <div class="m-2 text-6xl">?</div>
-          <p>You don't have any builds.</p>
-        </div>
-      </Center>
+      <RouterLink
+        v-if="buildsData!.length <= 2"
+        to="/"
+        class="
+          border-dashed
+          rounded-xl
+          flex flex-col
+          h-full
+          border-4 border-dark-600
+          min-h-96
+          py-4
+          px-6
+          transition-colors
+          text-light-ternary/70
+          block
+          items-center
+          justify-center
+          hover:text-light-ternary
+        "
+      >
+        <p class="font-bold text-xl">Add a new build</p>
+        <p class="font-bold text-xl">+</p>
+      </RouterLink>
     </div>
   </Container>
   <teleport to="#modal">
