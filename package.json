@@ -1,7 +1,7 @@
 {
   "name": "gscale",
   "license": "MIT",
-  "version": "2.1.0",
+  "version": "2.1.2",
   "scripts": {
     "pre": "yarn genver",
     "dev": "yarn pre && vite",
