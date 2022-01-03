@@ -18,7 +18,7 @@ import RangeLevelDisplay from "../levelRange/display/RangeLevelDisplay.vue";
 import RangeTalentDisplay from "../levelRange/display/RangeTalentDisplay.vue";
 import Modal from "../Modal.vue";
 
-const props = defineProps<{ character: ICharacter | ITraveler; total: ItemWithAmount[]; data: Build }>();
+const props = defineProps<{ character: ICharacter | ITraveler; items: ItemWithAmount[]; data: Build }>();
 const emit = defineEmits(["deleted"]);
 
 //#region Deleting
@@ -113,7 +113,7 @@ const edit = () => {
               <div v-if="checkList.loading.value" class="flex inset-0 absolute items-center justify-center">
                 <GSpinner />
               </div>
-              <ItemChecklist v-else :items="total" :checkedOff="checkList.items.value" @itemClick="handleItemClick" />
+              <ItemChecklist v-else :items="items" :checkedOff="checkList.items.value" @itemClick="handleItemClick" />
             </div>
           </div>
         </div>
