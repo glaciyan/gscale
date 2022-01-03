@@ -34,13 +34,15 @@ const total = computed(() => {
   else return [];
 });
 
-const handleBuildDelete = () => {
-  console.log("deleted");
-};
-
 onBeforeMount(() => {
   getBuilds();
 });
+
+const onDelete = (id: number) => {
+  console.log("deleted", id);
+
+  getBuilds();
+};
 
 //#region Total Popover
 const totalVisible = ref(false);
@@ -70,7 +72,7 @@ const hideTotal = () => {
         :character="build.character"
         :items="build.items"
         :data="build.data"
-        @deleted="handleBuildDelete"
+        @deleted="onDelete"
       />
     </div>
     <!-- <Center v-else>
