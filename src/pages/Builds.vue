@@ -1,103 +1,86 @@
 <script setup lang="ts">
-import { db } from "~/lib/offlineDatabase/db";
+import { useScrollLock } from "@vueuse/core";
 import CharacterBuildPreview from "~/components/character/CharacterBuildPreview.vue";
-import { Build } from "~/lib/offlineDatabase/db";
-import Container from "../components/PageContainer";
-import GLink from "~/components/GLink";
-import Center from "../components/Center.vue";
-import useRandomElement from "~/composites/useRandomElement";
-import repo from "~/lib/data/repository/GenshinDataRepository";
-import totalBuildItems from "~/lib/item/totalBuildItems";
-import mergeAmountByName from "~/lib/item/mergeAmountByName";
+import GButton from "~/components/GButton.vue";
 import ItemList from "~/components/ItemList.vue";
 import PopOver from "~/components/PopOver.vue";
-import { useScrollLock } from "@vueuse/core";
-import GButton from "~/components/GButton.vue";
-import EButton from "~/components/ElementButton.vue";
+import { ICharacter } from "~/lib/data/contracts/ICharacter";
+import { ITraveler } from "~/lib/data/contracts/ITraveler";
+import repo from "~/lib/data/repository/GenshinDataRepository";
+import mergeAmountByName from "~/lib/item/mergeAmountByName";
+import totalBuildItems from "~/lib/item/totalBuildItems";
+import { Build, db } from "~/lib/offlineDatabase/db";
+import { ItemWithAmount } from "~/lib/types/ItemWithAmount";
+import Container from "../components/PageContainer";
 
-const { element, pickNew: newElement } = useRandomElement();
-
-const buildsData = ref<Build[]>();
-const totalBuilds = ref(0);
-
-const builds = computed(() =>
-  buildsData.value
-    ? buildsData.value.map((build) => {
-        const character = repo.needCharacter(build.entityId);
-        const total = totalBuildItems(character, build);
-
-        return {
-          character,
-          total,
-          data: build,
-        };
-      })
-    : []
-);
+const buildsData = ref<{ character: ICharacter | ITraveler; items: ItemWithAmount[]; data: Build }[]>();
 
 const getBuilds = async () => {
   const buildsFromDb = await db.builds.where("type").equals("character").toArray();
-  buildsData.value = buildsFromDb;
-  totalBuilds.value = buildsFromDb.length;
+  buildsData.value = buildsFromDb.map((build) => {
+    const character = repo.needCharacter(build.entityId);
+    const items = totalBuildItems(character, build);
+
+    return {
+      character,
+      items,
+      data: build,
+    };
+  });
+};
+
+const total = computed(() => {
+  if (buildsData.value) return mergeAmountByName(buildsData.value.map((build) => build.items));
+  else return [];
+});
+
+const handleBuildDelete = () => {
+  console.log("deleted");
 };
 
 onBeforeMount(() => {
   getBuilds();
-  newElement();
-});
-
-const hasBuilds = computed(() => totalBuilds.value > 0);
-
-const handleBuildDelete = () => {
-  if (totalBuilds.value <= 1) {
-    window.scrollTo({ top: 0 });
-  }
-
-  totalBuilds.value--;
-};
-
-const total = computed(() => {
-  return mergeAmountByName(builds.value.map((build) => build.total.value));
 });
 
 //#region Total Popover
 const totalVisible = ref(false);
-const lock = useScrollLock(document.body);
+// TODO make modal eat up all the scroll events instead of scroll locking
+const scrollLock = useScrollLock(document.body);
 
 const showTotal = () => {
   totalVisible.value = true;
-  lock.value = true;
+  scrollLock.value = true;
 };
 
 const hideTotal = () => {
   totalVisible.value = false;
-  lock.value = false;
+  scrollLock.value = false;
 };
 //#endregion
 </script>
 
 <template>
-  <Container v-if="builds !== null" size="2xl">
+  <Container size="2xl">
     <div class="flex space-x-2 mb-4">
       <GButton @click="showTotal">Show Total</GButton>
     </div>
-    <div v-if="hasBuilds" w:grid="gap-5 cols-2 <sm:cols-1" class="grid">
+    <div w:grid="gap-5 cols-2 <sm:cols-1" class="grid">
       <CharacterBuildPreview
-        v-for="build in builds"
+        v-for="build in buildsData"
         :key="build.data.id"
         :character="build.character"
-        :total="build.total.value"
+        :items="build.items"
         :data="build.data"
         @deleted="handleBuildDelete"
       />
     </div>
-    <Center v-else>
+    <!-- <Center v-else>
       <div class="rounded-lg flex flex-col bg-dark-400 shadow-md w-max py-4 px-6 items-center justify-center">
         <div class="m-2 text-6xl">?</div>
         <p>You don't have any builds.</p>
         <GLink to="/" isRouter><EButton :element="element" class="mt-2">Create one</EButton></GLink>
       </div>
-    </Center>
+    </Center> -->
   </Container>
   <teleport to="#modal">
     <PopOver
