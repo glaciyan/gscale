@@ -44,7 +44,6 @@ onBeforeMount(() => {
 
 //#region Total Popover
 const totalVisible = ref(false);
-// TODO make modal eat up all the scroll events instead of scroll locking
 const scrollLock = useScrollLock(document.body);
 
 const showTotal = () => {
