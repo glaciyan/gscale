@@ -234,7 +234,7 @@ getAllCharacterItems(character.value).map((item) => {
             <ItemPreviewSection :items="ascItems" title="Ascension" :icon="Growth" />
             <ItemPreviewSection :items="normalItems" title="Normal Attack" :icon="Sword" />
             <ItemPreviewSection :items="emItems" title="Elemental Attack" :icon="Elemental" />
-            <ItemPreviewSection :items="burstItems" title="Ascension" :icon="Fire" />
+            <ItemPreviewSection :items="burstItems" title="Burst" :icon="Fire" />
           </div>
           <div v-else class="rounded-lg flex bg-dark-400 shadow-md mt-2 text-center w-max p-4 items-center">
             <div class="text-center">
