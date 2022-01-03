@@ -14,6 +14,7 @@ import { ItemWithAmount } from "~/lib/types/ItemWithAmount";
 import Container from "../components/PageContainer";
 
 const buildsData = ref<{ character: ICharacter | ITraveler; items: ItemWithAmount[]; data: Build }[]>();
+const buildsReady = computed(() => buildsData.value !== undefined);
 
 const getBuilds = async () => {
   const buildsFromDb = await db.builds.where("type").equals("character").toArray();
@@ -61,8 +62,8 @@ const hideTotal = () => {
 </script>
 
 <template>
-  <Container size="2xl">
-    <div class="flex space-x-2 mb-4">
+  <Container v-if="buildsReady" size="2xl">
+    <div v-if="buildsData!.length > 0" class="flex space-x-2 mb-4">
       <GButton @click="showTotal">Show Total</GButton>
     </div>
     <div w:grid="gap-5 cols-2 <sm:cols-1" class="grid">
@@ -74,14 +75,13 @@ const hideTotal = () => {
         :data="build.data"
         @deleted="onDelete"
       />
+      <Center v-if="buildsData!.length <= 2">
+        <div class="rounded-lg flex flex-col h-full bg-dark-400 shadow-md py-4 px-6 items-center justify-center">
+          <div class="m-2 text-6xl">?</div>
+          <p>You don't have any builds.</p>
+        </div>
+      </Center>
     </div>
-    <!-- <Center v-else>
-      <div class="rounded-lg flex flex-col bg-dark-400 shadow-md w-max py-4 px-6 items-center justify-center">
-        <div class="m-2 text-6xl">?</div>
-        <p>You don't have any builds.</p>
-        <GLink to="/" isRouter><EButton :element="element" class="mt-2">Create one</EButton></GLink>
-      </div>
-    </Center> -->
   </Container>
   <teleport to="#modal">
     <PopOver
