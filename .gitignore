@@ -6,6 +6,7 @@ dist-ssr
 .vercel
 src/version.ts
 .obsidian
+scripts/jsdata
 
 # Logs
 logs

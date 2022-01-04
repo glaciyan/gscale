@@ -1,7 +1,7 @@
-import { IdIndex } from "../types/UsingId";
 import { IWeaponType } from "./contracts/IWeaponType";
+import WeaponTypesKey from "./keys/WeaponTypesKey";
 
-export const WeaponTypes: IdIndex<IWeaponType> = {
+export const WeaponTypes: { [key in WeaponTypesKey]: IWeaponType } = {
   bow: {
     name: "Bow",
     normalizedName: "bow",

@@ -1,10 +1,10 @@
-import AscensionCostTable from "./data/AscensionCostTable";
+import AscensionCostTable from "./data/costTables/AscensionCostTable";
 import { IBaseCharacter } from "./data/contracts/IBaseCharacter";
 import { IStandardAscensionItems } from "./data/contracts/IStandardCharacterItems";
 import { ItemWithAmount } from "./types/ItemWithAmount";
 import { Items } from "./data/Items";
-import LevelingCostTable from "./data/LevelingCostTable";
-import TalentCostTable from "./data/TalentCostTable";
+import LevelingCostTable from "./data/costTables/LevelingCostTable";
+import TalentCostTable from "./data/costTables/TalentCostTable";
 import { getAscensionStage } from "./level/getAscensionStage";
 import getLevelingIndex from "./level/getLevelingIndex";
 import { getStandardAscensionItems, getStandardTalentItems } from "./item/getStandardItems";

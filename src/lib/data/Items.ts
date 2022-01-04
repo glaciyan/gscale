@@ -1,7 +1,7 @@
-import { IdIndex } from "../types/UsingId";
 import { IItem } from "./contracts/IItem";
+import ItemsKey from "./keys/ItemsKey";
 
-export const Items: IdIndex<IItem> = {
+export const Items: { [key in ItemsKey]: IItem } = {
   unknown: {
     name: "Unknown Item",
     normalizedName: "unknown",
