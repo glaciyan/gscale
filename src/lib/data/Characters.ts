@@ -6,6 +6,23 @@ import { Items } from "./Items";
 import { WeaponTypes } from "./WeaponTypes";
 
 export const Characters: IdIndex<ICharacter> = {
+  yun_jin: {
+    noPic: true,
+    name: "Yun Jin",
+    normalizedName: "yun_jin",
+    element: Elements.geo,
+    weaponType: WeaponTypes.polearm,
+    rarity: 4,
+    sub: "No Info",
+    constellation: "Opera Grandis",
+    description: "No Info",
+    local: Items.glaze_lily,
+    commonGroup: ItemGroups.mask,
+    boss: Items.riftborn_regalia,
+    gemGroup: ItemGroups.geo_gem,
+    bookGroup: ItemGroups.diligence,
+    weekly: Items.ashen_heart,
+  },
   itto: {
     name: "Itto",
     normalizedName: "itto",
