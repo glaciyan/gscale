@@ -14,20 +14,10 @@ const elementTextColor = computed(() => `text-genshin-element-${props.character.
 <template>
   <aside class="flex flex-col bg-dark-700 px-6 pt-4 pb-6 relative">
     <div aria-hidden="true" class="h-32 w-full opacity-50 inset-x-0 top-0 absolute">
-      <Image
-        class="h-full object-cover w-full"
-        type="characterCard"
-        :name="character.normalizedName"
-        width="240"
-        height="150"
-      />
+      <Image class="h-full object-cover w-full" type="characterCard" :entity="character" width="240" height="150" />
     </div>
     <div class="relative">
-      <GPortrait
-        class="ring mb-6 ring-dark-700"
-        :normalizedName="character.normalizedName"
-        :rarity="character.rarity"
-      />
+      <GPortrait class="ring mb-6 ring-dark-700" :character="character" />
       <!-- Character details -->
       <div>
         <p class="font-bold text-light-important">{{ character.name }}</p>

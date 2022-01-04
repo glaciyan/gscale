@@ -83,7 +83,7 @@ const edit = () => {
                 <Image
                   class="object-cover h-32 w-full opacity-50"
                   type="characterCard"
-                  :name="character.normalizedName"
+                  :entity="character"
                   width="240"
                   height="150"
                 />
