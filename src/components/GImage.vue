@@ -3,10 +3,9 @@ import { IBaseCharacter } from "~/lib/data/contracts/IBaseCharacter";
 import { IItem } from "~/lib/data/contracts/IItem";
 import { getCharacterImage } from "~/lib/data/util/getCharacterImage";
 import { getItemImage } from "~/lib/data/util/getItemImage";
-import { getWeaponImage } from "~/lib/data/util/getWeaponImage";
 
 const props = defineProps<{
-  type: "characterMugshot" | "characterCard" | "item" | "weapon";
+  type: "characterMugshot" | "characterCard" | "item";
   entity: IBaseCharacter | IItem;
 }>();
 
@@ -20,8 +19,6 @@ const src = computed(() => {
       return getCharacterImage(props.entity, "mugshot");
     case "item":
       return getItemImage(props.entity.normalizedName);
-    case "weapon":
-      return getWeaponImage(props.entity.name);
   }
 });
 </script>
