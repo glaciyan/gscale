@@ -1,11 +1,11 @@
 import { ICharacter } from "./contracts/ICharacter";
-import { IdIndex } from "../types/UsingId";
 import { Elements } from "./Elements";
 import { ItemGroups } from "./ItemGroups";
 import { Items } from "./Items";
+import CharactersKey from "./keys/CharactersKey";
 import { WeaponTypes } from "./WeaponTypes";
 
-export const Characters: IdIndex<ICharacter> = {
+export const Characters: { [key in CharactersKey]: ICharacter } = {
   shenhe: {
     noPic: true,
     name: "Shenhe",

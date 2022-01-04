@@ -1,7 +1,7 @@
-import { IdIndex } from "../types/UsingId";
 import { IElement } from "./contracts/IElement";
+import ElementsKey from "./keys/ElementsKey";
 
-export const Elements: IdIndex<IElement> = {
+export const Elements: { [key in ElementsKey]: IElement } = {
   pyro: {
     name: "Pyro",
     normalizedName: "pyro",
