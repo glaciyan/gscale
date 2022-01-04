@@ -22,6 +22,7 @@ export const Characters: IdIndex<ICharacter> = {
     gemGroup: ItemGroups.cryo_gem,
     bookGroup: ItemGroups.prosperity,
     weekly: Items.hellfire_butterfly,
+  },
   yun_jin: {
     noPic: true,
     name: "Yun Jin",
