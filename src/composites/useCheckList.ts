@@ -20,7 +20,7 @@ export default (buildId: number) => {
   const syncToDb = async () => await db.builds.update(buildId, { completed: toRaw(items.value) });
 
   const newItem = async (item: ItemWithAmount) => {
-    items.value.push(Object.assign({}, item));
+    items.value.push(Object.assign({}, toRaw(item)));
     await syncToDb();
   };
 

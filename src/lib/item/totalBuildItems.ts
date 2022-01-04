@@ -21,16 +21,14 @@ export default function (
   }
 ) {
   const levelingItems = calculateLeveling(level.start, level.goal);
-  const items = computed(() =>
-    sortItems(
-      mergeAmountByName([
-        calculateAscension(character, level.start, level.goal),
-        calculateTalent(character, normal.start, normal.goal, true),
-        calculateTalent(character, elemental.start, elemental.goal),
-        calculateTalent(character, burst.start, burst.goal),
-        [levelingItems.mora, levelingItems.lazy],
-      ])
-    )
+  const items = sortItems(
+    mergeAmountByName([
+      calculateAscension(character, level.start, level.goal),
+      calculateTalent(character, normal.start, normal.goal, true),
+      calculateTalent(character, elemental.start, elemental.goal),
+      calculateTalent(character, burst.start, burst.goal),
+      [levelingItems.mora, levelingItems.lazy],
+    ])
   );
 
   return items;

@@ -26,7 +26,7 @@ const getState = (item: ItemWithAmount): FillAmount => {
   <ItemCardClickable
     v-for="item in items"
     :key="item.item.normalizedName + id"
-    :itemWithAmount="item"
+    :item="item"
     :fillAmount="getState(item)"
     @click="$emit('itemClick', item, $event)"
   />
