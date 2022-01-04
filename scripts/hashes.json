@@ -1116,6 +1116,10 @@
         "hash": "b215777a1ec5e0fa16c1c6b3c5f960a502ab6085"
     },
     {
+        "name": "./src/lib/data/images/materials/unknown.png",
+        "hash": "6f275fba8afd93c975104211327734a655384f98"
+    },
+    {
         "name": "./src/lib/data/images/materials/vajrada_amethyst_chunk.png",
         "hash": "01972c0cbfcec2e6d405074422f46b5ff9e4b1b1"
     },
