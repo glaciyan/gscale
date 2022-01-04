@@ -14,7 +14,7 @@ const amount = computed(() => millify(props.itemWithAmount.amount));
       <Image
         :class="['h-full object-contain w-full', { 'filter grayscale': grayscale }]"
         type="item"
-        :name="itemWithAmount.item.normalizedName"
+        :entity="itemWithAmount.item"
         width="40"
         height="40"
         :alt="itemWithAmount.item.name"

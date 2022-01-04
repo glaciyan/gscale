@@ -26,7 +26,7 @@ const isVisible = useIntersection(image);
           v-if="isVisible"
           class="h-full w-full"
           type="characterCard"
-          :name="character.normalizedName"
+          :entity="character"
           width="240"
           height="150"
         />

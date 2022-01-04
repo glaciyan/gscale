@@ -1,4 +1,6 @@
-export function getCharacterImage(normalizedName: string, type: "card" | "mugshot") {
+import { IBaseCharacter } from "../contracts/IBaseCharacter";
+
+export function getCharacterImage(character: IBaseCharacter, type: "card" | "mugshot") {
   let basePath;
 
   switch (type) {
@@ -10,9 +12,13 @@ export function getCharacterImage(normalizedName: string, type: "card" | "mugsho
       break;
   }
 
-  if (normalizedName.startsWith("traveler")) normalizedName = "traveler";
+  let imageName;
 
-  const fileName = `${basePath}/${normalizedName}`;
+  if (character.isTraveler) imageName = "traveler";
+  else if (character.noPic) imageName = "nopic";
+  else imageName = character.normalizedName;
+
+  const fileName = `${basePath}/${imageName}`;
 
   const png = `${fileName}.png`;
   const webp = `${fileName}.webp`;
