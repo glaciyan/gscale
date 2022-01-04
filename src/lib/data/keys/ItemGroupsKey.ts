@@ -1,0 +1,3 @@
+
+type ItemGroupsKey = "unknown" | "sentinel_gear" | "prism" | "oni_mask" | "coral" | "claw" | "narukami" | "spectral" | "light" | "transience" | "handguard" | "elegance" | "pyro_gem" | "geo_gem" | "cryo_gem" | "electro_gem" | "hydro_gem" | "anemo_gem" | "traveler_gem" | "scroll" | "arrowhead" | "treasure_hoarder_insignia" | "mask" | "fatui_insignia" | "nectar" | "slime" | "ballad" | "freedom" | "gold" | "resistance" | "diligence" | "prosperity" | "chaos" | "horn" | "bone_shard" | "sacrificial_knife" | "mist_grass" | "ley_line" | "dandelion_gladiator" | "decarabians" | "aerosiderite" | "guyun" | "mist_elixir" | "wolf_tooth";
+export default ItemGroupsKey;
