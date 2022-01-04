@@ -1,4 +1,7 @@
-export const DaysOfWeek = {
+import { INamed } from "./contracts/INamed";
+import DaysOfWeekKey from "./keys/DaysOfWeekKey";
+
+export const DaysOfWeek: { [key in DaysOfWeekKey]: INamed } = {
   monday: {
     name: "Monday",
     normalizedName: "mo",

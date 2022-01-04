@@ -11,4 +11,5 @@ export interface IBaseCharacter extends INamed {
   description: string;
   isTraveler?: boolean;
   altName?: string;
+  noPic?: boolean;
 }

@@ -1,11 +1,45 @@
 import { ICharacter } from "./contracts/ICharacter";
-import { IdIndex } from "../types/UsingId";
 import { Elements } from "./Elements";
 import { ItemGroups } from "./ItemGroups";
 import { Items } from "./Items";
+import CharactersKey from "./keys/CharactersKey";
 import { WeaponTypes } from "./WeaponTypes";
 
-export const Characters: IdIndex<ICharacter> = {
+export const Characters: { [key in CharactersKey]: ICharacter } = {
+  shenhe: {
+    noPic: true,
+    name: "Shenhe",
+    normalizedName: "shenhe",
+    element: Elements.cryo,
+    weaponType: WeaponTypes.polearm,
+    rarity: 5,
+    sub: "No Info",
+    constellation: "Crista Doloris",
+    description: "No Info",
+    local: Items.qingxin,
+    commonGroup: ItemGroups.nectar,
+    boss: Items.unknown,
+    gemGroup: ItemGroups.cryo_gem,
+    bookGroup: ItemGroups.prosperity,
+    weekly: Items.hellfire_butterfly,
+  },
+  yun_jin: {
+    noPic: true,
+    name: "Yun Jin",
+    normalizedName: "yun_jin",
+    element: Elements.geo,
+    weaponType: WeaponTypes.polearm,
+    rarity: 4,
+    sub: "No Info",
+    constellation: "Opera Grandis",
+    description: "No Info",
+    local: Items.glaze_lily,
+    commonGroup: ItemGroups.mask,
+    boss: Items.riftborn_regalia,
+    gemGroup: ItemGroups.geo_gem,
+    bookGroup: ItemGroups.diligence,
+    weekly: Items.ashen_heart,
+  },
   itto: {
     name: "Itto",
     normalizedName: "itto",

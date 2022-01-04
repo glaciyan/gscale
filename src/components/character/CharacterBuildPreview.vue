@@ -74,12 +74,12 @@ const edit = () => {
           <div class="flex min-h-32 relative lg:w-50">
             <div class="inset-x-0 top-0 absolute fading-out">
               <Image
-                class="object-cover h-32 w-full opacity-50"
-                type="characterCard"
-                :name="character.normalizedName"
-                width="240"
-                height="150"
-              />
+                  class="object-cover h-32 w-full opacity-50"
+                  type="characterCard"
+                  :entity="character"
+                  width="240"
+                  height="150"
+                />
             </div>
             <div class="p-6 relative <sm:p-4">
               <p class="font-bold text-lg text-light-important mb-2">

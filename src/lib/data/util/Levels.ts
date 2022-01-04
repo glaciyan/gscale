@@ -1,4 +1,4 @@
-import { AscensionLevel } from "../types/AscensionLevel";
+import { AscensionLevel } from "../../types/AscensionLevel";
 
 export default [
   { level: 1, ascended: false },

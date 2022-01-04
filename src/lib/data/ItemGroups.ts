@@ -1,8 +1,8 @@
-import { IdIndex } from "../types/UsingId";
 import { IItemGroup } from "./contracts/IItemGroup";
 import { Items } from "./Items";
+import ItemGroupsKey from "./keys/ItemGroupsKey";
 
-export const ItemGroups: IdIndex<IItemGroup> = {
+export const ItemGroups: { [key in ItemGroupsKey]: IItemGroup } = {
   unknown: { normalizedName: "unknown", itemIds: [Items.unknown, Items.unknown, Items.unknown, Items.unknown] },
 
   sentinel_gear: {

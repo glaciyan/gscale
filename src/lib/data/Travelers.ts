@@ -1,16 +1,16 @@
 import { ITraveler } from "./contracts/ITraveler";
-import { IdIndex } from "../types/UsingId";
 import { Elements } from "./Elements";
 import { Traveler } from "./entities/Traveler";
-import { generateTravelerTalentBooks } from "./util/generateTravelerTalentBooks";
 import { ItemGroups } from "./ItemGroups";
 import { Items } from "./Items";
+import TravelersKey from "./keys/TravelersKey";
+import { generateTravelerTalentBooks } from "./util/generateTravelerTalentBooks";
 
 const mondstadtBooks = generateTravelerTalentBooks(ItemGroups.freedom, ItemGroups.resistance, ItemGroups.ballad);
 const liyueBooks = generateTravelerTalentBooks(ItemGroups.prosperity, ItemGroups.diligence, ItemGroups.gold);
 const inazumaBooks = generateTravelerTalentBooks(ItemGroups.transience, ItemGroups.elegance, ItemGroups.light);
 
-export const Travelers: IdIndex<ITraveler> = {
+export const Travelers: { [key in TravelersKey]: ITraveler } = {
   traveler_electro: new Traveler({
     element: Elements.electro,
     talentBoss: Items.dragon_lords_crown,
