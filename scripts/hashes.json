@@ -320,6 +320,10 @@
         "hash": "8375aa2331c5d1403ef38ae442ea6632d1fa6f55"
     },
     {
+        "name": "./src/lib/data/images/characters/mugshot/shenhe.png",
+        "hash": "3e16f232c7356554b9f23f2df9e31a4235df9426"
+    },
+    {
         "name": "./src/lib/data/images/characters/mugshot/sucrose.png",
         "hash": "eb431f785d030555d606b2b771d445872781bea4"
     },
@@ -362,6 +366,10 @@
     {
         "name": "./src/lib/data/images/characters/mugshot/yoimiya.png",
         "hash": "0876aa869ddafea13c02c6ebb92d2addc35c99db"
+    },
+    {
+        "name": "./src/lib/data/images/characters/mugshot/yun_jin.png",
+        "hash": "0a59d142859800bbfe0067effef5f7dff17d9d89"
     },
     {
         "name": "./src/lib/data/images/characters/mugshot/zhongli.png",
