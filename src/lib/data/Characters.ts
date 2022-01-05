@@ -31,9 +31,10 @@ export const Characters: { [key in CharactersKey]: ICharacter } = {
     element: Elements.geo,
     weaponType: WeaponTypes.polearm,
     rarity: 4,
-    sub: "No Info",
+    sub: "Energy Recharge",
     constellation: "Opera Grandis",
-    description: "No Info",
+    description:
+      "A renowned Liyue opera singer who is skilled in both playwriting and singing. Her style is one-of-a-kind, exquisite and delicate, much like the person herself.",
     local: Items.glaze_lily,
     commonGroup: ItemGroups.mask,
     boss: Items.riftborn_regalia,
