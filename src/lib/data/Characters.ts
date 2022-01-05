@@ -7,7 +7,6 @@ import { WeaponTypes } from "./WeaponTypes";
 
 export const Characters: { [key in CharactersKey]: ICharacter } = {
   shenhe: {
-    noPic: true,
     name: "Shenhe",
     normalizedName: "shenhe",
     element: Elements.cryo,
@@ -25,7 +24,6 @@ export const Characters: { [key in CharactersKey]: ICharacter } = {
     weekly: Items.hellfire_butterfly,
   },
   yun_jin: {
-    noPic: true,
     name: "Yun Jin",
     normalizedName: "yun_jin",
     element: Elements.geo,
