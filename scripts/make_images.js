@@ -45,7 +45,7 @@ function build(source, command) {
     if (missing.length === 0) resolve();
     else {
       console.log(`Building ${source} with ${command} (${missing.length} missing or changed images)`);
-      exec(`yarn ${command} ${missing.join(" ")}`, (err, stdout, stderr) => {
+      exec(`npm run ${command} ${missing.join(" ")}`, (err, stdout, stderr) => {
         if (err) {
           reject(err);
         } else {

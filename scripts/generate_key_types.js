@@ -1,6 +1,6 @@
 const fs = require("fs");
 
-// run `yarn data:tsc` to create the required files
+// run `npm run data:tsc` to create the required files
 const Characters = require("./jsdata/data/Characters.js").Characters;
 const Items = require("./jsdata/data/Items.js").Items;
 const ItemGroups = require("./jsdata/data/ItemGroups.js").ItemGroups;
