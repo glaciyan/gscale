@@ -9,25 +9,27 @@
 - [Git](https://git-scm.com/) or [Github Desktop](https://desktop.github.com/)
 - Very simple cmd/terminal knowledge (cd, how to run npm commands)
 - [NodeJS](https://nodejs.org) (LTS or later), the npx and npm command from NodeJS is required for the process.
-- [yarn](https://yarnpkg.com/getting-started/install#nodejs-1610-1)
+- [pnpm](https://pnpm.io)
 - (optional) a text editor with typescript support e.g. [vscode](https://code.visualstudio.com/)
 
-**Normalized item names are only allowed to contain the letters a-z and underscores.**
+**Normalized names are only allowed to contain the letters a-z and underscores.**
 
 ## Add a new material/item
 
 ### Normal Item
 
-1. Open up the file `src/lib/data/Items.ts`
-2. Fill in all the fields
+1. Add a key to `src/lib/data/keys/ItemsKey.ts`
+2. Open up the file `src/lib/data/Items.ts`
+3. Fill in all the fields
 
 ### Item Group
 
 If your item has multiple versions for different rarities do these steps:
 
 1. Do all the steps in adding a Normal Item for each item in the group.
-2. Open up the file `src/lib/data/ItemGroups.ts`
-3. Give the group a generic name as the key and then fill in all the fields.
+2. Add a key to `src/lib/data/keys/ItemGroupsKey.ts`
+3. Open up the file `src/lib/data/ItemGroups.ts`
+4. Give the group a generic name as the key and then fill in all the fields.
 
 ### Limited Availability
 
@@ -37,13 +39,15 @@ If an Item Group is limited for specific days of the week create an entry in `sr
 
 ### General Character
 
-1. Open up the file `src/lib/data/Characters.ts`
-2. Fill in all the fields
+1. Add a key to `src/lib/data/keys/CharactersKey.ts`
+2. Open up the file `src/lib/data/Characters.ts`
+3. Fill in all the fields
 
 ### Traveler
 
-1. Open up the file `src/lib/data/Travelers.ts`
-2. Fill in all the fields
+1. Add a key to `src/lib/data/keys/TravelersKey.ts`
+2. Open up the file `src/lib/data/Travelers.ts`
+3. Fill in all the fields
 
 ### Register your character
 
