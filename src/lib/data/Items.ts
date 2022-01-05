@@ -15,6 +15,13 @@ export const Items: { [key in ItemsKey]: IItem } = {
     category: "none",
   },
 
+  dragonheirs_false_fin: {
+    name: "Dragonheir's False Fin",
+    normalizedName: "dragonheirs_false_fin",
+    rarity: 4,
+    category: "boss",
+  },
+
   // Inazuma weapon materials
   chaos_oculus: {
     name: "Chaos Oculus",
