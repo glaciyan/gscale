@@ -136,6 +136,10 @@
         "hash": "9d9996497327e4dd44f39598555382ccbcec683d"
     },
     {
+        "name": "./src/lib/data/images/characters/card/shenhe.png",
+        "hash": "2b42c51eb10f9a57f3ed8fa38fe5ebd7ae6e0f5b"
+    },
+    {
         "name": "./src/lib/data/images/characters/card/sucrose.png",
         "hash": "6f6907c2cd0b822abdc4435e6e8753c4ca4ac420"
     },
@@ -178,6 +182,10 @@
     {
         "name": "./src/lib/data/images/characters/card/yoimiya.png",
         "hash": "ce2ce68e744283840b5c15ee5d2b98dd72d9db4d"
+    },
+    {
+        "name": "./src/lib/data/images/characters/card/yun_jin.png",
+        "hash": "ad90a74028a0c35e66d9f135b18c7d76b84bf291"
     },
     {
         "name": "./src/lib/data/images/characters/card/zhongli.png",
@@ -321,7 +329,7 @@
     },
     {
         "name": "./src/lib/data/images/characters/mugshot/shenhe.png",
-        "hash": "3e16f232c7356554b9f23f2df9e31a4235df9426"
+        "hash": "dd84868280d7a74f518f38c482345342252bf04c"
     },
     {
         "name": "./src/lib/data/images/characters/mugshot/sucrose.png",
@@ -369,7 +377,7 @@
     },
     {
         "name": "./src/lib/data/images/characters/mugshot/yun_jin.png",
-        "hash": "0a59d142859800bbfe0067effef5f7dff17d9d89"
+        "hash": "ff64a94ef9034e8ec5f64bee523b781649d15746"
     },
     {
         "name": "./src/lib/data/images/characters/mugshot/zhongli.png",
@@ -578,6 +586,10 @@
     {
         "name": "./src/lib/data/images/materials/divining_scroll.png",
         "hash": "3bab7d18cb6b323fea4b3f6b73e1802c9c5b0ee5"
+    },
+    {
+        "name": "./src/lib/data/images/materials/dragonheirs_false_fin.png",
+        "hash": "a18395d383e44415c442f30d986d2ff3b607c592"
     },
     {
         "name": "./src/lib/data/images/materials/dragon_lords_crown.png",
