@@ -1,0 +1,7 @@
+.build-preview-move {
+  @apply transition-transform;
+}
+
+.build-preview-leave-active {
+  @apply opacity-0 absolute;
+}

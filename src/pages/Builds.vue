@@ -67,7 +67,7 @@ const hideTotal = () => {
     <div v-if="buildsData!.length > 0" class="flex space-x-2 mb-4">
       <GButton @click="showTotal">Show Total</GButton>
     </div>
-    <div w:grid="gap-5 cols-2 <sm:cols-1" class="grid">
+    <transition-group tag="div" name="build-preview" w:grid="gap-5 cols-2 <sm:cols-1" class="grid">
       <CharacterBuildPreview
         v-for="build in buildsData"
         :key="build.data.id"
@@ -84,7 +84,7 @@ const hideTotal = () => {
         <p class="font-bold text-xl">Add a new build</p>
         <p class="font-bold text-xl">+</p>
       </RouterLink>
-    </div>
+    </transition-group>
   </Container>
   <teleport to="#modal">
     <PopOver
