@@ -1,5 +1,5 @@
 .build-preview-move {
-  @apply transition-transform;
+  @apply transition-transform duration-500;
 }
 
 .build-preview-leave-active {
