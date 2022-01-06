@@ -13,6 +13,10 @@ import { Build, db } from "~/lib/offlineDatabase/db";
 import { ItemWithAmount } from "~/lib/types/ItemWithAmount";
 import Container from "../components/PageContainer";
 import { RouterLink } from "vue-router";
+import clearDb from "~/lib/dev/clearDb";
+import tonsOfBuilds from "~/lib/dev/tonsOfBuilds";
+
+const DEV = import.meta.env.DEV;
 
 const buildsData = ref<{ character: ICharacter | ITraveler; items: ItemWithAmount[]; data: Build }[]>();
 const buildsReady = computed(() => buildsData.value !== undefined);
@@ -64,6 +68,10 @@ const hideTotal = () => {
 
 <template>
   <Container v-if="buildsReady" size="2xl">
+    <div v-if="DEV" class="space-x-2 mb-2">
+      <GButton @click="tonsOfBuilds">(DEV) Dummy Builds</GButton>
+      <GButton @click="clearDb">(DEV) Clear DB</GButton>
+    </div>
     <div v-if="buildsData!.length > 0" class="flex space-x-2 mb-4">
       <GButton @click="showTotal">Show Total</GButton>
     </div>
