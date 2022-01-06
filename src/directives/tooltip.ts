@@ -82,8 +82,7 @@ export default (app: App<Element>, options: TooltipOptions) => {
   });
 
   app.directive("tooltip", {
-    mounted(el, binding, vnode) {
-
+    mounted(el, binding) {
       if (!binding.arg) binding.arg = "top";
 
       useEventListener(el, "mouseenter", (ev) => showTooltip(el, binding.arg!, ev));
@@ -93,6 +92,9 @@ export default (app: App<Element>, options: TooltipOptions) => {
     },
     updated(el, binding) {
       updateContent(el, binding.value);
+    },
+    unmounted() {
+      hideTooltip();
     },
   });
 };
