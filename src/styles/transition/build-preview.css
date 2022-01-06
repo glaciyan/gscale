@@ -3,5 +3,5 @@
 }
 
 .build-preview-leave-active {
-  @apply opacity-0 absolute;
+  @apply h-0 opacity-0 w-0 absolute;
 }
