@@ -1,9 +1,9 @@
-import { Characters } from "../data/Characters";
 import { db } from "../offlineDatabase/db";
+import { charactersViewModel } from "../viewmodel/CharactersViewModel";
 
 export default async () => {
   await db.builds.bulkAdd(
-    Object.values(Characters).map((character) => {
+    charactersViewModel.map((character) => {
       return {
         type: "character",
         entityId: character.normalizedName,
