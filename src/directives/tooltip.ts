@@ -16,6 +16,8 @@ export default (app: App<Element>, options: TooltipOptions) => {
   const tooltipContent = document.querySelector(`#${options.tooltipContentId}`) as HTMLDivElement;
   const arrowElement = document.querySelector(`#${options.tooltipArrowId}`) as HTMLDivElement | null;
 
+  let tooltipVisible = false;
+
   const updateContent = (el: any, value: any) => {
     // thanks to https://github.com/maciejziemichod/v-tooltip/blob/main/tooltip.js#L5
     el.setAttribute("data-v-tooltip", value);
@@ -45,6 +47,8 @@ export default (app: App<Element>, options: TooltipOptions) => {
         opacity: "1",
       });
 
+      tooltipVisible = true;
+
       if (arrowElement !== null) {
         const arrowData = middlewareData.arrow;
 
@@ -69,9 +73,13 @@ export default (app: App<Element>, options: TooltipOptions) => {
   };
 
   const hideTooltip = () => {
-    Object.assign(tooltip.style, {
-      opacity: "0",
-    });
+    if (tooltipVisible) {
+      Object.assign(tooltip.style, {
+        opacity: "0",
+      });
+    }
+
+    tooltipVisible = false;
   };
 
   addEventListener("resize", () => {
