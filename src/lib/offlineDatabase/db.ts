@@ -11,7 +11,6 @@ import { Talent } from "../types/Talent";
 export interface Build {
   id?: number;
   order?: number;
-  orderChanged?: number;
   completed?: Array<ItemWithAmount>;
   type: string;
   entityId: string;
@@ -54,10 +53,6 @@ export class CustomDexie extends Dexie {
             }
           });
       });
-
-    this.version(3).stores({
-      builds: "++id, order, orderChanged, *completed, type, entityId, level, normal, elemental, burst",
-    });
   }
 }
 

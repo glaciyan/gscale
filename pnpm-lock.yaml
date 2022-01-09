@@ -25,7 +25,6 @@ specifiers:
   vue: ^3.2.16
   vue-router: ^4
   vue-tsc: ^0.3.0
-  vuedraggable: ^4.1.0
   windicss: ^3.2.0
 
 dependencies:
@@ -37,7 +36,6 @@ dependencies:
   fuse.js: 6.4.6
   vue: 3.2.24
   vue-router: 4.0.12_vue@3.2.24
-  vuedraggable: 4.1.0_vue@3.2.24
 
 devDependencies:
   '@types/lodash': 4.14.178
@@ -2161,10 +2159,6 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /sortablejs/1.14.0:
-    resolution: {integrity: sha512-pBXvQCs5/33fdN1/39pPL0NZF20LeRbLQ5jtnheIPN9JQAaufGjKdWduZn4U7wCtVuzKhmRkI0DFYHYRbB2H1w==}
-    dev: false
-
   /source-map-js/1.0.1:
     resolution: {integrity: sha512-4+TN2b3tqOCd/kaGRJ/sTYA0tR0mdXx26ipdolxcwtJVqEnqNYvlCAt1q3ypy4QMlYus+Zh34RNtYLoq2oQ4IA==}
     engines: {node: '>=0.10.0'}
@@ -2601,15 +2595,6 @@ packages:
       '@vue/runtime-dom': 3.2.24
       '@vue/server-renderer': 3.2.24_vue@3.2.24
       '@vue/shared': 3.2.24
-    dev: false
-
-  /vuedraggable/4.1.0_vue@3.2.24:
-    resolution: {integrity: sha512-FU5HCWBmsf20GpP3eudURW3WdWTKIbEIQxh9/8GE806hydR9qZqRRxRE3RjqX7PkuLuMQG/A7n3cfj9rCEchww==}
-    peerDependencies:
-      vue: ^3.0.1
-    dependencies:
-      sortablejs: 1.14.0
-      vue: 3.2.24
     dev: false
 
   /webpack-virtual-modules/0.4.3:
