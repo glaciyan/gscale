@@ -120,7 +120,7 @@ const edit = () => {
         </div>
         <div class="flex bg-dark-600/70 border-t-2 border-dark-300 py-3 px-6 items-center">
           <div class="flex-1">
-            <div title="Drag to reorder">
+            <div title="Drag to reorder" class="w-max">
               <HandleIcon class="cursor-move h-5 text-light-ternary w-5 handle" />
             </div>
           </div>
