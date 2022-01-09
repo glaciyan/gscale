@@ -24,7 +24,7 @@ const tooltip = computed(() => {
 <template>
   <div
     v-tooltip="tooltip"
-    class="cursor-pointer m-1 relative select-none focus:ring"
+    class="cursor-pointer m-1 relative select-none focus-visible:ring"
     tabindex="0"
     @click="$emit('click', fillAmount)"
   >
