@@ -20,6 +20,13 @@ import Modal from "../Modal.vue";
 const props = defineProps<{ character: ICharacter | ITraveler; items: ItemWithAmount[]; data: Build }>();
 const emit = defineEmits(["deleted"]);
 
+watch(
+  () => props.data.order,
+  (value) => {
+    console.log(value);
+  }
+);
+
 //#region Deleting
 const deleteBuild = async () => {
   if (props.data.id) {

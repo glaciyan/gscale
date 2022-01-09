@@ -24,16 +24,23 @@ const buildsReady = computed(() => buildsData.value !== undefined);
 
 const getBuilds = async () => {
   const buildsFromDb = await db.builds.where("type").equals("character").toArray();
-  buildsData.value = buildsFromDb.map((build) => {
-    const character = repo.needCharacter(build.entityId);
-    const items = totalBuildItems(character, build);
 
-    return {
-      character,
-      items,
-      data: build,
-    };
-  });
+  let lastOrder = 0;
+  buildsData.value = buildsFromDb
+    .sort((a, b) => (a.order ?? Infinity) - (b.order ?? Infinity))
+    .map((build) => {
+      const character = repo.needCharacter(build.entityId);
+      const items = totalBuildItems(character, build);
+
+      if (build.order) lastOrder = build.order;
+      else build.order = ++lastOrder;
+
+      return {
+        character,
+        items,
+        data: build,
+      };
+    });
 };
 
 const total = computed(() => {
@@ -65,6 +72,14 @@ const hideTotal = () => {
   scrollLock.value = false;
 };
 //#endregion
+
+const handleChange = async ({ moved }: { moved: { element: any; newIndex: number } }) => {
+  const element = toRaw(moved.element) as { character: ICharacter | ITraveler; items: ItemWithAmount[]; data: Build };
+
+  console.log(`Moved ${element.character.name} to ${moved.newIndex}`);
+
+  await db.builds.update(element.data.id!, { order: moved.newIndex });
+};
 </script>
 
 <template>
@@ -82,6 +97,7 @@ const hideTotal = () => {
       :componentData="{ tag: 'div', name: 'build-preview' }"
       class="grid gap-5 grid-cols-2 <sm:grid-cols-1"
       :itemKey="(item: any) => item.data.id"
+      @change="handleChange"
     >
       <template #item="{ element }">
         <CharacterBuildPreview
