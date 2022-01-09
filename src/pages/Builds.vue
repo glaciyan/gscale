@@ -97,6 +97,7 @@ const handleChange = async ({ moved }: { moved: { element: any; newIndex: number
       :componentData="{ tag: 'div', name: 'build-preview' }"
       class="grid gap-5 grid-cols-2 <sm:grid-cols-1"
       :itemKey="(item: any) => item.data.id"
+      handle=".handle"
       @change="handleChange"
     >
       <template #item="{ element }">
