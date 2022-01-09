@@ -113,7 +113,7 @@ const handleChange = async ({ moved }: { moved: { element: any; newIndex: number
         <RouterLink
           v-if="buildsData!.length < 2"
           to="/"
-          class="border-dashed rounded-xl flex flex-col h-full border-4 border-dark-600 min-h-96 max-w-[750px] py-4 px-6 transition-colors text-light-ternary/70 block items-center justify-center hover:text-light-ternary"
+          class="border-dashed rounded-xl flex flex-col h-full border-4 border-dark-600 min-h-96 py-4 px-6 transition-colors text-light-ternary/70 block items-center justify-center hover:text-light-ternary"
         >
           <p class="font-bold text-xl">Add a new build</p>
           <p class="font-bold text-xl">+</p>
