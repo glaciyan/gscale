@@ -15,6 +15,7 @@ import Container from "../components/PageContainer";
 import { RouterLink } from "vue-router";
 import clearDb from "~/lib/dev/clearDb";
 import tonsOfBuilds from "~/lib/dev/tonsOfBuilds";
+import Draggable from "vuedraggable";
 
 const DEV = import.meta.env.DEV;
 
@@ -75,15 +76,22 @@ const hideTotal = () => {
     <div v-if="buildsData!.length > 0" class="flex space-x-2 mb-4">
       <GButton @click="showTotal">Show Total</GButton>
     </div>
-    <transition-group tag="div" name="build-preview" w:grid="gap-5 cols-2 <sm:cols-1" class="grid">
-      <CharacterBuildPreview
-        v-for="build in buildsData"
-        :key="build.data.id"
-        :character="build.character"
-        :items="build.items"
-        :data="build.data"
-        @deleted="onDelete"
-      />
+    <Draggable
+      v-model="buildsData"
+      tag="transition-group"
+      :componentData="{ tag: 'div', name: 'build-preview' }"
+      class="grid gap-5 grid-cols-2 <sm:grid-cols-1"
+      :itemKey="(item: any) => item.data.id"
+    >
+      <template #item="{ element }">
+        <CharacterBuildPreview
+          :key="element.data.id"
+          :character="element.character"
+          :items="element.items"
+          :data="element.data"
+          @deleted="onDelete"
+        />
+      </template>
       <RouterLink
         v-if="buildsData!.length < 2"
         to="/"
@@ -92,7 +100,7 @@ const hideTotal = () => {
         <p class="font-bold text-xl">Add a new build</p>
         <p class="font-bold text-xl">+</p>
       </RouterLink>
-    </transition-group>
+    </Draggable>
   </Container>
   <teleport to="#modal">
     <PopOver
