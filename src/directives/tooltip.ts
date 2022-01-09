@@ -95,7 +95,6 @@ export default (app: App<Element>, options: TooltipOptions) => {
 
       useEventListener(el, "mouseenter", (ev) => showTooltip(el, binding.arg!, ev));
       useEventListener(el, "mouseleave", hideTooltip);
-      useEventListener(el, "mousedown", hideTooltip);
 
       updateContent(el, binding.value);
     },
