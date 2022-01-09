@@ -14,7 +14,6 @@ import TheFooter from "./components/TheFooter.vue";
 
 <style>
 /* @import url(./assets/fonts/OpenSans.css); */
-@import url(./styles/global.less);
 @import url(./styles/transition/fade.css);
 @import url(./styles/transition/build-preview.css);
 @import url(./styles/dark.css);

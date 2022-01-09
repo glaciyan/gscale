@@ -11,7 +11,6 @@ import { Talent } from "../types/Talent";
 export interface Build {
   id?: number;
   order?: number;
-  orderChanged?: number;
   completed?: Array<ItemWithAmount>;
   type: string;
   entityId: string;
