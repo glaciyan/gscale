@@ -27,7 +27,13 @@ const getBuilds = async () => {
 
   let lastOrder = 0;
   buildsData.value = buildsFromDb
-    .sort((a, b) => (a.order ?? Infinity) - (b.order ?? Infinity))
+    .sort((a, b) => {
+      if (a.order === b.order) {
+        return (b.orderChanged ?? 0) - (a.orderChanged ?? 0);
+      }
+
+      return (a.order ?? Infinity) - (b.order ?? Infinity);
+    })
     .map((build) => {
       const character = repo.needCharacter(build.entityId);
       const items = totalBuildItems(character, build);
@@ -75,10 +81,11 @@ const hideTotal = () => {
 
 const handleChange = async ({ moved }: { moved: { element: any; newIndex: number } }) => {
   const element = toRaw(moved.element) as { character: ICharacter | ITraveler; items: ItemWithAmount[]; data: Build };
+  const timeChanged = Date.now();
 
-  console.log(`Moved ${element.character.name} to ${moved.newIndex}`);
+  console.log(`Moved ${element.character.name} to ${moved.newIndex} at ${timeChanged}`);
 
-  await db.builds.update(element.data.id!, { order: moved.newIndex });
+  await db.builds.update(element.data.id!, { order: moved.newIndex, orderChanged: timeChanged });
 };
 </script>
 
