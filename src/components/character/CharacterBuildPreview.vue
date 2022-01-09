@@ -16,9 +16,18 @@ import ItemChecklist from "../ItemChecklist.vue";
 import RangeLevelDisplay from "../levelRange/display/RangeLevelDisplay.vue";
 import RangeTalentDisplay from "../levelRange/display/RangeTalentDisplay.vue";
 import Modal from "../Modal.vue";
+import HandleIcon from "../icons/HandleIcon.vue";
 
-const props = defineProps<{ character: ICharacter | ITraveler; items: ItemWithAmount[]; data: Build }>();
+const props =
+  defineProps<{ character: ICharacter | ITraveler; items: ItemWithAmount[]; data: Build; handle?: boolean }>();
 const emit = defineEmits(["deleted"]);
+
+watch(
+  () => props.data.order,
+  (value) => {
+    console.log(value);
+  }
+);
 
 //#region Deleting
 const deleteBuild = async () => {
@@ -109,7 +118,12 @@ const edit = () => {
             </div>
           </div>
         </div>
-        <div class="flex bg-dark-600/70 border-t-2 border-dark-300 py-3 px-6 justify-end">
+        <div class="flex bg-dark-600/70 border-t-2 border-dark-300 py-3 px-6 items-center">
+          <div class="flex-1">
+            <div title="Drag to reorder" class="w-max">
+              <HandleIcon class="cursor-move h-5 text-light-ternary w-5 handle" />
+            </div>
+          </div>
           <EButton look="ghost" element="neutral" class="mr-2 !h-9 !text-light-ternary" @click="deleteDialog.reveal">
             Delete
           </EButton>

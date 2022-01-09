@@ -15,6 +15,8 @@ import Container from "../components/PageContainer";
 import { RouterLink } from "vue-router";
 import clearDb from "~/lib/dev/clearDb";
 import tonsOfBuilds from "~/lib/dev/tonsOfBuilds";
+import Draggable from "vuedraggable";
+import sortingBuilds from "~/lib/util/sortingBuilds";
 
 const DEV = import.meta.env.DEV;
 
@@ -23,9 +25,14 @@ const buildsReady = computed(() => buildsData.value !== undefined);
 
 const getBuilds = async () => {
   const buildsFromDb = await db.builds.where("type").equals("character").toArray();
-  buildsData.value = buildsFromDb.map((build) => {
+
+  let lastOrder = 0;
+  buildsData.value = buildsFromDb.sort(sortingBuilds).map((build) => {
     const character = repo.needCharacter(build.entityId);
     const items = totalBuildItems(character, build);
+
+    if (build.order) lastOrder = build.order;
+    else build.order = ++lastOrder;
 
     return {
       character,
@@ -64,6 +71,15 @@ const hideTotal = () => {
   scrollLock.value = false;
 };
 //#endregion
+
+const handleChange = async ({ moved }: { moved: { element: any; newIndex: number } }) => {
+  const element = toRaw(moved.element) as { character: ICharacter | ITraveler; items: ItemWithAmount[]; data: Build };
+  const timeChanged = Date.now();
+
+  console.log(`Moved ${element.character.name} to ${moved.newIndex} at ${timeChanged}`);
+
+  await db.builds.update(element.data.id!, { order: moved.newIndex, orderChanged: timeChanged });
+};
 </script>
 
 <template>
@@ -75,24 +91,35 @@ const hideTotal = () => {
     <div v-if="buildsData!.length > 0" class="flex space-x-2 mb-4">
       <GButton @click="showTotal">Show Total</GButton>
     </div>
-    <transition-group tag="div" name="build-preview" w:grid="gap-5 cols-2 <sm:cols-1" class="grid">
-      <CharacterBuildPreview
-        v-for="build in buildsData"
-        :key="build.data.id"
-        :character="build.character"
-        :items="build.items"
-        :data="build.data"
-        @deleted="onDelete"
-      />
-      <RouterLink
-        v-if="buildsData!.length < 2"
-        to="/"
-        class="border-dashed rounded-xl flex flex-col h-full border-4 border-dark-600 min-h-96 py-4 px-6 transition-colors text-light-ternary/70 block items-center justify-center hover:text-light-ternary"
-      >
-        <p class="font-bold text-xl">Add a new build</p>
-        <p class="font-bold text-xl">+</p>
-      </RouterLink>
-    </transition-group>
+    <Draggable
+      v-model="buildsData"
+      tag="transition-group"
+      :componentData="{ tag: 'div', name: 'build-preview' }"
+      class="grid gap-5 grid-cols-2 <sm:grid-cols-1"
+      :itemKey="(item: any) => item.data.id"
+      handle=".handle"
+      @change="handleChange"
+    >
+      <template #item="{ element }">
+        <CharacterBuildPreview
+          :key="element.data.id"
+          :character="element.character"
+          :items="element.items"
+          :data="element.data"
+          @deleted="onDelete"
+        />
+      </template>
+      <template #footer>
+        <RouterLink
+          v-if="buildsData!.length < 2"
+          to="/"
+          class="border-dashed rounded-xl flex flex-col h-full border-4 border-dark-600 min-h-96 py-4 px-6 transition-colors text-light-ternary/70 block items-center justify-center hover:text-light-ternary"
+        >
+          <p class="font-bold text-xl">Add a new build</p>
+          <p class="font-bold text-xl">+</p>
+        </RouterLink>
+      </template>
+    </Draggable>
   </Container>
   <teleport to="#modal">
     <PopOver
