@@ -53,6 +53,10 @@ export class CustomDexie extends Dexie {
             }
           });
       });
+
+    this.version(3).stores({
+      builds: "++id, order, orderChanged, *completed, type, entityId, level, normal, elemental, burst",
+    });
   }
 }
 
