@@ -120,7 +120,7 @@ const edit = () => {
         </div>
         <div class="flex bg-dark-600/70 border-t-2 border-dark-300 py-3 px-6 items-center">
           <div class="flex-1">
-            <HandleIcon v-tooltip="'Drag to reorder'" class="h-5 text-light-ternary w-5 handle" />
+            <HandleIcon v-tooltip="'Drag to reorder'" class="cursor-move h-5 text-light-ternary w-5 handle" />
           </div>
           <EButton look="ghost" element="neutral" class="mr-2 !h-9 !text-light-ternary" @click="deleteDialog.reveal">
             Delete
