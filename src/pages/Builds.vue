@@ -16,6 +16,7 @@ import { RouterLink } from "vue-router";
 import clearDb from "~/lib/dev/clearDb";
 import tonsOfBuilds from "~/lib/dev/tonsOfBuilds";
 import Draggable from "vuedraggable";
+import sortingBuilds from "~/lib/util/sortingBuilds";
 
 const DEV = import.meta.env.DEV;
 
@@ -26,27 +27,19 @@ const getBuilds = async () => {
   const buildsFromDb = await db.builds.where("type").equals("character").toArray();
 
   let lastOrder = 0;
-  buildsData.value = buildsFromDb
-    .sort((a, b) => {
-      if (a.order === b.order) {
-        return (b.orderChanged ?? 0) - (a.orderChanged ?? 0);
-      }
+  buildsData.value = buildsFromDb.sort(sortingBuilds).map((build) => {
+    const character = repo.needCharacter(build.entityId);
+    const items = totalBuildItems(character, build);
 
-      return (a.order ?? Infinity) - (b.order ?? Infinity);
-    })
-    .map((build) => {
-      const character = repo.needCharacter(build.entityId);
-      const items = totalBuildItems(character, build);
+    if (build.order) lastOrder = build.order;
+    else build.order = ++lastOrder;
 
-      if (build.order) lastOrder = build.order;
-      else build.order = ++lastOrder;
-
-      return {
-        character,
-        items,
-        data: build,
-      };
-    });
+    return {
+      character,
+      items,
+      data: build,
+    };
+  });
 };
 
 const total = computed(() => {
