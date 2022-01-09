@@ -22,7 +22,12 @@ const tooltip = computed(() => {
 </script>
 
 <template>
-  <div v-tooltip="tooltip" class="cursor-pointer m-1 relative select-none" @click="$emit('click', fillAmount)">
+  <div
+    v-tooltip="tooltip"
+    class="cursor-pointer m-1 relative select-none focus:ring"
+    tabindex="0"
+    @click="$emit('click', fillAmount)"
+  >
     <ItemCard :itemWithAmount="item" :grayscale="done" class="!m-0" />
     <div
       :class="[
