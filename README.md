@@ -14,4 +14,12 @@ This project is built using Vue.
 
 ### Pull request
 
-All pull request are first merged with the `dev` branch after a code review. If all tests go well those changes are going to be merged with main at the next major version.
+All pull request are first merged with the `dev` branch. If everything works those changes are going to be merged with main at the next major version.
+
+### License
+
+[APACHE LICENSE, VERSION 2.0](https://www.apache.org/licenses/LICENSE-2.0)
+
+gscale.cc is not affiliated with miHoYo.  
+Genshin Impact, game content and materials are trademarks and copyrights of miHoYo.
+
