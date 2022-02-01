@@ -93,10 +93,13 @@ const edit = () => {
                       class="mr-2 text-orange-400 inline"
                     ></ExclamationCircleIcon>
                     {{ character.name }}
+                    <span
+                      v-if="character.isTraveler"
+                      :class="`text-genshin-element-${character.element.normalizedName} ml-1`"
+                    >
+                      {{ character.element.name }}
+                    </span>
                   </div>
-                  <span v-if="character.isTraveler" :class="`text-genshin-element-${character.element.normalizedName}`">
-                    {{ character.element.name }}
-                  </span>
                 </div>
                 <div class="-m-1">
                   <RangeLevelDisplay class="m-1" :range="data.level" />
