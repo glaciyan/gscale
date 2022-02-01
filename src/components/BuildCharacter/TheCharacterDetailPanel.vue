@@ -6,6 +6,7 @@ import GPortrait from "../GPortrait.vue";
 import IconWithText from "../IconWithText.vue";
 import TheClampedText from "../TheClampedText.vue";
 import Image from "../GImage.vue";
+import warningText from "~/assets/speculatedWarningText";
 
 const props = defineProps<{ character: IBaseCharacter }>();
 const elementTextColor = computed(() => `text-genshin-element-${props.character.element.normalizedName}`);
@@ -20,6 +21,13 @@ const elementTextColor = computed(() => `text-genshin-element-${props.character.
       <GPortrait class="ring mb-6 ring-dark-700" :character="character" />
       <!-- Character details -->
       <div>
+        <div
+          v-if="character.speculated"
+          class="rounded-md bg-orange-500/10 border-2 border-orange-500/50 text-sm mb-2 p-2 sm:w-64"
+        >
+          <p class="font-bold mb-1 text-orange-400">Warning</p>
+          <p class="text-orange-300">{{ warningText }}</p>
+        </div>
         <p class="font-bold text-light-important">{{ character.name }}</p>
         <p>{{ character.constellation }}</p>
         <TheClampedText class="mt-1 text-sm text-light-ternary leading-4 block sm:w-64">

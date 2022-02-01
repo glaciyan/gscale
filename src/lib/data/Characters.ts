@@ -6,6 +6,24 @@ import CharactersKey from "./keys/CharactersKey";
 import { WeaponTypes } from "./WeaponTypes";
 
 export const Characters: { [key in CharactersKey]: ICharacter } = {
+  yae_miko: {
+    speculated: true,
+    noPic: true,
+    name: "Yae Miko",
+    normalizedName: "yae_miko",
+    element: Elements.electro,
+    weaponType: WeaponTypes.catalyst,
+    rarity: 5,
+    sub: "No info",
+    constellation: "No info",
+    description: "No Info",
+    local: Items.sea_ganoderma,
+    commonGroup: ItemGroups.handguard,
+    boss: Items.dragonheirs_false_fin,
+    gemGroup: ItemGroups.electro_gem,
+    bookGroup: ItemGroups.light,
+    weekly: Items.unknown,
+  },
   shenhe: {
     name: "Shenhe",
     normalizedName: "shenhe",

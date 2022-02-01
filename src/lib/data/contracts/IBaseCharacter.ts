@@ -12,4 +12,5 @@ export interface IBaseCharacter extends INamed {
   isTraveler?: boolean;
   altName?: string;
   noPic?: boolean;
+  speculated?: boolean;
 }

@@ -16,6 +16,8 @@ import ItemChecklist from "../ItemChecklist.vue";
 import RangeLevelDisplay from "../levelRange/display/RangeLevelDisplay.vue";
 import RangeTalentDisplay from "../levelRange/display/RangeTalentDisplay.vue";
 import Modal from "../Modal.vue";
+import ExclamationCircleIcon from "../icons/ExclamationCircleIcon.vue";
+import speculatedWarningText from "~/assets/speculatedWarningText";
 
 const props = defineProps<{ character: ICharacter | ITraveler; items: ItemWithAmount[]; data: Build }>();
 const emit = defineEmits(["deleted"]);
@@ -83,12 +85,19 @@ const edit = () => {
                 />
               </div>
               <div class="p-6 relative <sm:p-4">
-                <p class="font-bold text-lg text-light-important mb-2">
-                  {{ character.name }}
+                <div class="font-bold text-lg text-light-important mb-2">
+                  <div class="flex items-center">
+                    <ExclamationCircleIcon
+                      v-if="character.speculated"
+                      v-tooltip="speculatedWarningText"
+                      class="mr-2 text-orange-400 inline"
+                    ></ExclamationCircleIcon>
+                    {{ character.name }}
+                  </div>
                   <span v-if="character.isTraveler" :class="`text-genshin-element-${character.element.normalizedName}`">
                     {{ character.element.name }}
                   </span>
-                </p>
+                </div>
                 <div class="-m-1">
                   <RangeLevelDisplay class="m-1" :range="data.level" />
                   <div class="flex flex-wrap">
