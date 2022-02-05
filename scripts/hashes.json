@@ -176,6 +176,10 @@
         "hash": "7f28531ce0b69b3dc2f48024d5b7f9e78894f975"
     },
     {
+        "name": "./src/lib/data/images/characters/card/yae_miko.png",
+        "hash": "0320a36a0f3eb4e1e808143478a19079e50768a8"
+    },
+    {
         "name": "./src/lib/data/images/characters/card/yanfei.png",
         "hash": "36d81cd5fb47f183fdd4d0e723ea7b18f66c811f"
     },
@@ -366,6 +370,10 @@
     {
         "name": "./src/lib/data/images/characters/mugshot/xinyan.png",
         "hash": "f68204cc002b9a41011393bd43d3eacc0c0c4b12"
+    },
+    {
+        "name": "./src/lib/data/images/characters/mugshot/yae_miko.png",
+        "hash": "5cffe68c74f0c33c5701ab0a4d3d43057b6bdf11"
     },
     {
         "name": "./src/lib/data/images/characters/mugshot/yanfei.png",

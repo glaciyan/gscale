@@ -8,7 +8,6 @@ import { WeaponTypes } from "./WeaponTypes";
 export const Characters: { [key in CharactersKey]: ICharacter } = {
   yae_miko: {
     speculated: true,
-    noPic: true,
     name: "Yae Miko",
     normalizedName: "yae_miko",
     element: Elements.electro,
