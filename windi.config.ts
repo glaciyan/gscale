@@ -33,6 +33,10 @@ export default defineConfig({
   },
   theme: {
     extend: {
+      screens: {
+        xlp: { raw: "(max-width: 1320px)" },
+        "2xlp": { raw: "(max-width: 1570px)" },
+      },
       // fontFamily: {
       //   sans: ["Open Sans", "ui-sans-serif", "system-ui"],
       // },
