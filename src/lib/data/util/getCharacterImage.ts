@@ -1,4 +1,5 @@
 import { IBaseCharacter } from "../contracts/IBaseCharacter";
+import imageHashes from "~/assets/image_hashes.json";
 
 export function getCharacterImage(character: IBaseCharacter, type: "card" | "mugshot") {
   let basePath;
@@ -20,8 +21,11 @@ export function getCharacterImage(character: IBaseCharacter, type: "card" | "mug
 
   const fileName = `${basePath}/${imageName}`;
 
-  const png = `${fileName}.png`;
-  const webp = `${fileName}.webp`;
+  // @ts-expect-error string access
+  const hashes = imageHashes[`${imageName}_${type}`];
+
+  const png = `${fileName}.${hashes.png}.${type}.png`;
+  const webp = `${fileName}.${hashes.webp}.${type}.webp`;
 
   return { png, webp };
 }
