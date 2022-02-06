@@ -54,7 +54,7 @@ async function main() {
   addHashesToFilesInDir("./public/images/characters/mugshot", "mugshot");
   addHashesToFilesInDir("./public/images/materials", "material");
 
-  fs.writeFileSync("./src/assets/image_hashes.json", JSON.stringify(Object.fromEntries(hashMap)));
+  fs.writeFileSync("./src/assets/image_hashes.json", JSON.stringify(Object.fromEntries(hashMap), null, 2));
 }
 
 main();
