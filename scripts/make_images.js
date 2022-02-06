@@ -4,12 +4,13 @@ const crypto = require("crypto");
 const lastHashes = JSON.parse(fs.readFileSync("./scripts/hashes.json").toString());
 
 async function main() {
-  await build("./src/lib/data/images/characters/card", "images:characters:build");
-  await build("./src/lib/data/images/characters/mugshot", "images:mugshot:build");
-  await build("./src/lib/data/images/materials", "images:items:build");
-  await build("./src/lib/data/images/weapons", "images:weapons:build");
+  await build("./src/lib/data/images/characters/card", "images:characters:build", "card");
+  await build("./src/lib/data/images/characters/mugshot", "images:mugshot:build", "mugshot");
+  await build("./src/lib/data/images/materials", "images:items:build", "material");
+  // await build("./src/lib/data/images/weapons", "images:weapons:build");
 
   writeHashesFile();
+  (await import("./file_hash.mjs")).main();
 }
 
 const builtImages = [];
@@ -38,12 +39,13 @@ function filterFilesNeedingBuild(from) {
     .map((m) => m.name);
 }
 
-function build(source, command) {
+function build(source, command, postfix) {
   const missing = filterFilesNeedingBuild(source);
 
   return new Promise((resolve, reject) => {
     if (missing.length === 0) resolve();
     else {
+      // TODO clean already built images if they already exists
       console.log(`Building ${source} with ${command} (${missing.length} missing or changed images)`);
       exec(`npm run ${command} ${missing.join(" ")}`, (err, stdout, stderr) => {
         if (err) {
