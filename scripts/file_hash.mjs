@@ -2,6 +2,10 @@ import fs from "fs";
 import { createHash } from "crypto";
 import path from "path";
 
+const hashesOutPath = "./src/assets/image_hashes.json";
+
+const oldImageHashes = JSON.parse(fs.readFileSync(hashesOutPath).toString());
+
 export const getAssetHash = (file) => createHash("sha256").update(fs.readFileSync(file)).digest("hex").substring(0, 8);
 
 export const getAssetName = (file, postfix) => {
@@ -14,12 +18,13 @@ export const getAssetName = (file, postfix) => {
   return path.join(dir, `${baseName}.${hash}.${postfix}${extname}`);
 };
 
-const hashMap = new Map();
+const hashMap = new Map(Object.entries(oldImageHashes));
 
 const addHashesToFilesInDir = (dir, postfix) => {
   const withPath = (fileName) => path.join(dir, fileName);
 
-  const fileNames = fs.readdirSync(dir);
+  // get all the files which dont have postfixes
+  const fileNames = fs.readdirSync(dir).filter((name) => name.split(".").length <= 2);
   const renames = fileNames.map((fileName) => {
     const name = path.basename(fileName, fileName.endsWith("png") ? ".png" : ".webp");
 
@@ -32,7 +37,8 @@ const addHashesToFilesInDir = (dir, postfix) => {
   });
 
   renames.forEach(({ oldPath, newPath, name, hash }) => {
-    fs.renameSync(oldPath, newPath);
+    console.log(oldPath, "->", newPath);
+    // fs.renameSync(oldPath, newPath);
 
     const mapName = `${name}_${postfix}`;
 
@@ -49,12 +55,12 @@ const addHashesToFilesInDir = (dir, postfix) => {
   });
 };
 
-async function main() {
+export async function main() {
   addHashesToFilesInDir("./public/images/characters/card", "card");
   addHashesToFilesInDir("./public/images/characters/mugshot", "mugshot");
   addHashesToFilesInDir("./public/images/materials", "material");
 
-  fs.writeFileSync("./src/assets/image_hashes.json", JSON.stringify(Object.fromEntries(hashMap), null, 2));
+  fs.writeFileSync(hashesOutPath, JSON.stringify(Object.fromEntries(hashMap), null, 2));
 }
 
 main();
