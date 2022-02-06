@@ -20,13 +20,32 @@ export const getAssetName = (file, postfix) => {
 
 const hashMap = new Map(Object.entries(oldImageHashes));
 
+function cleanup(props) {
+  fs.readdirSync(props.dir)
+    .filter((name) => name.split(".").length > 2)
+    .filter((name) => {
+      const [basename, hash, postfix, extension] = name.split(".");
+      if (basename === props.name && postfix === props.postfix && extension === props.extension.substring(1)) {
+        console.log(`cleaning up ${basename}.${hash}.${postfix}.${extension}`);
+        return true;
+      } else return false;
+    })
+    .forEach((name) => {
+      fs.rmSync(path.join(props.dir, name));
+    });
+}
+
 const addHashesToFilesInDir = (dir, postfix) => {
   const withPath = (fileName) => path.join(dir, fileName);
 
   // get all the files which dont have postfixes
   const fileNames = fs.readdirSync(dir).filter((name) => name.split(".").length <= 2);
   const renames = fileNames.map((fileName) => {
-    const name = path.basename(fileName, fileName.endsWith("png") ? ".png" : ".webp");
+    const extension = fileName.endsWith("png") ? ".png" : ".webp";
+    const name = path.basename(fileName, extension);
+
+    // delete files from the directiry which have the same name, postfix and extension but different hash
+    cleanup({ dir, name, postfix, extension });
 
     return {
       oldPath: withPath(fileName),
@@ -38,7 +57,7 @@ const addHashesToFilesInDir = (dir, postfix) => {
 
   renames.forEach(({ oldPath, newPath, name, hash }) => {
     console.log(oldPath, "->", newPath);
-    // fs.renameSync(oldPath, newPath);
+    fs.renameSync(oldPath, newPath);
 
     const mapName = `${name}_${postfix}`;
 
