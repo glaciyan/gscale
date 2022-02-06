@@ -19,7 +19,7 @@ tooltip(app, {
 });
 
 console.log(
-  "%cThanks for checking out gscale.cc",
+  "%cThanks for visiting gscale.cc",
   "font-size: 1.5rem; font-weight: bold; background-image: url( 'https://www.gscale.cc/favicon.svg' );background-size: 4rem 4rem; background-repeat: no-repeat; background-position: center left; padding: 2rem 0px 2rem 5rem"
 );
 
