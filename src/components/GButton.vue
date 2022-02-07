@@ -6,11 +6,6 @@ export default defineComponent({
   components: { Spinner },
 
   props: {
-    as: {
-      type: String,
-      required: false,
-      default: undefined,
-    },
     isLoading: {
       type: Boolean,
     },
