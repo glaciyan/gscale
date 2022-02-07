@@ -15,6 +15,7 @@ import Container from "../components/PageContainer";
 import { RouterLink } from "vue-router";
 import clearDb from "~/lib/dev/clearDb";
 import tonsOfBuilds from "~/lib/dev/tonsOfBuilds";
+import { downloadObject } from "~/lib/common/downloadObject";
 
 const DEV = import.meta.env.DEV;
 
@@ -66,14 +67,7 @@ const hideTotal = () => {
 
 const downloadData = async () => {
   const builds = await db.builds.toArray();
-
-  const blob = new Blob([JSON.stringify(builds, null, 2)], { type: "application/json" });
-  const objectUrl = URL.createObjectURL(blob);
-
-  const dl = document.createElement("a");
-  dl.href = objectUrl;
-  dl.download = `gscale_data_${new Date().toISOString()}.json`;
-  dl.click();
+  downloadObject(builds);
 };
 //#endregion
 </script>
