@@ -63,6 +63,18 @@ const hideTotal = () => {
   totalVisible.value = false;
   scrollLock.value = false;
 };
+
+const downloadData = async () => {
+  const builds = await db.builds.toArray();
+
+  const blob = new Blob([JSON.stringify(builds, null, 2)], { type: "application/json" });
+  const objectUrl = URL.createObjectURL(blob);
+
+  const dl = document.createElement("a");
+  dl.href = objectUrl;
+  dl.download = `gscale_data_${new Date().toISOString()}.json`;
+  dl.click();
+};
 //#endregion
 </script>
 
@@ -74,6 +86,7 @@ const hideTotal = () => {
     </div>
     <div v-if="buildsData!.length > 0" class="flex space-x-2 mb-4">
       <GButton @click="showTotal">Show Total</GButton>
+      <GButton @click="downloadData">Download Data</GButton>
     </div>
     <transition-group tag="div" name="build-preview" w:grid="gap-5 cols-2 <sm:cols-1" class="grid">
       <CharacterBuildPreview
