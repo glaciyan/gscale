@@ -32,7 +32,7 @@ export default defineComponent({
     :disabled="off"
     :aria-disabled="off"
   >
-    <div class="flex h-full items-center justify-center">
+    <div class="flex h-full whitespace-nowrap items-center justify-center">
       <Spinner v-if="isLoading" class="absolute" />
       <span :class="{ 'opacity-0': isLoading }"><slot /></span>
     </div>
