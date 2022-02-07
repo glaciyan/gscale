@@ -78,9 +78,10 @@ const downloadData = async () => {
       <GButton @click="tonsOfBuilds">(DEV) Dummy Builds</GButton>
       <GButton @click="clearDb">(DEV) Clear DB</GButton>
     </div>
-    <div v-if="buildsData!.length > 0" class="flex mb-4 flex-wrap">
-      <GButton class="m-1" @click="showTotal">Show Total</GButton>
-      <GButton class="m-1" @click="downloadData">Download Data</GButton>
+    <div v-if="buildsData!.length > 0" class="flex space-x-2 mb-4 flex-shrink-0 overflow-x-auto">
+      <GButton @click="showTotal">Show Total</GButton>
+      <GButton @click="downloadData">Download Data</GButton>
+      <GButton @click="downloadData">Download Data</GButton>
     </div>
     <transition-group tag="div" name="build-preview" w:grid="gap-5 cols-2 <sm:cols-1" class="grid">
       <CharacterBuildPreview
