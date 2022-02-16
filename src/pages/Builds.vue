@@ -64,6 +64,7 @@ const hideTotal = () => {
   totalVisible.value = false;
   scrollLock.value = false;
 };
+//#endregion
 
 const downloadData = async () => {
   const builds = await db.builds.toArray();
