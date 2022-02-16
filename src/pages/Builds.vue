@@ -16,6 +16,7 @@ import { RouterLink } from "vue-router";
 import clearDb from "~/lib/dev/clearDb";
 import tonsOfBuilds from "~/lib/dev/tonsOfBuilds";
 import { downloadObject } from "~/lib/common/downloadObject";
+import { GDataFileFormat } from "../lib/types/GDataFileFormat";
 
 const DEV = import.meta.env.DEV;
 
@@ -68,9 +69,8 @@ const hideTotal = () => {
 
 const downloadData = async () => {
   const builds = await db.builds.toArray();
-  downloadObject(builds);
+  downloadObject(new GDataFileFormat(1, builds), `gscale_data_${new Date().toISOString()}.json`);
 };
-//#endregion
 </script>
 
 <template>
