@@ -17,6 +17,7 @@ import clearDb from "~/lib/dev/clearDb";
 import tonsOfBuilds from "~/lib/dev/tonsOfBuilds";
 import { downloadObject } from "~/lib/common/downloadObject";
 import { GDataFileFormat } from "../lib/types/GDataFileFormat";
+import ImportPopOver from "~/components/ImportPopOver.vue";
 
 const DEV = import.meta.env.DEV;
 
@@ -71,6 +72,8 @@ const downloadData = async () => {
   const builds = await db.builds.toArray();
   downloadObject(new GDataFileFormat(1, builds), `gscale_data_${new Date().toISOString()}.json`);
 };
+
+const importPopOverVisible = ref(false);
 </script>
 
 <template>
@@ -82,7 +85,7 @@ const downloadData = async () => {
     <div v-if="buildsData!.length > 0" class="flex space-x-2 mb-4 flex-shrink-0 overflow-x-auto">
       <GButton @click="showTotal">Show Total</GButton>
       <GButton @click="downloadData">Download Data</GButton>
-      <GButton @click="downloadData">Download Data</GButton>
+      <GButton @click="importPopOverVisible = true">Import File</GButton>
     </div>
     <transition-group tag="div" name="build-preview" w:grid="gap-5 cols-2 <sm:cols-1" class="grid">
       <CharacterBuildPreview
@@ -120,4 +123,5 @@ const downloadData = async () => {
       </div>
     </PopOver>
   </teleport>
+  <ImportPopOver :visible="importPopOverVisible" @close="importPopOverVisible = false" />
 </template>
