@@ -28,7 +28,10 @@ export default defineComponent({
 <template>
   <button
     type="button"
-    :class="[bStyle, 'focus:outline-none focus-visible:ring h-[42px] px-4 rounded-lg']"
+    :class="[
+      bStyle,
+      'focus:outline-none focus-visible:ring h-[42px] px-4 rounded-lg disabled:bg-opacity-30 disabled:cursor-not-allowed transition-opacity',
+    ]"
     :disabled="off"
     :aria-disabled="off"
   >
