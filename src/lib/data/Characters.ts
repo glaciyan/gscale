@@ -7,7 +7,6 @@ import { WeaponTypes } from "./WeaponTypes";
 
 export const Characters: { [key in CharactersKey]: ICharacter } = {
   yae_miko: {
-    speculated: true,
     name: "Yae Miko",
     normalizedName: "yae_miko",
     element: Elements.electro,
@@ -60,6 +59,7 @@ export const Characters: { [key in CharactersKey]: ICharacter } = {
   itto: {
     name: "Itto",
     normalizedName: "itto",
+    altName: "Arataki Itto",
     element: Elements.geo,
     weaponType: WeaponTypes.claymore,
     rarity: 5,
@@ -109,6 +109,7 @@ export const Characters: { [key in CharactersKey]: ICharacter } = {
   kokomi: {
     name: "Kokomi",
     normalizedName: "kokomi",
+    altName: "Sangonomiya Kokomi",
     element: Elements.hydro,
     weaponType: WeaponTypes.catalyst,
     rarity: 5,
@@ -142,6 +143,7 @@ export const Characters: { [key in CharactersKey]: ICharacter } = {
   sara: {
     name: "Sara",
     normalizedName: "sara",
+    altName: "Kujou Sara",
     element: Elements.electro,
     weaponType: WeaponTypes.bow,
     rarity: 4,
@@ -158,6 +160,7 @@ export const Characters: { [key in CharactersKey]: ICharacter } = {
   raiden: {
     name: "Raiden",
     normalizedName: "raiden",
+    altName: "Raiden Shogun",
     element: Elements.electro,
     weaponType: WeaponTypes.polearm,
     rarity: 5,
@@ -175,6 +178,7 @@ export const Characters: { [key in CharactersKey]: ICharacter } = {
   yoimiya: {
     name: "Yoimiya",
     normalizedName: "yoimiya",
+    altName: "Naganohara Yoimiya",
     element: Elements.pyro,
     weaponType: WeaponTypes.bow,
     rarity: 5,
@@ -208,6 +212,7 @@ export const Characters: { [key in CharactersKey]: ICharacter } = {
   ayaka: {
     name: "Ayaka",
     normalizedName: "ayaka",
+    altName: "Kamisato Ayaka",
     element: Elements.cryo,
     weaponType: WeaponTypes.sword,
     rarity: 5,
@@ -225,6 +230,7 @@ export const Characters: { [key in CharactersKey]: ICharacter } = {
   kazuha: {
     name: "Kazuha",
     normalizedName: "kazuha",
+    altName: "Kaedehara Kazuha",
     element: Elements.anemo,
     weaponType: WeaponTypes.sword,
     rarity: 5,

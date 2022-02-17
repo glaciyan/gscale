@@ -12,6 +12,18 @@ This project is built using Vue.
 	height="44">
 </a>
 
+### Get started
+```sh
+# you need to have pnpm installed
+npm install -g pnpm
+
+# install dependencies
+pnpm i
+
+# run dev server
+pnpm dev
+```
+
 ### Pull request
 
 All pull request are first merged with the `dev` branch. If everything works those changes are going to be merged with main at the next major version.
