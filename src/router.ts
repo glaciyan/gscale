@@ -4,6 +4,7 @@ import Builds from "./pages/Builds.vue";
 import title from "./title";
 import { createRouter, createWebHistory } from "vue-router";
 import Privacy from "./assets/articles/privacy.md";
+import Contact from "./assets/articles/contact.md";
 
 // Define all routes here
 const routes = [
@@ -30,6 +31,13 @@ const routes = [
     component: Privacy,
     meta: {
       title: title("Privacy"),
+    },
+  },
+  {
+    path: "/contact",
+    component: Contact,
+    meta: {
+      title: title("Contact"),
     },
   },
   {
