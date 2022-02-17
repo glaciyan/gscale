@@ -1,7 +1,7 @@
 {
   "name": "gscale",
   "license": "MIT",
-  "version": "2.3.0",
+  "version": "2.3.1",
   "scripts": {
     "pre": "npm run gen:version",
     "dev": "npm run pre && vite",
