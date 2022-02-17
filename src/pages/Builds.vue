@@ -91,7 +91,7 @@ const onImported = () => {
         <GButton @click="showTotal">Show Total</GButton>
         <GButton @click="downloadData">Download Data</GButton>
       </template>
-      <GButton @click="importPopOverVisible = true">Import File</GButton>
+      <GButton @click="importPopOverVisible = true">Import File (Beta)</GButton>
     </div>
     <transition-group tag="div" name="build-preview" w:grid="gap-5 cols-2 <sm:cols-1" class="grid">
       <CharacterBuildPreview

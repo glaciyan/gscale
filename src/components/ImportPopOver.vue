@@ -7,6 +7,7 @@ import GButton from "./GButton.vue";
 import PopOver from "./PopOver.vue";
 import { ZodError } from "zod";
 import { db } from "~/lib/offlineDatabase/db";
+import { RouterLink } from "vue-router";
 
 defineProps<{ visible: boolean }>();
 const emit = defineEmits(["close", "imported"]);
@@ -100,7 +101,7 @@ const submit = async () => {
       @close="close"
     >
       <div class="rounded-md flex flex-col max-w-screen-md bg-dark-600 p-6">
-        <h1 class="font-semibold text-lg text-light-important mb-4">Import file into gscale</h1>
+        <h1 class="font-semibold text-lg text-light-important mb-4">Import file into gscale (Beta)</h1>
         <!-- <SelectorCustom v-model:modelValue="selectedFormat" :listItems="formats" class="rounded-md">
           <template #button="current">
             {{ (current.value as any).label }}
@@ -123,6 +124,13 @@ const submit = async () => {
             <ElementButton :isLoading="isSubmitting" :disabled="!hasContent" @click="submit">Import</ElementButton>
           </ElementProvider>
         </div>
+      </div>
+      <div class="rounded-md bg-dark-600 mt-4 p-6">
+        <p class="text-sm text-light-ternary">
+          This feature is still being worked on. <br />
+          If you find any bugs, please report them
+          <RouterLink class="text-blue-400 hover:underline" to="/contact">here</RouterLink>.
+        </p>
       </div>
     </PopOver>
   </teleport>
