@@ -74,6 +74,10 @@ const downloadData = async () => {
 };
 
 const importPopOverVisible = ref(false);
+
+const onImported = () => {
+  getBuilds();
+};
 </script>
 
 <template>
@@ -125,5 +129,5 @@ const importPopOverVisible = ref(false);
       </div>
     </PopOver>
   </teleport>
-  <ImportPopOver :visible="importPopOverVisible" @close="importPopOverVisible = false" />
+  <ImportPopOver :visible="importPopOverVisible" @close="importPopOverVisible = false" @imported="onImported" />
 </template>
