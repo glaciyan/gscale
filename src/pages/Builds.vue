@@ -15,6 +15,9 @@ import Container from "../components/PageContainer";
 import { RouterLink } from "vue-router";
 import clearDb from "~/lib/dev/clearDb";
 import tonsOfBuilds from "~/lib/dev/tonsOfBuilds";
+import { downloadObject } from "~/lib/common/downloadObject";
+import { GDataFileFormat } from "../lib/types/GDataFileFormat";
+import ImportPopOver from "~/components/ImportPopOver.vue";
 
 const DEV = import.meta.env.DEV;
 
@@ -64,6 +67,17 @@ const hideTotal = () => {
   scrollLock.value = false;
 };
 //#endregion
+
+const downloadData = async () => {
+  const builds = await db.builds.toArray();
+  downloadObject(new GDataFileFormat(1, { builds }), `gscale_data_${new Date().toISOString()}.json`);
+};
+
+const importPopOverVisible = ref(false);
+
+const onImported = () => {
+  getBuilds();
+};
 </script>
 
 <template>
@@ -72,8 +86,12 @@ const hideTotal = () => {
       <GButton @click="tonsOfBuilds">(DEV) Dummy Builds</GButton>
       <GButton @click="clearDb">(DEV) Clear DB</GButton>
     </div>
-    <div v-if="buildsData!.length > 0" class="flex space-x-2 mb-4">
-      <GButton @click="showTotal">Show Total</GButton>
+    <div class="flex space-x-2 flex-shrink-0 mb-4 overflow-x-auto">
+      <template v-if="buildsData!.length > 0">
+        <GButton @click="showTotal">Show Total</GButton>
+        <GButton @click="downloadData">Download Data</GButton>
+      </template>
+      <GButton @click="importPopOverVisible = true">Import File (Beta)</GButton>
     </div>
     <transition-group tag="div" name="build-preview" w:grid="gap-5 cols-2 <sm:cols-1" class="grid">
       <CharacterBuildPreview
@@ -111,4 +129,5 @@ const hideTotal = () => {
       </div>
     </PopOver>
   </teleport>
+  <ImportPopOver :visible="importPopOverVisible" @close="importPopOverVisible = false" @imported="onImported" />
 </template>

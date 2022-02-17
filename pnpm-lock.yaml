@@ -26,6 +26,7 @@ specifiers:
   vue-router: ^4
   vue-tsc: ^0.3.0
   windicss: ^3.2.0
+  zod: ^3.11.6
 
 dependencies:
   '@floating-ui/dom': 0.1.10
@@ -36,6 +37,7 @@ dependencies:
   fuse.js: 6.4.6
   vue: 3.2.24
   vue-router: 4.0.12_vue@3.2.24
+  zod: 3.11.6
 
 devDependencies:
   '@types/lodash': 4.14.178
@@ -2684,3 +2686,7 @@ packages:
       yargs-parser: 18.1.3
     dev: false
     optional: true
+
+  /zod/3.11.6:
+    resolution: {integrity: sha512-daZ80A81I3/9lIydI44motWe6n59kRBfNzTuS2bfzVh1nAXi667TOTWWtatxyG+fwgNUiagSj/CWZwRRbevJIg==}
+    dev: false

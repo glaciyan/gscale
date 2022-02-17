@@ -6,11 +6,6 @@ export default defineComponent({
   components: { Spinner },
 
   props: {
-    as: {
-      type: String,
-      required: false,
-      default: undefined,
-    },
     isLoading: {
       type: Boolean,
     },
@@ -33,11 +28,14 @@ export default defineComponent({
 <template>
   <button
     type="button"
-    :class="[bStyle, 'focus:outline-none focus-visible:ring h-[42px] px-4 rounded-lg']"
+    :class="[
+      bStyle,
+      'focus:outline-none focus-visible:ring h-[42px] px-4 rounded-lg disabled:bg-opacity-30 disabled:cursor-not-allowed transition-opacity',
+    ]"
     :disabled="off"
     :aria-disabled="off"
   >
-    <div class="flex h-full items-center justify-center">
+    <div class="flex h-full whitespace-nowrap items-center justify-center">
       <Spinner v-if="isLoading" class="absolute" />
       <span :class="{ 'opacity-0': isLoading }"><slot /></span>
     </div>
