@@ -1,4 +1,6 @@
 import { z } from "zod";
+import { Categories } from "../data/contracts/IItem";
+import { PhysicalItemGroupsKey } from "../data/keys/ItemGroupsKey";
 import { Build } from "../offlineDatabase/db";
 
 export class GDataFileFormat {
@@ -53,6 +55,20 @@ const schema = z.object({
           goal: z.number(),
           upgraded: z.boolean(),
         }),
+        completed: z
+          .array(
+            z.object({
+              item: z.object({
+                name: z.string(),
+                normalizedName: z.string(),
+                rarity: z.number(),
+                groupId: z.enum(PhysicalItemGroupsKey).optional(),
+                category: z.enum(Categories),
+              }),
+              amount: z.number(),
+            })
+          )
+          .optional(),
       })
     ),
   }),
