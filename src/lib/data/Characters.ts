@@ -20,7 +20,7 @@ export const Characters: { [key in CharactersKey]: ICharacter } = {
     boss: Items.dragonheirs_false_fin,
     gemGroup: ItemGroups.electro_gem,
     bookGroup: ItemGroups.light,
-    weekly: Items.unknown,
+    weekly: Items.the_meaning_of_aeons,
   },
   shenhe: {
     name: "Shenhe",

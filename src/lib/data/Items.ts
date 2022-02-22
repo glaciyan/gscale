@@ -15,6 +15,12 @@ export const Items: { [key in ItemsKey]: IItem } = {
     category: "none",
   },
 
+  the_meaning_of_aeons: {
+    name: "The Meaning of Aeons",
+    normalizedName: "the_meaning_of_aeons",
+    rarity: 5,
+    category: "weekly",
+  },
   dragonheirs_false_fin: {
     name: "Dragonheir's False Fin",
     normalizedName: "dragonheirs_false_fin",

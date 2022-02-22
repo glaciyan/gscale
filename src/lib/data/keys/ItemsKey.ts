@@ -1,6 +1,7 @@
 type ItemsKey =
   | "unknown"
   | "none"
+  | "the_meaning_of_aeons"
   | "dragonheirs_false_fin"
   | "chaos_oculus"
   | "chaos_axis"
