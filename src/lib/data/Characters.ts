@@ -12,9 +12,10 @@ export const Characters: { [key in CharactersKey]: ICharacter } = {
     element: Elements.electro,
     weaponType: WeaponTypes.catalyst,
     rarity: 5,
-    sub: "No info",
-    constellation: "No info",
-    description: "No Info",
+    sub: "CRIT Rate",
+    constellation: "Divina Vulpes",
+    description:
+      "Lady Guuji of the Grand Narukami Shrine also serves as the editor-in-chief of Yae Publishing House. Unimaginable intelligence and cunning are hidden under her beautiful appearance.",
     local: Items.sea_ganoderma,
     commonGroup: ItemGroups.handguard,
     boss: Items.dragonheirs_false_fin,
