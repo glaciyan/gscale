@@ -6,6 +6,25 @@ import CharactersKey from "./keys/CharactersKey";
 import { WeaponTypes } from "./WeaponTypes";
 
 export const Characters: { [key in CharactersKey]: ICharacter } = {
+  kamisato_ayato: {
+    speculated: true,
+    noPic: true,
+    name: "Ayato",
+    altName: "Kamisato Ayato",
+    normalizedName: "kamisato_ayato",
+    element: Elements.hydro,
+    weaponType: WeaponTypes.sword,
+    rarity: 5,
+    sub: "No info",
+    constellation: "No info",
+    description: "No info",
+    local: Items.sakura_bloom,
+    commonGroup: ItemGroups.handguard,
+    boss: Items.dew_of_repudiation,
+    gemGroup: ItemGroups.hydro_gem,
+    bookGroup: ItemGroups.elegance,
+    weekly: Items.mudra_of_the_malefic_general,
+  },
   yae_miko: {
     name: "Yae Miko",
     normalizedName: "yae_miko",
