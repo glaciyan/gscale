@@ -1,6 +1,7 @@
 type ItemsKey =
   | "unknown"
   | "none"
+  | "mudra_of_the_malefic_general"
   | "the_meaning_of_aeons"
   | "dragonheirs_false_fin"
   | "chaos_oculus"

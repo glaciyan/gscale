@@ -15,6 +15,12 @@ export const Items: { [key in ItemsKey]: IItem } = {
     category: "none",
   },
 
+  mudra_of_the_malefic_general: {
+    name: "Mudra of the Malefic General",
+    normalizedName: "mudra_of_the_malefic_general",
+    rarity: 5,
+    category: "weekly",
+  },
   the_meaning_of_aeons: {
     name: "The Meaning of Aeons",
     normalizedName: "the_meaning_of_aeons",
