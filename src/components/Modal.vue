@@ -33,10 +33,12 @@ export default defineComponent({
         </div>
         <div class="flex bg-dark-600 border-t-2 border-dark-200 py-3 px-6 justify-end items-center">
           <div v-if="question" class="flex-1 mr-12 text-light-normal">{{ question }}</div>
-          <EButton element="neutral" look="ghost" class="mr-2" @click="$emit('close')">
-            {{ closeText }}
-          </EButton>
-          <slot name="buttons" />
+          <div class="flex flex-row-reverse">
+            <slot name="buttons" />
+            <EButton element="neutral" look="ghost" class="mr-2" @click="$emit('close')">
+              {{ closeText }}
+            </EButton>
+          </div>
         </div>
       </div>
     </PopOver>
