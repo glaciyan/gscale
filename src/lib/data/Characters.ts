@@ -7,8 +7,6 @@ import { WeaponTypes } from "./WeaponTypes";
 
 export const Characters: { [key in CharactersKey]: ICharacter } = {
   kamisato_ayato: {
-    speculated: true,
-    noPic: true,
     name: "Ayato",
     altName: "Kamisato Ayato",
     normalizedName: "kamisato_ayato",

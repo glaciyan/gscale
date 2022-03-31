@@ -76,6 +76,10 @@
         "hash": "800ec0e3b027f18fd4e0373ab418a12c1dde8433"
     },
     {
+        "name": "./src/lib/data/images/characters/card/kamisato_ayato.png",
+        "hash": "ab9be57fe72a543e30817e66630f2aeaaf264c39"
+    },
+    {
         "name": "./src/lib/data/images/characters/card/kazuha.png",
         "hash": "9cbff0ef711d9220c6b1b9e64ea1d230dd852188"
     },
@@ -270,6 +274,10 @@
     {
         "name": "./src/lib/data/images/characters/mugshot/kaeya.png",
         "hash": "99bee32ed9d257e326c3fee7848bd5df7ec8754a"
+    },
+    {
+        "name": "./src/lib/data/images/characters/mugshot/kamisato_ayato.webp",
+        "hash": "0d12e77eab29f196f46b8a4b121ef7bd7735a08a"
     },
     {
         "name": "./src/lib/data/images/characters/mugshot/kazuha.png",
