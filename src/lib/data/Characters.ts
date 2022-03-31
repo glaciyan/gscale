@@ -13,9 +13,10 @@ export const Characters: { [key in CharactersKey]: ICharacter } = {
     element: Elements.hydro,
     weaponType: WeaponTypes.sword,
     rarity: 5,
-    sub: "No info",
-    constellation: "No info",
-    description: "No info",
+    sub: "CRIT DMG",
+    constellation: "Cypressus Custos",
+    description:
+      "The young but highly accomplished head of the Yashiro Commission's Kamisato Clan. Cultured and polite, he is a man of many ways and means.",
     local: Items.sakura_bloom,
     commonGroup: ItemGroups.handguard,
     boss: Items.dew_of_repudiation,
