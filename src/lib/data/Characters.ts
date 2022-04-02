@@ -807,7 +807,7 @@ export const Characters: { [key in CharactersKey]: ICharacter } = {
     rarity: 4,
     sub: "ATK",
     constellation: "Star",
-    description: "This is Jeff.",
+    description: "This is Jeff. He is here because no other character was found. (404)",
     local: Items.primogem,
     commonGroup: ItemGroups.arrowhead,
     boss: Items.primogem,
