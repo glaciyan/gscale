@@ -32,6 +32,6 @@ All pull request are first merged with the `dev` branch. If everything works tho
 
 [APACHE LICENSE, VERSION 2.0](https://www.apache.org/licenses/LICENSE-2.0)
 
-gscale.cc is not affiliated with miHoYo.  
-Genshin Impact, game content and materials are trademarks and copyrights of miHoYo.
+gscale.cc is not affiliated with HoYoverse.  
+Genshin Impact, game content and materials are trademarks and copyrights of HoYoverse.
 
