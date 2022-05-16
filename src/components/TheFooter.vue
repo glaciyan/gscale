@@ -47,9 +47,9 @@ import version from "~/version";
         </a>
       </div>
       <p className="mt-6 text-light-ternary">
-        gscale.cc is not affiliated with HoYoverse.
+        gscale.cc is not affiliated with COGNOSPHERE.
         <br />
-        Genshin Impact, game content and materials are trademarks and copyrights of HoYoverse.
+        Genshin Impact, game content and materials are trademarks and copyrights of COGNOSPHERE.
       </p>
     </PageContainer>
   </footer>
