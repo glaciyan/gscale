@@ -29,7 +29,7 @@ module.exports = {
     "vue/multi-word-component-names": [
       "error",
       {
-        ignores: ["Center", "Modal"],
+        ignores: ["Center", "Modal", "Builds", "Index"],
       },
     ],
     "@typescript-eslint/no-explicit-any": ["off"],
