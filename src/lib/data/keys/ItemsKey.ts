@@ -1,4 +1,5 @@
 type ItemsKey =
+  | "runic_fang"
   | "unknown"
   | "none"
   | "mudra_of_the_malefic_general"

@@ -188,6 +188,10 @@
         "hash": "36d81cd5fb47f183fdd4d0e723ea7b18f66c811f"
     },
     {
+        "name": "./src/lib/data/images/characters/card/yelan.png",
+        "hash": "fe254e1c17dd983c4206699d41d8640e9b7175d7"
+    },
+    {
         "name": "./src/lib/data/images/characters/card/yoimiya.png",
         "hash": "ce2ce68e744283840b5c15ee5d2b98dd72d9db4d"
     },
@@ -386,6 +390,10 @@
     {
         "name": "./src/lib/data/images/characters/mugshot/yanfei.png",
         "hash": "c4e077a3b13b4de535ace7210c45e4bbf3b85cbc"
+    },
+    {
+        "name": "./src/lib/data/images/characters/mugshot/yelan.png",
+        "hash": "87f28fa1f3a4d1027214ea1479216e985c0592b8"
     },
     {
         "name": "./src/lib/data/images/characters/mugshot/yoimiya.png",
@@ -982,6 +990,10 @@
     {
         "name": "./src/lib/data/images/materials/ring_of_boreas.png",
         "hash": "726a05b922ee446a3c0362540556130cad00e84d"
+    },
+    {
+        "name": "./src/lib/data/images/materials/runic_fang.webp",
+        "hash": "8551de8751cfdee58b3485d5fbd8675dcc0bc0c5"
     },
     {
         "name": "./src/lib/data/images/materials/sakura_bloom.png",

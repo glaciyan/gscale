@@ -1,4 +1,5 @@
 type CharactersKey =
+  | "yelan"
   | "kamisato_ayato"
   | "yae_miko"
   | "shenhe"

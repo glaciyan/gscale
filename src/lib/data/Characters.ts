@@ -6,6 +6,23 @@ import CharactersKey from "./keys/CharactersKey";
 import { WeaponTypes } from "./WeaponTypes";
 
 export const Characters: { [key in CharactersKey]: ICharacter } = {
+  yelan: {
+    name: "Yelan",
+    normalizedName: "yelan",
+    element: Elements.hydro,
+    weaponType: WeaponTypes.bow,
+    rarity: 5,
+    sub: "CRIT Rate",
+    constellation: "Umbrabilis Orchis",
+    description:
+      'A mysterious person who claims to work for the Ministry of Civil Affairs, but is a "non-entity" on the Ministry of Civil Affairs\' list.',
+    local: Items.starconch,
+    commonGroup: ItemGroups.fatui_insignia,
+    boss: Items.runic_fang,
+    gemGroup: ItemGroups.hydro_gem,
+    bookGroup: ItemGroups.prosperity,
+    weekly: Items.gilded_scale,
+  },
   kamisato_ayato: {
     name: "Ayato",
     altName: "Kamisato Ayato",
