@@ -15,6 +15,13 @@ export const Items: { [key in ItemsKey]: IItem } = {
     category: "none",
   },
 
+  runic_fang: {
+    name: "Runic Fang",
+    normalizedName: "runic_fang",
+    rarity: 4,
+    category: "boss",
+  },
+
   mudra_of_the_malefic_general: {
     name: "Mudra of the Malefic General",
     normalizedName: "mudra_of_the_malefic_general",
