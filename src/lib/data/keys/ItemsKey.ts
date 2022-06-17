@@ -1,4 +1,5 @@
 type ItemsKey =
+  | "tears_of_the_calamitous_god"
   | "runic_fang"
   | "unknown"
   | "none"

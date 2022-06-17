@@ -1250,5 +1250,17 @@
   "runic_fang_material": {
     "png": "8d04a44d",
     "webp": "576773a9"
+  },
+  "kuki_card": {
+    "png": "88bf693b",
+    "webp": "135b7889"
+  },
+  "kuki_mugshot": {
+    "png": "a398edce",
+    "webp": "bcd96f59"
+  },
+  "tears_of_the_calamitous_god_material": {
+    "png": "506c5e09",
+    "webp": "1e3b4b8c"
   }
 }

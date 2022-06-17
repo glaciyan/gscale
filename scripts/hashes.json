@@ -96,6 +96,10 @@
         "hash": "ae5082906f10f489a91dddbd3bd10cd2bddbdfa0"
     },
     {
+        "name": "./src/lib/data/images/characters/card/kuki.png",
+        "hash": "428813b49a2e9c89c9907f0daa8c1474d16e9143"
+    },
+    {
         "name": "./src/lib/data/images/characters/card/lisa.png",
         "hash": "cd7fc8608fba9eca64eb053489f019c08ecc0906"
     },
@@ -298,6 +302,10 @@
     {
         "name": "./src/lib/data/images/characters/mugshot/kokomi.png",
         "hash": "80d877475d59f718eebb1c19b3000c88704df1dd"
+    },
+    {
+        "name": "./src/lib/data/images/characters/mugshot/kuki.png",
+        "hash": "2a5ae245a25841c221efbd32f029926d123e0866"
     },
     {
         "name": "./src/lib/data/images/characters/mugshot/lisa.png",
@@ -1154,6 +1162,10 @@
     {
         "name": "./src/lib/data/images/materials/teachings_of_transience.png",
         "hash": "6709af2ce82041753c1fb35450ebf2a4d666e26a"
+    },
+    {
+        "name": "./src/lib/data/images/materials/tears_of_the_calamitous_god.webp",
+        "hash": "5d7de31969587d71b92d9cb98af7040cee726b03"
     },
     {
         "name": "./src/lib/data/images/materials/the_meaning_of_aeons.webp",

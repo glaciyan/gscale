@@ -15,6 +15,13 @@ export const Items: { [key in ItemsKey]: IItem } = {
     category: "none",
   },
 
+  tears_of_the_calamitous_god: {
+    name: "Tears of the Calamitous God",
+    normalizedName: "tears_of_the_calamitous_god",
+    rarity: 5,
+    category: "weekly",
+  },
+
   runic_fang: {
     name: "Runic Fang",
     normalizedName: "runic_fang",
