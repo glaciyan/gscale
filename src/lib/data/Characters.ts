@@ -7,7 +7,6 @@ import { WeaponTypes } from "./WeaponTypes";
 
 export const Characters: { [key in CharactersKey]: ICharacter } = {
   kuki: {
-    speculated: true,
     name: "Kuki",
     altName: "Kuki Shinobu",
     normalizedName: "kuki",
