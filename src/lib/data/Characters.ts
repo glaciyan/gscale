@@ -13,7 +13,7 @@ export const Characters: { [key in CharactersKey]: ICharacter } = {
     element: Elements.electro,
     weaponType: WeaponTypes.sword,
     rarity: 4,
-    sub: "???",
+    sub: "HP",
     constellation: "Tribulatio Demptio",
     description:
       'The capable and reliable deputy leader of the "Arataki Gang." Please note: capable and reliable are not appellations for the "Arataki Gang," but for their deputy leader in specific.',
