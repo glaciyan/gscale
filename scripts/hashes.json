@@ -56,6 +56,10 @@
         "hash": "1ecaa02e69cd8b5e35e43dae64f3fedb353a45f0"
     },
     {
+        "name": "./src/lib/data/images/characters/card/heizou.png",
+        "hash": "16d206086ac7c6b978a3bb2e41526bb25b995bd8"
+    },
+    {
         "name": "./src/lib/data/images/characters/card/hu_tao.png",
         "hash": "4bfc8c6a21e6e29a6552e6e1aa15d85014d8d405"
     },
@@ -262,6 +266,10 @@
     {
         "name": "./src/lib/data/images/characters/mugshot/gorou.webp",
         "hash": "c7fd975bc6f72381a1477754fa2182b58afa14ce"
+    },
+    {
+        "name": "./src/lib/data/images/characters/mugshot/heizou.png",
+        "hash": "7081285fec9ec9d66fb0bb5d93ebac5a9ebd7873"
     },
     {
         "name": "./src/lib/data/images/characters/mugshot/hu_tao.png",

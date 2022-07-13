@@ -1262,5 +1262,13 @@
   "tears_of_the_calamitous_god_material": {
     "png": "506c5e09",
     "webp": "1e3b4b8c"
+  },
+  "heizou_card": {
+    "png": "8ddd7dd2",
+    "webp": "875b8391"
+  },
+  "heizou_mugshot": {
+    "png": "bd24d81e",
+    "webp": "3c9ab2a8"
   }
 }

@@ -6,6 +6,24 @@ import CharactersKey from "./keys/CharactersKey";
 import { WeaponTypes } from "./WeaponTypes";
 
 export const Characters: { [key in CharactersKey]: ICharacter } = {
+  heizou: {
+    name: "Heizou",
+    altName: "Shikanoin Heizou",
+    normalizedName: "heizou",
+    element: Elements.anemo,
+    weaponType: WeaponTypes.catalyst,
+    rarity: 4,
+    sub: "Anemo DMG Bonus",
+    constellation: "Cervus Minor",
+    description:
+      "A young prodigy detective from the Tenryou Commission. His senses are sharp and his thoughts are clear.",
+    local: Items.onikabuto,
+    commonGroup: ItemGroups.treasure_hoarder_insignia,
+    boss: Items.runic_fang,
+    gemGroup: ItemGroups.anemo_gem,
+    bookGroup: ItemGroups.transience,
+    weekly: Items.the_meaning_of_aeons,
+  },
   kuki: {
     name: "Kuki",
     altName: "Kuki Shinobu",
