@@ -6,6 +6,8 @@ import { TravelerTalentBooks } from "./TravelerTalentBooks";
 export interface TravelerConfig {
   element: IElement;
 
+  speculated?: boolean;
+
   talentCommonGroup: IItemGroup;
   talentBoss: IItem;
 

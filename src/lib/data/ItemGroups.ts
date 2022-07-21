@@ -116,6 +116,10 @@ export const ItemGroups: { [key in ItemGroupsKey]: IItemGroup } = {
       Items.brilliant_diamond_gemstone,
     ],
   },
+  dendro_gem: {
+    normalizedName: "dendro_gem",
+    itemIds: [], // TODO
+  },
   scroll: {
     normalizedName: "scroll",
     itemIds: [Items.divining_scroll, Items.sealed_scroll, Items.forbidden_curse_scroll],
@@ -237,5 +241,13 @@ export const ItemGroups: { [key in ItemGroupsKey]: IItemGroup } = {
       Items.boreal_wolfs_broken_fang,
       Items.boreal_wolfs_nostalgia,
     ],
+  },
+  red_satin: {
+    normalizedName: "red_satin",
+    itemIds: [Items.faded_red_satin, Items.trimmed_red_silk, Items.rich_red_brocade],
+  },
+  fungal_spores: {
+    normalizedName: "fungal_spores",
+    itemIds: [Items.fungal_spores, Items.luminescent_pollen, Items.crystalline_cyst_dust],
   },
 };

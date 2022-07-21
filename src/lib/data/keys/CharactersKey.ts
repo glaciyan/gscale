@@ -1,4 +1,7 @@
 type CharactersKey =
+  | "tighnari"
+  | "dori"
+  | "collei"
   | "heizou"
   | "kuki"
   | "yelan"

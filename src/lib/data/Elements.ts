@@ -26,6 +26,10 @@ export const Elements: { [key in ElementsKey]: IElement } = {
     name: "Electro",
     normalizedName: "electro",
   },
+  dendro: {
+    name: "Dendro",
+    normalizedName: "dendro",
+  },
   neutral: {
     name: "Neutral",
     normalizedName: "neutral",

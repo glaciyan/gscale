@@ -1270,5 +1270,57 @@
   "heizou_mugshot": {
     "png": "bd24d81e",
     "webp": "3c9ab2a8"
+  },
+  "nagadus_emerald_chunk_material": {
+    "png": "23acba40",
+    "webp": "3ef0a39a"
+  },
+  "nagadus_emerald_fragment_material": {
+    "png": "b64cc4b3",
+    "webp": "28fdf642"
+  },
+  "nagadus_emerald_gemstone_material": {
+    "png": "43bfb4e4",
+    "webp": "3a9c5727"
+  },
+  "nagadus_emerald_sliver_material": {
+    "png": "746466e3",
+    "webp": "4093988a"
+  },
+  "rukkhashava_mushrooms_material": {
+    "png": "16ac2c4e",
+    "webp": "cae6b008"
+  },
+  "crystalline_cyst_dust_material": {
+    "png": "ea7ca1f6",
+    "webp": "a5191367"
+  },
+  "faded_red_satin_material": {
+    "png": "4dd42110",
+    "webp": "cd38fd1b"
+  },
+  "fungal_spores_material": {
+    "png": "dddf3bda",
+    "webp": "56f51f14"
+  },
+  "kalpalata_lotus_material": {
+    "png": "ce4f42f4",
+    "webp": "c59decbb"
+  },
+  "luminescent_pollen_material": {
+    "png": "6af41bc5",
+    "webp": "29f36e6b"
+  },
+  "nilotpala_lotus_material": {
+    "png": "6980a271",
+    "webp": "3cbdf32f"
+  },
+  "rich_red_brocade_material": {
+    "png": "ad908523",
+    "webp": "ea94b6dc"
+  },
+  "trimmed_red_silk_material": {
+    "png": "b2ad7410",
+    "webp": "961b046f"
   }
 }

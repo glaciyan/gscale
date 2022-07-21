@@ -9,8 +9,19 @@ import { generateTravelerTalentBooks } from "./util/generateTravelerTalentBooks"
 const mondstadtBooks = generateTravelerTalentBooks(ItemGroups.freedom, ItemGroups.resistance, ItemGroups.ballad);
 const liyueBooks = generateTravelerTalentBooks(ItemGroups.prosperity, ItemGroups.diligence, ItemGroups.gold);
 const inazumaBooks = generateTravelerTalentBooks(ItemGroups.transience, ItemGroups.elegance, ItemGroups.light);
+const sumeruBooks = generateTravelerTalentBooks(ItemGroups.unknown, ItemGroups.unknown, ItemGroups.unknown);
 
 export const Travelers: { [key in TravelersKey]: ITraveler } = {
+  traveler_dendro: new Traveler({
+    speculated: true,
+    element: Elements.dendro,
+    talentBoss: Items.mudra_of_the_malefic_general,
+    talentCommonGroup: ItemGroups.fungal_spores,
+    talentBooks: sumeruBooks,
+    normalTalentBooks: sumeruBooks,
+    normalTalentCommonGroup: ItemGroups.fungal_spores,
+    normalTalentBoss: Items.mudra_of_the_malefic_general,
+  }),
   traveler_electro: new Traveler({
     element: Elements.electro,
     talentBoss: Items.dragon_lords_crown,

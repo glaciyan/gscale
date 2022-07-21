@@ -580,6 +580,10 @@
         "hash": "b0a9074fc8662ac7e9009db0b414528931deeba2"
     },
     {
+        "name": "./src/lib/data/images/materials/crystalline_cyst_dust.png",
+        "hash": "80f1b5badd1df1da8181ae6f16c61908aedcd09c"
+    },
+    {
         "name": "./src/lib/data/images/materials/crystal_marrow.png",
         "hash": "3e177674cff00d27978c764bac69dce289334c0d"
     },
@@ -664,6 +668,10 @@
         "hash": "a5fc4b1f9545652b25f1a6dbc26281b0bf909d69"
     },
     {
+        "name": "./src/lib/data/images/materials/faded_red_satin.png",
+        "hash": "c6fdc5479885c9c3179d33df5f5b5bd747806b8d"
+    },
+    {
         "name": "./src/lib/data/images/materials/famed_handguard.png",
         "hash": "0d216ef127128b61b6a21e03014e720c5965ecaf"
     },
@@ -698,6 +706,10 @@
     {
         "name": "./src/lib/data/images/materials/fragment_of_decarabians_epic.png",
         "hash": "4671cc8e0eb1de960bf7b76b7bd40578399ea488"
+    },
+    {
+        "name": "./src/lib/data/images/materials/fungal_spores.png",
+        "hash": "18e5e6ea44c62fb82047c5a58ce5eb21585f4f3f"
     },
     {
         "name": "./src/lib/data/images/materials/gilded_scale.png",
@@ -800,6 +812,10 @@
         "hash": "aaeb3cc46120c4415ec1378b6c47f357f598280b"
     },
     {
+        "name": "./src/lib/data/images/materials/kalpalata_lotus.png",
+        "hash": "583b8e6f2a9d2210dbc21a741241729c0a811cbf"
+    },
+    {
         "name": "./src/lib/data/images/materials/ley_line_sprouts.png",
         "hash": "e3b050d66045c108a8d71f05d2be291e1741035b"
     },
@@ -810,6 +826,10 @@
     {
         "name": "./src/lib/data/images/materials/lightning_prism.png",
         "hash": "7e1b4d44109bb67d72ac6467e43bec6e713e8688"
+    },
+    {
+        "name": "./src/lib/data/images/materials/luminescent_pollen.png",
+        "hash": "6f9dc191ac8b5bd31b88ca960cdbb3070aba9701"
     },
     {
         "name": "./src/lib/data/images/materials/luminous_sands_from_guyun.png",
@@ -880,6 +900,22 @@
         "hash": "f569ce99956951a6b4bc4b7a5134ece8a19d2263"
     },
     {
+        "name": "./src/lib/data/images/materials/nagadus_emerald_chunk.png",
+        "hash": "313e281b6dca543017781db5dbd52b4e08e5f298"
+    },
+    {
+        "name": "./src/lib/data/images/materials/nagadus_emerald_fragment.png",
+        "hash": "ed16608a72dd0e2309944bc5a96ec640753a165b"
+    },
+    {
+        "name": "./src/lib/data/images/materials/nagadus_emerald_gemstone.png",
+        "hash": "1844e7904c8707b975713bf7a3b0f28b189b8bd2"
+    },
+    {
+        "name": "./src/lib/data/images/materials/nagadus_emerald_sliver.png",
+        "hash": "ddc048da7e2e2d09622f94bd475dddc01edcb1d5"
+    },
+    {
         "name": "./src/lib/data/images/materials/naku_weed.png",
         "hash": "889bb9acb7548200e2c8099ec78a884fd9bfce50"
     },
@@ -894,6 +930,10 @@
     {
         "name": "./src/lib/data/images/materials/narukamis_wisdom.webp",
         "hash": "8cdcb75848ed121fbb875a473b2bf7dd3b560188"
+    },
+    {
+        "name": "./src/lib/data/images/materials/nilotpala_lotus.png",
+        "hash": "a4a7fbba5aa7aee93332c61c7b87d0e6c0f70e69"
     },
     {
         "name": "./src/lib/data/images/materials/noctilucous_jade.png",
@@ -1000,12 +1040,20 @@
         "hash": "b6f99f6aaf923a4b4d2be283ada632a44a48fbca"
     },
     {
+        "name": "./src/lib/data/images/materials/rich_red_brocade.png",
+        "hash": "f861ccef474a9d187353ebe7eb63731165a5bc5d"
+    },
+    {
         "name": "./src/lib/data/images/materials/riftborn_regalia.webp",
         "hash": "ae6edc14c6dd3c57ed730b6d209dc84edacd05a0"
     },
     {
         "name": "./src/lib/data/images/materials/ring_of_boreas.png",
         "hash": "726a05b922ee446a3c0362540556130cad00e84d"
+    },
+    {
+        "name": "./src/lib/data/images/materials/rukkhashava_mushrooms.png",
+        "hash": "f0c039473fa870ac716d54d9b4f3d8e5acbdb64b"
     },
     {
         "name": "./src/lib/data/images/materials/runic_fang.webp",
@@ -1186,6 +1234,10 @@
     {
         "name": "./src/lib/data/images/materials/treasure_hoarder_insignia.png",
         "hash": "40e45cf8b21f4e9808d1d826fb772189d828a99f"
+    },
+    {
+        "name": "./src/lib/data/images/materials/trimmed_red_silk.png",
+        "hash": "ff1c445969622aade878ec984a928677a1beefad"
     },
     {
         "name": "./src/lib/data/images/materials/tusk_of_monoceros_caeli.png",

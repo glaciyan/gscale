@@ -4,7 +4,7 @@ import aspectRatio from "windicss/plugin/aspect-ratio";
 import lineClamp from "windicss/plugin/line-clamp";
 import { range } from "./src/lib/range";
 
-const em = ["anemo", "pyro", "electro", "geo", "cryo", "hydro", "neutral", "danger"];
+const em = ["anemo", "pyro", "electro", "geo", "cryo", "hydro", "dendro", "neutral", "danger"];
 const sizes = ["sm", "md", "lg", "xl", "2xl"];
 
 export default defineConfig({
@@ -66,18 +66,20 @@ export default defineConfig({
             geo: "#FFE667",
             cryo: "#99FFFF",
             hydro: "#80C0FF",
+            dendro: "#B6F263",
 
             // Semantic colors (without having to majorly change up the api of Button.vue)
             neutral: "#F4F4F4",
             danger: "#EF4444",
 
-            // todo check contrast with white text
+            // for selector icon seperator
             "anemo-dark": "#2FD09A",
             "pyro-dark": "#FF5C5C",
             "electro-dark": "#E368E3",
             "geo-dark": "#edad54",
             "cryo-dark": "#57cbcb",
             "hydro-dark": "#3D9EFF",
+            "dendro-dark": "#7bb42d",
             "neutral-dark": "#8D8D8D",
           },
 

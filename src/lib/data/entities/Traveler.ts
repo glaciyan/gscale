@@ -13,6 +13,8 @@ export class Traveler implements ITraveler {
   constructor(config: TravelerConfig) {
     this.isTraveler = true;
 
+    this.speculated = config.speculated ?? false;
+
     this.name = "Traveler";
     this.normalizedName = `traveler_${config.element.normalizedName}`;
     this.element = config.element;
@@ -37,6 +39,7 @@ export class Traveler implements ITraveler {
     this.normalTalentBoss = config.normalTalentBoss;
   }
 
+  speculated: boolean;
   name: string;
   normalizedName: string;
   weaponType: IWeaponType;
