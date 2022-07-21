@@ -118,7 +118,12 @@ export const ItemGroups: { [key in ItemGroupsKey]: IItemGroup } = {
   },
   dendro_gem: {
     normalizedName: "dendro_gem",
-    itemIds: [], // TODO
+    itemIds: [
+      Items.nagadus_emerald_sliver,
+      Items.nagadus_emerald_fragment,
+      Items.nagadus_emerald_chunk,
+      Items.nagadus_emerald_gemstone,
+    ],
   },
   scroll: {
     normalizedName: "scroll",
