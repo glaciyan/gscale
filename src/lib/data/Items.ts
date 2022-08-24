@@ -1507,4 +1507,31 @@ export const Items: { [key in ItemsKey]: IItem } = {
     category: "common",
     groupId: "fungal_spores",
   },
+  majestic_hooked_beak: {
+    normalizedName: "majestic_hooked_beak",
+    name: "Majestic Hooked Beak",
+    rarity: 4,
+    category: "boss",
+  },
+  philosophies_of_praxis: {
+    normalizedName: "philosophies_of_praxis",
+    name: "Philosophies of Praxis",
+    rarity: 4,
+    category: "book",
+    groupId: "praxis",
+  },
+  guide_to_praxis: {
+    normalizedName: "guide_to_praxis",
+    name: "Guide to Praxis",
+    rarity: 3,
+    category: "book",
+    groupId: "praxis",
+  },
+  teachings_of_praxis: {
+    normalizedName: "teachings_of_praxis",
+    name: "Teachings of Praxis",
+    rarity: 2,
+    category: "book",
+    groupId: "praxis",
+  },
 };

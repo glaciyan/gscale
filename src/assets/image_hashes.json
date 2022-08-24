@@ -1322,5 +1322,29 @@
   "trimmed_red_silk_material": {
     "png": "b2ad7410",
     "webp": "961b046f"
+  },
+  "guide_to_praxis_material": {
+    "png": "3b07390c",
+    "webp": "492d23c3"
+  },
+  "majestic_hooked_beak_material": {
+    "png": "0c7e83bb",
+    "webp": "4c75e56a"
+  },
+  "philosophies_of_praxis_material": {
+    "png": "f715b5e7",
+    "webp": "1617cc86"
+  },
+  "teachings_of_praxis_material": {
+    "png": "c96e6bd5",
+    "webp": "a5151715"
+  },
+  "collei_card": {
+    "png": "05d1dd01",
+    "webp": "0bdfb6ce"
+  },
+  "collei_mugshot": {
+    "png": "de64d534",
+    "webp": "68815ad2"
   }
 }

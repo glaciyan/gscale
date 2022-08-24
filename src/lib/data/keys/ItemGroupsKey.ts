@@ -1,4 +1,5 @@
 export const PhysicalItemGroupsKey = [
+  "praxis",
   "fungal_spores",
   "red_satin",
   "dendro_gem",

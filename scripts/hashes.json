@@ -32,6 +32,10 @@
         "hash": "e35155698cc470ad06262bcafb8be2c788367502"
     },
     {
+        "name": "./src/lib/data/images/characters/card/collei.png",
+        "hash": "ac5833de4941cbf8d00c0deb07532569f2b7dfe7"
+    },
+    {
         "name": "./src/lib/data/images/characters/card/diluc.png",
         "hash": "619ebb65890682e84f0556e6df4c53a43a1b2ff7"
     },
@@ -242,6 +246,10 @@
     {
         "name": "./src/lib/data/images/characters/mugshot/chongyun.png",
         "hash": "c270cfc0dd1079820ddab2cf2326838ef7ffd1c2"
+    },
+    {
+        "name": "./src/lib/data/images/characters/mugshot/collei.webp",
+        "hash": "7c7ae73ed578e47474a2c0c74217a9c4fcc38822"
     },
     {
         "name": "./src/lib/data/images/characters/mugshot/diluc.png",
@@ -752,6 +760,10 @@
         "hash": "c61be8b180f4f2e57c73d31081227361d495fdda"
     },
     {
+        "name": "./src/lib/data/images/materials/guide_to_praxis.webp",
+        "hash": "53f1cbb2cfc8915a6ebf82365c229fba9eddd4e8"
+    },
+    {
         "name": "./src/lib/data/images/materials/guide_to_prosperity.png",
         "hash": "3d64c002c9d1d912e7a2d065f16cd4230cafe558"
     },
@@ -838,6 +850,10 @@
     {
         "name": "./src/lib/data/images/materials/lustrous_stone_from_guyun.png",
         "hash": "172f48ec52005d0100a10213d5c158405a8caadf"
+    },
+    {
+        "name": "./src/lib/data/images/materials/majestic_hooked_beak.webp",
+        "hash": "5a8a11c525282914dac619f518fbeb7a81d0e16c"
     },
     {
         "name": "./src/lib/data/images/materials/marionette_core.png",
@@ -986,6 +1002,10 @@
     {
         "name": "./src/lib/data/images/materials/philosophies_of_light.png",
         "hash": "6a2cd543c53008fee25de030583c09e09a1eee75"
+    },
+    {
+        "name": "./src/lib/data/images/materials/philosophies_of_praxis.webp",
+        "hash": "2d2295ee2e2e913654b9ac1de3c30920dae396f6"
     },
     {
         "name": "./src/lib/data/images/materials/philosophies_of_prosperity.png",
@@ -1206,6 +1226,10 @@
     {
         "name": "./src/lib/data/images/materials/teachings_of_light.png",
         "hash": "664ccd1ec24922fd2c62a0c6c10751981f4eba7c"
+    },
+    {
+        "name": "./src/lib/data/images/materials/teachings_of_praxis.webp",
+        "hash": "71f1fd5ef473b0f9096b9539874cbd1b3b5624ff"
     },
     {
         "name": "./src/lib/data/images/materials/teachings_of_prosperity.png",

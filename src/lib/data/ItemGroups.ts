@@ -255,4 +255,8 @@ export const ItemGroups: { [key in ItemGroupsKey]: IItemGroup } = {
     normalizedName: "fungal_spores",
     itemIds: [Items.fungal_spores, Items.luminescent_pollen, Items.crystalline_cyst_dust],
   },
+  praxis: {
+    normalizedName: "praxis",
+    itemIds: [Items.teachings_of_praxis, Items.guide_to_praxis, Items.philosophies_of_praxis],
+  },
 };

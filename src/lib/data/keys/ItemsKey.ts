@@ -1,4 +1,8 @@
 type ItemsKey =
+  | "philosophies_of_praxis"
+  | "guide_to_praxis"
+  | "teachings_of_praxis"
+  | "majestic_hooked_beak"
   | "crystalline_cyst_dust"
   | "luminescent_pollen"
   | "fungal_spores"
