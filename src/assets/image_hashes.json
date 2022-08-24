@@ -1346,5 +1346,25 @@
   "collei_mugshot": {
     "png": "de64d534",
     "webp": "68815ad2"
+  },
+  "tighnari_card": {
+    "png": "4475a17f",
+    "webp": "e1ce376c"
+  },
+  "tighnari_mugshot": {
+    "png": "ded4ecf1",
+    "webp": "36050664"
+  },
+  "guide_to_admonition_material": {
+    "png": "14a33db3",
+    "webp": "6293a7b4"
+  },
+  "philosophies_of_admonition_material": {
+    "png": "e7904396",
+    "webp": "c1ff9e13"
+  },
+  "teachings_of_admonition_material": {
+    "png": "004e565e",
+    "webp": "68f148b6"
   }
 }

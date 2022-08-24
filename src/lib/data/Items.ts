@@ -1534,4 +1534,25 @@ export const Items: { [key in ItemsKey]: IItem } = {
     category: "book",
     groupId: "praxis",
   },
+  philosophies_of_admonition: {
+    normalizedName: "philosophies_of_admonition",
+    name: "Philosophies of Admonition",
+    rarity: 4,
+    category: "book",
+    groupId: "admonition",
+  },
+  guide_to_admonition: {
+    normalizedName: "guide_to_admonition",
+    name: "Guide to Admonition",
+    rarity: 3,
+    category: "book",
+    groupId: "admonition",
+  },
+  teachings_of_admonition: {
+    normalizedName: "teachings_of_admonition",
+    name: "Teachings of Admonition",
+    rarity: 2,
+    category: "book",
+    groupId: "admonition",
+  },
 };

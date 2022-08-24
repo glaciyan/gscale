@@ -1,4 +1,7 @@
 type ItemsKey =
+  | "philosophies_of_admonition"
+  | "guide_to_admonition"
+  | "teachings_of_admonition"
   | "philosophies_of_praxis"
   | "guide_to_praxis"
   | "teachings_of_praxis"

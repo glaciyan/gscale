@@ -259,4 +259,8 @@ export const ItemGroups: { [key in ItemGroupsKey]: IItemGroup } = {
     normalizedName: "praxis",
     itemIds: [Items.teachings_of_praxis, Items.guide_to_praxis, Items.philosophies_of_praxis],
   },
+  admonition: {
+    normalizedName: "admonition",
+    itemIds: [Items.philosophies_of_admonition, Items.guide_to_admonition, Items.teachings_of_admonition],
+  },
 };

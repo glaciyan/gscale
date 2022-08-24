@@ -7,21 +7,20 @@ import { WeaponTypes } from "./WeaponTypes";
 
 export const Characters: { [key in CharactersKey]: ICharacter } = {
   tighnari: {
-    speculated: true,
-    noPic: true,
     name: "Tighnari",
     normalizedName: "tighnari",
     element: Elements.dendro,
     weaponType: WeaponTypes.bow,
     rarity: 5,
-    sub: "???",
-    constellation: "???",
-    description: "???",
+    sub: "Dendro DMG Bonus",
+    constellation: "Vulpes Zerda",
+    description:
+      "A young researcher well-versed in botany who currently serves as a Forest Watcher in Avidya Forest. He is a straight shooter with a warm heart — and a dab hand at guiding even the dullest of pupils.",
     local: Items.nilotpala_lotus,
     commonGroup: ItemGroups.fungal_spores,
-    boss: Items.unknown,
+    boss: Items.majestic_hooked_beak,
     gemGroup: ItemGroups.dendro_gem,
-    bookGroup: ItemGroups.unknown,
+    bookGroup: ItemGroups.admonition,
     weekly: Items.the_meaning_of_aeons,
   },
   dori: {

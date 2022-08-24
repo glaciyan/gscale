@@ -168,6 +168,10 @@
         "hash": "af264820a0860d3f1d6603781aa1f702ecd34f6f"
     },
     {
+        "name": "./src/lib/data/images/characters/card/tighnari.png",
+        "hash": "d16fe86bba33ab762c0068796e5b18e94a321515"
+    },
+    {
         "name": "./src/lib/data/images/characters/card/traveler.png",
         "hash": "2b9b85a77df4576f991f1f71235f57b176870ffd"
     },
@@ -382,6 +386,10 @@
     {
         "name": "./src/lib/data/images/characters/mugshot/thoma.webp",
         "hash": "511399b0b246d56719def43626480d342dd2f236"
+    },
+    {
+        "name": "./src/lib/data/images/characters/mugshot/tighnari.webp",
+        "hash": "e9cf4c89d76d1eda526f545cec2eec16126691ac"
     },
     {
         "name": "./src/lib/data/images/characters/mugshot/traveler.png",
@@ -736,6 +744,10 @@
         "hash": "237bb829a41ac9eaa5f99fa38cf09effb738f07f"
     },
     {
+        "name": "./src/lib/data/images/materials/guide_to_admonition.webp",
+        "hash": "94f3d29dc045b8950349078ae8f22ad1a7e316df"
+    },
+    {
         "name": "./src/lib/data/images/materials/guide_to_ballad.png",
         "hash": "814ba3f91318889c364d4039de2ed2ccfee0ae88"
     },
@@ -980,6 +992,10 @@
         "hash": "35a2e03021606dbd9a28555f28d19598769044ed"
     },
     {
+        "name": "./src/lib/data/images/materials/philosophies_of_admonition.webp",
+        "hash": "d23b3b9dfba6516d2a64795a146ae4eef84d4feb"
+    },
+    {
         "name": "./src/lib/data/images/materials/philosophies_of_ballad.png",
         "hash": "71d3ef29ef39f8b22191613f914fb527215921a7"
     },
@@ -1202,6 +1218,10 @@
     {
         "name": "./src/lib/data/images/materials/tail_of_boreas.png",
         "hash": "9373fa888aae21e18207dd6e142c956bde8c1781"
+    },
+    {
+        "name": "./src/lib/data/images/materials/teachings_of_admonition.webp",
+        "hash": "7c94c8f0d66ce440d9efa50a70b3281dd5ec9888"
     },
     {
         "name": "./src/lib/data/images/materials/teachings_of_ballad.png",
