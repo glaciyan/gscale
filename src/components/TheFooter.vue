@@ -33,7 +33,7 @@ import version from "~/version";
         <FooterSection title="Other">
           <GLink to="https://github.com/glaciyan/gscale">Github</GLink>
           <GLink to="https://twitter.com/glaciyandev">@glaciyandev</GLink>
-          <span class="">Email (no replies): <GLink to="mailto:yo@gscale.cc" class="!inline">yo@gscale.cc</GLink></span>
+          <span class="">Email: <GLink to="mailto:yo@gscale.cc" class="!inline">yo@gscale.cc</GLink></span>
         </FooterSection>
       </div>
       <div className="flex mt-24 items-center">
