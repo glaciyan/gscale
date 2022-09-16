@@ -1555,4 +1555,31 @@ export const Items: { [key in ItemsKey]: IItem } = {
     category: "book",
     groupId: "admonition",
   },
+  thunderclap_fruitcore: {
+    normalizedName: "thunderclap_fruitcore",
+    name: "Thunderclap Fruitcore",
+    rarity: 4,
+    category: "boss",
+  },
+  philosophies_of_ingenuity: {
+    normalizedName: "philosophies_of_ingenuity",
+    name: "Philosophies of Ingenuity",
+    rarity: 4,
+    category: "book",
+    groupId: "ingenuity",
+  },
+  guide_to_ingenuity: {
+    normalizedName: "guide_to_ingenuity",
+    name: "Guide to Ingenuity",
+    rarity: 3,
+    category: "book",
+    groupId: "ingenuity",
+  },
+  teachings_of_ingenuity: {
+    normalizedName: "teachings_of_ingenuity",
+    name: "Teachings of Ingenuity",
+    rarity: 2,
+    category: "book",
+    groupId: "ingenuity",
+  },
 };

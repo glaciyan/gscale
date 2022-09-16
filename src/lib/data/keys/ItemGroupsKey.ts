@@ -48,6 +48,7 @@ export const PhysicalItemGroupsKey = [
   "guyun",
   "mist_elixir",
   "wolf_tooth",
+  "ingenuity",
 ] as const;
 type ItemGroupsKey = typeof PhysicalItemGroupsKey[number];
 export default ItemGroupsKey;

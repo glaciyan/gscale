@@ -261,6 +261,10 @@ export const ItemGroups: { [key in ItemGroupsKey]: IItemGroup } = {
   },
   admonition: {
     normalizedName: "admonition",
-    itemIds: [Items.philosophies_of_admonition, Items.guide_to_admonition, Items.teachings_of_admonition],
+    itemIds: [Items.teachings_of_admonition, Items.guide_to_admonition, Items.philosophies_of_admonition],
+  },
+  ingenuity: {
+    normalizedName: "ingenuity",
+    itemIds: [Items.teachings_of_ingenuity, Items.guide_to_ingenuity, Items.philosophies_of_ingenuity],
   },
 };

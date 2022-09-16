@@ -44,6 +44,10 @@
         "hash": "bbd7a764819636e96ac634334ab2ac6280800cdc"
     },
     {
+        "name": "./src/lib/data/images/characters/card/dori.png",
+        "hash": "6c06d9c7fb150125cf8963b909e95e5041c2ae66"
+    },
+    {
         "name": "./src/lib/data/images/characters/card/eula.png",
         "hash": "4f80cd471a0f675407ca86b7f3ea6ada7079eadc"
     },
@@ -262,6 +266,10 @@
     {
         "name": "./src/lib/data/images/characters/mugshot/diona.png",
         "hash": "7aa24225c9a11f44714f81641f94b53a4ce3a4d9"
+    },
+    {
+        "name": "./src/lib/data/images/characters/mugshot/dori.png",
+        "hash": "4303429abf14681f1fe32f5e59a577e651dd32f9"
     },
     {
         "name": "./src/lib/data/images/characters/mugshot/eula.png",
@@ -768,6 +776,10 @@
         "hash": "fb2fde16a12333496aa570d05045226dddb85b9b"
     },
     {
+        "name": "./src/lib/data/images/materials/guide_to_ingenuity.webp",
+        "hash": "0b6d7df691c8086d31f4c1ed9ea4dfb1a8c996ec"
+    },
+    {
         "name": "./src/lib/data/images/materials/guide_to_light.png",
         "hash": "c61be8b180f4f2e57c73d31081227361d495fdda"
     },
@@ -1016,6 +1028,10 @@
         "hash": "eab6f9a52d4761723f4aa2c58a8122c0bdf50ed4"
     },
     {
+        "name": "./src/lib/data/images/materials/philosophies_of_ingenuity.webp",
+        "hash": "10185915001154191547c2ca217e1dd36af55b54"
+    },
+    {
         "name": "./src/lib/data/images/materials/philosophies_of_light.png",
         "hash": "6a2cd543c53008fee25de030583c09e09a1eee75"
     },
@@ -1244,6 +1260,10 @@
         "hash": "875debe8c3a88431dfe9c3ff7a1667857f8e6e7b"
     },
     {
+        "name": "./src/lib/data/images/materials/teachings_of_ingenuity.webp",
+        "hash": "cf041599cf686e6ae6f714cef8fa632c4c5c9747"
+    },
+    {
         "name": "./src/lib/data/images/materials/teachings_of_light.png",
         "hash": "664ccd1ec24922fd2c62a0c6c10751981f4eba7c"
     },
@@ -1270,6 +1290,10 @@
     {
         "name": "./src/lib/data/images/materials/the_meaning_of_aeons.webp",
         "hash": "8f773d27667d7eea41e4e320a32099894c753734"
+    },
+    {
+        "name": "./src/lib/data/images/materials/thunderclap_fruitcore.webp",
+        "hash": "b5d20535c4fd046ab2a4cd9ae1cf6853ee081030"
     },
     {
         "name": "./src/lib/data/images/materials/tile_of_decarabians_tower.png",

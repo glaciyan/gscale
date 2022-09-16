@@ -1,4 +1,8 @@
 type ItemsKey =
+  | "philosophies_of_ingenuity"
+  | "guide_to_ingenuity"
+  | "teachings_of_ingenuity"
+  | "thunderclap_fruitcore"
   | "philosophies_of_admonition"
   | "guide_to_admonition"
   | "teachings_of_admonition"

@@ -1366,5 +1366,29 @@
   "teachings_of_admonition_material": {
     "png": "004e565e",
     "webp": "68f148b6"
+  },
+  "guide_to_ingenuity_material": {
+    "png": "e76d5b9f",
+    "webp": "fad1949a"
+  },
+  "philosophies_of_ingenuity_material": {
+    "png": "2e047b11",
+    "webp": "9bd26154"
+  },
+  "teachings_of_ingenuity_material": {
+    "png": "022a996f",
+    "webp": "553bcc00"
+  },
+  "thunderclap_fruitcore_material": {
+    "png": "b20ef877",
+    "webp": "0292f856"
+  },
+  "dori_card": {
+    "png": "f7c0488a",
+    "webp": "cbee05e1"
+  },
+  "dori_mugshot": {
+    "png": "b2f7b16b",
+    "webp": "13dcf184"
   }
 }
