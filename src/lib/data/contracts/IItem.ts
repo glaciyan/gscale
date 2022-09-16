@@ -4,7 +4,7 @@ import { INamed } from "./INamed";
 export interface IItem extends INamed {
   rarity: number;
   groupId?: ItemGroupsKey;
-  category: typeof Categories[-1];
+  category: typeof Categories[number];
 }
 
 export const Categories = [
