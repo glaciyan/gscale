@@ -1,4 +1,5 @@
 type CharactersKey =
+  | "cyno"
   | "candace"
   | "tighnari"
   | "dori"

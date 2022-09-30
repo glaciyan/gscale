@@ -1,4 +1,5 @@
 type ItemsKey =
+  | "scarab"
   | "redcrest"
   | "light_guiding_tetrahedron"
   | "philosophies_of_ingenuity"

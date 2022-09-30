@@ -1406,5 +1406,17 @@
   "redcrest_material": {
     "png": "62437212",
     "webp": "d290d956"
+  },
+  "cyno_card": {
+    "png": "c9c9878e",
+    "webp": "14875eaa"
+  },
+  "cyno_mugshot": {
+    "png": "10d795d6",
+    "webp": "ca699efe"
+  },
+  "scarab_material": {
+    "png": "65fb9275",
+    "webp": "e1f64396"
   }
 }

@@ -6,6 +6,23 @@ import CharactersKey from "./keys/CharactersKey";
 import { WeaponTypes } from "./WeaponTypes";
 
 export const Characters: { [key in CharactersKey]: ICharacter } = {
+  cyno: {
+    name: "Cyno",
+    normalizedName: "cyno",
+    element: Elements.electro,
+    weaponType: WeaponTypes.polearm,
+    rarity: 5,
+    sub: "CRIT DMG%",
+    constellation: "Lupus Aureus",
+    description:
+      "The General Mahamatra in charge of supervising the researchers of the Akademiya. It is said that when he gets down to work, the General Mahamatra is even more efficient than the “Great Vayuvyastra” made by the Kshahrewar.",
+    local: Items.scarab,
+    commonGroup: ItemGroups.scroll,
+    boss: Items.thunderclap_fruitcore,
+    gemGroup: ItemGroups.electro_gem,
+    bookGroup: ItemGroups.admonition,
+    weekly: Items.mudra_of_the_malefic_general,
+  },
   candace: {
     name: "Candace",
     normalizedName: "candace",

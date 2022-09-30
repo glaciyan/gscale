@@ -40,6 +40,10 @@
         "hash": "ac5833de4941cbf8d00c0deb07532569f2b7dfe7"
     },
     {
+        "name": "./src/lib/data/images/characters/card/cyno.png",
+        "hash": "e7b8334341be5e78e18c6687a08acc4b9140b108"
+    },
+    {
         "name": "./src/lib/data/images/characters/card/diluc.png",
         "hash": "619ebb65890682e84f0556e6df4c53a43a1b2ff7"
     },
@@ -266,6 +270,10 @@
     {
         "name": "./src/lib/data/images/characters/mugshot/collei.png",
         "hash": "0e06a83939f5c758e73a2b3ba455fa8c67af4461"
+    },
+    {
+        "name": "./src/lib/data/images/characters/mugshot/cyno.png",
+        "hash": "676d112372fc9c24048a0800b0847853fd1517f6"
     },
     {
         "name": "./src/lib/data/images/characters/mugshot/diluc.png",
@@ -1134,6 +1142,10 @@
     {
         "name": "./src/lib/data/images/materials/sango_pearl.png",
         "hash": "8ae154d39d938a28c366b6b60388348b476a38fc"
+    },
+    {
+        "name": "./src/lib/data/images/materials/scarab.webp",
+        "hash": "d8ef6d0df930c62699722dc89181911663abe395"
     },
     {
         "name": "./src/lib/data/images/materials/scattered_piece_of_decarabians_dream.png",

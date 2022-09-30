@@ -1594,4 +1594,10 @@ export const Items: { [key in ItemsKey]: IItem } = {
     rarity: 4,
     category: "boss",
   },
+  scarab: {
+    normalizedName: "scarab",
+    name: "Scarab",
+    rarity: 1,
+    category: "local",
+  },
 };
