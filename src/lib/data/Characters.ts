@@ -6,6 +6,22 @@ import CharactersKey from "./keys/CharactersKey";
 import { WeaponTypes } from "./WeaponTypes";
 
 export const Characters: { [key in CharactersKey]: ICharacter } = {
+  candace: {
+    name: "Candace",
+    normalizedName: "candace",
+    element: Elements.hydro,
+    weaponType: WeaponTypes.polearm,
+    rarity: 4,
+    sub: "HP",
+    constellation: "Sagitta Scutum",
+    description: "A descendant of King Deshret with an amber left eye. The defender of Aaru Village.",
+    local: Items.redcrest,
+    commonGroup: ItemGroups.red_satin,
+    boss: Items.light_guiding_tetrahedron,
+    gemGroup: ItemGroups.hydro_gem,
+    bookGroup: ItemGroups.admonition,
+    weekly: Items.tears_of_the_calamitous_god,
+  },
   tighnari: {
     name: "Tighnari",
     normalizedName: "tighnari",

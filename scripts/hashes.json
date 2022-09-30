@@ -28,6 +28,10 @@
         "hash": "e55a1787904932e6fee29479978c825979406cac"
     },
     {
+        "name": "./src/lib/data/images/characters/card/candace.png",
+        "hash": "cf713b1750bb3873531d9625f20c747779d74430"
+    },
+    {
         "name": "./src/lib/data/images/characters/card/chongyun.png",
         "hash": "e35155698cc470ad06262bcafb8be2c788367502"
     },
@@ -250,6 +254,10 @@
     {
         "name": "./src/lib/data/images/characters/mugshot/bennett.png",
         "hash": "c80c02819f9c164de1de44f8c498da10e1c41238"
+    },
+    {
+        "name": "./src/lib/data/images/characters/mugshot/candace.png",
+        "hash": "ac498ce8e8b761ebbf8b92ec33a2c5dd0b4e915c"
     },
     {
         "name": "./src/lib/data/images/characters/mugshot/chongyun.png",
@@ -864,6 +872,10 @@
         "hash": "7e1b4d44109bb67d72ac6467e43bec6e713e8688"
     },
     {
+        "name": "./src/lib/data/images/materials/light_guiding_tetrahedron.webp",
+        "hash": "bfc52c0b2e8fc139ee9b444a85de71a131a29fee"
+    },
+    {
         "name": "./src/lib/data/images/materials/luminescent_pollen.png",
         "hash": "6f9dc191ac8b5bd31b88ca960cdbb3070aba9701"
     },
@@ -1086,6 +1098,10 @@
     {
         "name": "./src/lib/data/images/materials/recruits_insignia.png",
         "hash": "c11b4e1c052911ad5e53bb5191a2f67aae4c3406"
+    },
+    {
+        "name": "./src/lib/data/images/materials/redcrest.webp",
+        "hash": "9aef5a27fdea42339c668ae1958c53cc0bc777e7"
     },
     {
         "name": "./src/lib/data/images/materials/relic_from_guyun.png",

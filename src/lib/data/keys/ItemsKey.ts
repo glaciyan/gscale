@@ -1,4 +1,6 @@
 type ItemsKey =
+  | "redcrest"
+  | "light_guiding_tetrahedron"
   | "philosophies_of_ingenuity"
   | "guide_to_ingenuity"
   | "teachings_of_ingenuity"

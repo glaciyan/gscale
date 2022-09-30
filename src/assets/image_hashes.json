@@ -1390,5 +1390,21 @@
   "dori_mugshot": {
     "png": "b2f7b16b",
     "webp": "13dcf184"
+  },
+  "candace_card": {
+    "png": "675ecda0",
+    "webp": "27cc3e42"
+  },
+  "candace_mugshot": {
+    "png": "3959a597",
+    "webp": "ea66c329"
+  },
+  "light_guiding_tetrahedron_material": {
+    "png": "a4bfe8d7",
+    "webp": "dd7fc071"
+  },
+  "redcrest_material": {
+    "png": "62437212",
+    "webp": "d290d956"
   }
 }

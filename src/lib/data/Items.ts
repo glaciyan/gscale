@@ -1582,4 +1582,16 @@ export const Items: { [key in ItemsKey]: IItem } = {
     category: "book",
     groupId: "ingenuity",
   },
+  redcrest: {
+    normalizedName: "redcrest",
+    name: "Redcrest",
+    rarity: 1,
+    category: "local",
+  },
+  light_guiding_tetrahedron: {
+    normalizedName: "light_guiding_tetrahedron",
+    name: "Light Guiding Tetrahedron",
+    rarity: 4,
+    category: "boss",
+  },
 };
