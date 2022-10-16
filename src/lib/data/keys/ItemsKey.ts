@@ -1,4 +1,6 @@
 type ItemsKey =
+  | "perpetual_caliber"
+  | "padisarah"
   | "scarab"
   | "redcrest"
   | "light_guiding_tetrahedron"

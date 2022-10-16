@@ -1418,5 +1418,21 @@
   "scarab_material": {
     "png": "65fb9275",
     "webp": "e1f64396"
+  },
+  "nilou_card": {
+    "png": "4c001f85",
+    "webp": "0b7095b6"
+  },
+  "nilou_mugshot": {
+    "png": "a1226334",
+    "webp": "7ef54302"
+  },
+  "padisarah_material": {
+    "png": "cf661b0e",
+    "webp": "cc168829"
+  },
+  "perpetual_caliber_material": {
+    "png": "e91b4cdc",
+    "webp": "469bb820"
   }
 }

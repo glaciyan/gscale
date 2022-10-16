@@ -1600,4 +1600,16 @@ export const Items: { [key in ItemsKey]: IItem } = {
     rarity: 1,
     category: "local",
   },
+  padisarah: {
+    normalizedName: "padisarah",
+    name: "Padisarah",
+    rarity: 1,
+    category: "local"
+  },
+  perpetual_caliber: {
+    name: "Perpetual Caliber",
+    normalizedName: "perpetual_caliber",
+    rarity: 4,
+    category: "boss"
+  }
 };

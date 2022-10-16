@@ -6,6 +6,22 @@ import CharactersKey from "./keys/CharactersKey";
 import { WeaponTypes } from "./WeaponTypes";
 
 export const Characters: { [key in CharactersKey]: ICharacter } = {
+  nilou: {
+    name: "Nilou",
+    normalizedName: "nilou",
+    element: Elements.hydro,
+    weaponType: WeaponTypes.sword,
+    rarity: 5,
+    sub: "Bonus HP%",
+    constellation: "Lotos Somno",
+    description: "The star of the Zubayr Theater. She is full of warmth and innocence, and her dances are lively and elegant.",
+    local: Items.padisarah,
+    commonGroup: ItemGroups.fungal_spores,
+    boss: Items.perpetual_caliber,
+    gemGroup: ItemGroups.hydro_gem,
+    bookGroup: ItemGroups.praxis,
+    weekly: Items.tears_of_the_calamitous_god
+  },
   cyno: {
     name: "Cyno",
     normalizedName: "cyno",
