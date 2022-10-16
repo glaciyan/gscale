@@ -11,7 +11,7 @@
 For optional steps:
 
 - Very simple cmd/terminal knowledge (cd, how to run npm commands)
-- [NodeJS](https://nodejs.org) (LTS or later), the npx and npm command from NodeJS is required for the process.
+- [NodeJS](https://nodejs.org) (LTS, 18 does not work), the npx and npm command from NodeJS is required for the process.
 - [squoosh-cli](https://www.npmjs.com/package/@squoosh/cli)
 - Squoosh CLI, install with `npm i -g @squoosh/cli`
 
