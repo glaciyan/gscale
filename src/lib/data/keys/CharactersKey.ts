@@ -1,4 +1,5 @@
 type CharactersKey =
+  | "nahida"
   | "nilou"
   | "cyno"
   | "candace"

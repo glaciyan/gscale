@@ -1,4 +1,5 @@
 type ItemsKey =
+  | "quelled_creeper"
   | "perpetual_caliber"
   | "padisarah"
   | "scarab"

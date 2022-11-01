@@ -6,6 +6,22 @@ import CharactersKey from "./keys/CharactersKey";
 import { WeaponTypes } from "./WeaponTypes";
 
 export const Characters: { [key in CharactersKey]: ICharacter } = {
+  nahida: {
+    name: "Nahida",
+    normalizedName: "nahida",
+    element: Elements.dendro,
+    weaponType: WeaponTypes.catalyst,
+    rarity: 5,
+    sub: "???",
+    constellation: "Sapientia Oromasdis",
+    description: "A caged bird secluded within the confines of the Sanctuary of Surasthana who can only see the world in her dreams.",
+    local: Items.kalpalata_lotus,
+    commonGroup: ItemGroups.fungal_spores,
+    boss: Items.quelled_creeper,
+    gemGroup: ItemGroups.dendro_gem,
+    bookGroup: ItemGroups.ingenuity,
+    weekly: Items.unknown
+  },
   nilou: {
     name: "Nilou",
     normalizedName: "nilou",

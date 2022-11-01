@@ -1434,5 +1434,17 @@
   "perpetual_caliber_material": {
     "png": "e91b4cdc",
     "webp": "469bb820"
+  },
+  "nahida_card": {
+    "png": "7df0efb8",
+    "webp": "c6c32433"
+  },
+  "nahida_mugshot": {
+    "png": "96b2abfe",
+    "webp": "1a2c8226"
+  },
+  "quelled_creeper_material": {
+    "png": "18db5cd3",
+    "webp": "714c683f"
   }
 }

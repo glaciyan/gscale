@@ -1604,12 +1604,18 @@ export const Items: { [key in ItemsKey]: IItem } = {
     normalizedName: "padisarah",
     name: "Padisarah",
     rarity: 1,
-    category: "local"
+    category: "local",
   },
   perpetual_caliber: {
     name: "Perpetual Caliber",
     normalizedName: "perpetual_caliber",
     rarity: 4,
-    category: "boss"
-  }
+    category: "boss",
+  },
+  quelled_creeper: {
+    name: "Quelled Creeper",
+    normalizedName: "quelled_creeper",
+    rarity: 4,
+    category: "boss",
+  },
 };

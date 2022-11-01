@@ -128,6 +128,10 @@
         "hash": "3316f08855e5c90935bcda631dd806e80a04041f"
     },
     {
+        "name": "./src/lib/data/images/characters/card/nahida.png",
+        "hash": "a2eff4fd9b05feb48f1492e2bee662ab24385326"
+    },
+    {
         "name": "./src/lib/data/images/characters/card/nilou.png",
         "hash": "fce10e216c0b0978d1463a74078dbc7252c415f3"
     },
@@ -362,6 +366,10 @@
     {
         "name": "./src/lib/data/images/characters/mugshot/mona.png",
         "hash": "ea932fb04dcb26caaebd8770a08c829eb0d8b8b9"
+    },
+    {
+        "name": "./src/lib/data/images/characters/mugshot/nahida.png",
+        "hash": "cf3c6f1c3ffac0c82f0eb2b78580c805a32c2c7b"
     },
     {
         "name": "./src/lib/data/images/characters/mugshot/nilou.png",
@@ -1118,6 +1126,10 @@
     {
         "name": "./src/lib/data/images/materials/qingxin.png",
         "hash": "fa30789dd9b566275e4f408a2997acca699ed57e"
+    },
+    {
+        "name": "./src/lib/data/images/materials/quelled_creeper.webp",
+        "hash": "3ee3cc1736f65ff4541f71f8a402113b9ddc5d96"
     },
     {
         "name": "./src/lib/data/images/materials/recruits_insignia.png",
