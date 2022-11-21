@@ -52,3 +52,18 @@ If an Item Group is limited for specific days of the week create an entry in `sr
 ### Register your character
 
 For a character to show up you have to register it in the ViewModel which can be found in `src/lib/viewmodel/CharactersViewModel.ts`.
+
+# Using puuh
+
+Puuh is a custom web crawler to pull data from [genshin.honeyhunterworld.com](https://genshin.honeyhunterworld.com). Puuh will also download the required images.
+
+Follow the installation instructions from [win-clipboard](https://github.com/sindresorhus/win-clipboard).
+
+## Example for Git Bash
+
+> **Warning**
+> If you are using Git Bash be sure to use `node.exe`
+
+```bash
+node.exe puuh.js c https://genshin.honeyhunterworld.com/eula_051/?lang=EN | clipboard.exe --copy
+```
