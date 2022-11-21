@@ -1,4 +1,6 @@
 type ItemsKey =
+  | "dakas_bell"
+  | "henna_berry"
   | "mirror_of_mushin"
   | "puppet_strings"
   | "quelled_creeper"

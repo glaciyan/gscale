@@ -6,6 +6,46 @@ import CharactersKey from "./keys/CharactersKey";
 import { WeaponTypes } from "./WeaponTypes";
 
 export const Characters: { [key in CharactersKey]: ICharacter } = {
+  wanderer: {
+    speculated: true,
+    noPic: true,
+    name: "Wanderer",
+    normalizedName: "wanderer",
+    element: Elements.anemo,
+    weaponType: WeaponTypes.catalyst,
+    rarity: 5,
+    sub: "Bonus CritRate%",
+    constellation: "Peregrinus",
+    description:
+      "A wayfaring figure whose identity is a mystery. He dresses like a mountain ascetic, but he certainly does not act the part.",
+    local: Items.rukkhashava_mushrooms,
+    commonGroup: ItemGroups.handguard,
+    boss: Items.perpetual_caliber,
+    gemGroup: ItemGroups.anemo_gem,
+    bookGroup: ItemGroups.praxis,
+    weekly: Items.dakas_bell,
+  },
+
+  faruzan: {
+    speculated: true,
+    noPic: true,
+    name: "Faruzan",
+    normalizedName: "faruzan",
+    element: Elements.anemo,
+    weaponType: WeaponTypes.bow,
+    rarity: 4,
+    sub: "Bonus Atk%",
+    constellation: "Flosculi Implexi",
+    description:
+      "A researcher from “one hundred years ago.” She enjoys self-identifying as everyone’s senior, and has significant knowledge of ancient scripts and machines of all kinds.",
+    local: Items.henna_berry,
+    commonGroup: ItemGroups.red_satin,
+    boss: Items.light_guiding_tetrahedron,
+    gemGroup: ItemGroups.anemo_gem,
+    bookGroup: ItemGroups.admonition,
+    weekly: Items.puppet_strings,
+  },
+
   layla: {
     name: "Layla",
     normalizedName: "layla",

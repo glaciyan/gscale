@@ -1462,5 +1462,13 @@
   "mirror_of_mushin_material": {
     "png": "f4172dd9",
     "webp": "0a11d36e"
+  },
+  "henna_berry_material": {
+    "png": "06a68620",
+    "webp": "ec21d8d7"
+  },
+  "dakas_bell_material": {
+    "png": "9bdde5a9",
+    "webp": "ad6a8d98"
   }
 }

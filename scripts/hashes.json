@@ -656,6 +656,10 @@
         "hash": "89d9fc8feece38c32c32281e028af88da4cb279b"
     },
     {
+        "name": "./src/lib/data/images/materials/dakas_bell.webp",
+        "hash": "183a8a4745416ae4cabbef549f6da6834a0e3f68"
+    },
+    {
         "name": "./src/lib/data/images/materials/damaged_mask.png",
         "hash": "c83cb157bde98e171b3880a18b7e8bf70020262d"
     },
@@ -846,6 +850,10 @@
     {
         "name": "./src/lib/data/images/materials/hellfire_butterfly.webp",
         "hash": "354198057b254ea69e6927dba8b2f9b17fa325c7"
+    },
+    {
+        "name": "./src/lib/data/images/materials/henna_berry.webp",
+        "hash": "5397430abc3ac66e997493f6ecec7bc92d3c7b42"
     },
     {
         "name": "./src/lib/data/images/materials/heros_wit.png",

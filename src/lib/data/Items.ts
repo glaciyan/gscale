@@ -15,6 +15,19 @@ export const Items: { [key in ItemsKey]: IItem } = {
     category: "none",
   },
 
+  henna_berry: {
+    name: "Henna Berry",
+    normalizedName: "henna_berry",
+    rarity: 1,
+    category: "local",
+  },
+
+  dakas_bell: {
+    name: "Daka's Bell",
+    normalizedName: "dakas_bell",
+    rarity: 5,
+    category: "weekly",
+  },
   mirror_of_mushin: {
     name: "Mirror of Mushin",
     normalizedName: "mirror_of_mushin",

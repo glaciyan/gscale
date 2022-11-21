@@ -1,4 +1,6 @@
 type CharactersKey =
+  | "wanderer"
+  | "faruzan"
   | "layla"
   | "nahida"
   | "nilou"
