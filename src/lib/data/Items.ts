@@ -15,6 +15,12 @@ export const Items: { [key in ItemsKey]: IItem } = {
     category: "none",
   },
 
+  puppet_strings: {
+    name: "Puppet Strings",
+    normalizedName: "puppet_strings",
+    rarity: 5,
+    category: "weekly",
+  },
   tears_of_the_calamitous_god: {
     name: "Tears of the Calamitous God",
     normalizedName: "tears_of_the_calamitous_god",

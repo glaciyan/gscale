@@ -1446,5 +1446,9 @@
   "quelled_creeper_material": {
     "png": "18db5cd3",
     "webp": "714c683f"
+  },
+  "puppet_strings_material": {
+    "png": "beae3d80",
+    "webp": "86aa5212"
   }
 }

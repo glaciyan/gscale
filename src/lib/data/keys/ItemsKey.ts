@@ -1,4 +1,5 @@
 type ItemsKey =
+  | "puppet_strings"
   | "quelled_creeper"
   | "perpetual_caliber"
   | "padisarah"

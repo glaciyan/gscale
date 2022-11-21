@@ -12,7 +12,7 @@ export const Characters: { [key in CharactersKey]: ICharacter } = {
     element: Elements.dendro,
     weaponType: WeaponTypes.catalyst,
     rarity: 5,
-    sub: "???",
+    sub: "Bonus EM",
     constellation: "Sapientia Oromasdis",
     description: "A caged bird secluded within the confines of the Sanctuary of Surasthana who can only see the world in her dreams.",
     local: Items.kalpalata_lotus,
@@ -20,7 +20,7 @@ export const Characters: { [key in CharactersKey]: ICharacter } = {
     boss: Items.quelled_creeper,
     gemGroup: ItemGroups.dendro_gem,
     bookGroup: ItemGroups.ingenuity,
-    weekly: Items.unknown
+    weekly: Items.puppet_strings
   },
   nilou: {
     name: "Nilou",
