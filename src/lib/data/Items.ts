@@ -15,6 +15,12 @@ export const Items: { [key in ItemsKey]: IItem } = {
     category: "none",
   },
 
+  mirror_of_mushin: {
+    name: "Mirror of Mushin",
+    normalizedName: "mirror_of_mushin",
+    rarity: 5,
+    category: "weekly",
+  },
   puppet_strings: {
     name: "Puppet Strings",
     normalizedName: "puppet_strings",

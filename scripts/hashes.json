@@ -120,6 +120,10 @@
         "hash": "428813b49a2e9c89c9907f0daa8c1474d16e9143"
     },
     {
+        "name": "./src/lib/data/images/characters/card/layla.png",
+        "hash": "321a17dd8aa46f91bdab5bf8475c66634a3bfd47"
+    },
+    {
         "name": "./src/lib/data/images/characters/card/lisa.png",
         "hash": "cd7fc8608fba9eca64eb053489f019c08ecc0906"
     },
@@ -358,6 +362,10 @@
     {
         "name": "./src/lib/data/images/characters/mugshot/kuki.png",
         "hash": "2a5ae245a25841c221efbd32f029926d123e0866"
+    },
+    {
+        "name": "./src/lib/data/images/characters/mugshot/layla.png",
+        "hash": "231ed3966d4f9406d33d712bc1ccf1350ee9a4e2"
     },
     {
         "name": "./src/lib/data/images/characters/mugshot/lisa.png",
@@ -930,6 +938,10 @@
     {
         "name": "./src/lib/data/images/materials/mask_of_the_wicked_lieutenant.webp",
         "hash": "22434278ebb3a6034f037f4a48907a4c16fbca86"
+    },
+    {
+        "name": "./src/lib/data/images/materials/mirror_of_mushin.webp",
+        "hash": "3d90423312a3b7a0320ea648bd1d146e03a1fec9"
     },
     {
         "name": "./src/lib/data/images/materials/mist_grass.png",

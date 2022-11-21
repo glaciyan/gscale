@@ -1450,5 +1450,17 @@
   "puppet_strings_material": {
     "png": "beae3d80",
     "webp": "86aa5212"
+  },
+  "layla_card": {
+    "png": "3b3e6ce4",
+    "webp": "be51bed8"
+  },
+  "layla_mugshot": {
+    "png": "20588496",
+    "webp": "00a1ea54"
+  },
+  "mirror_of_mushin_material": {
+    "png": "f4172dd9",
+    "webp": "0a11d36e"
   }
 }

@@ -1,4 +1,5 @@
 type ItemsKey =
+  | "mirror_of_mushin"
   | "puppet_strings"
   | "quelled_creeper"
   | "perpetual_caliber"

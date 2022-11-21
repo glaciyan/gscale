@@ -6,6 +6,23 @@ import CharactersKey from "./keys/CharactersKey";
 import { WeaponTypes } from "./WeaponTypes";
 
 export const Characters: { [key in CharactersKey]: ICharacter } = {
+  layla: {
+    name: "Layla",
+    normalizedName: "layla",
+    element: Elements.cryo,
+    weaponType: WeaponTypes.sword,
+    rarity: 4,
+    sub: "Bonus HP%",
+    constellation: "Luscinia",
+    description:
+      "A Rtawahist student who specializes in Theoretical Astrology. Heavily prone to somnambulism and locked in a grinding war with sleep deprivation, the problem of restful slumber is a most troubling one to her.",
+    local: Items.nilotpala_lotus,
+    commonGroup: ItemGroups.scroll,
+    boss: Items.perpetual_caliber,
+    gemGroup: ItemGroups.cryo_gem,
+    bookGroup: ItemGroups.ingenuity,
+    weekly: Items.mirror_of_mushin,
+  },
   nahida: {
     name: "Nahida",
     normalizedName: "nahida",
@@ -14,13 +31,14 @@ export const Characters: { [key in CharactersKey]: ICharacter } = {
     rarity: 5,
     sub: "Bonus EM",
     constellation: "Sapientia Oromasdis",
-    description: "A caged bird secluded within the confines of the Sanctuary of Surasthana who can only see the world in her dreams.",
+    description:
+      "A caged bird secluded within the confines of the Sanctuary of Surasthana who can only see the world in her dreams.",
     local: Items.kalpalata_lotus,
     commonGroup: ItemGroups.fungal_spores,
     boss: Items.quelled_creeper,
     gemGroup: ItemGroups.dendro_gem,
     bookGroup: ItemGroups.ingenuity,
-    weekly: Items.puppet_strings
+    weekly: Items.puppet_strings,
   },
   nilou: {
     name: "Nilou",
@@ -30,13 +48,14 @@ export const Characters: { [key in CharactersKey]: ICharacter } = {
     rarity: 5,
     sub: "Bonus HP%",
     constellation: "Lotos Somno",
-    description: "The star of the Zubayr Theater. She is full of warmth and innocence, and her dances are lively and elegant.",
+    description:
+      "The star of the Zubayr Theater. She is full of warmth and innocence, and her dances are lively and elegant.",
     local: Items.padisarah,
     commonGroup: ItemGroups.fungal_spores,
     boss: Items.perpetual_caliber,
     gemGroup: ItemGroups.hydro_gem,
     bookGroup: ItemGroups.praxis,
-    weekly: Items.tears_of_the_calamitous_god
+    weekly: Items.tears_of_the_calamitous_god,
   },
   cyno: {
     name: "Cyno",
