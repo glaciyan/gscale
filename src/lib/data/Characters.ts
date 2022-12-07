@@ -7,8 +7,6 @@ import { WeaponTypes } from "./WeaponTypes";
 
 export const Characters: { [key in CharactersKey]: ICharacter } = {
   wanderer: {
-    speculated: true,
-    noPic: true,
     name: "Wanderer",
     normalizedName: "wanderer",
     element: Elements.anemo,

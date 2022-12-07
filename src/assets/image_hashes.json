@@ -1470,5 +1470,13 @@
   "dakas_bell_material": {
     "png": "9bdde5a9",
     "webp": "ad6a8d98"
+  },
+  "wanderer_card": {
+    "png": "5373cbc4",
+    "webp": "1790348f"
+  },
+  "wanderer_mugshot": {
+    "png": "721b3ad3",
+    "webp": "4aa92fc3"
   }
 }
