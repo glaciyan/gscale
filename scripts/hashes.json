@@ -60,6 +60,10 @@
         "hash": "4f80cd471a0f675407ca86b7f3ea6ada7079eadc"
     },
     {
+        "name": "./src/lib/data/images/characters/card/faruzan.png",
+        "hash": "e3b6d8514d5c5ff43826f52398907f9ab859d7c4"
+    },
+    {
         "name": "./src/lib/data/images/characters/card/fischl.png",
         "hash": "2a15a28581fa7b26a5efade9ae7cfae6b1d09832"
     },
@@ -306,6 +310,10 @@
     {
         "name": "./src/lib/data/images/characters/mugshot/eula.png",
         "hash": "a64466cad9f1d205ff405c410512db531d790521"
+    },
+    {
+        "name": "./src/lib/data/images/characters/mugshot/faruzan.png",
+        "hash": "90593a041ab2b73bda54b3eb1c6b04c55e6e830d"
     },
     {
         "name": "./src/lib/data/images/characters/mugshot/fischl.png",

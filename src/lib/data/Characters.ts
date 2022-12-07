@@ -25,8 +25,6 @@ export const Characters: { [key in CharactersKey]: ICharacter } = {
   },
 
   faruzan: {
-    speculated: true,
-    noPic: true,
     name: "Faruzan",
     normalizedName: "faruzan",
     element: Elements.anemo,
@@ -35,7 +33,7 @@ export const Characters: { [key in CharactersKey]: ICharacter } = {
     sub: "Bonus Atk%",
     constellation: "Flosculi Implexi",
     description:
-      "A researcher from “one hundred years ago.” She enjoys self-identifying as everyone’s senior, and has significant knowledge of ancient scripts and machines of all kinds.",
+      "A researcher from “one hundred years ago.” She enjoys self-identifying as everyone's senior, and has significant knowledge of ancient scripts and machines of all kinds.",
     local: Items.henna_berry,
     commonGroup: ItemGroups.red_satin,
     boss: Items.light_guiding_tetrahedron,

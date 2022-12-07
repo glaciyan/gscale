@@ -1478,5 +1478,13 @@
   "wanderer_mugshot": {
     "png": "721b3ad3",
     "webp": "4aa92fc3"
+  },
+  "faruzan_card": {
+    "png": "e71a3e4a",
+    "webp": "b2a85502"
+  },
+  "faruzan_mugshot": {
+    "png": "ecd88731",
+    "webp": "a8f00e96"
   }
 }
