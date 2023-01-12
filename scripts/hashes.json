@@ -60,6 +60,10 @@
         "hash": "4f80cd471a0f675407ca86b7f3ea6ada7079eadc"
     },
     {
+        "name": "./src/lib/data/images/characters/card/faruzan.png",
+        "hash": "e3b6d8514d5c5ff43826f52398907f9ab859d7c4"
+    },
+    {
         "name": "./src/lib/data/images/characters/card/fischl.png",
         "hash": "2a15a28581fa7b26a5efade9ae7cfae6b1d09832"
     },
@@ -204,6 +208,10 @@
         "hash": "56d3095c84f2d33386d2c2c98e0d70709a7f192e"
     },
     {
+        "name": "./src/lib/data/images/characters/card/wanderer.png",
+        "hash": "a53c1cdae97770357015b4db2e8fb043b652bb5e"
+    },
+    {
         "name": "./src/lib/data/images/characters/card/xiangling.png",
         "hash": "039fb6b0260adbba63423fdd6fce8f7f37228459"
     },
@@ -302,6 +310,10 @@
     {
         "name": "./src/lib/data/images/characters/mugshot/eula.png",
         "hash": "a64466cad9f1d205ff405c410512db531d790521"
+    },
+    {
+        "name": "./src/lib/data/images/characters/mugshot/faruzan.png",
+        "hash": "90593a041ab2b73bda54b3eb1c6b04c55e6e830d"
     },
     {
         "name": "./src/lib/data/images/characters/mugshot/fischl.png",
@@ -446,6 +458,10 @@
     {
         "name": "./src/lib/data/images/characters/mugshot/venti.png",
         "hash": "b5fc3d5120a8d4f7a3828fe86fdd44243af4f411"
+    },
+    {
+        "name": "./src/lib/data/images/characters/mugshot/wanderer.png",
+        "hash": "d874eba7adccd2bffad1eb3c96cf465b6f8c550b"
     },
     {
         "name": "./src/lib/data/images/characters/mugshot/xiangling.png",
@@ -628,24 +644,16 @@
         "hash": "bfe636d8bf0f794166c3f2971cc8b3892c86287e"
     },
     {
-        "name": "./src/lib/data/images/materials/coral_branch_of_a_distant_sea.webp",
-        "hash": "a1868236132485f402391a166dd543bd755d68f3"
-    },
-    {
         "name": "./src/lib/data/images/materials/cor_lapis.png",
         "hash": "5a08f5403c084bfa86293d5b7e902c3ae6772e11"
     },
     {
+        "name": "./src/lib/data/images/materials/coral_branch_of_a_distant_sea.webp",
+        "hash": "a1868236132485f402391a166dd543bd755d68f3"
+    },
+    {
         "name": "./src/lib/data/images/materials/crown_of_insight.png",
         "hash": "f12f69592023581b8dd7fb260cd9f7432506516e"
-    },
-    {
-        "name": "./src/lib/data/images/materials/crystalline_bloom.png",
-        "hash": "b0a9074fc8662ac7e9009db0b414528931deeba2"
-    },
-    {
-        "name": "./src/lib/data/images/materials/crystalline_cyst_dust.png",
-        "hash": "80f1b5badd1df1da8181ae6f16c61908aedcd09c"
     },
     {
         "name": "./src/lib/data/images/materials/crystal_marrow.png",
@@ -654,6 +662,14 @@
     {
         "name": "./src/lib/data/images/materials/crystal_prism.webp",
         "hash": "89d9fc8feece38c32c32281e028af88da4cb279b"
+    },
+    {
+        "name": "./src/lib/data/images/materials/crystalline_bloom.png",
+        "hash": "b0a9074fc8662ac7e9009db0b414528931deeba2"
+    },
+    {
+        "name": "./src/lib/data/images/materials/crystalline_cyst_dust.png",
+        "hash": "80f1b5badd1df1da8181ae6f16c61908aedcd09c"
     },
     {
         "name": "./src/lib/data/images/materials/dakas_bell.webp",
@@ -700,12 +716,12 @@
         "hash": "3bab7d18cb6b323fea4b3f6b73e1802c9c5b0ee5"
     },
     {
-        "name": "./src/lib/data/images/materials/dragonheirs_false_fin.png",
-        "hash": "a18395d383e44415c442f30d986d2ff3b607c592"
-    },
-    {
         "name": "./src/lib/data/images/materials/dragon_lords_crown.png",
         "hash": "4c8bb1c096d15ea6cf999b62474527167b7028d1"
+    },
+    {
+        "name": "./src/lib/data/images/materials/dragonheirs_false_fin.png",
+        "hash": "a18395d383e44415c442f30d986d2ff3b607c592"
     },
     {
         "name": "./src/lib/data/images/materials/dream_of_the_dandelion_gladiator.png",
@@ -908,12 +924,12 @@
         "hash": "46e73feece25ce4f5591a2525ad875d8ba4513a4"
     },
     {
-        "name": "./src/lib/data/images/materials/lightning_prism.png",
-        "hash": "7e1b4d44109bb67d72ac6467e43bec6e713e8688"
-    },
-    {
         "name": "./src/lib/data/images/materials/light_guiding_tetrahedron.webp",
         "hash": "bfc52c0b2e8fc139ee9b444a85de71a131a29fee"
+    },
+    {
+        "name": "./src/lib/data/images/materials/lightning_prism.png",
+        "hash": "7e1b4d44109bb67d72ac6467e43bec6e713e8688"
     },
     {
         "name": "./src/lib/data/images/materials/luminescent_pollen.png",
@@ -1204,12 +1220,12 @@
         "hash": "dc4d9cecf8ad9d268d636d96f5324b5d0bf474ec"
     },
     {
-        "name": "./src/lib/data/images/materials/sealed_scroll.png",
-        "hash": "0aa6fcbf794337c3d694fe39f7b066592be3efbb"
-    },
-    {
         "name": "./src/lib/data/images/materials/sea_ganoderma.png",
         "hash": "ae3c0e7169681ca5487653714caf0b2030c4ea7c"
+    },
+    {
+        "name": "./src/lib/data/images/materials/sealed_scroll.png",
+        "hash": "0aa6fcbf794337c3d694fe39f7b066592be3efbb"
     },
     {
         "name": "./src/lib/data/images/materials/sergeants_insignia.png",
