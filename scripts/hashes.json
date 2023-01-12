@@ -236,6 +236,10 @@
         "hash": "36d81cd5fb47f183fdd4d0e723ea7b18f66c811f"
     },
     {
+        "name": "./src/lib/data/images/characters/card/yaoyao.png",
+        "hash": "5f414c615c37f81b4ba5f572ea3b4a6a12145b8b"
+    },
+    {
         "name": "./src/lib/data/images/characters/card/yelan.png",
         "hash": "fe254e1c17dd983c4206699d41d8640e9b7175d7"
     },
@@ -488,6 +492,10 @@
         "hash": "c4e077a3b13b4de535ace7210c45e4bbf3b85cbc"
     },
     {
+        "name": "./src/lib/data/images/characters/mugshot/yaoyao.png",
+        "hash": "eb00ac15c143bfe83a5cb5ff39e074a658326a76"
+    },
+    {
         "name": "./src/lib/data/images/characters/mugshot/yelan.png",
         "hash": "87f28fa1f3a4d1027214ea1479216e985c0592b8"
     },
@@ -644,24 +652,16 @@
         "hash": "bfe636d8bf0f794166c3f2971cc8b3892c86287e"
     },
     {
-        "name": "./src/lib/data/images/materials/cor_lapis.png",
-        "hash": "5a08f5403c084bfa86293d5b7e902c3ae6772e11"
-    },
-    {
         "name": "./src/lib/data/images/materials/coral_branch_of_a_distant_sea.webp",
         "hash": "a1868236132485f402391a166dd543bd755d68f3"
     },
     {
+        "name": "./src/lib/data/images/materials/cor_lapis.png",
+        "hash": "5a08f5403c084bfa86293d5b7e902c3ae6772e11"
+    },
+    {
         "name": "./src/lib/data/images/materials/crown_of_insight.png",
         "hash": "f12f69592023581b8dd7fb260cd9f7432506516e"
-    },
-    {
-        "name": "./src/lib/data/images/materials/crystal_marrow.png",
-        "hash": "3e177674cff00d27978c764bac69dce289334c0d"
-    },
-    {
-        "name": "./src/lib/data/images/materials/crystal_prism.webp",
-        "hash": "89d9fc8feece38c32c32281e028af88da4cb279b"
     },
     {
         "name": "./src/lib/data/images/materials/crystalline_bloom.png",
@@ -670,6 +670,14 @@
     {
         "name": "./src/lib/data/images/materials/crystalline_cyst_dust.png",
         "hash": "80f1b5badd1df1da8181ae6f16c61908aedcd09c"
+    },
+    {
+        "name": "./src/lib/data/images/materials/crystal_marrow.png",
+        "hash": "3e177674cff00d27978c764bac69dce289334c0d"
+    },
+    {
+        "name": "./src/lib/data/images/materials/crystal_prism.webp",
+        "hash": "89d9fc8feece38c32c32281e028af88da4cb279b"
     },
     {
         "name": "./src/lib/data/images/materials/dakas_bell.webp",
@@ -716,12 +724,12 @@
         "hash": "3bab7d18cb6b323fea4b3f6b73e1802c9c5b0ee5"
     },
     {
-        "name": "./src/lib/data/images/materials/dragon_lords_crown.png",
-        "hash": "4c8bb1c096d15ea6cf999b62474527167b7028d1"
-    },
-    {
         "name": "./src/lib/data/images/materials/dragonheirs_false_fin.png",
         "hash": "a18395d383e44415c442f30d986d2ff3b607c592"
+    },
+    {
+        "name": "./src/lib/data/images/materials/dragon_lords_crown.png",
+        "hash": "4c8bb1c096d15ea6cf999b62474527167b7028d1"
     },
     {
         "name": "./src/lib/data/images/materials/dream_of_the_dandelion_gladiator.png",
@@ -924,12 +932,12 @@
         "hash": "46e73feece25ce4f5591a2525ad875d8ba4513a4"
     },
     {
-        "name": "./src/lib/data/images/materials/light_guiding_tetrahedron.webp",
-        "hash": "bfc52c0b2e8fc139ee9b444a85de71a131a29fee"
-    },
-    {
         "name": "./src/lib/data/images/materials/lightning_prism.png",
         "hash": "7e1b4d44109bb67d72ac6467e43bec6e713e8688"
+    },
+    {
+        "name": "./src/lib/data/images/materials/light_guiding_tetrahedron.webp",
+        "hash": "bfc52c0b2e8fc139ee9b444a85de71a131a29fee"
     },
     {
         "name": "./src/lib/data/images/materials/luminescent_pollen.png",
@@ -1220,12 +1228,12 @@
         "hash": "dc4d9cecf8ad9d268d636d96f5324b5d0bf474ec"
     },
     {
-        "name": "./src/lib/data/images/materials/sea_ganoderma.png",
-        "hash": "ae3c0e7169681ca5487653714caf0b2030c4ea7c"
-    },
-    {
         "name": "./src/lib/data/images/materials/sealed_scroll.png",
         "hash": "0aa6fcbf794337c3d694fe39f7b066592be3efbb"
+    },
+    {
+        "name": "./src/lib/data/images/materials/sea_ganoderma.png",
+        "hash": "ae3c0e7169681ca5487653714caf0b2030c4ea7c"
     },
     {
         "name": "./src/lib/data/images/materials/sergeants_insignia.png",

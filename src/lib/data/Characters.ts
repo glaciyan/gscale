@@ -6,6 +6,22 @@ import CharactersKey from "./keys/CharactersKey";
 import { WeaponTypes } from "./WeaponTypes";
 
 export const Characters: { [key in CharactersKey]: ICharacter } = {
+  yaoyao: {
+    name: "Yaoyao",
+    normalizedName: "yaoyao",
+    element: Elements.dendro,
+    weaponType: WeaponTypes.polearm,
+    rarity: 4,
+    sub: "Bonus HP%",
+    constellation: "Osmanthus",
+    description: `Streetward Rambler's youngest disciple. A gentle and caring "little adult."`,
+    local: Items.jueyun_chili,
+    commonGroup: ItemGroups.slime,
+    boss: Items.quelled_creeper,
+    gemGroup: ItemGroups.dendro_gem,
+    bookGroup: ItemGroups.diligence,
+    weekly: Items.dakas_bell,
+  },
   wanderer: {
     name: "Wanderer",
     normalizedName: "wanderer",

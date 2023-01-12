@@ -1486,5 +1486,13 @@
   "faruzan_mugshot": {
     "png": "ecd88731",
     "webp": "a8f00e96"
+  },
+  "yaoyao_card": {
+    "png": "49e06252",
+    "webp": "7c63f1dc"
+  },
+  "yaoyao_mugshot": {
+    "png": "4f69d5e1",
+    "webp": "66e38290"
   }
 }
