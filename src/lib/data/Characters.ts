@@ -6,6 +6,22 @@ import CharactersKey from "./keys/CharactersKey";
 import { WeaponTypes } from "./WeaponTypes";
 
 export const Characters: { [key in CharactersKey]: ICharacter } = {
+  alhaitham: {
+    name: "Alhaitham",
+    normalizedName: "alhaitham",
+    element: Elements.dendro,
+    weaponType: WeaponTypes.sword,
+    rarity: 5,
+    sub: "Bonus Dendro%",
+    constellation: "Vultur Volans",
+    description: "The current scribe of the Sumeru Akademiya, endowed with extraordinary intelligence and talent. A man of freedom, people usually can't find him, unless he wants to be found.",
+    local: Items.sand_grease_pupa,
+    commonGroup: ItemGroups.red_satin,
+    boss: Items.pseudo_stamens,
+    gemGroup: ItemGroups.dendro_gem,
+    bookGroup: ItemGroups.ingenuity,
+    weekly: Items.mirror_of_mushin
+},
   yaoyao: {
     name: "Yaoyao",
     normalizedName: "yaoyao",

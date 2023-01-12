@@ -4,6 +4,10 @@
         "hash": "e581c818c5ad05234e0bc0f13c280344b7670e6f"
     },
     {
+        "name": "./src/lib/data/images/characters/card/alhaitham.png",
+        "hash": "103bc207c45a031746722f568ef7d6f7fdc15734"
+    },
+    {
         "name": "./src/lib/data/images/characters/card/aloy.png",
         "hash": "0739fe2d96fc4e1cacbdb0bb624a17179c6d4ef5"
     },
@@ -258,6 +262,10 @@
     {
         "name": "./src/lib/data/images/characters/mugshot/albedo.png",
         "hash": "abb0a3484b0a6f751c6aad0336e88168589f35fc"
+    },
+    {
+        "name": "./src/lib/data/images/characters/mugshot/alhaitham.png",
+        "hash": "ac6aee3908206b80818ef578ad327456396c9fbe"
     },
     {
         "name": "./src/lib/data/images/characters/mugshot/aloy.png",
@@ -1168,6 +1176,10 @@
         "hash": "07a419bb5f8b06a7662bd8a6865629a47cf0f518"
     },
     {
+        "name": "./src/lib/data/images/materials/pseudo_stamens.webp",
+        "hash": "4432cc421d5d5d195c10f6a9c81b1a906ced76bd"
+    },
+    {
         "name": "./src/lib/data/images/materials/puppet_strings.webp",
         "hash": "524f5ec058368254fde9512c8d53221062be4e52"
     },
@@ -1214,6 +1226,10 @@
     {
         "name": "./src/lib/data/images/materials/sakura_bloom.png",
         "hash": "d9c21b49aa0c7c5f62c043056d4ebe6a015d427b"
+    },
+    {
+        "name": "./src/lib/data/images/materials/sand_grease_pupa.webp",
+        "hash": "19a8b5b926d4a4f7462793b71e6b8d3d9459d6e5"
     },
     {
         "name": "./src/lib/data/images/materials/sango_pearl.png",

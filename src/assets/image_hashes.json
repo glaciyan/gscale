@@ -1494,5 +1494,21 @@
   "yaoyao_mugshot": {
     "png": "4f69d5e1",
     "webp": "66e38290"
+  },
+  "alhaitham_card": {
+    "png": "91b37c8d",
+    "webp": "d3e940f9"
+  },
+  "alhaitham_mugshot": {
+    "png": "b3f5c747",
+    "webp": "b7b5295a"
+  },
+  "pseudo_stamens_material": {
+    "png": "d5c7ee59",
+    "webp": "320df446"
+  },
+  "sand_grease_pupa_material": {
+    "png": "f531a48b",
+    "webp": "c7c692fc"
   }
 }

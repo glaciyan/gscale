@@ -1,4 +1,6 @@
 type ItemsKey =
+  | "pseudo_stamens"
+  | "sand_grease_pupa"
   | "dakas_bell"
   | "henna_berry"
   | "mirror_of_mushin"

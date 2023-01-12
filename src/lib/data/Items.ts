@@ -2,6 +2,18 @@ import { IItem } from "./contracts/IItem";
 import ItemsKey from "./keys/ItemsKey";
 
 export const Items: { [key in ItemsKey]: IItem } = {
+  pseudo_stamens: {
+    name: "Pseudo-Stamens",
+    normalizedName: "pseudo_stamens",
+    rarity: 4,
+    category: "boss",
+  },
+  sand_grease_pupa: {
+    name: "Sand Grease Pupa",
+    normalizedName: "sand_grease_pupa",
+    rarity: 1,
+    category: "local",
+  },
   unknown: {
     name: "Unknown Item",
     normalizedName: "unknown",
