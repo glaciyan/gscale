@@ -1,4 +1,5 @@
 type CharactersKey =
+  | "mika"
   | "alhaitham"
   | "yaoyao"
   | "wanderer"

@@ -6,6 +6,23 @@ import CharactersKey from "./keys/CharactersKey";
 import { WeaponTypes } from "./WeaponTypes";
 
 export const Characters: { [key in CharactersKey]: ICharacter } = {
+  mika: {
+    name: "Mika",
+    normalizedName: "mika",
+    element: Elements.cryo,
+    weaponType: WeaponTypes.polearm,
+    rarity: 4,
+    sub: "Bonus HP%",
+    constellation: "Palumbus",
+    description:
+      "A young knight born to an ordinary family. He serves as a Front-Line Surveyor in his Company. He is a low-key and cautious character.",
+    local: Items.wolfhook,
+    commonGroup: ItemGroups.fatui_insignia,
+    boss: Items.pseudo_stamens,
+    gemGroup: ItemGroups.cryo_gem,
+    bookGroup: ItemGroups.ballad,
+    weekly: Items.mirror_of_mushin,
+  },
   alhaitham: {
     name: "Alhaitham",
     normalizedName: "alhaitham",
@@ -14,14 +31,15 @@ export const Characters: { [key in CharactersKey]: ICharacter } = {
     rarity: 5,
     sub: "Bonus Dendro%",
     constellation: "Vultur Volans",
-    description: "The current scribe of the Sumeru Akademiya, endowed with extraordinary intelligence and talent. A man of freedom, people usually can't find him, unless he wants to be found.",
+    description:
+      "The current scribe of the Sumeru Akademiya, endowed with extraordinary intelligence and talent. A man of freedom, people usually can't find him, unless he wants to be found.",
     local: Items.sand_grease_pupa,
     commonGroup: ItemGroups.red_satin,
     boss: Items.pseudo_stamens,
     gemGroup: ItemGroups.dendro_gem,
     bookGroup: ItemGroups.ingenuity,
-    weekly: Items.mirror_of_mushin
-},
+    weekly: Items.mirror_of_mushin,
+  },
   yaoyao: {
     name: "Yaoyao",
     normalizedName: "yaoyao",
