@@ -6,6 +6,23 @@ import CharactersKey from "./keys/CharactersKey";
 import { WeaponTypes } from "./WeaponTypes";
 
 export const Characters: { [key in CharactersKey]: ICharacter } = {
+  dehya: {
+    name: "Dehya",
+    normalizedName: "dehya",
+    element: Elements.pyro,
+    weaponType: WeaponTypes.claymore,
+    rarity: 5,
+    sub: "Bonus HP%",
+    constellation: "Mantichora",
+    description:
+      "A member of the Eremites, a mercenary organization that roams the sands of Sumeru. Valiant and powerful, she enjoys great fame amongst her fellow Eremites.",
+    local: Items.sand_grease_pupa,
+    commonGroup: ItemGroups.red_satin,
+    boss: Items.light_guiding_tetrahedron,
+    gemGroup: ItemGroups.pyro_gem,
+    bookGroup: ItemGroups.praxis,
+    weekly: Items.puppet_strings,
+  },
   mika: {
     name: "Mika",
     normalizedName: "mika",
