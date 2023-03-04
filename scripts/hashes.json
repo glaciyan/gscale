@@ -48,6 +48,10 @@
         "hash": "e7b8334341be5e78e18c6687a08acc4b9140b108"
     },
     {
+        "name": "./src/lib/data/images/characters/card/dehya.png",
+        "hash": "997e3c243718fa33ddaa6acf314fffeb160aba09"
+    },
+    {
         "name": "./src/lib/data/images/characters/card/diluc.png",
         "hash": "619ebb65890682e84f0556e6df4c53a43a1b2ff7"
     },
@@ -134,6 +138,10 @@
     {
         "name": "./src/lib/data/images/characters/card/lisa.png",
         "hash": "cd7fc8608fba9eca64eb053489f019c08ecc0906"
+    },
+    {
+        "name": "./src/lib/data/images/characters/card/mika.png",
+        "hash": "f95aa8568d0a5b45df48a61c791c7b50abe5c71b"
     },
     {
         "name": "./src/lib/data/images/characters/card/mona.png",
@@ -308,6 +316,10 @@
         "hash": "676d112372fc9c24048a0800b0847853fd1517f6"
     },
     {
+        "name": "./src/lib/data/images/characters/mugshot/dehya.jpg",
+        "hash": "d96bd55baf8eeccbf9a8c4021901e7f592bc333b"
+    },
+    {
         "name": "./src/lib/data/images/characters/mugshot/diluc.png",
         "hash": "bb8f6a6b31740c847306bcc9ace625b60fbdbec1"
     },
@@ -394,6 +406,10 @@
     {
         "name": "./src/lib/data/images/characters/mugshot/lisa.png",
         "hash": "6419582378fc543e2f60c7d0368495b0698303ce"
+    },
+    {
+        "name": "./src/lib/data/images/characters/mugshot/mika.png",
+        "hash": "afe661e24f71c499c99feb88dd4f9123b13c0d16"
     },
     {
         "name": "./src/lib/data/images/characters/mugshot/mona.png",

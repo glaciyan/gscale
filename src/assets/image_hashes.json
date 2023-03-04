@@ -1510,5 +1510,21 @@
   "sand_grease_pupa_material": {
     "png": "f531a48b",
     "webp": "c7c692fc"
+  },
+  "dehya_card": {
+    "png": "bead0e82",
+    "webp": "109f8c97"
+  },
+  "mika_card": {
+    "png": "d40e7f3c",
+    "webp": "6204c49f"
+  },
+  "dehya_mugshot": {
+    "png": "9d591cfe",
+    "webp": "8e1a2138"
+  },
+  "mika_mugshot": {
+    "png": "951dfce0",
+    "webp": "90bc05b6"
   }
 }
