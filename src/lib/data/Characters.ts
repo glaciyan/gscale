@@ -23,6 +23,23 @@ export const Characters: { [key in CharactersKey]: ICharacter } = {
     bookGroup: ItemGroups.praxis,
     weekly: Items.puppet_strings,
   },
+  baizhu: {
+    name: "Baizhu",
+    normalizedName: "baizhu",
+    element: Elements.dendro,
+    weaponType: WeaponTypes.catalyst,
+    rarity: 5,
+    sub: "Bonus HP%",
+    constellation: "Lagenaria",
+    description:
+      "The owner of Bubu Pharmacy, the finest pharmacy in all of Liyue. He is rarely seen without a white snake named Changsheng coiled around his shoulders. His prescriptions are varied and diverse, and his medical prowess and compassion are known throughout Teyvat.",
+    local: Items.violetgrass,
+    commonGroup: ItemGroups.fungal_spores,
+    boss: Items.evergloom_ring,
+    gemGroup: ItemGroups.dendro_gem,
+    bookGroup: ItemGroups.gold,
+    weekly: Items.worldspan_fern,
+  },
   mika: {
     name: "Mika",
     normalizedName: "mika",

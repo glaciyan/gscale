@@ -24,6 +24,10 @@
         "hash": "6598be4604e0565e6835508111e96e838854a260"
     },
     {
+        "name": "./src/lib/data/images/characters/card/baizhu.png",
+        "hash": "b559f888f55dbf9c0d0e9818817ebd8b0d2d3d07"
+    },
+    {
         "name": "./src/lib/data/images/characters/card/beidou.png",
         "hash": "2219865c5eb19d318a7db7397c2cec0e4ee31b37"
     },
@@ -286,6 +290,10 @@
     {
         "name": "./src/lib/data/images/characters/mugshot/ayaka.png",
         "hash": "f82c5cf8034ebfdc0b4b0d96fbba90cb5d6142da"
+    },
+    {
+        "name": "./src/lib/data/images/characters/mugshot/baizhu.png",
+        "hash": "6ea2e235179422e7ba99e8ca8c9197b2e3fd504f"
     },
     {
         "name": "./src/lib/data/images/characters/mugshot/barbara.png",
@@ -780,8 +788,16 @@
         "hash": "9c1e6f4b3e8e7ba00dc41d5768e3a4e55be7d74d"
     },
     {
+        "name": "./src/lib/data/images/materials/everamber.webp",
+        "hash": "cff7ee417a27b70c6e94658c350ab4d0df4b5047"
+    },
+    {
         "name": "./src/lib/data/images/materials/everflame_seed.png",
         "hash": "a5fc4b1f9545652b25f1a6dbc26281b0bf909d69"
+    },
+    {
+        "name": "./src/lib/data/images/materials/evergloom_ring.webp",
+        "hash": "1b4314dde194a66d9ab2709556c376607d4b190d"
     },
     {
         "name": "./src/lib/data/images/materials/faded_red_satin.png",
@@ -1176,6 +1192,10 @@
         "hash": "e86f3a24aab521fd6d3c1e09516a90627ae2d352"
     },
     {
+        "name": "./src/lib/data/images/materials/primordial_greenbloom.webp",
+        "hash": "d6502d2769161dab6e4c733def5f9839d9c57acc"
+    },
+    {
         "name": "./src/lib/data/images/materials/prithiva_topaz_chunk.png",
         "hash": "52f6a210a448c460660069a26f9e171c7205ad1e"
     },
@@ -1526,5 +1546,9 @@
     {
         "name": "./src/lib/data/images/materials/wolfhook.png",
         "hash": "27313dd15b3c6df2955ccf6b35d8cb38c9422bc0"
+    },
+    {
+        "name": "./src/lib/data/images/materials/worldspan_fern.webp",
+        "hash": "bf4eded437313a2523b54e867c6940c406acda61"
     }
 ]

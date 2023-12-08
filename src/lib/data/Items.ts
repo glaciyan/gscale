@@ -8,6 +8,30 @@ export const Items: { [key in ItemsKey]: IItem } = {
     rarity: 4,
     category: "boss",
   },
+  evergloom_ring: {
+    name: "Evergloom Ring",
+    normalizedName: "evergloom_ring",
+    rarity: 4,
+    category: "boss",
+  },
+  everamber: {
+    name: "Everamber",
+    normalizedName: "everamber",
+    rarity: 5,
+    category: "weekly",
+  },
+  worldspan_fern: {
+    name: "Worldspan Fern",
+    normalizedName: "worldspan_fern",
+    rarity: 5,
+    category: "weekly",
+  },
+  primordial_greenbloom: {
+    name: "Primordial Greenbloom",
+    normalizedName: "primordial_greenbloom",
+    rarity: 5,
+    category: "weekly",
+  },
   sand_grease_pupa: {
     name: "Sand Grease Pupa",
     normalizedName: "sand_grease_pupa",

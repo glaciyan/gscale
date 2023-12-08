@@ -1526,5 +1526,29 @@
   "mika_mugshot": {
     "png": "951dfce0",
     "webp": "90bc05b6"
+  },
+  "evergloom_ring_material": {
+    "png": "806fb573",
+    "webp": "c95cfa25"
+  },
+  "baizhu_card": {
+    "png": "b559f888",
+    "webp": "fe25b00c"
+  },
+  "baizhu_mugshot": {
+    "png": "6ea2e235",
+    "webp": "1e48c515"
+  },
+  "everamber_material": {
+    "png": "7396c37a",
+    "webp": "69e89df7"
+  },
+  "worldspan_fern_material": {
+    "png": "185c9049",
+    "webp": "824ee178"
+  },
+  "primordial_greenbloom_material": {
+    "png": "c373ea22",
+    "webp": "caf15bf3"
   }
 }
