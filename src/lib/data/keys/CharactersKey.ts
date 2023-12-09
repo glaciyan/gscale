@@ -1,4 +1,5 @@
 type CharactersKey =
+  | "baizhu"
   | "dehya"
   | "mika"
   | "alhaitham"

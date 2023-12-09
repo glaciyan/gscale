@@ -1,4 +1,8 @@
 type ItemsKey =
+  | "evergloom_ring"
+  | "primordial_greenbloom"
+  | "everamber"
+  | "worldspan_fern"
   | "pseudo_stamens"
   | "sand_grease_pupa"
   | "dakas_bell"
