@@ -75,7 +75,7 @@ async function build(source, config) {
 
         await webp
           .resize(config.width)
-          .webp({ quality: 70, preset: "drawing" })
+          .webp({ quality: 80, preset: "drawing" })
           .toFile(path.join(outDir, name + ".webp"));
 
         await png
