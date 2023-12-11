@@ -1,1554 +1,1554 @@
 {
   "albedo_card": {
-    "png": "0c017fec",
-    "webp": "2da3e9df"
-  },
-  "aloy_card": {
-    "png": "e223a302",
-    "webp": "4da928ef"
-  },
-  "amber_card": {
-    "png": "6e0883b6",
-    "webp": "052e4040"
-  },
-  "ayaka_card": {
-    "png": "991b1735",
-    "webp": "3e077416"
-  },
-  "barbara_card": {
-    "png": "7c70f132",
-    "webp": "3ec5d07b"
-  },
-  "beidou_card": {
-    "png": "012a87de",
-    "webp": "e697ce28"
-  },
-  "bennett_card": {
-    "png": "1192e578",
-    "webp": "c146e365"
-  },
-  "chongyun_card": {
-    "png": "c00bafab",
-    "webp": "b64205e0"
-  },
-  "diluc_card": {
-    "png": "6b680906",
-    "webp": "4781dd6b"
-  },
-  "diona_card": {
-    "png": "9e460b84",
-    "webp": "62a0f6c7"
-  },
-  "eula_card": {
-    "png": "b4577d64",
-    "webp": "eb5073e1"
-  },
-  "fischl_card": {
-    "png": "174b16ba",
-    "webp": "8b391246"
-  },
-  "ganyu_card": {
-    "png": "92d3dded",
-    "webp": "686657a1"
-  },
-  "gorou_card": {
-    "png": "2e22536c",
-    "webp": "c66b4a84"
-  },
-  "hu_tao_card": {
-    "png": "61235d6e",
-    "webp": "de08ec10"
-  },
-  "itto_card": {
-    "png": "a779cc9e",
-    "webp": "915aee8f"
-  },
-  "jean_card": {
-    "png": "5da4563f",
-    "webp": "d406a689"
-  },
-  "jeffrey_card": {
-    "png": "7deeca1e",
-    "webp": "c7177c56"
-  },
-  "kaeya_card": {
-    "png": "686afba5",
-    "webp": "c3f9bc36"
-  },
-  "kazuha_card": {
-    "png": "b5ffbb33",
-    "webp": "87e678de"
-  },
-  "keqing_card": {
-    "png": "97db8f5e",
-    "webp": "887c8838"
-  },
-  "klee_card": {
-    "png": "4403db67",
-    "webp": "6ac0822f"
-  },
-  "kokomi_card": {
-    "png": "d05d03ee",
-    "webp": "5ef49bae"
-  },
-  "lisa_card": {
-    "png": "a1271b66",
-    "webp": "6aa92db9"
-  },
-  "mona_card": {
-    "png": "f23fab2f",
-    "webp": "77efb30e"
-  },
-  "ningguang_card": {
-    "png": "0bb85cd8",
-    "webp": "4cd331bf"
-  },
-  "noelle_card": {
-    "png": "c002ea58",
-    "webp": "240b7ac2"
-  },
-  "nopic_card": {
-    "png": "b1b823a5",
-    "webp": "06d947ab"
-  },
-  "qiqi_card": {
-    "png": "87552558",
-    "webp": "71627d47"
-  },
-  "raiden_card": {
-    "png": "9b8a3965",
-    "webp": "40c2a004"
-  },
-  "razor_card": {
-    "png": "54b88326",
-    "webp": "df85f622"
-  },
-  "rosaria_card": {
-    "png": "1927f3e4",
-    "webp": "50bffe07"
-  },
-  "sara_card": {
-    "png": "b35f054a",
-    "webp": "8c85c905"
-  },
-  "sayu_card": {
-    "png": "8493ae2b",
-    "webp": "13289106"
-  },
-  "shenhe_card": {
-    "png": "4bd051f9",
-    "webp": "bd61057d"
-  },
-  "sucrose_card": {
-    "png": "539fc3e6",
-    "webp": "8b4d32fb"
-  },
-  "tartaglia_card": {
-    "png": "25236a9e",
-    "webp": "e4f97894"
-  },
-  "thoma_card": {
-    "png": "ee6d9682",
-    "webp": "aa701925"
-  },
-  "traveler_card": {
-    "png": "4fc95980",
-    "webp": "2a8ff8d5"
-  },
-  "venti_card": {
-    "png": "5f1bbc01",
-    "webp": "8f767545"
-  },
-  "xiangling_card": {
-    "png": "326a636d",
-    "webp": "beb37d53"
-  },
-  "xiao_card": {
-    "png": "6203d62d",
-    "webp": "09869b77"
-  },
-  "xingqiu_card": {
-    "png": "c902b58b",
-    "webp": "13cd943f"
-  },
-  "xinyan_card": {
-    "png": "981ace04",
-    "webp": "7c1ae01a"
-  },
-  "yae_miko_card": {
-    "png": "aadfb763",
-    "webp": "15bd48a8"
-  },
-  "yanfei_card": {
-    "png": "cc054b13",
-    "webp": "c8e3dd42"
-  },
-  "yoimiya_card": {
-    "png": "2917aff0",
-    "webp": "568a6bfc"
-  },
-  "yun_jin_card": {
-    "png": "50ba600f",
-    "webp": "b19c4385"
-  },
-  "zhongli_card": {
-    "png": "32eb9219",
-    "webp": "3bd57334"
-  },
-  "albedo_mugshot": {
-    "png": "cbe1ee71",
-    "webp": "d883904c"
-  },
-  "aloy_mugshot": {
-    "png": "5f0abea7",
-    "webp": "bf8bf93e"
-  },
-  "amber_mugshot": {
-    "png": "30e5041f",
-    "webp": "ee09a6d9"
-  },
-  "ayaka_mugshot": {
-    "png": "392ee087",
-    "webp": "ee214ce8"
-  },
-  "barbara_mugshot": {
-    "png": "e025abae",
-    "webp": "3691df8a"
-  },
-  "beidou_mugshot": {
-    "png": "1105f3f2",
-    "webp": "fa7cf265"
-  },
-  "bennett_mugshot": {
-    "png": "608b72fc",
-    "webp": "407fbec1"
-  },
-  "chongyun_mugshot": {
-    "png": "201abd91",
-    "webp": "534cc120"
-  },
-  "diluc_mugshot": {
-    "png": "f45b5efc",
-    "webp": "dee718a5"
-  },
-  "diona_mugshot": {
-    "png": "b933b299",
-    "webp": "7232e4bd"
-  },
-  "eula_mugshot": {
-    "png": "6cdbf5bf",
-    "webp": "ea0d5487"
-  },
-  "fischl_mugshot": {
-    "png": "10b46d7d",
-    "webp": "cb122a64"
-  },
-  "ganyu_mugshot": {
-    "png": "e41605fb",
-    "webp": "0f39d855"
-  },
-  "gorou_mugshot": {
-    "png": "26096bd3",
-    "webp": "e3601173"
-  },
-  "hu_tao_mugshot": {
-    "png": "6069204c",
-    "webp": "a81eceef"
-  },
-  "itto_mugshot": {
-    "png": "c6a00b0a",
-    "webp": "60f18bba"
-  },
-  "jean_mugshot": {
-    "png": "2be1b5b9",
-    "webp": "41fa0569"
-  },
-  "jeffrey_mugshot": {
-    "png": "a40dfc36",
-    "webp": "89620060"
-  },
-  "kaeya_mugshot": {
-    "png": "c2db2324",
-    "webp": "99454099"
-  },
-  "kazuha_mugshot": {
-    "png": "317f5dfc",
-    "webp": "b110fbf5"
-  },
-  "keqing_mugshot": {
-    "png": "10c3d246",
-    "webp": "4a054e61"
-  },
-  "klee_mugshot": {
-    "png": "94360ec2",
-    "webp": "a2bd61df"
-  },
-  "kokomi_mugshot": {
-    "png": "83ebea4d",
-    "webp": "9e61bba4"
-  },
-  "lisa_mugshot": {
-    "png": "06f62cca",
-    "webp": "00e80f7b"
-  },
-  "mona_mugshot": {
-    "png": "16a38bd0",
-    "webp": "03768adf"
-  },
-  "ningguang_mugshot": {
-    "png": "2220beca",
-    "webp": "0b5dfc95"
-  },
-  "noelle_mugshot": {
-    "png": "b6dd99f7",
-    "webp": "b4f95d95"
-  },
-  "nopic_mugshot": {
-    "png": "e24b5ae9",
-    "webp": "d577829c"
-  },
-  "qiqi_mugshot": {
-    "png": "59e0ba64",
-    "webp": "630fc944"
-  },
-  "raiden_mugshot": {
-    "png": "d116e0e4",
-    "webp": "7ab5b8d1"
-  },
-  "razor_mugshot": {
-    "png": "f858ea03",
-    "webp": "96066467"
-  },
-  "rosaria_mugshot": {
-    "png": "3cc459f9",
-    "webp": "adf89d50"
-  },
-  "sara_mugshot": {
-    "png": "195efac3",
-    "webp": "fcd13972"
-  },
-  "sayu_mugshot": {
-    "png": "1830a2d2",
-    "webp": "195f5825"
-  },
-  "shenhe_mugshot": {
-    "png": "e441af81",
-    "webp": "3b89c27d"
-  },
-  "sucrose_mugshot": {
-    "png": "bc2d59c5",
-    "webp": "1c32dbcd"
-  },
-  "tartaglia_mugshot": {
-    "png": "d7c4411b",
-    "webp": "8fdfcc84"
-  },
-  "thoma_mugshot": {
-    "png": "4c5a7914",
-    "webp": "3c208c18"
-  },
-  "traveler_mugshot": {
-    "png": "f8182e4e",
-    "webp": "62364632"
-  },
-  "venti_mugshot": {
-    "png": "60d7e8e2",
-    "webp": "d6a355c3"
-  },
-  "xiangling_mugshot": {
-    "png": "d1b53072",
-    "webp": "dd36ba28"
-  },
-  "xiao_mugshot": {
-    "png": "d0c8c86f",
-    "webp": "47cffd4c"
-  },
-  "xingqiu_mugshot": {
-    "png": "184746ea",
-    "webp": "e868c781"
-  },
-  "xinyan_mugshot": {
-    "png": "619021a3",
-    "webp": "51a8b96e"
-  },
-  "yae_miko_mugshot": {
-    "png": "e0579eb8",
-    "webp": "af5f34aa"
-  },
-  "yanfei_mugshot": {
-    "png": "68d357f8",
-    "webp": "a2a6e937"
-  },
-  "yoimiya_mugshot": {
-    "png": "d19cbe8c",
-    "webp": "94683632"
-  },
-  "yun_jin_mugshot": {
-    "png": "c29330d0",
-    "webp": "69c1d060"
-  },
-  "zhongli_mugshot": {
-    "png": "b6ba94ad",
-    "webp": "e5788dad"
-  },
-  "adventurers_experience_material": {
-    "png": "cdc79e20",
-    "webp": "260e0c66"
-  },
-  "agents_sacrificial_knife_material": {
-    "png": "cccb1463",
-    "webp": "66cecbf5"
-  },
-  "agnidus_agate_chunk_material": {
-    "png": "9cb5dd76",
-    "webp": "397ad9e1"
-  },
-  "agnidus_agate_fragment_material": {
-    "png": "4d9b426e",
-    "webp": "98d02283"
-  },
-  "agnidus_agate_gemstone_material": {
-    "png": "5e175585",
-    "webp": "cf28655c"
-  },
-  "agnidus_agate_sliver_material": {
-    "png": "2744aaea",
-    "webp": "6035109e"
-  },
-  "amakumo_fruit_material": {
-    "png": "4e1ac196",
-    "webp": "732f23e8"
-  },
-  "ashen_heart_material": {
-    "png": "5feeec39",
-    "webp": "2b6fef18"
-  },
-  "basalt_pillar_material": {
-    "png": "49395600",
-    "webp": "c6ca30d9"
-  },
-  "bit_of_aerosiderite_material": {
-    "png": "c9195196",
-    "webp": "282ce241"
-  },
-  "black_bronze_horn_material": {
-    "png": "1fe29e3a",
-    "webp": "fd44e5be"
-  },
-  "black_crystal_horn_material": {
-    "png": "05220a1c",
-    "webp": "5181370f"
-  },
-  "bloodjade_branch_material": {
-    "png": "d6a55aef",
-    "webp": "aeb989a1"
-  },
-  "boreal_wolfs_broken_fang_material": {
-    "png": "138ba3f6",
-    "webp": "90bb4d31"
-  },
-  "boreal_wolfs_cracked_tooth_material": {
-    "png": "848a70af",
-    "webp": "c4033ed7"
-  },
-  "boreal_wolfs_milk_tooth_material": {
-    "png": "8ca13ac4",
-    "webp": "8bfa2fd5"
-  },
-  "boreal_wolfs_nostalgia_material": {
-    "png": "96d3876e",
-    "webp": "59c56d1f"
-  },
-  "brilliant_diamond_chunk_material": {
-    "png": "f465296f",
-    "webp": "13615d93"
-  },
-  "brilliant_diamond_fragment_material": {
-    "png": "7523c1db",
-    "webp": "e349b8cf"
-  },
-  "brilliant_diamond_gemstone_material": {
-    "png": "5523757d",
-    "webp": "eda51701"
-  },
-  "brilliant_diamond_sliver_material": {
-    "png": "6db88f1c",
-    "webp": "02c121d1"
-  },
-  "calla_lily_material": {
-    "png": "a6530070",
-    "webp": "69c8726b"
-  },
-  "cecilia_material": {
-    "png": "335c206f",
-    "webp": "e727571c"
-  },
-  "chains_of_the_dandelion_gladiator_material": {
-    "png": "52d91fba",
-    "webp": "a4d8496a"
-  },
-  "chaos_axis_material": {
-    "png": "15be536f",
-    "webp": "eedc612e"
-  },
-  "chaos_circuit_material": {
-    "png": "2bb7d19b",
-    "webp": "efbdd8db"
-  },
-  "chaos_core_material": {
-    "png": "8064c85d",
-    "webp": "88ae8a40"
-  },
-  "chaos_device_material": {
-    "png": "b5e18e5c",
-    "webp": "d1fcd709"
-  },
-  "chaos_gear_material": {
-    "png": "4a605ac9",
-    "webp": "b38a562b"
-  },
-  "chaos_oculus_material": {
-    "png": "000d74c0",
-    "webp": "b18755cb"
-  },
-  "chunk_of_aerosiderite_material": {
-    "png": "7c90422e",
-    "webp": "b986b9a1"
-  },
-  "cleansing_heart_material": {
-    "png": "4e0f5b23",
-    "webp": "fcf2ab07"
-  },
-  "concealed_claw_material": {
-    "png": "63a9e5de",
-    "webp": "7810866f"
-  },
-  "concealed_talon_material": {
-    "png": "7cf5cc20",
-    "webp": "95b9a02a"
-  },
-  "concealed_unguis_material": {
-    "png": "d1df6e0c",
-    "webp": "a8a775de"
-  },
-  "coral_branch_of_a_distant_sea_material": {
-    "png": "33741a0f",
-    "webp": "8f6614b2"
-  },
-  "cor_lapis_material": {
-    "png": "f7bfc531",
-    "webp": "a5a75171"
-  },
-  "crown_of_insight_material": {
-    "png": "217b6722",
-    "webp": "f3e182e5"
-  },
-  "crystalline_bloom_material": {
-    "png": "2239d9c6",
-    "webp": "f123c97a"
-  },
-  "crystal_marrow_material": {
-    "png": "301e220f",
-    "webp": "8cac453f"
-  },
-  "crystal_prism_material": {
-    "png": "e3c915d1",
-    "webp": "f3f40238"
-  },
-  "damaged_mask_material": {
-    "png": "5704013c",
-    "webp": "bcf75b62"
-  },
-  "dandelion_seed_material": {
-    "png": "912bb02d",
-    "webp": "5b47e230"
-  },
-  "dead_ley_line_branch_material": {
-    "png": "c2102a5c",
-    "webp": "5b30d691"
-  },
-  "dead_ley_line_leaves_material": {
-    "png": "dd416490",
-    "webp": "94b83b7f"
-  },
-  "debris_of_decarabians_city_material": {
-    "png": "567612eb",
-    "webp": "14f7a826"
-  },
-  "dendrobium_material": {
-    "png": "af5bdc9d",
-    "webp": "5cf68a06"
-  },
-  "dew_of_repudiation_material": {
-    "png": "cb808201",
-    "webp": "77186954"
-  },
-  "dismal_prism_material": {
-    "png": "8a902e82",
-    "webp": "b6b542ba"
-  },
-  "divine_body_from_guyun_material": {
-    "png": "0ba63d52",
-    "webp": "14be46f2"
-  },
-  "divining_scroll_material": {
-    "png": "f22240a4",
-    "webp": "34431363"
-  },
-  "dragonheirs_false_fin_material": {
-    "png": "4e7af7d0",
-    "webp": "f7b90ab6"
-  },
-  "dragon_lords_crown_material": {
-    "png": "8171fb63",
-    "webp": "a192bdba"
-  },
-  "dream_of_the_dandelion_gladiator_material": {
-    "png": "45fe0242",
-    "webp": "1d57d66a"
-  },
-  "dvalins_claw_material": {
-    "png": "ab85abdb",
-    "webp": "0968c79d"
-  },
-  "dvalins_plume_material": {
-    "png": "1978e239",
-    "webp": "8bee73b2"
-  },
-  "dvalins_sigh_material": {
-    "png": "0ae11231",
-    "webp": "e393e597"
-  },
-  "energy_nectar_material": {
-    "png": "871b6a5a",
-    "webp": "a475a82b"
-  },
-  "enhancement_ore_material": {
-    "png": "301cd6df",
-    "webp": "7a1f1300"
-  },
-  "everflame_seed_material": {
-    "png": "98899e0e",
-    "webp": "324a7444"
-  },
-  "famed_handguard_material": {
-    "png": "e32d310a",
-    "webp": "60db17be"
-  },
-  "fetters_of_the_dandelion_gladiator_material": {
-    "png": "57240c9d",
-    "webp": "ad3c4cc8"
-  },
-  "fine_enhancement_ore_material": {
-    "png": "937aaadb",
-    "webp": "3e1615c7"
-  },
-  "firm_arrowhead_material": {
-    "png": "4c22b34c",
-    "webp": "dbea9f23"
-  },
-  "fluorescent_fungus_material": {
-    "png": "c8384b95",
-    "webp": "c80a81ab"
-  },
-  "forbidden_curse_scroll_material": {
-    "png": "85510556",
-    "webp": "70c62fc9"
-  },
-  "fossilized_bone_shard_material": {
-    "png": "0db9f258",
-    "webp": "a5abdb04"
-  },
-  "fragile_bone_shard_material": {
-    "png": "ca5f721d",
-    "webp": "48268ef8"
-  },
-  "fragment_of_decarabians_epic_material": {
-    "png": "baf48d46",
-    "webp": "d250e2d0"
-  },
-  "gilded_scale_material": {
-    "png": "5da3ab45",
-    "webp": "a1faf117"
-  },
-  "glaze_lily_material": {
-    "png": "07f9aa4c",
-    "webp": "b9e6cc6c"
-  },
-  "golden_raven_insignia_material": {
-    "png": "2d117e36",
-    "webp": "cd3b4780"
-  },
-  "grain_of_aerosiderite_material": {
-    "png": "3c3d5737",
-    "webp": "532d633e"
-  },
-  "guide_to_ballad_material": {
-    "png": "a58a99b8",
-    "webp": "5c566b04"
-  },
-  "guide_to_diligence_material": {
-    "png": "bab0945c",
-    "webp": "65648d07"
-  },
-  "guide_to_elegance_material": {
-    "png": "9be09a58",
-    "webp": "05a95126"
-  },
-  "guide_to_freedom_material": {
-    "png": "668c2b7e",
-    "webp": "204cafcc"
-  },
-  "guide_to_gold_material": {
-    "png": "b0a62e91",
-    "webp": "7a972114"
-  },
-  "guide_to_light_material": {
-    "png": "2458ae51",
-    "webp": "be56c8e6"
-  },
-  "guide_to_prosperity_material": {
-    "png": "9d1d73ab",
-    "webp": "23f6d98f"
-  },
-  "guide_to_resistance_material": {
-    "png": "4b55fed9",
-    "webp": "78299dbe"
-  },
-  "guide_to_transience_material": {
-    "png": "caf56d2b",
-    "webp": "59f4a1f4"
-  },
-  "heavy_horn_material": {
-    "png": "31b736a3",
-    "webp": "9ba31bb0"
-  },
-  "hellfire_butterfly_material": {
-    "png": "6f8fe74b",
-    "webp": "64380157"
-  },
-  "heros_wit_material": {
-    "png": "cd046cf7",
-    "webp": "34b07b7f"
-  },
-  "hoarfrost_core_material": {
-    "png": "b11898c9",
-    "webp": "d2062e26"
-  },
-  "hunters_sacrificial_knife_material": {
-    "png": "9b082aa6",
-    "webp": "6477df51"
-  },
-  "hurricane_seed_material": {
-    "png": "9c79936e",
-    "webp": "5fb9264c"
-  },
-  "inspectors_sacrificial_knife_material": {
-    "png": "381574c3",
-    "webp": "17ebf6e3"
-  },
-  "jade_branch_of_a_distant_sea_material": {
-    "png": "5144da8e",
-    "webp": "65a778f7"
-  },
-  "jeweled_branch_of_a_distant_sea_material": {
-    "png": "2a6e0a9c",
-    "webp": "2adad2bc"
-  },
-  "jueyun_chili_material": {
-    "png": "edd43322",
-    "webp": "bd7b7634"
-  },
-  "juvenile_jade_material": {
-    "png": "9a409f9e",
-    "webp": "49f16c7f"
-  },
-  "kageuchi_handguard_material": {
-    "png": "6ae7b506",
-    "webp": "0ff426b3"
-  },
-  "ley_line_sprouts_material": {
-    "png": "0e0f7cc3",
-    "webp": "3e54751d"
-  },
-  "lieutenants_insignia_material": {
-    "png": "2de24e41",
-    "webp": "22b55696"
-  },
-  "lightning_prism_material": {
-    "png": "b92ed61e",
-    "webp": "55a7fdbe"
-  },
-  "luminous_sands_from_guyun_material": {
-    "png": "57f5ac0c",
-    "webp": "9e0750aa"
-  },
-  "lustrous_stone_from_guyun_material": {
-    "png": "8f33b6ac",
-    "webp": "163711e6"
-  },
-  "marionette_core_material": {
-    "png": "573ed661",
-    "webp": "7e87ce5c"
-  },
-  "mask_of_the_one_horned_material": {
-    "png": "42c3e301",
-    "webp": "68a2157a"
-  },
-  "mask_of_the_tigers_bite_material": {
-    "png": "099b3f39",
-    "webp": "22176167"
-  },
-  "mask_of_the_wicked_lieutenant_material": {
-    "png": "4c7b0ff1",
-    "webp": "ebb82227"
-  },
-  "mist_grass_material": {
-    "png": "dc3c131f",
-    "webp": "d05ce813"
-  },
-  "mist_grass_pollen_material": {
-    "png": "dde74630",
-    "webp": "09b5c985"
-  },
-  "mist_grass_wick_material": {
-    "png": "519bbcad",
-    "webp": "48b47634"
-  },
-  "mist_veiled_gold_elixir_material": {
-    "png": "b50cd4ea",
-    "webp": "8de076db"
-  },
-  "mist_veiled_lead_elixir_material": {
-    "png": "64a2c056",
-    "webp": "46a78464"
-  },
-  "mist_veiled_mercury_elixir_material": {
-    "png": "f461c553",
-    "webp": "aeba432d"
-  },
-  "mist_veiled_primo_elixir_material": {
-    "png": "dc4d583e",
-    "webp": "7dd56c21"
-  },
-  "molten_moment_material": {
-    "png": "9c6c35cb",
-    "webp": "2208b136"
-  },
-  "mora_material": {
-    "png": "39b41f3b",
-    "webp": "2dc7fba8"
-  },
-  "mystic_enhancement_ore_material": {
-    "png": "aff233ea",
-    "webp": "be93c354"
-  },
-  "naku_weed_material": {
-    "png": "99f3dacc",
-    "webp": "f5c9ba08"
-  },
-  "narukamis_affection_material": {
-    "png": "2af8df0e",
-    "webp": "5da7a486"
-  },
-  "narukamis_joy_material": {
-    "png": "25cd688a",
-    "webp": "1ce7c08f"
-  },
-  "narukamis_wisdom_material": {
-    "png": "5f60f55f",
-    "webp": "16b70d45"
-  },
-  "noctilucous_jade_material": {
-    "png": "f2035e4f",
-    "webp": "e20bb851"
-  },
-  "none_material": {
-    "png": "57a354ad",
-    "webp": "0bbb6c87"
-  },
-  "old_handguard_material": {
-    "png": "a7e44247",
-    "webp": "ad7369fc"
-  },
-  "ominous_mask_material": {
-    "png": "6a2cfa73",
-    "webp": "4c388c24"
-  },
-  "onikabuto_material": {
-    "png": "7204d458",
-    "webp": "6862b310"
-  },
-  "perpetual_heart_material": {
-    "png": "6e1e4b08",
-    "webp": "6035cf0d"
-  },
-  "philanemo_mushroom_material": {
-    "png": "8507f030",
-    "webp": "e970b3c4"
-  },
-  "philosophies_of_ballad_material": {
-    "png": "019e369b",
-    "webp": "12937e37"
-  },
-  "philosophies_of_diligence_material": {
-    "png": "5d9d1bd1",
-    "webp": "e7819986"
-  },
-  "philosophies_of_elegance_material": {
-    "png": "bbbdfbab",
-    "webp": "3a1b2c7c"
-  },
-  "philosophies_of_freedom_material": {
-    "png": "f2a644bd",
-    "webp": "21371218"
-  },
-  "philosophies_of_gold_material": {
-    "png": "f3380f6a",
-    "webp": "7b804d8a"
-  },
-  "philosophies_of_light_material": {
-    "png": "274c30f2",
-    "webp": "857bcfa1"
-  },
-  "philosophies_of_prosperity_material": {
-    "png": "63ea1e9d",
-    "webp": "7d91149b"
-  },
-  "philosophies_of_resistance_material": {
-    "png": "b008d681",
-    "webp": "7f8fe31d"
-  },
-  "philosophies_of_transience_material": {
-    "png": "0a808642",
-    "webp": "28bfa6b5"
-  },
-  "piece_of_aerosiderite_material": {
-    "png": "01b2d3cd",
-    "webp": "77a86f37"
-  },
-  "polarizing_prism_material": {
-    "png": "708a306c",
-    "webp": "9aaf4f00"
-  },
-  "primogem_material": {
-    "png": "efcbfd11",
-    "webp": "592f3634"
-  },
-  "prithiva_topaz_chunk_material": {
-    "png": "891faad0",
-    "webp": "b2ce6741"
-  },
-  "prithiva_topaz_fragment_material": {
-    "png": "e88bb0e1",
-    "webp": "b05a4d18"
-  },
-  "prithiva_topaz_gemstone_material": {
-    "png": "76b08915",
-    "webp": "dca8fc1d"
-  },
-  "prithiva_topaz_sliver_material": {
-    "png": "bc94c828",
-    "webp": "293a2ced"
-  },
-  "qingxin_material": {
-    "png": "1d898e0e",
-    "webp": "54b0d54f"
-  },
-  "recruits_insignia_material": {
-    "png": "0dd9ed01",
-    "webp": "2db93c74"
-  },
-  "relic_from_guyun_material": {
-    "png": "172478a4",
-    "webp": "98d091cf"
-  },
-  "riftborn_regalia_material": {
-    "png": "5739128f",
-    "webp": "8f2f1191"
-  },
-  "ring_of_boreas_material": {
-    "png": "71d10e43",
-    "webp": "d18ea315"
-  },
-  "sakura_bloom_material": {
-    "png": "c75cef1c",
-    "webp": "186cd4a6"
-  },
-  "sango_pearl_material": {
-    "png": "bd4b1e71",
-    "webp": "a934574f"
-  },
-  "scattered_piece_of_decarabians_dream_material": {
-    "png": "d77fcdbe",
-    "webp": "852ed4c1"
-  },
-  "sealed_scroll_material": {
-    "png": "8df5b1c2",
-    "webp": "a58eb2f2"
-  },
-  "sea_ganoderma_material": {
-    "png": "7fc1f920",
-    "webp": "82dba151"
-  },
-  "sergeants_insignia_material": {
-    "png": "1fb243b1",
-    "webp": "fad5e22f"
-  },
-  "shackles_of_the_dandelion_gladiator_material": {
-    "png": "1ef5bf32",
-    "webp": "6bb7bd38"
-  },
-  "shadow_of_the_warrior_material": {
-    "png": "916ae855",
-    "webp": "cf60ef9d"
-  },
-  "shard_of_a_foul_legacy_material": {
-    "png": "1068762c",
-    "webp": "0ff5dba5"
-  },
-  "sharp_arrowhead_material": {
-    "png": "98ce1019",
-    "webp": "bc824485"
-  },
-  "shimmering_nectar_material": {
-    "png": "736fc667",
-    "webp": "8537df4b"
-  },
-  "shivada_jade_chunk_material": {
-    "png": "445f07df",
-    "webp": "ac7239dd"
-  },
-  "shivada_jade_fragment_material": {
-    "png": "f25a4a6c",
-    "webp": "88d8cda0"
-  },
-  "shivada_jade_gemstone_material": {
-    "png": "73a5378d",
-    "webp": "bce30275"
-  },
-  "shivada_jade_sliver_material": {
-    "png": "70242680",
-    "webp": "b94eef06"
-  },
-  "silk_flower_material": {
-    "png": "6d9c91f5",
-    "webp": "a030ebfd"
-  },
-  "silver_raven_insignia_material": {
-    "png": "1a27413a",
-    "webp": "a216ab4a"
-  },
-  "slime_concentrate_material": {
-    "png": "f1071e31",
-    "webp": "01a23576"
-  },
-  "slime_condensate_material": {
-    "png": "dc10bf66",
-    "webp": "6710489a"
-  },
-  "slime_secretions_material": {
-    "png": "979eb2f4",
-    "webp": "56332ff2"
-  },
-  "small_lamp_grass_material": {
-    "png": "d5057260",
-    "webp": "866365cd"
-  },
-  "smoldering_pearl_material": {
-    "png": "1ba9b9ef",
-    "webp": "d829084f"
-  },
-  "spectral_heart_material": {
-    "png": "c6079ded",
-    "webp": "b25d4fec"
-  },
-  "spectral_husk_material": {
-    "png": "47d60bc7",
-    "webp": "e017f246"
-  },
-  "spectral_nucleus_material": {
-    "png": "e6083e24",
-    "webp": "0f6bf53d"
-  },
-  "spirit_locket_of_boreas_material": {
-    "png": "733da67e",
-    "webp": "800e6f4d"
-  },
-  "stained_mask_material": {
-    "png": "aab50490",
-    "webp": "273fe1dc"
-  },
-  "starconch_material": {
-    "png": "ea422927",
-    "webp": "dcb2eb54"
-  },
-  "storm_beads_material": {
-    "png": "62f8ee9d",
-    "webp": "81e2cbe4"
-  },
-  "sturdy_bone_shard_material": {
-    "png": "08d19407",
-    "webp": "5438fb8b"
-  },
-  "tail_of_boreas_material": {
-    "png": "ddb6c6f5",
-    "webp": "6012cd82"
-  },
-  "teachings_of_ballad_material": {
-    "png": "817aae3c",
-    "webp": "68db5628"
-  },
-  "teachings_of_diligence_material": {
-    "png": "d7682bcf",
-    "webp": "0914d7a5"
-  },
-  "teachings_of_elegance_material": {
-    "png": "348f9eea",
-    "webp": "dd0a1d48"
-  },
-  "teachings_of_freedom_material": {
-    "png": "9a766744",
-    "webp": "4e226025"
-  },
-  "teachings_of_gold_material": {
-    "png": "b658cad4",
-    "webp": "3e194d3b"
-  },
-  "teachings_of_light_material": {
-    "png": "b0db2415",
-    "webp": "e00da9c0"
-  },
-  "teachings_of_prosperity_material": {
-    "png": "50203d48",
-    "webp": "e12a13dd"
-  },
-  "teachings_of_resistance_material": {
-    "png": "4719ce90",
-    "webp": "3856b473"
-  },
-  "teachings_of_transience_material": {
-    "png": "44529f00",
-    "webp": "a69cdc4b"
-  },
-  "tile_of_decarabians_tower_material": {
-    "png": "a6532cd5",
-    "webp": "cd2e10a3"
-  },
-  "treasure_hoarder_insignia_material": {
-    "png": "9c26ae69",
-    "webp": "11a1ab6b"
-  },
-  "tusk_of_monoceros_caeli_material": {
-    "png": "ccd910e1",
-    "webp": "d5c2d542"
-  },
-  "unknown_material": {
-    "png": "f2d0f42b",
-    "webp": "bb44bca3"
-  },
-  "vajrada_amethyst_chunk_material": {
-    "png": "50d15108",
-    "webp": "32cb29d5"
-  },
-  "vajrada_amethyst_fragment_material": {
-    "png": "956a6724",
-    "webp": "1af86ed9"
-  },
-  "vajrada_amethyst_gemstone_material": {
-    "png": "59900fec",
-    "webp": "adbbcd4c"
-  },
-  "vajrada_amethyst_sliver_material": {
-    "png": "3e37e1c4",
-    "webp": "7f6f69dc"
-  },
-  "valberry_material": {
-    "png": "6282faa9",
-    "webp": "3524a084"
-  },
-  "varunada_lazurite_chunk_material": {
-    "png": "4f7dedf2",
-    "webp": "b1186147"
-  },
-  "varunada_lazurite_fragment_material": {
-    "png": "406f5d8b",
-    "webp": "e57f7765"
-  },
-  "varunada_lazurite_gemstone_material": {
-    "png": "de382c10",
-    "webp": "d0060737"
-  },
-  "varunada_lazurite_sliver_material": {
-    "png": "a771b040",
-    "webp": "d06ee964"
-  },
-  "vayuda_turquoise_chunk_material": {
-    "png": "5630831e",
-    "webp": "b6ea00a3"
-  },
-  "vayuda_turquoise_fragment_material": {
-    "png": "1c90fb3b",
-    "webp": "0a1a5f9d"
-  },
-  "vayuda_turquoise_gemstone_material": {
-    "png": "14b77b68",
-    "webp": "6082f8a6"
-  },
-  "vayuda_turquoise_sliver_material": {
-    "png": "1e216e73",
-    "webp": "7242da5d"
-  },
-  "violetgrass_material": {
-    "png": "ef3cb9b2",
-    "webp": "e981516f"
-  },
-  "wanderers_advice_material": {
-    "png": "5e7711b0",
-    "webp": "0c5dfb79"
-  },
-  "weathered_arrowhead_material": {
-    "png": "c3ce906b",
-    "webp": "fe6394fd"
-  },
-  "whopperflower_nectar_material": {
-    "png": "2dd22778",
-    "webp": "8ffd2454"
-  },
-  "windwheel_aster_material": {
-    "png": "1e467057",
-    "webp": "c52f2dd2"
-  },
-  "wolfhook_material": {
-    "png": "ed1f940d",
-    "webp": "e40d9181"
-  },
-  "the_meaning_of_aeons_material": {
-    "png": "ca3fe220",
-    "webp": "9a316213"
-  },
-  "mudra_of_the_malefic_general_material": {
-    "png": "3876e77a",
-    "webp": "3a2836ae"
-  },
-  "kamisato_ayato_card": {
-    "png": "f3d54f87",
-    "webp": "4825eeb5"
-  },
-  "kamisato_ayato_mugshot": {
-    "png": "27c50662",
-    "webp": "48b2f965"
-  },
-  "yelan_card": {
-    "png": "3be1157c",
-    "webp": "a858eebc"
-  },
-  "yelan_mugshot": {
-    "png": "16b32694",
-    "webp": "77972a74"
-  },
-  "runic_fang_material": {
-    "png": "8d04a44d",
-    "webp": "576773a9"
-  },
-  "kuki_card": {
-    "png": "88bf693b",
-    "webp": "135b7889"
-  },
-  "kuki_mugshot": {
-    "png": "a398edce",
-    "webp": "bcd96f59"
-  },
-  "tears_of_the_calamitous_god_material": {
-    "png": "506c5e09",
-    "webp": "1e3b4b8c"
-  },
-  "heizou_card": {
-    "png": "8ddd7dd2",
-    "webp": "875b8391"
-  },
-  "heizou_mugshot": {
-    "png": "bd24d81e",
-    "webp": "3c9ab2a8"
-  },
-  "nagadus_emerald_chunk_material": {
-    "png": "23acba40",
-    "webp": "3ef0a39a"
-  },
-  "nagadus_emerald_fragment_material": {
-    "png": "b64cc4b3",
-    "webp": "28fdf642"
-  },
-  "nagadus_emerald_gemstone_material": {
-    "png": "43bfb4e4",
-    "webp": "3a9c5727"
-  },
-  "nagadus_emerald_sliver_material": {
-    "png": "746466e3",
-    "webp": "4093988a"
-  },
-  "rukkhashava_mushrooms_material": {
-    "png": "16ac2c4e",
-    "webp": "cae6b008"
-  },
-  "crystalline_cyst_dust_material": {
-    "png": "ea7ca1f6",
-    "webp": "a5191367"
-  },
-  "faded_red_satin_material": {
-    "png": "4dd42110",
-    "webp": "cd38fd1b"
-  },
-  "fungal_spores_material": {
-    "png": "dddf3bda",
-    "webp": "56f51f14"
-  },
-  "kalpalata_lotus_material": {
-    "png": "ce4f42f4",
-    "webp": "c59decbb"
-  },
-  "luminescent_pollen_material": {
-    "png": "6af41bc5",
-    "webp": "29f36e6b"
-  },
-  "nilotpala_lotus_material": {
-    "png": "6980a271",
-    "webp": "3cbdf32f"
-  },
-  "rich_red_brocade_material": {
-    "png": "ad908523",
-    "webp": "ea94b6dc"
-  },
-  "trimmed_red_silk_material": {
-    "png": "b2ad7410",
-    "webp": "961b046f"
-  },
-  "guide_to_praxis_material": {
-    "png": "3b07390c",
-    "webp": "492d23c3"
-  },
-  "majestic_hooked_beak_material": {
-    "png": "0c7e83bb",
-    "webp": "4c75e56a"
-  },
-  "philosophies_of_praxis_material": {
-    "png": "f715b5e7",
-    "webp": "1617cc86"
-  },
-  "teachings_of_praxis_material": {
-    "png": "c96e6bd5",
-    "webp": "a5151715"
-  },
-  "collei_card": {
-    "png": "05d1dd01",
-    "webp": "0bdfb6ce"
-  },
-  "collei_mugshot": {
-    "png": "f0d34a6d",
-    "webp": "87e11011"
-  },
-  "tighnari_card": {
-    "png": "4475a17f",
-    "webp": "e1ce376c"
-  },
-  "tighnari_mugshot": {
-    "png": "33e20715",
-    "webp": "133ef474"
-  },
-  "guide_to_admonition_material": {
-    "png": "14a33db3",
-    "webp": "6293a7b4"
-  },
-  "philosophies_of_admonition_material": {
-    "png": "e7904396",
-    "webp": "c1ff9e13"
-  },
-  "teachings_of_admonition_material": {
-    "png": "004e565e",
-    "webp": "68f148b6"
-  },
-  "guide_to_ingenuity_material": {
-    "png": "e76d5b9f",
-    "webp": "fad1949a"
-  },
-  "philosophies_of_ingenuity_material": {
-    "png": "2e047b11",
-    "webp": "9bd26154"
-  },
-  "teachings_of_ingenuity_material": {
-    "png": "022a996f",
-    "webp": "553bcc00"
-  },
-  "thunderclap_fruitcore_material": {
-    "png": "b20ef877",
-    "webp": "0292f856"
-  },
-  "dori_card": {
-    "png": "f7c0488a",
-    "webp": "cbee05e1"
-  },
-  "dori_mugshot": {
-    "png": "b2f7b16b",
-    "webp": "13dcf184"
-  },
-  "candace_card": {
-    "png": "675ecda0",
-    "webp": "27cc3e42"
-  },
-  "candace_mugshot": {
-    "png": "3959a597",
-    "webp": "ea66c329"
-  },
-  "light_guiding_tetrahedron_material": {
-    "png": "a4bfe8d7",
-    "webp": "dd7fc071"
-  },
-  "redcrest_material": {
-    "png": "62437212",
-    "webp": "d290d956"
-  },
-  "cyno_card": {
-    "png": "c9c9878e",
-    "webp": "14875eaa"
-  },
-  "cyno_mugshot": {
-    "png": "10d795d6",
-    "webp": "ca699efe"
-  },
-  "scarab_material": {
-    "png": "65fb9275",
-    "webp": "e1f64396"
-  },
-  "nilou_card": {
-    "png": "4c001f85",
-    "webp": "0b7095b6"
-  },
-  "nilou_mugshot": {
-    "png": "a1226334",
-    "webp": "7ef54302"
-  },
-  "padisarah_material": {
-    "png": "cf661b0e",
-    "webp": "cc168829"
-  },
-  "perpetual_caliber_material": {
-    "png": "e91b4cdc",
-    "webp": "469bb820"
-  },
-  "nahida_card": {
-    "png": "7df0efb8",
-    "webp": "c6c32433"
-  },
-  "nahida_mugshot": {
-    "png": "96b2abfe",
-    "webp": "1a2c8226"
-  },
-  "quelled_creeper_material": {
-    "png": "18db5cd3",
-    "webp": "714c683f"
-  },
-  "puppet_strings_material": {
-    "png": "beae3d80",
-    "webp": "86aa5212"
-  },
-  "layla_card": {
-    "png": "3b3e6ce4",
-    "webp": "be51bed8"
-  },
-  "layla_mugshot": {
-    "png": "20588496",
-    "webp": "00a1ea54"
-  },
-  "mirror_of_mushin_material": {
-    "png": "f4172dd9",
-    "webp": "0a11d36e"
-  },
-  "henna_berry_material": {
-    "png": "06a68620",
-    "webp": "ec21d8d7"
-  },
-  "dakas_bell_material": {
-    "png": "9bdde5a9",
-    "webp": "ad6a8d98"
-  },
-  "wanderer_card": {
-    "png": "5373cbc4",
-    "webp": "1790348f"
-  },
-  "wanderer_mugshot": {
-    "png": "721b3ad3",
-    "webp": "4aa92fc3"
-  },
-  "faruzan_card": {
-    "png": "e71a3e4a",
-    "webp": "b2a85502"
-  },
-  "faruzan_mugshot": {
-    "png": "ecd88731",
-    "webp": "a8f00e96"
-  },
-  "yaoyao_card": {
-    "png": "49e06252",
-    "webp": "7c63f1dc"
-  },
-  "yaoyao_mugshot": {
-    "png": "4f69d5e1",
-    "webp": "66e38290"
+    "png": "0b9c354b",
+    "webp": "46a87d88"
   },
   "alhaitham_card": {
-    "png": "91b37c8d",
-    "webp": "d3e940f9"
+    "png": "d4ecbc97",
+    "webp": "027c764e"
   },
-  "alhaitham_mugshot": {
-    "png": "b3f5c747",
-    "webp": "b7b5295a"
+  "aloy_card": {
+    "png": "0421126e",
+    "webp": "613a8a85"
   },
-  "pseudo_stamens_material": {
-    "png": "d5c7ee59",
-    "webp": "320df446"
+  "amber_card": {
+    "png": "22bcb036",
+    "webp": "9812a9ff"
   },
-  "sand_grease_pupa_material": {
-    "png": "f531a48b",
-    "webp": "c7c692fc"
-  },
-  "dehya_card": {
-    "png": "bead0e82",
-    "webp": "109f8c97"
-  },
-  "mika_card": {
-    "png": "d40e7f3c",
-    "webp": "6204c49f"
-  },
-  "dehya_mugshot": {
-    "png": "9d591cfe",
-    "webp": "8e1a2138"
-  },
-  "mika_mugshot": {
-    "png": "951dfce0",
-    "webp": "90bc05b6"
-  },
-  "evergloom_ring_material": {
-    "png": "806fb573",
-    "webp": "c95cfa25"
+  "ayaka_card": {
+    "png": "f8803da7",
+    "webp": "036509f3"
   },
   "baizhu_card": {
-    "png": "b559f888",
-    "webp": "fe25b00c"
+    "png": "ef097359",
+    "webp": "7673b285"
+  },
+  "barbara_card": {
+    "png": "f81393dd",
+    "webp": "0d73964a"
+  },
+  "beidou_card": {
+    "png": "6ba71d4e",
+    "webp": "7ebe7e85"
+  },
+  "bennett_card": {
+    "png": "f73d5a7f",
+    "webp": "88eecb84"
+  },
+  "candace_card": {
+    "png": "0d762ea8",
+    "webp": "48a8e21f"
+  },
+  "chongyun_card": {
+    "png": "b2c774c6",
+    "webp": "1faaa038"
+  },
+  "collei_card": {
+    "png": "e32e2172",
+    "webp": "3e2a3691"
+  },
+  "cyno_card": {
+    "png": "9162a449",
+    "webp": "935fd03f"
+  },
+  "dehya_card": {
+    "png": "6423b1ca",
+    "webp": "d84d5e04"
+  },
+  "diluc_card": {
+    "png": "ccf5880e",
+    "webp": "cbc4c52a"
+  },
+  "diona_card": {
+    "png": "6ab76f02",
+    "webp": "d1d4a234"
+  },
+  "dori_card": {
+    "png": "27a61099",
+    "webp": "edbcf34f"
+  },
+  "eula_card": {
+    "png": "28c0a68d",
+    "webp": "ceb23a84"
+  },
+  "faruzan_card": {
+    "png": "6f2168fa",
+    "webp": "ca95cbad"
+  },
+  "fischl_card": {
+    "png": "51e6efd2",
+    "webp": "2093bf59"
+  },
+  "ganyu_card": {
+    "png": "5ec9e0ef",
+    "webp": "33492c0d"
+  },
+  "gorou_card": {
+    "png": "b336f2c5",
+    "webp": "761d8913"
+  },
+  "heizou_card": {
+    "png": "b9ff8f7c",
+    "webp": "50f73d1d"
+  },
+  "hu_tao_card": {
+    "png": "9bb3850d",
+    "webp": "245a81c9"
+  },
+  "itto_card": {
+    "png": "708ab903",
+    "webp": "68ecb020"
+  },
+  "jean_card": {
+    "png": "9ab87620",
+    "webp": "799a400c"
+  },
+  "jeffrey_card": {
+    "png": "7301e558",
+    "webp": "5afa0e32"
+  },
+  "kaeya_card": {
+    "png": "0c78d55f",
+    "webp": "0013bdd6"
+  },
+  "kamisato_ayato_card": {
+    "png": "23504c55",
+    "webp": "70da4c86"
+  },
+  "kazuha_card": {
+    "png": "9d7fca68",
+    "webp": "a404584a"
+  },
+  "keqing_card": {
+    "png": "c278d2c5",
+    "webp": "b9839b39"
+  },
+  "klee_card": {
+    "png": "c4b55985",
+    "webp": "471b4898"
+  },
+  "kokomi_card": {
+    "png": "74581030",
+    "webp": "28e023f6"
+  },
+  "kuki_card": {
+    "png": "dd90aecb",
+    "webp": "71b8d9e5"
+  },
+  "layla_card": {
+    "png": "85bfd6f5",
+    "webp": "3b06ef8d"
+  },
+  "lisa_card": {
+    "png": "9499eba0",
+    "webp": "d9d12f3f"
+  },
+  "mika_card": {
+    "png": "8be544c9",
+    "webp": "bd2b2995"
+  },
+  "mona_card": {
+    "png": "90d6972f",
+    "webp": "403a7681"
+  },
+  "nahida_card": {
+    "png": "eddf97f4",
+    "webp": "411c85d9"
+  },
+  "nilou_card": {
+    "png": "f5476723",
+    "webp": "9a2b261f"
+  },
+  "ningguang_card": {
+    "png": "a6d454ae",
+    "webp": "4d58e3e0"
+  },
+  "noelle_card": {
+    "png": "82697ae8",
+    "webp": "32cb20ad"
+  },
+  "nopic_card": {
+    "png": "0aa57911",
+    "webp": "d0fa6e42"
+  },
+  "qiqi_card": {
+    "png": "90a6e1a3",
+    "webp": "f5d9e8d5"
+  },
+  "raiden_card": {
+    "png": "6b453cfd",
+    "webp": "d300265d"
+  },
+  "razor_card": {
+    "png": "f9453568",
+    "webp": "67acd47c"
+  },
+  "rosaria_card": {
+    "png": "2e778c50",
+    "webp": "9d18cf2e"
+  },
+  "sara_card": {
+    "png": "d482773c",
+    "webp": "a386e9ca"
+  },
+  "sayu_card": {
+    "png": "016c8a90",
+    "webp": "0f6b5064"
+  },
+  "shenhe_card": {
+    "png": "a1ca2ec4",
+    "webp": "7650f50f"
+  },
+  "sucrose_card": {
+    "png": "951104bf",
+    "webp": "9853a804"
+  },
+  "tartaglia_card": {
+    "png": "1b42c737",
+    "webp": "b75d6eed"
+  },
+  "thoma_card": {
+    "png": "77c6cff9",
+    "webp": "b06a0f45"
+  },
+  "tighnari_card": {
+    "png": "df6e865f",
+    "webp": "e89ac69c"
+  },
+  "traveler_card": {
+    "png": "91144aab",
+    "webp": "d17e93db"
+  },
+  "venti_card": {
+    "png": "b468434a",
+    "webp": "9eaa7760"
+  },
+  "wanderer_card": {
+    "png": "ec72d4cf",
+    "webp": "97c57cac"
+  },
+  "xiangling_card": {
+    "png": "be26a678",
+    "webp": "f1d560ab"
+  },
+  "xiao_card": {
+    "png": "52cbb36d",
+    "webp": "d8c6c51d"
+  },
+  "xingqiu_card": {
+    "png": "f98c4eb1",
+    "webp": "31def65d"
+  },
+  "xinyan_card": {
+    "png": "79227fb4",
+    "webp": "9ba53a1f"
+  },
+  "yae_miko_card": {
+    "png": "23a28506",
+    "webp": "ac92a860"
+  },
+  "yanfei_card": {
+    "png": "ec486e1e",
+    "webp": "1b27e216"
+  },
+  "yaoyao_card": {
+    "png": "60b1a2ae",
+    "webp": "813bf687"
+  },
+  "yelan_card": {
+    "png": "923b1228",
+    "webp": "113a3a77"
+  },
+  "yoimiya_card": {
+    "png": "f550a065",
+    "webp": "7a584e97"
+  },
+  "yun_jin_card": {
+    "png": "3df1b930",
+    "webp": "55322ebd"
+  },
+  "zhongli_card": {
+    "png": "8d0f6171",
+    "webp": "7441a4ee"
+  },
+  "albedo_mugshot": {
+    "png": "9f61c88b",
+    "webp": "1a568494"
+  },
+  "alhaitham_mugshot": {
+    "png": "c655a33f",
+    "webp": "468482f6"
+  },
+  "aloy_mugshot": {
+    "png": "2631d7d5",
+    "webp": "217b5a2b"
+  },
+  "amber_mugshot": {
+    "png": "77ea719c",
+    "webp": "65ca2100"
+  },
+  "ayaka_mugshot": {
+    "png": "90781363",
+    "webp": "d2b238e8"
   },
   "baizhu_mugshot": {
-    "png": "6ea2e235",
-    "webp": "1e48c515"
+    "png": "44a96e26",
+    "webp": "6c88da86"
+  },
+  "barbara_mugshot": {
+    "png": "193fdc8d",
+    "webp": "987a5db8"
+  },
+  "beidou_mugshot": {
+    "png": "a0323f23",
+    "webp": "1ab12670"
+  },
+  "bennett_mugshot": {
+    "png": "e8169af8",
+    "webp": "a570dc94"
+  },
+  "candace_mugshot": {
+    "png": "49284150",
+    "webp": "1781d6af"
+  },
+  "chongyun_mugshot": {
+    "png": "9ffce7c0",
+    "webp": "585ca0a4"
+  },
+  "collei_mugshot": {
+    "png": "ee0cb0ce",
+    "webp": "9059508f"
+  },
+  "cyno_mugshot": {
+    "png": "507a160b",
+    "webp": "3822859c"
+  },
+  "dehya_mugshot": {
+    "png": "b77e4799",
+    "webp": "a4f7b7fc"
+  },
+  "diluc_mugshot": {
+    "png": "aa367e40",
+    "webp": "16ad6d2b"
+  },
+  "diona_mugshot": {
+    "png": "27df9841",
+    "webp": "0d470264"
+  },
+  "dori_mugshot": {
+    "png": "5277b3aa",
+    "webp": "afd6a7c0"
+  },
+  "eula_mugshot": {
+    "png": "5c47d2aa",
+    "webp": "a2e542e9"
+  },
+  "faruzan_mugshot": {
+    "png": "28fdd73b",
+    "webp": "208a42ef"
+  },
+  "fischl_mugshot": {
+    "png": "ac8d4d36",
+    "webp": "861dfc26"
+  },
+  "ganyu_mugshot": {
+    "png": "a33c35ef",
+    "webp": "18ba8ecc"
+  },
+  "gorou_mugshot": {
+    "png": "0386111b",
+    "webp": "57628d0a"
+  },
+  "heizou_mugshot": {
+    "png": "a10b800f",
+    "webp": "1a412355"
+  },
+  "hu_tao_mugshot": {
+    "png": "f5de34ae",
+    "webp": "d6e4ef2b"
+  },
+  "itto_mugshot": {
+    "png": "f81f34ab",
+    "webp": "fe99adb6"
+  },
+  "jean_mugshot": {
+    "png": "b7c940af",
+    "webp": "a267b741"
+  },
+  "jeffrey_mugshot": {
+    "png": "168d5c01",
+    "webp": "a06c0514"
+  },
+  "kaeya_mugshot": {
+    "png": "0e62cf3b",
+    "webp": "53ea9cde"
+  },
+  "kamisato_ayato_mugshot": {
+    "png": "c0a79779",
+    "webp": "09da27d6"
+  },
+  "kazuha_mugshot": {
+    "png": "eaa383c1",
+    "webp": "8e58cd89"
+  },
+  "keqing_mugshot": {
+    "png": "d8500d9c",
+    "webp": "9c2aeb13"
+  },
+  "klee_mugshot": {
+    "png": "337f481d",
+    "webp": "656c0c3c"
+  },
+  "kokomi_mugshot": {
+    "png": "1c688381",
+    "webp": "389a460e"
+  },
+  "kuki_mugshot": {
+    "png": "5376796a",
+    "webp": "624acd8d"
+  },
+  "layla_mugshot": {
+    "png": "9e1529f0",
+    "webp": "fa1dcb5c"
+  },
+  "lisa_mugshot": {
+    "png": "1ef0c80b",
+    "webp": "562edce7"
+  },
+  "mika_mugshot": {
+    "png": "c7cec75c",
+    "webp": "8ca8bf37"
+  },
+  "mona_mugshot": {
+    "png": "be404f1c",
+    "webp": "f47267bf"
+  },
+  "nahida_mugshot": {
+    "png": "72e86b79",
+    "webp": "b4d892a8"
+  },
+  "nilou_mugshot": {
+    "png": "0d54af44",
+    "webp": "3da0a40a"
+  },
+  "ningguang_mugshot": {
+    "png": "b5558435",
+    "webp": "7935e6c8"
+  },
+  "noelle_mugshot": {
+    "png": "3bb0f6d5",
+    "webp": "fe7ac4c4"
+  },
+  "nopic_mugshot": {
+    "png": "1a8f49f2",
+    "webp": "619e23a5"
+  },
+  "qiqi_mugshot": {
+    "png": "2f2b6053",
+    "webp": "6d901922"
+  },
+  "raiden_mugshot": {
+    "png": "2083afd4",
+    "webp": "e5b26c6b"
+  },
+  "razor_mugshot": {
+    "png": "33ee7f21",
+    "webp": "47d34d08"
+  },
+  "rosaria_mugshot": {
+    "png": "181a6728",
+    "webp": "13e87401"
+  },
+  "sara_mugshot": {
+    "png": "8bacbec9",
+    "webp": "431a6601"
+  },
+  "sayu_mugshot": {
+    "png": "be6a626d",
+    "webp": "1637dad7"
+  },
+  "shenhe_mugshot": {
+    "png": "0beb3889",
+    "webp": "45bdff29"
+  },
+  "sucrose_mugshot": {
+    "png": "2af51e5c",
+    "webp": "7f48e8e9"
+  },
+  "tartaglia_mugshot": {
+    "png": "38b0496b",
+    "webp": "3bb2c479"
+  },
+  "thoma_mugshot": {
+    "png": "24fb1f3a",
+    "webp": "f365dee2"
+  },
+  "tighnari_mugshot": {
+    "png": "1c7417fe",
+    "webp": "bd77ebc7"
+  },
+  "traveler_mugshot": {
+    "png": "3642d586",
+    "webp": "1dcb1e6e"
+  },
+  "venti_mugshot": {
+    "png": "437598bc",
+    "webp": "4b55d0e3"
+  },
+  "wanderer_mugshot": {
+    "png": "8def2649",
+    "webp": "4e673099"
+  },
+  "xiangling_mugshot": {
+    "png": "8e6ead30",
+    "webp": "fee04055"
+  },
+  "xiao_mugshot": {
+    "png": "3497cc52",
+    "webp": "6ade7aaf"
+  },
+  "xingqiu_mugshot": {
+    "png": "ac6f03ef",
+    "webp": "0353c961"
+  },
+  "xinyan_mugshot": {
+    "png": "14d20bb4",
+    "webp": "a96530d3"
+  },
+  "yae_miko_mugshot": {
+    "png": "3bada356",
+    "webp": "9acdbb17"
+  },
+  "yanfei_mugshot": {
+    "png": "03842c2d",
+    "webp": "e427512d"
+  },
+  "yaoyao_mugshot": {
+    "png": "5bc3069e",
+    "webp": "1d9ff7ab"
+  },
+  "yelan_mugshot": {
+    "png": "f5e8a3db",
+    "webp": "ac55b7ee"
+  },
+  "yoimiya_mugshot": {
+    "png": "85ae9aa0",
+    "webp": "efe49d24"
+  },
+  "yun_jin_mugshot": {
+    "png": "f132975c",
+    "webp": "a69075d9"
+  },
+  "zhongli_mugshot": {
+    "png": "92a0f58b",
+    "webp": "8c8b5ea0"
+  },
+  "adventurers_experience_material": {
+    "png": "0f0c47b3",
+    "webp": "19edf84d"
+  },
+  "agents_sacrificial_knife_material": {
+    "png": "187860f8",
+    "webp": "50a334c2"
+  },
+  "agnidus_agate_chunk_material": {
+    "png": "b1c052e6",
+    "webp": "2573ffe1"
+  },
+  "agnidus_agate_fragment_material": {
+    "png": "bb05b927",
+    "webp": "004311f6"
+  },
+  "agnidus_agate_gemstone_material": {
+    "png": "75ff1dd4",
+    "webp": "617932ae"
+  },
+  "agnidus_agate_sliver_material": {
+    "png": "ff13a64e",
+    "webp": "8f50121f"
+  },
+  "amakumo_fruit_material": {
+    "png": "8df1c33c",
+    "webp": "42b31e37"
+  },
+  "ashen_heart_material": {
+    "png": "b0960627",
+    "webp": "878c264e"
+  },
+  "basalt_pillar_material": {
+    "png": "850b4ea2",
+    "webp": "97ab0b96"
+  },
+  "bit_of_aerosiderite_material": {
+    "png": "94ab6ee2",
+    "webp": "282135c4"
+  },
+  "black_bronze_horn_material": {
+    "png": "1ac701bb",
+    "webp": "6ff58359"
+  },
+  "black_crystal_horn_material": {
+    "png": "84b4c188",
+    "webp": "1d8d77f6"
+  },
+  "bloodjade_branch_material": {
+    "png": "8b743f2d",
+    "webp": "ae296e29"
+  },
+  "boreal_wolfs_broken_fang_material": {
+    "png": "e4290bee",
+    "webp": "ef440aa6"
+  },
+  "boreal_wolfs_cracked_tooth_material": {
+    "png": "f8e31136",
+    "webp": "981b7dcb"
+  },
+  "boreal_wolfs_milk_tooth_material": {
+    "png": "d9c35f42",
+    "webp": "d585f15e"
+  },
+  "boreal_wolfs_nostalgia_material": {
+    "png": "0cf39fbf",
+    "webp": "c151d8b0"
+  },
+  "brilliant_diamond_chunk_material": {
+    "png": "df7028f4",
+    "webp": "7a19fbef"
+  },
+  "brilliant_diamond_fragment_material": {
+    "png": "80b7ce1b",
+    "webp": "500c9162"
+  },
+  "brilliant_diamond_gemstone_material": {
+    "png": "92a46302",
+    "webp": "197a08eb"
+  },
+  "brilliant_diamond_sliver_material": {
+    "png": "9075e061",
+    "webp": "a40b862b"
+  },
+  "calla_lily_material": {
+    "png": "3dba5877",
+    "webp": "8fac4177"
+  },
+  "cecilia_material": {
+    "png": "dcd8a87c",
+    "webp": "a93d94e1"
+  },
+  "chains_of_the_dandelion_gladiator_material": {
+    "png": "85d6cb5a",
+    "webp": "9e8872b6"
+  },
+  "chaos_axis_material": {
+    "png": "55fb483c",
+    "webp": "5e5e3fc1"
+  },
+  "chaos_circuit_material": {
+    "png": "d5a9ab46",
+    "webp": "cc6bbb27"
+  },
+  "chaos_core_material": {
+    "png": "41778f81",
+    "webp": "98b4f337"
+  },
+  "chaos_device_material": {
+    "png": "9ae54ac0",
+    "webp": "a392bb16"
+  },
+  "chaos_gear_material": {
+    "png": "7c57e4e6",
+    "webp": "d848cfe3"
+  },
+  "chaos_oculus_material": {
+    "png": "cd366696",
+    "webp": "24cdf5e7"
+  },
+  "chunk_of_aerosiderite_material": {
+    "png": "85d82115",
+    "webp": "a4c42b5c"
+  },
+  "cleansing_heart_material": {
+    "png": "389178f2",
+    "webp": "d06dfb6b"
+  },
+  "concealed_claw_material": {
+    "png": "9d0059b3",
+    "webp": "ee1793d1"
+  },
+  "concealed_talon_material": {
+    "png": "e5e1310e",
+    "webp": "f0e69af8"
+  },
+  "concealed_unguis_material": {
+    "png": "efb81d47",
+    "webp": "f43260ac"
+  },
+  "coral_branch_of_a_distant_sea_material": {
+    "png": "df367c09",
+    "webp": "22ab75c8"
+  },
+  "cor_lapis_material": {
+    "png": "cb19cc5a",
+    "webp": "beed7c26"
+  },
+  "crown_of_insight_material": {
+    "png": "47a7eb90",
+    "webp": "f1eaccad"
+  },
+  "crystalline_bloom_material": {
+    "png": "3a71f245",
+    "webp": "5d56d444"
+  },
+  "crystalline_cyst_dust_material": {
+    "png": "697be26c",
+    "webp": "2b1c23e8"
+  },
+  "crystal_marrow_material": {
+    "png": "90b41489",
+    "webp": "df49069a"
+  },
+  "crystal_prism_material": {
+    "png": "9a62fc97",
+    "webp": "d186f93a"
+  },
+  "dakas_bell_material": {
+    "png": "82c92b0c",
+    "webp": "b8c7c0e9"
+  },
+  "damaged_mask_material": {
+    "png": "43b36517",
+    "webp": "15ae7556"
+  },
+  "dandelion_seed_material": {
+    "png": "180993d6",
+    "webp": "634a8939"
+  },
+  "dead_ley_line_branch_material": {
+    "png": "a15a8542",
+    "webp": "f30bc367"
+  },
+  "dead_ley_line_leaves_material": {
+    "png": "ca86b271",
+    "webp": "30aafc3e"
+  },
+  "debris_of_decarabians_city_material": {
+    "png": "14373e3c",
+    "webp": "d667a8d9"
+  },
+  "dendrobium_material": {
+    "png": "e0ebc164",
+    "webp": "015d1667"
+  },
+  "dew_of_repudiation_material": {
+    "png": "0f996375",
+    "webp": "eb009981"
+  },
+  "dismal_prism_material": {
+    "png": "21d0e4a4",
+    "webp": "0a964de6"
+  },
+  "divine_body_from_guyun_material": {
+    "png": "07f757bb",
+    "webp": "c754d5c3"
+  },
+  "divining_scroll_material": {
+    "png": "758644be",
+    "webp": "938d9b46"
+  },
+  "dragonheirs_false_fin_material": {
+    "png": "eae506e6",
+    "webp": "ba882d6f"
+  },
+  "dragon_lords_crown_material": {
+    "png": "e38ec68a",
+    "webp": "727babc4"
+  },
+  "dream_of_the_dandelion_gladiator_material": {
+    "png": "a8ff87b5",
+    "webp": "dd3966dd"
+  },
+  "dvalins_claw_material": {
+    "png": "86cfcde9",
+    "webp": "5d473296"
+  },
+  "dvalins_plume_material": {
+    "png": "5789835b",
+    "webp": "ba4cfff8"
+  },
+  "dvalins_sigh_material": {
+    "png": "fa719999",
+    "webp": "efcef482"
+  },
+  "energy_nectar_material": {
+    "png": "f84e3385",
+    "webp": "486c2b67"
+  },
+  "enhancement_ore_material": {
+    "png": "f5182c6e",
+    "webp": "b3a519b1"
   },
   "everamber_material": {
-    "png": "7396c37a",
-    "webp": "69e89df7"
+    "png": "53fc0a2f",
+    "webp": "8746500a"
   },
-  "worldspan_fern_material": {
-    "png": "185c9049",
-    "webp": "824ee178"
+  "everflame_seed_material": {
+    "png": "576b4dcc",
+    "webp": "77b145d4"
+  },
+  "evergloom_ring_material": {
+    "png": "a2db05d5",
+    "webp": "dc1b3cbc"
+  },
+  "faded_red_satin_material": {
+    "png": "58e72bf9",
+    "webp": "e67ce5e2"
+  },
+  "famed_handguard_material": {
+    "png": "75a938c5",
+    "webp": "4b1fa98e"
+  },
+  "fetters_of_the_dandelion_gladiator_material": {
+    "png": "85d7b82d",
+    "webp": "82482a0f"
+  },
+  "fine_enhancement_ore_material": {
+    "png": "39ba3ca0",
+    "webp": "9fbdd420"
+  },
+  "firm_arrowhead_material": {
+    "png": "815e82f0",
+    "webp": "d2846d19"
+  },
+  "fluorescent_fungus_material": {
+    "png": "bc82310c",
+    "webp": "fe818779"
+  },
+  "forbidden_curse_scroll_material": {
+    "png": "8c79b177",
+    "webp": "1e8170a4"
+  },
+  "fossilized_bone_shard_material": {
+    "png": "88b8fd63",
+    "webp": "11387683"
+  },
+  "fragile_bone_shard_material": {
+    "png": "22c8cf28",
+    "webp": "c0af30e0"
+  },
+  "fragment_of_decarabians_epic_material": {
+    "png": "92b62344",
+    "webp": "3f0cf766"
+  },
+  "fungal_spores_material": {
+    "png": "1992cbbc",
+    "webp": "9ba367f5"
+  },
+  "gilded_scale_material": {
+    "png": "312a2cfc",
+    "webp": "463d97bd"
+  },
+  "glaze_lily_material": {
+    "png": "b9854a15",
+    "webp": "9dfb0cd8"
+  },
+  "golden_raven_insignia_material": {
+    "png": "70b388cb",
+    "webp": "a303ce16"
+  },
+  "grain_of_aerosiderite_material": {
+    "png": "261a3f08",
+    "webp": "9906d0b8"
+  },
+  "guide_to_admonition_material": {
+    "png": "b3cde053",
+    "webp": "e83af6e6"
+  },
+  "guide_to_ballad_material": {
+    "png": "b6f49d79",
+    "webp": "ecab9e1e"
+  },
+  "guide_to_diligence_material": {
+    "png": "3d5479cb",
+    "webp": "fe94479f"
+  },
+  "guide_to_elegance_material": {
+    "png": "dddd86fa",
+    "webp": "27248056"
+  },
+  "guide_to_freedom_material": {
+    "png": "10821286",
+    "webp": "52f6c51f"
+  },
+  "guide_to_gold_material": {
+    "png": "9b52c7f2",
+    "webp": "71b94cba"
+  },
+  "guide_to_ingenuity_material": {
+    "png": "5183ab5f",
+    "webp": "dff16a74"
+  },
+  "guide_to_light_material": {
+    "png": "ed23eedc",
+    "webp": "dc580db4"
+  },
+  "guide_to_praxis_material": {
+    "png": "809635b2",
+    "webp": "b5380120"
+  },
+  "guide_to_prosperity_material": {
+    "png": "4236b9b8",
+    "webp": "8802f782"
+  },
+  "guide_to_resistance_material": {
+    "png": "999df6dd",
+    "webp": "5fb3bc3d"
+  },
+  "guide_to_transience_material": {
+    "png": "60d633f3",
+    "webp": "994cb6c6"
+  },
+  "heavy_horn_material": {
+    "png": "17a95280",
+    "webp": "174d2dfc"
+  },
+  "hellfire_butterfly_material": {
+    "png": "44bc84bc",
+    "webp": "e029cad9"
+  },
+  "henna_berry_material": {
+    "png": "0bc24708",
+    "webp": "4252dbef"
+  },
+  "heros_wit_material": {
+    "png": "c960b0b3",
+    "webp": "faaa5c56"
+  },
+  "hoarfrost_core_material": {
+    "png": "91b7a948",
+    "webp": "2758e643"
+  },
+  "hunters_sacrificial_knife_material": {
+    "png": "03f31dfb",
+    "webp": "6dc2bea2"
+  },
+  "hurricane_seed_material": {
+    "png": "35594ff9",
+    "webp": "6d8f6e1e"
+  },
+  "inspectors_sacrificial_knife_material": {
+    "png": "eff097e4",
+    "webp": "526d041e"
+  },
+  "jade_branch_of_a_distant_sea_material": {
+    "png": "ff9ac9cd",
+    "webp": "89a6a9c2"
+  },
+  "jeweled_branch_of_a_distant_sea_material": {
+    "png": "6951ef17",
+    "webp": "1ebd92e8"
+  },
+  "jueyun_chili_material": {
+    "png": "38121786",
+    "webp": "d082d6ea"
+  },
+  "juvenile_jade_material": {
+    "png": "3621b87e",
+    "webp": "d4f59cbc"
+  },
+  "kageuchi_handguard_material": {
+    "png": "0adea969",
+    "webp": "982b94c2"
+  },
+  "kalpalata_lotus_material": {
+    "png": "b31b46a4",
+    "webp": "a3d3507a"
+  },
+  "ley_line_sprouts_material": {
+    "png": "557f2fb7",
+    "webp": "f9469fad"
+  },
+  "lieutenants_insignia_material": {
+    "png": "7779989d",
+    "webp": "d12495fd"
+  },
+  "lightning_prism_material": {
+    "png": "38f7a714",
+    "webp": "528d4084"
+  },
+  "light_guiding_tetrahedron_material": {
+    "png": "eac8cc12",
+    "webp": "0b53a80c"
+  },
+  "luminescent_pollen_material": {
+    "png": "a51986db",
+    "webp": "e58eadac"
+  },
+  "luminous_sands_from_guyun_material": {
+    "png": "3e5cb203",
+    "webp": "00e03a90"
+  },
+  "lustrous_stone_from_guyun_material": {
+    "png": "ff50573e",
+    "webp": "0f23a6b3"
+  },
+  "majestic_hooked_beak_material": {
+    "png": "67871693",
+    "webp": "cebd0634"
+  },
+  "marionette_core_material": {
+    "png": "b2459c89",
+    "webp": "040d3640"
+  },
+  "mask_of_the_one_horned_material": {
+    "png": "9c7e7d4d",
+    "webp": "dbf1f566"
+  },
+  "mask_of_the_tigers_bite_material": {
+    "png": "8400a3fe",
+    "webp": "b0327730"
+  },
+  "mask_of_the_wicked_lieutenant_material": {
+    "png": "4ea7c608",
+    "webp": "3e968670"
+  },
+  "mirror_of_mushin_material": {
+    "png": "21265e00",
+    "webp": "20a94ca6"
+  },
+  "mist_grass_material": {
+    "png": "011f6cef",
+    "webp": "28f0a180"
+  },
+  "mist_grass_pollen_material": {
+    "png": "4b8ec9ab",
+    "webp": "367781d9"
+  },
+  "mist_grass_wick_material": {
+    "png": "90b7102a",
+    "webp": "efec00cb"
+  },
+  "mist_veiled_gold_elixir_material": {
+    "png": "8f8f15d2",
+    "webp": "726b3c5f"
+  },
+  "mist_veiled_lead_elixir_material": {
+    "png": "c80c844d",
+    "webp": "db9983cb"
+  },
+  "mist_veiled_mercury_elixir_material": {
+    "png": "78983376",
+    "webp": "616a0f6a"
+  },
+  "mist_veiled_primo_elixir_material": {
+    "png": "796e3038",
+    "webp": "49fc9227"
+  },
+  "molten_moment_material": {
+    "png": "e04b4f11",
+    "webp": "481f8da8"
+  },
+  "mora_material": {
+    "png": "d2bb6bbe",
+    "webp": "564caed1"
+  },
+  "mudra_of_the_malefic_general_material": {
+    "png": "5f45ecc8",
+    "webp": "ca79a4e6"
+  },
+  "mystic_enhancement_ore_material": {
+    "png": "6845bebb",
+    "webp": "f767f944"
+  },
+  "nagadus_emerald_chunk_material": {
+    "png": "a79d7694",
+    "webp": "c9e7ee9b"
+  },
+  "nagadus_emerald_fragment_material": {
+    "png": "6b3e6c99",
+    "webp": "477d28c9"
+  },
+  "nagadus_emerald_gemstone_material": {
+    "png": "374f8316",
+    "webp": "47361484"
+  },
+  "nagadus_emerald_sliver_material": {
+    "png": "c39d56cf",
+    "webp": "e7a7770b"
+  },
+  "naku_weed_material": {
+    "png": "241797ab",
+    "webp": "62df5fe8"
+  },
+  "narukamis_affection_material": {
+    "png": "2eb97521",
+    "webp": "7246cc39"
+  },
+  "narukamis_joy_material": {
+    "png": "9a2f030e",
+    "webp": "f504553b"
+  },
+  "narukamis_wisdom_material": {
+    "png": "4467b216",
+    "webp": "2d5d19f7"
+  },
+  "nilotpala_lotus_material": {
+    "png": "13b8cd3c",
+    "webp": "57453a3b"
+  },
+  "noctilucous_jade_material": {
+    "png": "d4af1376",
+    "webp": "d16ff476"
+  },
+  "none_material": {
+    "png": "6fe87dee",
+    "webp": "b4328a43"
+  },
+  "old_handguard_material": {
+    "png": "eac600de",
+    "webp": "fe23b8b6"
+  },
+  "ominous_mask_material": {
+    "png": "08b1deb8",
+    "webp": "9530ecaa"
+  },
+  "onikabuto_material": {
+    "png": "1048a205",
+    "webp": "0693e633"
+  },
+  "padisarah_material": {
+    "png": "480c7ccc",
+    "webp": "ee3d3d4c"
+  },
+  "perpetual_caliber_material": {
+    "png": "6846ec29",
+    "webp": "51ee7e57"
+  },
+  "perpetual_heart_material": {
+    "png": "dc9d96f2",
+    "webp": "15fe81b0"
+  },
+  "philanemo_mushroom_material": {
+    "png": "b330ea2c",
+    "webp": "9acf4295"
+  },
+  "philosophies_of_admonition_material": {
+    "png": "60c60064",
+    "webp": "ed2438cc"
+  },
+  "philosophies_of_ballad_material": {
+    "png": "af99eaf3",
+    "webp": "9eb13d73"
+  },
+  "philosophies_of_diligence_material": {
+    "png": "e1329734",
+    "webp": "2387753c"
+  },
+  "philosophies_of_elegance_material": {
+    "png": "910ef65e",
+    "webp": "a714b130"
+  },
+  "philosophies_of_freedom_material": {
+    "png": "f06ff718",
+    "webp": "41ee2fb6"
+  },
+  "philosophies_of_gold_material": {
+    "png": "5e7da23c",
+    "webp": "ce032585"
+  },
+  "philosophies_of_ingenuity_material": {
+    "png": "b17e2b6d",
+    "webp": "21d6d24b"
+  },
+  "philosophies_of_light_material": {
+    "png": "95555f19",
+    "webp": "d2784459"
+  },
+  "philosophies_of_praxis_material": {
+    "png": "b89ef599",
+    "webp": "3c7923ee"
+  },
+  "philosophies_of_prosperity_material": {
+    "png": "f093b6f6",
+    "webp": "ea03622c"
+  },
+  "philosophies_of_resistance_material": {
+    "png": "9591746c",
+    "webp": "fc85082d"
+  },
+  "philosophies_of_transience_material": {
+    "png": "7b135bf3",
+    "webp": "272084e4"
+  },
+  "piece_of_aerosiderite_material": {
+    "png": "04e103c9",
+    "webp": "0556d521"
+  },
+  "polarizing_prism_material": {
+    "png": "135e4ec6",
+    "webp": "9b351917"
+  },
+  "primogem_material": {
+    "png": "a89ca55e",
+    "webp": "0b45f9d1"
   },
   "primordial_greenbloom_material": {
-    "png": "c373ea22",
-    "webp": "caf15bf3"
+    "png": "49a0c44f",
+    "webp": "3fbe9c96"
+  },
+  "prithiva_topaz_chunk_material": {
+    "png": "70861ac8",
+    "webp": "143a3590"
+  },
+  "prithiva_topaz_fragment_material": {
+    "png": "2acd9582",
+    "webp": "ddd1cb36"
+  },
+  "prithiva_topaz_gemstone_material": {
+    "png": "789edeeb",
+    "webp": "89df0f20"
+  },
+  "prithiva_topaz_sliver_material": {
+    "png": "ed5aaac2",
+    "webp": "9fa957a9"
+  },
+  "pseudo_stamens_material": {
+    "png": "19e7b40b",
+    "webp": "91f9881f"
+  },
+  "puppet_strings_material": {
+    "png": "e30282d2",
+    "webp": "d0a6a81f"
+  },
+  "qingxin_material": {
+    "png": "39946e08",
+    "webp": "042816cb"
+  },
+  "quelled_creeper_material": {
+    "png": "e73365dd",
+    "webp": "aca27d82"
+  },
+  "recruits_insignia_material": {
+    "png": "906087cb",
+    "webp": "177428f5"
+  },
+  "redcrest_material": {
+    "png": "f146fb99",
+    "webp": "770a4a95"
+  },
+  "relic_from_guyun_material": {
+    "png": "5078588f",
+    "webp": "f248fa01"
+  },
+  "rich_red_brocade_material": {
+    "png": "7a3f246d",
+    "webp": "e4bf0e8b"
+  },
+  "riftborn_regalia_material": {
+    "png": "e846cae5",
+    "webp": "5c570e71"
+  },
+  "ring_of_boreas_material": {
+    "png": "215bd80f",
+    "webp": "bb3af202"
+  },
+  "rukkhashava_mushrooms_material": {
+    "png": "368e78c1",
+    "webp": "eb15ac10"
+  },
+  "runic_fang_material": {
+    "png": "530b4bf4",
+    "webp": "4a7c33c4"
+  },
+  "sakura_bloom_material": {
+    "png": "3c5bb66a",
+    "webp": "101f3dad"
+  },
+  "sand_grease_pupa_material": {
+    "png": "eaa81313",
+    "webp": "fc2caee0"
+  },
+  "sango_pearl_material": {
+    "png": "c64dc1b5",
+    "webp": "471da5e7"
+  },
+  "scarab_material": {
+    "png": "32807ff2",
+    "webp": "3f9e2d72"
+  },
+  "scattered_piece_of_decarabians_dream_material": {
+    "png": "ce0ed399",
+    "webp": "83019933"
+  },
+  "sealed_scroll_material": {
+    "png": "e505a3c9",
+    "webp": "9d026fad"
+  },
+  "sea_ganoderma_material": {
+    "png": "b55818c0",
+    "webp": "892c595f"
+  },
+  "sergeants_insignia_material": {
+    "png": "9f9153c4",
+    "webp": "f724a9fa"
+  },
+  "shackles_of_the_dandelion_gladiator_material": {
+    "png": "7b69a4e6",
+    "webp": "306a5dd4"
+  },
+  "shadow_of_the_warrior_material": {
+    "png": "c4269e9c",
+    "webp": "7767134a"
+  },
+  "shard_of_a_foul_legacy_material": {
+    "png": "032a133f",
+    "webp": "de0a74ca"
+  },
+  "sharp_arrowhead_material": {
+    "png": "897c40df",
+    "webp": "28f126a6"
+  },
+  "shimmering_nectar_material": {
+    "png": "c4d4f61b",
+    "webp": "ed97527e"
+  },
+  "shivada_jade_chunk_material": {
+    "png": "f11be59d",
+    "webp": "30c3a307"
+  },
+  "shivada_jade_fragment_material": {
+    "png": "4e5c6a1f",
+    "webp": "361c5394"
+  },
+  "shivada_jade_gemstone_material": {
+    "png": "16aeafe0",
+    "webp": "9601cbf8"
+  },
+  "shivada_jade_sliver_material": {
+    "png": "8abe839f",
+    "webp": "098ecf82"
+  },
+  "silk_flower_material": {
+    "png": "81e46c98",
+    "webp": "554c0297"
+  },
+  "silver_raven_insignia_material": {
+    "png": "c5a6171f",
+    "webp": "0d6c5442"
+  },
+  "slime_concentrate_material": {
+    "png": "5aca5efc",
+    "webp": "07bb60c0"
+  },
+  "slime_condensate_material": {
+    "png": "032e5ee7",
+    "webp": "cc98604c"
+  },
+  "slime_secretions_material": {
+    "png": "db86e49d",
+    "webp": "df511deb"
+  },
+  "small_lamp_grass_material": {
+    "png": "05fda481",
+    "webp": "4f2f0776"
+  },
+  "smoldering_pearl_material": {
+    "png": "a0bcdedb",
+    "webp": "5d7e5047"
+  },
+  "spectral_heart_material": {
+    "png": "883ccda1",
+    "webp": "b8b969b1"
+  },
+  "spectral_husk_material": {
+    "png": "a62bccdb",
+    "webp": "00b5e803"
+  },
+  "spectral_nucleus_material": {
+    "png": "2f43e69d",
+    "webp": "0b1f4d53"
+  },
+  "spirit_locket_of_boreas_material": {
+    "png": "b05dc78b",
+    "webp": "04ecabd0"
+  },
+  "stained_mask_material": {
+    "png": "9c369c6b",
+    "webp": "88a19adf"
+  },
+  "starconch_material": {
+    "png": "adc00dc0",
+    "webp": "36e0dae9"
+  },
+  "storm_beads_material": {
+    "png": "91f02656",
+    "webp": "251bbdaf"
+  },
+  "sturdy_bone_shard_material": {
+    "png": "2e054ebc",
+    "webp": "5786e2d1"
+  },
+  "tail_of_boreas_material": {
+    "png": "3760aab2",
+    "webp": "029ccafa"
+  },
+  "teachings_of_admonition_material": {
+    "png": "b80f4db1",
+    "webp": "8b486c65"
+  },
+  "teachings_of_ballad_material": {
+    "png": "d04e45e6",
+    "webp": "00772c8a"
+  },
+  "teachings_of_diligence_material": {
+    "png": "7e957d9a",
+    "webp": "b9f86708"
+  },
+  "teachings_of_elegance_material": {
+    "png": "832f2449",
+    "webp": "0ed993e5"
+  },
+  "teachings_of_freedom_material": {
+    "png": "88d9baf0",
+    "webp": "709dc635"
+  },
+  "teachings_of_gold_material": {
+    "png": "5b2ea91e",
+    "webp": "98f7c0be"
+  },
+  "teachings_of_ingenuity_material": {
+    "png": "776763e7",
+    "webp": "004d29d8"
+  },
+  "teachings_of_light_material": {
+    "png": "2297434c",
+    "webp": "f5ee7cf4"
+  },
+  "teachings_of_praxis_material": {
+    "png": "cb29a90b",
+    "webp": "e8a1f3ef"
+  },
+  "teachings_of_prosperity_material": {
+    "png": "59f85107",
+    "webp": "f211ee7c"
+  },
+  "teachings_of_resistance_material": {
+    "png": "37e01234",
+    "webp": "3bac4876"
+  },
+  "teachings_of_transience_material": {
+    "png": "72bdf66c",
+    "webp": "0102037d"
+  },
+  "tears_of_the_calamitous_god_material": {
+    "png": "98c102e7",
+    "webp": "84c62959"
+  },
+  "the_meaning_of_aeons_material": {
+    "png": "b2b8b019",
+    "webp": "0d9492e8"
+  },
+  "thunderclap_fruitcore_material": {
+    "png": "b7f9079e",
+    "webp": "0ee358f3"
+  },
+  "tile_of_decarabians_tower_material": {
+    "png": "7a3b9aef",
+    "webp": "cb38da23"
+  },
+  "treasure_hoarder_insignia_material": {
+    "png": "03b0add2",
+    "webp": "76cb09af"
+  },
+  "trimmed_red_silk_material": {
+    "png": "78fa10e1",
+    "webp": "64a82f02"
+  },
+  "tusk_of_monoceros_caeli_material": {
+    "png": "7086d085",
+    "webp": "0a7c659f"
+  },
+  "unknown_material": {
+    "png": "e8eacb90",
+    "webp": "a80b7ca0"
+  },
+  "vajrada_amethyst_chunk_material": {
+    "png": "7ea48001",
+    "webp": "f75e8f17"
+  },
+  "vajrada_amethyst_fragment_material": {
+    "png": "d1102c02",
+    "webp": "106c09a9"
+  },
+  "vajrada_amethyst_gemstone_material": {
+    "png": "0edeaf09",
+    "webp": "12ec5f88"
+  },
+  "vajrada_amethyst_sliver_material": {
+    "png": "4c1c30d8",
+    "webp": "470a3708"
+  },
+  "valberry_material": {
+    "png": "59430828",
+    "webp": "c77810e6"
+  },
+  "varunada_lazurite_chunk_material": {
+    "png": "b795e115",
+    "webp": "c15fe5bc"
+  },
+  "varunada_lazurite_fragment_material": {
+    "png": "eb1eff1d",
+    "webp": "538d4980"
+  },
+  "varunada_lazurite_gemstone_material": {
+    "png": "d2429b63",
+    "webp": "f7a2d599"
+  },
+  "varunada_lazurite_sliver_material": {
+    "png": "b88c21e9",
+    "webp": "c652eae4"
+  },
+  "vayuda_turquoise_chunk_material": {
+    "png": "1927697f",
+    "webp": "0f93b43a"
+  },
+  "vayuda_turquoise_fragment_material": {
+    "png": "a45820f4",
+    "webp": "8ca2e7a0"
+  },
+  "vayuda_turquoise_gemstone_material": {
+    "png": "00bf76d4",
+    "webp": "8b79db28"
+  },
+  "vayuda_turquoise_sliver_material": {
+    "png": "042fd0f7",
+    "webp": "f7e35cc2"
+  },
+  "violetgrass_material": {
+    "png": "39c1118f",
+    "webp": "266ad86d"
+  },
+  "wanderers_advice_material": {
+    "png": "88774f1c",
+    "webp": "7604dfdc"
+  },
+  "weathered_arrowhead_material": {
+    "png": "8aee7fcf",
+    "webp": "cf2ef122"
+  },
+  "whopperflower_nectar_material": {
+    "png": "416b028b",
+    "webp": "56820685"
+  },
+  "windwheel_aster_material": {
+    "png": "fee962f3",
+    "webp": "92c371a4"
+  },
+  "wolfhook_material": {
+    "png": "4e2c09b5",
+    "webp": "77a64b79"
+  },
+  "worldspan_fern_material": {
+    "png": "8abf5296",
+    "webp": "ba8c9e66"
   }
 }

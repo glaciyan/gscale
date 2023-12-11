@@ -1,9 +1,10 @@
 {
   "name": "gscale",
   "license": "MIT",
-  "version": "2.3.1",
+  "version": "2.4.0",
+  "type": "module",
   "engines": {
-    "node": "^16.0.0"
+    "node": "^20.10.0"
   },
   "scripts": {
     "pre": "npm run gen:version",
@@ -18,37 +19,37 @@
     "images:characters:build": "squoosh-cli --oxipng auto --webp auto --resize {width:240} -d public/images/characters/card",
     "images:mugshot:build": "squoosh-cli --oxipng auto --webp auto --resize {width:100} -d public/images/characters/mugshot",
     "images:items:build": "squoosh-cli --oxipng auto --webp auto --resize {width:40} -d public/images/materials",
-    "images:weapons:build": "squoosh-cli --oxipng auto --webp auto --resize {width:100} -d public/images/weapons",
     "make:images": "node scripts/make_images.js"
   },
   "dependencies": {
-    "@floating-ui/dom": "^0.1.10",
-    "@headlessui/vue": "^1.4.1",
-    "@vueuse/core": "^7.3.0",
-    "@vueuse/integrations": "^7.3.0",
-    "dexie": "^3.2.0",
-    "fuse.js": "^6.4.6",
-    "vue": "^3.2.36",
-    "vue-router": "^4.0.15",
-    "zod": "^3.11.6"
+    "@floating-ui/dom": "^1.5.3",
+    "@headlessui/vue": "^1.7.16",
+    "@vueuse/core": "^10.7.0",
+    "@vueuse/integrations": "^10.7.0",
+    "dexie": "^3.2.4",
+    "focus-trap": "^7.5.4",
+    "fuse.js": "^6.6.2",
+    "vue": "^3.3.11",
+    "vue-router": "^4.2.5",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
-    "@types/lodash": "^4.14.178",
-    "@types/node": "^16.11.6",
-    "@typescript-eslint/eslint-plugin": "^5.27.0",
-    "@typescript-eslint/parser": "^5.27.0",
-    "@vitejs/plugin-vue": "^2.3.3",
-    "eslint": "^8.16.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-vue": "^9.0.1",
-    "less": "^4.1.2",
-    "typescript": "^4.7.2",
-    "unplugin-auto-import": "^0.5.5",
-    "vite": "^2.9.9",
-    "vite-plugin-md": "^0.11.6",
-    "vite-plugin-windicss": "^1.4.12",
-    "vite-svg-loader": "^3.1.0",
-    "vue-tsc": "^1.0.8",
-    "windicss": "^3.5.4"
+    "@types/lodash": "^4.14.202",
+    "@types/node": "^20.10.4",
+    "@typescript-eslint/eslint-plugin": "^6.13.2",
+    "@typescript-eslint/parser": "^6.13.2",
+    "@vitejs/plugin-vue": "^4.5.2",
+    "eslint": "^8.55.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-vue": "^9.19.2",
+    "less": "^4.2.0",
+    "sharp": "^0.33.0",
+    "typescript": "^5.3.3",
+    "unplugin-auto-import": "^0.17.2",
+    "vite": "^5.0.7",
+    "vite-plugin-windicss": "^1.9.2",
+    "vite-svg-loader": "^5.1.0",
+    "vue-tsc": "^1.8.25",
+    "windicss": "^3.5.6"
   }
 }

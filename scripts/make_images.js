@@ -1,29 +1,45 @@
-const { exec } = require("child_process");
-const fs = require("fs");
-const crypto = require("crypto");
-const lastHashes = JSON.parse(fs.readFileSync("./scripts/hashes.json").toString());
+import { readFileSync, writeFileSync, readdirSync, mkdirSync } from "fs";
+import { createHash } from "crypto";
+import Sharp from "sharp";
+import path from "path";
+import { main as fileHash } from "./file_hash.js";
+const lastHashes = JSON.parse(readFileSync("./scripts/hashes.json", { flag: "a+" }).toString());
+
+const config = {
+  "images:characters:build": {
+    width: 240,
+    outDir: "./public/images/characters/card",
+  },
+  "images:mugshot:build": {
+    width: 100,
+    outDir: "./public/images/characters/mugshot",
+  },
+  "images:items:build": {
+    width: 40,
+    outDir: "./public/images/materials",
+  },
+};
 
 async function main() {
-  await build("./src/lib/data/images/characters/card", "images:characters:build", "card");
-  await build("./src/lib/data/images/characters/mugshot", "images:mugshot:build", "mugshot");
-  await build("./src/lib/data/images/materials", "images:items:build", "material");
-  // await build("./src/lib/data/images/weapons", "images:weapons:build");
+  await build("./src/lib/data/images/characters/card", config["images:characters:build"]);
+  await build("./src/lib/data/images/characters/mugshot", config["images:mugshot:build"]);
+  await build("./src/lib/data/images/materials", config["images:items:build"]);
 
   writeHashesFile();
-  (await import("./file_hash.mjs")).main();
+  await fileHash();
 }
 
 const builtImages = [];
 
-function writeHashesFile() {
-  fs.writeFileSync("./scripts/hashes.json", JSON.stringify(builtImages, null, 4));
+async function writeHashesFile() {
+  writeFileSync("./scripts/hashes.json", JSON.stringify(builtImages, null, 4));
   console.log("Wrote hashes");
 }
 
 function filterFilesNeedingBuild(from) {
-  const hashes = fs.readdirSync(from).map((f) => {
-    const file = fs.readFileSync(`${from}/${f}`);
-    const hashSum = crypto.createHash("sha1");
+  const hashes = readdirSync(from).map((f) => {
+    const file = readFileSync(`${from}/${f}`);
+    const hashSum = createHash("sha1");
     hashSum.update(file);
 
     return { name: `${from}/${f}`, hash: hashSum.digest("hex") };
@@ -39,24 +55,44 @@ function filterFilesNeedingBuild(from) {
     .map((m) => m.name);
 }
 
-function build(source, command, postfix) {
+async function build(source, config) {
   const missing = filterFilesNeedingBuild(source);
 
-  return new Promise((resolve, reject) => {
-    if (missing.length === 0) resolve();
-    else {
-      // TODO clean already built images if they already exists
-      console.log(`Building ${source} with ${command} (${missing.length} missing or changed images)`);
-      exec(`npm run ${command} ${missing.join(" ")}`, (err, stdout, stderr) => {
-        if (err) {
-          reject(err);
-        } else {
-          console.log(`Finished ${command}`);
-          resolve();
-        }
-      });
-    }
-  });
+  const outDir = config.outDir;
+  mkdirSync(outDir, { recursive: true });
+
+  if (missing.length === 0) return;
+  else {
+    // TODO clean already built images if they already exists
+    console.log(`Building ${source} (${missing.length} missing or changed images)`);
+    await Promise.all(
+      missing.map(async (file) => {
+        const name = path.parse(file).name;
+        console.log(` - ${file}`);
+
+        const webp = Sharp(file);
+        const png = webp.clone();
+
+        await webp
+          .resize(config.width)
+          .webp({ quality: 80, preset: "drawing" })
+          .toFile(path.join(outDir, name + ".webp"));
+
+        await png
+          .resize(config.width)
+          .png()
+          .toFile(path.join(outDir, name + ".png"));
+      })
+    );
+    // exec(`npm run ${command} ${missing.join(" ")}`, (err, stdout, stderr) => {
+    //   if (err) {
+    //     reject(err);
+    //   } else {
+    //     console.log(`Finished ${command}`);
+    //     resolve();
+    //   }
+    // });
+  }
 }
 
-main();
+main().then(() => console.log("done :)"));
