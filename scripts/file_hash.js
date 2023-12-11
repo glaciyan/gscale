@@ -75,11 +75,10 @@ const addHashesToFilesInDir = (dir, postfix) => {
 };
 
 export async function main() {
+  console.log("checking file hashes");
   addHashesToFilesInDir("./public/images/characters/card", "card");
   addHashesToFilesInDir("./public/images/characters/mugshot", "mugshot");
   addHashesToFilesInDir("./public/images/materials", "material");
 
   fs.writeFileSync(hashesOutPath, JSON.stringify(Object.fromEntries(hashMap), null, 2));
 }
-
-main();

@@ -1,21 +1,40 @@
-import { exec } from "child_process";
 import { readFileSync, writeFileSync, readdirSync } from "fs";
 import { createHash } from "crypto";
+import Sharp from "sharp";
+import path from "path";
+import { main as fileHash } from "./file_hash.js";
 const lastHashes = JSON.parse(readFileSync("./scripts/hashes.json").toString());
 
+const config = {
+  "images:characters:build": {
+    width: 240,
+    outDir: "./public/images/characters/card",
+  },
+  "images:mugshot:build": {
+    width: 100,
+    outDir: "./public/images/characters/mugshot",
+  },
+  "images:items:build": {
+    width: 40,
+    outDir: "./public/images/materials",
+  },
+};
+
 async function main() {
-  await build("./src/lib/data/images/characters/card", "images:characters:build", "card");
-  await build("./src/lib/data/images/characters/mugshot", "images:mugshot:build", "mugshot");
-  await build("./src/lib/data/images/materials", "images:items:build", "material");
+  await build("./src/lib/data/images/characters/card", config["images:characters:build"], "card");
+  await build("./src/lib/data/images/characters/mugshot", config["images:mugshot:build"], "mugshot");
+  await build("./src/lib/data/images/materials", config["images:items:build"], "material");
   // await build("./src/lib/data/images/weapons", "images:weapons:build");
 
+  console.log("debug here");
+
   writeHashesFile();
-  (await import("./file_hash.mjs")).main();
+  await fileHash();
 }
 
 const builtImages = [];
 
-function writeHashesFile() {
+async function writeHashesFile() {
   writeFileSync("./scripts/hashes.json", JSON.stringify(builtImages, null, 4));
   console.log("Wrote hashes");
 }
@@ -39,24 +58,48 @@ function filterFilesNeedingBuild(from) {
     .map((m) => m.name);
 }
 
-function build(source, command, postfix) {
+async function build(source, config, postfix) {
   const missing = filterFilesNeedingBuild(source);
 
-  return new Promise((resolve, reject) => {
-    if (missing.length === 0) resolve();
-    else {
-      // TODO clean already built images if they already exists
-      console.log(`Building ${source} with ${command} (${missing.length} missing or changed images)`);
-      exec(`npm run ${command} ${missing.join(" ")}`, (err, stdout, stderr) => {
-        if (err) {
-          reject(err);
-        } else {
-          console.log(`Finished ${command}`);
-          resolve();
-        }
-      });
-    }
-  });
+  if (missing.length === 0) return;
+  else {
+    // TODO clean already built images if they already exists
+    console.log(`Building ${source} (${missing.length} missing or changed images)`);
+    await Promise.all(
+      missing.map(async (file) => {
+        const name = path.parse(file).name;
+        console.log(` - ${file}`);
+
+        const webp = new Sharp(file);
+        const png = webp.clone();
+
+        const callback = (err, _) => {
+          if (err) {
+            console.error(err);
+            throw err;
+          }
+        };
+
+        await webp
+          .resize(config.width)
+          .webp()
+          .toFile(path.join(config.outDir, name + ".webp"), callback);
+
+        await png
+          .resize(config.width)
+          .png()
+          .toFile(path.join(config.outDir, name + ".png"), callback);
+      })
+    );
+    // exec(`npm run ${command} ${missing.join(" ")}`, (err, stdout, stderr) => {
+    //   if (err) {
+    //     reject(err);
+    //   } else {
+    //     console.log(`Finished ${command}`);
+    //     resolve();
+    //   }
+    // });
+  }
 }
 
-main();
+main().then(() => console.log("done :)"));
