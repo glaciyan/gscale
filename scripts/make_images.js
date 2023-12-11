@@ -59,7 +59,7 @@ async function build(source, config) {
   const missing = filterFilesNeedingBuild(source);
 
   const outDir = config.outDir;
-  mkdirSync(outDir, {recursive: true});
+  mkdirSync(outDir, { recursive: true });
 
   if (missing.length === 0) return;
   else {
@@ -75,7 +75,7 @@ async function build(source, config) {
 
         await webp
           .resize(config.width)
-          .webp()
+          .webp({ quality: 70, preset: "drawing" })
           .toFile(path.join(outDir, name + ".webp"));
 
         await png
