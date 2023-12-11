@@ -1,6 +1,6 @@
-const fs = require("fs");
-const package = JSON.parse(fs.readFileSync("./package.json"));
+import { readFileSync, writeFileSync } from "fs";
+const pkgjson = JSON.parse(readFileSync("./package.json"));
 
-const versionFile = `export default "${package.version}";`;
+const versionFile = `export default "${pkgjson.version}";`;
 
-fs.writeFileSync("./src/version.ts", versionFile);
+writeFileSync("./src/version.ts", versionFile);
