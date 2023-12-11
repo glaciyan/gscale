@@ -38,7 +38,7 @@ function cleanup(props) {
 const addHashesToFilesInDir = (dir, postfix) => {
   const withPath = (fileName) => path.join(dir, fileName);
 
-  if (fs.existsSync(dir)) fs.mkdirSync(dir)
+  if (fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
 
   // get all the files which dont have postfixes
   const fileNames = fs.readdirSync(dir).filter((name) => name.split(".").length <= 2);
