@@ -1,7 +1,7 @@
-const { exec } = require("child_process");
-const fs = require("fs");
-const crypto = require("crypto");
-const lastHashes = JSON.parse(fs.readFileSync("./scripts/hashes.json").toString());
+import { exec } from "child_process";
+import { readFileSync, writeFileSync, readdirSync } from "fs";
+import { createHash } from "crypto";
+const lastHashes = JSON.parse(readFileSync("./scripts/hashes.json").toString());
 
 async function main() {
   await build("./src/lib/data/images/characters/card", "images:characters:build", "card");
@@ -16,14 +16,14 @@ async function main() {
 const builtImages = [];
 
 function writeHashesFile() {
-  fs.writeFileSync("./scripts/hashes.json", JSON.stringify(builtImages, null, 4));
+  writeFileSync("./scripts/hashes.json", JSON.stringify(builtImages, null, 4));
   console.log("Wrote hashes");
 }
 
 function filterFilesNeedingBuild(from) {
-  const hashes = fs.readdirSync(from).map((f) => {
-    const file = fs.readFileSync(`${from}/${f}`);
-    const hashSum = crypto.createHash("sha1");
+  const hashes = readdirSync(from).map((f) => {
+    const file = readFileSync(`${from}/${f}`);
+    const hashSum = createHash("sha1");
     hashSum.update(file);
 
     return { name: `${from}/${f}`, hash: hashSum.digest("hex") };
