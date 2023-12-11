@@ -1,9 +1,9 @@
-import { readFileSync, writeFileSync, readdirSync } from "fs";
+import { readFileSync, writeFileSync, readdirSync, mkdirSync } from "fs";
 import { createHash } from "crypto";
 import Sharp from "sharp";
 import path from "path";
 import { main as fileHash } from "./file_hash.js";
-const lastHashes = JSON.parse(readFileSync("./scripts/hashes.json").toString());
+const lastHashes = JSON.parse(readFileSync("./scripts/hashes.json", { flag: "a+" }).toString());
 
 const config = {
   "images:characters:build": {
@@ -21,12 +21,9 @@ const config = {
 };
 
 async function main() {
-  await build("./src/lib/data/images/characters/card", config["images:characters:build"], "card");
-  await build("./src/lib/data/images/characters/mugshot", config["images:mugshot:build"], "mugshot");
-  await build("./src/lib/data/images/materials", config["images:items:build"], "material");
-  // await build("./src/lib/data/images/weapons", "images:weapons:build");
-
-  console.log("debug here");
+  await build("./src/lib/data/images/characters/card", config["images:characters:build"]);
+  await build("./src/lib/data/images/characters/mugshot", config["images:mugshot:build"]);
+  await build("./src/lib/data/images/materials", config["images:items:build"]);
 
   writeHashesFile();
   await fileHash();
@@ -58,8 +55,11 @@ function filterFilesNeedingBuild(from) {
     .map((m) => m.name);
 }
 
-async function build(source, config, postfix) {
+async function build(source, config) {
   const missing = filterFilesNeedingBuild(source);
+
+  const outDir = config.outDir;
+  mkdirSync(outDir, {recursive: true});
 
   if (missing.length === 0) return;
   else {
@@ -70,25 +70,18 @@ async function build(source, config, postfix) {
         const name = path.parse(file).name;
         console.log(` - ${file}`);
 
-        const webp = new Sharp(file);
+        const webp = Sharp(file);
         const png = webp.clone();
-
-        const callback = (err, _) => {
-          if (err) {
-            console.error(err);
-            throw err;
-          }
-        };
 
         await webp
           .resize(config.width)
           .webp()
-          .toFile(path.join(config.outDir, name + ".webp"), callback);
+          .toFile(path.join(outDir, name + ".webp"));
 
         await png
           .resize(config.width)
           .png()
-          .toFile(path.join(config.outDir, name + ".png"), callback);
+          .toFile(path.join(outDir, name + ".png"));
       })
     );
     // exec(`npm run ${command} ${missing.join(" ")}`, (err, stdout, stderr) => {

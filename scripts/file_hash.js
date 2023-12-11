@@ -4,7 +4,7 @@ import path from "path";
 
 const hashesOutPath = "./src/assets/image_hashes.json";
 
-const oldImageHashes = JSON.parse(fs.readFileSync(hashesOutPath).toString());
+const oldImageHashes = JSON.parse(fs.readFileSync(hashesOutPath, { flag: "a+" }).toString());
 
 export const getAssetHash = (file) => createHash("sha256").update(fs.readFileSync(file)).digest("hex").substring(0, 8);
 
@@ -37,6 +37,8 @@ function cleanup(props) {
 
 const addHashesToFilesInDir = (dir, postfix) => {
   const withPath = (fileName) => path.join(dir, fileName);
+
+  if (fs.existsSync(dir)) fs.mkdirSync(dir)
 
   // get all the files which dont have postfixes
   const fileNames = fs.readdirSync(dir).filter((name) => name.split(".").length <= 2);
