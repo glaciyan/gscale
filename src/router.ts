@@ -1,10 +1,10 @@
 import Index from "./pages/Index.vue";
 import BuildCharacter from "./pages/BuildCharacter.vue";
 import Builds from "./pages/Builds.vue";
+import Privacy from "./pages/Privacy.vue"
+
 import title from "./title";
 import { createRouter, createWebHistory } from "vue-router";
-// import Privacy from "./assets/articles/privacy.md";
-// import Contact from "./assets/articles/contact.md";
 
 // Define all routes here
 const routes = [
@@ -26,20 +26,13 @@ const routes = [
       title: title("Builds"),
     },
   },
-  // {
-  //   path: "/privacy",
-  //   component: Privacy,
-  //   meta: {
-  //     title: title("Privacy"),
-  //   },
-  // },
-  // {
-  //   path: "/contact",
-  //   component: Contact,
-  //   meta: {
-  //     title: title("Contact"),
-  //   },
-  // },
+  {
+    path: "/privacy",
+    component: Privacy,
+    meta: {
+      title: title("Privacy"),
+    },
+  },
   {
     path: "/:pathMatch(.*)*",
     name: "NotFound",
