@@ -116,6 +116,10 @@
         "hash": "ab9be57fe72a543e30817e66630f2aeaaf264c39"
     },
     {
+        "name": "./src/lib/data/images/characters/card/kaveh.png",
+        "hash": "55dc6e5e2d02f08b72b8afdce72c58ffc5fdebf3"
+    },    
+    {
         "name": "./src/lib/data/images/characters/card/kazuha.png",
         "hash": "9cbff0ef711d9220c6b1b9e64ea1d230dd852188"
     },
@@ -123,6 +127,10 @@
         "name": "./src/lib/data/images/characters/card/keqing.png",
         "hash": "d1ac515726ce4941027ca974f85e83d9b3076ac2"
     },
+    {
+        "name": "./src/lib/data/images/characters/card/kirara.png",
+        "hash": "f36d98b39e943600db5b386e6bf944f6879b2efe"
+    },    
     {
         "name": "./src/lib/data/images/characters/card/klee.png",
         "hash": "3d336cb0d3d891d7d8028f679d695994c6b59420"
@@ -388,6 +396,10 @@
         "hash": "0d12e77eab29f196f46b8a4b121ef7bd7735a08a"
     },
     {
+        "name": "./src/lib/data/images/characters/mugshot/kaveh.png",
+        "hash": "33525440abf27b24dfdaa4f793c2219f466fb8cf"
+    },    
+    {
         "name": "./src/lib/data/images/characters/mugshot/kazuha.png",
         "hash": "a1e7898a8ff7c42106002c0cb3c5a1e0b52f9717"
     },
@@ -395,6 +407,10 @@
         "name": "./src/lib/data/images/characters/mugshot/keqing.png",
         "hash": "ef35fe20e60cac93b3f176fdfb42c735ea6f7bc0"
     },
+    {
+        "name": "./src/lib/data/images/characters/mugshot/kirara.png",
+        "hash": "30784f243e96872f85e2546c2f35fca6db339ecf"
+    },    
     {
         "name": "./src/lib/data/images/characters/mugshot/klee.png",
         "hash": "2d1b297473a3d779169dbe9b37923d3d867b89e4"
@@ -1051,6 +1067,10 @@
         "name": "./src/lib/data/images/materials/mora.png",
         "hash": "2667c18ad4d62e2df627fbfbb90ba9aa2ecb486e"
     },
+    {
+        "name": "./src/lib/data/images/materials/mourning_flower.webp",
+        "hash": "fefbb7027bfc9d4f17bb98cd30878f2c22397b86"
+    },    
     {
         "name": "./src/lib/data/images/materials/mudra_of_the_malefic_general.webp",
         "hash": "f11601600025e303b8eadda2555f663fa08fd5ae"
