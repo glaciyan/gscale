@@ -8,6 +8,12 @@ export const Items: { [key in ItemsKey]: IItem } = {
     rarity: 4,
     category: "boss",
   },
+  mourning_flower: {
+    name: "Mourning Flower",
+    normalizedName: "mourning_flower",
+    rarity: 1,
+    category: "local"
+  },
   evergloom_ring: {
     name: "Evergloom Ring",
     normalizedName: "evergloom_ring",

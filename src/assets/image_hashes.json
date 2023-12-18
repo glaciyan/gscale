@@ -1550,5 +1550,25 @@
   "worldspan_fern_material": {
     "png": "8abf5296",
     "webp": "ba8c9e66"
+  },
+  "mourning_flower_material": {
+    "png": "0a2b4ac4",
+    "webp": "bc458681"
+  },
+  "kaveh_card": {
+    "png": "3050e3f7",
+    "webp": "59b20bb1"
+  },
+  "kaveh_mugshot": {
+    "png": "33525440",
+    "webp": "c67e21ed"
+  },
+  "kirara_card": {
+    "png": "8692326e",
+    "webp": "2ce5161b"
+  },
+  "kirara_mugshot": {
+    "png": "30784f24",
+    "webp": "563a7a1c"
   }
 }

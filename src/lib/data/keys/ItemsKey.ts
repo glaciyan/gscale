@@ -1,4 +1,5 @@
 type ItemsKey =
+  | "mourning_flower"
   | "evergloom_ring"
   | "primordial_greenbloom"
   | "everamber"
