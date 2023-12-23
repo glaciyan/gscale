@@ -1,4 +1,5 @@
 export const PhysicalItemGroupsKey = [
+  "fontemer_pearls",
   "equity",
   "admonition",
   "praxis",

@@ -8,6 +8,24 @@ export const Items: { [key in ItemsKey]: IItem } = {
     rarity: 4,
     category: "boss",
   },
+  xenochromatic_crystal: {
+    name: "Xenochromatic Crystal",
+    normalizedName: "xenochromatic_crystal",
+    rarity: 3,
+    category: "common",
+  },
+  transoceanic_chunk: {
+    name: "Transoceanic Chunk",
+    normalizedName: "transoceanic_chunk",
+    rarity: 2,
+    category: "common",
+  },
+  transoceanic_pearl: {
+    name: "Transoceanic Pearl",
+    normalizedName: "transoceanic_pearl",
+    rarity: 1,
+    category: "common",
+  },
   teachings_of_equity: {
     name: "Teachings of Equity",
     normalizedName: "teachings_of_equity",

@@ -1598,5 +1598,17 @@
   "lyney_mugshot": {
     "png": "b7a79038",
     "webp": "29807774"
+  },
+  "transoceanic_pearl_material": {
+    "png": "afb06097",
+    "webp": "a03193e9"
+  },
+  "transoceanic_chunk_material": {
+    "png": "28dff685",
+    "webp": "19d772d6"
+  },
+  "xenochromatic_crystal_material": {
+    "png": "ba7dc036",
+    "webp": "b7be4942"
   }
 }

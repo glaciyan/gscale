@@ -1,4 +1,7 @@
 type ItemsKey =
+  | "xenochromatic_crystal"
+  | "transoceanic_chunk"
+  | "transoceanic_pearl"
   | "emperors_resolution"
   | "rainbow_rose"
   | "philosophies_of_equity"

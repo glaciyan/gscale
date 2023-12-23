@@ -251,6 +251,10 @@ export const ItemGroups: { [key in ItemGroupsKey]: IItemGroup } = {
     normalizedName: "red_satin",
     itemIds: [Items.faded_red_satin, Items.trimmed_red_silk, Items.rich_red_brocade],
   },
+  fontemer_pearls: {
+    normalizedName: "fontemer_pearls",
+    itemIds: [Items.transoceanic_pearl, Items.transoceanic_chunk, Items.xenochromatic_crystal],
+  },
   fungal_spores: {
     normalizedName: "fungal_spores",
     itemIds: [Items.fungal_spores, Items.luminescent_pollen, Items.crystalline_cyst_dust],

@@ -1504,6 +1504,14 @@
         "hash": "30c1a05680d7d72581be2eacbcadbd1b90811796"
     },
     {
+        "name": "./src/lib/data/images/materials/transoceanic_pearl.webp",
+        "hash": "7bdaf8d85b4c7a90e613b8b9076ca9f802046727"
+    },
+    {
+        "name": "./src/lib/data/images/materials/transoceanic_chunk.webp",
+        "hash": "49a2bd88098a741cd7a799a2fd815203af90d6ad"
+    },
+    {
         "name": "./src/lib/data/images/materials/treasure_hoarder_insignia.png",
         "hash": "40e45cf8b21f4e9808d1d826fb772189d828a99f"
     },
@@ -1598,5 +1606,9 @@
     {
         "name": "./src/lib/data/images/materials/worldspan_fern.webp",
         "hash": "8f2a4059a17b23501a9b8f085fae4741ce814e04"
+    },
+    {
+        "name": "./src/lib/data/images/materials/xenochromatic_crystal.webp",
+        "hash": "6c95d671aae25666b9abf94415622a79038f8be0"
     }
 ]
