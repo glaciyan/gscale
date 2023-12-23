@@ -267,4 +267,8 @@ export const ItemGroups: { [key in ItemGroupsKey]: IItemGroup } = {
     normalizedName: "ingenuity",
     itemIds: [Items.teachings_of_ingenuity, Items.guide_to_ingenuity, Items.philosophies_of_ingenuity],
   },
+  equity: {
+    normalizedName: "equity",
+    itemIds: [Items.teachings_of_equity, Items.guide_to_equity, Items.philosophies_of_equity]
+  }
 };

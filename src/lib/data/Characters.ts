@@ -23,6 +23,23 @@ export const Characters: { [key in CharactersKey]: ICharacter } = {
     bookGroup: ItemGroups.praxis,
     weekly: Items.puppet_strings,
   },
+  lyney: {
+    name: "Lyney",
+    normalizedName: "lyney",
+    element: Elements.pyro,
+    weaponType: WeaponTypes.bow,
+    rarity: 5,
+    sub: "Bonus CRIT Rate",
+    constellation: "Felis Fuscus",
+    description:
+      "A genius of a magician famed throughout Fontaine. He moves his audience with a combination of sleight of hand and the gift of the gab. Eloquent, ingenious, and with a mind as hard to fathom as a cat.",
+    local: Items.rainbow_rose,
+    commonGroup: ItemGroups.fatui_insignia,
+    boss: Items.emperors_resolution,
+    gemGroup: ItemGroups.pyro_gem,
+    bookGroup: ItemGroups.equity,
+    weekly: Items.primordial_greenbloom,
+  },
   kirara: {
     name: "Kirara",
     normalizedName: "kirara",

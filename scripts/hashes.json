@@ -152,6 +152,10 @@
         "hash": "cd7fc8608fba9eca64eb053489f019c08ecc0906"
     },
     {
+        "name": "./src/lib/data/images/characters/card/lyney.png",
+        "hash": "8dfcfe383dda48d05770fca73d06bb186589799a"
+    },
+    {
         "name": "./src/lib/data/images/characters/card/mika.png",
         "hash": "f95aa8568d0a5b45df48a61c791c7b50abe5c71b"
     },
@@ -430,6 +434,10 @@
     {
         "name": "./src/lib/data/images/characters/mugshot/lisa.png",
         "hash": "6419582378fc543e2f60c7d0368495b0698303ce"
+    },
+    {
+        "name": "./src/lib/data/images/characters/mugshot/lyney.webp",
+        "hash": "a88d5d68f81a821185d6aa89fb522cc2832aa3e0"
     },
     {
         "name": "./src/lib/data/images/characters/mugshot/mika.png",
@@ -796,6 +804,10 @@
         "hash": "4e6c519406b80ad7298699c28c5fed233e5f762b"
     },
     {
+        "name": "./src/lib/data/images/materials/emperors_resolution.webp",
+        "hash": "55f8cb6b9754f656580c45a4196f11f59d9c1a93"
+    },
+    {
         "name": "./src/lib/data/images/materials/energy_nectar.png",
         "hash": "ba76d0036f9b64b821d2a42bca59c6689457e813"
     },
@@ -890,6 +902,10 @@
     {
         "name": "./src/lib/data/images/materials/guide_to_elegance.png",
         "hash": "a15d72a2b63b9665b4a49fcbd60abb0f2c3fe9d0"
+    },
+    {
+        "name": "./src/lib/data/images/materials/guide_to_equity.webp",
+        "hash": "7d7811b39ca4696687aac42be5a01c805c3193ee"
     },
     {
         "name": "./src/lib/data/images/materials/guide_to_freedom.png",
@@ -1168,6 +1184,10 @@
         "hash": "73de5c810e494e6b37c9f081526fcc2b556a2d10"
     },
     {
+        "name": "./src/lib/data/images/materials/philosophies_of_equity.webp",
+        "hash": "fd0c803462054d310e2d4316eeff23f93e75b82b"
+    },
+    {
         "name": "./src/lib/data/images/materials/philosophies_of_freedom.png",
         "hash": "04a11e4d7e52fdc22a2a03a5a0ed1617c23f172c"
     },
@@ -1246,6 +1266,10 @@
     {
         "name": "./src/lib/data/images/materials/quelled_creeper.webp",
         "hash": "3ee3cc1736f65ff4541f71f8a402113b9ddc5d96"
+    },
+    {
+        "name": "./src/lib/data/images/materials/rainbow_rose.webp",
+        "hash": "4db34efab5408f2345fc8a183f1862932aa93ed8"
     },
     {
         "name": "./src/lib/data/images/materials/recruits_insignia.png",
@@ -1426,6 +1450,10 @@
     {
         "name": "./src/lib/data/images/materials/teachings_of_elegance.png",
         "hash": "646a3945f8ff9ff7bd4d8c32149e7ede35aafd83"
+    },
+    {
+        "name": "./src/lib/data/images/materials/teachings_of_equity.webp",
+        "hash": "59513c76626795d7ab2a343f71a477e457cb8e18"
     },
     {
         "name": "./src/lib/data/images/materials/teachings_of_freedom.png",

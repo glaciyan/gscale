@@ -1,4 +1,9 @@
 type ItemsKey =
+  | "emperors_resolution"
+  | "rainbow_rose"
+  | "philosophies_of_equity"
+  | "guide_to_equity"
+  | "teachings_of_equity"
   | "mourning_flower"
   | "evergloom_ring"
   | "primordial_greenbloom"

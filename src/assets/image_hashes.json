@@ -1570,5 +1570,33 @@
   "kirara_mugshot": {
     "png": "30784f24",
     "webp": "563a7a1c"
+  },
+  "teachings_of_equity_material": {
+    "png": "6b5f8950",
+    "webp": "2e4851ea"
+  },
+  "guide_to_equity_material": {
+    "png": "512e1e2c",
+    "webp": "6cf30ece"
+  },
+  "philosophies_of_equity_material": {
+    "png": "98770383",
+    "webp": "67c1cb77"
+  },
+  "rainbow_rose_material": {
+    "png": "d6b0d45f",
+    "webp": "efd4e74c"
+  },
+  "emperors_resolution_material": {
+    "png": "a3f647ca",
+    "webp": "e1196d2c"
+  },
+  "lyney_card": {
+    "png": "5d2d7a83",
+    "webp": "378ba23b"
+  },
+  "lyney_mugshot": {
+    "png": "b7a79038",
+    "webp": "29807774"
   }
 }

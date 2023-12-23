@@ -8,6 +8,39 @@ export const Items: { [key in ItemsKey]: IItem } = {
     rarity: 4,
     category: "boss",
   },
+  teachings_of_equity: {
+    name: "Teachings of Equity",
+    normalizedName: "teachings_of_equity",
+    rarity: 2,
+    groupId: "equity",
+    category: "book",
+  },
+  guide_to_equity: {
+    name: "Guide to Equity",
+    normalizedName: "guide_to_equity",
+    rarity: 3,
+    groupId: "equity",
+    category: "book",
+  },
+  philosophies_of_equity: {
+    name: "Philosophies of Equity",
+    normalizedName: "philosophies_of_equity",
+    rarity: 4,
+    groupId: "equity",
+    category: "book",
+  },
+  rainbow_rose: {
+    name: "Rainbow Rose",
+    normalizedName: "rainbow_rose",
+    rarity: 1,
+    category: "local"
+  },
+  emperors_resolution: {
+    name: "Emperor's Resolution",
+    normalizedName: "emperors_resolution",
+    rarity: 4,
+    category: "boss",
+  },
   mourning_flower: {
     name: "Mourning Flower",
     normalizedName: "mourning_flower",
