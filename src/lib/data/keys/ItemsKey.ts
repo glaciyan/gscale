@@ -1,4 +1,9 @@
 type ItemsKey =
+  | "artificed_spare_clockwork_component_coppelius"
+  | "romaritime_flower"
+  | "philosophies_of_justice"
+  | "guide_to_justice"
+  | "teachings_of_justice"
   | "artificed_spare_clockwork_component_coppelia"
   | "lumidouce_bell"
   | "artificed_dynamic_gear"

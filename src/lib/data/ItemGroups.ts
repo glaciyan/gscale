@@ -282,5 +282,9 @@ export const ItemGroups: { [key in ItemGroupsKey]: IItemGroup } = {
   order: {
     normalizedName: "order",
     itemIds: [Items.teachings_of_order, Items.guide_to_order, Items.philosophies_of_order]
+  },
+  justice: {
+    normalizedName: "order",
+    itemIds: [Items.teachings_of_justice, Items.guide_to_justice, Items.philosophies_of_justice]
   }
 };

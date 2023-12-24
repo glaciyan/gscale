@@ -1650,5 +1650,33 @@
   "lynette_mugshot": {
     "png": "b2652cd0",
     "webp": "d3d6a6e7"
+  },
+  "teachings_of_justice_material": {
+    "png": "731bade7",
+    "webp": "1fea9e0d"
+  },
+  "guide_to_justice_material": {
+    "png": "9e081a94",
+    "webp": "8ff84a66"
+  },
+  "philosophies_of_justice_material": {
+    "png": "ec39e9bb",
+    "webp": "d0b0b07c"
+  },
+  "romaritime_flower_material": {
+    "png": "78b2dd25",
+    "webp": "f78d54d6"
+  },
+  "artificed_spare_clockwork_component_coppelius_material": {
+    "png": "573c1615",
+    "webp": "9512839b"
+  },
+  "freminet_card": {
+    "png": "c2ca2287",
+    "webp": "46f46658"
+  },
+  "freminet_mugshot": {
+    "png": "fa5a2f04",
+    "webp": "f4583c37"
   }
 }

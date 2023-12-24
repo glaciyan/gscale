@@ -80,6 +80,10 @@
         "hash": "2a15a28581fa7b26a5efade9ae7cfae6b1d09832"
     },
     {
+        "name": "./src/lib/data/images/characters/card/freminet.png",
+        "hash": "a62f842d161a400b1a58345032e664bac65007d7"
+    },
+    {
         "name": "./src/lib/data/images/characters/card/ganyu.png",
         "hash": "e613ae32856134e882e5a71dcd68c40f375f77cc"
     },
@@ -368,6 +372,10 @@
         "hash": "6c1b3ecf4a0a6d76e5cbed1b10451cbba5ee9d4a"
     },
     {
+        "name": "./src/lib/data/images/characters/mugshot/freminet.webp",
+        "hash": "0a2e02607520212ab6bbdc7d0073f99ea2cd0af1"
+    },
+    {
         "name": "./src/lib/data/images/characters/mugshot/ganyu.png",
         "hash": "e510d20b88e069f99b2fba73e678f61419f60b2d"
     },
@@ -610,6 +618,10 @@
     {
         "name": "./src/lib/data/images/materials/artificed_spare_clockwork_component_coppelia.webp",
         "hash": "e6f088f328258d1ca0c9fd0919b206654fdffe10"
+    },
+    {
+        "name": "./src/lib/data/images/materials/artificed_spare_clockwork_component_coppelius.webp",
+        "hash": "f66165eb40a1632d263216fababe27d86972d8c6"
     },
     {
         "name": "./src/lib/data/images/materials/mechanical_spur_gear.webp",
@@ -940,6 +952,10 @@
         "hash": "0b6d7df691c8086d31f4c1ed9ea4dfb1a8c996ec"
     },
     {
+        "name": "./src/lib/data/images/materials/guide_to_justice.webp",
+        "hash": "d0171ca4fc76deac4fae7763a035254ce4b3a5a4"
+    },
+    {
         "name": "./src/lib/data/images/materials/guide_to_light.png",
         "hash": "c61be8b180f4f2e57c73d31081227361d495fdda"
     },
@@ -1232,6 +1248,10 @@
         "hash": "10185915001154191547c2ca217e1dd36af55b54"
     },
     {
+        "name": "./src/lib/data/images/materials/philosophies_of_justice.webp",
+        "hash": "10185915001154191547c2ca217e1dd36af55b54"
+    },
+    {
         "name": "./src/lib/data/images/materials/philosophies_of_light.png",
         "hash": "6a2cd543c53008fee25de030583c09e09a1eee75"
     },
@@ -1330,6 +1350,10 @@
     {
         "name": "./src/lib/data/images/materials/ring_of_boreas.png",
         "hash": "726a05b922ee446a3c0362540556130cad00e84d"
+    },
+    {
+        "name": "./src/lib/data/images/materials/romaritime_flower.png",
+        "hash": "6ca2455dc5e416403493d2cef051b0489b6226d8"
     },
     {
         "name": "./src/lib/data/images/materials/rukkhashava_mushrooms.png",
@@ -1502,6 +1526,10 @@
     {
         "name": "./src/lib/data/images/materials/teachings_of_ingenuity.webp",
         "hash": "cf041599cf686e6ae6f714cef8fa632c4c5c9747"
+    },
+    {
+        "name": "./src/lib/data/images/materials/teachings_of_justice.webp",
+        "hash": "f923e16bcd7d228f2554d2d7b2e919e93b6b6b9e"
     },
     {
         "name": "./src/lib/data/images/materials/teachings_of_light.png",

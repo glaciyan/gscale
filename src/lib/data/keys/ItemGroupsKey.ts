@@ -1,4 +1,5 @@
 export const PhysicalItemGroupsKey = [
+  "justice",
   "clockwork_meka",
   "order",
   "fontemer_pearls",

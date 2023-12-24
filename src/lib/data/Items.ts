@@ -14,9 +14,21 @@ export const Items: { [key in ItemsKey]: IItem } = {
     rarity: 4,
     category: "boss",
   },
+  artificed_spare_clockwork_component_coppelius: {
+    name: "Artificed Spare Clockwork Component Coppelius",
+    normalizedName: "artificed_spare_clockwork_component_coppelius",
+    rarity: 4,
+    category: "boss",
+  },
   lumidouce_bell: {
     name: "Lumidouce Bell",
     normalizedName: "lumidouce_bell",
+    rarity: 1,
+    category: "local"
+  },
+  romaritime_flower: {
+    name: "Romaritime Flower",
+    normalizedName: "romaritime_flower",
     rarity: 1,
     category: "local"
   },
@@ -55,6 +67,27 @@ export const Items: { [key in ItemsKey]: IItem } = {
     normalizedName: "transoceanic_pearl",
     rarity: 1,
     category: "common",
+  },
+  teachings_of_justice: {
+    name: "Teachings of Justice",
+    normalizedName: "teachings_of_justice",
+    rarity: 2,
+    groupId: "order",
+    category: "book",
+  },
+  guide_to_justice: {
+    name: "Guide to Justice",
+    normalizedName: "guide_to_justice",
+    rarity: 3,
+    groupId: "order",
+    category: "book",
+  },
+  philosophies_of_justice: {
+    name: "Philosophies of Justice",
+    normalizedName: "philosophies_of_justice",
+    rarity: 4,
+    groupId: "order",
+    category: "book",
   },
   teachings_of_order: {
     name: "Teachings of Order",

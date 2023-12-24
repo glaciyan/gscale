@@ -23,6 +23,23 @@ export const Characters: { [key in CharactersKey]: ICharacter } = {
     bookGroup: ItemGroups.praxis,
     weekly: Items.puppet_strings,
   },
+  freminet: {
+    name: "Freminet",
+    normalizedName: "freminet",
+    element: Elements.cryo,
+    weaponType: WeaponTypes.claymore,
+    rarity: 4,
+    sub: "Bonus Atk%",
+    constellation: "Automaton",
+    description:
+      "A taciturn young man and an expert diver, his heart remains as innocent as the fairytales that never cease to absorb him.",
+    local: Items.romaritime_flower,
+    commonGroup: ItemGroups.fontemer_pearls,
+    boss: Items.artificed_spare_clockwork_component_coppelius,
+    gemGroup: ItemGroups.cryo_gem,
+    bookGroup: ItemGroups.justice,
+    weekly: Items.worldspan_fern,
+  },
   lynette: {
     name: "Lynette",
     normalizedName: "lynette",
