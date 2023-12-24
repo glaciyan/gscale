@@ -1,4 +1,12 @@
 type ItemsKey =
+  | "artificed_spare_clockwork_component_coppelia"
+  | "lumidouce_bell"
+  | "artificed_dynamic_gear"
+  | "mechanical_spur_gear"
+  | "meshing_gear"
+  | "philosophies_of_order"
+  | "guide_to_order"
+  | "teachings_of_order"
   | "xenochromatic_crystal"
   | "transoceanic_chunk"
   | "transoceanic_pearl"

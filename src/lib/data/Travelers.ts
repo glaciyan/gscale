@@ -10,7 +10,7 @@ const mondstadtBooks = generateTravelerTalentBooks(ItemGroups.freedom, ItemGroup
 const liyueBooks = generateTravelerTalentBooks(ItemGroups.prosperity, ItemGroups.diligence, ItemGroups.gold);
 const inazumaBooks = generateTravelerTalentBooks(ItemGroups.transience, ItemGroups.elegance, ItemGroups.light);
 const sumeruBooks = generateTravelerTalentBooks(ItemGroups.unknown, ItemGroups.unknown, ItemGroups.unknown);
-const FontaineBooks = generateTravelerTalentBooks(ItemGroups.equity, ItemGroups.unknown, ItemGroups.unknown);
+const FontaineBooks = generateTravelerTalentBooks(ItemGroups.equity, ItemGroups.order, ItemGroups.unknown);
 
 export const Travelers: { [key in TravelersKey]: ITraveler } = {
   traveler_hydro: new Traveler({

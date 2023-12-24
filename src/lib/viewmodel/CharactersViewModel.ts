@@ -4,8 +4,9 @@ import { IBaseCharacter } from "../data/contracts/IBaseCharacter";
 
 // This will be used to display the character cards
 export const charactersViewModel: IBaseCharacter[] = [
-  Travelers.traveler_hydro,
+  Characters.lynette,
   Characters.lyney,
+  Travelers.traveler_hydro,
   Characters.kirara,
   Characters.kaveh,
   Characters.baizhu,

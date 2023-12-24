@@ -152,6 +152,10 @@
         "hash": "cd7fc8608fba9eca64eb053489f019c08ecc0906"
     },
     {
+        "name": "./src/lib/data/images/characters/card/lynette.png",
+        "hash": "5df8ba81c82ae8d414f6e45989d1ff1eeb89bad8"
+    },
+    {
         "name": "./src/lib/data/images/characters/card/lyney.png",
         "hash": "8dfcfe383dda48d05770fca73d06bb186589799a"
     },
@@ -436,6 +440,10 @@
         "hash": "6419582378fc543e2f60c7d0368495b0698303ce"
     },
     {
+        "name": "./src/lib/data/images/characters/mugshot/lynette.webp",
+        "hash": "df34d254b17296bbd09e09cd7ab156628ce4244f"
+    },
+    {
         "name": "./src/lib/data/images/characters/mugshot/lyney.webp",
         "hash": "a88d5d68f81a821185d6aa89fb522cc2832aa3e0"
     },
@@ -594,6 +602,18 @@
     {
         "name": "./src/lib/data/images/materials/amakumo_fruit.png",
         "hash": "b640cd31e49d73b9ef50c03b87db8f7d4239e446"
+    },
+    {
+        "name": "./src/lib/data/images/materials/artificed_dynamic_gear.webp",
+        "hash": "7b46ec3819880b814f72d73ff37980230d7c6a89"
+    },
+    {
+        "name": "./src/lib/data/images/materials/artificed_spare_clockwork_component_coppelia.webp",
+        "hash": "e6f088f328258d1ca0c9fd0919b206654fdffe10"
+    },
+    {
+        "name": "./src/lib/data/images/materials/mechanical_spur_gear.webp",
+        "hash": "baa7ff26fbbcc7e2463a1d1e366456b42d9b1db8"
     },
     {
         "name": "./src/lib/data/images/materials/ashen_heart.webp",
@@ -924,6 +944,10 @@
         "hash": "c61be8b180f4f2e57c73d31081227361d495fdda"
     },
     {
+        "name": "./src/lib/data/images/materials/guide_to_order.webp",
+        "hash": "fe4b9acaaa3696f84f088702720bbc327ca35a96"
+    },
+    {
         "name": "./src/lib/data/images/materials/guide_to_praxis.webp",
         "hash": "53f1cbb2cfc8915a6ebf82365c229fba9eddd4e8"
     },
@@ -1012,6 +1036,10 @@
         "hash": "bfc52c0b2e8fc139ee9b444a85de71a131a29fee"
     },
     {
+        "name": "./src/lib/data/images/materials/lumidouce_bell.webp",
+        "hash": "b9ee11a39763cc440780d5702881a23f8c8f81d9"
+    },
+    {
         "name": "./src/lib/data/images/materials/luminescent_pollen.png",
         "hash": "6f9dc191ac8b5bd31b88ca960cdbb3070aba9701"
     },
@@ -1042,6 +1070,10 @@
     {
         "name": "./src/lib/data/images/materials/mask_of_the_wicked_lieutenant.webp",
         "hash": "22434278ebb3a6034f037f4a48907a4c16fbca86"
+    },
+    {
+        "name": "./src/lib/data/images/materials/meshing_gear.webp",
+        "hash": "6f5a6191269d21fefeb7fcb72226da58857e2fe0"
     },
     {
         "name": "./src/lib/data/images/materials/mirror_of_mushin.webp",
@@ -1202,6 +1234,10 @@
     {
         "name": "./src/lib/data/images/materials/philosophies_of_light.png",
         "hash": "6a2cd543c53008fee25de030583c09e09a1eee75"
+    },
+    {
+        "name": "./src/lib/data/images/materials/philosophies_of_order.png",
+        "hash": "68a49a2b3a032201ec4a25c9bc0f5aa37e5cab60"
     },
     {
         "name": "./src/lib/data/images/materials/philosophies_of_praxis.webp",
@@ -1470,6 +1506,10 @@
     {
         "name": "./src/lib/data/images/materials/teachings_of_light.png",
         "hash": "664ccd1ec24922fd2c62a0c6c10751981f4eba7c"
+    },
+    {
+        "name": "./src/lib/data/images/materials/teachings_of_order.webp",
+        "hash": "cb56e657fd19e6338b2dac00e88009c6de4885c9"
     },
     {
         "name": "./src/lib/data/images/materials/teachings_of_praxis.webp",

@@ -1610,5 +1610,45 @@
   "xenochromatic_crystal_material": {
     "png": "ba7dc036",
     "webp": "b7be4942"
+  },
+  "teachings_of_order_material": {
+    "png": "527e0596",
+    "webp": "a796eb8a"
+  },
+  "guide_to_order_material": {
+    "png": "c52127d5",
+    "webp": "038d36ad"
+  },
+  "philosophies_of_order_material": {
+    "png": "e8d5cfce",
+    "webp": "62063284"
+  },
+  "meshing_gear_material": {
+    "png": "0f511acc",
+    "webp": "0ae51d8c"
+  },
+  "mechanical_spur_gear_material": {
+    "png": "eb0ded1a",
+    "webp": "50fc213c"
+  },
+  "artificed_dynamic_gear_material": {
+    "png": "f61197b1",
+    "webp": "1c664a82"
+  },
+  "lumidouce_bell_material": {
+    "png": "6a7fcbd0",
+    "webp": "c3008101"
+  },
+  "artificed_spare_clockwork_component_coppelia_material": {
+    "png": "af54dcc7",
+    "webp": "f6274a5c"
+  },
+  "lynette_card": {
+    "png": "c1fbbc5e",
+    "webp": "66f82cfe"
+  },
+  "lynette_mugshot": {
+    "png": "b2652cd0",
+    "webp": "d3d6a6e7"
   }
 }

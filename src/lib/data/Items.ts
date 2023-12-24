@@ -8,6 +8,36 @@ export const Items: { [key in ItemsKey]: IItem } = {
     rarity: 4,
     category: "boss",
   },
+  artificed_spare_clockwork_component_coppelia: {
+    name: "Artificed Spare Clockwork Component Coppelia",
+    normalizedName: "artificed_spare_clockwork_component_coppelia",
+    rarity: 4,
+    category: "boss",
+  },
+  lumidouce_bell: {
+    name: "Lumidouce Bell",
+    normalizedName: "lumidouce_bell",
+    rarity: 1,
+    category: "local"
+  },
+  meshing_gear: {
+    name: "Meshing Gear",
+    normalizedName: "meshing_gear",
+    rarity: 1,
+    category: "common",
+  },
+  mechanical_spur_gear: {
+    name: "Mechanical Spur Gear",
+    normalizedName: "mechanical_spur_gear",
+    rarity: 2,
+    category: "common",
+  },
+  artificed_dynamic_gear: {
+    name: "Artificed Dynamic Gear",
+    normalizedName: "artificed_dynamic_gear",
+    rarity: 3,
+    category: "common",
+  },
   xenochromatic_crystal: {
     name: "Xenochromatic Crystal",
     normalizedName: "xenochromatic_crystal",
@@ -25,6 +55,27 @@ export const Items: { [key in ItemsKey]: IItem } = {
     normalizedName: "transoceanic_pearl",
     rarity: 1,
     category: "common",
+  },
+  teachings_of_order: {
+    name: "Teachings of Order",
+    normalizedName: "teachings_of_order",
+    rarity: 2,
+    groupId: "order",
+    category: "book",
+  },
+  guide_to_order: {
+    name: "Guide to Order",
+    normalizedName: "guide_to_order",
+    rarity: 3,
+    groupId: "order",
+    category: "book",
+  },
+  philosophies_of_order: {
+    name: "Philosophies of Order",
+    normalizedName: "philosophies_of_order",
+    rarity: 4,
+    groupId: "order",
+    category: "book",
   },
   teachings_of_equity: {
     name: "Teachings of Equity",

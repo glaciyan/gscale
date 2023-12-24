@@ -259,6 +259,10 @@ export const ItemGroups: { [key in ItemGroupsKey]: IItemGroup } = {
     normalizedName: "fungal_spores",
     itemIds: [Items.fungal_spores, Items.luminescent_pollen, Items.crystalline_cyst_dust],
   },
+  clockwork_meka: {
+    normalizedName: "clockwork_meka",
+    itemIds: [Items.meshing_gear, Items.mechanical_spur_gear, Items.artificed_dynamic_gear],
+  },
   praxis: {
     normalizedName: "praxis",
     itemIds: [Items.teachings_of_praxis, Items.guide_to_praxis, Items.philosophies_of_praxis],
@@ -274,5 +278,9 @@ export const ItemGroups: { [key in ItemGroupsKey]: IItemGroup } = {
   equity: {
     normalizedName: "equity",
     itemIds: [Items.teachings_of_equity, Items.guide_to_equity, Items.philosophies_of_equity]
+  },
+  order: {
+    normalizedName: "order",
+    itemIds: [Items.teachings_of_order, Items.guide_to_order, Items.philosophies_of_order]
   }
 };

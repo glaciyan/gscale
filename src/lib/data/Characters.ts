@@ -23,6 +23,23 @@ export const Characters: { [key in CharactersKey]: ICharacter } = {
     bookGroup: ItemGroups.praxis,
     weekly: Items.puppet_strings,
   },
+  lynette: {
+    name: "Lynette",
+    normalizedName: "lynette",
+    element: Elements.anemo,
+    weaponType: WeaponTypes.sword,
+    rarity: 4,
+    sub: "Anemo DMG Bonus",
+    constellation: "Felis Alba",
+    description:
+      "A magician's assistant hidden in the shadows who refers to herself as a 'Multi-Function Magic Assistant.' Poker-faced, reticent to speak, and as unpredictable in her movements as a cat.",
+    local: Items.lumidouce_bell,
+    commonGroup: ItemGroups.clockwork_meka,
+    boss: Items.artificed_spare_clockwork_component_coppelia,
+    gemGroup: ItemGroups.anemo_gem,
+    bookGroup: ItemGroups.order,
+    weekly: Items.everamber,
+  },
   lyney: {
     name: "Lyney",
     normalizedName: "lyney",
