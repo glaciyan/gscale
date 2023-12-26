@@ -23,6 +23,23 @@ export const Characters: { [key in CharactersKey]: ICharacter } = {
     bookGroup: ItemGroups.praxis,
     weekly: Items.puppet_strings,
   },
+  wriothesley: {
+    name: "Wriothesley",
+    normalizedName: "wriothesley",
+    element: Elements.cryo,
+    weaponType: WeaponTypes.catalyst,
+    rarity: 5,
+    sub: "CRIT DMG%",
+    constellation: "Cerberus",
+    description:
+      "Administrator of the Fortress of Meropide, he was given Fontaine's highest honorary title of 'Duke.' Both low-profile and dependable.",
+    local: Items.subdetection_unit,
+    commonGroup: ItemGroups.clockwork_meka,
+    boss: Items.tourbillon_device,
+    gemGroup: ItemGroups.cryo_gem,
+    bookGroup: ItemGroups.order,
+    weekly: Items.primordial_greenbloom,
+  },
   neuvillette: {
     name: "Neuvillette",
     normalizedName: "neuvillette",

@@ -1694,5 +1694,21 @@
   "neuvillette_mugshot": {
     "png": "3a0b9a7b",
     "webp": "ebd20ca9"
+  },
+  "subdetection_unit_material": {
+    "png": "dcaaf4b2",
+    "webp": "69024bbe"
+  },
+  "tourbillon_device_material": {
+    "png": "fed15f5e",
+    "webp": "8bd7ac11"
+  },
+  "wriothesley_card": {
+    "png": "73f22e25",
+    "webp": "e9787067"
+  },
+  "wriothesley_mugshot": {
+    "png": "45afeba8",
+    "webp": "daa3eb7b"
   }
 }

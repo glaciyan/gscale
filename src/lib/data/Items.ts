@@ -26,6 +26,18 @@ export const Items: { [key in ItemsKey]: IItem } = {
     rarity: 4,
     category: "boss",
   },
+  subdetection_unit: {
+    name: "Subdetection Unit",
+    normalizedName: "subdetection_unit",
+    rarity: 1,
+    category: "local"
+  },
+  tourbillon_device: {
+    name: "Tourbillon Device",
+    normalizedName: "tourbillon_device",
+    rarity: 4,
+    category: "boss",
+  },
   lumitoile: {
     name: "Lumitoile",
     normalizedName: "lumitoile",

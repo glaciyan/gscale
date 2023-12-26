@@ -1,4 +1,6 @@
 type ItemsKey =
+  | "tourbillon_device"
+  | "subdetection_unit"
   | "fontemer_unihorn"
   | "lumitoile"
   | "artificed_spare_clockwork_component_coppelius"

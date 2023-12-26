@@ -252,6 +252,10 @@
         "hash": "a53c1cdae97770357015b4db2e8fb043b652bb5e"
     },
     {
+        "name": "./src/lib/data/images/characters/card/wriothesley.png",
+        "hash": "74810bfad9f698f8442965a233dfe8685c4d35b4"
+    },
+    {
         "name": "./src/lib/data/images/characters/card/xiangling.png",
         "hash": "039fb6b0260adbba63423fdd6fce8f7f37228459"
     },
@@ -546,6 +550,10 @@
     {
         "name": "./src/lib/data/images/characters/mugshot/wanderer.png",
         "hash": "d874eba7adccd2bffad1eb3c96cf465b6f8c550b"
+    },
+    {
+        "name": "./src/lib/data/images/characters/mugshot/wriothesley.webp",
+        "hash": "72c040ffdf8c97f84b9dae27af3659790030acd3"
     },
     {
         "name": "./src/lib/data/images/characters/mugshot/xiangling.png",
@@ -1508,6 +1516,10 @@
         "hash": "f42a0dd20feafcd7557eeb542d4a3847daf264f2"
     },
     {
+        "name": "./src/lib/data/images/materials/subdetection_unit.webp",
+        "hash": "199943a13fa1620386b002ad1326ea57681da972"
+    },
+    {
         "name": "./src/lib/data/images/materials/tail_of_boreas.png",
         "hash": "9373fa888aae21e18207dd6e142c956bde8c1781"
     },
@@ -1586,6 +1598,10 @@
     {
         "name": "./src/lib/data/images/materials/tile_of_decarabians_tower.png",
         "hash": "30c1a05680d7d72581be2eacbcadbd1b90811796"
+    },
+    {
+        "name": "./src/lib/data/images/materials/tourbillon_device.webp",
+        "hash": "480b50f8a77b625289492d708467c83923cd2343"
     },
     {
         "name": "./src/lib/data/images/materials/transoceanic_pearl.webp",
