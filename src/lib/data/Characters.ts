@@ -23,6 +23,23 @@ export const Characters: { [key in CharactersKey]: ICharacter } = {
     bookGroup: ItemGroups.praxis,
     weekly: Items.puppet_strings,
   },
+  neuvillette: {
+    name: "Neuvillette",
+    normalizedName: "neuvillette",
+    element: Elements.hydro,
+    weaponType: WeaponTypes.catalyst,
+    rarity: 5,
+    sub: "CRIT DMG%",
+    constellation: "Leviathan Judicator",
+    description:
+      "You wouldn't exactly describe the Iudex of Fontaine as 'approachable.' It's hard to say whether it's just in his nature, or because he has secrets to hide.",
+    local: Items.lumitoile,
+    commonGroup: ItemGroups.fontemer_pearls,
+    boss: Items.fontemer_unihorn,
+    gemGroup: ItemGroups.hydro_gem,
+    bookGroup: ItemGroups.equity,
+    weekly: Items.everamber,
+  },
   freminet: {
     name: "Freminet",
     normalizedName: "freminet",

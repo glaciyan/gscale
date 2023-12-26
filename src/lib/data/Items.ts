@@ -20,6 +20,18 @@ export const Items: { [key in ItemsKey]: IItem } = {
     rarity: 4,
     category: "boss",
   },
+  fontemer_unihorn: {
+    name: "Fontemer Unihorn",
+    normalizedName: "fontemer_unihorn",
+    rarity: 4,
+    category: "boss",
+  },
+  lumitoile: {
+    name: "Lumitoile",
+    normalizedName: "lumitoile",
+    rarity: 1,
+    category: "local"
+  },
   lumidouce_bell: {
     name: "Lumidouce Bell",
     normalizedName: "lumidouce_bell",

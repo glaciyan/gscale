@@ -1678,5 +1678,21 @@
   "freminet_mugshot": {
     "png": "fa5a2f04",
     "webp": "f4583c37"
+  },
+  "lumitoile_material": {
+    "png": "144ad584",
+    "webp": "45f6fd74"
+  },
+  "fontemer_unihorn_material": {
+    "png": "b99aaf3d",
+    "webp": "6ea4fc27"
+  },
+  "neuvillette_card": {
+    "png": "667dfafe",
+    "webp": "bc19f2ea"
+  },
+  "neuvillette_mugshot": {
+    "png": "3a0b9a7b",
+    "webp": "ebd20ca9"
   }
 }

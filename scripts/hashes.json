@@ -176,6 +176,10 @@
         "hash": "a2eff4fd9b05feb48f1492e2bee662ab24385326"
     },
     {
+        "name": "./src/lib/data/images/characters/card/neuvillette.png",
+        "hash": "81a75008015b876cf5d1aafa7f6c1de5a68025b7"
+    },
+    {
         "name": "./src/lib/data/images/characters/card/nilou.png",
         "hash": "fce10e216c0b0978d1463a74078dbc7252c415f3"
     },
@@ -466,6 +470,10 @@
     {
         "name": "./src/lib/data/images/characters/mugshot/nahida.png",
         "hash": "cf3c6f1c3ffac0c82f0eb2b78580c805a32c2c7b"
+    },
+    {
+        "name": "./src/lib/data/images/characters/mugshot/neuvillette.png",
+        "hash": "f217d85bcd5d27414625b7bc1adbda5ada57796d"
     },
     {
         "name": "./src/lib/data/images/characters/mugshot/nilou.png",
@@ -884,6 +892,10 @@
         "hash": "b06ccdb079346bc21edc13c2c417a96e0ea7779f"
     },
     {
+        "name": "./src/lib/data/images/materials/fontemer_unihorn.webp",
+        "hash": "06460c50cf88a824a85457f14761bc97a9d1007c"
+    },
+    {
         "name": "./src/lib/data/images/materials/forbidden_curse_scroll.png",
         "hash": "7f6a2e5ac599c9da47be17a574aca88851cfaf36"
     },
@@ -1062,6 +1074,10 @@
     {
         "name": "./src/lib/data/images/materials/luminous_sands_from_guyun.png",
         "hash": "b28f6552747b8a2613e0d92fa232ff2be086f0b6"
+    },
+    {
+        "name": "./src/lib/data/images/materials/lumitoile.webp",
+        "hash": "696e6f365b129cdbd5fdaaf166d563b60bc8878e"
     },
     {
         "name": "./src/lib/data/images/materials/lustrous_stone_from_guyun.png",

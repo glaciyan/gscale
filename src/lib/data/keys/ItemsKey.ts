@@ -1,4 +1,6 @@
 type ItemsKey =
+  | "fontemer_unihorn"
+  | "lumitoile"
   | "artificed_spare_clockwork_component_coppelius"
   | "romaritime_flower"
   | "philosophies_of_justice"
