@@ -84,6 +84,10 @@
         "hash": "a62f842d161a400b1a58345032e664bac65007d7"
     },
     {
+        "name": "./src/lib/data/images/characters/card/furina.png",
+        "hash": "073dd2210b85dc83aeb73cb083066d9250f354ba"
+    },
+    {
         "name": "./src/lib/data/images/characters/card/ganyu.png",
         "hash": "e613ae32856134e882e5a71dcd68c40f375f77cc"
     },
@@ -382,6 +386,10 @@
     {
         "name": "./src/lib/data/images/characters/mugshot/freminet.webp",
         "hash": "0a2e02607520212ab6bbdc7d0073f99ea2cd0af1"
+    },
+    {
+        "name": "./src/lib/data/images/characters/mugshot/furina.webp",
+        "hash": "de4990534b8d90ecd9c349fde7976303d92c8d6a"
     },
     {
         "name": "./src/lib/data/images/characters/mugshot/ganyu.png",
@@ -1056,12 +1064,28 @@
         "hash": "583b8e6f2a9d2210dbc21a741241729c0a811cbf"
     },
     {
+        "name": "./src/lib/data/images/materials/lakelight_lily.webp",
+        "hash": "e9cefea276b17b0a0c921c4747f677189c5a523c"
+    },
+    {
         "name": "./src/lib/data/images/materials/ley_line_sprouts.png",
         "hash": "e3b050d66045c108a8d71f05d2be291e1741035b"
     },
     {
         "name": "./src/lib/data/images/materials/lieutenants_insignia.png",
         "hash": "46e73feece25ce4f5591a2525ad875d8ba4513a4"
+    },
+    {
+        "name": "./src/lib/data/images/materials/lightless_eye_of_the_maelstrom.webp",
+        "hash": "93a6c27b073096e06df84e5c88a659e097c517c0"
+    },
+    {
+        "name": "./src/lib/data/images/materials/lightless_mass.webp",
+        "hash": "8c95e7d0d816e908786b3933e724192a77025e1b"
+    },
+    {
+        "name": "./src/lib/data/images/materials/lightless_silk_string.webp",
+        "hash": "f6de2ee34e676922629f3d41de2ef5803acf49e0"
     },
     {
         "name": "./src/lib/data/images/materials/lightning_prism.png",
@@ -1686,6 +1710,10 @@
     {
         "name": "./src/lib/data/images/materials/wanderers_advice.png",
         "hash": "244f3613175827ff0429ec623a341115e65c65df"
+    },
+    {
+        "name": "./src/lib/data/images/materials/water_that_failed_to_transcend.webp",
+        "hash": "3d038c54afaa2a41a8309f765e1edf5fbbe8f1e2"
     },
     {
         "name": "./src/lib/data/images/materials/weathered_arrowhead.png",

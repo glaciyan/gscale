@@ -1,4 +1,9 @@
 type ItemsKey =
+  | "water_that_failed_to_transcend"
+  | "lakelight_lily"
+  | "lightless_eye_of_the_maelstrom"
+  | "lightless_silk_string"
+  | "lightless_mass"
   | "tourbillon_device"
   | "subdetection_unit"
   | "fontemer_unihorn"

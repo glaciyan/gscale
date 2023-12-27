@@ -38,6 +38,12 @@ export const Items: { [key in ItemsKey]: IItem } = {
     rarity: 4,
     category: "boss",
   },
+  water_that_failed_to_transcend: {
+    name: "Water That Failed To Transcend",
+    normalizedName: "water_that_failed_to_transcend",
+    rarity: 4,
+    category: "boss",
+  },
   lumitoile: {
     name: "Lumitoile",
     normalizedName: "lumitoile",
@@ -53,6 +59,12 @@ export const Items: { [key in ItemsKey]: IItem } = {
   romaritime_flower: {
     name: "Romaritime Flower",
     normalizedName: "romaritime_flower",
+    rarity: 1,
+    category: "local"
+  },
+  lakelight_lily: {
+    name: "Lakelight Lily",
+    normalizedName: "lakelight_lily",
     rarity: 1,
     category: "local"
   },
@@ -154,6 +166,24 @@ export const Items: { [key in ItemsKey]: IItem } = {
     rarity: 4,
     groupId: "equity",
     category: "book",
+  },
+  lightless_mass: {
+    name: "Lightless Mass",
+    normalizedName: "lightless_mass",
+    rarity: 5,
+    category: "weekly",
+  },
+  lightless_silk_string: {
+    name: "Lightless Silk String",
+    normalizedName: "lightless_silk_string",
+    rarity: 5,
+    category: "weekly",
+  },
+  lightless_eye_of_the_maelstrom: {
+    name: "Lightless Eye of the Maelstrom",
+    normalizedName: "lightless_eye_of_the_maelstrom",
+    rarity: 5,
+    category: "weekly",
   },
   rainbow_rose: {
     name: "Rainbow Rose",

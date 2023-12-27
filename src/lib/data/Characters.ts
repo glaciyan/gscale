@@ -23,6 +23,23 @@ export const Characters: { [key in CharactersKey]: ICharacter } = {
     bookGroup: ItemGroups.praxis,
     weekly: Items.puppet_strings,
   },
+  furina: {
+    name: "Furina",
+    normalizedName: "furina",
+    element: Elements.hydro,
+    weaponType: WeaponTypes.sword,
+    rarity: 5,
+    sub: "Bonus CRIT Rate",
+    constellation: "Animula Choragi",
+    description:
+      "The 'Regina of All Waters, Kindreds, Peoples and Laws' is deeply loved by her people. She follows each and every trial held at the Opera Epiclese with an inextinguishable passion, and is always acutely aware of how the 'audience' sees things.",
+    local: Items.lakelight_lily,
+    commonGroup: ItemGroups.nectar,
+    boss: Items.water_that_failed_to_transcend,
+    gemGroup: ItemGroups.hydro_gem,
+    bookGroup: ItemGroups.justice,
+    weekly: Items.lightless_mass,
+  },
   wriothesley: {
     name: "Wriothesley",
     normalizedName: "wriothesley",

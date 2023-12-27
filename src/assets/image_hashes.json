@@ -1710,5 +1710,33 @@
   "wriothesley_mugshot": {
     "png": "45afeba8",
     "webp": "daa3eb7b"
+  },
+  "lightless_mass_material": {
+    "png": "6759def2",
+    "webp": "b48dbb7d"
+  },
+  "lightless_silk_string_material": {
+    "png": "928f98e6",
+    "webp": "cbad3aec"
+  },
+  "lightless_eye_of_the_maelstrom_material": {
+    "png": "7a2199db",
+    "webp": "d0b1fe38"
+  },
+  "lakelight_lily_material": {
+    "png": "de02d50b",
+    "webp": "2091aaae"
+  },
+  "water_that_failed_to_transcend_material": {
+    "png": "9e9cdca0",
+    "webp": "acc5af86"
+  },
+  "furina_card": {
+    "png": "0159fecd",
+    "webp": "6d5b1339"
+  },
+  "furina_mugshot": {
+    "png": "059642c6",
+    "webp": "6d2e1bba"
   }
 }
