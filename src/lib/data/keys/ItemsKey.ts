@@ -1,4 +1,5 @@
 type ItemsKey =
+  | "beryl_conch"
   | "water_that_failed_to_transcend"
   | "lakelight_lily"
   | "lightless_eye_of_the_maelstrom"

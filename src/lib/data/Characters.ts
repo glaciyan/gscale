@@ -40,6 +40,23 @@ export const Characters: { [key in CharactersKey]: ICharacter } = {
     bookGroup: ItemGroups.justice,
     weekly: Items.lightless_mass,
   },
+  charlotte: {
+    name: "Charlotte",
+    normalizedName: "charlotte",
+    element: Elements.cryo,
+    weaponType: WeaponTypes.catalyst,
+    rarity: 4,
+    sub: "Bonus Atk%",
+    constellation: "Hualina Veritas",
+    description:
+      "Indefatigable reporter of The Steambird, constantly on the hunt for the 'truth.'",
+    local: Items.beryl_conch,
+    commonGroup: ItemGroups.clockwork_meka,
+    boss: Items.tourbillon_device,
+    gemGroup: ItemGroups.cryo_gem,
+    bookGroup: ItemGroups.justice,
+    weekly: Items.lightless_silk_string,
+  },
   wriothesley: {
     name: "Wriothesley",
     normalizedName: "wriothesley",

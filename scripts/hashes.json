@@ -40,6 +40,10 @@
         "hash": "cf713b1750bb3873531d9625f20c747779d74430"
     },
     {
+        "name": "./src/lib/data/images/characters/card/charlotte.png",
+        "hash": "d868a5afea530016782586eb1ae5321f11c3de24"
+    },
+    {
         "name": "./src/lib/data/images/characters/card/chongyun.png",
         "hash": "e35155698cc470ad06262bcafb8be2c788367502"
     },
@@ -342,6 +346,10 @@
     {
         "name": "./src/lib/data/images/characters/mugshot/candace.png",
         "hash": "ac498ce8e8b761ebbf8b92ec33a2c5dd0b4e915c"
+    },
+    {
+        "name": "./src/lib/data/images/characters/mugshot/charlotte.webp",
+        "hash": "66fe67f0bc35cbef5c7bb3b488a432d540b3c79e"
     },
     {
         "name": "./src/lib/data/images/characters/mugshot/chongyun.png",
@@ -658,6 +666,10 @@
     {
         "name": "./src/lib/data/images/materials/basalt_pillar.png",
         "hash": "36213e6f56f5d2150ad378e0b952babd9735a7ca"
+    },
+    {
+        "name": "./src/lib/data/images/materials/beryl_conch.webp",
+        "hash": "1fccdf5bb35d368bc3f32c39bb90f6151722ecc9"
     },
     {
         "name": "./src/lib/data/images/materials/bit_of_aerosiderite.png",

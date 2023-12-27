@@ -1738,5 +1738,17 @@
   "furina_mugshot": {
     "png": "059642c6",
     "webp": "6d2e1bba"
+  },
+  "beryl_conch_material": {
+    "png": "a5fe6af5",
+    "webp": "e856bf1d"
+  },
+  "charlotte_card": {
+    "png": "0353f71d",
+    "webp": "cb2d1bc8"
+  },
+  "charlotte_mugshot": {
+    "png": "b8928d66",
+    "webp": "5b6c417c"
   }
 }

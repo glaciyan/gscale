@@ -32,6 +32,12 @@ export const Items: { [key in ItemsKey]: IItem } = {
     rarity: 1,
     category: "local"
   },
+  beryl_conch: {
+    name: "Beryl Conch",
+    normalizedName: "beryl_conch",
+    rarity: 1,
+    category: "local"
+  },
   tourbillon_device: {
     name: "Tourbillon Device",
     normalizedName: "tourbillon_device",
