@@ -38,6 +38,12 @@ export const Items: { [key in ItemsKey]: IItem } = {
     rarity: 1,
     category: "local"
   },
+  spring_of_the_first_dewdrop: {
+    name: "Spring of the First Dewdrop",
+    normalizedName: "spring_of_the_first_dewdrop",
+    rarity: 1,
+    category: "local"
+  },
   tourbillon_device: {
     name: "Tourbillon Device",
     normalizedName: "tourbillon_device",

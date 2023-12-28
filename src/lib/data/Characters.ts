@@ -23,6 +23,23 @@ export const Characters: { [key in CharactersKey]: ICharacter } = {
     bookGroup: ItemGroups.praxis,
     weekly: Items.puppet_strings,
   },
+  navia: {
+    name: "Navia",
+    normalizedName: "navia",
+    element: Elements.geo,
+    weaponType: WeaponTypes.claymore,
+    rarity: 5,
+    sub: "CRIT DMG%",
+    constellation: "Rosa Multiflora",
+    description:
+      "The current President of Spina di Rosula, who is lovely, dutiful, and a great boss.",
+    local: Items.spring_of_the_first_dewdrop,
+    commonGroup: ItemGroups.fontemer_pearls,
+    boss: Items.artificed_spare_clockwork_component_coppelius,
+    gemGroup: ItemGroups.geo_gem,
+    bookGroup: ItemGroups.equity,
+    weekly: Items.lightless_silk_string,
+  },
   furina: {
     name: "Furina",
     normalizedName: "furina",

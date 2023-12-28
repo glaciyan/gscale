@@ -184,6 +184,10 @@
         "hash": "a2eff4fd9b05feb48f1492e2bee662ab24385326"
     },
     {
+        "name": "./src/lib/data/images/characters/card/navia.png",
+        "hash": "4ed99aef683f7161e2d4cb31c06ee95105605aca"
+    },
+    {
         "name": "./src/lib/data/images/characters/card/neuvillette.png",
         "hash": "81a75008015b876cf5d1aafa7f6c1de5a68025b7"
     },
@@ -490,6 +494,10 @@
     {
         "name": "./src/lib/data/images/characters/mugshot/nahida.png",
         "hash": "cf3c6f1c3ffac0c82f0eb2b78580c805a32c2c7b"
+    },
+    {
+        "name": "./src/lib/data/images/characters/mugshot/navia.webp",
+        "hash": "7106e10fe6e90d72632dedbb1f17d2966c17234c"
     },
     {
         "name": "./src/lib/data/images/characters/mugshot/neuvillette.png",
@@ -1534,6 +1542,10 @@
     {
         "name": "./src/lib/data/images/materials/spirit_locket_of_boreas.png",
         "hash": "cc6837382d00b75e17fd1af482484504817a282a"
+    },
+    {
+        "name": "./src/lib/data/images/materials/spring_of_the_first_dewdrop.webp",
+        "hash": "2282eb420975fc1a50723c8964cdc657a806c978"
     },
     {
         "name": "./src/lib/data/images/materials/stained_mask.png",
