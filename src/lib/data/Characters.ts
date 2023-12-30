@@ -6,6 +6,22 @@ import CharactersKey from "./keys/CharactersKey";
 import { WeaponTypes } from "./WeaponTypes";
 
 export const Characters: { [key in CharactersKey]: ICharacter } = {
+  neuvillette: {
+    name: "Neuvillette",
+    normalizedName: "neuvillette",
+    element: Elements.hydro,
+    weaponType: WeaponTypes.catalyst,
+    rarity: 5,
+    sub: "Bonus CritDMG%",
+    constellation: "???",
+    description: "The Chief Justice of Fontaine, known as the Iudex, is renowned for his unassailable impartiality.",
+    local: Items.lumitoile,
+    commonGroup: ItemGroups.ocean_chunk,
+    boss: Items.fontemer_unihorn,
+    gemGroup: ItemGroups.hydro_gem,
+    bookGroup: ItemGroups.equity,
+    weekly: Items.everamber
+},
   freminet: {
     name: "Freminet",
     normalizedName: "freminet",
@@ -14,14 +30,15 @@ export const Characters: { [key in CharactersKey]: ICharacter } = {
     rarity: 4,
     sub: "Bonus Atk%",
     constellation: "Automaton",
-    description: "A reserved young man who is well-versed in diving. Beneath his distant, icy demeanor lies a pure heart bereft of all flaws.",
+    description:
+      "A reserved young man who is well-versed in diving. Beneath his distant, icy demeanor lies a pure heart bereft of all flaws.",
     local: Items.romaritime_flower,
     commonGroup: ItemGroups.ocean_chunk,
     boss: Items.artificed_spare_clockwork_component_coppelius,
     gemGroup: ItemGroups.cryo_gem,
     bookGroup: ItemGroups.justice,
-    weekly: Items.worldspan_fern
-},
+    weekly: Items.worldspan_fern,
+  },
   lynette: {
     name: "Lynette",
     normalizedName: "lynette",
@@ -36,8 +53,8 @@ export const Characters: { [key in CharactersKey]: ICharacter } = {
     boss: Items.artificed_spare_clockwork_component_coppelia,
     gemGroup: ItemGroups.anemo_gem,
     bookGroup: ItemGroups.order,
-    weekly: Items.everamber
-},
+    weekly: Items.everamber,
+  },
   lyney: {
     name: "Lyney",
     normalizedName: "lyney",
