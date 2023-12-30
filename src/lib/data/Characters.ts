@@ -6,6 +6,22 @@ import CharactersKey from "./keys/CharactersKey";
 import { WeaponTypes } from "./WeaponTypes";
 
 export const Characters: { [key in CharactersKey]: ICharacter } = {
+  furina: {
+    name: "Furina",
+    normalizedName: "furina",
+    element: Elements.hydro,
+    weaponType: WeaponTypes.sword,
+    rarity: 5,
+    sub: "Bonus CritRate%",
+    constellation: "Animula Choragi",
+    description: "The absolute focus of the stage of judgment, until the final applause sounds.",
+    local: Items.lakelight_lily,
+    commonGroup: ItemGroups.nectar,
+    boss: Items.water_that_failed_to_transcend,
+    gemGroup: ItemGroups.hydro_gem,
+    bookGroup: ItemGroups.justice,
+    weekly: Items.lightless_mass,
+  },
   wriothesley: {
     name: "Wriothesley",
     normalizedName: "wriothesley",
