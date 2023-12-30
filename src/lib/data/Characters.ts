@@ -6,6 +6,22 @@ import CharactersKey from "./keys/CharactersKey";
 import { WeaponTypes } from "./WeaponTypes";
 
 export const Characters: { [key in CharactersKey]: ICharacter } = {
+  wriothesley: {
+    name: "Wriothesley",
+    normalizedName: "wriothesley",
+    element: Elements.cryo,
+    weaponType: WeaponTypes.catalyst,
+    rarity: 5,
+    sub: "Bonus CritDMG%",
+    constellation: "Cerberus",
+    description: "Duke of the Fortress of Meropide, Lord Incognito of the murky depths.",
+    local: Items.subdetection_unit,
+    commonGroup: ItemGroups.gear,
+    boss: Items.tourbillon_device,
+    gemGroup: ItemGroups.cryo_gem,
+    bookGroup: ItemGroups.order,
+    weekly: Items.primordial_greenbloom,
+  },
   neuvillette: {
     name: "Neuvillette",
     normalizedName: "neuvillette",
@@ -20,8 +36,8 @@ export const Characters: { [key in CharactersKey]: ICharacter } = {
     boss: Items.fontemer_unihorn,
     gemGroup: ItemGroups.hydro_gem,
     bookGroup: ItemGroups.equity,
-    weekly: Items.everamber
-},
+    weekly: Items.everamber,
+  },
   freminet: {
     name: "Freminet",
     normalizedName: "freminet",
