@@ -40,6 +40,10 @@
         "hash": "cf713b1750bb3873531d9625f20c747779d74430"
     },
     {
+        "name": "./src/lib/data/images/characters/card/charlotte.png",
+        "hash": "c63d14ce4872b7aeaa9f9289cfa063f8c40ada10"
+    },
+    {
         "name": "./src/lib/data/images/characters/card/chongyun.png",
         "hash": "e35155698cc470ad06262bcafb8be2c788367502"
     },
@@ -80,6 +84,14 @@
         "hash": "2a15a28581fa7b26a5efade9ae7cfae6b1d09832"
     },
     {
+        "name": "./src/lib/data/images/characters/card/freminet.png",
+        "hash": "bb28a01fcb1dfa39037b17caafa3432a57dda436"
+    },
+    {
+        "name": "./src/lib/data/images/characters/card/furina.png",
+        "hash": "14487d9ba452cff6e2af6ce0846c1cd7faa721c4"
+    },
+    {
         "name": "./src/lib/data/images/characters/card/ganyu.png",
         "hash": "e613ae32856134e882e5a71dcd68c40f375f77cc"
     },
@@ -117,8 +129,8 @@
     },
     {
         "name": "./src/lib/data/images/characters/card/kaveh.png",
-        "hash": "55dc6e5e2d02f08b72b8afdce72c58ffc5fdebf3"
-    },    
+        "hash": "5557c70aefee6a6470ddb03badbbade3c4e2cd37"
+    },
     {
         "name": "./src/lib/data/images/characters/card/kazuha.png",
         "hash": "9cbff0ef711d9220c6b1b9e64ea1d230dd852188"
@@ -129,8 +141,8 @@
     },
     {
         "name": "./src/lib/data/images/characters/card/kirara.png",
-        "hash": "f36d98b39e943600db5b386e6bf944f6879b2efe"
-    },    
+        "hash": "cf7f740338648a7c3283794d954b151aee55ba7b"
+    },
     {
         "name": "./src/lib/data/images/characters/card/klee.png",
         "hash": "3d336cb0d3d891d7d8028f679d695994c6b59420"
@@ -152,6 +164,14 @@
         "hash": "cd7fc8608fba9eca64eb053489f019c08ecc0906"
     },
     {
+        "name": "./src/lib/data/images/characters/card/lynette.png",
+        "hash": "4dc5b27da6f143089190e46288ce47ebb107ba3f"
+    },
+    {
+        "name": "./src/lib/data/images/characters/card/lyney.png",
+        "hash": "167d62a909bee5d6969258c5f01e09ace7a77b56"
+    },
+    {
         "name": "./src/lib/data/images/characters/card/mika.png",
         "hash": "f95aa8568d0a5b45df48a61c791c7b50abe5c71b"
     },
@@ -162,6 +182,14 @@
     {
         "name": "./src/lib/data/images/characters/card/nahida.png",
         "hash": "a2eff4fd9b05feb48f1492e2bee662ab24385326"
+    },
+    {
+        "name": "./src/lib/data/images/characters/card/navia.png",
+        "hash": "0adc814ea55e1e59d45d39d027d68444051ea77a"
+    },
+    {
+        "name": "./src/lib/data/images/characters/card/neuvillette.png",
+        "hash": "116293a22dae1649f2175ab1efc563fddd3ca4c6"
     },
     {
         "name": "./src/lib/data/images/characters/card/nilou.png",
@@ -234,6 +262,10 @@
     {
         "name": "./src/lib/data/images/characters/card/wanderer.png",
         "hash": "a53c1cdae97770357015b4db2e8fb043b652bb5e"
+    },
+    {
+        "name": "./src/lib/data/images/characters/card/wriothesley.png",
+        "hash": "f73b61218592b92a9b78ce0661a379b08ad2ba37"
     },
     {
         "name": "./src/lib/data/images/characters/card/xiangling.png",
@@ -320,6 +352,10 @@
         "hash": "ac498ce8e8b761ebbf8b92ec33a2c5dd0b4e915c"
     },
     {
+        "name": "./src/lib/data/images/characters/mugshot/charlotte.webp",
+        "hash": "08fdf8b2a11f51297adc949af4282036d41d00c0"
+    },
+    {
         "name": "./src/lib/data/images/characters/mugshot/chongyun.png",
         "hash": "c270cfc0dd1079820ddab2cf2326838ef7ffd1c2"
     },
@@ -360,6 +396,14 @@
         "hash": "6c1b3ecf4a0a6d76e5cbed1b10451cbba5ee9d4a"
     },
     {
+        "name": "./src/lib/data/images/characters/mugshot/freminet.webp",
+        "hash": "41e9782414055dcd14e152edc643f3fce9ae9348"
+    },
+    {
+        "name": "./src/lib/data/images/characters/mugshot/furina.webp",
+        "hash": "8d5cf8099fd26782b61434119b88df4064e1a0e4"
+    },
+    {
         "name": "./src/lib/data/images/characters/mugshot/ganyu.png",
         "hash": "e510d20b88e069f99b2fba73e678f61419f60b2d"
     },
@@ -397,8 +441,8 @@
     },
     {
         "name": "./src/lib/data/images/characters/mugshot/kaveh.png",
-        "hash": "33525440abf27b24dfdaa4f793c2219f466fb8cf"
-    },    
+        "hash": "7a5c21fe9a93f2742e0f32f835dbd42d8b2c82b0"
+    },
     {
         "name": "./src/lib/data/images/characters/mugshot/kazuha.png",
         "hash": "a1e7898a8ff7c42106002c0cb3c5a1e0b52f9717"
@@ -409,8 +453,8 @@
     },
     {
         "name": "./src/lib/data/images/characters/mugshot/kirara.png",
-        "hash": "30784f243e96872f85e2546c2f35fca6db339ecf"
-    },    
+        "hash": "2ee2301ca730a8e11e8902970f1685a73f079a12"
+    },
     {
         "name": "./src/lib/data/images/characters/mugshot/klee.png",
         "hash": "2d1b297473a3d779169dbe9b37923d3d867b89e4"
@@ -432,6 +476,14 @@
         "hash": "6419582378fc543e2f60c7d0368495b0698303ce"
     },
     {
+        "name": "./src/lib/data/images/characters/mugshot/lynette.webp",
+        "hash": "b073a952cf38b17d6ce83cf2988d42905056ccba"
+    },
+    {
+        "name": "./src/lib/data/images/characters/mugshot/lyney.webp",
+        "hash": "4fdd0de3530078b63bb0967ba3c7745c90ca6567"
+    },
+    {
         "name": "./src/lib/data/images/characters/mugshot/mika.png",
         "hash": "afe661e24f71c499c99feb88dd4f9123b13c0d16"
     },
@@ -442,6 +494,14 @@
     {
         "name": "./src/lib/data/images/characters/mugshot/nahida.png",
         "hash": "cf3c6f1c3ffac0c82f0eb2b78580c805a32c2c7b"
+    },
+    {
+        "name": "./src/lib/data/images/characters/mugshot/navia.webp",
+        "hash": "192f672ad9851eaf77ec313e214b63baa080d15a"
+    },
+    {
+        "name": "./src/lib/data/images/characters/mugshot/neuvillette.webp",
+        "hash": "b2450b4c9bc595f7d016bf8f795a98e40e9a0606"
     },
     {
         "name": "./src/lib/data/images/characters/mugshot/nilou.png",
@@ -516,6 +576,10 @@
         "hash": "d874eba7adccd2bffad1eb3c96cf465b6f8c550b"
     },
     {
+        "name": "./src/lib/data/images/characters/mugshot/wriothesley.webp",
+        "hash": "6ef397e9918af1a6aa9ac828c9808f6338e38e07"
+    },
+    {
         "name": "./src/lib/data/images/characters/mugshot/xiangling.png",
         "hash": "b508f5341bfa105a3288249b12dcaed9b08b8b55"
     },
@@ -588,12 +652,28 @@
         "hash": "b640cd31e49d73b9ef50c03b87db8f7d4239e446"
     },
     {
+        "name": "./src/lib/data/images/materials/artificed_dynamic_gear.webp",
+        "hash": "4da117650997b9571af6c68714dc62ba8c87ee2a"
+    },
+    {
+        "name": "./src/lib/data/images/materials/artificed_spare_clockwork_component_coppelia.webp",
+        "hash": "a4e526ec1cb3265a26e8f8342d6540d2d59882c3"
+    },
+    {
+        "name": "./src/lib/data/images/materials/artificed_spare_clockwork_component_coppelius.webp",
+        "hash": "187e39567571ea8d0ec09207c2fce70b25b1f914"
+    },
+    {
         "name": "./src/lib/data/images/materials/ashen_heart.webp",
         "hash": "e9dc50a333aa0464056d4e5622688b653378d1ba"
     },
     {
         "name": "./src/lib/data/images/materials/basalt_pillar.png",
         "hash": "36213e6f56f5d2150ad378e0b952babd9735a7ca"
+    },
+    {
+        "name": "./src/lib/data/images/materials/beryl_conch.webp",
+        "hash": "c8c9fbbffe19623153943a4d1840e9c6818adf1f"
     },
     {
         "name": "./src/lib/data/images/materials/bit_of_aerosiderite.png",
@@ -796,6 +876,10 @@
         "hash": "4e6c519406b80ad7298699c28c5fed233e5f762b"
     },
     {
+        "name": "./src/lib/data/images/materials/emperors_resolution.webp",
+        "hash": "cef9be1636d5274069b984b03a005a9c1589ef27"
+    },
+    {
         "name": "./src/lib/data/images/materials/energy_nectar.png",
         "hash": "ba76d0036f9b64b821d2a42bca59c6689457e813"
     },
@@ -838,6 +922,10 @@
     {
         "name": "./src/lib/data/images/materials/fluorescent_fungus.png",
         "hash": "b06ccdb079346bc21edc13c2c417a96e0ea7779f"
+    },
+    {
+        "name": "./src/lib/data/images/materials/fontemer_unihorn.webp",
+        "hash": "c23459ff8b072990184e61387460a626fc5d6c6b"
     },
     {
         "name": "./src/lib/data/images/materials/forbidden_curse_scroll.png",
@@ -892,6 +980,10 @@
         "hash": "a15d72a2b63b9665b4a49fcbd60abb0f2c3fe9d0"
     },
     {
+        "name": "./src/lib/data/images/materials/guide_to_equity.webp",
+        "hash": "12ff56fa1c7346189d67da4d49ef813a8e73a2f4"
+    },
+    {
         "name": "./src/lib/data/images/materials/guide_to_freedom.png",
         "hash": "a1e88e3d7603a7003bd7492305a7185daaf64a26"
     },
@@ -904,8 +996,16 @@
         "hash": "0b6d7df691c8086d31f4c1ed9ea4dfb1a8c996ec"
     },
     {
+        "name": "./src/lib/data/images/materials/guide_to_justice.webp",
+        "hash": "cec45afd469f504fa02abe7947999368a0e22436"
+    },
+    {
         "name": "./src/lib/data/images/materials/guide_to_light.png",
         "hash": "c61be8b180f4f2e57c73d31081227361d495fdda"
+    },
+    {
+        "name": "./src/lib/data/images/materials/guide_to_order.webp",
+        "hash": "2b08aba177a7093054b9fc0b0d9dc8c17dbd9d05"
     },
     {
         "name": "./src/lib/data/images/materials/guide_to_praxis.webp",
@@ -980,12 +1080,28 @@
         "hash": "583b8e6f2a9d2210dbc21a741241729c0a811cbf"
     },
     {
+        "name": "./src/lib/data/images/materials/lakelight_lily.webp",
+        "hash": "2c592507d5e1e4171c03c134dc7729d02b3e0824"
+    },
+    {
         "name": "./src/lib/data/images/materials/ley_line_sprouts.png",
         "hash": "e3b050d66045c108a8d71f05d2be291e1741035b"
     },
     {
         "name": "./src/lib/data/images/materials/lieutenants_insignia.png",
         "hash": "46e73feece25ce4f5591a2525ad875d8ba4513a4"
+    },
+    {
+        "name": "./src/lib/data/images/materials/lightless_eye_of_the_maelstrom.webp",
+        "hash": "1a94546977ae00a3273e5707b68d8bc4b2d020ed"
+    },
+    {
+        "name": "./src/lib/data/images/materials/lightless_mass.webp",
+        "hash": "67c416cfa549ce7364de82d390ba3092ea089511"
+    },
+    {
+        "name": "./src/lib/data/images/materials/lightless_silk_string.webp",
+        "hash": "cdf6cc3d18207c975edc10668a959ca243ab3167"
     },
     {
         "name": "./src/lib/data/images/materials/lightning_prism.png",
@@ -996,12 +1112,20 @@
         "hash": "bfc52c0b2e8fc139ee9b444a85de71a131a29fee"
     },
     {
+        "name": "./src/lib/data/images/materials/lumidouce_bell.webp",
+        "hash": "10ff95586fd39c01ca95d791af15464a044102c1"
+    },
+    {
         "name": "./src/lib/data/images/materials/luminescent_pollen.png",
         "hash": "6f9dc191ac8b5bd31b88ca960cdbb3070aba9701"
     },
     {
         "name": "./src/lib/data/images/materials/luminous_sands_from_guyun.png",
         "hash": "b28f6552747b8a2613e0d92fa232ff2be086f0b6"
+    },
+    {
+        "name": "./src/lib/data/images/materials/lumitoile.webp",
+        "hash": "e91e9effebd5a445441c99622b9bd52743a2c3b3"
     },
     {
         "name": "./src/lib/data/images/materials/lustrous_stone_from_guyun.png",
@@ -1026,6 +1150,14 @@
     {
         "name": "./src/lib/data/images/materials/mask_of_the_wicked_lieutenant.webp",
         "hash": "22434278ebb3a6034f037f4a48907a4c16fbca86"
+    },
+    {
+        "name": "./src/lib/data/images/materials/mechanical_spur_gear.webp",
+        "hash": "24038437a041c337a96f1be755384e922825d34c"
+    },
+    {
+        "name": "./src/lib/data/images/materials/meshing_gear.webp",
+        "hash": "bf19db2e963476732ddc04b3561e5cf3f294f865"
     },
     {
         "name": "./src/lib/data/images/materials/mirror_of_mushin.webp",
@@ -1069,8 +1201,8 @@
     },
     {
         "name": "./src/lib/data/images/materials/mourning_flower.webp",
-        "hash": "fefbb7027bfc9d4f17bb98cd30878f2c22397b86"
-    },    
+        "hash": "02b7da337ea4de0afaca9c31080bfe49a70053c8"
+    },
     {
         "name": "./src/lib/data/images/materials/mudra_of_the_malefic_general.webp",
         "hash": "f11601600025e303b8eadda2555f663fa08fd5ae"
@@ -1168,6 +1300,10 @@
         "hash": "73de5c810e494e6b37c9f081526fcc2b556a2d10"
     },
     {
+        "name": "./src/lib/data/images/materials/philosophies_of_equity.webp",
+        "hash": "94c9e2881d285e02b32267f11e12fa8ebe87aec4"
+    },
+    {
         "name": "./src/lib/data/images/materials/philosophies_of_freedom.png",
         "hash": "04a11e4d7e52fdc22a2a03a5a0ed1617c23f172c"
     },
@@ -1180,8 +1316,16 @@
         "hash": "10185915001154191547c2ca217e1dd36af55b54"
     },
     {
+        "name": "./src/lib/data/images/materials/philosophies_of_justice.webp",
+        "hash": "3cca0ca62dafa666ec5302066a84cdc0d431c136"
+    },
+    {
         "name": "./src/lib/data/images/materials/philosophies_of_light.png",
         "hash": "6a2cd543c53008fee25de030583c09e09a1eee75"
+    },
+    {
+        "name": "./src/lib/data/images/materials/philosophies_of_order.webp",
+        "hash": "d2c05ee7c571f82e6ddb2d3acb0d6676bfa69d53"
     },
     {
         "name": "./src/lib/data/images/materials/philosophies_of_praxis.webp",
@@ -1248,6 +1392,10 @@
         "hash": "3ee3cc1736f65ff4541f71f8a402113b9ddc5d96"
     },
     {
+        "name": "./src/lib/data/images/materials/rainbow_rose.webp",
+        "hash": "86bfaf6b338085eeeab0f536a33c9833f4372782"
+    },
+    {
         "name": "./src/lib/data/images/materials/recruits_insignia.png",
         "hash": "c11b4e1c052911ad5e53bb5191a2f67aae4c3406"
     },
@@ -1270,6 +1418,10 @@
     {
         "name": "./src/lib/data/images/materials/ring_of_boreas.png",
         "hash": "726a05b922ee446a3c0362540556130cad00e84d"
+    },
+    {
+        "name": "./src/lib/data/images/materials/romaritime_flower.webp",
+        "hash": "a161d6a38d9ad53bbacc817838649a21c233fc5f"
     },
     {
         "name": "./src/lib/data/images/materials/rukkhashava_mushrooms.png",
@@ -1392,6 +1544,10 @@
         "hash": "cc6837382d00b75e17fd1af482484504817a282a"
     },
     {
+        "name": "./src/lib/data/images/materials/spring_of_the_first_dewdrop.webp",
+        "hash": "f7237b48d96d349dff6e78122b93c33d4977ab8e"
+    },
+    {
         "name": "./src/lib/data/images/materials/stained_mask.png",
         "hash": "3925257a4e45b97fad111ac38c4baba2261dfc0e"
     },
@@ -1406,6 +1562,10 @@
     {
         "name": "./src/lib/data/images/materials/sturdy_bone_shard.png",
         "hash": "f42a0dd20feafcd7557eeb542d4a3847daf264f2"
+    },
+    {
+        "name": "./src/lib/data/images/materials/subdetection_unit.webp",
+        "hash": "23866d69a7babe28af224a71143a5982e953d955"
     },
     {
         "name": "./src/lib/data/images/materials/tail_of_boreas.png",
@@ -1428,6 +1588,10 @@
         "hash": "646a3945f8ff9ff7bd4d8c32149e7ede35aafd83"
     },
     {
+        "name": "./src/lib/data/images/materials/teachings_of_equity.webp",
+        "hash": "4ce4ffab5c653c644200844ffd2ac5216f4c9f7b"
+    },
+    {
         "name": "./src/lib/data/images/materials/teachings_of_freedom.png",
         "hash": "94f11d5426654af15363c0c6e767a73d2c8d2967"
     },
@@ -1440,8 +1604,16 @@
         "hash": "cf041599cf686e6ae6f714cef8fa632c4c5c9747"
     },
     {
+        "name": "./src/lib/data/images/materials/teachings_of_justice.webp",
+        "hash": "52d432c938fb09e9b4602588295c80084f2f60a7"
+    },
+    {
         "name": "./src/lib/data/images/materials/teachings_of_light.png",
         "hash": "664ccd1ec24922fd2c62a0c6c10751981f4eba7c"
+    },
+    {
+        "name": "./src/lib/data/images/materials/teachings_of_order.webp",
+        "hash": "27eaef7e5ffc9694edf1dd48c663171fcd75b4ff"
     },
     {
         "name": "./src/lib/data/images/materials/teachings_of_praxis.webp",
@@ -1474,6 +1646,18 @@
     {
         "name": "./src/lib/data/images/materials/tile_of_decarabians_tower.png",
         "hash": "30c1a05680d7d72581be2eacbcadbd1b90811796"
+    },
+    {
+        "name": "./src/lib/data/images/materials/tourbillon_device.webp",
+        "hash": "53010181c447f840904af991bb3886ecb12986a7"
+    },
+    {
+        "name": "./src/lib/data/images/materials/transoceanic_chunk.webp",
+        "hash": "bde6686b2d87f0009e13ac82f843f719217532f2"
+    },
+    {
+        "name": "./src/lib/data/images/materials/transoceanic_pearl.webp",
+        "hash": "5cc92439859495061c29cb9674d9f0bb705b1536"
     },
     {
         "name": "./src/lib/data/images/materials/treasure_hoarder_insignia.png",
@@ -1552,6 +1736,10 @@
         "hash": "244f3613175827ff0429ec623a341115e65c65df"
     },
     {
+        "name": "./src/lib/data/images/materials/water_that_failed_to_transcend.webp",
+        "hash": "b2e5235e02c2e90eca92dc888d24324be0b8e1e5"
+    },
+    {
         "name": "./src/lib/data/images/materials/weathered_arrowhead.png",
         "hash": "4a7d4c264d2e3111e462c381c5b2980810856024"
     },
@@ -1570,5 +1758,9 @@
     {
         "name": "./src/lib/data/images/materials/worldspan_fern.webp",
         "hash": "8f2a4059a17b23501a9b8f085fae4741ce814e04"
+    },
+    {
+        "name": "./src/lib/data/images/materials/xenochromatic_crystal.webp",
+        "hash": "1a2b94d7a56448fc28252381c9fb3aed44893342"
     }
 ]

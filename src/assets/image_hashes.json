@@ -1552,23 +1552,215 @@
     "webp": "ba8c9e66"
   },
   "mourning_flower_material": {
-    "png": "0a2b4ac4",
-    "webp": "bc458681"
+    "png": "2efb1d72",
+    "webp": "ebed1a22"
   },
   "kaveh_card": {
-    "png": "3050e3f7",
-    "webp": "59b20bb1"
+    "png": "5eb73292",
+    "webp": "53a6a84b"
   },
   "kaveh_mugshot": {
-    "png": "33525440",
-    "webp": "c67e21ed"
+    "png": "05e3e9d0",
+    "webp": "481146e8"
   },
   "kirara_card": {
-    "png": "8692326e",
-    "webp": "2ce5161b"
+    "png": "60f6c143",
+    "webp": "acf4d05d"
   },
   "kirara_mugshot": {
-    "png": "30784f24",
-    "webp": "563a7a1c"
+    "png": "bc86463a",
+    "webp": "fb76a19f"
+  },
+  "charlotte_card": {
+    "png": "63245e99",
+    "webp": "ae1df20d"
+  },
+  "freminet_card": {
+    "png": "8aba8198",
+    "webp": "dfdf4e48"
+  },
+  "furina_card": {
+    "png": "fda8f894",
+    "webp": "36fdaf0e"
+  },
+  "lynette_card": {
+    "png": "8f1fbfb2",
+    "webp": "ed9469a6"
+  },
+  "lyney_card": {
+    "png": "e58e0b4f",
+    "webp": "01c2a20b"
+  },
+  "navia_card": {
+    "png": "847ed6e1",
+    "webp": "b67cdcf6"
+  },
+  "neuvillette_card": {
+    "png": "e3263780",
+    "webp": "c2231b92"
+  },
+  "wriothesley_card": {
+    "png": "b8bdefc2",
+    "webp": "e1fb0d9e"
+  },
+  "charlotte_mugshot": {
+    "png": "a89dc735",
+    "webp": "19d70b7e"
+  },
+  "freminet_mugshot": {
+    "png": "58b2ec66",
+    "webp": "a5a3b581"
+  },
+  "furina_mugshot": {
+    "png": "d29e6bdf",
+    "webp": "89432b3c"
+  },
+  "lynette_mugshot": {
+    "png": "8dd3875a",
+    "webp": "0fd964a6"
+  },
+  "lyney_mugshot": {
+    "png": "c9724edd",
+    "webp": "b05ba51f"
+  },
+  "navia_mugshot": {
+    "png": "8d39536b",
+    "webp": "87475e50"
+  },
+  "neuvillette_mugshot": {
+    "png": "d6c05cae",
+    "webp": "fd4e7e8c"
+  },
+  "wriothesley_mugshot": {
+    "png": "caf1d9bc",
+    "webp": "a3b74873"
+  },
+  "artificed_dynamic_gear_material": {
+    "png": "159dbe39",
+    "webp": "14b24bca"
+  },
+  "artificed_spare_clockwork_component_coppelia_material": {
+    "png": "88d1559d",
+    "webp": "6b86a829"
+  },
+  "artificed_spare_clockwork_component_coppelius_material": {
+    "png": "80361e73",
+    "webp": "98a1cf6e"
+  },
+  "beryl_conch_material": {
+    "png": "d8647ad2",
+    "webp": "1b01bc1f"
+  },
+  "emperors_resolution_material": {
+    "png": "135b414d",
+    "webp": "05005c5f"
+  },
+  "fontemer_unihorn_material": {
+    "png": "734ca7b1",
+    "webp": "0c8dc020"
+  },
+  "guide_to_equity_material": {
+    "png": "0f56247d",
+    "webp": "1a041f4d"
+  },
+  "guide_to_justice_material": {
+    "png": "24bbeac4",
+    "webp": "7a57a7af"
+  },
+  "guide_to_order_material": {
+    "png": "418290e1",
+    "webp": "44923811"
+  },
+  "lakelight_lily_material": {
+    "png": "89ff2fba",
+    "webp": "74e1226e"
+  },
+  "lightless_eye_of_the_maelstrom_material": {
+    "png": "41e52b52",
+    "webp": "bb527011"
+  },
+  "lightless_mass_material": {
+    "png": "0536b9a0",
+    "webp": "0a7a16be"
+  },
+  "lightless_silk_string_material": {
+    "png": "9731ecd4",
+    "webp": "dc4ca794"
+  },
+  "lumidouce_bell_material": {
+    "png": "dddff51d",
+    "webp": "6b20b187"
+  },
+  "lumitoile_material": {
+    "png": "dc242d21",
+    "webp": "76a63eff"
+  },
+  "mechanical_spur_gear_material": {
+    "png": "e91a1a76",
+    "webp": "0e376f6a"
+  },
+  "meshing_gear_material": {
+    "png": "ac177ce8",
+    "webp": "bf34a482"
+  },
+  "philosophies_of_equity_material": {
+    "png": "726a66b1",
+    "webp": "064b2ebd"
+  },
+  "philosophies_of_justice_material": {
+    "png": "45793ff2",
+    "webp": "7c18a066"
+  },
+  "philosophies_of_order_material": {
+    "png": "e0c37028",
+    "webp": "dfc6604c"
+  },
+  "rainbow_rose_material": {
+    "png": "18c52567",
+    "webp": "06f8a86e"
+  },
+  "romaritime_flower_material": {
+    "png": "da68f439",
+    "webp": "1d91abd5"
+  },
+  "spring_of_the_first_dewdrop_material": {
+    "png": "34c51f81",
+    "webp": "2f704556"
+  },
+  "subdetection_unit_material": {
+    "png": "d056a2de",
+    "webp": "a2f50048"
+  },
+  "teachings_of_equity_material": {
+    "png": "b5eb52a8",
+    "webp": "684e368d"
+  },
+  "teachings_of_justice_material": {
+    "png": "8e35a14d",
+    "webp": "9bda015a"
+  },
+  "teachings_of_order_material": {
+    "png": "36fb72c3",
+    "webp": "14f6d426"
+  },
+  "tourbillon_device_material": {
+    "png": "ef44d244",
+    "webp": "a97ca33f"
+  },
+  "transoceanic_chunk_material": {
+    "png": "c4b53198",
+    "webp": "073d8305"
+  },
+  "transoceanic_pearl_material": {
+    "png": "58c24f58",
+    "webp": "ea6a4e5d"
+  },
+  "water_that_failed_to_transcend_material": {
+    "png": "e46f256a",
+    "webp": "b7eb988a"
+  },
+  "xenochromatic_crystal_material": {
+    "png": "10e01afb",
+    "webp": "e686fcb3"
   }
 }
