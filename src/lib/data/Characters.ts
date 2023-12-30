@@ -33,7 +33,7 @@ export const Characters: { [key in CharactersKey]: ICharacter } = {
     description: 'Indefatigable reporter of The Steambird, constantly on the hunt for the "truth."',
     local: Items.beryl_conch,
     commonGroup: ItemGroups.gear,
-    boss: Items.unknown,
+    boss: Items.tourbillon_device,
     gemGroup: ItemGroups.cryo_gem,
     bookGroup: ItemGroups.justice,
     weekly: Items.lightless_silk_string,
