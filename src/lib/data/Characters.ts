@@ -6,6 +6,22 @@ import CharactersKey from "./keys/CharactersKey";
 import { WeaponTypes } from "./WeaponTypes";
 
 export const Characters: { [key in CharactersKey]: ICharacter } = {
+  lynette: {
+    name: "Lynette",
+    normalizedName: "lynette",
+    element: Elements.anemo,
+    weaponType: WeaponTypes.sword,
+    rarity: 4,
+    sub: "Bonus Anemo%",
+    constellation: "Felis Alba",
+    description: "A magic assistant of few words, her emotions are as inscrutable as any cat's.",
+    local: Items.lumidouce_bell,
+    commonGroup: ItemGroups.gear,
+    boss: Items.artificed_spare_clockwork_component_coppelia,
+    gemGroup: ItemGroups.anemo_gem,
+    bookGroup: ItemGroups.order,
+    weekly: Items.everamber
+},
   lyney: {
     name: "Lyney",
     normalizedName: "lyney",
