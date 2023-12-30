@@ -6,6 +6,23 @@ import CharactersKey from "./keys/CharactersKey";
 import { WeaponTypes } from "./WeaponTypes";
 
 export const Characters: { [key in CharactersKey]: ICharacter } = {
+  lyney: {
+    name: "Lyney",
+    normalizedName: "lyney",
+    element: Elements.pyro,
+    weaponType: WeaponTypes.bow,
+    rarity: 5,
+    sub: "Bonus CritRate%",
+    constellation: "Felis Fuscus",
+    description:
+      "A famed Fontainian magician who possesses great stage presence as well as gift of the gab. Audiences are enthralled by his exquisite skills, and they hang on to his every clever word.",
+    local: Items.rainbow_rose,
+    commonGroup: ItemGroups.fatui_insignia,
+    boss: Items.emperors_resolution,
+    gemGroup: ItemGroups.pyro_gem,
+    bookGroup: ItemGroups.equity,
+    weekly: Items.primordial_greenbloom,
+  },
   dehya: {
     name: "Dehya",
     normalizedName: "dehya",
