@@ -1,4 +1,9 @@
 export const PhysicalItemGroupsKey = [
+  "gear",
+  "ocean_chunk",
+  "order",
+  "justice",
+  "equity",
   "admonition",
   "praxis",
   "fungal_spores",
@@ -50,5 +55,5 @@ export const PhysicalItemGroupsKey = [
   "wolf_tooth",
   "ingenuity",
 ] as const;
-type ItemGroupsKey = typeof PhysicalItemGroupsKey[number];
+type ItemGroupsKey = (typeof PhysicalItemGroupsKey)[number];
 export default ItemGroupsKey;
