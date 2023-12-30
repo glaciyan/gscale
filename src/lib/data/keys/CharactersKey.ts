@@ -1,4 +1,12 @@
 type CharactersKey =
+  | "navia"
+  | "charlotte"
+  | "furina"
+  | "wriothesley"
+  | "neuvillette"
+  | "freminet"
+  | "lynette"
+  | "lyney"
   | "kirara"
   | "kaveh"
   | "baizhu"

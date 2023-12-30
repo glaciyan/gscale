@@ -5,6 +5,26 @@ import ItemGroupsKey from "./keys/ItemGroupsKey";
 export const ItemGroups: { [key in ItemGroupsKey]: IItemGroup } = {
   unknown: { normalizedName: "unknown", itemIds: [Items.unknown, Items.unknown, Items.unknown, Items.unknown] },
 
+  gear: {
+    normalizedName: "gear",
+    itemIds: [Items.meshing_gear, Items.mechanical_spur_gear, Items.artificed_dynamic_gear],
+  },
+  ocean_chunk: {
+    normalizedName: "ocean_chunk",
+    itemIds: [Items.transoceanic_pearl, Items.transoceanic_chunk, Items.xenochromatic_crystal],
+  },
+  order: {
+    normalizedName: "order",
+    itemIds: [Items.teachings_of_order, Items.guide_to_order, Items.philosophies_of_order],
+  },
+  justice: {
+    normalizedName: "justice",
+    itemIds: [Items.teachings_of_justice, Items.guide_to_justice, Items.philosophies_of_justice],
+  },
+  equity: {
+    normalizedName: "equity",
+    itemIds: [Items.teachings_of_equity, Items.guide_to_equity, Items.philosophies_of_equity],
+  },
   sentinel_gear: {
     normalizedName: "sentinel_gear",
     itemIds: [Items.chaos_gear, Items.chaos_axis, Items.chaos_oculus],
