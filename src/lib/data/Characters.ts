@@ -6,6 +6,22 @@ import CharactersKey from "./keys/CharactersKey";
 import { WeaponTypes } from "./WeaponTypes";
 
 export const Characters: { [key in CharactersKey]: ICharacter } = {
+  navia: {
+    name: "Navia",
+    normalizedName: "navia",
+    element: Elements.geo,
+    weaponType: WeaponTypes.claymore,
+    rarity: 5,
+    sub: "Bonus CritDMG%",
+    constellation: "Rosa Multiflora",
+    description: "The current President of Spina di Rosula, who is lovely, dutiful, and a great boss.",
+    local: Items.spring_of_the_first_dewdrop,
+    commonGroup: ItemGroups.ocean_chunk,
+    boss: Items.artificed_spare_clockwork_component_coppelius,
+    gemGroup: ItemGroups.geo_gem,
+    bookGroup: ItemGroups.equity,
+    weekly: Items.lightless_silk_string,
+  },
   charlotte: {
     name: "Charlotte",
     normalizedName: "charlotte",
@@ -20,8 +36,8 @@ export const Characters: { [key in CharactersKey]: ICharacter } = {
     boss: Items.unknown,
     gemGroup: ItemGroups.cryo_gem,
     bookGroup: ItemGroups.justice,
-    weekly: Items.lightless_silk_string
-},
+    weekly: Items.lightless_silk_string,
+  },
   furina: {
     name: "Furina",
     normalizedName: "furina",
