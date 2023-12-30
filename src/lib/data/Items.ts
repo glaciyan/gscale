@@ -2,6 +2,12 @@ import { IItem } from "./contracts/IItem";
 import ItemsKey from "./keys/ItemsKey";
 
 export const Items: { [key in ItemsKey]: IItem } = {
+  romaritime_flower: {
+    name: "Romaritime Flower",
+    normalizedName: "romaritime_flower",
+    rarity: 1,
+    category: "local",
+  },
   rainbow_rose: {
     name: "Rainbow Rose",
     normalizedName: "rainbow_rose",

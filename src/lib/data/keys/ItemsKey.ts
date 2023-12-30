@@ -1,4 +1,5 @@
 type ItemsKey =
+  | "romaritime_flower"
   | "rainbow_rose"
   | "lightless_eye_of_the_maelstrom"
   | "lightless_mass"

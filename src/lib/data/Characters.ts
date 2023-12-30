@@ -6,6 +6,22 @@ import CharactersKey from "./keys/CharactersKey";
 import { WeaponTypes } from "./WeaponTypes";
 
 export const Characters: { [key in CharactersKey]: ICharacter } = {
+  freminet: {
+    name: "Freminet",
+    normalizedName: "freminet",
+    element: Elements.cryo,
+    weaponType: WeaponTypes.claymore,
+    rarity: 4,
+    sub: "Bonus Atk%",
+    constellation: "Automaton",
+    description: "A reserved young man who is well-versed in diving. Beneath his distant, icy demeanor lies a pure heart bereft of all flaws.",
+    local: Items.romaritime_flower,
+    commonGroup: ItemGroups.ocean_chunk,
+    boss: Items.artificed_spare_clockwork_component_coppelius,
+    gemGroup: ItemGroups.cryo_gem,
+    bookGroup: ItemGroups.justice,
+    weekly: Items.worldspan_fern
+},
   lynette: {
     name: "Lynette",
     normalizedName: "lynette",
