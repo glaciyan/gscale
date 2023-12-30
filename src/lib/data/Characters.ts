@@ -6,6 +6,22 @@ import CharactersKey from "./keys/CharactersKey";
 import { WeaponTypes } from "./WeaponTypes";
 
 export const Characters: { [key in CharactersKey]: ICharacter } = {
+  charlotte: {
+    name: "Charlotte",
+    normalizedName: "charlotte",
+    element: Elements.cryo,
+    weaponType: WeaponTypes.catalyst,
+    rarity: 4,
+    sub: "Bonus Atk%",
+    constellation: "Hualina Veritas",
+    description: 'Indefatigable reporter of The Steambird, constantly on the hunt for the "truth."',
+    local: Items.beryl_conch,
+    commonGroup: ItemGroups.gear,
+    boss: Items.unknown,
+    gemGroup: ItemGroups.cryo_gem,
+    bookGroup: ItemGroups.justice,
+    weekly: Items.lightless_silk_string
+},
   furina: {
     name: "Furina",
     normalizedName: "furina",

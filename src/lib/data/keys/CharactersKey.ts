@@ -1,4 +1,5 @@
 type CharactersKey =
+  | "charlotte"
   | "furina"
   | "wriothesley"
   | "neuvillette"
