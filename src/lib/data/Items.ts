@@ -2,24 +2,30 @@ import { IItem } from "./contracts/IItem";
 import ItemsKey from "./keys/ItemsKey";
 
 export const Items: { [key in ItemsKey]: IItem } = {
+  rainbow_rose: {
+    name: "Rainbow Rose",
+    normalizedName: "rainbow_rose",
+    rarity: 1,
+    category: "local",
+  },
   lightless_eye_of_the_maelstrom: {
     name: "Lightless Eye of the Maelstrom",
     normalizedName: "lightless_eye_of_the_maelstrom",
     rarity: 5,
     category: "weekly",
-},
+  },
   lightless_mass: {
     name: "Lightless Mass",
     normalizedName: "lightless_mass",
     rarity: 5,
     category: "weekly",
-},
+  },
   lightless_silk_string: {
     name: "Lightless Silk String",
     normalizedName: "lightless_silk_string",
     rarity: 5,
     category: "weekly",
-},
+  },
   water_that_failed_to_transcend: {
     name: "Water That Failed To Transcend",
     normalizedName: "water_that_failed_to_transcend",
@@ -37,7 +43,7 @@ export const Items: { [key in ItemsKey]: IItem } = {
     normalizedName: "artificed_spare_clockwork_component_coppelia",
     rarity: 4,
     category: "boss",
-},
+  },
   emperors_resolution: {
     name: "Emperor's Resolution",
     normalizedName: "emperors_resolution",
