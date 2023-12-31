@@ -1,9 +1,4 @@
-export class OptimizedImage {
-  constructor(png: string, webp: string) {
-    this.png = png;
-    this.webp = webp;
-  }
-
+export interface OptimizedImage {
   png: string;
   webp: string;
 }

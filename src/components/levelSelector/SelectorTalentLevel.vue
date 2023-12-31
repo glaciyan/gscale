@@ -21,3 +21,4 @@ defineEmits(["update:modelValue"]);
     </template>
   </SelectorCustom>
 </template>
+~/util/range

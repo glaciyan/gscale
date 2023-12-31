@@ -1,4 +1,4 @@
-import { AscensionLevel } from "../types/AscensionLevel";
+import { AscensionLevel } from "../../model/AscensionLevel";
 
 export const characterLevels: { [numLever: number]: AscensionLevel } = {
   1: { level: 1, ascended: false },

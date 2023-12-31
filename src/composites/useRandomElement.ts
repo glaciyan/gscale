@@ -1,4 +1,4 @@
-import sample from "~/lib/sample";
+import sample from "~/util/sample";
 
 const elements = ["anemo", "pyro", "electro", "geo", "cryo", "hydro"];
 

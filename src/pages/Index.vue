@@ -59,3 +59,4 @@ const goToFirstCharacter = () => {
     </div>
   </Container>
 </template>
+~/viewmodel/CharactersViewModel

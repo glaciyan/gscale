@@ -1,10 +1,41 @@
 import { GElement } from "./GElement";
 
-export const Pyro = new GElement("Pyro", "pyro");
-export const Geo = new GElement("Geo", "geo");
-export const Hydro = new GElement("Hydro", "hydro");
-export const Anemo = new GElement("Anemo", "anemo");
-export const Cryo = new GElement("Cryo", "cryo");
-export const Electro = new GElement("Electro", "electro");
-export const Dendro = new GElement("Dendro", "dendro");
-export const Neutral = new GElement("Neutral", "neutral");
+export const Pyro: GElement = {
+  name: "Pyro",
+  normalizedName: "pyro",
+};
+
+export const Geo: GElement = {
+  name: "Geo",
+  normalizedName: "geo",
+};
+
+export const Hydro: GElement = {
+  name: "Hydro",
+  normalizedName: "hydro",
+};
+
+export const Anemo: GElement = {
+  name: "Anemo",
+  normalizedName: "anemo",
+};
+
+export const Cryo: GElement = {
+  name: "Cryo",
+  normalizedName: "cryo",
+};
+
+export const Electro: GElement = {
+  name: "Electro",
+  normalizedName: "electro",
+};
+
+export const Dendro: GElement = {
+  name: "Dendro",
+  normalizedName: "dendro",
+};
+
+export const Neutral: GElement = {
+  name: "Neutral",
+  normalizedName: "neutral",
+};

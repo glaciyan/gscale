@@ -1,11 +1,6 @@
 import { Item } from "./Item";
 
-export class ItemWithAmount {
-  constructor(item: Item, amount: number) {
-    this.item = item;
-    this.amount = amount;
-  }
-
+export interface ItemWithAmount {
   item: Item;
   amount: number;
 }

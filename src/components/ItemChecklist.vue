@@ -31,3 +31,4 @@ const getState = (item: ItemWithAmount): FillAmount => {
     @click="$emit('itemClick', item, $event)"
   />
 </template>
+~/util/incrId~/model/FillAmount

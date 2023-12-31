@@ -18,3 +18,4 @@ const id = incrId();
     <MockSearch v-for="term in terms" :key="term + id" :term="term" @click="$emit('click', $event)" />
   </div>
 </template>
+~/util/incrId

@@ -16,3 +16,4 @@ const id = incrId();
     :itemWithAmount="item"
   />
 </template>
+~/util/incrId

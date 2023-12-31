@@ -1,5 +1,5 @@
 import { ItemWithAmount } from "~/lib/types/ItemWithAmount";
-import { db } from "~/lib/offlineDatabase/db";
+import { db } from "~/offlineDatabase/db";
 
 export default (buildId: number) => {
   const items = ref<ItemWithAmount[]>([]);

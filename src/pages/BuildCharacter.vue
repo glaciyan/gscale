@@ -255,3 +255,4 @@ getAllCharacterItems(character.value).map((item) => {
 @scrollbar-border-size: 3px;
 @scrollbar-width: 12px;
 </style>
+~/lib/data/GenshinDataRepository~/util/mergeAmountByName~/util/sortItems~/offlineDatabase/db~/calculator

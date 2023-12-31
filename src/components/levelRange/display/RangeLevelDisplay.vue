@@ -26,3 +26,4 @@ const className = "flex bg-dark-400 pl-3 items-center w-15";
     </div>
   </div>
 </template>
+~/model/AscensionLevel~/model/StartGoalRange

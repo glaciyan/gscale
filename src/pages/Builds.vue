@@ -131,3 +131,4 @@ const onImported = () => {
   </teleport>
   <ImportPopOver :visible="importPopOverVisible" @close="importPopOverVisible = false" @imported="onImported" />
 </template>
+~/lib/data/GenshinDataRepository~/util/mergeAmountByName~/util/totalBuildItems~/offlineDatabase/db~/util/downloadObject../util/GDataFileFormat~/util/dev/clearDb~/util/dev/tonsOfBuilds

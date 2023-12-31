@@ -25,3 +25,4 @@ const upgradedStyle = { "text-cyan-400": props.range.upgraded };
     </div>
   </div>
 </template>
+~/model/Talent

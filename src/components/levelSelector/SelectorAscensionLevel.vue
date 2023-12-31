@@ -54,3 +54,4 @@ const levels = computed(() => {
     @update:modelValue="update({ ascended: $event })"
   />
 </template>
+~/lib/data/Levels~/model/AscensionLevel

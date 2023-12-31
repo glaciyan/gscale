@@ -9,6 +9,8 @@ const props = defineProps<{
   entity: IBaseCharacter | IItem;
 }>();
 
+// TODO make this whole component more generic
+
 const src = computed(() => {
   switch (props.type) {
     case "characterCard":

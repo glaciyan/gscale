@@ -1,7 +1,7 @@
 import type Fuse from "fuse.js";
 import type { Ref } from "vue";
 import { IBaseCharacter } from "~/lib/data/contracts/IBaseCharacter";
-import { CharacterSearchModel, generateSearchModel } from "~/lib/types/CharacterSearchModel";
+import { CharacterSearchModel, generateSearchModel } from "~/composites/CharacterSearchModel";
 
 export default function (search: Ref<string>, characters: IBaseCharacter[]) {
   const result = ref<Fuse.FuseResult<CharacterSearchModel>[] | null>(null);

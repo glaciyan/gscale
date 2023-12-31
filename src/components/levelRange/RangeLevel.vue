@@ -8,7 +8,7 @@ import SelectorIconSeperator from "../levelSelector/SelectorIconSeperator.vue";
 defineProps<{
   start: AscensionLevel;
   goal: AscensionLevel;
-  element?: string;
+  element?: string; // TODO this could be replaced by element context
   max?: AscensionLevel;
 }>();
 
@@ -36,3 +36,4 @@ defineEmits(["update:start", "update:goal"]);
     </div>
   </SelectorGroup>
 </template>
+~/model/AscensionLevel

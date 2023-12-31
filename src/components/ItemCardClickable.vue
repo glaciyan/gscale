@@ -35,3 +35,4 @@ const tooltip = computed(() => {
     </div>
   </div>
 </template>
+~/model/FillAmount

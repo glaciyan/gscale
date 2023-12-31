@@ -1,4 +1,4 @@
-import { Talent } from "~/lib/types/Talent";
+import { Talent } from "~/model/Talent";
 
 export function useTalentLevelRange(): Talent {
   const range = reactive<Talent>({

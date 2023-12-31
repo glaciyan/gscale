@@ -12,3 +12,4 @@ defineProps<{ ascensionLevel: AscensionLevel; small?: boolean }>();
     <AscensionStarIcon :class="['flex-shrink-0 ml-1', { 'w-5 h-5': small }]" />
   </template>
 </template>
+~/model/AscensionLevel
