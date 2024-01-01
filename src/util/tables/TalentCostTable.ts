@@ -1,10 +1,9 @@
-import { Item } from "~/model/Item";
 import { crown, grouped, mora, single } from "./ItemFactory";
-import { ItemGroup } from "~/model/ItemGroup";
 import { ItemWithAmount } from "~/model/ItemWithAmount";
+import { CharacterTalentItems } from "~/model/CharacterItems";
 
 export default (
-  items: { commonGroup?: ItemGroup; bookGroup?: ItemGroup; weekly?: Item },
+  items: CharacterTalentItems,
   level: number
 ): ItemWithAmount[] => {
   const common = grouped(items.commonGroup);

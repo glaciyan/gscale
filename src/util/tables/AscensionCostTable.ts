@@ -1,8 +1,8 @@
 import { grouped, mora, single } from "./ItemFactory";
-import { IStandardAscensionItems } from "../contracts/IStandardCharacterItems";
-import { ItemWithAmount } from "../types/ItemWithAmount";
+import { CharacterAscensionItems } from "~/model/CharacterItems";
+import { ItemWithAmount } from "~/model/ItemWithAmount";
 
-export default (items: Partial<IStandardAscensionItems>): ItemWithAmount[][] => {
+export default (items: CharacterAscensionItems): ItemWithAmount[][] => {
   const gem = grouped(items.gemGroup);
   const local = single(items.local);
   const common = grouped(items.commonGroup);

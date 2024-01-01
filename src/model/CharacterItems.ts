@@ -1,11 +1,17 @@
 import { ItemGroup } from "./ItemGroup";
 import { Item } from "./Item";
 
-export interface CharacterItems {
-  gem: ItemGroup;
+export interface CharacterAscensionItems {
+  gemGroup: ItemGroup;
   local: Item;
   boss: Item;
-  common: ItemGroup;
-  book: ItemGroup;
+  commonGroup: ItemGroup;
+}
+
+export interface CharacterTalentItems {
+  commonGroup: ItemGroup;
+  bookGroup: ItemGroup;
   weekly: Item;
 }
+
+export type CharacterItems = CharacterAscensionItems & CharacterTalentItems;
