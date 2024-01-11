@@ -44,6 +44,10 @@
         "hash": "a9df752f286efeb6f377cc52be851d885fce301e"
     },
     {
+        "name": "./src/lib/data/images/characters/card/chevreuse.png",
+        "hash": "ab834e5172976dd627e8f056b4ae327c862a592a"
+    },
+    {
         "name": "./src/lib/data/images/characters/card/chongyun.png",
         "hash": "e35155698cc470ad06262bcafb8be2c788367502"
     },
@@ -354,6 +358,10 @@
     {
         "name": "./src/lib/data/images/characters/mugshot/charlotte.webp",
         "hash": "b83dcd9a5113ebf951650757f98707b83e6b509b"
+    },
+    {
+        "name": "./src/lib/data/images/characters/mugshot/chevreuse.webp",
+        "hash": "d93380be596abdb66f61fd1d02e2878a6db2a1f2"
     },
     {
         "name": "./src/lib/data/images/characters/mugshot/chongyun.png",
