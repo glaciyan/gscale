@@ -1762,5 +1762,13 @@
   "xenochromatic_crystal_material": {
     "png": "10e01afb",
     "webp": "e686fcb3"
+  },
+  "chevreuse_card": {
+    "png": "c7fa5fed",
+    "webp": "733f3563"
+  },
+  "chevreuse_mugshot": {
+    "png": "4a858761",
+    "webp": "d2f62529"
   }
 }

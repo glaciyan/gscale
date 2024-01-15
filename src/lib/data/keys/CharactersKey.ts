@@ -1,4 +1,5 @@
 type CharactersKey =
+  | "chevreuse"
   | "navia"
   | "charlotte"
   | "furina"

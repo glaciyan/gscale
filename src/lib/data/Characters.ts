@@ -6,6 +6,22 @@ import CharactersKey from "./keys/CharactersKey";
 import { WeaponTypes } from "./WeaponTypes";
 
 export const Characters: { [key in CharactersKey]: ICharacter } = {
+  chevreuse: {
+    name: "Chevreuse",
+    normalizedName: "chevreuse",
+    element: Elements.pyro,
+    weaponType: WeaponTypes.polearm,
+    rarity: 4,
+    sub: "Bonus HP%",
+    constellation: "Sclopetum Ensiferum",
+    description: "The captain of the Special Security and Surveillance Patrol, who wears justice as an ever-present seal upon her heart. Her musket shall only ever point at the guilty.",
+    local: Items.lumidouce_bell,
+    commonGroup: ItemGroups.gear,
+    boss: Items.fontemer_unihorn,
+    gemGroup: ItemGroups.pyro_gem,
+    bookGroup: ItemGroups.order,
+    weekly: Items.lightless_eye_of_the_maelstrom,
+  },
   navia: {
     name: "Navia",
     normalizedName: "navia",
