@@ -1,4 +1,6 @@
 type CharactersKey =
+  | "xianyun"
+  | "gaming"
   | "chevreuse"
   | "navia"
   | "charlotte"

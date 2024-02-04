@@ -1,4 +1,6 @@
 type ItemsKey =
+  | "cloudseam_scale"
+  | "clearwater_jade"
   | "romaritime_flower"
   | "rainbow_rose"
   | "lightless_eye_of_the_maelstrom"
