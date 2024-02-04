@@ -8,6 +8,18 @@ export const Items: { [key in ItemsKey]: IItem } = {
     rarity: 1,
     category: "local",
   },
+  cloudseam_scale: {
+    name: "Cloudseam Scale",
+    normalizedName: "cloudseam_scale",
+    rarity: 4,
+    category: "boss",
+  },
+  clearwater_jade: {
+    name: "Clearwater Jade",
+    normalizedName: "clearwater_jade",
+    rarity: 1,
+    category: "local",
+  },
   rainbow_rose: {
     name: "Rainbow Rose",
     normalizedName: "rainbow_rose",

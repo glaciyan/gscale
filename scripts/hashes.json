@@ -96,6 +96,10 @@
         "hash": "14487d9ba452cff6e2af6ce0846c1cd7faa721c4"
     },
     {
+        "name": "./src/lib/data/images/characters/card/gaming.png",
+        "hash": "8cf8450f756ddad55581b3438aed46a94185d53e"
+    },
+    {
         "name": "./src/lib/data/images/characters/card/ganyu.png",
         "hash": "e613ae32856134e882e5a71dcd68c40f375f77cc"
     },
@@ -276,6 +280,10 @@
         "hash": "039fb6b0260adbba63423fdd6fce8f7f37228459"
     },
     {
+        "name": "./src/lib/data/images/characters/card/xianyun.png",
+        "hash": "f27449116c906f5a93f63ff00c6eaa06735fb933"
+    },
+    {
         "name": "./src/lib/data/images/characters/card/xiao.png",
         "hash": "c8b21eeda4bc5d23324f1d8c7956cecc41645e8b"
     },
@@ -410,6 +418,10 @@
     {
         "name": "./src/lib/data/images/characters/mugshot/furina.webp",
         "hash": "8d5cf8099fd26782b61434119b88df4064e1a0e4"
+    },
+    {
+        "name": "./src/lib/data/images/characters/mugshot/gaming.webp",
+        "hash": "f2e4b6d596872fd30f60118d34cc159800ec9837"
     },
     {
         "name": "./src/lib/data/images/characters/mugshot/ganyu.png",
@@ -590,6 +602,10 @@
     {
         "name": "./src/lib/data/images/characters/mugshot/xiangling.png",
         "hash": "b508f5341bfa105a3288249b12dcaed9b08b8b55"
+    },
+    {
+        "name": "./src/lib/data/images/characters/mugshot/xianyun.png",
+        "hash": "ab6aeb744e669f701c60b5055aaa84d37e8c6b34"
     },
     {
         "name": "./src/lib/data/images/characters/mugshot/xiao.png",
@@ -774,6 +790,14 @@
     {
         "name": "./src/lib/data/images/materials/cleansing_heart.png",
         "hash": "3bc435f1181040b3908af9730dfca1b4d30ad263"
+    },
+    {
+        "name": "./src/lib/data/images/materials/clearwater_jade.webp",
+        "hash": "727b477344fb2170b13c6182467e3f9d66104148"
+    },
+    {
+        "name": "./src/lib/data/images/materials/cloudseam_scale.webp",
+        "hash": "da22444f8fa501578ae799b4047d72b1813ce39c"
     },
     {
         "name": "./src/lib/data/images/materials/concealed_claw.webp",

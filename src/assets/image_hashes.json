@@ -1770,5 +1770,29 @@
   "chevreuse_mugshot": {
     "png": "4a858761",
     "webp": "d2f62529"
+  },
+  "gaming_card": {
+    "png": "6448bbf9",
+    "webp": "27d041f6"
+  },
+  "gaming_mugshot": {
+    "png": "1b084a2b",
+    "webp": "7bcde711"
+  },
+  "clearwater_jade_material": {
+    "png": "64408fda",
+    "webp": "b83d1e66"
+  },
+  "cloudseam_scale_material": {
+    "png": "f90ca66c",
+    "webp": "ff8c6f8f"
+  },
+  "xianyun_card": {
+    "png": "1f8b37f1",
+    "webp": "87b0f3ac"
+  },
+  "xianyun_mugshot": {
+    "png": "8d6dac09",
+    "webp": "cda74661"
   }
 }
